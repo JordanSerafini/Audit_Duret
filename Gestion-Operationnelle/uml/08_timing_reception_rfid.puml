@@ -7,8 +7,6 @@ concise "BL Fournisseur" as BL
 concise "Systeme Lireco" as LIR
 concise "Odoo Inventory" as ODO
 
-clock "Temps (minutes)" with period 1
-
 @0
 ISA is Attente
 BL is Papier_Recu

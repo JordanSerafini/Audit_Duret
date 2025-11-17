@@ -39,7 +39,7 @@ database "Donnees" {
 }
 
 package "Integrations Externes" {
-  [SAGE Compta\n(API CSV)" as SAGE
+  [SAGE Compta\n(API CSV)] as SAGE
   [Lireco RFID\n(API REST)] as Lireco
   [Linear Tickets\n(Webhooks)] as Linear
   [SendGrid Email\n(Notifications)] as SendGrid
