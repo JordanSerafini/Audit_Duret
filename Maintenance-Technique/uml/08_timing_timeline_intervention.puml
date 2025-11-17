@@ -6,54 +6,50 @@ concise "ACTUEL (CERFA Papier)" as Actuel
 concise "CIBLE (App Mobile)" as Cible
 
 @0
-Actuel is "Preparation"
-Cible is "Preparation"
+Actuel is Preparation
+Cible is Preparation
 
 @1
-Actuel is "Deplacement"
-Cible is "Deplacement"
+Actuel is Deplacement
+Cible is Deplacement
 
 @21
-Actuel is "Appel Clothilde\n(infos client)"
-Cible is "Intervention\n(info dispo app)"
+Actuel is AppelClothilde
+Cible is InterventionInfoApp
 
 @26
-Actuel is "Intervention\n(1h30)"
+Actuel is Intervention
 
 @116
-Actuel is "CERFA papier\n(12 min)"
-Cible is "Intervention\nterminee"
+Actuel is CERFAPapier
+Cible is InterventionTerminee
 
 @128
-Actuel is "Photos tel perso\n(pas integrees)"
-Cible is "Rapport digital\n(3 min)"
+Actuel is PhotosTel
+Cible is RapportDigital
 
 @133
-Actuel is "Signature papier"
+Actuel is SignaturePapier
 
 @135
-Actuel is "Fin intervention"
-Cible is "Email client\n(PDF auto)"
+Actuel is FinIntervention
+Cible is EmailClient
 
 @138
-Cible is "Fin intervention"
+Cible is FinIntervention
 
-@Actuel
-0 is "8h30"
-1 is "9h00"
-21 is "9h20"
-26 is "9h25"
-116 is "10h55"
-128 is "11h07"
-133 is "11h12"
-135 is "11h14"
+Actuel@0 <-> @1 : 30min
+Actuel@1 <-> @21 : 20min
+Actuel@21 <-> @26 : 5min
+Actuel@26 <-> @116 : 1h30
+Actuel@116 <-> @128 : 12min
+Actuel@128 <-> @133 : 5min
+Actuel@133 <-> @135 : 2min
 
-@Cible
-0 is "8h30"
-1 is "9h00"
-21 is "9h20"
-116 is "10h55"
-138 is "11h17"
+Cible@0 <-> @1 : 30min
+Cible@1 <-> @21 : 20min
+Cible@21 <-> @116 : 1h35
+Cible@116 <-> @138 : 3min
 
 highlight 21 to 26 #LightCoral : Temps perdu (5 min)
 highlight 116 to 135 #LightCoral : CERFA + photos (19 min)

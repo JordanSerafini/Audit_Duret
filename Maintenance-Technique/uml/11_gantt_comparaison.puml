@@ -4,78 +4,38 @@ title Comparaison Temps - Avant/Apres (Intervention SAV)
 
 printscale daily
 
-caption Systeme ACTUEL vs CIBLE - 1 Intervention
-
 project starts 2025-11-17
 
-[SYSTEME ACTUEL - 2h44] as [Actuel] lasts 164 minutes
-[Actuel] is colored in Red
+[SYSTEME ACTUEL - 2h44] as [Actuel] lasts 164 minutes and is colored in Red
 
-[Preparation tournee] as [A1] lasts 15 minutes
-[A1] is colored in LightCoral
-[A1] starts at [Actuel]'s start
+[Preparation tournee] as [A1] lasts 15 minutes and is colored in LightCoral and starts at [Actuel]'s start
 
-[Deplacement client] as [A2] lasts 20 minutes
-[A2] is colored in LightCoral
-[A2] starts at [A1]'s end
+[Deplacement client] as [A2] lasts 20 minutes and is colored in LightCoral and starts at [A1]'s end
 
-[Appel Clothilde (infos)] as [A3] lasts 5 minutes
-[A3] is colored in Orange
-[A3] starts at [A2]'s end
+[Appel Clothilde (infos)] as [A3] lasts 5 minutes and is colored in Orange and starts at [A2]'s end
 
-[Intervention technique] as [A4] lasts 90 minutes
-[A4] is colored in LightGreen
-[A4] starts at [A3]'s end
+[Intervention technique] as [A4] lasts 90 minutes and is colored in LightGreen and starts at [A3]'s end
 
-[CERFA papier (remplir)] as [A5] lasts 12 minutes
-[A5] is colored in Red
-[A5] starts at [A4]'s end
+[CERFA papier (remplir)] as [A5] lasts 12 minutes and is colored in Red and starts at [A4]'s end
 
-[Photos tel perso] as [A6] lasts 5 minutes
-[A6] is colored in Orange
-[A6] starts at [A5]'s end
+[Photos tel perso] as [A6] lasts 5 minutes and is colored in Orange and starts at [A5]'s end
 
-[Signature papier] as [A7] lasts 2 minutes
-[A7] is colored in LightCoral
-[A7] starts at [A6]'s end
+[Signature papier] as [A7] lasts 2 minutes and is colored in LightCoral and starts at [A6]'s end
 
-[Retour → scan CERFA] as [A8] lasts 15 minutes
-[A8] is colored in Red
-[A8] starts at [A7]'s end
+[Retour scan CERFA] as [A8] lasts 15 minutes and is colored in Red and starts at [A7]'s end
 
 -- VERSUS --
 
-[SYSTEME CIBLE - 1h58] as [Cible] lasts 118 minutes
-[Cible] is colored in LightGreen
-[Cible] starts at [Actuel]'s start
+[SYSTEME CIBLE - 1h58] as [Cible] lasts 118 minutes and is colored in LightGreen and starts at [Actuel]'s start
 
-[Preparation tournee] as [C1] lasts 10 minutes
-[C1] is colored in LightGreen
-[C1] starts at [Cible]'s start
+[Preparation tournee C] as [C1] lasts 10 minutes and is colored in LightGreen and starts at [Cible]'s start
 
-[Deplacement (optimise)] as [C2] lasts 18 minutes
-[C2] is colored in LightGreen
-[C2] starts at [C1]'s end
+[Deplacement (optimise)] as [C2] lasts 18 minutes and is colored in LightGreen and starts at [C1]'s end
 
-[Intervention technique] as [C3] lasts 90 minutes
-[C3] is colored in LightGreen
-[C3] starts at [C2]'s end
+[Intervention technique C] as [C3] lasts 90 minutes and is colored in LightGreen and starts at [C2]'s end
 
--- Pointage GPS auto arrivee --
--- (pas de temps perdu) --
+[Rapport digital app] as [C4] lasts 3 minutes and is colored in LightGreen and starts at [C3]'s end
 
-[Rapport digital app] as [C4] lasts 3 minutes
-[C4] is colored in LightGreen
-[C4] starts at [C3]'s end
-
--- Photos integrees --
--- Signature electronique --
--- Email client auto --
-
--- Pointage GPS auto depart --
-
-[Sync cloud (auto)] as [C5] lasts 30 seconds
-[C5] is colored in LightGreen
-[C5] starts at [C4]'s end
+[Sync cloud (auto)] as [C5] lasts 1 minutes and is colored in LightGreen and starts at [C4]'s end
 
 @endgantt
