@@ -2,118 +2,52 @@
 
 title Network Diagram - Flux de Donnees ACTUEL Direction-Affaires
 
-package "Teletravail (Domicile)" #FFE4E1 {
-  [Laurent
-RA Domicile
-Evite!] as laurentHome
-}
-
-package "Bureau Siege" #E6F3FF {
-  [Laurent
-RA Bureau] as laurent
+package "Bureau Siege" {
+  [Laurent RA] as laurent
   [RA 2] as ra2
   [RA 3] as ra3
-  [RA 4] as ra4
-  [Marie
-Direction] as marie
-  [Thomas
-BE] as thomas
-  [Serveur
-Sage MDE
-Obsolete] as server
+  [Marie Direction] as marie
+  [Serveur Sage MDE] as server
 }
 
-cloud "VPN/Citrix" {
+cloud VPN_Citrix {
   [VPN] as vpn
   [Citrix] as citrix
 }
 
-cloud "Cloud OneDrive" {
-  [Dossiers
-200+ Word
-Chaos] as dossiers
-  [Excel
-Laurent] as excelL
-  [Excel
-RA2] as excelRA2
-  [Excel
-RA3] as excelRA3
+cloud OneDrive {
+  [Dossiers Word] as dossiers
+  [Excel Laurent] as excelL
 }
 
-cloud "Clients" {
+cloud Clients {
   [Client A] as client1
-  [Client B] as client2
 }
 
-laurentHome ..> vpn : VPN tunnel
-vpn --> citrix : Citrix
-citrix ..> server : 30-40s par ecran
+vpn --> citrix
+citrix ..> server
 
-laurent --> server : LAN direct
-ra2 --> server : LAN direct
-ra3 --> server : LAN direct
-ra4 --> server : LAN direct
+laurent --> server
+ra2 --> server
+ra3 --> server
 
-laurent --> dossiers : OneDrive
-Recherche 30 min
-laurent --> excelL : Excel perso
-ra2 --> dossiers : OneDrive
-ra2 --> excelRA2 : Excel perso
-ra3 --> dossiers : OneDrive
-ra3 --> excelRA3 : Excel perso
+laurent --> dossiers
+laurent --> excelL
+ra2 --> dossiers
 
-marie ..> laurent : Demande chiffres
-3h
-marie ..> ra2 : Demande chiffres
-marie ..> server : Rarement
-(trop lent)
+marie ..> laurent
+marie ..> server
 
-thomas --> dossiers : Validation PPSPS
-Commentaires Word
+laurent --> client1
+client1 ..> laurent
 
-laurent --> client1 : Email PDF devis
-laurent --> client2 : Email PDF PPSPS
-client1 ..> laurent : Demande devis
-client2 ..> laurent : Demande PPSPS
-
-note as N1
-  **FLUX DE DONNEES CHAOTIQUES**
-
-  **Problemes:**
-  1. Teletravail IMPOSSIBLE
-     - VPN + Citrix: 30-40s/ecran
-     - Timeouts frequents
-     - Laurent evite domicile!
-
-  2. ERP Legacy CALAMITEUX
-     - Sage MDE obsolete
-     - Interface client lourd
-     - Pas d'API, pas de mobile
-
-  3. Documents EPARPILLES
-     - 200+ fichiers Word
-     - Chaque RA ses propres Excel
-     - Nommage incoherent
-     - 30 min recherche
-
-  4. Direction AVEUGLE
-     - Pas de dashboards
-     - Pas de KPIs temps reel
-     - 3h pour un chiffre
-     - Demande manuelle aux RA
-
-  5. Processus 100% MANUEL
-     - Devis: 2h05
-     - PPSPS: 3h00
-     - Zero automatisation
-     - Copie-colle Word
-
-  **Impact:**
-  Productivite tres faible
-  Frustration elevee
-  Teletravail abandonne
-  Direction sans visibilite
-  Reliquats non suivis
+note right of server
+  **FLUX CHAOTIQUES**
+  - ERP obsolete
+  - 30-40s/ecran
+  - Teletravail impossible
+  - Documents eparpilles
+  - Direction aveugle
 end note
 
 @enduml
