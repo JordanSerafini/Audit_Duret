@@ -2,63 +2,103 @@
 
 title Processus Prise RDV Maintenance - ACTUEL vs CIBLE
 
+|#LightCoral|ACTUEL - Processus Manuel|
 start
+:Client souhaite RDV entretien;
+:Appelle Clothilde\n(8h-18h uniquement);
+note right #FF6B6B
+  Dispo 8h-18h uniquement
+  Pas de self-service
+end note
 
-fork
-  partition "ACTUEL - Manuel" #LightCoral {
-    :Client souhaite RDV;
-    :<color:red>Appelle Clothilde</color>\n(8h-18h uniquement);
-    :<color:red>Clothilde decroche</color>;
-    :<color:red>Recherche client Excel</color>\n(2 min);
-    :<color:red>Verifie contrat Word</color>\n(2 min);
-    :<color:red>Consulte planning Outlook</color>\n(3 min);
+:Clothilde decroche telephone;
+:Recherche client Excel (2 min);
+note right #FF6B6B
+  Donnees eparpillees
+  Pas de CRM
+end note
 
-    if (Creneau dispo ?) then (oui)
-      :<color:red>Propose creneau</color>;
-    else (non)
-      :<color:red>Recherche autre creneau</color>\n(5 min);
-    endif
+:Verifie contrat Word (2 min);
+:Consulte planning Outlook (3 min);
 
-    :<color:red>Client accepte</color>;
-    :<color:red>Saisie Outlook</color> (2 min);
-    :<color:red>Saisie Excel</color> (1 min);
-    :<color:red>Saisie GAO</color> (2 min);
-    :<color:red>Email confirmation</color>\n(5 min);
-    :<color:red>RDV confirme</color>;
+if (Creneau dispo ?) then (oui)
+  :Propose creneau;
+else (non)
+  :Recherche autre creneau (5 min);
+  :Propose;
+endif
 
-    note left
-      **ACTUEL: 19 min**
-      Client attend: 8 min
-      Clothilde: 19 min
-      Triple saisie
-      Dispo 8h-18h
-    end note
-  }
-fork again
-  partition "CIBLE - Digital 24/7" #LightGreen {
-    :Client souhaite RDV;
-    :<color:green>Se connecte portail web</color>\n(20h30 - soir);
-    :<color:green>Selectionne Prendre RDV</color>;
-    :<color:green>Calendrier affiche creneaux</color>\ndispos zone geo;
-    :<color:green>Choisit creneau</color>\n(2 clics);
-    :<color:green>Confirmation auto</color>;
-    :<color:green>Email + SMS rappel J-2</color>;
-    :<color:green>Clothilde recoit alerte</color>;
-    :<color:green>Valide RDV</color> (2 min);
-    :<color:green>RDV confirme</color>;
+:Client accepte ou negocie;
+:Saisie Outlook (2 min);
+note right #FF6B6B
+  RE-SAISIE 1
+end note
 
-    note right
-      **CIBLE: 3 min**
-      Client: 1 min autonome
-      Clothilde: 2 min validation
-      Zero ressaisie
-      Dispo 24/7
-      **GAIN: 17min x 600 RDV**
-      **= 170h/an = 8,500 EUR**
-    end note
-  }
-end fork
+:Saisie Excel (1 min);
+note right #FF6B6B
+  RE-SAISIE 2
+end note
 
+:Saisie GAO (2 min);
+note right #FF6B6B
+  RE-SAISIE 3
+  Triple saisie manuelle
+end note
+
+:Redaction email confirmation (5 min);
+:Client recoit email;
+#FF6B6B:RDV confirme;
+note right
+  **TEMPS TOTAL: 19 min**
+  Client attend: 8 min
+  Clothilde: 19 min
+  Triple saisie manuelle
+  Dispo 8h-18h uniquement
+end note
+stop
+
+|#LightGreen|CIBLE - Portail Client 24/7|
+start
+:Client souhaite RDV entretien;
+:Se connecte portail web\n(20h30 - soir);
+note right #90EE90
+  Dispo 24/7
+  Self-service
+end note
+
+:Selectionne Prendre RDV;
+:Calendrier affiche creneaux\ndispos zone geographique;
+note right #90EE90
+  Planning temps reel
+  Zone geo automatique
+end note
+
+:Choisit creneau (2 clics);
+:Confirmation automatique;
+note right #90EE90
+  Saisie unique
+  Sync auto ERP
+end note
+
+:Recoit email + SMS rappel J-2;
+note right #90EE90
+  Notifications auto
+  Rappel J-2
+end note
+
+:Clothilde recoit alerte Nouveau RDV;
+:Valide RDV (2 min);
+#90EE90:RDV confirme;
+note right
+  **TEMPS TOTAL: 3 min**
+  Client: 1 min autonome
+  Clothilde: 2 min validation
+  Zero ressaisie
+  Dispo 24/7
+
+  **GAIN: 17 min x 600 RDV**
+  **= 170h/an = 8,500 EUR**
+end note
 stop
 
 @enduml
