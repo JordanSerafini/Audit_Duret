@@ -1,0 +1,88 @@
+@startwbs WBS_Projet
+
+title Work Breakdown Structure Digitalisation RH
+
+* Projet\nDigitalisation\nRH\n18 mois
+
+** Phase 1\nQuick Wins\n(M1-M4)
+
+*** SIRH Core
+**** Benchmark SIRH\nM1
+**** POC solution\nM1-M2
+**** GO/NO-GO\nM2
+**** Migration donnees\nM3
+**** Tests\nM3
+**** Formation\nM4
+**** GO-LIVE\nM4
+
+*** Module Absences
+**** Workflow conges\nM2
+**** Workflow maladie\nM2
+**** Integration POPAYE\nM3
+**** Tests\nM3
+
+*** Module Pointage
+**** App mobile\nM3
+**** Saisie heures\nM3
+**** Validation managers\nM4
+**** Tests\nM4
+
+** Phase 2\nStructurant\n(M5-M12)
+
+*** Automatisation Paie
+**** Calcul TR auto\nM5
+**** Calcul km auto\nM6
+**** Integration SILAE\nM6-M7
+**** Tests\nM7
+
+*** Module Onboarding
+**** Checklist digitale\nM7
+**** Workflow 39 taches\nM7-M8
+**** Notifications auto\nM8
+**** Tests\nM8
+
+*** Module Offboarding
+**** Checklist digitale\nM9
+**** Workflow 22 taches\nM9
+**** Restitution materiel\nM10
+**** Tests\nM10
+
+*** Integration Interimaires
+**** Import donnees\nM10
+**** Suivi missions\nM11
+**** Alertes fin mission\nM11
+**** Tests\nM11
+
+*** Dashboards RH
+**** KPIs temps reel\nM11
+**** Reporting direction\nM12
+**** Alertes automatiques\nM12
+**** Tests\nM12
+
+** Phase 3\nOptimisation\n(M13-M18)
+
+*** Module Formation
+**** Plan formation\nM13
+**** Suivi habilitations\nM13-M14
+**** Alertes renouvellement\nM14
+**** Tests\nM14
+
+*** Entretiens Digitalises
+**** Entretiens annuels\nM15
+**** Entretiens pro\nM15
+**** Rapports etonnement\nM16
+**** Tests\nM16
+
+*** Portail Collaborateur
+**** Bulletins paie\nM16
+**** Attestations\nM17
+**** Demandes RH\nM17
+**** Tests\nM17
+
+*** Documentation Formation
+**** Doc utilisateurs\nM17
+**** Formation complete\nM18
+**** Support\nM18
+**** Bilan final\nM18
+
+@endwbs
