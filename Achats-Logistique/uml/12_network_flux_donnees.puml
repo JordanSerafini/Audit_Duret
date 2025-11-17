@@ -2,65 +2,46 @@
 
 title Network Diagram - Flux de Données ACTUEL
 
-nwdiag {
-  network "Chantiers (Terrain)" {
-    address = "Hors réseau"
-    color = "#FFE4E1"
-
-    marc1 [description = "📱 Marc\nChef 1", color = "#FFB6C1"]
-    marc2 [description = "📱 Marc\nChef 2", color = "#FFB6C1"]
-    marc3 [description = "📱 Marc\nChef 3", color = "#FFB6C1"]
-  }
-
-  network "Téléphone/SMS" {
-    color = "#FFD700"
-    marc1
-    marc2
-    marc3
-    sylvie
-  }
-
-  network "LAN Bureau Siège" {
-    address = "192.168.1.0/24"
-    color = "#E6F3FF"
-
-    sylvie [description = "💻 Sylvie\nAchats", color = "#ADD8E6"]
-    julien [description = "💻 Julien\nAffaires", color = "#FFDAB9"]
-    server [description = "🖥️ Serveur\nSage MDE", color = "#FF6B6B"]
-  }
-
-  network "LAN Dépôt" {
-    address = "192.168.2.0/24"
-    color = "#E8F5E9"
-
-    eric [description = "💻 Éric\nDépôt\n🔴 1 seul PC!", color = "#98FB98"]
-    server
-  }
-
-  network "Internet" {
-    color = "#E0F7FA"
-
-    sylvie
-    julien
-    cloud [description = "☁️ OneDrive\nExcel x4", color = "#FFD700"]
-    email [description = "📧 Email\nOutlook", color = "#87CEEB"]
-  }
-
-  network "Fournisseurs" {
-    color = "#E0E0E0"
-
-    fourn1 [description = "📞 Fourn A\n🔴 Téléphone", color = "#D3D3D3"]
-    fourn2 [description = "📞 Fourn B\n🔴 Téléphone", color = "#D3D3D3"]
-  }
-
-  network "Téléphone/Email" {
-    color = "#FFD700"
-    sylvie
-    fourn1
-    fourn2
-    email
-  }
+package "Chantiers (Terrain)" #FFE4E1 {
+  [📱 Marc\nChef 1] as marc1
+  [📱 Marc\nChef 2] as marc2
+  [📱 Marc\nChef 3] as marc3
 }
+
+package "Bureau Siège" #E6F3FF {
+  [💻 Sylvie\nAchats] as sylvie
+  [💻 Julien\nAffaires] as julien
+  [🖥️ Serveur\nSage MDE] as server
+}
+
+package "Dépôt" #E8F5E9 {
+  [💻 Éric\nDépôt\n🔴 1 seul PC!] as eric
+}
+
+cloud "Internet" #E0F7FA {
+  [☁️ OneDrive\nExcel x4] as cloud
+  [📧 Email\nOutlook] as email
+}
+
+package "Fournisseurs" #E0E0E0 {
+  [📞 Fourn A\n🔴 Téléphone] as fourn1
+  [📞 Fourn B\n🔴 Téléphone] as fourn2
+}
+
+marc1 ..> sylvie : Téléphone
+marc2 ..> sylvie : Téléphone
+marc3 ..> sylvie : Téléphone
+
+sylvie --> server : LAN
+julien --> server : LAN
+eric --> server : LAN
+
+sylvie --> cloud : Internet
+julien --> cloud : Internet
+
+sylvie --> email : Internet
+sylvie ..> fourn1 : Téléphone
+sylvie ..> fourn2 : Téléphone
 
 note as N1
   🔴 **FLUX DE DONNÉES CHAOTIQUES**
