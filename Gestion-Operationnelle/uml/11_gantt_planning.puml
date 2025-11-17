@@ -46,11 +46,11 @@ project starts 2025-11-17
 [Config Odoo+PBI] as [RBACConfig] lasts 30 days and is colored in Violet and starts at [RBACDef]'s end
 [Tests Formation] as [RBACGL] lasts 30 days and is colored in LightGreen and starts at [RBACConfig]'s end
 
-[ML Predictif] as [ML] lasts 120 days and is colored in Green
+[Analyses Avancees] as [ML] lasts 120 days and is colored in Green
 [ML] starts at [OdooMigr]'s end
 
 [Data Lake Setup] as [MLSetup] lasts 30 days and is colored in LightGreen and starts at [ML]'s start
-[Dev Modeles ML] as [MLDev] lasts 60 days and is colored in LightGreen and starts at [MLSetup]'s end
+[Dev Analyses] as [MLDev] lasts 60 days and is colored in LightGreen and starts at [MLSetup]'s end
 [Integration GO-LIVE] as [MLGL] lasts 30 days and is colored in DarkGreen and starts at [MLDev]'s end
 
 -- Phase 3 : Optimisation (M19-M24) --

@@ -152,7 +152,7 @@
 - 60% affaires avec reliquats mal suivis
 - Oublis refacturation (30-40% cas)
 
-**Coût estimé :** 80K€/an
+**Impact observé :** Pertes constatées mais non quantifiées
 
 **Sévérité : 🟠 IMPORTANT**
 
@@ -160,15 +160,15 @@
 
 ### 📊 Synthèse Pain Points Laurent
 
-| Pain Point | Sévérité | Coût/an |
-|------------|----------|---------|
-| ERP lent | 🔴 | 120K€ |
-| Accès distant | 🔴 | 40K€ |
-| Templates | 🔴 | 130K€ |
-| PPSPS | 🔴 | 55K€ |
-| Maj prix | 🟠 | 35K€ |
-| Reliquats | 🟠 | 80K€ |
-| **TOTAL (×4 RA)** | | **460K€** |
+| Pain Point | Sévérité | Impact Mesuré |
+|------------|----------|---------------|
+| ERP lent | 🔴 | 30-40s/écran, 100-200 écrans/jour |
+| Accès distant | 🔴 | Télétravail abandonné, VPN instable |
+| Templates | 🔴 | 2h05/devis vs 30 min possible |
+| PPSPS | 🔴 | 3h00/PPSPS, ~15-20/mois |
+| Maj prix | 🟠 | 1 semaine/an manuel |
+| Reliquats | 🟠 | 60% mal suivis, pertes constatées |
+| **Frustration globale** | 🔴 | **9-10/10**
 
 ---
 
