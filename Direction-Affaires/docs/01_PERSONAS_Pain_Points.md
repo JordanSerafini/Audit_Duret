@@ -215,7 +215,7 @@
 
 **Problème :** PPSPS éparpillés, recherche 15-30min
 
-**Coût :** 20K€/an
+**Impact observé :** Temps perdu quotidien, frustration
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -225,7 +225,7 @@
 
 **Problème :** 40% temps admin (copier-coller) vs technique
 
-**Coût :** 30K€/an
+**Impact observé :** Compétences techniques sous-utilisées
 
 **Sévérité : 🟠 IMPORTANT**
 
@@ -233,16 +233,16 @@
 
 ## 📊 SYNTHÈSE GLOBALE
 
-### Coûts Totaux
+### Impact Global Mesuré
 
-| Persona | Coût/an |
-|---------|---------|
-| Laurent (×4) | 460K€ |
-| Marie | Stratégique |
-| Thomas | 50K€ |
-| **TOTAL** | **510K€+** |
+| Persona | Impact Principal |
+|---------|-----------------|
+| Laurent (×4 RA) | 2h05/devis, 3h/PPSPS, 30-40s/écran, télétravail impossible |
+| Marie (Direction) | Visibilité nulle (3h pour compiler), décisions retardées |
+| Thomas (BE) | 40% temps admin vs technique, PPSPS éparpillés |
+| **Frustration globale** | **9-10/10** |
 
-### Gains Attendus Odoo
+### Gains Attendus Solution Moderne
 
 | Solution | Gain/an |
 |----------|---------|
