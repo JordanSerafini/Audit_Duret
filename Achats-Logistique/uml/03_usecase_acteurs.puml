@@ -1,0 +1,134 @@
+@startuml UseCase_Achats_Logistique
+
+title Use Case Diagram - Achats & Logistique ACTUEL
+
+left to right direction
+
+actor "Marc\n(Chef Chantier)" as Marc #FFB6C1
+actor "Sylvie\n(Gestionnaire Achats)" as Sylvie #ADD8E6
+actor "Julien\n(Resp. Affaires)" as Julien #FFDAB9
+actor "Éric\n(Magasinier)" as Eric #98FB98
+actor "Christine\n(Directrice Générale)" as Christine #DDA0DD
+
+rectangle "Système Achats-Logistique ACTUEL" #FFFFCC {
+
+  usecase "Commander\nmatériel" as UC1 #FFD700
+  note right of UC1
+    🔴 50% d'erreurs
+    ⏰ 3 jours
+  end note
+
+  usecase "Consulter\nstock" as UC2 #FFD700
+  note right of UC2
+    🔴 Données non fiables (40%)
+  end note
+
+  usecase "Traiter\ncommandes" as UC3 #FFD700
+  note left of UC3
+    🔴 6 re-saisies
+    ⏰ 2h par commande
+  end note
+
+  usecase "Rechercher\nréférence produit" as UC4 #FF6B6B
+  note right of UC4
+    🔴 12 variantes/produit
+    Confusion totale
+  end note
+
+  usecase "Réceptionner\nlivraisons" as UC5 #FFD700
+  note left of UC5
+    🔴 100% manuel
+    ⏰ 1h30 par livraison
+  end note
+
+  usecase "Suivre coûts\npar affaire" as UC6 #FF6B6B
+  note left of UC6
+    🔴 Données incohérentes
+    ⏰ 3h pour un chiffre
+    ±20% d'erreur
+  end note
+
+  usecase "Gérer\nstock dépôt" as UC7 #FFD700
+  note right of UC7
+    🔴 Pas de traçabilité
+    Rangement chaotique
+  end note
+
+  usecase "Contacter\nfournisseurs" as UC8 #FFD700
+  note right of UC8
+    🔴 100% téléphone
+    Pas d'EDI/API
+  end note
+
+  usecase "Valider\nbudgets achats" as UC9
+
+  usecase "Analyser\nperformances" as UC10 #FF6B6B
+  note left of UC10
+    🔴 Impossible
+    Données inexploitables
+  end note
+}
+
+rectangle "Outils (Silos)" #FFE4E1 {
+  usecase "Sage MDE\n(Obsolète)" as Sage #FF6B6B
+  usecase "Excel\nFournisseurs" as Excel1 #FFD700
+  usecase "Excel\nSuivi" as Excel2 #FFD700
+  usecase "Email" as Email
+  usecase "Téléphone" as Tel #FFD700
+  usecase "Papier\n(Bons)" as Paper #FF6B6B
+}
+
+' Relations Marc
+Marc --> UC1
+Marc --> UC2
+Marc ..> Paper : utilise
+
+' Relations Sylvie
+Sylvie --> UC3
+Sylvie --> UC4
+Sylvie --> UC8
+Sylvie ..> Sage : utilise
+Sylvie ..> Excel1 : utilise
+Sylvie ..> Excel2 : utilise
+Sylvie ..> Email : utilise
+Sylvie ..> Tel : utilise
+
+' Relations Julien
+Julien --> UC1
+Julien --> UC6
+Julien --> UC9
+Julien ..> Sage : consulte
+Julien ..> Excel1 : consulte
+Julien ..> Excel2 : consulte
+
+' Relations Éric
+Eric --> UC5
+Eric --> UC7
+Eric --> UC2
+Eric ..> Sage : utilise
+
+' Relations Christine
+Christine --> UC10
+Christine --> UC9
+
+' Includes
+UC1 .> UC4 : <<include>>
+UC3 .> UC4 : <<include>>
+UC3 .> UC8 : <<include>>
+UC5 .> UC4 : <<include>>
+UC6 .> UC3 : <<include>>
+
+' Extensions
+UC4 .> Tel : <<extend>>\nappels clarification
+UC8 .> Email : <<extend>>\nconfirmation
+
+note bottom
+  **PROBLÈMES MAJEURS**
+  🔴 Aucune intégration entre outils
+  🔴 Re-saisie 6-7 fois des mêmes données
+  🔴 Pas de visibilité temps réel
+  🔴 Taux d'erreur 50%
+  💰 Coût: 910K€/an de pertes
+end note
+
+@enduml

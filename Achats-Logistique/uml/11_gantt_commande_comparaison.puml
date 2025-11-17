@@ -1,0 +1,64 @@
+@startgantt Gantt_Comparaison_Actuel_Cible
+
+title Gantt - Comparaison Processus ACTUEL vs CIBLE
+
+printscale daily
+
+<style>
+ganttDiagram {
+  timeline {
+    BackgroundColor lightgray
+  }
+}
+</style>
+
+Project starts 2024-01-08
+
+[PROCESSUS ACTUEL (3 JOURS)] as [ACTUEL] lasts 3 days and is colored in Red
+
+-- Jour 1 - Lundi --
+[Marc: Identifie besoin] as [A1] lasts 5 minutes and is colored in LightPink
+[Marc: Cherche bon papier] as [A2] lasts 5 minutes and starts at [A1]'s end and is colored in Salmon
+[Marc: Remplit bon] as [A3] lasts 5 minutes and starts at [A2]'s end and is colored in Salmon
+[Marc: Essaie joindre Sylvie] as [A4] lasts 25 minutes and starts at [A3]'s end and is colored in Red
+[Marc: Appel réussi] as [A5] lasts 10 minutes and starts at [A4]'s end and is colored in LightPink
+[Sylvie: Cherche Sage] as [A6] lasts 12 minutes and starts at [A5]'s end and is colored in Orange
+[Sylvie: Cherche Excel] as [A7] lasts 8 minutes and starts at [A6]'s end and is colored in Orange
+[Sylvie: Appel fournisseur] as [A8] lasts 15 minutes and starts at [A7]'s end and is colored in Orange
+[Sylvie: Email confirmation] as [A9] lasts 10 minutes and starts at [A8]'s end and is colored in Orange
+[Sylvie: Saisie Sage] as [A10] lasts 5 minutes and starts at [A9]'s end and is colored in Orange
+[Sylvie: Saisie Excel] as [A11] lasts 5 minutes and starts at [A10]'s end and is colored in Orange
+
+-- Jour 2 - Mardi --
+[⏸️ ATTENTE LIVRAISON] as [A12] lasts 1 day and starts at [A11]'s end and is colored in Red
+[💰 Chantier bloqué: 800€] as [A13] lasts 1 day and starts at [A12]'s start and is colored in Red
+
+-- Jour 3 - Mercredi --
+[Éric: Réception] as [A14] lasts 60 minutes and starts at [A12]'s end and is colored in LightGreen
+[Éric: Saisie Sage] as [A15] lasts 20 minutes and starts at [A14]'s end and is colored in Orange
+[Marc: Récupère dépôt] as [A16] lasts 45 minutes and starts at [A15]'s end and is colored in LightPink
+[❌ ERREUR - Recommence] as [A17] lasts 0 days and starts at [A16]'s end and is colored in Red
+
+[A17] links to [A1]
+
+-- CIBLE (2 HEURES) --
+[PROCESSUS CIBLE (2h)] as [CIBLE] lasts 2 hours and starts at 2024-01-15 and is colored in Green
+
+[Marc: Commande app mobile] as [C1] lasts 2 minutes and starts at [CIBLE]'s start and is colored in LightGreen
+[Validation auto] as [C2] lasts 1 minute and starts at [C1]'s end and is colored in LightGreen
+[Fournisseur EDI auto] as [C3] lasts 5 minutes and starts at [C2]'s end and is colored in LightGreen
+[Livraison J+1] as [C4] lasts 4 hours and starts at [C3]'s end and is colored in LightGreen
+[✅ Succès] as [C5] lasts 0 days and starts at [C4]'s end and is colored in Green
+
+note bottom
+  **COMPARAISON**
+  ⏰ ACTUEL: **3 jours** (50% d'échec → 6 jours)
+  ⏰ CIBLE: **2 heures** (< 5% d'échec)
+
+  💰 ÉCONOMIE:
+  - Temps: 36x plus rapide
+  - Coût: 2,708€ → < 100€
+  - Taux succès: 50% → 95%+
+end note
+
+@endgantt

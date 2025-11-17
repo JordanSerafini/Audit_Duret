@@ -1,0 +1,50 @@
+@startwbs WBS_Problemes_Achats_Logistique
+
+title WBS - Décomposition des Problèmes Achats-Logistique
+
+* Problèmes\nAchats-Logistique\n**910K€/an**
+
+** 🔴 DONNÉES\n350K€/an
+*** Base chaos\n12 réf/produit
+*** Doublons
+*** Obsolètes
+*** Stock non fiable\n40%
+
+** 🔴 PROCESSUS\n270K€/an
+*** 6 re-saisies
+**** Papier
+**** Téléphone
+**** Email
+**** Sage
+**** Excel x2
+*** 100% manuel
+*** 0% automatisation
+
+** 🔴 OUTILS\n150K€/an
+*** Sage MDE obsolète
+**** Windows 2012
+**** Client lourd
+**** Pas d'API
+*** Excel chaos
+**** 4+ fichiers
+**** Incohérences
+*** 1 seul PC dépôt
+
+** 🔴 COMMUNICATION\n90K€/an
+*** 100% téléphone
+**** 15-20 appels/jour
+**** Pas de traçabilité
+*** Pas d'EDI
+*** Pas d'API
+*** Sylvie = goulot
+
+** 🔴 ERREURS\n50K€/an
+*** Taux 50%
+**** Mauvaises réf
+**** Quantités
+**** Livraisons
+*** Chantier bloqué
+**** 💰 2,400€
+**** 3 jours
+
+@endwbs

@@ -1,0 +1,86 @@
+@startuml Network_Flux_Donnees
+
+title Network Diagram - Flux de Données ACTUEL
+
+nwdiag {
+  network "Chantiers (Terrain)" {
+    address = "Hors réseau"
+    color = "#FFE4E1"
+
+    marc1 [description = "📱 Marc\nChef 1", color = "#FFB6C1"]
+    marc2 [description = "📱 Marc\nChef 2", color = "#FFB6C1"]
+    marc3 [description = "📱 Marc\nChef 3", color = "#FFB6C1"]
+  }
+
+  network "Téléphone/SMS" {
+    color = "#FFD700"
+    marc1
+    marc2
+    marc3
+    sylvie
+  }
+
+  network "LAN Bureau Albertville" {
+    address = "192.168.1.0/24"
+    color = "#E6F3FF"
+
+    sylvie [description = "💻 Sylvie\nAchats", color = "#ADD8E6"]
+    julien [description = "💻 Julien\nAffaires", color = "#FFDAB9"]
+    server [description = "🖥️ Serveur\nSage MDE", color = "#FF6B6B"]
+  }
+
+  network "LAN Dépôt" {
+    address = "192.168.2.0/24"
+    color = "#E8F5E9"
+
+    eric [description = "💻 Éric\nDépôt\n🔴 1 seul PC!", color = "#98FB98"]
+    server
+  }
+
+  network "Internet" {
+    color = "#E0F7FA"
+
+    sylvie
+    julien
+    cloud [description = "☁️ OneDrive\nExcel x4", color = "#FFD700"]
+    email [description = "📧 Email\nOutlook", color = "#87CEEB"]
+  }
+
+  network "Fournisseurs" {
+    color = "#E0E0E0"
+
+    fourn1 [description = "📞 Fourn A\n🔴 Téléphone", color = "#D3D3D3"]
+    fourn2 [description = "📞 Fourn B\n🔴 Téléphone", color = "#D3D3D3"]
+  }
+
+  network "Téléphone/Email" {
+    color = "#FFD700"
+    sylvie
+    fourn1
+    fourn2
+    email
+  }
+}
+
+note as N1
+  🔴 **FLUX DE DONNÉES CHAOTIQUES**
+
+  **Problèmes:**
+  1. Chantiers DÉCONNECTÉS (téléphone only)
+  2. Sylvie = HUB CENTRAL (goulot)
+  3. Données éparpillées:
+     - Sage MDE (serveur local)
+     - Excel x4 (OneDrive)
+     - Email (Outlook)
+     - Téléphone (pas de trace)
+     - Papier (bons)
+  4. Pas d'intégration fournisseurs
+  5. Re-saisie 6x des mêmes données
+
+  **Impact:**
+  💰 910K€/an de pertes
+  ⏰ 6h30 de travail humain/commande
+  ❌ 50% d'erreurs
+end note
+
+@enduml

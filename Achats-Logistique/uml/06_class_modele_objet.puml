@@ -1,0 +1,236 @@
+@startuml Class_Diagram_Modele
+
+title Class Diagram - Modèle Objet Achats-Logistique
+
+' Acteurs
+class ChefChantier {
+  +id: string
+  +nom: string
+  +prenom: string
+  +chantier: Chantier
+  +telephone: string
+  --
+  +commanderMateriel()
+  +consulterStock()
+  +relancerCommande()
+}
+
+class GestionnaireAchats {
+  +id: string
+  +nom: string
+  +prenom: string
+  --
+  +traiterCommande()
+  +rechercherProduit()
+  +contacterFournisseur()
+  +saisirDonnees()
+  +validerCommande()
+}
+
+class Magasinier {
+  +id: string
+  +nom: string
+  +prenom: string
+  --
+  +receptionnerLivraison()
+  +verifierQuantite()
+  +rangerMateriel()
+  +mettreAJourStock()
+}
+
+class ResponsableAffaires {
+  +id: string
+  +nom: string
+  +prenom: string
+  --
+  +suivreCoûts()
+  +analyserBudget()
+  +validerCommandes()
+}
+
+' Entités métier
+class Commande {
+  +numero: string
+  +dateCreation: Date
+  +dateLivraison: Date
+  +statut: StatutCommande
+  +montantTotal: float
+  +urgent: boolean
+  --
+  +valider()
+  +annuler()
+  +calculerTotal()
+}
+
+enum StatutCommande {
+  EN_ATTENTE
+  PASSEE
+  EN_COURS_LIVRAISON
+  LIVREE
+  ANNULEE
+  ERREUR
+}
+
+class LigneCommande {
+  +id: string
+  +quantite: int
+  +prixUnitaire: float
+  +montant: float
+  --
+  +calculerMontant()
+}
+
+class Produit {
+  +reference: string
+  +designation: string
+  +categorie: string
+  +unité: string
+  +prixMoyen: float
+  +stockActuel: int
+  +seuilAlerte: int
+  --
+  +obtenirStock()
+  +mettreAJourPrix()
+}
+
+note right of Produit
+  🔴 **PROBLÈME ACTUEL**
+  12 références différentes
+  pour le MÊME produit physique:
+  - CABLE-3G2.5-ROUGE-50M
+  - CBL_3G25_R_50
+  - 3G2.5-CABLE-ROUGE
+  - CABLE_3G_2.5_ROUGE
+  - ...
+
+  ⚠️ Confusion totale
+  ❌ 50% d'erreurs
+end note
+
+class Fournisseur {
+  +id: string
+  +nom: string
+  +contact: string
+  +telephone: string
+  +email: string
+  +delaiMoyen: int
+  +tauxFiabilite: float
+  --
+  +passerCommande()
+  +obtenirTarif()
+  +suivreLivraison()
+}
+
+note bottom of Fournisseur
+  🔴 Doublons dans Excel
+  🔴 Contacts obsolètes
+  🔴 Pas de commande en ligne
+end note
+
+class Chantier {
+  +numero: string
+  +nom: string
+  +adresse: string
+  +dateDebut: Date
+  +dateFin: Date
+  +budgetMatériel: float
+  --
+  +calculerCouts()
+  +suivreConsommation()
+}
+
+class Affaire {
+  +numero: string
+  +nom: string
+  +client: string
+  +budgetTotal: float
+  +budgetAchats: float
+  +depenseReelle: float
+  --
+  +calculerEcart()
+  +analyserPerformance()
+}
+
+note bottom of Affaire
+  🔴 Impossible de suivre
+  les coûts en temps réel
+  ⏰ 3h pour sortir un chiffre
+  ±20% d'erreur
+end note
+
+class Stock {
+  +emplacement: string
+  +quantite: int
+  +dateInventaire: Date
+  +obsolete: boolean
+  --
+  +verifier()
+  +ajuster()
+}
+
+note right of Stock
+  🔴 Données non fiables (40%)
+  🔴 Pas de traçabilité
+  🔴 Rangement chaotique
+end note
+
+class Reception {
+  +id: string
+  +dateReception: Date
+  +quantiteRecue: int
+  +quantiteCommandee: int
+  +ecart: int
+  +commentaire: string
+  --
+  +valider()
+  +signalerEcart()
+}
+
+' Relations
+ChefChantier "1" -- "*" Commande : crée >
+ChefChantier "1" -- "1" Chantier : travaille sur >
+
+GestionnaireAchats "1" -- "*" Commande : traite >
+GestionnaireAchats "1" -- "*" Fournisseur : contacte >
+
+Magasinier "1" -- "*" Reception : effectue >
+Magasinier "1" -- "*" Stock : gère >
+
+ResponsableAffaires "1" -- "*" Affaire : pilote >
+ResponsableAffaires "1" -- "*" Commande : supervise >
+
+Commande "1" *-- "*" LigneCommande : contient
+Commande "*" -- "1" Fournisseur : passée à >
+Commande "1" -- "1" StatutCommande
+Commande "*" -- "0..1" Chantier : pour >
+Commande "*" -- "0..1" Affaire : liée à >
+Commande "1" -- "0..1" Reception : reçue via >
+
+LigneCommande "*" -- "1" Produit : référence >
+
+Produit "1" -- "*" Stock : stocké dans >
+
+Reception "*" -- "1" Commande : correspond à >
+
+note top
+  **PROBLÈMES MODÈLE ACTUEL**
+
+  🔴 **Données**
+  - Produit: 12 références pour 1 produit physique
+  - Fournisseur: Doublons et données obsolètes
+  - Stock: Non fiable (40% de confiance)
+
+  🔴 **Processus**
+  - Re-saisie 6-7 fois des mêmes données
+  - Pas de traçabilité
+  - Pas de notifications automatiques
+
+  🔴 **Intégration**
+  - Aucune API
+  - Données éparpillées (Sage + 4 Excel)
+  - Communication téléphone uniquement
+
+  💰 **Impact**: 910K€/an de pertes
+end note
+
+@enduml

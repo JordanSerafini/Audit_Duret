@@ -1,0 +1,49 @@
+@startmindmap Pain_Points_Achats_Logistique
+
+title Mind Map - Pain Points Achats & Logistique
+
+* 💰 **910K€/an**\nde PERTES
+** 🔴 Base de données\nCHAOS
+***_ 12 références\npour 1 produit
+***_ Doublons
+***_ Données obsolètes
+***_ 💰 350K€/an
+
+** 🔴 Re-saisies\nmanuel (6x)
+***_ Sage MDE
+***_ Excel x4
+***_ Email
+***_ Papier
+***_ ⏰ 45 min/cmd
+***_ 💰 270K€/an
+
+** 🔴 Pas de\nvisibilité TR
+***_ Stock inconnu
+***_ Statut commande
+***_ Coûts affaires
+***_ ⏰ 3h pour un chiffre
+***_ 💰 150K€/an
+
+left side
+
+** 🔴 Communication\narchaïque
+***_ 100% téléphone
+***_ 15-20 appels/jour
+***_ Pas d'EDI
+***_ Pas d'API
+***_ 💰 90K€/an
+
+** 🔴 Taux d'erreur\n50%
+***_ Mauvaises réf
+***_ Chantier bloqué
+***_ 💰 2,400€/erreur
+***_ 💰 200K€/an
+
+** 🔴 Processus\n100% manuel
+***_ Zéro automatisation
+***_ Zéro digitalisation
+***_ Papier + téléphone
+***_ ⏰ 3 jours/commande
+***_ 💰 50K€/an
+
+@endmindmap
