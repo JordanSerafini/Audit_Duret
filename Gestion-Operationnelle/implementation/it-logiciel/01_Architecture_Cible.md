@@ -74,7 +74,7 @@
 ### Backend : Odoo ERP v17 Community
 
 **Choix** : Odoo Community (open-source) vs Enterprise
-- ✅ **Open-source** : 0€ licences (vs 30€/user/mois Enterprise)
+- ✅ **Open-source** :  licences (vs /user/mois Enterprise)
 - ✅ **Communauté active** : 7M+ utilisateurs, modules riches
 - ✅ **Customizable** : Python + XML (dev interne possible)
 - ✅ **Modules BTP** : Project, Sales, Purchase, Inventory natifs
@@ -140,7 +140,7 @@
 
 **Matériel** :
 - Portiques RFID : Zebra FX9600 (2× portes dépôt Annecy + Albertville)
-- Tags RFID : UHF Gen2 (coût 0,15€/tag, 5 000 tags)
+- Tags RFID : UHF Gen2 (coût 0,/tag, 5 000 tags)
 - Douchettes : Zebra MC3300 (4× mobiles magasiniers)
 
 **Intégration** :
@@ -265,18 +265,18 @@ def calculate_priority_score(ticket):
 
 | Service | Coût/mois |
 |---------|-----------|
-| **Azure VM Odoo** (D4s_v3) | 180€ |
-| **PostgreSQL Managed** (4 vCores) | 220€ |
-| **Azure SQL DWH** (100 DTU) | 150€ |
-| **Power BI Pro** (30 licences) | 300€ |
-| **Linear** (4 users) | 32€ |
-| **Azure Blob Storage** (500 GB) | 10€ |
-| **Azure Functions** (ML inférence) | 50€ |
-| **Backup** (Azure Backup) | 30€ |
-| **Monitoring** (Azure Monitor) | 20€ |
-| **TOTAL OPEX** | **~1 000€/mois = 12K€/an** |
+| **Azure VM Odoo** (D4s_v3) |  |
+| **PostgreSQL Managed** (4 vCores) |  |
+| **Azure SQL DWH** (100 DTU) |  |
+| **Power BI Pro** (30 licences) |  |
+| **Linear** (4 users) |  |
+| **Azure Blob Storage** (500 GB) |  |
+| **Azure Functions** (ML inférence) |  |
+| **Backup** (Azure Backup) |  |
+| **Monitoring** (Azure Monitor) |  |
+| **TOTAL OPEX** | **~/mois = /an** |
 
-*Note* : Odoo Community = 0€ licences (vs 30€/user/mois Enterprise = 10 800€/an économisés)
+*Note* : Odoo Community =  licences (vs /user/mois Enterprise = /an économisés)
 
 ---
 

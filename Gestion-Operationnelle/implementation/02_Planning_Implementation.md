@@ -2,8 +2,8 @@
 
 **Service** : Gestion Opérationnelle
 **Durée totale** : 24 mois
-**Investissement** : 580K€
-**ROI** : 307% (2 ans)
+**Investissement** : 
+**ROI**  (2 ans)
 **Payback** : 5,9 mois
 
 ---
@@ -17,8 +17,8 @@ M1 ──┬──────────── PHASE 1 : QUICK WINS (M1-M6) �
       │  • Dashboards Power BI KPI (M1-M5)                      │
       │  • Système Tickets BE (M2-M6)                           │
       │                                                          │
-      │  Investissement : 185K€                                 │
-      │  Gains : 464K€/an                                       │
+      │  Investissement :                                  │
+      │  Gains : /an                                       │
       │  Payback : 4,8 mois                                     │
       │                                                          │
 M7 ──┼────────── PHASE 2 : STRUCTURANT (M7-M18) ──────────────┼── M18
@@ -27,8 +27,8 @@ M7 ──┼────────── PHASE 2 : STRUCTURANT (M7-M18) ──
       │  • RBAC Transparence (M13-M15)                          │
       │  • ML Prédictif (M15-M18)                               │
       │                                                          │
-      │  Investissement : 280K€                                 │
-      │  Gains cumulés : 1,181K€/an                             │
+      │  Investissement :                                  │
+      │  Gains cumulés : 1,/an                             │
       │  Payback Phase 2 : 9 mois                               │
       │                                                          │
 M19 ─┼───────── PHASE 3 : OPTIMISATION (M19-M24) ─────────────┼── M24
@@ -36,14 +36,14 @@ M19 ─┼───────── PHASE 3 : OPTIMISATION (M19-M24) ───
       │  • Gouvernance Données (M19-M21)                        │
       │  • Culture Data-Driven (M19-M24)                        │
       │                                                          │
-      │  Investissement : 115K€                                 │
-      │  Gains maintenus : 1,181K€/an                           │
+      │  Investissement :                                  │
+      │  Gains maintenus : 1,/an                           │
       └──────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📍 PHASE 1 : QUICK WINS (Mois 1-6) - 185K€
+## 📍 PHASE 1 : QUICK WINS (Mois 1-6) - 
 
 ### Objectif
 Résoudre pain points critiques immédiats avec ROI rapide
@@ -51,8 +51,8 @@ Résoudre pain points critiques immédiats avec ROI rapide
 ### Projet 1 : RFID/QR Code Réception Stocks (M1-M4)
 
 **Durée** : 4 mois
-**Budget** : 65K€
-**Gains** : 120K€/an (-88% temps réception)
+**Budget** : 
+**Gains** : /an (-88% temps réception)
 
 | Mois | Jalons | Livrables |
 |------|--------|-----------|
@@ -68,7 +68,7 @@ Résoudre pain points critiques immédiats avec ROI rapide
 
 **KPIs succès** :
 - Temps réception BL : 25 min → 45 sec (-97%)
-- Erreurs comptage : 15% → 0%
+- Erreurs comptage  → 0%
 - Satisfaction magasiniers : >4/5
 
 ---
@@ -76,8 +76,8 @@ Résoudre pain points critiques immédiats avec ROI rapide
 ### Projet 2 : Dashboards Power BI KPI Temps Réel (M1-M5)
 
 **Durée** : 5 mois
-**Budget** : 70K€
-**Gains** : 194K€/an (temps Sylvie -92%, décisions temps réel)
+**Budget** : 
+**Gains** : /an (temps Sylvie -92%, décisions temps réel)
 
 | Mois | Jalons | Livrables |
 |------|--------|-----------|
@@ -102,8 +102,8 @@ Résoudre pain points critiques immédiats avec ROI rapide
 ### Projet 3 : Système Tickets BE (M2-M6)
 
 **Durée** : 5 mois
-**Budget** : 50K€
-**Gains** : 150K€/an (+81% productivité BE)
+**Budget** : 
+**Gains** : /an (+81% productivité BE)
 
 | Mois | Jalons | Livrables |
 |------|--------|-----------|
@@ -119,19 +119,19 @@ Résoudre pain points critiques immédiats avec ROI rapide
 
 **KPIs succès** :
 - Demandes en attente : 28 → 15 (-46%)
-- Productivité BE : 43% → 78% (+81%)
+- Productivité BE  → 78% (+81%)
 - Satisfaction demandeurs : >4/5
 - Conflits interpersonnels : -80%
 
 ---
 
-## 📍 PHASE 2 : STRUCTURANT (Mois 7-18) - 280K€
+## 📍 PHASE 2 : STRUCTURANT (Mois 7-18) - 
 
 ### Projet 4 : Migration ERP Odoo BTP (M7-M16)
 
 **Durée** : 10 mois
-**Budget** : 200K€
-**Gains** : 517K€/an (remplacement MDE obsolète)
+**Budget** : 
+**Gains** : /an (remplacement MDE obsolète)
 
 **Planning détaillé** :
 
@@ -161,7 +161,7 @@ Résoudre pain points critiques immédiats avec ROI rapide
 ### Projet 5 : RBAC Transparence (M13-M15)
 
 **Durée** : 3 mois
-**Budget** : 30K€
+**Budget** : 
 **Gains** : Inclus gains ERP + dashboards
 
 | Mois | Jalons | Livrables |
@@ -185,8 +185,8 @@ Résoudre pain points critiques immédiats avec ROI rapide
 ### Projet 6 : ML Prédictif (M15-M18)
 
 **Durée** : 4 mois
-**Budget** : 50K€
-**Gains** : 150K€/an (anticipation dépassements, optimisation planning)
+**Budget** : 
+**Gains** : /an (anticipation dépassements, optimisation planning)
 
 | Mois | Jalons | Livrables |
 |------|--------|-----------|
@@ -206,12 +206,12 @@ Résoudre pain points critiques immédiats avec ROI rapide
 
 ---
 
-## 📍 PHASE 3 : OPTIMISATION (Mois 19-24) - 115K€
+## 📍 PHASE 3 : OPTIMISATION (Mois 19-24) - 
 
 ### Projet 7 : Gouvernance Données (M19-M21)
 
 **Durée** : 3 mois
-**Budget** : 50K€
+**Budget** : 
 **Gains** : Qualité données +90%
 
 | Mois | Jalons | Livrables |
@@ -225,7 +225,7 @@ Résoudre pain points critiques immédiats avec ROI rapide
 ### Projet 8 : Culture Data-Driven (M19-M24)
 
 **Durée** : 6 mois
-**Budget** : 65K€
+**Budget** : 
 **Gains** : Adoption +95%, résistance -80%
 
 | Mois | Jalons | Livrables |
@@ -239,43 +239,43 @@ Résoudre pain points critiques immédiats avec ROI rapide
 
 | Mois | Jalon | Décision |
 |------|-------|----------|
-| **M0** | **Validation Direction** | GO/NO-GO Phase 1 (185K€) |
-| **M6** | **Bilan Phase 1** | GO/NO-GO Phase 2 (280K€) basé ROI réel P1 |
+| **M0** | **Validation Direction** | GO/NO-GO Phase 1 () |
+| **M6** | **Bilan Phase 1** | GO/NO-GO Phase 2 () basé ROI réel P1 |
 | **M11** | **POC Odoo** | GO/NO-GO migration ERP (après POC 6 sem) |
-| **M18** | **Bilan Phase 2** | GO/NO-GO Phase 3 (115K€) |
+| **M18** | **Bilan Phase 2** | GO/NO-GO Phase 3 () |
 | **M24** | **Bilan Final** | Mesure ROI global 2 ans |
 
 ---
 
 ## 💰 BUDGET DÉTAILLÉ 24 MOIS
 
-### Phase 1 (M1-M6) : 185K€
+### Phase 1 (M1-M6) : 
 
 | Projet | Budget |
 |--------|--------|
-| RFID Stocks | 65K€ |
-| Dashboards Power BI | 70K€ |
-| Système Tickets BE | 50K€ |
-| **TOTAL PHASE 1** | **185K€** |
+| RFID Stocks |  |
+| Dashboards Power BI |  |
+| Système Tickets BE |  |
+| **TOTAL PHASE 1** | **** |
 
-### Phase 2 (M7-M18) : 280K€
-
-| Projet | Budget |
-|--------|--------|
-| Migration ERP Odoo | 200K€ |
-| RBAC Transparence | 30K€ |
-| ML Prédictif | 50K€ |
-| **TOTAL PHASE 2** | **280K€** |
-
-### Phase 3 (M19-M24) : 115K€
+### Phase 2 (M7-M18) : 
 
 | Projet | Budget |
 |--------|--------|
-| Gouvernance Données | 50K€ |
-| Culture Data-Driven | 65K€ |
-| **TOTAL PHASE 3** | **115K€** |
+| Migration ERP Odoo |  |
+| RBAC Transparence |  |
+| ML Prédictif |  |
+| **TOTAL PHASE 2** | **** |
 
-### TOTAL 24 MOIS : 580K€
+### Phase 3 (M19-M24) : 
+
+| Projet | Budget |
+|--------|--------|
+| Gouvernance Données |  |
+| Culture Data-Driven |  |
+| **TOTAL PHASE 3** | **** |
+
+### TOTAL 24 MOIS : 
 
 ---
 

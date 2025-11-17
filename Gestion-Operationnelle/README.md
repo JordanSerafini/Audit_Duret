@@ -8,13 +8,13 @@
 
 ## 🎯 VUE D'ENSEMBLE
 
-La **Gestion Opérationnelle** chez Duret Électricité est actuellement basée sur **30+ fichiers Excel** non connectés et des processus **80% manuels**. Cette situation coûte **1,18M€/an** à l'entreprise.
+La **Gestion Opérationnelle** chez Duret Électricité est actuellement basée sur **30+ fichiers Excel** non connectés et des processus **80% manuels**. Cette situation coûte **1,/an** à l'entreprise.
 
 ### Personas Impactés
 
-- **Sylvie** (Contrôleuse de Gestion, 52 ans) : 24h/mois génération KPI manuels → **611 500€/an** perdus
-- **Thomas** (Responsable BE Transverse, 38 ans) : Surcharge chronique (220h demandes vs 160h capacité) → **175 000€/an** perdus
-- **Isabelle** (Responsable Stocks, 45 ans) : 6h/j comptage manuel stocks → **395 000€/an** perdus
+- **Sylvie** (Contrôleuse de Gestion, 52 ans) : 24h/mois génération KPI manuels → **/an** perdus
+- **Thomas** (Responsable BE Transverse, 38 ans) : Surcharge chronique (220h demandes vs 160h capacité) → **/an** perdus
+- **Isabelle** (Responsable Stocks, 45 ans) : 6h/j comptage manuel stocks → **/an** perdus
 
 ### Solution Proposée
 
@@ -31,10 +31,10 @@ La **Gestion Opérationnelle** chez Duret Électricité est actuellement basée 
 
 | Métrique | Valeur |
 |----------|--------|
-| **Investissement 24 mois** | 580K€ |
-| **Gains annuels** | 1 181K€/an |
-| **Gains 2 ans** | 2 362K€ |
-| **Net 2 ans** | +1 782K€ |
+| **Investissement 24 mois** |  |
+| **Gains annuels** | 1 /an |
+| **Gains 2 ans** | 2  |
+| **Net 2 ans** | +1  |
 | **ROI** | 307% |
 | **Payback** | 5,9 mois |
 
@@ -48,7 +48,7 @@ Gestion-Operationnelle/
 ├── SYNTHESE_EXECUTIVE.md (présentation direction, business case)
 │
 ├── docs/
-│   ├── 01_PERSONAS_Pain_Points.md (3 personas détaillés, 1,18M€/an impact)
+│   ├── 01_PERSONAS_Pain_Points.md (3 personas détaillés, 1,/an impact)
 │   ├── 02_ARCHITECTURE_Actuelle_Chaos.md (cartographie système actuel, 30+ Excel)
 │   └── 03_JOURNEY_MAPS_Parcours_Utilisateurs.md (3 parcours avant/après)
 │
@@ -76,22 +76,22 @@ Gestion-Operationnelle/
 
 ---
 
-## 🔴 PROBLÈME : CHAOS ORGANISATIONNEL (1,18M€/AN)
+## 🔴 PROBLÈME : CHAOS ORGANISATIONNEL (1,/AN)
 
 ### Top 10 Pain Points Critiques
 
 | Rang | Pain Point | Persona | Impact €/an |
 |------|-----------|---------|-------------|
-| 1 | Valorisation stock incohérente (2 prix même produit) | Isabelle | 210 000€ |
-| 2 | Remontée info tardive (J+15 vs temps réel) | Sylvie | 120 000€ |
-| 3 | Surcharge BE transverse (aucun système tickets) | Thomas | 120 000€ |
-| 4 | Excel omniprésent (30+ fichiers silos) | Sylvie | 122 500€ |
-| 5 | Manque transparence (chef ne voit pas budget chantier) | Tous | 100 000€ |
-| 6 | Réception stocks manuelle (comptage papier) | Isabelle | 95 000€ |
-| 7 | KPI Excel manuel (24h génération/mois) | Sylvie | 74 000€ |
-| 8 | Stock sous-utilisé (achats inutiles) | Isabelle | 60 000€ |
-| 9 | Onboarding long (4j formation nécessaire) | Tous | 60 000€ |
-| 10 | Aucune alerte automatique (détection tardive) | Sylvie | 45 000€ |
+| 1 | Valorisation stock incohérente (2 prix même produit) | Isabelle |  |
+| 2 | Remontée info tardive (J+15 vs temps réel) | Sylvie |  |
+| 3 | Surcharge BE transverse (aucun système tickets) | Thomas |  |
+| 4 | Excel omniprésent (30+ fichiers silos) | Sylvie |  |
+| 5 | Manque transparence (chef ne voit pas budget chantier) | Tous |  |
+| 6 | Réception stocks manuelle (comptage papier) | Isabelle |  |
+| 7 | KPI Excel manuel (24h génération/mois) | Sylvie |  |
+| 8 | Stock sous-utilisé (achats inutiles) | Isabelle |  |
+| 9 | Onboarding long (4j formation nécessaire) | Tous |  |
+| 10 | Aucune alerte automatique (détection tardive) | Sylvie |  |
 
 ### Architecture Actuelle = Chaos
 
@@ -101,7 +101,7 @@ Gestion-Operationnelle/
 - ❌ **ERP MDE obsolète** : 15 ans, lent (30 sec chargement), plantages 2-3×/sem, distance inutilisable
 - ❌ **Aucune transparence** : Chef chantier pilote SANS voir budget/marge
 - ❌ **Remontée info J+15** : Direction décide avec données périmées
-- ❌ **Dépendance Sylvie** : Si part = 6-12 mois chaos (300-600K€)
+- ❌ **Dépendance Sylvie** : Si part = 6-12 mois chaos (300-)
 
 ---
 
@@ -155,7 +155,7 @@ Utilisateurs (Web + Mobile)
 
 **3. RFID/QR Code Stocks** (vs comptage manuel 6h/j)
 - Réception : 45 sec vs 25 min (-96%)
-- Erreurs : 0% vs 15% (-100%)
+- Erreurs  vs 15% (-100%)
 - Valorisation : CUMP cohérente (1 prix vs 2 prix incohérents)
 - Inventaires : 2h vs 2j (-92%)
 
@@ -175,35 +175,35 @@ Utilisateurs (Web + Mobile)
 
 ## 📅 PLAN D'ACTION 24 MOIS
 
-### Phase 1 : Quick Wins (M1-M6) - **185K€** → **464K€/an gains**
+### Phase 1 : Quick Wins (M1-M6) - **** → **/an gains**
 
 | Projet | Durée | Budget | Gains/an | Payback |
 |--------|-------|--------|----------|---------|
-| **RFID/QR Code stocks** | M1-M4 | 65K€ | 120K€ | 6 mois |
-| **Dashboards Power BI KPI** | M1-M5 | 70K€ | 194K€ | 5 mois |
-| **Système tickets BE** | M2-M6 | 50K€ | 150K€ | 4 mois |
-| **TOTAL PHASE 1** | **6 mois** | **185K€** | **464K€/an** | **4,8 mois** |
+| **RFID/QR Code stocks** | M1-M4 |  |  | 6 mois |
+| **Dashboards Power BI KPI** | M1-M5 |  |  | 5 mois |
+| **Système tickets BE** | M2-M6 |  |  | 4 mois |
+| **TOTAL PHASE 1** | **6 mois** | **** | **/an** | **4,8 mois** |
 
-### Phase 2 : Structurant (M7-M18) - **280K€** → **1 181K€/an gains cumulés**
+### Phase 2 : Structurant (M7-M18) - **** → **1 /an gains cumulés**
 
 | Projet | Durée | Budget | Gains additionnels/an |
 |--------|-------|--------|------------------------|
-| **Migration ERP Odoo BTP** | M7-M16 | 200K€ | 517K€ |
-| **RBAC Transparence** | M13-M15 | 30K€ | Inclus Odoo+PBI |
-| **ML Prédictif** | M15-M18 | 50K€ | 200K€ |
-| **TOTAL PHASE 2** | **12 mois** | **280K€** | **717K€/an additionnels** |
+| **Migration ERP Odoo BTP** | M7-M16 |  |  |
+| **RBAC Transparence** | M13-M15 |  | Inclus Odoo+PBI |
+| **ML Prédictif** | M15-M18 |  |  |
+| **TOTAL PHASE 2** | **12 mois** | **** | **/an additionnels** |
 
-### Phase 3 : Optimisation (M19-M24) - **115K€**
+### Phase 3 : Optimisation (M19-M24) - ****
 
 | Projet | Durée | Budget |
 |--------|-------|--------|
-| **Gouvernance Données** | M19-M21 | 50K€ |
-| **Culture Data-Driven** | M19-M24 | 65K€ |
-| **TOTAL PHASE 3** | **6 mois** | **115K€** |
+| **Gouvernance Données** | M19-M21 |  |
+| **Culture Data-Driven** | M19-M24 |  |
+| **TOTAL PHASE 3** | **6 mois** | **** |
 
 ### Jalons Décision (GO/NO-GO)
 
-- **M0** : Validation Direction Phase 1 (185K€)
+- **M0** : Validation Direction Phase 1 ()
 - **M6** : Bilan Phase 1 → GO/NO-GO Phase 2 (basé ROI réel)
 - **M11** : POC Odoo → GO/NO-GO migration ERP
 - **M18** : Bilan Phase 2 → GO/NO-GO Phase 3
@@ -217,37 +217,37 @@ Utilisateurs (Web + Mobile)
 
 | Phase | Période | Investissement |
 |-------|---------|----------------|
-| Phase 1 | M1-M6 | 185K€ |
-| Phase 2 | M7-M18 | 280K€ |
-| Phase 3 | M19-M24 | 115K€ |
-| **TOTAL 24 MOIS** | | **580K€** |
+| Phase 1 | M1-M6 |  |
+| Phase 2 | M7-M18 |  |
+| Phase 3 | M19-M24 |  |
+| **TOTAL 24 MOIS** | | **** |
 
 ### Gains Annuels Récurrents
 
 | Gain | Économie/an |
 |------|-------------|
-| Temps Sylvie KPI (24h → 2h) | 19 800€ |
-| Remontée info temps réel (vs J+15) | 120 000€ |
-| Excel silos supprimés (30+ → 0) | 122 500€ |
-| Transparence RBAC (turnover réduit) | 100 000€ |
-| Système tickets BE (surcharge résolue) | 150 000€ |
-| Valorisation stocks cohérente (CUMP) | 210 000€ |
-| Réception RFID (vs comptage manuel) | 95 000€ |
-| ERP moderne (vs MDE obsolète) | 150 000€ |
-| Productivité globale +40% | 214 200€ |
-| **TOTAL GAINS ANNUELS** | **1 181 500€/an** |
+| Temps Sylvie KPI (24h → 2h) |  |
+| Remontée info temps réel (vs J+15) |  |
+| Excel silos supprimés (30+ → 0) |  |
+| Transparence RBAC (turnover réduit) |  |
+| Système tickets BE (surcharge résolue) |  |
+| Valorisation stocks cohérente (CUMP) |  |
+| Réception RFID (vs comptage manuel) |  |
+| ERP moderne (vs MDE obsolète) |  |
+| Productivité globale +40% |  |
+| **TOTAL GAINS ANNUELS** | **1 /an** |
 
 ### Bilan 2 Ans
 
 | Année | Investissement | Gains Annuels | Cumulé Net |
 |-------|----------------|---------------|------------|
-| **Année 1** | 465K€ (P1+P2) | 1 181K€ | **+716K€** |
-| **Année 2** | 115K€ (P3) | 1 181K€ | **+1 782K€** |
-| **TOTAL 2 ANS** | **580K€** | **2 362K€** | **+1 782K€ net** |
+| **Année 1** |  (P1+P2) | 1  | **+** |
+| **Année 2** |  (P3) | 1  | **+1 ** |
+| **TOTAL 2 ANS** | **** | **2 ** | **+1  net** |
 
-**ROI** : (2 362K€ - 580K€) / 580K€ = **307%** ✅
+**ROI** : (2  - ) /  = **307%** ✅
 
-**Payback global** : 580K€ / (1 181K€/12) = **5,9 mois** ✅
+**Payback global** :  / (1 /12) = **5,9 mois** ✅
 
 ---
 
@@ -281,7 +281,7 @@ Utilisateurs (Web + Mobile)
 
 ### Backend
 
-- **Odoo ERP v17** Community (open-source, 0€ licences)
+- **Odoo ERP v17** Community (open-source,  licences)
   - Modules : Sales, Purchase, Inventory, Accounting, Project, HR
   - Custom apps : BE Tickets, RBAC Chantiers, RFID Integration
 - **PostgreSQL 15** Managed (Azure)
@@ -326,15 +326,15 @@ Utilisateurs (Web + Mobile)
 
 | Service | Coût/mois |
 |---------|-----------|
-| Azure VM Odoo | 180€ |
-| PostgreSQL Managed | 220€ |
-| Azure SQL DWH | 150€ |
-| Power BI Pro (30 licences) | 300€ |
-| Linear (4 users) | 32€ |
-| Azure Blob + Functions + Backup | 110€ |
-| **TOTAL OPEX** | **~1 000€/mois = 12K€/an** |
+| Azure VM Odoo |  |
+| PostgreSQL Managed |  |
+| Azure SQL DWH |  |
+| Power BI Pro (30 licences) |  |
+| Linear (4 users) |  |
+| Azure Blob + Functions + Backup |  |
+| **TOTAL OPEX** | **~/mois = /an** |
 
-*Note : Odoo Community = 0€ licences (vs 30€/user/mois Enterprise = 10 800€/an économisés)*
+*Note : Odoo Community =  licences (vs /user/mois Enterprise = /an économisés)*
 
 ---
 
@@ -383,7 +383,7 @@ Utilisateurs (Web + Mobile)
 
 ### Pour Compréhension Métier
 
-➡️ **[docs/01_PERSONAS_Pain_Points.md](docs/01_PERSONAS_Pain_Points.md)** : 3 personas détaillés (Sylvie, Thomas, Isabelle), pain points quantifiés (1,18M€/an)
+➡️ **[docs/01_PERSONAS_Pain_Points.md](docs/01_PERSONAS_Pain_Points.md)** : 3 personas détaillés (Sylvie, Thomas, Isabelle), pain points quantifiés (1,/an)
 
 ➡️ **[docs/02_ARCHITECTURE_Actuelle_Chaos.md](docs/02_ARCHITECTURE_Actuelle_Chaos.md)** : Cartographie système actuel (30+ Excel, processus manuels)
 
@@ -424,8 +424,8 @@ Utilisateurs (Web + Mobile)
 
 **Pourquoi GO ?**
 
-1. ✅ **ROI exceptionnel** : 307% sur 2 ans, payback 5,9 mois
-2. ✅ **Pain points critiques** : 1,18M€/an pertes INACCEPTABLES
+1. ✅ **ROI exceptionnel**  sur 2 ans, payback 5,9 mois
+2. ✅ **Pain points critiques** : 1,/an pertes INACCEPTABLES
 3. ✅ **Risque maîtrisé** : Approche progressive 24 mois, pas big-bang
 4. ✅ **Quick wins M1-6** : ROI 5 mois, gains visibles rapidement
 5. ✅ **Scalabilité** : Système actuel ne scale pas (croissance impossible)
@@ -434,12 +434,12 @@ Utilisateurs (Web + Mobile)
 8. ✅ **Succession** : Retraite Sylvie 10 ans = chaos si système pas automatisé
 
 **Alternative "Ne rien faire"** :
-- ❌ Pertes : 1,18M€/an × 5 ans = **5,9M€ perdus**
+- ❌ Pertes : 1,/an × 5 ans = **5, perdus**
 - ❌ Aggravation : Croissance = complexité Excel exponentielle
-- ❌ Turnover : Départs Sylvie/Thomas/Isabelle (burn-out) = 500K€ succession
+- ❌ Turnover : Départs Sylvie/Thomas/Isabelle (burn-out) =  succession
 - ❌ Décisions : Direction pilote J+15 périmé → Erreurs stratégiques
 
-**Verdict** : **GO IMMÉDIAT Phase 1** (M1-M6, 185K€, ROI 5 mois)
+**Verdict** : **GO IMMÉDIAT Phase 1** (M1-M6, , ROI 5 mois)
 
 ---
 
@@ -461,7 +461,7 @@ Utilisateurs (Web + Mobile)
 
 **Mois 6** : Bilan Phase 1, mesure ROI réel, Go Phase 2
 
-**Objectif M6** : Quick wins déployés, 464K€/an gains mesurés, ROI validé ✅
+**Objectif M6** : Quick wins déployés, /an gains mesurés, ROI validé ✅
 
 ---
 

@@ -316,7 +316,7 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 
 **Gains immédiats M2 :**
 - ERP rapide : < 2s chargement (vs 30-40s)
-- Templates devis : -50% temps création (2h → 1h)
+- Templates devis : Temps création réduit significativement
 - Accès cloud : télétravail fonctionnel
 
 ### Phase 2 : Automatisation & APIs (Mois 3-4) - 20K€
@@ -335,9 +335,9 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 **Déploiement :** Tous les 4 Responsables Affaires
 
 **Gains cumulés M4 :**
-- PPSPS auto : -80% temps (3h → 35min)
-- Maj prix auto : 100% tarifs jour
-- Reliquats tracés : +95% (vs 40%)
+- PPSPS auto : Temps génération ~27-35 min (vs 3h00)
+- Maj prix auto : 100% tarifs automatiques
+- Reliquats tracés : 100% vs aucun suivi actuel
 
 ### Phase 3 : Dashboards & Mobile (Mois 5-6) - 15K€
 
@@ -356,10 +356,10 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 - ✅ Coupure ERP legacy définitive
 
 **Gains cumulés M6 :**
-- Templates devis : -70% temps (2h → 35min)
-- PPSPS auto : -85% temps (3h → 27min)
-- Visibilité direction : temps réel (vs rapport mensuel)
-- Satisfaction utilisateurs : > 4.5/5
+- Templates devis : ~31 min (vs 2h05)
+- PPSPS auto : ~27 min (vs 3h00)
+- Visibilité direction : temps réel (vs 3h compilation)
+- Satisfaction utilisateurs : Objectif > 4.5/5
 
 ---
 
@@ -400,7 +400,7 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 - ✅ Coupure ERP legacy
 - ✅ Bilan ROI (objectif : gains > 200K€ annualisés)
 
-**Critère succès :** ROI net > 180K€, satisfaction > 4.5/5
+**Critère succès :** Gains temps mesurables > 70%, satisfaction > 4.5/5
 
 ---
 
@@ -427,7 +427,7 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 
 | Risque | Probabilité | Impact | Mitigation |
 |--------|-------------|--------|------------|
-| **Manque sponsor direction** | Faible | Critique | Business case solide (ROI 862%), quick wins M2 |
+| **Manque sponsor direction** | Faible | Critique | Business case solide (gains temps mesurables), quick wins M2 |
 | **Budget dépassé** | Faible | Moyen | Contingence 10% incluse (66K€ total), phases indépendantes |
 | **Délais non tenus** | Moyenne | Moyen | Agile sprints 2 semaines, jalons clairs, ajustements continus |
 
@@ -450,8 +450,8 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 - ✅ **Quick wins visibles** : M2 déjà ERP rapide + templates
 
 ### 3. Sponsoring Direction
-- ✅ **Business case solide** : ROI 862% sur 2 ans, payback 4 mois
-- ✅ **Gains non-financiers** : Télétravail, visibilité, conformité
+- ✅ **Business case solide** : Gains temps mesurables (75-85% process), quick wins M2
+- ✅ **Gains qualitatifs** : Télétravail, visibilité temps réel, conformité
 - ✅ **Jalons clairs** : Go/No-Go tous les 2 mois
 - ✅ **Reporting** : KPIs mensuels, comité pilotage bimestriel
 
@@ -462,29 +462,29 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 ### ✅ RECOMMANDATION : GO IMMÉDIAT
 
 **Pourquoi maintenant ?**
-- 🔴 **Coûts actuels insoutenables** : 350K€/an de pertes
-- 🔴 **Risques critiques** : ERP obsolète, télétravail impossible, erreurs devis
+- 🔴 **Inefficacité critique** : 2h05 par devis, 3h par PPSPS, 30-40s par écran
+- 🔴 **Risques métier** : ERP obsolète, télétravail impossible, frustration équipe
 - 🔴 **Obsolescence technique** : Maintenance ERP legacy coûteuse et complexe
 - 🟢 **Technologie mature** : Odoo éprouvé (7M+ users), APIs disponibles
-- 🟢 **ROI exceptionnel** : Payback 4 mois, 862% ROI 2 ans
+- 🟢 **Gains mesurables** : 75-85% temps process, visibilité temps réel
 - 🟢 **Quick wins** : Gains visibles dès M2 (ERP rapide + templates)
 
 **Investissement :**
 - **Setup** : 60K€ sur 6 mois (phasing : 25K + 20K + 15K)
-- **Run** : 13.8K€/an (très faible vs gains)
+- **Run** : 13.8K€/an
 
-**Retours :**
-- **Gains annuels** : 330K€/an (récurrents)
-- **ROI net** : 316K€/an (après costs année 2)
-- **Payback** : 4 mois (dès M6 !)
-- **ROI 2 ans** : 862%
+**Retours Attendus :**
+- **Gains temps** : 63-126h/mois devis + 38-51h/mois PPSPS + 3-5h/jour écrans
+- **Gains qualité** : Clauses obligatoires intégrées, reliquats tracés 100%
+- **Gains visibilité** : Direction temps réel vs 3h compilation
+- **Satisfaction** : > 4.5/5 vs frustration 9-10/10 actuelle
 
 **Décision recommandée :**
 👉 **Lancer Phase 1 immédiatement (25K€, 2 mois)**
-- Risque ultra limité (phasing, budget modéré)
-- Quick wins rapides (ERP rapide, templates)
-- Go/No-Go M2 selon satisfaction pilotes
-- ROI net positif dès année 1 (+201K€)
+- Risque limité (phasing, budget modéré, Go/No-Go M2)
+- Quick wins rapides (ERP < 2s, templates opérationnels)
+- Validation terrain par pilotes avant généralisation
+- Gains temps mesurables dès M2
 
 ---
 
@@ -518,5 +518,5 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 
 **📧 Contact Projet :** Équipe Transformation Digitale Duret Électricité
 **🎯 Objectif :** Moderniser ERP & automatiser gestion affaires
-**💰 Enjeu :** 350K€/an pertes → 316K€/an gains nets (ROI 862% sur 2 ans)
+**💰 Enjeu :** Gains temps 75-85% sur process critiques + visibilité direction temps réel
 **⏱️ Horizon :** 6 mois (3 phases × 2 mois)

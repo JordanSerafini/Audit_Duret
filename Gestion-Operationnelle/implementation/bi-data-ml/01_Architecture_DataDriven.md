@@ -408,7 +408,7 @@
 
 **Déploiement** :
 - Exécution : Hebdomadaire (lundi matin)
-- Output : Suggestions "Réalloquer Chef X de Affaire Y → Affaire Z (gain CA +15K€)"
+- Output : Suggestions "Réalloquer Chef X de Affaire Y → Affaire Z (gain CA +)"
 
 **Intégration Power BI** :
 - Onglet "Recommandations Optimisation" (table suggestions)
@@ -513,13 +513,13 @@
 
 | Service | Coût/mois |
 |---------|-----------|
-| Azure SQL DWH (100 DTU) | 150€ |
-| Azure Blob Storage (500 GB) | 10€ |
-| Azure Data Factory (pipelines) | 50€ |
-| Azure ML Studio (entraînement models) | 100€ |
-| Azure Functions (inférence ML) | 50€ |
-| Power BI Pro (30 licences) | 300€ |
-| **TOTAL DATA OPEX** | **660€/mois = 8K€/an** |
+| Azure SQL DWH (100 DTU) |  |
+| Azure Blob Storage (500 GB) |  |
+| Azure Data Factory (pipelines) |  |
+| Azure ML Studio (entraînement models) |  |
+| Azure Functions (inférence ML) |  |
+| Power BI Pro (30 licences) |  |
+| **TOTAL DATA OPEX** | **/mois = /an** |
 
 ---
 

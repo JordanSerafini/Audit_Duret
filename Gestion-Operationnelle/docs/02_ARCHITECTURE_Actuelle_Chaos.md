@@ -12,12 +12,12 @@ L'architecture actuelle de la **Gestion Opérationnelle** chez Duret Électricit
 
 - **Excel omniprésent** : 30+ fichiers non connectés
 - **Silos de données** : Chaque service son système
-- **Processus manuels** : 80% des tâches sans automation
+- **Processus manuels**  des tâches sans automation
 - **Aucune intégration** : Double/triple saisie systématique
 - **Fragilité extrême** : Dépendance personnes clés
 - **Pas de temps réel** : Données J-15 minimum
 
-**Impact financier annuel conservateur** : **1 181 500€/an**
+**Impact financier annuel conservateur** : **1 /an**
 
 ---
 
@@ -154,7 +154,7 @@ L'architecture actuelle de la **Gestion Opérationnelle** chez Duret Électricit
 - ❌ **Aucune scalabilité** : Croissance entreprise = explosion complexité
 
 **Temps perdu** : 500h/an rien que gestion Excel (recherche, corrections, consolidations)
-**Coût** : 500h × 60€/h = **30 000€/an**
+**Coût** : 500h × /h = **/an**
 
 ---
 
@@ -198,7 +198,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 
 **Problème** : **Triple/quadruple saisie même donnée** (Client, Affaire, Montants, Heures, Matériel)
 
-**Coût** : Temps perdu + erreurs = **120 000€/an**
+**Coût** : Temps perdu + erreurs = **/an**
 
 ---
 
@@ -208,17 +208,17 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 
 | Processus | Fréquence | Temps unitaire | Temps total/an | Coût/an |
 |-----------|-----------|----------------|----------------|---------|
-| Consolidation KPI mensuels | 12×/an | 24h | 288h | 17 000€ |
-| Réception stocks (comptage) | 250j × 20 BL | 25 min | 2 083h | 70 000€ |
-| Planning BE mise à jour | 50 sem | 3h | 150h | 9 000€ |
-| Inventaires mensuels | 12×/an | 16h | 192h | 7 000€ |
-| Validation fiches produits | 200×/an | 1h | 200h | 12 000€ |
-| Rapprochements Excel | 12×/an | 12h | 144h | 9 000€ |
-| Génération rapports direction | 12×/an | 8h | 96h | 6 000€ |
-| Relances litiges | Continu | - | 150h | 9 000€ |
-| **TOTAL** | | | **3 303h** | **139 000€** |
+| Consolidation KPI mensuels | 12×/an | 24h | 288h |  |
+| Réception stocks (comptage) | 250j × 20 BL | 25 min | 2 083h |  |
+| Planning BE mise à jour | 50 sem | 3h | 150h |  |
+| Inventaires mensuels | 12×/an | 16h | 192h |  |
+| Validation fiches produits | 200×/an | 1h | 200h |  |
+| Rapprochements Excel | 12×/an | 12h | 144h |  |
+| Génération rapports direction | 12×/an | 8h | 96h |  |
+| Relances litiges | Continu | - | 150h |  |
+| **TOTAL** | | | **3 303h** | **** |
 
-**80% de ces processus pourraient être automatisés** → Gain potentiel **110 000€/an**
+**80% de ces processus pourraient être automatisés** → Gain potentiel **/an**
 
 ---
 
@@ -237,7 +237,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 
 **Impact** : Décisions basées sur données **périmées** → **Réaction** vs **Anticipation**
 
-**Coût estimé** : **120 000€/an** (dépassements non anticipés, opportunités manquées)
+**Coût estimé** : **/an** (dépassements non anticipés, opportunités manquées)
 
 ---
 
@@ -254,7 +254,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 - **Succession impossible** : 6-12 mois formation nécessaire pour comprendre système
 - **Risque départ** : 52 ans, retraite d'ici 10 ans, aucun backup formé
 
-**Coût risque** : Départ Sylvie = **6-12 mois chaos** = **300 000€ à 600 000€**
+**Coût risque** : Départ Sylvie = **6-12 mois chaos** = ** à **
 
 **Thomas (BE)** :
 - **Seul à gérer priorisation demandes** BE (subjectif, pas transparent)
@@ -286,7 +286,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 - Télétravail impossible : **Flexibilité RH réduite**
 - Mobilité terrain impossible : **Processus papier persistent**
 
-**Coût estimé** : **150 000€/an** (temps perdu + opportunités manquées)
+**Coût estimé** : **/an** (temps perdu + opportunités manquées)
 
 #### SAGE (Comptabilité/Devis)
 
@@ -296,7 +296,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 - ⚠️ **Création titres/sous-titres devis compliqués** : Processus fastidieux
 - ⚠️ **Pas d'intégration MDE** : Double saisie client, affaire
 
-**Coût estimé** : **50 000€/an**
+**Coût estimé** : **/an**
 
 #### LIRECO (Stocks)
 
@@ -311,7 +311,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 - ⚠️ **Pas de valorisation** : Excel en parallèle (Isabelle)
 - ⚠️ **Réception manuelle** : Comptage papier → saisie Lireco
 
-**Coût estimé** : **30 000€/an** (temps perdu)
+**Coût estimé** : **/an** (temps perdu)
 
 ---
 
@@ -341,7 +341,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 - **Culture du secret** : Méfiance vs confiance
 - **Turnover** : Chef chantier part pour entreprises plus transparentes
 
-**Coût RH** : Turnover +10% = **60 000€/an**
+**Coût RH** : Turnover +10% = **/an**
 
 ---
 
@@ -350,10 +350,10 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 #### Gestion Demandes BE Actuelle
 
 **Canaux demandes** (non structurés) :
-- 📧 **Mails** : 60% des demandes (format libre, priorité subjective)
-- 📞 **Téléphone** : 25% (aucune traçabilité)
-- 💬 **WhatsApp** : 10% (informel, perdu)
-- 🚶 **Passage bureau** : 5% ("T'as 2 minutes ?")
+- 📧 **Mails**  des demandes (format libre, priorité subjective)
+- 📞 **Téléphone**  (aucune traçabilité)
+- 💬 **WhatsApp**  (informel, perdu)
+- 🚶 **Passage bureau**  ("T'as 2 minutes ?")
 
 **Processus actuel Thomas** :
 1. Lundi 8h : 15 mails "URGENT" reçus weekend
@@ -374,7 +374,7 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 - **Risque burn-out Thomas** : Surcharge chronique
 - **Turnover BE** : 2 départs 2024, difficultés recrutement
 
-**Coût** : **120 000€/an** (retards + tensions + turnover)
+**Coût** : **/an** (retards + tensions + turnover)
 
 ---
 
@@ -385,15 +385,15 @@ ERREURS : 15-20% (fatigue, typos, oublis)
 **Disjoncteur ref ABC123** :
 ```
 Stock Annecy :
-- Lot 1 (janv 2024) : 50 unités @ 25€/u = 1 250€
-- Lot 2 (mars 2024) : 50 unités @ 22€/u (promo) = 1 100€
-- Lot 3 (juin 2024) : 30 unités @ 24€/u = 720€
-TOTAL stock : 130 unités, valeur totale : 3 070€
+- Lot 1 (janv 2024) : 50 unités @ /u = 
+- Lot 2 (mars 2024) : 50 unités @ /u (promo) = 
+- Lot 3 (juin 2024) : 30 unités @ /u = 
+TOTAL stock : 130 unités, valeur totale : 
 
 Sortie chantier (10 unités) :
-- Magasinier A valorise @ 25€ = 250€
-- Magasinier B valorise @ 22€ = 220€
-- Isabelle (Excel) valorise CUMP @ 23,62€ = 236€
+- Magasinier A valorise @  = 
+- Magasinier B valorise @  = 
+- Isabelle (Excel) valorise CUMP @ 23, = 
 
 QUELLE EST LA BONNE VALEUR ? Personne ne sait.
 ```
@@ -410,7 +410,7 @@ QUELLE EST LA BONNE VALEUR ? Personne ne sait.
 - **Stock sous-utilisé** : RA ne sait pas quel prix → commande neuf "pour éviter problèmes"
 - **Obsolescence** : Produits anciens non écoulés → pertes
 
-**Coût** : **210 000€/an**
+**Coût** : **/an**
 
 ---
 
@@ -420,22 +420,22 @@ QUELLE EST LA BONNE VALEUR ? Personne ne sait.
 
 | Problème Architecture | Coût Annuel |
 |-----------------------|-------------|
-| 1. Excel omniprésent (30+ fichiers) | 30 000€ |
-| 2. Silos données (ressaisies multiples) | 120 000€ |
-| 3. Processus manuels (80% sans automation) | 110 000€ |
-| 4. Remontée info tardive (J+15 vs temps réel) | 120 000€ |
-| 5. Dépendance personnes (risque succession) | 50 000€ |
-| 6. ERP MDE obsolète | 150 000€ |
-| 7. SAGE limitations | 50 000€ |
-| 8. LIRECO isolé | 30 000€ |
-| 9. Aucune transparence (silos hiérarchiques) | 60 000€ |
-| 10. Pas système tickets BE | 120 000€ |
-| 11. Valorisation stocks chaotique | 210 000€ |
-| 12. Réception manuelle stocks | 95 000€ |
-| 13. Inventaires manuels | 30 000€ |
-| **TOTAL ARCHITECTURE CHAOS** | **1 175 000€/an** |
+| 1. Excel omniprésent (30+ fichiers) |  |
+| 2. Silos données (ressaisies multiples) |  |
+| 3. Processus manuels (80% sans automation) |  |
+| 4. Remontée info tardive (J+15 vs temps réel) |  |
+| 5. Dépendance personnes (risque succession) |  |
+| 6. ERP MDE obsolète |  |
+| 7. SAGE limitations |  |
+| 8. LIRECO isolé |  |
+| 9. Aucune transparence (silos hiérarchiques) |  |
+| 10. Pas système tickets BE |  |
+| 11. Valorisation stocks chaotique |  |
+| 12. Réception manuelle stocks |  |
+| 13. Inventaires manuels |  |
+| **TOTAL ARCHITECTURE CHAOS** | **1 /an** |
 
-*Note : Cohérent avec impact personas (1 181 500€) - légère différence due périmètres*
+*Note : Cohérent avec impact personas (1 ) - légère différence due périmètres*
 
 ---
 
@@ -446,7 +446,7 @@ QUELLE EST LA BONNE VALEUR ? Personne ne sait.
 **Caractéristiques** :
 - ❌ **Excel roi** : 30+ fichiers, aucune intégration
 - ❌ **Silos partout** : Données, systèmes, personnes
-- ❌ **Manuel massif** : 80% processus sans automation
+- ❌ **Manuel massif**  processus sans automation
 - ❌ **Aucune transparence** : Info réservée direction
 - ❌ **ERP obsolète** : MDE 15 ans, plus maintenu
 - ❌ **Fragilité extrême** : Dépendance Sylvie

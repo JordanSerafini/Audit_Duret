@@ -72,9 +72,9 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - **Stress** : Pression énorme fin de mois
 - **Pas de prédictif** : Seulement historique, aucune projection
 
-**Temps perdu annuel** : 40 jours × 600€/jour = **24 000€**
-**Erreurs décisions** (estimé) : **50 000€/an**
-**Total impact** : **74 000€/an**
+**Temps perdu annuel** : 40 jours × /jour = ****
+**Erreurs décisions** (estimé) : **/an**
+**Total impact** : **/an**
 
 #### 2. Mauvaise Remontée Information - Trop Longue, Trop Tard
 
@@ -84,16 +84,16 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - **Mauvaise interprétation** : Info orale/WhatsApp/Excel non structurée
 
 **Exemple concret** :
-- Dépassement budget chantier détecté J+30 : 20K€ déjà perdus
-- Retard planning non remonté : pénalités client 15K€
-- Stock rupture non signalé : arrêt chantier 2 jours = 8K€
+- Dépassement budget chantier détecté J+30 :  déjà perdus
+- Retard planning non remonté : pénalités client 
+- Stock rupture non signalé : arrêt chantier 2 jours = 
 
 **Impact** :
 - **Décisions correctives tardives** : Réaction vs anticipation
 - **Opportunités manquées** : Pas de réajustement temps réel
 - **Tensions internes** : Reproches direction ↔ terrain
 
-**Impact financier estimé** : **120 000€/an**
+**Impact financier estimé** : **/an**
 (dépassements budgets non anticipés, pénalités, arrêts chantiers)
 
 #### 3. Tout Excel, Tout Personnalisé - Silos de Données
@@ -115,8 +115,8 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - **Aucune scalabilité** : Croissance entreprise = explosion complexité
 - **Succession impossible** : Personne ne comprend système complet
 
-**Temps perdu annuel** : 300h × 75€/h = **22 500€**
-**Risque succession** (estimé) : **100 000€** (recrutement + formation + pertes temporaires)
+**Temps perdu annuel** : 300h × /h = ****
+**Risque succession** (estimé) : **** (recrutement + formation + pertes temporaires)
 
 #### 4. Manque Transparence Données - Chef Chantier Pas Accès Analyse
 
@@ -131,9 +131,9 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - **Silos d'information** : Direction vs Terrain, culture du secret
 - **Responsabilisation impossible** : Comment piloter si pas de visibilité ?
 
-**Impact RH estimé** : Turnover +10% = **60 000€/an**
-**Impact opérationnel** : Décisions sous-optimales = **40 000€/an**
-**Total** : **100 000€/an**
+**Impact RH estimé** : Turnover +10% = **/an**
+**Impact opérationnel** : Décisions sous-optimales = **/an**
+**Total** : **/an**
 
 ### Pain Points Importants
 
@@ -150,7 +150,7 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Risque erreurs spécifications
 - Expérience client dégradée
 
-**Impact estimé** : **25 000€/an** (opportunités perdues, retards)
+**Impact estimé** : **/an** (opportunités perdues, retards)
 
 #### 6. Gestion Litiges Non Priorisée - Risque Escalade
 
@@ -164,7 +164,7 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Délais réponse trop longs (recommandés : délais réglementaires)
 - Insatisfaction client
 
-**Impact estimé** : **30 000€/an** (litiges mal gérés, pénalités)
+**Impact estimé** : **/an** (litiges mal gérés, pénalités)
 
 #### 7. Nouvel Arrivant : 4 Jours Formation Nécessaire
 
@@ -174,12 +174,12 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Dépendance formateur (Sylvie, autres)
 
 **Impact** :
-- Coût formation : 4j × 600€ = 2 400€/personne
+- Coût formation : 4j ×  = /personne
 - Turnover prévu 2025 : 15-20 départs → 15-20 embauches
-- Total formation : 40 000€/an
+- Total formation : /an
 - Productivité réduite 1er mois : -50%
 
-**Impact estimé** : **60 000€/an**
+**Impact estimé** : **/an**
 
 ### Pain Points Structurants
 
@@ -197,7 +197,7 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Stock ruptures
 - Documents manquants (PPSPS, assurances, etc.)
 
-**Impact** : **45 000€/an**
+**Impact** : **/an**
 
 #### 9. Signature Documents Manuelle - Processus Lourds
 
@@ -206,7 +206,7 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Processus papier : impression → signature → scan → archivage
 - Pas d'agrégation documents complémentaires dans export
 
-**Impact** : **15 000€/an** (temps perdu + papier + archivage)
+**Impact** : **/an** (temps perdu + papier + archivage)
 
 #### 10. Problèmes Visio + Accès Fichiers - Collaboration Limitée
 
@@ -215,23 +215,23 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - **App importante : accès fichiers** : Gestion mode projet
 - Data alimenté et stocké dans dossier, pas centralisé
 
-**Impact** : **20 000€/an** (productivité collaboration)
+**Impact** : **/an** (productivité collaboration)
 
 ### 💰 Impact Financier Total Sylvie
 
 | Pain Point | Impact €/an |
 |------------|-------------|
-| 1. Tableau Excel manuel non fiable | 74 000€ |
-| 2. Mauvaise remontée info (trop longue/tard) | 120 000€ |
-| 3. Tout Excel, silos données | 122 500€ |
-| 4. Manque transparence données | 100 000€ |
-| 5. Fiches produits validation manuelle | 25 000€ |
-| 6. Gestion litiges non priorisée | 30 000€ |
-| 7. Onboarding 4j formation | 60 000€ |
-| 8. Pas alertes automatiques | 45 000€ |
-| 9. Signature manuelle | 15 000€ |
-| 10. Visio + accès fichiers | 20 000€ |
-| **TOTAL SYLVIE** | **611 500€/an** |
+| 1. Tableau Excel manuel non fiable |  |
+| 2. Mauvaise remontée info (trop longue/tard) |  |
+| 3. Tout Excel, silos données |  |
+| 4. Manque transparence données |  |
+| 5. Fiches produits validation manuelle |  |
+| 6. Gestion litiges non priorisée |  |
+| 7. Onboarding 4j formation |  |
+| 8. Pas alertes automatiques |  |
+| 9. Signature manuelle |  |
+| 10. Visio + accès fichiers |  |
+| **TOTAL SYLVIE** | **/an** |
 
 ---
 
@@ -296,9 +296,9 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 
 **Impact financier** :
 - **Surcharge équipe** : Risque burn-out, turnover
-- **Retards études** : Impact planning chantiers = 80K€/an
-- **Insatisfaction interne** : Tensions, silos = 40K€/an
-- **Total** : **120 000€/an**
+- **Retards études** : Impact planning chantiers = /an
+- **Insatisfaction interne** : Tensions, silos = /an
+- **Total** : **/an**
 
 #### 2. Multi-Casquettes Mal Géré - Iniquité Traitement
 
@@ -309,11 +309,11 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Demandes orales/mails/WhatsApp, format libre
 
 **Impact** :
-- Incompréhension demandes : 30% nécessitent clarifications
+- Incompréhension demandes  nécessitent clarifications
 - Temps perdu aller-retours : 5-10h/semaine
 - Traitement inéquitable : Frustration
 
-**Impact estimé** : **35 000€/an**
+**Impact estimé** : **/an**
 
 ### Pain Points Importants
 
@@ -324,16 +324,16 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Excel avec 20+ demandes, pas de vision charge/capacité
 - Mise à jour quotidienne fastidieuse
 
-**Impact** : **20 000€/an** (temps planning + erreurs allocation)
+**Impact** : **/an** (temps planning + erreurs allocation)
 
 ### 💰 Impact Financier Total Thomas
 
 | Pain Point | Impact €/an |
 |------------|-------------|
-| 1. Surcharge fonction transversale | 120 000€ |
-| 2. Multi-casquettes mal géré | 35 000€ |
-| 3. Planning BE manuel Excel | 20 000€ |
-| **TOTAL THOMAS** | **175 000€/an** |
+| 1. Surcharge fonction transversale |  |
+| 2. Multi-casquettes mal géré |  |
+| 3. Planning BE manuel Excel |  |
+| **TOTAL THOMAS** | **/an** |
 
 ---
 
@@ -383,8 +383,8 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 
 **Exemple concret** :
 - Disjoncteur ref ABC123 :
-  - Lot 1 (janv 2024) : 50 unités @ 25€ = 1 250€
-  - Lot 2 (mars 2024) : 50 unités @ 22€ (promo) = 1 100€
+  - Lot 1 (janv 2024) : 50 unités @  = 
+  - Lot 2 (mars 2024) : 50 unités @  (promo) = 
   - Sortie chantier : 30 unités → valorisées à quel prix ?
   - Actuellement : Incohérent selon qui saisit
 
@@ -395,11 +395,11 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - **Gaspillage** : Produits anciens non écoulés → obsolescence
 
 **Impact financier** :
-- Incohérences compta : **40K€/an** (corrections, audits)
-- Marges fausses : **60K€/an** (décisions basées mauvaises données)
-- Stock sous-utilisé : **80K€/an** (achat neuf vs réutilisation existant)
-- Obsolescence : **30K€/an** (pertes produits périmés)
-- **Total** : **210 000€/an**
+- Incohérences compta : **/an** (corrections, audits)
+- Marges fausses : **/an** (décisions basées mauvaises données)
+- Stock sous-utilisé : **/an** (achat neuf vs réutilisation existant)
+- Obsolescence : **/an** (pertes produits périmés)
+- **Total** : **/an**
 
 #### 2. Réception Manuelle Chronophage - Temps Perdu Comptage
 
@@ -416,16 +416,16 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 **Temps perdu** :
 - 20 BL/jour × 25 min = 500 min = **8h20/jour** (équipe 4 personnes)
 - Dont : 6h comptage, 2h20 saisie
-- **Capacité équipe gaspillée** : 50% temps = réception vs 50% = vraie logistique
+- **Capacité équipe gaspillée**  temps = réception vs 50% = vraie logistique
 
 **Erreurs** :
 - 10-15% erreurs comptage (fatigue, illisibilité, interruptions)
 - 5% erreurs saisie (typos, références)
 
 **Impact financier** :
-- Temps perdu : 2 000h/an × 35€/h = **70 000€**
-- Erreurs : Ecarts inventaires, litiges fournisseurs = **25 000€/an**
-- **Total** : **95 000€/an**
+- Temps perdu : 2 000h/an × /h = ****
+- Erreurs : Ecarts inventaires, litiges fournisseurs = **/an**
+- **Total** : **/an**
 
 **Solution exprimée** :
 - **Puce RFID** : Cf. Decathlon (scan automatique colis)
@@ -445,7 +445,7 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Achats inutiles : 15-20% produits achetés alors qu'existant en stock
 - Immobilisation trésorerie
 
-**Impact estimé** : **60 000€/an**
+**Impact estimé** : **/an**
 
 #### 4. Inventaires Mensuels Pénibles - 2-3 Jours Perdus
 
@@ -454,17 +454,17 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 - Comptage manuel fastidieux
 - Écarts importants (10-15%) nécessitant régularisations
 
-**Impact** : **30 000€/an** (temps inventaires + écarts)
+**Impact** : **/an** (temps inventaires + écarts)
 
 ### 💰 Impact Financier Total Isabelle
 
 | Pain Point | Impact €/an |
 |------------|-------------|
-| 1. Valorisation incohérente (2 prix même produit) | 210 000€ |
-| 2. Réception manuelle chronophage | 95 000€ |
-| 3. Stock sous-utilisé | 60 000€ |
-| 4. Inventaires mensuels pénibles | 30 000€ |
-| **TOTAL ISABELLE** | **395 000€/an** |
+| 1. Valorisation incohérente (2 prix même produit) |  |
+| 2. Réception manuelle chronophage |  |
+| 3. Stock sous-utilisé |  |
+| 4. Inventaires mensuels pénibles |  |
+| **TOTAL ISABELLE** | **/an** |
 
 ---
 
@@ -474,25 +474,25 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 
 | Persona | Impact Total/an |
 |---------|-----------------|
-| **Sylvie** (Contrôle Gestion) | 611 500€ |
-| **Thomas** (BE Transverse) | 175 000€ |
-| **Isabelle** (Stocks) | 395 000€ |
-| **TOTAL GESTION OPÉRATIONNELLE** | **1 181 500€/an** |
+| **Sylvie** (Contrôle Gestion) |  |
+| **Thomas** (BE Transverse) |  |
+| **Isabelle** (Stocks) |  |
+| **TOTAL GESTION OPÉRATIONNELLE** | **1 /an** |
 
 ### Top 10 Pain Points Critiques (Priorisation)
 
 | Rang | Pain Point | Persona | Impact €/an |
 |------|-----------|---------|-------------|
-| 1 | Valorisation stock incohérente (2 prix) | Isabelle | 210 000€ |
-| 2 | Mauvaise remontée info (trop longue/tard) | Sylvie | 120 000€ |
-| 3 | Surcharge fonction transversale (BE) | Thomas | 120 000€ |
-| 4 | Tout Excel, silos données | Sylvie | 122 500€ |
-| 5 | Manque transparence données | Sylvie | 100 000€ |
-| 6 | Réception manuelle chronophage | Isabelle | 95 000€ |
-| 7 | Tableau Excel manuel non fiable | Sylvie | 74 000€ |
-| 8 | Stock sous-utilisé | Isabelle | 60 000€ |
-| 9 | Onboarding 4j formation | Sylvie | 60 000€ |
-| 10 | Pas alertes automatiques | Sylvie | 45 000€ |
+| 1 | Valorisation stock incohérente (2 prix) | Isabelle |  |
+| 2 | Mauvaise remontée info (trop longue/tard) | Sylvie |  |
+| 3 | Surcharge fonction transversale (BE) | Thomas |  |
+| 4 | Tout Excel, silos données | Sylvie |  |
+| 5 | Manque transparence données | Sylvie |  |
+| 6 | Réception manuelle chronophage | Isabelle |  |
+| 7 | Tableau Excel manuel non fiable | Sylvie |  |
+| 8 | Stock sous-utilisé | Isabelle |  |
+| 9 | Onboarding 4j formation | Sylvie |  |
+| 10 | Pas alertes automatiques | Sylvie |  |
 
 ### Thèmes Récurrents
 
@@ -516,12 +516,12 @@ Le service **Gestion Opérationnelle** est un service **transverse** qui touche 
 
 ### Quick Wins (0-3 mois)
 
-1. **RFID/QR Code réception stocks** : -95K€/an (Isabelle pain point #2)
-2. **Dashboards temps réel** : -74K€/an (Sylvie pain point #1)
-3. **Système tickets BE** : -120K€/an (Thomas pain point #1)
-4. **Politique valorisation stock** : -210K€/an (Isabelle pain point #1)
+1. **RFID/QR Code réception stocks** : -/an (Isabelle pain point #2)
+2. **Dashboards temps réel** : -/an (Sylvie pain point #1)
+3. **Système tickets BE** : -/an (Thomas pain point #1)
+4. **Politique valorisation stock** : -/an (Isabelle pain point #1)
 
-**Total Quick Wins** : **499K€/an** pour investissement ~150-200K€ → **Payback 4-5 mois**
+**Total Quick Wins** : **/an** pour investissement ~150- → **Payback 4-5 mois**
 
 ### Projets Structurants (3-6 mois)
 

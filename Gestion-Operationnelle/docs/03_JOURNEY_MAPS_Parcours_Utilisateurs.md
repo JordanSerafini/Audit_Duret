@@ -174,7 +174,7 @@ ie totaux (calculatrice)
 - Vérifie cohérence inter-onglets :
   - Total CA (onglet CA) = Total CA (onglet Marges) ?
   - Total Heures (onglet Heures) = Total Heures (onglet Ratios) ?
-- ❌ **Incohérence détectée** : Écart 5K€ CA (origine inconnue)
+- ❌ **Incohérence détectée** : Écart  CA (origine inconnue)
 - Investigation : 45 min (cherche erreur formule ou saisie)
 - Trouve : Double compte 1 affaire (copié-collé doublon)
 - Supprime doublon
@@ -267,7 +267,7 @@ ie totaux (calculatrice)
 | **+ Stress/épuisement** | **+3h (pertes productivité)** |
 | **TOTAL RÉEL** | **24h équivalent** |
 
-**Coût** : 24h × 75€/h = **1 800€ par mois** → **21 600€/an** (rien que temps Sylvie)
+**Coût** : 24h × /h = ** par mois** → **/an** (rien que temps Sylvie)
 
 **Ressenti global** :
 - 😫 **Épuisement mental** : Concentration intense 2 jours
@@ -310,7 +310,7 @@ ie totaux (calculatrice)
 - 😃 **Ressenti** : Satisfaction (visibilité immédiate)
 
 **8h16 - Analyse Marges Négatives (alertes automatiques)**
-- Clique affaire "Chantier Leclerc" (marge -12K€)
+- Clique affaire "Chantier Leclerc" (marge -)
 - Dashboard drill-down automatique :
   - Cause 1 : Heures +35% vs budget (180h vs 120h prévues)
   - Cause 2 : Matériel +18% (commandes non validées RA)
@@ -361,7 +361,7 @@ ie totaux (calculatrice)
 
 **8h55 - Analyse Prédictive ML (optionnel)**
 - Consulte onglet "Prédictions IA" :
-  - Projection CA déc : 1,2M€ ±8%
+  - Projection CA déc : 1, ±8%
   - Risques dépassements : 3 chantiers alertés
   - Recommandations optimisation : "Réallouer 2 chefs chantier X → Y"
 - Sylvie note recommandations (intégrera réunion direction)
@@ -412,9 +412,9 @@ ie totaux (calculatrice)
 
 **Gain** : **24h → 2h = -22h (-92%)**
 
-**Coût** : 2h × 75€/h = **150€ par mois** → **1 800€/an** (vs 21 600€)
+**Coût** : 2h × /h = ** par mois** → **/an** (vs )
 
-**Économie** : **19 800€/an** (rien que temps Sylvie)
+**Économie** : **/an** (rien que temps Sylvie)
 
 **Bénéfices qualitatifs** :
 - ✅ **Temps réel** : Données J+0 vs J+15
@@ -595,7 +595,7 @@ ie totaux (calculatrice)
 - ❌ Heures sup récurrentes : Burn-out garanti
 - ❌ Insatisfaction demandeurs : Jean livré trop tard
 
-**Coût** : 10h × 60€/h × 250j = **150 000€/an** (dont 50 000€ heures sup + inefficacité)
+**Coût** : 10h × /h × 250j = **/an** (dont  heures sup + inefficacité)
 
 ---
 
@@ -610,7 +610,7 @@ ie totaux (calculatrice)
 - Dashboard affiche :
   - **Demandes en attente** : 22 (vs 28 avant grâce meilleure gestion)
   - **Capacité équipe semaine** : 160h (4 personnes × 40h)
-  - **Charge demandes** : 185h (surcharge 25h = 16%)
+  - **Charge demandes** : 185h (surcharge 25h )
   - **Priorisation automatique** : Algorithme a classé selon critères objectifs
 - ⏱️ **Temps** : **2 min**
 - 😊 **Ressenti** : Visibilité immédiate
@@ -763,10 +763,10 @@ ie totaux (calculatrice)
 - ✅ **Équité** : Priorisation objective, aucun conflit
 - ✅ **Équilibre vie pro/perso** : Part 17h vs 19h
 
-**Économie** : 2h/jour × 250j × 60€/h = **30 000€/an** (heures sup)
-**Productivité** : +81% = **120 000€/an** valeur additionnelle
+**Économie** : 2h/jour × 250j × /h = **/an** (heures sup)
+**Productivité** : +81% = **/an** valeur additionnelle
 
-**Total gain** : **150 000€/an**
+**Total gain** : **/an**
 
 ---
 
@@ -778,7 +778,7 @@ ie totaux (calculatrice)
 
 - **7h-9h30** : Comptage manuel 20 BL (colis, palettes) = 2h30
   - Fatigue physique, erreurs 15%
-  - Temps perdu : 2h30 × 35€/h = 88€
+  - Temps perdu : 2h30 × /h = 
 - **9h30-11h** : Saisie manuelle Lireco (20 BL) = 1h30
   - Typos, références fausses
 - **11h-12h** : Classement BL papier, rapprochements = 1h
@@ -786,8 +786,8 @@ ie totaux (calculatrice)
   - Formules cassées, incohérences
 - **TOTAL** : **8h** dont 6h comptage/saisie manuelle
 
-**Coût** : 8h × 35€/h × 250j = **70 000€/an**
-**Erreurs** : 15% = **25 000€/an** litiges
+**Coût** : 8h × /h × 250j = **/an**
+**Erreurs**  = **/an** litiges
 
 ---
 
@@ -802,10 +802,10 @@ ie totaux (calculatrice)
 - **TOTAL** : **8h** dont **45 min réception** (vs 6h avant)
 
 **Gain temps** : 5h15/jour × 250j = **1 312h/an**
-**Économie** : 1 312h × 35€/h = **46 000€/an**
-**Qualité** : 0 erreur vs 15% = **25 000€/an**
+**Économie** : 1 312h × /h = **/an**
+**Qualité** : 0 erreur vs 15% = **/an**
 
-**Total gain** : **71 000€/an**
+**Total gain** : **/an**
 
 ---
 
@@ -815,10 +815,10 @@ ie totaux (calculatrice)
 
 | Persona | Process | Avant | Après | Gain Temps | Gain € |
 |---------|---------|-------|-------|------------|--------|
-| **Sylvie** | KPI mensuels | 24h | 2h | -22h (-92%) | 19 800€/an |
-| **Thomas** | Demandes BE (quotidien) | 10h | 8h | -2h (-20%) | 150 000€/an |
-| **Isabelle** | Réception stocks (quotidien) | 6h | 45 min | -5h15 (-88%) | 71 000€/an |
-| **TOTAL** | | | | | **240 800€/an** |
+| **Sylvie** | KPI mensuels | 24h | 2h | -22h (-92%) | /an |
+| **Thomas** | Demandes BE (quotidien) | 10h | 8h | -2h (-20%) | /an |
+| **Isabelle** | Réception stocks (quotidien) | 6h | 45 min | -5h15 (-88%) | /an |
+| **TOTAL** | | | | | **/an** |
 
 ### Bénéfices Qualitatifs
 
