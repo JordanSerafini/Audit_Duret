@@ -13,7 +13,9 @@
       "Bash(else)",
       "Bash(fi)",
       "Bash(mkdir:*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(cp:*)",
+      "Bash(java -jar:*)"
     ],
     "deny": [],
     "ask": []
