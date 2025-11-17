@@ -34,16 +34,16 @@ Project starts 2024-01-08
 
 note bottom
   **COMPARAISON**
-  ⏰ ACTUEL: **2h05** (125 min)
-  ⏰ CIBLE: **31 min**
+  [TIME] ACTUEL: **2h05** (125 min)
+  [TIME] CIBLE: **31 min**
 
-  📊 AMELIORATION: -75% temps
+  [DATA] AMELIORATION: -75% temps
   - Templates automatiques
   - Auto-remplissage
   - Interface rapide cloud
 
-  😤 ACTUEL: Frustration 9/10
-  😊 CIBLE: Satisfaction 9/10
+  [FRUSTRE] ACTUEL: Frustration 9/10
+  [OK] CIBLE: Satisfaction 9/10
 end note
 
 @endgantt

@@ -4,7 +4,7 @@ title WBS - Decomposition des Problemes Direction & Gestion Affaires
 
 * Problemes\nDirection-Affaires
 
-** 🔴 ERP LEGACY
+** [!] ERP LEGACY
 *** MDE/Sage\ncalamiteux
 **** 30-40s/ecran
 **** VPN + Citrix
@@ -13,7 +13,7 @@ title WBS - Decomposition des Problemes Direction & Gestion Affaires
 *** Interface\nobsolete
 *** Pas d'API
 
-** 🔴 TEMPLATES
+** [!] TEMPLATES
 *** 200+ fichiers\nWord chaos
 **** Nommage\nincoherent
 **** Pas de\nversioning
@@ -21,7 +21,7 @@ title WBS - Decomposition des Problemes Direction & Gestion Affaires
 *** Pas d'auto\nremplissage
 *** Chaque RA\nses propres
 
-** 🔴 DEVIS
+** [!] DEVIS
 *** Creation\n2h05
 **** Recherche\ntemplate 30min
 **** Saisie\n1h30
@@ -29,7 +29,7 @@ title WBS - Decomposition des Problemes Direction & Gestion Affaires
 *** 30 lignes\n× 5min
 *** 100% manuel
 
-** 🔴 PPSPS
+** [!] PPSPS
 *** Generation\n3h00
 **** Ctrl+F\nremplacer
 **** Copie-colle\nmanuel
@@ -37,7 +37,7 @@ title WBS - Decomposition des Problemes Direction & Gestion Affaires
 *** Risque oublis\nclauses
 *** 100% Word\nmanuel
 
-** 🔴 VISIBILITE
+** [!] VISIBILITE
 *** Direction\naveugle
 **** Pas de\ndashboards
 **** Pas KPIs TR
@@ -45,7 +45,7 @@ title WBS - Decomposition des Problemes Direction & Gestion Affaires
 *** Budget\ndisperse
 *** 3h pour\ncompiler
 
-** 🔴 PROCESSUS
+** [!] PROCESSUS
 *** 100% manuel
 **** Zero\nautomatisation
 **** Zero\ndigitalisation

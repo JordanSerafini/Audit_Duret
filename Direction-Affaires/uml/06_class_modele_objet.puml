@@ -29,10 +29,10 @@ class Directrice {
 }
 
 note right of Directrice
-  🔴 **PROBLEME ACTUEL**
+  [!] **PROBLEME ACTUEL**
   Impossible de consulter
   avancement en temps reel
-  ⏰ 3h pour compiler les donnees
+  [TIME] 3h pour compiler les donnees
   Dashboards inexistants
 end note
 
@@ -63,7 +63,7 @@ class Devis {
 }
 
 note right of Devis
-  🔴 **PROBLEME ACTUEL**
+  [!] **PROBLEME ACTUEL**
   Creation: 2h05
   - Recherche template: 30 min
   - Ouverture MDE: 5 min
@@ -71,7 +71,7 @@ note right of Devis
   - Verifications: 15 min
   - PDF & envoi: 10 min
 
-  😤 Frustration: 9/10
+  [FRUSTRE] Frustration: 9/10
 end note
 
 enum StatutDevis {
@@ -95,12 +95,12 @@ class LigneDevis {
 }
 
 note right of LigneDevis
-  🔴 Pour CHAQUE ligne:
+  [!] Pour CHAQUE ligne:
   - Popup catalogue: 35s
   - Recherche article: 2 min
   - Copie Excel perso
   - Sauvegarde: 25s
-  ⏰ 5 min par ligne !
+  [TIME] 5 min par ligne !
 end note
 
 class PPSPS {
@@ -119,7 +119,7 @@ class PPSPS {
 }
 
 note left of PPSPS
-  🔴 **CALVAIRE ACTUEL**
+  [!] **CALVAIRE ACTUEL**
   Generation: 3h00
   - Recherche template: 30 min
   - Copie & Adaptation: 2h30
@@ -130,9 +130,9 @@ note left of PPSPS
     • Clauses: 30 min
     • Mise en page: 30 min
 
-  🔴 100% manuel
-  🔴 Risque oublis clauses
-  😤 Frustration: 10/10
+  [!] 100% manuel
+  [!] Risque oublis clauses
+  [FRUSTRE] Frustration: 10/10
 end note
 
 enum StatutPPSPS {
@@ -159,12 +159,12 @@ class Affaire {
 }
 
 note bottom of Affaire
-  🔴 **VISIBILITE NULLE**
+  [!] **VISIBILITE NULLE**
   Direction ne peut pas:
   - Suivre avancement TR
   - Consulter budgets
   - Obtenir KPIs
-  ⏰ 3h pour compiler
+  [TIME] 3h pour compiler
 end note
 
 enum StatutAffaire {
@@ -200,13 +200,13 @@ class Template {
 }
 
 note right of Template
-  🔴 **CHAOS TEMPLATES**
+  [!] **CHAOS TEMPLATES**
   - 200+ fichiers Word
   - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Aucune structure
-  - ⏰ 30 min de recherche
+  - [TIME] 30 min de recherche
 end note
 
 enum TypeTemplate {
@@ -230,7 +230,7 @@ class Reliquat {
 }
 
 note bottom of Reliquat
-  🔴 **AUCUN SUIVI**
+  [!] **AUCUN SUIVI**
   Reliquats non traces
   Pertes importantes
 end note
@@ -264,22 +264,22 @@ Template "*" -- "1" TypeTemplate
 note top
   **PROBLEMES MODELE ACTUEL**
 
-  🔴 **Processus manuels**
+  [!] **Processus manuels**
   - Devis: 2h05 par devis (30 lignes)
   - PPSPS: 3h00 par document
   - Templates: recherche 30 min
 
-  🔴 **Pas de visibilite**
+  [!] **Pas de visibilite**
   - Direction aveugle
   - Avancement inconnu TR
   - Budget disperse
 
-  🔴 **Performance catastrophique**
+  [!] **Performance catastrophique**
   - ERP: 30-40s par ecran
   - VPN + Citrix lent
   - Teletravail impossible
 
-  🔴 **Donnees eparpillees**
+  [!] **Donnees eparpillees**
   - MDE/Sage + Word + Excel perso
   - 200+ fichiers templates
   - Aucune structure

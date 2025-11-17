@@ -13,68 +13,68 @@ rectangle "Systeme Direction-Affaires ACTUEL" #FFFFCC {
 
   usecase "Creer\ndevis" as UC1 #FFD700
   note right of UC1
-    🔴 2h05 par devis
-    ⏰ Recherche template 30 min
-    🔴 100% manuel
+    [!] 2h05 par devis
+    [TIME] Recherche template 30 min
+    [!] 100% manuel
   end note
 
   usecase "Generer\nPPSPS" as UC2 #FF6B6B
   note right of UC2
-    🔴 3h00 par PPSPS
-    🔴 Ctrl+F remplacer
-    🔴 Risque oublis clauses
+    [!] 3h00 par PPSPS
+    [!] Ctrl+F remplacer
+    [!] Risque oublis clauses
   end note
 
   usecase "Consulter\navancement affaires" as UC3 #FF6B6B
   note right of UC3
-    🔴 Impossible en temps reel
-    ⏰ 3h pour compiler
+    [!] Impossible en temps reel
+    [TIME] 3h pour compiler
   end note
 
   usecase "Suivre\nbudget affaire" as UC4 #FFD700
   note left of UC4
-    🔴 Donnees dispersees
-    ⏰ 1h30 par affaire
+    [!] Donnees dispersees
+    [TIME] 1h30 par affaire
   end note
 
   usecase "Valider\nPPSPS" as UC5 #FFD700
   note right of UC5
-    🔴 Email Word
+    [!] Email Word
     Commentaires Word
-    ⏰ 30 min
+    [TIME] 30 min
   end note
 
   usecase "Rechercher\nancien devis" as UC6 #FF6B6B
   note left of UC6
-    🔴 **RECHERCHE MANUELLE**
+    [!] **RECHERCHE MANUELLE**
     200+ fichiers Word
     Nommage incoherent
-    ⏰ 30 min de fouille
+    [TIME] 30 min de fouille
   end note
 
   usecase "Teletravail\n(VPN/MDE)" as UC7 #FF0000
   note right of UC7
-    🔴 30-40s par ecran
-    🔴 Timeouts frequents
-    🔴 VPN + Citrix
-    😤 Frustration 10/10
+    [!] 30-40s par ecran
+    [!] Timeouts frequents
+    [!] VPN + Citrix
+    [FRUSTRE] Frustration 10/10
   end note
 
   usecase "Suivre\nreliquats" as UC8 #FF6B6B
   note left of UC8
-    🔴 Aucun suivi
-    🔴 Pertes importantes
+    [!] Aucun suivi
+    [!] Pertes importantes
   end note
 
   usecase "Analyser\nperformances" as UC9 #FF0000
   note right of UC9
-    🔴 Impossible
+    [!] Impossible
     Pas de dashboards
   end note
 
   usecase "Envoyer\ndevis client" as UC10
   note left of UC10
-    ⏰ 7 min
+    [TIME] 7 min
     PDF + Email
   end note
 }
@@ -126,12 +126,12 @@ UC7 .> Sage : <<extend>>\nperformance catastrophique
 
 note bottom
   **PROBLEMES MAJEURS**
-  🔴 ERP Legacy ultra-lent (30-40s/ecran)
-  🔴 Recherche manuelle 200+ fichiers
-  🔴 PPSPS 100% manuel (3h)
-  🔴 Pas de templates automatiques
-  🔴 Pas de visibilite direction
-  🔴 Teletravail impossible
+  [!] ERP Legacy ultra-lent (30-40s/ecran)
+  [!] Recherche manuelle 200+ fichiers
+  [!] PPSPS 100% manuel (3h)
+  [!] Pas de templates automatiques
+  [!] Pas de visibilite direction
+  [!] Teletravail impossible
 end note
 
 @enduml

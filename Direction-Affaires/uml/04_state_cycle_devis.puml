@@ -15,14 +15,14 @@ DemandeClient --> RechercheTemplate : Laurent cherche ancien devis
 
 state "Recherche Template" as RechercheTemplate #FF6B6B
 note right of RechercheTemplate
-  🔴 **RECHERCHE MANUELLE**
+  [!] **RECHERCHE MANUELLE**
   - Fouille dossiers partages
   - 200+ fichiers Word
   - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Pas de versioning
-  ⏰ 30 min de fouille !
+  [TIME] 30 min de fouille !
 end note
 
 RechercheTemplate --> PasDeTemplate : Pas trouve similaire
@@ -30,19 +30,19 @@ RechercheTemplate --> OuvertureMDE : Template trouve
 
 state "Pas de Template" as PasDeTemplate #FF6B6B
 note left of PasDeTemplate
-  🔴 Part de zero
-  ⏰ +1h
+  [!] Part de zero
+  [TIME] +1h
 end note
 
 PasDeTemplate --> OuvertureMDE
 
 state "Ouverture MDE" as OuvertureMDE #FF6B6B
 note right of OuvertureMDE
-  🔴 **TEMPS CHARGEMENT**
-  ⏰ 15 secondes
+  [!] **TEMPS CHARGEMENT**
+  [TIME] 15 secondes
   Attente ecran accueil: 30s
   Module devis: 40s
-  ⏰ Total 5 min juste pour ouvrir !
+  [TIME] Total 5 min juste pour ouvrir !
 end note
 
 OuvertureMDE --> RechercheClient : Cherche client
@@ -64,7 +64,7 @@ state "Saisie Manuelle" as SaisieManuelle #FF6B6B {
 }
 
 note right of SaisieManuelle
-  🔴 **CALVAIRE**
+  [!] **CALVAIRE**
   30 lignes × 5min = 2h30
 
   Pour CHAQUE ligne:
@@ -74,7 +74,7 @@ note right of SaisieManuelle
   - Copie depuis Excel perso
   - Sauvegarde (25s)
 
-  ⏰ Reduit a 1h30 avec Excel
+  [TIME] Reduit a 1h30 avec Excel
   mais TOUJOURS tres long !
 end note
 
@@ -85,7 +85,7 @@ note left of VerifExcel
   - Marge globale
   - Prix vs concurrence
   - Coherence quantites
-  ⏰ 10 min
+  [TIME] 10 min
 end note
 
 VerifExcel --> Ajustements : Corrections necessaires
@@ -93,7 +93,7 @@ VerifExcel --> GenerationPDF : OK
 
 state "Ajustements" as Ajustements #FFD700
 note right of Ajustements
-  🔴 Re-chargements (5 min)
+  [!] Re-chargements (5 min)
   Modifier 2-3 lignes
 end note
 
@@ -109,9 +109,9 @@ GenerationPDF --> VerifPDF : Verifie mise en page
 
 state "Verification PDF" as VerifPDF #FFD700
 note left of VerifPDF
-  🔴 Parfois bugs affichage
+  [!] Parfois bugs affichage
   → Regeneration
-  ⏰ 3 min
+  [TIME] 3 min
 end note
 
 VerifPDF --> BugPDF : Bug affichage
@@ -125,7 +125,7 @@ note right of EnvoiClient
   - Redaction email
   - Recherche contact
   - Piece jointe
-  ⏰ 7 min
+  [TIME] 7 min
 end note
 
 EnvoiClient --> EnAttente : Email envoye
@@ -143,20 +143,20 @@ EnAttente --> Modification : Client demande ajustement
 state "Modification Demandee" as Modification #FFD700
 note left of Modification
   Retour a la saisie
-  🔴 Recommence processus
+  [!] Recommence processus
 end note
 
 Modification --> OuvertureMDE : Rouvre MDE
 
-state "❌ Refus" as Refus #FF6B6B
+state "[KO] Refus" as Refus #FF6B6B
 Refus --> [*]
 
-state "✅ Accepte" as Accepte #90EE90
+state "[OK] Accepte" as Accepte #90EE90
 Accepte --> [*]
 
 note bottom
   **METRIQUES GLOBALES**
-  ⏰ Duree totale: **2h05**
+  [TIME] Duree totale: **2h05**
 
   Decomposition:
   • Recherche ancien devis: 45 min
@@ -165,8 +165,8 @@ note bottom
   • Verifications: 15 min
   • PDF & envoi: 10 min
 
-  😤 **FRUSTRATION: 9/10**
-  🔴 Avec templates: 30 min possible !
+  [FRUSTRE] **FRUSTRATION: 9/10**
+  [!] Avec templates: 30 min possible !
   Economie potentielle: 1h35/devis
 end note
 

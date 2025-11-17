@@ -24,11 +24,11 @@ end note
 
 Laurent -> Dossiers: Recherche ancien devis similaire
 note right #FF6B6B
-  🔴 **RECHERCHE MANUELLE**
+  [!] **RECHERCHE MANUELLE**
   - Fouille dossiers
   - 200+ fichiers
   - Pas de base connaissance
-  ⏰ 30 min perdues
+  [TIME] 30 min perdues
 end note
 
 Dossiers --> Laurent: Trouve devis similaire
@@ -43,21 +43,21 @@ end note
 
 Laurent -> MDE: Ouverture MDE
 note right #FF6B6B
-  🔴 **TEMPS CHARGEMENT**
-  ⏰ 15 secondes
+  [!] **TEMPS CHARGEMENT**
+  [TIME] 15 secondes
 end note
 
 Laurent -> MDE: Login
 MDE --> Laurent: Ecran accueil (30s)
 note right #FF6B6B
-  🔴 Attente...
+  [!] Attente...
 end note
 
 Laurent -> MDE: Navigation menu "Devis"
 MDE --> Laurent: Module devis (40s)
 note right #FF6B6B
-  🔴 Encore attente...
-  ⏰ Total 5 min juste pour ouvrir !
+  [!] Encore attente...
+  [TIME] Total 5 min juste pour ouvrir !
 end note
 
 Laurent -> MDE: Recherche client
@@ -74,14 +74,14 @@ loop Pour CHAQUE ligne (30 lignes)
     Laurent -> MDE: Clic "Ajouter ligne"
     MDE --> Laurent: Popup catalogue (35s)
     note right #FF6B6B
-      🔴 35 secondes d'attente
+      [!] 35 secondes d'attente
       par ligne !!!
     end note
 
     Laurent -> MDE: Recherche article
     note right #FF6B6B
-      🔴 Recherche inefficace
-      ⏰ 2 min par article
+      [!] Recherche inefficace
+      [TIME] 2 min par article
     end note
 
     Laurent -> Laurent: Copie depuis Excel
@@ -95,12 +95,12 @@ loop Pour CHAQUE ligne (30 lignes)
     Laurent -> MDE: Sauvegarde ligne
     MDE --> Laurent: Refresh (25s)
     note right #FF6B6B
-      🔴 25s d'attente par ligne
+      [!] 25s d'attente par ligne
     end note
 end
 
 note over Laurent, MDE #FFAAAA
-  ⏰ **TEMPS SAISIE**
+  [TIME] **TEMPS SAISIE**
   30 lignes × 5min = 2h30
   Reduit a 1h30 avec Excel
   mais TOUJOURS tres long !
@@ -113,12 +113,12 @@ note right #FFD700
   - Marge globale
   - Prix vs concurrence
   - Coherence quantites
-  ⏰ 10 min
+  [TIME] 10 min
 end note
 
 Laurent -> MDE: Ajustements 2-3 lignes
 note right #FF6B6B
-  🔴 Re-chargements (5 min)
+  [!] Re-chargements (5 min)
 end note
 
 == 11h50 - Generation PDF ==
@@ -128,9 +128,9 @@ MDE --> Laurent: PDF (45s)
 
 Laurent -> Laurent: Verif mise en page
 note right #FF6B6B
-  🔴 Parfois bugs affichage
+  [!] Parfois bugs affichage
   → Regeneration
-  ⏰ 3 min
+  [TIME] 3 min
 end note
 
 Laurent -> Email: Redaction email client
@@ -138,7 +138,7 @@ note right
   - Recherche contact
   - Redaction
   - Piece jointe
-  ⏰ 7 min
+  [TIME] 7 min
 end note
 
 Laurent -> Client: Envoi devis
@@ -147,7 +147,7 @@ Laurent -> Client: Envoi devis
 
 note over Laurent, Client #FFCCCC
   **METRIQUES PROCESSUS**
-  ⏰ Duree totale: **2h05**
+  [TIME] Duree totale: **2h05**
 
   Decomposition:
   • Recherche ancien devis: 45 min
@@ -156,8 +156,8 @@ note over Laurent, Client #FFCCCC
   • Verifications: 15 min
   • PDF & envoi: 10 min
 
-  😤 **FRUSTRATION: 9/10**
-  🔴 Avec templates: 30 min possible !
+  [FRUSTRE] **FRUSTRATION: 9/10**
+  [!] Avec templates: 30 min possible !
   Economie potentielle: 1h35/devis
 end note
 

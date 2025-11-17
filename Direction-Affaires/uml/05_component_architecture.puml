@@ -11,9 +11,9 @@ package "Responsables Affaires (4)" #FFE4E1 {
   [RA 4] as RA4 #FFB6C1
 
   note right of Laurent
-    🔴 Travail isole
-    🔴 Templates personnels
-    🔴 Excel perso
+    [!] Travail isole
+    [!] Templates personnels
+    [!] Excel perso
   end note
 }
 
@@ -22,8 +22,8 @@ package "Direction & BE" #E6F3FF {
   [Thomas\nBE] as Thomas #98FB98
 
   note right of Marie
-    🔴 Aucune visibilite TR
-    ⏰ 3h pour un chiffre
+    [!] Aucune visibilite TR
+    [TIME] 3h pour un chiffre
   end note
 }
 
@@ -52,13 +52,13 @@ package "Documents (Chaos)" #FFF9E6 {
   [Dossiers\nPartages\n200+ fichiers] as Dossiers #FF6B6B
 
   note bottom of Dossiers
-    🔴 **CHAOS FICHIERS**
+    [!] **CHAOS FICHIERS**
     - 200+ fichiers Word
     - Nommage incoherent:
       "PPSPS_final_v2_OK_2023.docx"
       "PPSPS_Client_A_VRAI_FINAL.docx"
     - Pas de versioning
-    - ⏰ 30 min de recherche
+    - [TIME] 30 min de recherche
   end note
 }
 
@@ -67,9 +67,9 @@ package "Communication" #F0F0F0 {
   [VPN/Citrix] as VPN #FF0000
 
   note bottom of VPN
-    🔴 30-40s par ecran
-    🔴 Timeouts frequents
-    😤 Frustration 10/10
+    [!] 30-40s par ecran
+    [!] Timeouts frequents
+    [FRUSTRE] Frustration 10/10
   end note
 }
 
@@ -79,8 +79,8 @@ cloud "Clients" #E0E0E0 {
   [Client C] as Client3
 
   note right of Client1
-    📧 Demande devis email
-    ⏰ Attend 48-72h
+     Demande devis email
+    [TIME] Attend 48-72h
   end note
 }
 
@@ -100,7 +100,7 @@ RA4 --> SageMDE : via VPN
 
 ' Relations Marie
 Marie ..> SageMDE : consultation\n(si dispo)
-Marie ..> Laurent : demande chiffres\n⏰ 3h
+Marie ..> Laurent : demande chiffres\n[TIME] 3h
 Marie ..> RA2 : demande chiffres
 
 ' Relations Thomas
@@ -116,15 +116,15 @@ Client2 ..> Email : demande devis
 
 note bottom
   **PROBLEMES ARCHITECTURE**
-  🔴 ERP Legacy ultra-lent (30-40s/ecran)
-  🔴 Teletravail impossible (VPN + Citrix)
-  🔴 Documents eparpilles (200+ fichiers)
-  🔴 Pas de templates automatiques
-  🔴 Chaque RA a ses propres Excel
-  🔴 Pas d'integration systeme
-  🔴 Pas de visibilite direction
-  🔴 PPSPS 100% manuel (3h)
-  🔴 Recherche template 30 min
+  [!] ERP Legacy ultra-lent (30-40s/ecran)
+  [!] Teletravail impossible (VPN + Citrix)
+  [!] Documents eparpilles (200+ fichiers)
+  [!] Pas de templates automatiques
+  [!] Chaque RA a ses propres Excel
+  [!] Pas d'integration systeme
+  [!] Pas de visibilite direction
+  [!] PPSPS 100% manuel (3h)
+  [!] Recherche template 30 min
 end note
 
 @enduml

@@ -20,19 +20,19 @@ end note
 
 Laurent -> Dossiers: Connexion dossiers partages
 note right #FF6B6B
-  🔴 Dossiers mal organises
+  [!] Dossiers mal organises
   "Documents/PPSPS/"
 end note
 
 Laurent -> Dossiers: Recherche PPSPS similaire
 note right #FF6B6B
-  🔴 **RECHERCHE MANUELLE**
+  [!] **RECHERCHE MANUELLE**
   - 200+ fichiers Word
   - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Pas de versioning
-  ⏰ 30 min de fouille !
+  [TIME] 30 min de fouille !
 end note
 
 loop 3-4 fichiers
@@ -54,7 +54,7 @@ Laurent -> Laurent: Renomme "PPSPS_NouveauChantier_2025.docx"
 
 Laurent -> Word: Modification Section 1 (15 min)
 note right #FF6B6B
-  🔴 **CTRL+F REMPLACER**
+  [!] **CTRL+F REMPLACER**
   - Nom client ancien → nouveau
   - Adresse chantier
   - Dates previsionnelles
@@ -70,7 +70,7 @@ end note
 
 Laurent -> Word: Modification Section 3 (45 min)
 note right #FF6B6B
-  🔴 **PARTIE LA PLUS LONGUE**
+  [!] **PARTIE LA PLUS LONGUE**
   Risques specifiques:
   - Analyse risques electriques
   - Travaux en hauteur
@@ -91,7 +91,7 @@ end note
 
 Laurent -> Laurent: Verif clauses obligatoires (30 min)
 note right #FF6B6B
-  🔴 **CHECKLIST PAPIER**
+  [!] **CHECKLIST PAPIER**
   40 points a verifier manuellement
   ligne par ligne
 
@@ -107,7 +107,7 @@ note right
 end note
 
 note over Laurent #FFAAAA
-  ⏰ **2h30 de travail MANUEL**
+  [TIME] **2h30 de travail MANUEL**
   100% manuel, 0% automatisation
 end note
 
@@ -133,17 +133,17 @@ Laurent -> Dossiers: Archivage
 
 note over Laurent, Client #FFCCCC
   **METRIQUES PROCESSUS**
-  ⏰ Duree totale: **3h00**
+  [TIME] Duree totale: **3h00**
 
   Decomposition:
   • Recherche template: 30 min
   • Adaptation Word: 2h30
   • Validation BE: 30 min
 
-  😤 **FRUSTRATION: 10/10**
-  🔴 100% manuel
-  🔴 Risques oublis clauses
-  🔴 Competences RA sous-utilisees
+  [FRUSTRE] **FRUSTRATION: 10/10**
+  [!] 100% manuel
+  [!] Risques oublis clauses
+  [!] Competences RA sous-utilisees
 
   💡 **AVEC AUTOMATISATION:**
   Possible en 30 minutes !

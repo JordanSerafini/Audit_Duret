@@ -10,11 +10,11 @@ node "Domicile Laurent (Teletravail)" as HomeLaurent #FFE4E1 {
   }
 
   note right of PCLaurent
-    🔴 **TELETRAVAIL IMPOSSIBLE**
+    [!] **TELETRAVAIL IMPOSSIBLE**
     - VPN + Citrix
     - 30-40s par ecran
     - Timeouts frequents
-    - 😤 Frustration: 10/10
+    - [FRUSTRE] Frustration: 10/10
 
     Laurent evite de travailler
     depuis chez lui !
@@ -64,12 +64,12 @@ node "Bureau Siege" as Bureau #E6F3FF {
   }
 
   note right of PCMarie
-    🔴 Marie ne peut pas:
+    [!] Marie ne peut pas:
     - Consulter avancement TR
     - Obtenir KPIs
     - Suivre budgets
 
-    ⏰ Demande a Laurent: 3h
+    [TIME] Demande a Laurent: 3h
   end note
 
   node "PC Thomas (BE)" as PCThomas {
@@ -85,13 +85,13 @@ cloud "Stockage OneDrive" as Cloud #E0F7FA {
 }
 
 note bottom of Cloud
-  🔴 **CHAOS FICHIERS**
+  [!] **CHAOS FICHIERS**
   - 200+ fichiers Word
   - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Pas de versioning
-  - ⏰ 30 min de recherche
+  - [TIME] 30 min de recherche
   - Chaque RA a ses propres Excel
 end note
 
@@ -99,11 +99,11 @@ cloud "Internet" as Internet {
 }
 
 node "Client A" as Client1 #E0E0E0 {
-  artifact "📧 Email" as EmailClient1
+  artifact " Email" as EmailClient1
 }
 
 node "Client B" as Client2 #E0E0E0 {
-  artifact "📧 Email" as EmailClient2
+  artifact " Email" as EmailClient2
 }
 
 ' Connexions Teletravail
@@ -137,34 +137,34 @@ OutlookThomas <.> Word1 : echange\nPPSPS validation
 note bottom
   **PROBLEMES INFRASTRUCTURE**
 
-  🔴 **Obsolescence**
+  [!] **Obsolescence**
   - Windows Server 2012
   - Sage MDE client lourd
   - Architecture annees 2000
 
-  🔴 **Performance catastrophique**
+  [!] **Performance catastrophique**
   - 30-40s par ecran
   - VPN + Citrix ultra-lent
   - Timeouts frequents
-  - 😤 Teletravail impossible
+  - [FRUSTRE] Teletravail impossible
 
-  🔴 **Pas de mobilite**
+  [!] **Pas de mobilite**
   - Zero acces mobile
   - Pas d'app responsive
   - Impossible depuis chantier
 
-  🔴 **Silos de donnees**
+  [!] **Silos de donnees**
   - Sage + Word + Excel perso
   - 200+ fichiers templates
   - Dossiers partages chaos
   - Aucune integration
 
-  🔴 **Pas de visibilite direction**
+  [!] **Pas de visibilite direction**
   - Pas de dashboards
   - Pas de KPIs TR
-  - ⏰ 3h pour un chiffre
+  - [TIME] 3h pour un chiffre
 
-  🔴 **Impact**
+  [!] **Impact**
   - Devis: 2h05 (vs 30 min possible)
   - PPSPS: 3h00 (vs 27 min possible)
   - Recherche template: 30 min
