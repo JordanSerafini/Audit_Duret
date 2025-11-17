@@ -1,0 +1,87 @@
+@startuml Timing_Devis
+
+title Timing Diagram - Timeline Création Devis Type
+
+concise "Laurent\n(Resp. Affaire)" as Laurent
+robust "MDE/Sage" as MDE
+robust "Client" as Client
+binary "Productivité" as Productif
+
+' Jour 1 - Lundi 9h00
+@0
+Laurent is LitEmail
+MDE is Idle
+Client is EnvoiDemande
+Productif is 1
+
+@15
+Laurent is ChercheTemplate
+
+@45
+Laurent is ChercheTemplate
+Productif is 0
+
+@45
+Laurent is OuvreMDE
+MDE is Chargement
+
+@50
+Laurent is Attend
+MDE is LoginEcran
+
+@80
+Laurent is Attend
+MDE is MenuDevis
+
+@120
+Laurent is RechercheClient
+MDE is RechercheClient
+
+@140
+Laurent is SaisieLigne1
+MDE is PopupCatalogue
+Productif is 1
+
+@175
+Laurent is SaisieLigne2
+MDE is PopupCatalogue
+
+@210
+Laurent is SaisieLigne3
+MDE is PopupCatalogue
+
+@300
+Laurent is SaisieLignes
+MDE is PopupCatalogue
+
+@130
+Laurent is VerifExcel
+MDE is Idle
+Productif is 1
+
+@140
+Laurent is Ajustements
+MDE is Refresh
+
+@145
+Laurent is GenerePDF
+MDE is GenerePDF
+
+@148
+Laurent is VerifPDF
+
+@151
+Laurent is RedactionEmail
+MDE is Idle
+
+@158
+Laurent is EnvoiEmail
+Client is RecoitDevis
+
+@165
+Laurent is Termine
+MDE is Idle
+Client is Etudie
+Productif is 0
+
+@enduml

@@ -1,0 +1,56 @@
+@startgantt Gantt_Comparaison_Actuel_Cible
+
+title Gantt - Comparaison Processus DEVIS ACTUEL vs CIBLE
+
+printscale daily
+
+<style>
+ganttDiagram {
+  timeline {
+    BackgroundColor lightgray
+  }
+}
+</style>
+
+Project starts 2024-01-08
+
+[PROCESSUS ACTUEL (2h05)] as [ACTUEL] lasts 1 day and is colored in Red
+
+-- Jour 1 - Lundi 9h00 --
+[Client: Demande devis] as [A0] lasts 0 days and is colored in LightBlue
+[Laurent: Lit email] as [A1] lasts 15 minutes and starts at [A0]'s end and is colored in LightPink
+[Laurent: Recherche template] as [A2] lasts 45 minutes and starts at [A1]'s end and is colored in Red
+[Laurent: Ouvre MDE] as [A3] lasts 5 minutes and starts at [A2]'s end and is colored in Orange
+[Laurent: Saisit 30 lignes] as [A4] lasts 90 minutes and starts at [A3]'s end and is colored in Red
+[Laurent: Vérifications] as [A5] lasts 15 minutes and starts at [A4]'s end and is colored in Orange
+[Laurent: PDF & envoi] as [A6] lasts 10 minutes and starts at [A5]'s end and is colored in LightGreen
+[✅ Devis envoyé] as [A7] lasts 0 days and starts at [A6]'s end and is colored in Green
+
+-- PROCESSUS CIBLE --
+[PROCESSUS CIBLE (31 min)] as [CIBLE] lasts 1 day and starts at 2024-01-10 and is colored in Green
+
+[Client: Demande devis] as [C0] lasts 0 days and starts at [CIBLE]'s start and is colored in LightBlue
+[Laurent: Choisit template] as [C1] lasts 2 minutes and starts at [C0]'s end and is colored in LightGreen
+[Odoo: Auto-remplit] as [C2] lasts 5 minutes and starts at [C1]'s end and is colored in LightGreen
+[Laurent: Ajustements] as [C3] lasts 15 minutes and starts at [C2]'s end and is colored in LightGreen
+[Laurent: Vérifie] as [C4] lasts 5 minutes and starts at [C3]'s end and is colored in LightGreen
+[Odoo: Génère PDF & envoie] as [C5] lasts 4 minutes and starts at [C4]'s end and is colored in LightGreen
+[✅ Devis envoyé] as [C6] lasts 0 days and starts at [C5]'s end and is colored in Green
+
+note bottom
+  **COMPARAISON**
+  ⏰ ACTUEL: **2h05** (125 min)
+  ⏰ CIBLE: **31 min**
+
+  📊 AMÉLIORATION:
+  - Gain: 1h34 (75% plus rapide)
+  - Templates automatiques
+  - Auto-remplissage client/affaire
+  - Plus de recherche manuelle
+  - Interface rapide cloud
+
+  😤 ACTUEL: Frustration 9/10
+  😊 CIBLE: Satisfaction 5/5
+end note
+
+@endgantt
