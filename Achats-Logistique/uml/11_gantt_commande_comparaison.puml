@@ -30,8 +30,6 @@ Project starts 2024-01-08
 [Marc: Récupère dépôt] as [A7] lasts 1 day and starts at [A6]'s start and is colored in LightPink
 [❌ ERREUR - Recommence] as [A8] lasts 0 days and starts at [A6]'s end and is colored in Red
 
-[A8] links to [A1]
-
 -- PROCESSUS CIBLE --
 [PROCESSUS CIBLE] as [CIBLE] lasts 1 day and starts at 2024-01-15 and is colored in Green
 

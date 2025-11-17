@@ -114,17 +114,4 @@ Marc is Attend
 Sylvie is Disponible
 Eric is Attente
 
-note bottom
-  **BILAN TIMING**
-  ⏰ Durée totale: **3 jours** (4,320 min)
-  ⏰ Temps productif: **~120 min** (2h)
-  ⏰ Temps perdu: **4,200 min** (70h)
-
-  ❌ Résultat: **ÉCHEC** (50% des cas)
-  Process inefficace
-
-  Si succès: 3 jours
-  Si échec: 6 jours (recommence)
-end note
-
 @enduml
