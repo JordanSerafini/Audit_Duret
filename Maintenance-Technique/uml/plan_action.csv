@@ -1,0 +1,17 @@
+Phase,Tache,Duree_jours,Priorite,Dependances,Cout_EUR,Gain_Annuel_EUR
+Phase 1,Selection ERP CRM Terrain,30,HAUTE,Aucune,0,0
+Phase 1,Choix solution mobile techniciens,15,HAUTE,Selection ERP,0,0
+Phase 1,Configuration initiale ERP,20,HAUTE,Selection ERP,15000,0
+Phase 1,Formation equipe projet,5,MOYENNE,Configuration ERP,3000,0
+Phase 2,Migration donnees clients,15,HAUTE,Configuration ERP,5000,0
+Phase 2,Parametrage workflows alertes,10,MOYENNE,Configuration ERP,2000,50000
+Phase 2,Integration SAGE comptabilite,15,HAUTE,Configuration ERP,8000,25000
+Phase 2,Developpement portail client,30,MOYENNE,Configuration ERP,12000,35000
+Phase 3,Formation techniciens app mobile,5,HAUTE,Choix solution mobile,2000,0
+Phase 3,Tests pilote 2 techniciens,15,HAUTE,Formation techniciens,0,0
+Phase 3,Deploiement progressif 5 techniciens,10,HAUTE,Tests pilote,1000,99000
+Phase 3,Formation Clothilde portail,3,MOYENNE,Developpement portail,1000,20000
+Phase 4,Go Live complet,1,HAUTE,Deploiement progressif,0,0
+Phase 4,Accompagnement post go live,30,MOYENNE,Go Live,5000,0
+Phase 4,Optimisations iteratives,60,BASSE,Go Live,3000,30000
+Phase 4,Mesure ROI et ajustements,30,MOYENNE,Go Live,1000,0
