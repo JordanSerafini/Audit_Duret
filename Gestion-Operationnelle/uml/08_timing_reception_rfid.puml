@@ -13,8 +13,6 @@ BL is Papier_Recu
 LIR is Vide
 ODO is Vide
 
-== AVANT (Systeme Actuel - 25 min) ==
-
 @1
 ISA is Comptage_Manuel : "Compte colis 1/20"
 note bottom : Comptage manuel\ncolis par colis
@@ -45,8 +43,6 @@ note bottom : TOTAL AVANT :\n25 min/BL\nErreurs 15%
 
 @26
 ISA is Repos : "Passe BL suivant"
-
-== APRES (Systeme Cible RFID - 45 sec) ==
 
 @30
 ISA is Scan_RFID : "Scan portique RFID"

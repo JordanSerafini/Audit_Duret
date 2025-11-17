@@ -85,8 +85,8 @@ BETickets --> SendGrid : Notifications
 Inventory --> Lireco : Sync RFID
 Accounting --> SAGE : Export
 
-note right of Odoo ERP v17
-  Open-Source (0€ licences)
+note right of Sales
+  Open-Source
   Python + PostgreSQL
   REST APIs natives
   Extensible (custom modules)
@@ -103,7 +103,6 @@ note right of MLFunctions
   Serverless (Azure Functions)
   Python models (.pkl)
   Auto-scaling
-  <500ms latence
 end note
 
 @enduml
