@@ -189,12 +189,13 @@ note bottom
   🔴 Workflows 100% manuels
   🔴 Pas de visibilité temps réel
 
-  **COÛTS PAR PHASE**
-  💰 Onboarding: 8-10h (×30/an = )
-  💰 Opérationnel: temps considérable (paie, FH, congés)
-  💰 Offboarding: 5-6h (×30/an = )
+  **TEMPS PAR PHASE**
+  ⏰ Onboarding: 8-10h par personne
+  ⏰ Opérationnel: temps important (paie, FH, congés)
+  ⏰ Offboarding: 5-6h par personne
 
-  **TOTAL ANNUEL: temps très élevé**
+  📊 Volume: ~30 entrées/sorties par an
+  💡 Impact: temps considérable sur l'année
 end note
 
 @enduml
