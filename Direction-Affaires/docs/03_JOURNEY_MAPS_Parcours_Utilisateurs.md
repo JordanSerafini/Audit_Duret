@@ -100,7 +100,6 @@ Pour chaque parcours :
 │                                                              │
 │ ⏱️ TOTAL PROCESS : 2h05                                     │
 │ 😤 NIVEAU FRUSTRATION : 9/10                                │
-│ 💰 COÛT : 2h05 × 50€/h = 103€                               │
 │                                                              │
 │ [J+2] Client reçoit réponse (délai concurrence : J+1)       │
 │   😤 Perte opportunité commerciale                          │
@@ -175,7 +174,6 @@ Pour chaque parcours :
 │                                                              │
 │ ⏱️ TOTAL PROCESS : 31 min                                   │
 │ 😊 NIVEAU SATISFACTION : 9/10                               │
-│ 💰 COÛT : 31min × 50€/h = 26€                               │
 │                                                              │
 │ [J+0 09h31] Client reçoit réponse (même jour!)              │
 │   ✅ Avantage concurrentiel +++ │
@@ -196,9 +194,6 @@ Pour chaque parcours :
 | Envoi | 5 min | 1min | -80% |
 | **Frustration** | 9/10 | 1/10 | -89% |
 | **Réactivité client** | J+2 | J+0 | **Immédiat** |
-
-**Gains annuels :**
-- 4 RA × 15 devis/semaine × 1.5h économisées × 50€/h × 50 semaines = **225K€/an**
 
 ---
 
@@ -242,7 +237,6 @@ Pour chaque parcours :
 │                                                              │
 │ ⏱️ TOTAL : 3h00                                             │
 │ 😤 FRUSTRATION : 10/10                                      │
-│ 💰 COÛT : 3h × 50€/h = 150€                                 │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -297,7 +291,6 @@ Pour chaque parcours :
 │                                                              │
 │ ⏱️ TOTAL : 27 min                                           │
 │ 😊 SATISFACTION : 10/10                                     │
-│ 💰 COÛT : 27min × 50€/h = 23€                               │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -313,9 +306,6 @@ Pour chaque parcours :
 | Vérification | Manuelle | Auto | 100% |
 | **Frustration** | 10/10 | 0/10 | -100% |
 | **Risque oubli clause** | Élevé | Nul | ✅ |
-
-**Gains annuels :**
-- 4 RA × 4 PPSPS/semaine × 2.5h économisées × 50€/h × 50 semaines = **100K€/an**
 
 ---
 
@@ -378,7 +368,6 @@ Pour chaque parcours :
 │ [10h00:30] 📊 Dashboard KPIs temps réel                     │
 │   Vue instantanée :                                          │
 │   • 18 affaires en cours                                    │
-│   • CA prévisionnel : 4.2M€                                 │
 │   • 3 affaires critiques (alertes rouges)                   │
 │   • Rentabilité globale : 12.3%                             │
 │   ✅ Amélioration : Visibilité instantanée                 │
@@ -388,9 +377,6 @@ Pour chaque parcours :
 │   • Affaire trouvée instantanément                          │
 │   • Vue détaillée :                                         │
 │     - Statut : "En cours" (65% avancé)                     │
-│     - Budget : 850K€ (760K€ consommés)                     │
-│     - Marge prév : 11.2%                                   │
-│     - Reliquats : 12K€ en attente                          │
 │     - Dernier PPSPS : validé J-3                           │
 │   ✅ Info complète en 1 minute                             │
 │   └─→ ⏱️ 1 min                                              │
@@ -402,7 +388,6 @@ Pour chaque parcours :
 │                                                              │
 │ ⏱️ TOTAL : 2 min                                            │
 │ 😊 SATISFACTION : 10/10                                     │
-│ 💰 VALEUR : Réactivité décisions, autonomie                 │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -437,16 +422,6 @@ Pour chaque parcours :
 | Consultation affaires | 250j/an | 30min/j | 125h = 0.3 ETP |
 | **TOTAL** | | | **985h = 2.5 ETP** |
 
-### Gains Financiers Annuels
-
-| Source | Calcul | Montant |
-|--------|--------|---------|
-| Temps devis | 360h × 50€/h | 18K€ |
-| Opportunités commerciales | Taux transformation +5% × 8M€ CA × 15% marge | 60K€ |
-| Temps PPSPS | 500h × 50€/h | 25K€ |
-| Autonomie direction | Réactivité décisions | Stratégique |
-| **TOTAL GAINS** | | **103K€/an + valeur stratégique** |
-
 ### Gains Non-Financiers
 
 - ✅ **Satisfaction utilisateurs** : 9/10 vs 2/10
@@ -467,7 +442,7 @@ Pour chaque parcours :
 
 **ROI mesurable :**
 - ⏱️ **Temps** : 2.5 ETP économisés (985h/an)
-- 💰 **Financier** : 103K€/an gains directs
+- 📊 **Mesurable** : Gains temps documentés (985h/an)
 - 📈 **Stratégique** : Réactivité, autonomie, conformité
 
 ➡️ **Recommandation** : GO immédiat migration Odoo

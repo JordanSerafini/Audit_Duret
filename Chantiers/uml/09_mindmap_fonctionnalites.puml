@@ -1,0 +1,93 @@
+@startmindmap Mindmap_Fonctionnalites
+
+title Arborescence Fonctionnelle Application Mobile Chantier
+
+* Application\nMobile\nChantier
+
+** Gestion Photos
+*** Prise Photo
+**** Directement depuis app
+**** Organisation auto par chantier
+**** Metadata GPS + timestamp
+*** Upload Automatique
+**** Vers serveur Azure Blob
+**** Compression intelligente
+**** Mode hors ligne (queue)
+*** Galerie Chantier
+**** Filtres (date, type, zone)
+**** Recherche photos
+**** Partage selectif
+
+** Rapports Intervention
+*** Templates
+**** Rapport intervention standard
+**** Rapport avancement
+**** Rapport reception
+*** Generation Auto
+**** Pré-remplissage infos chantier
+**** Integration photos avant/apres
+**** Generation PDF 1 clic
+*** Signature Electronique
+**** Sur tablette/mobile
+**** Signature client
+**** Horodatage
+*** Envoi Auto
+**** Email client
+**** Email bureau
+**** Archivage serveur
+
+left side
+
+** Gestion Incidents
+*** Remontees Structurees
+**** Formulaire type/categorie/urgence
+**** Photos attachees
+**** Description voix possible
+*** Suivi Statut
+**** Notifications temps reel
+**** Commentaires RA/BE
+**** Historique complet
+*** Priorites
+**** Urgence haute (rouge)
+**** Urgence moyenne (orange)
+**** Urgence basse (verte)
+
+** Acces Plans
+*** Visualisation
+**** Zoom/rotation
+**** Toutes versions
+**** Offline disponible
+*** Annotations
+**** Crayon tactile
+**** Commentaires
+**** Partage equipe
+*** Synchronisation
+**** Auto-sync modifications
+**** Gestion conflits
+
+** Commandes Materiel
+*** Catalogue Produits
+**** Recherche rapide
+**** Favoris
+**** Historique commandes
+*** Workflow
+**** Demande chef chantier
+**** Validation RA (si >seuil)
+**** Notification magasinier
+*** Suivi Livraisons
+**** Statut temps reel
+**** Alertes livraison
+**** Reception mobile
+
+** Dashboard Chantier
+*** Informations Cles
+**** Budget initial vs consomme
+**** Planning equipe
+**** Commandes en cours
+**** Incidents ouverts
+*** Mode Hors Ligne
+**** Synchronisation auto
+**** SQLite local
+**** Conflict resolution
+
+@endmindmap
