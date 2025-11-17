@@ -11,7 +11,7 @@
 
 **Problèmes Majeurs Identifiés :**
 - ❌ **Aucun outil métier** : 10-15 chefs chantier dépendants téléphone personnel
-- ❌ **Remontée info WhatsApp/Oral** : 0% traçabilité (~50% infos perdues)
+- ❌ **Remontée info WhatsApp/Oral**  traçabilité (~50% infos perdues)
 - ❌ **Photos dispersées** : Téléphones individuels, risque perte, difficultés retrouver
 - ❌ **Rapports manuels** : 2h/rapport (vs 10min possible)
 - ❌ **Incidents non tracés** : ~40/mois perdus (sur ~80 total)
@@ -38,7 +38,7 @@ Chef chantier détecte problème → Message WhatsApp responsable
   → Si pas vu → Appel téléphonique → Message vocal
     → Si urgence → WhatsApp groupe → Oral en réunion
 
-RÉSULTAT: 0% traçabilité, 50% infos perdues, impossibilité retrouver historique
+RÉSULTAT traçabilité, 50% infos perdues, impossibilité retrouver historique
 ```
 
 **3. Photos non centralisées**
@@ -70,12 +70,12 @@ TOTAL: 2 HEURES pour un simple rapport !!
 
 | Pain Point | Coût Annuel Estimé |
 |------------|-------------------|
-| Rapports manuels | 90K€ (200×2h×50€×60% économisable) |
-| Remontées perdues/litiges | 40K€ |
-| Appels bureau infos | 30K€ |
-| Photos dispersées/pertes | 15K€ |
-| Commandes non tracées | 25K€ |
-| **TOTAL PERTES** | **200K€/an** |
+| Rapports manuels |  (200×2h××60% économisable) |
+| Remontées perdues/litiges |  |
+| Appels bureau infos |  |
+| Photos dispersées/pertes |  |
+| Commandes non tracées |  |
+| **TOTAL PERTES** | **/an** |
 
 ---
 
@@ -204,21 +204,21 @@ TOTAL: 2 HEURES pour un simple rapport !!
 **Développement (One-time) :**
 | Phase | Contenu | Coût |
 |-------|---------|------|
-| Phase 1 (M1-3) | App mobile MVP + Photos + Rapports | 45K€ |
-| Phase 2 (M4-6) | Workflows + Commandes + Web dashboard | 40K€ |
-| Phase 3 (M7-12) | Plans + Offline avancé + Analytics | 35K€ |
-| **TOTAL SETUP** | | **120K€** |
+| Phase 1 (M1-3) | App mobile MVP + Photos + Rapports |  |
+| Phase 2 (M4-6) | Workflows + Commandes + Web dashboard |  |
+| Phase 3 (M7-12) | Plans + Offline avancé + Analytics |  |
+| **TOTAL SETUP** | | **** |
 
 **Coûts Récurrents (Annuel) :**
 | Poste | Coût/an |
 |-------|---------|
-| Cloud hosting (AWS/GCP) | 9.6K€ |
-| Google Maps API | 3.6K€ |
-| Signature électronique | 2.1K€ |
-| Email/SMS | 2.4K€ |
-| Monitoring | 1.8K€ |
-| Maintenance & Support | 28K€ |
-| **TOTAL RUN** | **48K€/an** |
+| Cloud hosting (AWS/GCP) | 9. |
+| Google Maps API | 3. |
+| Signature électronique | 2. |
+| Email/SMS | 2. |
+| Monitoring | 1. |
+| Maintenance & Support |  |
+| **TOTAL RUN** | **/an** |
 
 ### 📈 Gains & ROI
 
@@ -226,29 +226,29 @@ TOTAL: 2 HEURES pour un simple rapport !!
 
 | Source Gains | Calcul | Montant |
 |--------------|--------|---------|
-| **Temps rapports** | 200 rapports × 70% temps économisé (1.4h) × 50€/h | 90K€/an |
-| **Réduction litiges** | -40% litiges × 100K€ impacts | 40K€/an |
-| **Réduction appels** | -50% × 30 appels/j × 20min × 220j × 40€/h | 16K€/an |
-| **Photos centralisées** | Temps recherche + sécurisation | 15K€/an |
-| **Traçabilité incidents** | Meilleur suivi → -15% reprises travaux | 25K€/an |
-| **Optimisation déplacements** | -10% km via meilleures infos | 10K€/an |
-| **TOTAL GAINS ANNUELS** | | **196K€/an** |
+| **Temps rapports** | 200 rapports × 70% temps économisé (1.4h) × /h | /an |
+| **Réduction litiges** | -40% litiges ×  impacts | /an |
+| **Réduction appels** | -50% × 30 appels/j × 20min × 220j × /h | /an |
+| **Photos centralisées** | Temps recherche + sécurisation | /an |
+| **Traçabilité incidents** | Meilleur suivi → -15% reprises travaux | /an |
+| **Optimisation déplacements** | -10% km via meilleures infos | /an |
+| **TOTAL GAINS ANNUELS** | | **/an** |
 
 **ROI Financier :**
 ```
 Année 1:
-  - Investment: 120K€
-  - Run costs: 48K€
-  - Gains: 196K€ (prorata 9 mois après M3) = 147K€
-  - Net Year 1: 147K€ - 120K€ - 48K€ = -21K€
+  - Investment: 
+  - Run costs: 
+  - Gains:  (prorata 9 mois après M3) = 
+  - Net Year 1:  -  -  = -
 
 Année 2:
-  - Run costs: 48K€
-  - Gains: 196K€
-  - Net Year 2: 196K€ - 48K€ = 148K€
+  - Run costs: 
+  - Gains: 
+  - Net Year 2:  -  = 
 
-Cumul 2 ans: -21K€ + 148K€ = 127K€
-ROI 2 ans: 127K€ / 120K€ = 106%
+Cumul 2 ans: - +  = 
+ROI 2 ans:  /  
 Payback: ~18 mois
 ```
 
@@ -256,7 +256,7 @@ Payback: ~18 mois
 - ✅ **Satisfaction chefs chantier** : +45% (outils adaptés)
 - ✅ **Réactivité terrain** : -60% temps réponse questions
 - ✅ **Qualité rapports** : Standardisation 100%
-- ✅ **Sécurité données** : 0% risque perte (vs 30% actuellement)
+- ✅ **Sécurité données**  risque perte (vs 30% actuellement)
 - ✅ **Image professionnelle** : Rapports digitaux clients
 - ✅ **Attractivité RH** : Outils modernes pour recrutement
 
@@ -264,7 +264,7 @@ Payback: ~18 mois
 
 ## 📅 PARTIE 4 : ROADMAP 12 MOIS
 
-### Phase 1 : MVP Core (Mois 1-3) - 45K€
+### Phase 1 : MVP Core (Mois 1-3) - 
 
 **Objectif :** App mobile fonctionnelle + backend basique
 
@@ -285,7 +285,7 @@ Payback: ~18 mois
 - -50% temps rapports (2h → 1h)
 - Traçabilité rapports 100% (vs 60%)
 
-### Phase 2 : Features Avancées (Mois 4-6) - 40K€
+### Phase 2 : Features Avancées (Mois 4-6) - 
 
 **Objectif :** Workflow incidents + web dashboard
 
@@ -306,7 +306,7 @@ Payback: ~18 mois
 - 95% incidents tracés (vs 20%)
 - -50% temps traitement incidents
 
-### Phase 3 : Optimisation & Analytics (Mois 7-12) - 35K€
+### Phase 3 : Optimisation & Analytics (Mois 7-12) - 
 
 **Objectif :** Plans + offline robuste + analytics
 
@@ -374,7 +374,7 @@ Payback: ~18 mois
 - ✅ Roadmap évolutions futures
 - ✅ Bilan ROI
 
-**Critère succès :** ROI net positif, gains > 100K€ annualisés
+**Critère succès :** ROI net positif, gains >  annualisés
 
 ---
 
@@ -436,24 +436,24 @@ Payback: ~18 mois
 ### ✅ RECOMMANDATION : GO
 
 **Pourquoi maintenant ?**
-- 🔴 **Coûts actuels insoutenables** : 200K€/an de pertes
+- 🔴 **Coûts actuels insoutenables** : /an de pertes
 - 🔴 **Risques critiques** : Litiges, perte données, inefficacité
 - 🟢 **Technologie mature** : React Native, cloud éprouvés
 - 🟢 **ROI démontré** : Payback 18 mois, 106% ROI 2 ans
 - 🟢 **Quick wins** : Gains visibles dès M3
 
 **Investissement :**
-- **Setup** : 120K€ sur 12 mois (phasing : 45K + 40K + 35K)
-- **Run** : 48K€/an
+- **Setup** :  sur 12 mois (phasing : 45K + 40K + 35K)
+- **Run** : /an
 
 **Retours :**
-- **Gains annuels** : 196K€/an (récurrents)
-- **ROI net** : 148K€/an (après costs)
+- **Gains annuels** : /an (récurrents)
+- **ROI net** : /an (après costs)
 - **Payback** : 18 mois
-- **ROI 2 ans** : 106%
+- **ROI 2 ans** 
 
 **Décision recommandée :**
-👉 **Lancer Phase 1 immédiatement (45K€, 3 mois)**
+👉 **Lancer Phase 1 immédiatement (, 3 mois)**
 - Risque limité (phasing)
 - Quick wins rapides
 - Go/No-Go M3 selon résultats pilotes
@@ -463,7 +463,7 @@ Payback: ~18 mois
 ## 📞 PROCHAINES ÉTAPES
 
 ### Semaine 1-2 : Préparation
-- [ ] Validation budget 45K€ Phase 1
+- [ ] Validation budget  Phase 1
 - [ ] Constitution équipe projet
 - [ ] Sélection 2-3 chefs pilotes
 - [ ] Choix cloud provider (AWS vs GCP)
@@ -482,12 +482,12 @@ Payback: ~18 mois
 
 ### Mois 3 : Go/No-Go Phase 2
 - [ ] Bilan Phase 1 (KPIs, satisfaction, budget)
-- [ ] Décision Phase 2 (40K€, M4-M6)
+- [ ] Décision Phase 2 (, M4-M6)
 - [ ] Ajustements roadmap si nécessaire
 
 ---
 
 **📧 Contact Projet :** Équipe Transformation Digitale Duret Électricité
 **🎯 Objectif :** Digitaliser 100% gestion chantiers & remontée terrain
-**💰 Enjeu :** 200K€/an pertes → 148K€/an gains nets (ROI 106% sur 2 ans)
+**💰 Enjeu :** /an pertes → /an gains nets (ROI 106% sur 2 ans)
 **⏱️ Horizon :** 12 mois (3 phases × 3-6 mois)

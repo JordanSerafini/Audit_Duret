@@ -67,7 +67,7 @@ Chantiers/
 └── SYNTHESE_EXECUTIVE.md
     └── Synthèse exécutive pour direction
         • Business case
-        • ROI : Gains 115K€/an
+        • ROI : Gains /an
         • Roadmap 12 mois
         • Risques et mitigation
 ```
@@ -107,7 +107,7 @@ Chantiers/
 | **Temps moyen rapport** | 2h (vs 10min possible) |
 | **Incidents non tracés/mois** | ~40 (sur ~80) |
 | **Appels bureau/jour** | ~30 (infos manquantes) |
-| **Coût annuel pertes** | Estimé ~200K€ |
+| **Coût annuel pertes** | Estimé ~ |
 
 ---
 
@@ -142,32 +142,32 @@ Chantiers/
    - WhatsApp, Oral, emails → aucune traçabilité
    - 50% informations perdues
    - Impossibilité retrouver historique décisions
-   - 💰 Coût : ~40K€/an (litiges, reprises travaux)
+   - 💰 Coût : ~/an (litiges, reprises travaux)
 
 2. **Aucun outil métier terrain (Critique)**
    - Chefs dépendants téléphone personnel
    - Pas d'accès infos chantier en mobilité
    - Appels bureau multiples pour infos basiques
-   - 💰 Coût : ~30K€/an (temps perdu appels)
+   - 💰 Coût : ~/an (temps perdu appels)
 
 3. **Photos dispersées (Critique)**
    - Stockées téléphones individuels
    - Risque perte si téléphone endommagé
    - Difficultés retrouver photos spécifiques
    - Pas de structuration par chantier
-   - 💰 Coût : ~15K€/an (temps recherche + pertes)
+   - 💰 Coût : ~/an (temps recherche + pertes)
 
 4. **Rapports intervention manuels (Important)**
    - 2h/rapport en moyenne
    - Hétérogénéité formats
    - Délai transmission
-   - 💰 Coût : ~90K€/an (200 rapports × 2h × 50€/h × 60% temps économisable)
+   - 💰 Coût : ~/an (200 rapports × 2h × /h × 60% temps économisable)
 
 5. **Commandes matériel non tracées (Important)**
    - Pas de workflow ni validation
    - Difficultés suivi livraisons
    - Pas de vision consolidée dépenses
-   - 💰 Coût : ~25K€/an (dépassements, oublis refacturation)
+   - 💰 Coût : ~/an (dépassements, oublis refacturation)
 
 ---
 
@@ -184,15 +184,15 @@ Chantiers/
 - ✅ ROI rapide (5-6 mois)
 
 **Composantes** :
-- **Phase 1 (M1-3)** : App mobile MVP + Photos + Rapports → 45K€
-- **Phase 2 (M4-6)** : Workflow incidents + Commandes + Web dashboard → 40K€
-- **Phase 3 (M7-12)** : Plans, Offline avancé, Analytics → 35K€
-- **Run annuel** : Cloud + Licences + Maintenance → 48K€/an
+- **Phase 1 (M1-3)** : App mobile MVP + Photos + Rapports → 
+- **Phase 2 (M4-6)** : Workflow incidents + Commandes + Web dashboard → 
+- **Phase 3 (M7-12)** : Plans, Offline avancé, Analytics → 
+- **Run annuel** : Cloud + Licences + Maintenance → /an
 
-**Investissement total 12 mois** : 120K€
-**Coûts run annuels** : 48K€/an
-**Gains annuels récurrents** : 115K€/an
-**ROI net** : 67K€/an après costs
+**Investissement total 12 mois** : 
+**Coûts run annuels** : /an
+**Gains annuels récurrents** : /an
+**ROI net** : /an après costs
 **Payback** : ~18 mois
 
 ---
@@ -202,7 +202,7 @@ Chantiers/
 1. ✅ **App mobile photos géolocalisées**
    - Upload automatique cloud
    - Organisation par chantier
-   - Gain : 100% centralisation vs ~40%
+   - Gain  centralisation vs ~40%
 
 2. ✅ **Templates rapports**
    - Préremplissage automatique
@@ -212,7 +212,7 @@ Chantiers/
 3. ✅ **Messagerie chantier**
    - Remplace WhatsApp
    - Traçabilité complète
-   - Gain : 100% remontées tracées vs ~20%
+   - Gain  remontées tracées vs ~20%
 
 4. ✅ **Formulaires incidents**
    - Structuration remontées
@@ -278,7 +278,7 @@ Chantiers/
 - Appels bureau/jour : -50% (vs 30 actuellement)
 
 ### Financier
-- ROI net annuel : 67K€
+- ROI net annuel : 
 - Temps économisé : 1 800h/an
 - Réduction litiges : -40%
 - Amélioration satisfaction client : +30%
@@ -304,8 +304,8 @@ Ce dossier documente:
 
 - État ACTUEL (pain points, WhatsApp/Oral)
 - Architecture CIBLE (App mobile + cloud + offline)
-- Plan d'implémentation détaillé (12 mois, 120K€)
-- ROI business case (67K€/an net, payback 18 mois)
+- Plan d'implémentation détaillé (12 mois, )
+- ROI business case (/an net, payback 18 mois)
 
 ---
 
@@ -329,4 +329,4 @@ Ce dossier documente:
 
 **🏢 Entreprise:** Duret Électricité
 **🎯 Objectif:** Digitaliser gestion chantiers & remontée terrain
-**💰 Enjeu:** 200K€/an de pertes → 67K€/an de gains nets (ROI positif)
+**💰 Enjeu:** /an de pertes → /an de gains nets (ROI positif)

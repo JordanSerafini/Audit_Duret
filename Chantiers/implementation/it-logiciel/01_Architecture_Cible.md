@@ -561,18 +561,18 @@
 - Géolocalisation photos
 - Calcul distances équipes
 - Optimisation déplacements
-- Coût : ~300€/mois
+- Coût : ~/mois
 
 **Signature Électronique**
 - **DocuSign** ou **Adobe Sign** ou **YouSign** (EU)
 - Signature rapports clients
 - Validation documents chantier
-- Coût : 15€/user/mois
+- Coût : /user/mois
 
 **Email/SMS**
 - **SendGrid** : Envoi emails automatiques
 - **Twilio** : SMS alertes urgentes
-- Coût : ~200€/mois
+- Coût : ~/mois
 
 ---
 
@@ -638,12 +638,12 @@
 - **CloudWatch** : Monitoring + alertes
 
 **Estimation Coûts Cloud (AWS)**
-- Compute (EC2) : 300€/mois
-- Database (RDS) : 200€/mois
-- Storage (S3) : 100€/mois
-- CDN (CloudFront) : 50€/mois
-- Services divers : 150€/mois
-- **Total** : ~800€/mois = 9.6K€/an
+- Compute (EC2) : /mois
+- Database (RDS) : /mois
+- Storage (S3) : /mois
+- CDN (CloudFront) : /mois
+- Services divers : /mois
+- **Total** : ~/mois = 9./an
 
 ### Scalabilité
 
@@ -802,7 +802,7 @@ Livrables Phase 1 :
 • Rapports PDF basiques
 ```
 
-**Budget Phase 1** : 45K€
+**Budget Phase 1** : 
 
 ### Phase 2: Features Avancées (Mois 4-6)
 
@@ -833,7 +833,7 @@ Livrables Phase 2 :
 • Sync ERP bidirectionnelle
 ```
 
-**Budget Phase 2** : 40K€
+**Budget Phase 2** : 
 
 ### Phase 3: Optimisation & IA (Mois 7-12)
 
@@ -872,7 +872,7 @@ Livrables Phase 3 :
 • Plateforme production-ready
 ```
 
-**Budget Phase 3** : 35K€
+**Budget Phase 3** : 
 
 ---
 
@@ -883,7 +883,7 @@ Livrables Phase 3 :
 **Infrastructure**
 - ✅ Connexion Internet chantiers (4G/5G minimum)
 - ✅ Smartphones équipe (iOS 13+ ou Android 10+)
-- ✅ Budget cloud hosting (~800€/mois)
+- ✅ Budget cloud hosting (~/mois)
 - ⚠️ VPN si accès ERP on-premise requis
 
 **Données**
@@ -955,20 +955,20 @@ Livrables Phase 3 :
 ```
 Gains Productivité :
 • Temps rapports : -60% × 15 chefs × 2h/semaine = 1 800h/an
-• Valeur horaire : 1 800h × 50€ = 90K€/an
+• Valeur horaire : 1 800h ×  = /an
 
 • Réduction appels bureau : -40% × 10h/semaine = 400h/an
-• Valeur : 400h × 40€ = 16K€/an
+• Valeur : 400h ×  = /an
 
 • Optimisation déplacements : -10% km × 15 chefs
-• Économie : ~10K€/an (carburant)
+• Économie : ~/an (carburant)
 
 ROI Total Estimé :
-• Gains annuels : ~115K€/an
-• Investissement : 120K€ (3 phases)
-• Coûts run : 15K€/an
+• Gains annuels : ~/an
+• Investissement :  (3 phases)
+• Coûts run : /an
 
-ROI : (115K€ - 15K€) / 120K€ = 83% / an
+ROI : ( - ) /   / an
 Retour investissement : ~15 mois
 ```
 
@@ -980,32 +980,32 @@ Retour investissement : ~15 mois
 
 | Phase | Composante | Coût |
 |-------|------------|------|
-| **Phase 1** | Infrastructure + App mobile MVP | 45K€ |
-| **Phase 2** | Workflows + Web dashboard | 40K€ |
-| **Phase 3** | Analytics + Optimisation | 35K€ |
-| | **Subtotal Développement** | **120K€** |
+| **Phase 1** | Infrastructure + App mobile MVP |  |
+| **Phase 2** | Workflows + Web dashboard |  |
+| **Phase 3** | Analytics + Optimisation |  |
+| | **Subtotal Développement** | **** |
 
 ### Licences & Services (Annuel)
 
 | Service | Coût/an |
 |---------|---------|
-| Cloud hosting (AWS/GCP) | 9.6K€ |
-| Google Maps API | 3.6K€ |
-| Signature électronique (DocuSign) | 2.1K€ |
-| Email/SMS (SendGrid + Twilio) | 2.4K€ |
-| Monitoring (New Relic + Sentry) | 1.8K€ |
-| App Stores (Apple + Google) | 0.2K€ |
-| Certificats SSL/Sécurité | 0.3K€ |
-| **Total Licences** | **20K€/an** |
+| Cloud hosting (AWS/GCP) | 9. |
+| Google Maps API | 3. |
+| Signature électronique (DocuSign) | 2. |
+| Email/SMS (SendGrid + Twilio) | 2. |
+| Monitoring (New Relic + Sentry) | 1. |
+| App Stores (Apple + Google) | 0. |
+| Certificats SSL/Sécurité | 0. |
+| **Total Licences** | **/an** |
 
 ### Maintenance & Support (Annuel)
 
 | Poste | Coût/an |
 |-------|---------|
-| Support technique niveau 3 | 15K€ |
-| Évolutions mineures | 10K€ |
-| Backups & sécurité | 3K€ |
-| **Total Maintenance** | **28K€/an** |
+| Support technique niveau 3 |  |
+| Évolutions mineures |  |
+| Backups & sécurité |  |
+| **Total Maintenance** | **/an** |
 
 ### Budget Total
 
@@ -1013,27 +1013,27 @@ Retour investissement : ~15 mois
 ┌─────────────────────────────────┬──────────┐
 │ INVESTISSEMENT INITIAL          │          │
 ├─────────────────────────────────┼──────────┤
-│ Développement (3 phases)        │  120K€   │
-│ Formation équipes               │   8K€    │
-│ Migration données               │   5K€    │
-│ Contingence 10%                 │  13K€    │
+│ Développement (3 phases)        │     │
+│ Formation équipes               │       │
+│ Migration données               │       │
+│ Contingence 10%                 │      │
 ├─────────────────────────────────┼──────────┤
-│ TOTAL SETUP                     │  146K€   │
+│ TOTAL SETUP                     │     │
 └─────────────────────────────────┴──────────┘
 
 ┌─────────────────────────────────┬──────────┐
 │ COÛTS RÉCURRENTS (par an)       │          │
 ├─────────────────────────────────┼──────────┤
-│ Licences & Cloud                │   20K€   │
-│ Maintenance & Support           │   28K€   │
+│ Licences & Cloud                │      │
+│ Maintenance & Support           │      │
 ├─────────────────────────────────┼──────────┤
-│ TOTAL RUN                       │   48K€/an│
+│ TOTAL RUN                       │   /an│
 └─────────────────────────────────┴──────────┘
 
 ROI :
-• Gains annuels estimés : 115K€
-• Coûts annuels : 48K€
-• Bénéfice net : 67K€/an
+• Gains annuels estimés : 
+• Coûts annuels : 
+• Bénéfice net : /an
 • Break-even : 2.2 ans
 ```
 
@@ -1043,7 +1043,7 @@ ROI :
 
 ### Avant Phase 1
 
-- [ ] Validation budget 146K€ setup
+- [ ] Validation budget  setup
 - [ ] Choix cloud provider (AWS vs GCP vs Azure)
 - [ ] Export données ERP (chantiers, équipes)
 - [ ] Définition 3 templates rapports prioritaires

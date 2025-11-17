@@ -56,7 +56,7 @@ Phase 1 (M1-M3)          Phase 2 (M4-M6)          Phase 3 (M7-12)
 • 2-3 pilotes          • Tous chefs (10-15)      • ML prédictions
 • Validation terrain    • Sync ERP                • Formation complète
 
-Budget : 45K€          Budget : 40K€             Budget : 35K€
+Budget :           Budget :              Budget : 
 Go/No-Go décision      Go/No-Go décision         Go-Live général
 ```
 
@@ -147,21 +147,21 @@ Go/No-Go décision      Go/No-Go décision         Go-Live général
 
 | Phase | Durée | Contenu | Budget |
 |-------|-------|---------|--------|
-| **Phase 1** | M1-M3 | MVP (App mobile, photos, rapports) | 45K€ |
-| **Phase 2** | M4-M6 | Features (Workflows, dashboards, ERP) | 40K€ |
-| **Phase 3** | M7-M12 | Optimisation (Plans, offline, ML) | 35K€ |
-| **TOTAL SETUP** | 12 mois | | **120K€** |
+| **Phase 1** | M1-M3 | MVP (App mobile, photos, rapports) |  |
+| **Phase 2** | M4-M6 | Features (Workflows, dashboards, ERP) |  |
+| **Phase 3** | M7-M12 | Optimisation (Plans, offline, ML) |  |
+| **TOTAL SETUP** | 12 mois | | **** |
 
 ### Coûts Récurrents (Annuels)
 
 | Poste | Coût/an |
 |-------|---------|
-| Cloud hosting (AWS/GCP) | 9.6K€ |
-| Google Maps API | 3.6K€ |
-| Signature électronique | 2.1K€ |
-| Email/SMS | 2.4K€ |
-| Monitoring & Support | 30K€ |
-| **TOTAL RUN** | **48K€/an** |
+| Cloud hosting (AWS/GCP) | 9. |
+| Google Maps API | 3. |
+| Signature électronique | 2. |
+| Email/SMS | 2. |
+| Monitoring & Support |  |
+| **TOTAL RUN** | **/an** |
 
 ---
 
@@ -171,29 +171,29 @@ Go/No-Go décision      Go/No-Go décision         Go-Live général
 
 | Source Gains | Montant/an |
 |--------------|------------|
-| Temps rapports (-70%) | 168K€ |
-| Réduction litiges/reprises | 40K€ |
-| Réduction appels bureau | 16K€ |
-| Photos centralisées | 15K€ |
-| Traçabilité incidents | 25K€ |
-| Optimisation déplacements | 10K€ |
-| **TOTAL GAINS** | **274K€/an** |
+| Temps rapports (-70%) |  |
+| Réduction litiges/reprises |  |
+| Réduction appels bureau |  |
+| Photos centralisées |  |
+| Traçabilité incidents |  |
+| Optimisation déplacements |  |
+| **TOTAL GAINS** | **/an** |
 
 ### ROI Net
 
 ```
 Année 1:
-  Investment: 120K€
-  Run costs: 48K€
-  Gains (prorata 9 mois M4-M12): 206K€
-  Net Y1: -120K€ - 48K€ + 206K€ = +38K€ ✅
+  Investment: 
+  Run costs: 
+  Gains (prorata 9 mois M4-M12): 
+  Net Y1: - -  +  = + ✅
 
 Année 2:
-  Run costs: 48K€
-  Gains: 274K€
-  Net Y2: 274K€ - 48K€ = +226K€ ✅
+  Run costs: 
+  Gains: 
+  Net Y2:  -  = + ✅
 
-ROI 2 ans: (38K€ + 226K€) / 120K€ = 220% ✅
+ROI 2 ans: ( + ) /   ✅
 Payback: ~7 mois après M4 (déploiement général)
 ```
 
@@ -251,5 +251,5 @@ Payback: ~7 mois après M4 (déploiement général)
 ---
 
 **🎯 Objectif : Digitaliser 100% gestion chantiers en 12 mois**
-**💰 Budget : 120K€ setup + 48K€/an run**
-**📈 ROI : 220% sur 2 ans, payback 7 mois**
+**💰 Budget :  setup + /an run**
+**📈 ROI  sur 2 ans, payback 7 mois**

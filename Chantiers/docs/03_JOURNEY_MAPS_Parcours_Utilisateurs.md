@@ -124,7 +124,7 @@ Pour chaque parcours :
 │                                                              │
 │ ⏱️ TOTAL PROCESS : 2h15 (de 18h00 à 20h15)                  │
 │ 😤 NIVEAU FRUSTRATION : 9/10                                │
-│ 💰 COÛT : 2h15 × 50€/h = 112€                               │
+│ 💰 COÛT : 2h15 × /h =                                │
 │                                                              │
 │ [J+1 10h00] 📧 Client reçoit rapport (lendemain matin)      │
 │   • Délai perception : ~16h après intervention              │
@@ -181,7 +181,7 @@ Pour chaque parcours :
 │     - Description travaux (saisie vocale possible)          │
 │     - Matériel utilisé (catalogue produits)                 │
 │     - Observations (texte libre ou vocal)                   │
-│   ✅ Amélioration : 90% pré-rempli, saisie rapide mobile   │
+│   ✅ Amélioration  pré-rempli, saisie rapide mobile   │
 │   └─→ ⏱️ 10 min                                             │
 │                                                              │
 │ [12h11] 👁️ Aperçu PDF                                       │
@@ -220,9 +220,9 @@ Pour chaque parcours :
 │                                                              │
 │ ⏱️ TOTAL PROCESS : 25 min (de 09h00 à 12h25 - pendant intervention)│
 │ 😊 NIVEAU SATISFACTION : 10/10                              │
-│ 💰 COÛT : 25min × 50€/h = 21€                               │
+│ 💰 COÛT : 25min × /h =                                │
 │                                                              │
-│ 💰 ÉCONOMIE : 112€ - 21€ = 91€ par rapport                  │
+│ 💰 ÉCONOMIE :  -  =  par rapport                  │
 │ ⏱️ GAIN TEMPS : 2h15 - 25min = 1h50 par rapport            │
 │ 📈 AMÉLIORATION : -82% temps / -81% coût                    │
 └─────────────────────────────────────────────────────────────┘
@@ -241,11 +241,11 @@ Pour chaque parcours :
 | **Satisfaction client** | 6/10 | 9/10 | **+50%** |
 | **Risque erreur** | Élevé | Faible | **-70%** |
 | **Professionnalisme perçu** | Moyen | Excellent | **+40%** |
-| **Coût unitaire** | 112€ | 21€ | **-81%** |
+| **Coût unitaire** |  |  | **-81%** |
 
 **Avec 200 rapports/mois :**
 - Temps économisé : 200 × 1h50 = **370h/mois = 4 440h/an**
-- Coût économisé : 200 × 91€ = **18 200€/mois = 218K€/an**
+- Coût économisé : 200 ×  = **/mois = /an**
 
 ---
 
@@ -467,7 +467,7 @@ Pour chaque parcours :
 
 **Avec 80 incidents/mois :**
 - Temps économisé : 80 × 5h30 = **440h/mois**
-- Coût économisé : **220K€/an**
+- Coût économisé : **/an**
 
 ---
 
@@ -477,9 +477,9 @@ Pour chaque parcours :
 
 | Parcours | Temps Avant | Temps Après | Gain % | Fréquence/mois | Gain Annuel |
 |----------|-------------|-------------|--------|----------------|-------------|
-| **Rapport intervention** | 2h15 | 25min | -82% | 200 | 218K€ |
-| **Traitement incident** | 7h | 1h30 | -79% | 80 | 220K€ |
-| **Total** | | | | | **438K€/an** |
+| **Rapport intervention** | 2h15 | 25min | -82% | 200 |  |
+| **Traitement incident** | 7h | 1h30 | -79% | 80 |  |
+| **Total** | | | | | **/an** |
 
 ### Impact Satisfaction Utilisateurs
 
@@ -494,4 +494,4 @@ Client : 😐 (6/10)                Client : 😊😊😊 (9/10)
 ---
 
 **🎯 Conclusion : Transformation radicale de l'expérience utilisateur**
-**📈 Gains : -80% temps, +300% satisfaction, 438K€/an économisés**
+**📈 Gains : -80% temps, +300% satisfaction, /an économisés**

@@ -214,9 +214,9 @@ Features:
 - Suggestions correctives automatiques
 
 **Métriques Performance :**
-- Précision : 85%
-- Rappel : 80%
-- F1-score : 82%
+- Précision 
+- Rappel 
+- F1-score 
 
 ---
 
@@ -256,8 +256,8 @@ Maximize:
 - **Score optimisation** : 0-100
 
 **Gains attendus :**
-- -15% km déplacements = 8K€/an
-- -10% temps déplacements = 20K€/an
+- -15% km déplacements = /an
+- -10% temps déplacements = /an
 - +10% satisfaction chefs
 
 ---
@@ -295,9 +295,9 @@ Classification:
 - Alertes si gravité critique
 
 **Métriques Performance :**
-- Précision classification : 90%
+- Précision classification 
 - Temps classification : < 1s
-- Satisfaction utilisateurs : 85%
+- Satisfaction utilisateurs 
 
 ---
 
@@ -313,8 +313,8 @@ Classification:
 │          DASHBOARD DIRECTION - VUE GLOBALE             │
 ├────────────────────────────────────────────────────────┤
 │                                                        │
-│  Chantiers Actifs: 98          Budget Global: 12.5M€  │
-│  En cours: 85 | Terminés: 13   Consommé: 8.2M€ (66%) │
+│  Chantiers Actifs: 98          Budget Global: 12.  │
+│  En cours: 85 | Terminés: 13   Consommé: 8. (66%) │
 │                                                        │
 │  ┌─────────────────────────────────────────────────┐  │
 │  │ Budget vs Réalisé (Graphique Ligne)            │  │
@@ -322,17 +322,17 @@ Classification:
 │  └─────────────────────────────────────────────────┘  │
 │                                                        │
 │  Incidents: 15 ouverts          Équipes: 12/15 actives│
-│  Critiques: 2 | Moyens: 8       Utilisation: 93%      │
+│  Critiques: 2 | Moyens: 8       Utilisation      │
 │                                                        │
 │  ┌──────────────────┬───────────────────────────────┐ │
 │  │ Chantiers Retard │  Chantiers Dépassement Budget│ │
 │  │ • Lyon Tertiaire │  • Annecy Résidentiel        │ │
-│  │   +5j (70% prob.)│    +15K€ (alerte envoyée)    │ │
+│  │   +5j (70% prob.)│    + (alerte envoyée)    │ │
 │  │ • Grenoble Indus │  • Chambéry Commercial       │ │
-│  │   +3j (85% prob.)│    +8K€ (en surveillance)    │ │
+│  │   +3j (85% prob.)│    + (en surveillance)    │ │
 │  └──────────────────┴───────────────────────────────┘ │
 │                                                        │
-│  ROI Digital: +67K€/an    Satisfaction Équipes: 8.5/10│
+│  ROI Digital: +/an    Satisfaction Équipes: 8.5/10│
 │                                                        │
 └────────────────────────────────────────────────────────┘
 ```
@@ -357,7 +357,7 @@ Classification:
 │   CHANTIER: Lyon Tertiaire - Tour Oxygène          │
 ├────────────────────────────────────────────────────┤
 │                                                    │
-│ Budget: 850K€     Consommé: 620K€ (73%)           │
+│ Budget:      Consommé:  (73%)           │
 │ Durée: 180j       Écoulé: 145j (80%)              │
 │                                                    │
 │ ⚠️ ALERTE: Retard prédit +5j (probabilité 70%)   │
@@ -416,7 +416,7 @@ Classification:
 │                                                    │
 │ Statistiques Journée:                              │
 │ • Temps résolution moyen: 1h20 (cible: < 2h) ✅  │
-│ • Taux SLA respecté: 95% ✅                       │
+│ • Taux SLA respecté ✅                       │
 │ • Satisfaction chefs: 9/10 ✅                     │
 └────────────────────────────────────────────────────┘
 ```
@@ -513,11 +513,11 @@ M12: Industrialisation
 
 | Composante | Setup | Run/an |
 |------------|-------|--------|
-| **Infrastructure Data** | Inclus cloud | 3K€ |
-| **Licences BI (Power BI)** | - | 2K€ |
-| **ML Training (compute)** | 5K€ | 1K€ |
-| **Data Engineer (externe)** | 15K€ | - |
-| **TOTAL** | **20K€** | **6K€/an** |
+| **Infrastructure Data** | Inclus cloud |  |
+| **Licences BI (Power BI)** | - |  |
+| **ML Training (compute)** |  |  |
+| **Data Engineer (externe)** |  | - |
+| **TOTAL** | **** | **/an** |
 
 ---
 
@@ -525,15 +525,15 @@ M12: Industrialisation
 
 | Gain | Montant/an |
 |------|------------|
-| Prédiction retards → Évitement | 40K€ |
-| Optimisation planning équipes | 20K€ |
-| Détection dépassements budgets proactive | 30K€ |
-| Amélioration productivité BE (classification auto) | 15K€ |
-| **TOTAL GAINS** | **105K€/an** |
+| Prédiction retards → Évitement |  |
+| Optimisation planning équipes |  |
+| Détection dépassements budgets proactive |  |
+| Amélioration productivité BE (classification auto) |  |
+| **TOTAL GAINS** | **/an** |
 
-**ROI Data & ML :** (105K€ - 6K€) / 20K€ = **495% an 1** ✅
+**ROI Data & ML :** ( - ) /  = **495% an 1** ✅
 
 ---
 
 **🤖 Conclusion : Data & IA = Multiplicateur de valeur de la plateforme**
-**📈 ROI additionnel : +105K€/an avec investissement 20K€**
+**📈 ROI additionnel : +/an avec investissement **

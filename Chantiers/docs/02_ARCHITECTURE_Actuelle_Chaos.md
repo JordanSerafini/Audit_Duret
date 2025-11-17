@@ -208,11 +208,11 @@ Les chefs de chantier disposent de :
 
 **Statistiques :**
 - **200 rapports/mois** × 2h = **400h/mois = 4 800h/an**
-- **Coût :** 4 800h × 50€/h = **240K€/an**
+- **Coût :** 4 800h × /h = **/an**
 
 **Avec automatisation possible :**
 - Réduction 70% du temps → **2h → 25min**
-- Économie : **168K€/an**
+- Économie : **/an**
 
 ---
 
@@ -307,9 +307,9 @@ Les chefs de chantier disposent de :
 │ [15h00] Reprise travaux                                    │
 │                                                            │
 │ ⏱️ TEMPS ÉCOULÉ : 4 HEURES (travaux arrêtés)              │
-│ 💰 COÛT : 4h × 5 ouvriers × 50€ = 1 000€                  │
-│ 💰 COÛT Expert : 500€                                      │
-│ 💰 TOTAL : 1 500€                                          │
+│ 💰 COÛT : 4h × 5 ouvriers ×  =                   │
+│ 💰 COÛT Expert :                                       │
+│ 💰 TOTAL :                                           │
 │                                                            │
 │ ⚠️ Problèmes CRITIQUES :                                  │
 │    • Délai réponse 1h30 (réunion)                         │
@@ -326,7 +326,7 @@ Les chefs de chantier disposent de :
 │    • Workflow automatique → Expert contacté auto          │
 │    • Délai réduit à 15-30 min                             │
 │    • Traçabilité complète (photos, timeline, décisions)   │
-│    • Coût évité : ~1 000€                                 │
+│    • Coût évité : ~                                 │
 └────────────────────────────────────────────────────────────┘
 ```
 
@@ -334,7 +334,7 @@ Les chefs de chantier disposent de :
 - **~80 incidents/mois** (techniques, matériel, sécurité)
 - **~40 (50%) mal communiqués ou perdus**
 - **~10/mois (12%) génèrent reprises travaux/litiges**
-- **Coût incidents mal gérés : 120K€/an**
+- **Coût incidents mal gérés : /an**
 
 ---
 
@@ -371,7 +371,7 @@ Les chefs de chantier disposent de :
 │ [Alternative] Téléphone perdu/volé/cassé                   │
 │   ├─→ ❌ TOUTES les photos perdues                        │
 │   ├─→ Pas de backup cloud                                 │
-│   └─→ 💰 Coût : Jusqu'à 50K€ si litige client important   │
+│   └─→ 💰 Coût : Jusqu'à  si litige client important   │
 │                                                            │
 │ ⚠️ PROBLÈMES ACTUELS :                                    │
 │    • Stockage local uniquement (téléphone)                │
@@ -401,9 +401,9 @@ Les chefs de chantier disposent de :
 - **~120 000 photos/an**
 - **Stockage requis : ~200 Go/an** (après compression)
 - **Temps recherche actuel : 2h/semaine/chef** = 1 560h/an
-- **Coût recherche : 78K€/an**
-- **Litiges perte photos : 40K€/an**
-- **Coût total photos : 118K€/an**
+- **Coût recherche : /an**
+- **Litiges perte photos : /an**
+- **Coût total photos : /an**
 
 ---
 
@@ -413,27 +413,27 @@ Les chefs de chantier disposent de :
 
 | Processus | Temps Perdu | Coût Annuel | Cause Principale |
 |-----------|-------------|-------------|------------------|
-| **Rapports manuels** | 4 800h/an | 240K€ | Pas d'automatisation |
-| **Incidents mal gérés** | - | 120K€ | Pas de workflow |
-| **Photos dispersées** | 1 560h/an | 118K€ | Pas de centralisation |
-| **Appels infos manquantes** | 2 200h/an | 110K€ | Pas d'app mobile |
-| **Recherche historique** | 880h/an | 44K€ | Données éparpillées |
-| **Commandes non tracées** | - | 80K€ | Pas de workflow |
-| **TOTAL** | **9 440h/an** | **712K€/an** | **Absence de système** |
+| **Rapports manuels** | 4 800h/an |  | Pas d'automatisation |
+| **Incidents mal gérés** | - |  | Pas de workflow |
+| **Photos dispersées** | 1 560h/an |  | Pas de centralisation |
+| **Appels infos manquantes** | 2 200h/an |  | Pas d'app mobile |
+| **Recherche historique** | 880h/an |  | Données éparpillées |
+| **Commandes non tracées** | - |  | Pas de workflow |
+| **TOTAL** | **9 440h/an** | **/an** | **Absence de système** |
 
 ### Répartition par Catégorie
 
 ```
-Coûts Temps Perdu (470K€) :
-├─ Rapports manuels : 240K€ (51%)
-├─ Recherche photos : 78K€ (17%)
-├─ Appels infos : 110K€ (23%)
-└─ Recherche historique : 44K€ (9%)
+Coûts Temps Perdu () :
+├─ Rapports manuels :  (51%)
+├─ Recherche photos :  (17%)
+├─ Appels infos :  (23%)
+└─ Recherche historique :  (9%)
 
-Coûts Qualité/Litiges (242K€) :
-├─ Incidents mal gérés : 120K€ (50%)
-├─ Commandes mal suivies : 80K€ (33%)
-└─ Photos perdues (litiges) : 40K€ (17%)
+Coûts Qualité/Litiges () :
+├─ Incidents mal gérés :  (50%)
+├─ Commandes mal suivies :  (33%)
+└─ Photos perdues (litiges) :  (17%)
 ```
 
 ---
@@ -479,13 +479,13 @@ Coûts Qualité/Litiges (242K€) :
 - ❌ 50% infos perdues
 - ❌ 2h/rapport (vs 10min possible)
 - ❌ 6h délai incident (vs 30min possible)
-- ❌ 712K€/an de pertes
+- ❌ /an de pertes
 
 ### Solution = PLATEFORME CHANTIER DIGITALE
 - ✅ 100% traçabilité
 - ✅ 100% infos conservées
 - ✅ 10min/rapport (-80% temps)
 - ✅ 30min délai incident (-90%)
-- ✅ 500K€/an économies
+- ✅ /an économies
 
 **Urgence : 🔴 CRITIQUE**

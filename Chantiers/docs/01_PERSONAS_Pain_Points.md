@@ -22,7 +22,7 @@
 **Ancienneté :** 15 ans dans le BTP, 8 ans chez Duret
 **Poste :** Chef de Chantier
 **Équipe :** Gère 3-5 ouvriers selon chantiers
-**Périmètre :** 5-8 chantiers actifs simultanés (50K€ à 500K€)
+**Périmètre :** 5-8 chantiers actifs simultanés ( à )
 
 ### 🎯 Missions Quotidiennes
 
@@ -82,7 +82,7 @@ RÉSULTAT : 30-45 min perdues par info manquante
 > "J'ai rien comme outil. Que mon téléphone. Si je veux voir le budget du chantier, les heures prévues, ou même un plan à jour, je dois appeler le bureau ou fouiller dans mes 500 mails. C'est une perte de temps énorme."
 
 **Coût estimé :**
-- 2h/jour × 220j × 15 chefs × 50€/h = **330K€/an**
+- 2h/jour × 220j × 15 chefs × /h = **/an**
 - Impact : Retards, démotivation, inefficacité
 
 **Sévérité : 🔴 CRITIQUE**
@@ -114,14 +114,14 @@ RÉSULTAT : 3h perdues + risque litige client
 > "Mon téléphone est bourré de photos. Des milliers. Quand on me demande une photo d'avant travaux d'il y a 3 semaines, je passe 20 minutes à chercher. Et si je perds mon téléphone, c'est toute la mémoire du chantier qui part."
 
 **Incidents réels :**
-- **Cas 1 (2024)** : Téléphone chef volé → 2 mois de photos perdues → Litige client 15K€ (pas de preuves avant travaux)
+- **Cas 1 (2024)** : Téléphone chef volé → 2 mois de photos perdues → Litige client  (pas de preuves avant travaux)
 - **Cas 2 (2024)** : Recherche photo ancienne → 1h30 perdues → Photo jamais retrouvée
 - **Cas 3 (récurrent)** : Saturation mémoire téléphone → Impossibilité prendre nouvelles photos
 
 **Coût estimé :**
-- Temps recherche : 2h/semaine × 15 chefs × 50€ = **78K€/an**
-- Litiges/pertes : **40K€/an**
-- **Total : 118K€/an**
+- Temps recherche : 2h/semaine × 15 chefs ×  = **/an**
+- Litiges/pertes : **/an**
+- **Total : /an**
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -150,7 +150,7 @@ Marc : "Oui j'ai prévenu..."
 Client : "Prouvez-le !"
 Marc : ??? (Message WhatsApp introuvable, noyé dans 1000 autres)
 
-RÉSULTAT : Litige 20K€
+RÉSULTAT : Litige 
 ```
 
 ```
@@ -160,21 +160,21 @@ Marc a question technique complexe → WhatsApp Bureau Études
     → Entre temps Marc a improvisé solution
       → Solution pas optimale → Reprise travaux nécessaire
 
-RÉSULTAT : 8h travaux perdues = 2K€
+RÉSULTAT : 8h travaux perdues = 
 ```
 
 **Statistiques Duret :**
 - ~80 incidents/problèmes/mois
 - ~40 (50%) **NON TRACÉS** ou mal communiqués
-- ~10/mois (12%) **génèrent litiges/reprises** = **120K€/an**
+- ~10/mois (12%) **génèrent litiges/reprises** = **/an**
 
 **Citation verbatim :**
 > "Quand j'ai un problème, je WhatsApp le responsable d'affaire. Parfois il voit, parfois non. Parfois je dois rappeler 3 fois. Et après si on me demande 'qui a décidé ça ?', je sais plus. Y'a rien d'écrit nulle part."
 
 **Coût estimé :**
-- Litiges/reprises : **120K€/an**
-- Temps perdu recherche infos : **40K€/an**
-- **Total : 160K€/an**
+- Litiges/reprises : **/an**
+- Temps perdu recherche infos : **/an**
+- **Total : /an**
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -211,8 +211,8 @@ TOTAL : 2h10 par rapport
 > "Faire un rapport d'intervention, c'est l'enfer. Je dois rentrer au bureau, ouvrir Word, tout retaper à la main, chercher mes photos, les coller... Ça me prend facilement 2h. Et je dois en faire 3-4 par semaine."
 
 **Coût estimé :**
-- 4 800h/an × 50€/h = **240K€/an**
-- Avec automatisation possible : économie **70%** = **168K€/an**
+- 4 800h/an × /h = **/an**
+- Avec automatisation possible : économie **70%** = **/an**
 
 **Sévérité : 🟠 IMPORTANT**
 
@@ -247,9 +247,9 @@ RÉSULTAT : Confusion comptable + risque oubli refacturation client
 > "Quand j'ai besoin de matériel vite fait, j'appelle directement. Après c'est la compta qui gère. Mais parfois ça part sur le mauvais chantier dans les comptes. Et on se rend compte 2 mois après qu'on a oublié de refacturer le client."
 
 **Coût estimé :**
-- Oublis refacturation : **60K€/an**
-- Temps admin confusion : **20K€/an**
-- **Total : 80K€/an**
+- Oublis refacturation : **/an**
+- Temps admin confusion : **/an**
+- **Total : /an**
 
 **Sévérité : 🟠 IMPORTANT**
 
@@ -259,12 +259,12 @@ RÉSULTAT : Confusion comptable + risque oubli refacturation client
 
 | Pain Point | Sévérité | Coût Annuel | Fréquence |
 |------------|----------|-------------|-----------|
-| Aucun outil métier | 🔴 Critique | 330K€ | Quotidien |
-| Photos dispersées | 🔴 Critique | 118K€ | Quotidien |
-| Remontée info non structurée | 🔴 Critique | 160K€ | Quotidien |
-| Rapports manuels | 🟠 Important | 168K€ (économisable) | 3-4/semaine |
-| Commandes non tracées | 🟠 Important | 80K€ | Hebdomadaire |
-| **TOTAL MARC** | | **856K€/an** | |
+| Aucun outil métier | 🔴 Critique |  | Quotidien |
+| Photos dispersées | 🔴 Critique |  | Quotidien |
+| Remontée info non structurée | 🔴 Critique |  | Quotidien |
+| Rapports manuels | 🟠 Important |  (économisable) | 3-4/semaine |
+| Commandes non tracées | 🟠 Important |  | Hebdomadaire |
+| **TOTAL MARC** | | **/an** | |
 
 ---
 
@@ -275,7 +275,7 @@ RÉSULTAT : Confusion comptable + risque oubli refacturation client
 **Âge :** 38 ans
 **Ancienneté :** 8 ans au poste
 **Poste :** Responsable d'Affaire
-**Périmètre :** 15-20 chantiers actifs (50K€ à 2,5M€)
+**Périmètre :** 15-20 chantiers actifs ( à 2,)
 **Équipe :** Supervise 3-4 chefs de chantier
 
 ### 🎯 Missions Quotidiennes
@@ -316,7 +316,7 @@ TOTAL : 45 min pour réponse basique
 > "Je gère 20 chantiers. Quand on me demande l'état d'avancement, je dois appeler le chef, regarder dans 3 logiciels différents, compiler tout ça. Y'a pas de vue d'ensemble. C'est épuisant."
 
 **Coût estimé :**
-- Temps perdu : 5h/jour × 220j × 4 responsables × 80€/h = **352K€/an**
+- Temps perdu : 5h/jour × 220j × 4 responsables × /h = **/an**
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -330,7 +330,7 @@ TOTAL : 45 min pour réponse basique
 - Oublis fréquents si chef n'insiste pas
 - Risque non-traitement problèmes importants
 
-**Coût estimé :** **80K€/an** (reprises travaux, litiges)
+**Coût estimé :** **/an** (reprises travaux, litiges)
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -344,7 +344,7 @@ TOTAL : 45 min pour réponse basique
 - Pas de timeline chantier
 - Difficultés justification choix techniques
 
-**Coût estimé :** **40K€/an** (temps recherche + litiges)
+**Coût estimé :** **/an** (temps recherche + litiges)
 
 **Sévérité : 🟠 IMPORTANT**
 
@@ -354,10 +354,10 @@ TOTAL : 45 min pour réponse basique
 
 | Pain Point | Sévérité | Coût Annuel |
 |------------|----------|-------------|
-| Pas de vue 360° | 🔴 Critique | 352K€ |
-| Remontées informelles | 🔴 Critique | 80K€ |
-| Historique inaccessible | 🟠 Important | 40K€ |
-| **TOTAL JULIEN** | | **472K€/an** |
+| Pas de vue 360° | 🔴 Critique |  |
+| Remontées informelles | 🔴 Critique |  |
+| Historique inaccessible | 🟠 Important |  |
+| **TOTAL JULIEN** | | **/an** |
 
 ---
 
@@ -407,7 +407,7 @@ Résultat : Sophie traite dans le désordre
 > "On est débordées. Les demandes arrivent de partout. WhatsApp, appels en plein milieu d'un truc, mails... On sait plus où donner de la tête. Et souvent il manque des infos, donc on perd du temps à rappeler le chef pour avoir les détails."
 
 **Coût estimé :**
-- 30% temps perdu × 3 personnes × 220j × 7h × 50€/h = **138K€/an**
+- 30% temps perdu × 3 personnes × 220j × 7h × /h = **/an**
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -420,7 +420,7 @@ Résultat : Sophie traite dans le désordre
 - Relances multiples (interruptions BE)
 - BE ne sait pas qui a traité quoi
 
-**Coût estimé :** **40K€/an**
+**Coût estimé :** **/an**
 
 **Sévérité : 🟠 IMPORTANT**
 
@@ -430,9 +430,9 @@ Résultat : Sophie traite dans le désordre
 
 | Pain Point | Sévérité | Coût Annuel |
 |------------|----------|-------------|
-| Surcharge non structurée | 🔴 Critique | 138K€ |
-| Pas de suivi statut | 🟠 Important | 40K€ |
-| **TOTAL SOPHIE** | | **178K€/an** |
+| Surcharge non structurée | 🔴 Critique |  |
+| Pas de suivi statut | 🟠 Important |  |
+| **TOTAL SOPHIE** | | **/an** |
 
 ---
 
@@ -442,25 +442,25 @@ Résultat : Sophie traite dans le désordre
 
 | Persona | Total Coûts Annuels |
 |---------|-------------------|
-| Marc (Chef Chantier) | 856K€ |
-| Julien (Resp. Affaire) | 472K€ |
-| Sophie (Bureau Études) | 178K€ |
-| **TOTAL** | **1 506K€/an** |
+| Marc (Chef Chantier) |  |
+| Julien (Resp. Affaire) |  |
+| Sophie (Bureau Études) |  |
+| **TOTAL** | **1 /an** |
 
 ### Par Pain Point (Top 10)
 
 | # | Pain Point | Coût/an | Persona |
 |---|------------|---------|---------|
-| 1 | Pas de vue 360° chantiers | 352K€ | Julien |
-| 2 | Aucun outil métier terrain | 330K€ | Marc |
-| 3 | Rapports manuels | 240K€ | Marc |
-| 4 | Remontée info non structurée | 160K€ | Marc |
-| 5 | Surcharge BE non structurée | 138K€ | Sophie |
-| 6 | Photos dispersées | 118K€ | Marc |
-| 7 | Remontées informelles (RA) | 80K€ | Julien |
-| 8 | Commandes non tracées | 80K€ | Marc |
-| 9 | Historique inaccessible | 40K€ | Julien |
-| 10 | Pas de suivi statut BE | 40K€ | Sophie |
+| 1 | Pas de vue 360° chantiers |  | Julien |
+| 2 | Aucun outil métier terrain |  | Marc |
+| 3 | Rapports manuels |  | Marc |
+| 4 | Remontée info non structurée |  | Marc |
+| 5 | Surcharge BE non structurée |  | Sophie |
+| 6 | Photos dispersées |  | Marc |
+| 7 | Remontées informelles (RA) |  | Julien |
+| 8 | Commandes non tracées |  | Marc |
+| 9 | Historique inaccessible |  | Julien |
+| 10 | Pas de suivi statut BE |  | Sophie |
 
 ---
 
@@ -468,28 +468,28 @@ Résultat : Sophie traite dans le désordre
 
 ### 🔴 Priorité 1 : Quick Wins (Gains Immédiats)
 
-1. **App mobile photos** → Résout : Photos dispersées (118K€)
-2. **Templates rapports** → Résout : 70% rapports manuels (168K€)
-3. **Messagerie structurée** → Résout : Remontée info (160K€)
+1. **App mobile photos** → Résout : Photos dispersées ()
+2. **Templates rapports** → Résout  rapports manuels ()
+3. **Messagerie structurée** → Résout : Remontée info ()
 
-**Gains Phase 1 : 446K€/an**
+**Gains Phase 1 : /an**
 
 ### 🟠 Priorité 2 : Structuration (Mois 3-6)
 
-4. **Workflow incidents** → Résout : Surcharge BE (138K€)
-5. **Dashboard 360°** → Résout : Vue chantiers (352K€)
-6. **Commandes tracées** → Résout : Commandes (80K€)
+4. **Workflow incidents** → Résout : Surcharge BE ()
+5. **Dashboard 360°** → Résout : Vue chantiers ()
+6. **Commandes tracées** → Résout : Commandes ()
 
-**Gains Phase 2 : 570K€/an cumulé**
+**Gains Phase 2 : /an cumulé**
 
 ### 🟢 Priorité 3 : Optimisation (Mois 6-12)
 
-7. **Historique centralisé** → Résout : Recherches (40K€)
+7. **Historique centralisé** → Résout : Recherches ()
 8. **Analytics & KPIs** → Amélioration continue
 
-**Gains Phase 3 : 610K€/an cumulé**
+**Gains Phase 3 : /an cumulé**
 
 ---
 
-**📊 ROI Total Potentiel : 1.5M€/an de pertes évitables**
-**🎯 Objectif Réaliste : Récupérer 40-50% = 600-750K€/an**
+**📊 ROI Total Potentiel : 1./an de pertes évitables**
+**🎯 Objectif Réaliste : Récupérer 40-50% = 600-/an**
