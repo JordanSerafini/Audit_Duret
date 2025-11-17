@@ -1,0 +1,91 @@
+@startgantt Gantt_Planning_Implementation
+
+title Planning Implementation 12 Mois Digitalisation Chantiers
+
+printscale monthly
+
+project starts 2025-11-17
+
+-- Phase 1 : Quick Wins (M1-M3) --
+
+[App Mobile V1] as [AppV1] lasts 60 days and is colored in LightBlue
+[AppV1] starts 2025-11-17
+
+[Design UI/UX] as [Design] lasts 30 days and is colored in Yellow and starts at [AppV1]'s start
+[Dev Mobile iOS+Android] as [DevMobile] lasts 45 days and is colored in LightGreen and starts at [Design]'s end
+
+[Module Photos] as [Photos] lasts 60 days and is colored in Orange
+[Photos] starts 2025-11-17
+
+[Upload Auto] as [PhotoUpload] lasts 30 days and is colored in Yellow and starts at [Photos]'s start
+[Galerie + Compression] as [PhotoGal] lasts 30 days and is colored in Yellow and starts at [PhotoUpload]'s end
+
+[Module Rapports] as [Rapports] lasts 90 days and is colored in Pink
+[Rapports] starts 2025-12-17
+
+[Templates PDF] as [RapportTempl] lasts 30 days and is colored in LightPink and starts at [Rapports]'s start
+[Generation Auto] as [RapportGen] lasts 30 days and is colored in LightPink and starts at [RapportTempl]'s end
+[Signature Elec] as [RapportSign] lasts 30 days and is colored in LightGreen and starts at [RapportGen]'s end
+
+-- Phase 2 : Structurant (M4-M8) --
+
+[Backend Cloud] as [Backend] lasts 90 days and is colored in LightBlue
+[Backend] starts at [AppV1]'s end
+
+[API REST + Auth] as [BackendAPI] lasts 30 days and is colored in Cyan and starts at [Backend]'s start
+[Base Donnees] as [BackendDB] lasts 30 days and is colored in Cyan and starts at [BackendAPI]'s end
+[Azure Functions] as [BackendFunc] lasts 30 days and is colored in LightGreen and starts at [BackendDB]'s end
+
+[Module Incidents] as [Incidents] lasts 60 days and is colored in Purple
+[Incidents] starts at [Backend]'s start
+
+[Formulaires + Workflow] as [IncForm] lasts 45 days and is colored in Violet and starts at [Incidents]'s start
+[Notifications] as [IncNotif] lasts 30 days and is colored in LightGreen and starts at [IncForm]'s end
+
+[Module Plans] as [Plans] lasts 60 days and is colored in Green
+[Plans] starts at [Incidents]'s end
+
+[Visualisation] as [PlansVisu] lasts 30 days and is colored in LightGreen and starts at [Plans]'s start
+[Annotations + Sync] as [PlansAnnot] lasts 30 days and is colored in DarkGreen and starts at [PlansVisu]'s end
+
+[Module Commandes] as [Commandes] lasts 60 days and is colored in Brown
+[Commandes] starts at [Plans]'s start
+
+[Catalogue] as [CmdCat] lasts 30 days and is colored in BurlyWood and starts at [Commandes]'s start
+[Workflow + Suivi] as [CmdWork] lasts 30 days and is colored in BurlyWood and starts at [CmdCat]'s end
+
+-- Phase 3 : Optimisation (M9-M12) --
+
+[Mode Hors Ligne] as [Offline] lasts 60 days and is colored in Gold
+[Offline] starts at [BackendFunc]'s end
+
+[SQLite Local] as [OffSQL] lasts 30 days and is colored in Yellow and starts at [Offline]'s start
+[Sync Engine] as [OffSync] lasts 30 days and is colored in Yellow and starts at [OffSQL]'s end
+
+[Dashboard Chantier] as [Dashboard] lasts 60 days and is colored in Orange
+[Dashboard] starts at [Offline]'s start
+
+[Budget Temps Reel] as [DashBudget] lasts 30 days and is colored in Yellow and starts at [Dashboard]'s start
+[Planning + KPIs] as [DashKPI] lasts 30 days and is colored in Yellow and starts at [DashBudget]'s end
+
+[Formation Deploiement] as [Formation] lasts 60 days and is colored in LightGreen
+[Formation] starts at [Dashboard]'s start
+
+[Formation Chefs] as [FormChef] lasts 30 days and is colored in Green and starts at [Formation]'s start
+[Support + GO-LIVE] as [FormGO] lasts 30 days and is colored in DarkGreen and starts at [FormChef]'s end
+
+-- Jalons GO/NO-GO --
+
+[GO/NO-GO Phase 1] as [Jalon1] happens at 2025-11-24
+[Jalon1] is colored in Red
+
+[Bilan Phase 1] as [Jalon2] happens at [RapportSign]'s end
+[Jalon2] is colored in Red
+
+[Bilan Phase 2] as [Jalon3] happens at [CmdWork]'s end
+[Jalon3] is colored in Red
+
+[GO-LIVE Final] as [Jalon4] happens at [FormGO]'s end
+[Jalon4] is colored in Red
+
+@endgantt
