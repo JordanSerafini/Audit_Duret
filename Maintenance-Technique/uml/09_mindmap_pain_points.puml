@@ -1,0 +1,57 @@
+@startmindmap Pain_Points_Maintenance
+
+title Pain Points Maintenance Technique - 290K€/an
+
+* 🔴 MAINTENANCE SAV\n**290K€/an**
+** Temps perdu\n**92.5K€/an**
+*** CERFA papier (880h tech)\n49.5K€/an
+*** Planning RDV manuel\n9.5K€/an
+*** Base Excel (ressaisies)\n15K€/an
+*** Certificats papier\n2.5K€/an
+*** Deplacements non optimises\n15K€/an
+
+** Opportunites perdues\n**105K€/an**
+*** Devis terrain impossibles\n45K€/an
+*** Refacturation heures\n30K€/an
+*** Renouvellement contrats\n30K€/an
+
+** Clients perdus\n**150K€/an**
+*** Satisfaction non mesuree\n100K€/an
+*** Contrats Word (oublis)\n15K€/an
+*** RDV manuel (insatisfaction)\n25K€/an
+*** Erreurs base Excel\n10K€/an
+
+left side
+
+** CERFA papier\n**🔴 Critique**
+*** 12 min/intervention\nvs 3 min possible
+*** Illisible (ecriture main)
+*** Pas de photos integrees
+*** 880h/an techniciens perdues
+
+** Devis terrain impossible\n**🔴 Critique**
+*** 50 opportunites/an perdues
+*** Post-it → oublis (80%)
+*** 45K€/an CA perdu
+
+** Pointage GPS absent\n**🔴 Critique**
+*** Refacturation difficile
+*** 30K€/an perdu
+*** Pas de preuve depassement
+
+** Base Excel\n**🔴 Critique**
+*** 300 clients non synchro app
+*** Ressaisies multiples
+*** Risque erreur eleve
+
+** Portail client inexistant\n**🟠 Important**
+*** Appels entrants eleves
+*** Disponibilite 8h-18h
+*** Pas de RDV 24/7
+
+** Enquete satisfaction absente\n**🔴 Critique**
+*** Pas de mesure NPS
+*** Risque churn non detecte
+*** 100K€/an clients perdus
+
+@endmindmap

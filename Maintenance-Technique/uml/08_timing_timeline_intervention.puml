@@ -1,0 +1,82 @@
+@startuml Timing_Timeline_Intervention
+
+title Timeline Comparee - Intervention SAV (CERFA Papier vs Digital)
+
+concise "ACTUEL (CERFA Papier)" as Actuel
+concise "CIBLE (App Mobile)" as Cible
+
+@0
+Actuel is "Preparation"
+Cible is "Preparation"
+
+@1
+Actuel is "Deplacement"
+Cible is "Deplacement"
+
+@21
+Actuel is "Appel Clothilde\n(infos client)"
+Cible is "Intervention\n(info dispo app)"
+
+@26
+Actuel is "Intervention\n(1h30)"
+
+@116
+Actuel is "CERFA papier\n(12 min)"
+Cible is "Intervention\nterminee"
+
+@128
+Actuel is "Photos tel perso\n(pas integrees)"
+Cible is "Rapport digital\n(3 min)"
+
+@133
+Actuel is "Signature papier"
+
+@135
+Actuel is "Fin intervention"
+Cible is "Email client\n(PDF auto)"
+
+@138
+Cible is "Fin intervention"
+
+@Actuel
+0 is "8h30"
+1 is "9h00"
+21 is "9h20"
+26 is "9h25"
+116 is "10h55"
+128 is "11h07"
+133 is "11h12"
+135 is "11h14"
+
+@Cible
+0 is "8h30"
+1 is "9h00"
+21 is "9h20"
+116 is "10h55"
+138 is "11h17"
+
+highlight 21 to 26 #LightCoral : Temps perdu (5 min)
+highlight 116 to 135 #LightCoral : CERFA + photos (19 min)
+
+highlight 116 to 138 #LightGreen : Rapport digital (3 min seulement)
+
+note bottom
+**COMPARAISON** :
+ACTUEL :
+• Total : 2h44 (164 min)
+• Dont intervention : 1h30 (90 min)
+• Dont admin : 1h14 (74 min) ← TEMPS PERDU
+
+CIBLE :
+• Total : 2h17 (137 min)
+• Dont intervention : 1h35 (95 min) [meme duree]
+• Dont admin : 0h42 (42 min)
+
+**GAIN : 27 min/intervention**
+× 4 interventions/jour
+× 220 jours/an
+× 5 techniciens
+= **1,980h/an = 99,000€**
+end note
+
+@enduml
