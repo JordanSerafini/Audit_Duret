@@ -11,23 +11,19 @@ Cible is "BL Recu"
 
 @2
 Actuel is "Comptage manuel\ncolis par colis"
-note bottom: Processus manuel long
 
 @15
 Actuel is "Saisie manuelle\nLireco"
-note bottom: Erreurs possibles
 
 @20
 Actuel is "Reception validee"
 Cible is "Scan RFID\nportique"
-note bottom: Detection auto instantanee
 
 @21
 Cible is "Reconciliation\nautomatique"
 
 @22
 Cible is "Reception auto\ncreee + validee"
-note bottom: Zero saisie manuelle
 
 highlight 0 to 20 #FFAAAA : AVANT (Comptage + Saisie manuels)
 highlight 0 to 22 #AAFFAA : APRES (Scan RFID automatique)
