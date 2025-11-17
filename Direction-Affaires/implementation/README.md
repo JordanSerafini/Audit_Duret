@@ -56,7 +56,7 @@ Phase 1 (M1-M2)           Phase 2 (M3-M4)           Phase 3 (M5-M6)
 • 2 RA pilotes           • Tous RA (4)             • Formation complète
 • Formation initiale      • Workflows validation    • Documentation finale
 
-Budget : 25K€            Budget : 20K€             Budget : 15K€
+Durée : 2 mois        Durée : 2 mois          Durée : 2 mois
 Go/No-Go M2              Go/No-Go M4               Go-Live définitif
 ```
 
@@ -120,7 +120,7 @@ Go/No-Go M2              Go/No-Go M4               Go-Live définitif
 - ✅ Mobile responsive déployé
 - ✅ Formation complète tous utilisateurs
 - ✅ Coupure ERP legacy
-- ✅ ROI net > 180K€ annualisé
+- ✅ Gains temps documentés (985h/an)
 - **Critère succès** : Industrialisation réussie
 
 ---
@@ -131,55 +131,38 @@ Go/No-Go M2              Go/No-Go M4               Go-Live définitif
 
 | Phase | Durée | Contenu | Budget |
 |-------|-------|---------|--------|
-| **Phase 1** | M1-M2 | Setup + Templates + Formation pilotes | 25K€ |
-| **Phase 2** | M3-M4 | PPSPS auto + APIs + Reliquats | 20K€ |
-| **Phase 3** | M5-M6 | Dashboards + Mobile + Formation finale | 15K€ |
-| **TOTAL SETUP** | 6 mois | | **60K€** |
+| **Phase 1** | M1-M2 | Setup + Templates + Formation pilotes | Budget phase 1 |
+| **Phase 2** | M3-M4 | PPSPS auto + APIs + Reliquats | Budget phase 2 |
+| **Phase 3** | M5-M6 | Dashboards + Mobile + Formation finale | Budget phase 3 |
+| **TOTAL SETUP** | 6 mois | | Budget total setup |
 
 ### Coûts Récurrents (Annuels)
 
-| Poste | Coût/an |
-|-------|---------|
-| Licences Odoo Enterprise (4 users) | 3.6K€ |
-| Cloud hosting AWS/OVH | 4.8K€ |
-| APIs fournisseurs (Rexel, Sonepar) | 1.8K€ |
-| Signature électronique | 1.2K€ |
-| Maintenance & Support | 2.4K€ |
-| **TOTAL RUN** | **13.8K€/an** |
+**Note:** Détails des coûts récurrents disponibles dans le plan d'action détaillé
 
 ---
 
-## 📊 ROI Attendu
+## 📊 Gains Attendus
 
-### Gains Annuels Récurrents
+### Gains Temps Observables
 
-| Source Gains | Montant/an |
-|--------------|------------|
-| ERP rapide (vs lent) | 120K€ |
-| Templates devis | 80K€ |
-| PPSPS automatiques | 55K€ |
-| Reliquats tracés | 86K€ |
-| Maj prix auto | 28K€ |
-| Réactivité commerciale | 15K€ |
-| **TOTAL GAINS** | **384K€/an** |
+| Process | Baseline Actuel | Cible | Amélioration |
+|---------|-----------------|-------|-------------|
+| Chargement écrans | 30-40s | < 2s | ~95% plus rapide |
+| Création devis | 2h05 | ~31 min | ~75% plus rapide |
+| Génération PPSPS | 3h00 | ~27 min | ~85% plus rapide |
+| Visibilité direction | 3h compilation | Temps réel | Instantané |
+| Reliquats | Non tracés | 100% tracés | Nouveau |
 
-### ROI Net
+### Gains Non-Financiers
 
-```
-Année 1:
-  Investment: 60K€
-  Run costs: 13.8K€
-  Gains (prorata 10 mois M2-M12): 320K€
-  Net Y1: -60K€ - 13.8K€ + 320K€ = +246K€ ✅
+- ✅ **Satisfaction utilisateurs** : 9/10 visée vs 2/10 actuel
+- ✅ **Réactivité commerciale** : J+0 vs J+2
+- ✅ **Télétravail efficace** : Possible vs impossible
+- ✅ **Autonomie direction** : 100% vs 0%
+- ✅ **Conformité PPSPS** : 100% vs risque oublis
 
-Année 2:
-  Run costs: 13.8K€
-  Gains: 384K€
-  Net Y2: 384K€ - 13.8K€ = +370K€ ✅
-
-ROI 2 ans: (246K€ + 370K€) / 60K€ = 1027% ✅
-Payback: ~4 mois (dès M6 !)
-```
+**Note ROI:** Valorisation financière à définir selon taux horaire et volume réel.
 
 ---
 
@@ -221,7 +204,7 @@ Payback: ~4 mois (dès M6 !)
 | **Migration données complexe** | Moyenne | Élevé | Scripts ETL testés, nettoyage amont, backup rollback |
 | **Résistance changement RA** | Moyenne | Élevé | Pilotes ambassadeurs, quick wins visibles M2 |
 | **APIs fournisseurs instables** | Faible | Moyen | Fallback import CSV manuel, cache local, monitoring 24/7 |
-| **Budget dépassé** | Faible | Moyen | Contingence 10% (66K€), phases indépendantes |
+| **Budget dépassé** | Faible | Moyen | Contingence 10%, phases indépendantes |
 | **Délais non tenus** | Moyenne | Moyen | Agile sprints 2 semaines, jalons clairs, ajustements |
 
 ---
@@ -235,5 +218,5 @@ Payback: ~4 mois (dès M6 !)
 ---
 
 **🎯 Objectif : Moderniser ERP & automatiser gestion affaires en 6 mois**
-**💰 Budget : 60K€ setup + 13.8K€/an run**
-**📈 ROI : 1027% sur 2 ans, payback 4 mois**
+**💰 Budget : Détails dans Plan d'Action**
+**📈 Gains : 75-85% temps économisé + visibilité temps réel**
