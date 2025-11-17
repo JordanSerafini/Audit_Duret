@@ -1,0 +1,91 @@
+@startuml UseCase_Systeme_Gestion
+
+title Cas d'Utilisation Systeme Gestion Operationnelle
+
+left to right direction
+
+actor "Direction" as DIR
+actor "Sylvie\n(Controle Gestion)" as SYL
+actor "Thomas\n(Responsable BE)" as THO
+actor "Isabelle\n(Responsable Stocks)" as ISA
+actor "Responsable Affaire" as RA
+actor "Chef Chantier" as CHEF
+
+rectangle "Systeme Gestion Operationnelle" {
+
+  package "Module KPI & Dashboards" {
+    usecase "Consulter KPI temps reel" as UC1
+    usecase "Generer rapport mensuel auto" as UC2
+    usecase "Configurer alertes anomalies" as UC3
+    usecase "Consulter predictions ML" as UC4
+  }
+
+  package "Module Tickets BE" {
+    usecase "Creer demande etude" as UC5
+    usecase "Consulter file attente" as UC6
+    usecase "Traiter ticket" as UC7
+    usecase "Cloturer demande" as UC8
+    usecase "Prioriser algorithme" as UC9
+  }
+
+  package "Module Stocks RFID" {
+    usecase "Recevoir BL (scan RFID)" as UC10
+    usecase "Consulter stock temps reel" as UC11
+    usecase "Realiser inventaire RFID" as UC12
+    usecase "Valoriser stock CUMP" as UC13
+  }
+
+  package "Module RBAC Transparence" {
+    usecase "Acceder budget chantier" as UC14
+    usecase "Consulter marge affaire" as UC15
+    usecase "Voir consommations detail" as UC16
+  }
+
+  package "Module ERP Odoo" {
+    usecase "Gerer affaires" as UC17
+    usecase "Gerer achats" as UC18
+    usecase "Gerer comptabilite analytique" as UC19
+  }
+}
+
+DIR --> UC1
+DIR --> UC2
+DIR --> UC4
+
+SYL --> UC1
+SYL --> UC2
+SYL --> UC3
+SYL --> UC4
+SYL --> UC13
+SYL --> UC19
+
+THO --> UC5
+THO --> UC6
+THO --> UC7
+THO --> UC8
+THO --> UC9
+
+ISA --> UC10
+ISA --> UC11
+ISA --> UC12
+ISA --> UC13
+
+RA --> UC1
+RA --> UC5
+RA --> UC15
+RA --> UC17
+RA --> UC18
+
+CHEF --> UC1
+CHEF --> UC11
+CHEF --> UC14
+CHEF --> UC16
+
+UC2 ..> UC1 : <<include>>
+UC3 ..> UC4 : <<include>>
+UC7 ..> UC9 : <<include>>
+UC10 ..> UC13 : <<include>>
+UC12 ..> UC13 : <<include>>
+UC14 ..> UC16 : <<extend>>
+
+@enduml

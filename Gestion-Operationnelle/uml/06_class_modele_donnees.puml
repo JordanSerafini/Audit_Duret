@@ -1,0 +1,189 @@
+@startuml Class_Modele_Donnees
+
+title Modele Donnees Simplifie (Star Schema)
+
+' FAIT TABLES
+
+class Fact_Affaires {
+  +affaire_id : INT PK
+  +client_id : INT FK
+  +chantier_id : INT FK
+  +responsable_affaire_id : INT FK
+  +date_devis : DATE FK
+  +date_debut : DATE FK
+  +date_fin_prevue : DATE
+  +date_fin_reelle : DATE
+  +ca_devis : DECIMAL(12,2)
+  +ca_realise : DECIMAL(12,2)
+  +cout_heures : DECIMAL(12,2)
+  +cout_materiel : DECIMAL(12,2)
+  +cout_soustraitance : DECIMAL(12,2)
+  +marge_brute : DECIMAL(12,2)
+  +taux_marge : DECIMAL(5,2)
+  +statut : VARCHAR(20)
+  --
+  +calculer_marge()
+  +detecter_anomalie()
+}
+
+class Fact_Heures {
+  +heure_id : BIGINT PK
+  +affaire_id : INT FK
+  +employe_id : INT FK
+  +date : DATE FK
+  +heures_travaillees : DECIMAL(5,2)
+  +heures_supp : DECIMAL(5,2)
+  +cout_horaire : DECIMAL(8,2)
+  +cout_total : DECIMAL(10,2)
+  --
+  +calculer_cout_total()
+}
+
+class Fact_Achats {
+  +achat_id : BIGINT PK
+  +affaire_id : INT FK
+  +fournisseur_id : INT FK
+  +produit_id : INT FK
+  +date_commande : DATE FK
+  +date_reception : DATE FK
+  +quantite : DECIMAL(10,2)
+  +prix_unitaire : DECIMAL(10,2)
+  +montant_total_ht : DECIMAL(12,2)
+  +montant_tva : DECIMAL(10,2)
+  +montant_ttc : DECIMAL(12,2)
+  --
+  +calculer_montants()
+}
+
+class Fact_Stocks {
+  +mouvement_id : BIGINT PK
+  +produit_id : INT FK
+  +depot_id : INT FK
+  +date_mouvement : DATE FK
+  +type_mouvement : VARCHAR(20)
+  +affaire_id : INT FK
+  +quantite : DECIMAL(10,2)
+  +valeur_unitaire : DECIMAL(10,2)
+  +valeur_totale : DECIMAL(12,2)
+  +stock_final : DECIMAL(10,2)
+  --
+  +calculer_cump()
+  +valider_stock_positif()
+}
+
+' DIMENSIONS
+
+class Dim_Clients {
+  +client_id : INT PK
+  +code_client : VARCHAR(20)
+  +nom : VARCHAR(100)
+  +type_client : VARCHAR(30)
+  +ca_total_historique : DECIMAL(12,2)
+  +nb_affaires_total : INT
+  +date_creation : DATE
+  --
+  +calculer_ca_total()
+}
+
+class Dim_Produits {
+  +produit_id : INT PK
+  +reference : VARCHAR(50)
+  +designation : VARCHAR(200)
+  +famille : VARCHAR(50)
+  +sous_famille : VARCHAR(50)
+  +fournisseur_principal_id : INT FK
+  +prix_achat_moyen : DECIMAL(10,2)
+  +prix_vente_standard : DECIMAL(10,2)
+  --
+  +calculer_prix_achat_moyen()
+}
+
+class Dim_Fournisseurs {
+  +fournisseur_id : INT PK
+  +code_fournisseur : VARCHAR(20)
+  +nom : VARCHAR(100)
+  +siret : VARCHAR(14)
+  +ca_total_achats : DECIMAL(12,2)
+  +delai_livraison_moyen : INT
+  --
+  +calculer_delai_moyen()
+}
+
+class Dim_Employes {
+  +employe_id : INT PK
+  +matricule : VARCHAR(20)
+  +nom : VARCHAR(100)
+  +prenom : VARCHAR(100)
+  +role : VARCHAR(50)
+  +cout_horaire : DECIMAL(8,2)
+  +competences : VARCHAR(200)
+  --
+  +valider_competences()
+}
+
+class Dim_Temps {
+  +date : DATE PK
+  +annee : INT
+  +trimestre : INT
+  +mois : INT
+  +mois_nom : VARCHAR(20)
+  +semaine : INT
+  +jour_semaine : INT
+  +jour_semaine_nom : VARCHAR(20)
+  +est_weekend : BIT
+  +est_jour_ferie : BIT
+  --
+  +determiner_periode()
+}
+
+class Dim_Chantiers {
+  +chantier_id : INT PK
+  +code_chantier : VARCHAR(20)
+  +nom : VARCHAR(100)
+  +adresse : VARCHAR(200)
+  +type_chantier : VARCHAR(50)
+  +surface_m2 : DECIMAL(10,2)
+  --
+  +calculer_ratios()
+}
+
+' RELATIONS
+
+Fact_Affaires "1" -- "0..*" Fact_Heures : contient
+Fact_Affaires "1" -- "0..*" Fact_Achats : contient
+Fact_Affaires "0..*" -- "1" Dim_Clients : concerne
+Fact_Affaires "0..*" -- "1" Dim_Chantiers : realise sur
+Fact_Affaires "0..*" -- "1" Dim_Employes : gere par (RA)
+Fact_Affaires "0..*" -- "1" Dim_Temps : date devis
+
+Fact_Heures "0..*" -- "1" Dim_Employes : saisie par
+Fact_Heures "0..*" -- "1" Dim_Temps : date
+
+Fact_Achats "0..*" -- "1" Dim_Fournisseurs : achete chez
+Fact_Achats "0..*" -- "1" Dim_Produits : concerne
+Fact_Achats "0..*" -- "1" Dim_Temps : date commande
+
+Fact_Stocks "0..*" -- "1" Dim_Produits : concerne
+Fact_Stocks "0..*" -- "1" Dim_Temps : date mouvement
+
+Dim_Produits "0..*" -- "1" Dim_Fournisseurs : fournisseur principal
+
+note top of Fact_Affaires
+  Table centrale
+  100K lignes/an
+  Granularite : 1 affaire
+end note
+
+note right of Dim_Temps
+  Dimension conformee
+  Partagee toutes facts
+  3 650 lignes (2020-2030)
+end note
+
+note bottom of Fact_Stocks
+  Politique valorisation : CUMP
+  (Cout Unitaire Moyen Pondere)
+  Coherence garantie
+end note
+
+@enduml

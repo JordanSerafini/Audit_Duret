@@ -1,0 +1,92 @@
+@startuml Activity_Workflow_Tickets_BE
+
+title Workflow Systeme Tickets Bureau Etudes
+
+start
+
+:Demandeur (RA, Chef, Direction)\nremplit formulaire demande;
+note right
+  Formulaire standardise :
+  - Type etude (schema/plan/calcul)
+  - Chantier concerne
+  - Deadline souhaitee
+  - Charge estimee (S/M/L)
+  - Fichiers joints
+end note
+
+:Systeme cree ticket\navec ID unique;
+
+:Algorithme calcule\nscore priorite;
+note right
+  Score = f(
+    Role demandeur,
+    Deadline,
+    CA affaire,
+    Anciennete demande,
+    Charge estimee
+  )
+end note
+
+:Ticket insere\nfile attente (trie par score);
+
+:Systeme notifie\ndemandeur (mail);
+note right
+  "Votre demande #12345 est classee #7
+  Traitement estime : Jeudi 21/11
+  Score priorite : 68 pts"
+end note
+
+fork
+  :Thomas consulte\ndashboard tickets;
+
+  :Voit Top 5 priorites\n(ordre algo);
+
+  if (Capacite BE disponible ?) then (Oui)
+    :Systeme assigne auto\nticket a dessinateur;
+    note right
+      Assignment selon :
+      - Competences
+      - Charge actuelle
+      - Disponibilite
+    end note
+  else (Non - Surcharge)
+    :Ticket reste en attente\n(visible tous);
+    note right
+      Transparence :
+      Demandeurs voient position file
+      + raison attente (surcharge)
+    end note
+  endif
+
+fork end
+
+:Dessinateur demarre\ntravail (clic "Demarrer");
+
+:Chrono automatique\ndebut;
+
+:Dessinateur travaille\n(mode focus, notifs bloquees);
+
+:Dessinateur termine\netude;
+
+:Upload livrables\n(PDF, DWG, etc.);
+
+:Clic "Terminer demande";
+
+:Chrono automatique\nfin;
+
+:Systeme notifie\ndemandeur (mail auto);
+note right
+  "Votre demande #12345 est terminee
+  Livrables disponibles (PDF joint)
+  Duree reelle : 2h15"
+end note
+
+:Demandeur note\nsatisfaction (1-5);
+
+:Ticket passe statut\n"Closed";
+
+:Statistiques MAJ\n(productivite BE, satisfaction);
+
+stop
+
+@enduml
