@@ -1,0 +1,44 @@
+@startmindmap Pain_Points_Direction_Affaires
+
+title Mind Map - Pain Points Direction & Gestion Affaires
+
+* 🔴 **PROBLÈMES**\n**MAJEURS**
+** 🔴 ERP Legacy\nCALAMITEUX
+***_ MDE/Sage obsolète
+***_ 30-40s par écran
+***_ VPN + Citrix lent
+***_ Télétravail impossible
+
+** 🔴 Templates\nINEXISTANTS
+***_ Recherche manuelle
+***_ 200+ fichiers Word
+***_ Nommage incohérent
+***_ 30 min de fouille
+
+** 🔴 PPSPS\n100% MANUEL
+***_ **3h par PPSPS**
+***_ Ctrl+F remplacer
+***_ Risque oublis clauses
+***_ 100% copie-colle
+
+left side
+
+** 🔴 Pas de\nvisibilité TR
+***_ Direction aveugle
+***_ Budget dispersé
+***_ Avancement inconnu
+***_ 3h pour compiler
+
+** 🔴 Devis\ntrès long
+***_ **2h05 par devis**
+***_ 30 lignes × 5min
+***_ Saisie manuelle
+***_ Vérif Excel perso
+
+** 🔴 Aucune\nautomatisation
+***_ Zéro templates auto
+***_ Zéro dashboards
+***_ Zéro APIs
+***_ 100% manuel
+
+@endmindmap
