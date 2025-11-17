@@ -1,0 +1,82 @@
+@startuml Network_Flux_Donnees
+
+title Flux de Donnees - Architecture Cible SAV Maintenance
+
+nwdiag {
+  network "Internet" {
+    address = "Public"
+
+    client [description = "Portail Client\n(Web)"];
+    mobile [description = "App Mobile\nTechniciens"];
+  }
+
+  network "Azure Cloud (EU - France)" {
+    address = "SaaS - RGPD Compliant"
+
+    erp [description = "ERP/CRM Terrain\n(Praxedo/Synchroteam)"];
+    blob [description = "Azure Blob\nStorage"];
+    db [description = "PostgreSQL\nBase ERP"];
+  }
+
+  network "Services Complementaires" {
+    address = "External APIs"
+
+    sms [description = "Twilio\nSMS Gateway"];
+    email [description = "SendGrid\nEmail"];
+    powerbi [description = "Power BI\nAnalytics"];
+  }
+
+  network "On-Premise Duret - Annecy" {
+    address = "192.168.1.0/24"
+
+    gao [description = "GAO\nLegacy"];
+    sage [description = "SAGE\nComptabilite"];
+  }
+
+  client -- erp [label = "HTTPS\nREST API"];
+  mobile -- erp [label = "HTTPS\nREST API"];
+  mobile -- blob [label = "Upload\nphotos/PDF"];
+
+  erp -- db [label = "SQL\nCRUD"];
+  erp -- blob [label = "Store/Retrieve\nfichiers"];
+
+  erp -- sms [label = "API\nnotifications\nclients"];
+  erp -- email [label = "API\nconfirmations\nrapports"];
+
+  db -- powerbi [label = "DirectQuery\nanalytics"];
+
+  erp -- gao [label = "API/CSV\nconsultation\n(optionnel)"];
+  erp -- sage [label = "API\nfacturation\nautomatique"];
+}
+
+note as N1
+  **Flux Principaux:**
+  1. Client portail → ERP (RDV en ligne 24/7)
+  2. Technicien app → ERP (rapport digital)
+  3. Technicien app → Blob (photos geoloc.)
+  4. ERP → SMS (rappel RDV J-2)
+  5. ERP → Email (PDF rapport client)
+  6. ERP → SAGE (facture auto)
+  7. Power BI ← DB (analytics temps reel)
+end note
+
+note as N2
+  **Securite:**
+  - TLS 1.3 (transit)
+  - AES-256 (repos)
+  - OAuth 2.0 + JWT
+  - MFA disponible
+  - RGPD compliant (EU)
+  - Backup quotidien
+  - Audit trail (1 an)
+end note
+
+note as N3
+  **Mode Offline** :
+  - App mobile : SQLite local
+  - Sync auto (WiFi/4G)
+  - Queue upload (photos, rapports)
+  - Max 7 jours offline
+end note
+
+@enduml
