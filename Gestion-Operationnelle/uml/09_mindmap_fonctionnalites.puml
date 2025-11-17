@@ -1,0 +1,106 @@
+@startmindmap Mindmap_Fonctionnalites
+
+title Arborescence Fonctionnelle Gestion Operationnelle
+
+* Gestion\nOperationnelle
+
+** KPI & Dashboards
+*** Dashboards Temps Reel
+**** Direction (KPI globaux)
+**** Sylvie (Controle Gestion)
+**** Responsables Affaires (RBAC)
+**** Chefs Chantier (RBAC)
+*** Generation Rapports Auto
+**** PDF mensuel auto
+**** Export Excel personnalise
+*** Alertes Automatiques
+**** Depassements budgets
+**** Retards planning
+**** Marges negatives
+*** Predictions ML
+**** Projection CA 3 mois
+**** Detection anomalies
+**** Optimisation planning
+
+** Systeme Tickets BE
+*** Gestion Demandes
+**** Formulaire standardise
+**** Priorisation algorithme
+**** File attente transparente
+*** Traitement Tickets
+**** Assignment automatique
+**** Chrono temps reel
+**** Upload livrables
+*** Statistiques
+**** Productivite BE
+**** Satisfaction demandeurs
+**** Temps moyen traitement
+
+** Stocks RFID
+*** Reception Automatisee
+**** Scan RFID portiques
+**** Rapprochement auto BL
+**** Creation ligne Lireco auto
+*** Inventaires
+**** RFID portique (2h vs 2j)
+**** Rapprochement theorique vs physique
+*** Valorisation Coherente
+**** Politique CUMP unique
+**** Calcul auto valeurs
+*** Consultation
+**** Stock temps reel
+**** Recherche produits
+**** Alertes ruptures
+
+left side
+
+** ERP Odoo
+*** Affaires
+**** Creation devis
+**** Conversion affaire
+**** Suivi avancement
+*** Achats
+**** Commandes fournisseurs
+**** Reception BL
+**** Factures fournisseurs
+*** Comptabilite Analytique
+**** Marges par affaire
+**** Compta client
+**** Compta fournisseur
+*** Projet (Chantiers)
+**** Planning taches
+**** Heures employees
+**** Photos chantier
+
+** RBAC Transparence
+*** Droits Acces
+**** Admin (direction)
+**** Controle Gestion (Sylvie)
+**** Responsable Affaire
+**** Chef Chantier
+**** Magasinier
+**** Lecture seule
+*** Audit Trail
+**** Logs toutes actions
+**** Retention 3 ans
+**** Recherche Elasticsearch
+*** Partage Info
+**** Chef voit son budget
+**** Chef voit consommations
+**** Chef voit reste a faire
+
+** Integrations
+*** SAGE Compta
+**** Export factures
+**** Import paiements
+*** Lireco RFID
+**** Sync stocks bidirectionnelle
+**** Webhooks receptions
+*** Linear Tickets
+**** Sync demandes BE
+**** Notifications
+*** SendGrid Email
+**** Notifications auto
+**** Rapports email
+
+@endmindmap

@@ -1,0 +1,110 @@
+@startuml Deployment_Infrastructure
+
+title Infrastructure Deployment Azure Cloud EU
+
+node "Azure Cloud Region France (Paris + Marseille)" {
+
+  node "Azure App Service" {
+    artifact "Odoo ERP v17\nWeb Application" as Odoo
+  }
+
+  node "Azure VM D4s_v3\n(4 vCPU, 16 GB RAM)" {
+    artifact "Odoo Backend\n(Python + Gunicorn)" as OdooBackend
+  }
+
+  database "Azure Database\nPostgreSQL 15\nManaged" {
+    artifact "Odoo DB\n(50 GB)" as OdooDB
+  }
+
+  database "Azure SQL Database\n(Data Warehouse)" {
+    artifact "DWH Star Schema\n(100 DTU)" as DWH
+  }
+
+  database "Azure Blob Storage" {
+    folder "Data Lake" {
+      artifact "Bronze\n(Raw Data)" as Bronze
+      artifact "Silver\n(Cleaned)" as Silver
+      artifact "Gold\n(Aggregated)" as Gold
+    }
+    artifact "ML Models\n(.pkl files)" as Models
+    artifact "Backups\n(Daily)" as Backups
+  }
+
+  node "Azure Functions\nServerless" {
+    artifact "ML Inference\n(Python)" as MLFunc
+  }
+
+  node "Azure Data Factory" {
+    artifact "ETL Pipelines\n(Daily)" as ADF
+  }
+
+  cloud "Power BI Service" {
+    artifact "Dashboards\n(30 licences Pro)" as PBI
+  }
+
+}
+
+node "On-Premise Duret Annecy" {
+  artifact "SAGE Compta\n(Legacy)" as SAGE
+  artifact "Lireco RFID\n(Stock)" as Lireco
+}
+
+node "Utilisateurs" {
+  actor "Web Desktop" as Web
+  actor "Mobile iOS/Android" as Mobile
+}
+
+node "Services Externes" {
+  cloud "Linear (Tickets BE)" as Linear
+  cloud "SendGrid (Email)" as SendGrid
+}
+
+Web --> Odoo : HTTPS/TLS 1.3\nOAuth 2.0
+Mobile --> Odoo : HTTPS/TLS 1.3\nOAuth 2.0
+Web --> PBI : HTTPS\nAzure AD SSO
+
+Odoo --> OdooBackend : Reverse Proxy
+OdooBackend --> OdooDB : PostgreSQL Wire\nEncrypted
+OdooBackend --> Lireco : API REST\nHTTPS
+OdooBackend --> Linear : Webhooks\nHTTPS
+
+ADF --> OdooDB : Extract\nRead Replica
+ADF --> SAGE : Extract CSV\nSFTP
+ADF --> DWH : Load\nBulk Insert
+ADF --> Bronze : Archive\nAES-256
+
+MLFunc --> DWH : DirectQuery\nSQL
+MLFunc --> Models : Load .pkl
+MLFunc --> DWH : Write Predictions
+
+PBI --> DWH : DirectQuery\nOAuth
+
+note right of Odoo
+  Uptime : 99.9%
+  Auto-scaling : CPU >70%
+  Load Balancer : Azure
+  SSL : Let's Encrypt
+end note
+
+note right of OdooDB
+  Backup : Quotidien
+  Retention : 30 jours
+  HA : Multi-AZ
+  Encryption : TDE AES-256
+end note
+
+note right of DWH
+  SLA : 99.99%
+  Performance : DTU 100
+  Scaling : Vertical
+  Audit : 3 ans logs
+end note
+
+note right of MLFunc
+  Serverless : Pay per use
+  Latence : <500ms
+  Concurrency : 200
+  Monitoring : App Insights
+end note
+
+@enduml
