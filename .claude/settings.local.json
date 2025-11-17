@@ -11,7 +11,8 @@
       "Bash(then)",
       "Bash(echo:*)",
       "Bash(else)",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []
