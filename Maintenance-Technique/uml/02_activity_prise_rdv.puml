@@ -2,79 +2,56 @@
 
 title Processus Prise RDV Maintenance - ACTUEL vs CIBLE
 
-|Client|
-start
-:Client souhaite\nRDV entretien;
+partition "ACTUEL - Processus Manuel" #LightCoral {
+  :Client souhaite RDV entretien;
+  :Appelle Clothilde\n(8h-18h uniquement);
+  :Clothilde decroche telephone;
+  :Recherche client Excel (2 min);
+  :Verifie contrat Word (2 min);
+  :Consulte planning Outlook (3 min);
 
-|#LightCoral|ACTUEL|
-:Appelle Clothilde\n(8h-18h uniquement);
+  if (Creneau dispo ?) then (oui)
+    :Propose creneau;
+  else (non)
+    :Recherche autre creneau (5 min);
+    :Propose;
+  endif
 
-|Clothilde|
-:Décroche téléphone;
-:Recherche client\nExcel (2 min);
-:Vérifie contrat\nWord (2 min);
-:Consulte planning\nOutlook (3 min);
+  :Client accepte ou negocie;
+  :Saisie Outlook (2 min);
+  :Saisie Excel (1 min);
+  :Saisie GAO (2 min);
+  :Redaction email confirmation (5 min);
+  :Client recoit email confirmation;
 
-if (Créneau dispo ?) then (oui)
-  :Propose créneau;
-else (non)
-  :Recherche autre\ncréneau (5 min);
-  :Propose;
-endif
+  note right
+    **TEMPS TOTAL : 19 min**
+    Client attend : 8 min
+    Clothilde : 19 min
+    Triple saisie
+    Dispo 8h-18h
+  end note
+}
 
-|Client|
-:Accepte ou\nnégocie;
+partition "CIBLE - Portail Client 24/7" #LightGreen {
+  :Client se connecte portail web\n(20h30 - soir);
+  :Selectionne Prendre RDV;
+  :Calendrier affiche creneaux\ndispos zone geo;
+  :Choisit creneau (2 clics);
+  :Confirmation automatique;
+  :Recoit email + SMS rappel J-2;
+  :Clothilde recoit alerte Nouveau RDV;
+  :Valide RDV (2 min);
 
-|Clothilde|
-:Saisie Outlook\n(2 min);
-:Saisie Excel\n(1 min);
-:Saisie GAO\n(2 min);
-:Rédaction email\nconfirmation\n(5 min);
-
-|Client|
-:Reçoit email\nconfirmation;
-
-stop
-
-note right
-**TEMPS TOTAL : 19 min**
-Client attend : 8 min
-Clothilde : 19 min
-Triple saisie (Outlook+Excel+GAO)
-Disponibilité 8h-18h uniquement
-end note
-
-|#LightGreen|CIBLE (Portail Client)|
-|Client|
-start
-:Se connecte\nportail web\n(20h30 - soir);
-
-:Sélectionne\n"Prendre RDV";
-
-:Calendrier affiche\ncréneaux dispos\nzone géographique;
-
-:Choisit créneau\n(2 clics);
-
-:Confirmation\nautomatique;
-
-:Reçoit email +\nSMS rappel J-2;
-
-|Clothilde|
-:Reçoit alerte\n"Nouveau RDV";
-
-:Valide RDV\n(2 min);
-
-stop
-
-note right
-**TEMPS TOTAL : 3 min**
-Client : 1 min (autonome)
-Clothilde : 2 min (validation)
-Zéro ressaisie
-Disponibilité 24/7
-
-**GAIN : 17 min × 600 RDV**
-**= 170h/an = 8,500€**
-end note
+  note right
+    **TEMPS TOTAL : 3 min**
+    Client : 1 min autonome
+    Clothilde : 2 min validation
+    Zero ressaisie
+    Dispo 24/7
+    **GAIN : 17min x 600 RDV**
+    **= 170h/an = 8,500 EUR**
+  end note
+}
 
 @enduml
