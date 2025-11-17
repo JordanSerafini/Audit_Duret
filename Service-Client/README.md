@@ -224,27 +224,34 @@ Service-Client/
 ## 🎨 Utilisation des Diagrammes UML
 
 ### Pour PowerPoint / Google Slides
+
 1. Les fichiers `.puml` sont dans le dossier `/uml/`
 2. Générez les **SVG** (qualité vectorielle) avec PlantUML :
+
    ```bash
    cd Service-Client/uml
    java -jar plantuml.jar -tsvg *.puml
    ```
+
 3. Importez les SVG dans vos slides
 4. Redimensionnez sans perte de qualité
 
 ### Pour Impression / PDF
+
 - Générez les **PNG** haute résolution :
+
   ```bash
   java -jar plantuml.jar -tpng *.puml
   ```
 
 ### Pour Modifier les Diagrammes
+
 1. Éditez les fichiers `.puml` dans un éditeur de texte
 2. Régénérez avec PlantUML (voir ci-dessus)
-3. Syntaxe PlantUML : https://plantuml.com
+3. Syntaxe PlantUML : <https://plantuml.com>
 
 ### Diagrammes Disponibles (12)
+
 - **Sequence** : Appel client actuel (système post-it)
 - **Activity** : Processus prise RDV (48h)
 - **Use Case** : Acteurs et interactions
@@ -262,32 +269,52 @@ Service-Client/
 
 ## 📅 Historique
 
-- **2025-11-17** - Création initiale
-  - Audit complet Service Client
-  - Persona détaillé Claire
-  - Pain points quantifiés
-  - Plan d'action avec 3 options
-  - Focus: État ACTUEL uniquement
+- **2025-11-17** - Création complète
+  - Audit complet Service Client (plan d'action 700+ lignes)
+  - Persona détaillé Claire + journey maps
+  - Architecture actuelle vs cible
+  - Pain points quantifiés (748K€/an)
+  - 3 options avec ROI détaillé
+  - 12 diagrammes UML PlantUML
+  - Synthèse exécutive pour direction
+  - Architecture technique complète (IT + Data/ML)
+  - Planning implémentation 18 mois
 
 ---
 
 ## ⚠️ Important
 
-**Ce dossier documente l'ÉTAT ACTUEL uniquement**
-- Pain points existants
-- Problèmes constatés
-- Besoins exprimés
-- Recommandations basées sur best practices
+Ce dossier documente:
+
+- État ACTUEL (pain points, système post-it)
+- Architecture CIBLE (HubSpot CRM + intégrations)
+- Plan d'implémentation détaillé (18 mois, 206K€)
+- ROI business case (720K€ sur 2 ans, payback 5-6 mois)
 
 ---
 
 ## 🔗 Liens Utiles
 
-- [Plan d'Action Source](plan/Plan_Action_Service_Client.md)
-- [Persona & Pain Points](docs/01_PERSONAS_Pain_Points.md)
+### Documents Principaux
+
+- [Plan d'Action Source](plan/Plan_Action_Service_Client.md) - 700+ lignes
+- [Synthèse Executive](docs/SYNTHESE_EXECUTIVE.md) - Business case
+- [Persona & Pain Points](docs/01_PERSONAS_Pain_Points.md) - Claire
+- [Architecture Actuelle](docs/02_ARCHITECTURE_Actuelle_Chaos.md) - Système post-it
+- [Journey Maps](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) - 48h → 2min
+
+### Architecture & Implémentation
+
+- [Planning 18 mois](implementation/02_Planning_Implementation.md) - 10 jalons
+- [Architecture IT](implementation/it-logiciel/01_Architecture_Cible.md) - Stack technique
+- [Architecture Data/ML](implementation/bi-data-ml/01_Architecture_DataDriven.md) - Analytics & IA
+
+### Diagrammes UML
+
+- [Dossier UML](uml/) - 12 diagrammes PlantUML (.puml)
 
 ---
 
 **📧 Contact:** Service Client - Duret Électricité
 **🎯 Objectif:** Transformer service réactif → proactif & digital
-**💰 Enjeu:** 592.5K€/an de gains + différenciation concurrentielle
+**💰 Enjeu:** 748K€/an de pertes → 720K€ de gains sur 2 ans (ROI 331%)
