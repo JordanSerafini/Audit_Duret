@@ -1,0 +1,107 @@
+@startuml Network_Flux_Donnees
+
+title Flux Donnees Architecture Cible Gestion Operationnelle
+
+package "Utilisateurs" #E0F7FA {
+  [Direction\n(Web)] as DIR
+  [Sylvie\n(Web)] as SYL
+  [Responsables Affaires\n(Web + Mobile)] as RA
+  [Chefs Chantier\n(Mobile)] as CHEF
+  [Isabelle Stocks\n(Mobile RFID)] as ISA
+}
+
+package "Azure Cloud EU France" #E3F2FD {
+  [Odoo ERP v17\n(Web App)] as Odoo
+  [Power BI Service\nDashboards] as PBI
+  database "PostgreSQL\nOdoo DB" as Postgres
+  database "Azure SQL DWH\nData Warehouse" as DWH
+  database "Azure Blob\nData Lake" as Blob
+  [Azure Data Factory\nETL Pipelines] as ADF
+  [Azure Functions\nML Inference] as ML
+}
+
+package "On-Premise Duret" #FFF8E1 {
+  [SAGE Compta\nLegacy] as SAGE
+  [Lireco RFID\nStocks] as Lireco
+}
+
+package "Services Externes" #F3E5F5 {
+  [Linear\nTickets BE] as Linear
+  [SendGrid\nEmail] as SendGrid
+}
+
+DIR --> Odoo : HTTPS OAuth 2.0\nCRUD Affaires
+DIR --> PBI : HTTPS Azure AD\nConsulte KPI globaux
+
+SYL --> Odoo : HTTPS OAuth 2.0\nCRUD Compta Analytique
+SYL --> PBI : HTTPS Azure AD\nGenere rapports mensuels
+
+RA --> Odoo : HTTPS OAuth 2.0\nCRUD Ses Affaires (RBAC)
+RA --> PBI : HTTPS Azure AD\nConsulte Ses Marges (RLS)
+
+CHEF --> Odoo : Mobile App HTTPS\nConsulte Son Chantier (RBAC)
+CHEF --> PBI : Mobile Web HTTPS\nConsulte Budget Consomme (RLS)
+
+ISA --> Odoo : Mobile App HTTPS\nReception Stocks RFID
+ISA --> Lireco : Scan RFID\nPortiques + Douchettes
+
+Odoo --> Postgres : PostgreSQL Wire\nCRUD Encrypted
+Odoo --> Lireco : API REST HTTPS\nSync Stocks Bidirectionnelle
+Odoo --> Linear : Webhooks HTTPS\nSync Tickets BE
+Odoo --> SendGrid : API HTTPS\nNotifications Email
+
+ADF --> Postgres : Extract\nRead Replica\nQuotidien 6h
+ADF --> SAGE : Extract CSV\nSFTP\nQuotidien 7h
+ADF --> DWH : Load Bulk\nStar Schema\nQuotidien 6h30
+ADF --> Blob : Archive\nParquet AES-256\nQuotidien
+
+ML --> Blob : Load Models\n.pkl files
+ML --> DWH : Inference SQL\nPredictions CA, Anomalies
+ML --> DWH : Write Results\nTable ML_Predictions
+
+PBI --> DWH : DirectQuery\nTemps Reel
+PBI --> Postgres : Import\nRefresh Quotidien
+
+note as N1
+  **Flux Principaux Temps Reel :**
+  1. Direction → Odoo (CRUD affaires)
+  2. RA → Odoo (Gestion ses affaires RBAC)
+  3. Chef → Odoo Mobile (Consulte chantier)
+  4. Isabelle → RFID (Scan reception 45 sec)
+  5. Odoo → Postgres (Persistance)
+  6. ETL → DWH (Quotidien 6h consolidation)
+  7. ML → DWH (Quotidien 6h30 predictions)
+  8. PBI → DWH (DirectQuery temps reel)
+  9. Direction/Sylvie → PBI (Dashboards live)
+end note
+
+note as N2
+  **Securite :**
+  - TLS 1.3 (transit)
+  - AES-256 (repos)
+  - OAuth 2.0 + JWT
+  - MFA disponible
+  - RBAC Odoo (8 roles)
+  - RLS Power BI (Row-Level Security)
+  - Audit Trail 3 ans (Elasticsearch)
+end note
+
+note as N3
+  **Performance :**
+  - Latence API : <500ms
+  - Dashboards : <2 sec chargement
+  - Uptime : 99.9%
+  - Concurrent users : 50
+  - Auto-scaling : CPU >70%
+end note
+
+note as N4
+  **Volumes Quotidiens :**
+  - Affaires nouvelles : ~50
+  - Heures saisies : ~300 lignes
+  - Achats : ~100 lignes
+  - Mouvements stocks : ~200
+  - Predictions ML : Toutes affaires en cours
+end note
+
+@enduml

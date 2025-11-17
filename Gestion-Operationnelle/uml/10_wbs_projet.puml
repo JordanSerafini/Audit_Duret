@@ -1,0 +1,61 @@
+@startwbs WBS_Projet
+
+title Work Breakdown Structure Projet Gestion Operationnelle
+
+* Projet Gestion\nOperationnelle\n24 mois\n580K€
+
+** Phase 1\nQuick Wins\n(M1-M6)\n185K€
+
+*** RFID Stocks\n65K€
+**** POC RFID\nAnnecy\nM1-M2
+**** Tests\nM2
+**** Deploiement\nAnnecy\nM3
+**** Deploiement\nAlbertville\nM4
+
+*** Dashboards\nPower BI\n70K€
+**** Audit\nDonnees\nM1
+**** Dev\nDashboards\nM2-M4
+**** Tests\nM4
+**** Formation\nGO-LIVE\nM5
+
+*** Systeme\nTickets BE\n50K€
+**** Benchmark\nSolutions\nM2
+**** Config\nLinear\nM3-M4
+**** Algo\nPriorisation\nM4
+**** Tests\nM5
+**** GO-LIVE\nM6
+
+** Phase 2\nStructurant\n(M7-M18)\n280K€
+
+*** Migration\nERP Odoo\n200K€
+**** Benchmark\nERP\nM7-M8
+**** POC\nOdoo\nM9-M10
+**** GO/NO-GO\nM11
+**** Migration\nAffaires\nM12
+**** Migration\nAchats\nM13-M14
+**** Migration\nCompta\nM15
+**** Integrations\nGO-LIVE\nM16
+
+*** RBAC\nTransparence\n30K€
+**** Definition\nRoles\nM13
+**** Config\nOdoo+PBI\nM14
+**** Tests\nFormation\nM15
+
+*** ML\nPredictif\n50K€
+**** Data Lake\nSetup\nM15
+**** Dev\nModeles ML\nM16-M17
+**** Integration\nGO-LIVE\nM18
+
+** Phase 3\nOptimisation\n(M19-M24)\n115K€
+
+*** Gouvernance\nDonnees\n50K€
+**** Audit\nData Quality\nM19
+**** Nettoyage\nMDM\nM20
+**** Gouvernance\nCDO\nM21
+
+*** Culture\nData-Driven\n65K€
+**** Formation\nDirection\nM19-M20
+**** Formation\nManagers\nM20
+**** Accompagnement\nChangement\nM21-M24
+
+@endwbs
