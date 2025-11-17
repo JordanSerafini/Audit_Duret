@@ -7,8 +7,8 @@ title State Diagram - Cycle de Vie d'un Devis
 state "Demande Client" as DemandeClient #90EE90
 note right of DemandeClient
   Email du client
-  Spécifications projet
-  Délai: 48-72h attendu
+  Specifications projet
+  Delai: 48-72h attendu
 end note
 
 DemandeClient --> RechercheTemplate : Laurent cherche ancien devis
@@ -16,21 +16,21 @@ DemandeClient --> RechercheTemplate : Laurent cherche ancien devis
 state "Recherche Template" as RechercheTemplate #FF6B6B
 note right of RechercheTemplate
   🔴 **RECHERCHE MANUELLE**
-  - Fouille dossiers partagés
+  - Fouille dossiers partages
   - 200+ fichiers Word
-  - Nommage incohérent:
+  - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Pas de versioning
   ⏰ 30 min de fouille !
 end note
 
-RechercheTemplate --> PasDeTemplate : Pas trouvé similaire
-RechercheTemplate --> OuvertureMDE : Template trouvé
+RechercheTemplate --> PasDeTemplate : Pas trouve similaire
+RechercheTemplate --> OuvertureMDE : Template trouve
 
 state "Pas de Template" as PasDeTemplate #FF6B6B
 note left of PasDeTemplate
-  🔴 Part de zéro
+  🔴 Part de zero
   ⏰ +1h
 end note
 
@@ -40,7 +40,7 @@ state "Ouverture MDE" as OuvertureMDE #FF6B6B
 note right of OuvertureMDE
   🔴 **TEMPS CHARGEMENT**
   ⏰ 15 secondes
-  Attente écran accueil: 30s
+  Attente ecran accueil: 30s
   Module devis: 40s
   ⏰ Total 5 min juste pour ouvrir !
 end note
@@ -74,21 +74,21 @@ note right of SaisieManuelle
   - Copie depuis Excel perso
   - Sauvegarde (25s)
 
-  ⏰ Réduit à 1h30 avec Excel
-  mais TOUJOURS très long !
+  ⏰ Reduit a 1h30 avec Excel
+  mais TOUJOURS tres long !
 end note
 
-SaisieManuelle --> VerifExcel : Vérifications
+SaisieManuelle --> VerifExcel : Verifications
 
-state "Vérification Excel" as VerifExcel #FFD700
+state "Verification Excel" as VerifExcel #FFD700
 note left of VerifExcel
   - Marge globale
   - Prix vs concurrence
-  - Cohérence quantités
+  - Coherence quantites
   ⏰ 10 min
 end note
 
-VerifExcel --> Ajustements : Corrections nécessaires
+VerifExcel --> Ajustements : Corrections necessaires
 VerifExcel --> GenerationPDF : OK
 
 state "Ajustements" as Ajustements #FFD700
@@ -99,18 +99,18 @@ end note
 
 Ajustements --> GenerationPDF
 
-state "Génération PDF" as GenerationPDF #FFD700
+state "Generation PDF" as GenerationPDF #FFD700
 note right of GenerationPDF
-  Clic "Générer PDF"
+  Clic "Generer PDF"
   PDF (45s)
 end note
 
-GenerationPDF --> VerifPDF : Vérifie mise en page
+GenerationPDF --> VerifPDF : Verifie mise en page
 
-state "Vérification PDF" as VerifPDF #FFD700
+state "Verification PDF" as VerifPDF #FFD700
 note left of VerifPDF
   🔴 Parfois bugs affichage
-  → Régénération
+  → Regeneration
   ⏰ 3 min
 end note
 
@@ -118,21 +118,21 @@ VerifPDF --> BugPDF : Bug affichage
 VerifPDF --> EnvoiClient : PDF OK
 
 state "Bug PDF" as BugPDF #FF6B6B
-BugPDF --> GenerationPDF : Régénère
+BugPDF --> GenerationPDF : Regenere
 
 state "Envoi Client" as EnvoiClient #90EE90
 note right of EnvoiClient
-  - Rédaction email
+  - Redaction email
   - Recherche contact
-  - Pièce jointe
+  - Piece jointe
   ⏰ 7 min
 end note
 
-EnvoiClient --> EnAttente : Email envoyé
+EnvoiClient --> EnAttente : Email envoye
 
 state "En Attente" as EnAttente #FFFFAA
 note right of EnAttente
-  Attente réponse client
+  Attente reponse client
   24-72h
 end note
 
@@ -140,9 +140,9 @@ EnAttente --> Refus : Client refuse
 EnAttente --> Accepte : Client accepte
 EnAttente --> Modification : Client demande ajustement
 
-state "Modification Demandée" as Modification #FFD700
+state "Modification Demandee" as Modification #FFD700
 note left of Modification
-  Retour à la saisie
+  Retour a la saisie
   🔴 Recommence processus
 end note
 
@@ -151,23 +151,23 @@ Modification --> OuvertureMDE : Rouvre MDE
 state "❌ Refus" as Refus #FF6B6B
 Refus --> [*]
 
-state "✅ Accepté" as Accepte #90EE90
+state "✅ Accepte" as Accepte #90EE90
 Accepte --> [*]
 
 note bottom
-  **MÉTRIQUES GLOBALES**
-  ⏰ Durée totale: **2h05**
+  **METRIQUES GLOBALES**
+  ⏰ Duree totale: **2h05**
 
-  Décomposition:
+  Decomposition:
   • Recherche ancien devis: 45 min
   • Ouverture MDE: 5 min
   • Saisie 30 lignes: 1h30
-  • Vérifications: 15 min
+  • Verifications: 15 min
   • PDF & envoi: 10 min
 
   😤 **FRUSTRATION: 9/10**
   🔴 Avec templates: 30 min possible !
-  Économie potentielle: 1h35/devis
+  Economie potentielle: 1h35/devis
 end note
 
 @enduml

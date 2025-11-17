@@ -2,7 +2,7 @@
 
 title Deployment Diagram - Infrastructure ACTUELLE Direction-Affaires
 
-node "Domicile Laurent (Télétravail)" as HomeLaurent #FFE4E1 {
+node "Domicile Laurent (Teletravail)" as HomeLaurent #FFE4E1 {
   node "PC Laurent" as PCLaurent #FF6B6B {
     component "VPN Client" as VPN1 #FF0000
     component "Citrix Receiver" as Citrix1 #FF0000
@@ -10,25 +10,25 @@ node "Domicile Laurent (Télétravail)" as HomeLaurent #FFE4E1 {
   }
 
   note right of PCLaurent
-    🔴 **TÉLÉTRAVAIL IMPOSSIBLE**
+    🔴 **TELETRAVAIL IMPOSSIBLE**
     - VPN + Citrix
-    - 30-40s par écran
-    - Timeouts fréquents
+    - 30-40s par ecran
+    - Timeouts frequents
     - 😤 Frustration: 10/10
 
-    Laurent évite de travailler
+    Laurent evite de travailler
     depuis chez lui !
   end note
 }
 
-node "Domicile RA2 (Télétravail)" as HomeRA2 #FFE4E1 {
+node "Domicile RA2 (Teletravail)" as HomeRA2 #FFE4E1 {
   node "PC RA2" as PCRA2 #FF6B6B {
     component "VPN Client" as VPN2 #FF0000
     component "Citrix Receiver" as Citrix2 #FF0000
   }
 }
 
-node "Bureau Siège" as Bureau #E6F3FF {
+node "Bureau Siege" as Bureau #E6F3FF {
 
   node "Serveur Windows 2012" as Server #FF0000 {
     component "Sage MDE/ERP" as SageMDE #FF0000
@@ -37,8 +37,8 @@ node "Bureau Siège" as Bureau #E6F3FF {
 
   note right of Server
     ⚠️ **CALAMITEUX**
-    - Obsolète
-    - 30-40s chargement écran
+    - Obsolete
+    - 30-40s chargement ecran
     - Interface client lourd
     - Pas d'API REST
     - Pas de mobile
@@ -69,7 +69,7 @@ node "Bureau Siège" as Bureau #E6F3FF {
     - Obtenir KPIs
     - Suivre budgets
 
-    ⏰ Demande à Laurent: 3h
+    ⏰ Demande a Laurent: 3h
   end note
 
   node "PC Thomas (BE)" as PCThomas {
@@ -79,7 +79,7 @@ node "Bureau Siège" as Bureau #E6F3FF {
 }
 
 cloud "Stockage OneDrive" as Cloud #E0F7FA {
-  storage "Dossiers Partagés\n200+ fichiers Word" as Dossiers #FF6B6B
+  storage "Dossiers Partages\n200+ fichiers Word" as Dossiers #FF6B6B
   storage "Excel\nTemplates Laurent" as ExcelLaurent #FFD700
   storage "Excel\nTemplates RA2" as ExcelRA2 #FFD700
 }
@@ -87,7 +87,7 @@ cloud "Stockage OneDrive" as Cloud #E0F7FA {
 note bottom of Cloud
   🔴 **CHAOS FICHIERS**
   - 200+ fichiers Word
-  - Nommage incohérent:
+  - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Pas de versioning
@@ -106,12 +106,12 @@ node "Client B" as Client2 #E0E0E0 {
   artifact "📧 Email" as EmailClient2
 }
 
-' Connexions Télétravail
+' Connexions Teletravail
 VPN1 .> Internet : tunnel VPN
 VPN2 .> Internet : tunnel VPN
 Internet .> Server : VPN
-Citrix1 --> ClientSage1 : 30-40s/écran
-Citrix2 .> Server : 30-40s/écran
+Citrix1 --> ClientSage1 : 30-40s/ecran
+Citrix2 .> Server : 30-40s/ecran
 
 ' Connexions Bureau
 ClientSage2 --> SageMDE : Client lourd
@@ -132,34 +132,34 @@ OutlookMarie ..> EmailClient2 : PDF PPSPS
 EmailClient1 ..> OutlookMarie : demande devis
 EmailClient2 ..> OutlookMarie : demande devis
 
-OutlookThomas <.> Word1 : échange\nPPSPS validation
+OutlookThomas <.> Word1 : echange\nPPSPS validation
 
 note bottom
-  **PROBLÈMES INFRASTRUCTURE**
+  **PROBLEMES INFRASTRUCTURE**
 
   🔴 **Obsolescence**
   - Windows Server 2012
   - Sage MDE client lourd
-  - Architecture années 2000
+  - Architecture annees 2000
 
   🔴 **Performance catastrophique**
-  - 30-40s par écran
+  - 30-40s par ecran
   - VPN + Citrix ultra-lent
-  - Timeouts fréquents
-  - 😤 Télétravail impossible
+  - Timeouts frequents
+  - 😤 Teletravail impossible
 
-  🔴 **Pas de mobilité**
-  - Zéro accès mobile
+  🔴 **Pas de mobilite**
+  - Zero acces mobile
   - Pas d'app responsive
   - Impossible depuis chantier
 
-  🔴 **Silos de données**
+  🔴 **Silos de donnees**
   - Sage + Word + Excel perso
   - 200+ fichiers templates
-  - Dossiers partagés chaos
-  - Aucune intégration
+  - Dossiers partages chaos
+  - Aucune integration
 
-  🔴 **Pas de visibilité direction**
+  🔴 **Pas de visibilite direction**
   - Pas de dashboards
   - Pas de KPIs TR
   - ⏰ 3h pour un chiffre
@@ -168,7 +168,7 @@ note bottom
   - Devis: 2h05 (vs 30 min possible)
   - PPSPS: 3h00 (vs 27 min possible)
   - Recherche template: 30 min
-  - Laurent évite télétravail
+  - Laurent evite teletravail
 end note
 
 @enduml

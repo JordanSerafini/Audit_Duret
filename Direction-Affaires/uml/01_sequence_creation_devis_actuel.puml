@@ -1,11 +1,11 @@
 @startuml Creation_Devis_Actuel
 
-title Processus Création Devis - ÉTAT ACTUEL (ERP Legacy MDE)
+title Processus Creation Devis - ETAT ACTUEL (ERP Legacy MDE)
 
 actor "Laurent\n(Resp. Affaire)" as Laurent #FFB6C1
 participant "MDE/Sage" as MDE #FF6B6B
 participant "Excel\n(perso)" as Excel #FFD700
-participant "Dossiers\nPartagés" as Dossiers
+participant "Dossiers\nPartages" as Dossiers
 participant "Outlook" as Email
 actor "Client" as Client #ADD8E6
 
@@ -13,13 +13,13 @@ actor "Client" as Client #ADD8E6
 
 Client -> Laurent: Email demande devis
 note right #ADD8E6
-  Spécifications projet
-  Délai: 48-72h attendu
+  Specifications projet
+  Delai: 48-72h attendu
 end note
 
 Laurent -> Laurent: Lecture email (15 min)
 note right #FFD700
-  ⚠️ Infos éparpillées
+  ⚠️ Infos eparpillees
 end note
 
 Laurent -> Dossiers: Recherche ancien devis similaire
@@ -48,7 +48,7 @@ note right #FF6B6B
 end note
 
 Laurent -> MDE: Login
-MDE --> Laurent: Écran accueil (30s)
+MDE --> Laurent: Ecran accueil (30s)
 note right #FF6B6B
   🔴 Attente...
 end note
@@ -87,7 +87,7 @@ loop Pour CHAQUE ligne (30 lignes)
     Laurent -> Laurent: Copie depuis Excel
     note right #FFD700
       Saisie manuelle:
-      - Quantité
+      - Quantite
       - Prix
       - Remise
     end note
@@ -102,17 +102,17 @@ end
 note over Laurent, MDE #FFAAAA
   ⏰ **TEMPS SAISIE**
   30 lignes × 5min = 2h30
-  Réduit à 1h30 avec Excel
-  mais TOUJOURS très long !
+  Reduit a 1h30 avec Excel
+  mais TOUJOURS tres long !
 end note
 
-== 11h35 - Vérifications ==
+== 11h35 - Verifications ==
 
-Laurent -> Excel: Vérif calculs
+Laurent -> Excel: Verif calculs
 note right #FFD700
   - Marge globale
   - Prix vs concurrence
-  - Cohérence quantités
+  - Coherence quantites
   ⏰ 10 min
 end note
 
@@ -121,23 +121,23 @@ note right #FF6B6B
   🔴 Re-chargements (5 min)
 end note
 
-== 11h50 - Génération PDF ==
+== 11h50 - Generation PDF ==
 
-Laurent -> MDE: "Générer PDF"
+Laurent -> MDE: "Generer PDF"
 MDE --> Laurent: PDF (45s)
 
-Laurent -> Laurent: Vérif mise en page
+Laurent -> Laurent: Verif mise en page
 note right #FF6B6B
   🔴 Parfois bugs affichage
-  → Régénération
+  → Regeneration
   ⏰ 3 min
 end note
 
-Laurent -> Email: Rédaction email client
+Laurent -> Email: Redaction email client
 note right
   - Recherche contact
-  - Rédaction
-  - Pièce jointe
+  - Redaction
+  - Piece jointe
   ⏰ 7 min
 end note
 
@@ -146,19 +146,19 @@ Laurent -> Client: Envoi devis
 == BILAN ==
 
 note over Laurent, Client #FFCCCC
-  **MÉTRIQUES PROCESSUS**
-  ⏰ Durée totale: **2h05**
+  **METRIQUES PROCESSUS**
+  ⏰ Duree totale: **2h05**
 
-  Décomposition:
+  Decomposition:
   • Recherche ancien devis: 45 min
   • Ouverture MDE: 5 min
   • Saisie 30 lignes: 1h30
-  • Vérifications: 15 min
+  • Verifications: 15 min
   • PDF & envoi: 10 min
 
   😤 **FRUSTRATION: 9/10**
   🔴 Avec templates: 30 min possible !
-  Économie potentielle: 1h35/devis
+  Economie potentielle: 1h35/devis
 end note
 
 @enduml

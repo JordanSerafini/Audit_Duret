@@ -1,26 +1,26 @@
 @startuml Generation_PPSPS_Actuel
 
-title Processus Génération PPSPS - ÉTAT ACTUEL (Word Manuel)
+title Processus Generation PPSPS - ETAT ACTUEL (Word Manuel)
 
 actor "Laurent\n(Resp. Affaire)" as Laurent #FFB6C1
-participant "Dossiers\nPartagés" as Dossiers
+participant "Dossiers\nPartages" as Dossiers
 participant "Word" as Word #4169E1
 participant "Excel" as Excel #FFD700
-actor "Thomas\n(Bureau Études)" as Thomas #98FB98
+actor "Thomas\n(Bureau Etudes)" as Thomas #98FB98
 participant "Email" as Email
 actor "Client" as Client #ADD8E6
 
 == 14h00 - Recherche template ==
 
-Laurent -> Laurent: Nouvelle affaire démarrée
+Laurent -> Laurent: Nouvelle affaire demarree
 note right
   Besoin: PPSPS
   pour chantier neuf
 end note
 
-Laurent -> Dossiers: Connexion dossiers partagés
+Laurent -> Dossiers: Connexion dossiers partages
 note right #FF6B6B
-  🔴 Dossiers mal organisés
+  🔴 Dossiers mal organises
   "Documents/PPSPS/"
 end note
 
@@ -28,7 +28,7 @@ Laurent -> Dossiers: Recherche PPSPS similaire
 note right #FF6B6B
   🔴 **RECHERCHE MANUELLE**
   - 200+ fichiers Word
-  - Nommage incohérent:
+  - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Pas de versioning
@@ -36,16 +36,16 @@ note right #FF6B6B
 end note
 
 loop 3-4 fichiers
-    Dossiers --> Laurent: Fichier trouvé
+    Dossiers --> Laurent: Fichier trouve
     Laurent -> Word: Ouverture
-    Laurent -> Laurent: Vérif contenu
+    Laurent -> Laurent: Verif contenu
     note right #FFD700
       Pas le bon type chantier
       → Recommence
     end note
 end
 
-Dossiers --> Laurent: PPSPS similaire trouvé !
+Dossiers --> Laurent: PPSPS similaire trouve !
 
 == 14h30 - Copie & Adaptation (CALVAIRE) ==
 
@@ -57,31 +57,31 @@ note right #FF6B6B
   🔴 **CTRL+F REMPLACER**
   - Nom client ancien → nouveau
   - Adresse chantier
-  - Dates prévisionnelles
+  - Dates previsionnelles
   - Budget
 end note
 
 Laurent -> Word: Modification Section 2 (20 min)
 note right #FF6B6B
-  - Équipe affectée
-  - Planning prévisionnel
-  - Coordonnées urgence
+  - Equipe affectee
+  - Planning previsionnel
+  - Coordonnees urgence
 end note
 
 Laurent -> Word: Modification Section 3 (45 min)
 note right #FF6B6B
   🔴 **PARTIE LA PLUS LONGUE**
-  Risques spécifiques:
-  - Analyse risques électriques
+  Risques specifiques:
+  - Analyse risques electriques
   - Travaux en hauteur
-  - Co-activité
+  - Co-activite
   - Substances dangereuses
 
   **ADAPTATION AU CHANTIER**
   = 100% manuel
 end note
 
-Laurent -> Dossiers: Récupère plans affaire
+Laurent -> Dossiers: Recupere plans affaire
 Laurent -> Word: Insertion plans (30 min)
 note right #FF6B6B
   - Suppression anciens plans
@@ -89,10 +89,10 @@ note right #FF6B6B
   - Mise en page
 end note
 
-Laurent -> Laurent: Vérif clauses obligatoires (30 min)
+Laurent -> Laurent: Verif clauses obligatoires (30 min)
 note right #FF6B6B
   🔴 **CHECKLIST PAPIER**
-  40 points à vérifier manuellement
+  40 points a verifier manuellement
   ligne par ligne
 
   **RISQUES OUBLIS**
@@ -101,8 +101,8 @@ end note
 Laurent -> Word: Relecture & mise en page (30 min)
 note right
   - Correction fautes
-  - Numérotation pages
-  - Table des matières
+  - Numerotation pages
+  - Table des matieres
   - Formatage
 end note
 
@@ -114,14 +114,14 @@ end note
 == 17h00 - Validation BE ==
 
 Laurent -> Email: Envoi Thomas pour relecture
-Email -> Thomas: PPSPS à valider
+Email -> Thomas: PPSPS a valider
 
 Thomas -> Word: Relecture (15 min)
 note right #98FB98
   Commentaires Word
 end note
 
-Thomas -> Email: Renvoie à Laurent
+Thomas -> Email: Renvoie a Laurent
 
 Laurent -> Word: Corrections (10 min)
 
@@ -132,10 +132,10 @@ Laurent -> Dossiers: Archivage
 == BILAN ==
 
 note over Laurent, Client #FFCCCC
-  **MÉTRIQUES PROCESSUS**
-  ⏰ Durée totale: **3h00**
+  **METRIQUES PROCESSUS**
+  ⏰ Duree totale: **3h00**
 
-  Décomposition:
+  Decomposition:
   • Recherche template: 30 min
   • Adaptation Word: 2h30
   • Validation BE: 30 min
@@ -143,7 +143,7 @@ note over Laurent, Client #FFCCCC
   😤 **FRUSTRATION: 10/10**
   🔴 100% manuel
   🔴 Risques oublis clauses
-  🔴 Compétences RA sous-utilisées
+  🔴 Competences RA sous-utilisees
 
   💡 **AVEC AUTOMATISATION:**
   Possible en 30 minutes !

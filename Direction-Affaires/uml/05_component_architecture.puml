@@ -1,6 +1,6 @@
 @startuml Component_Architecture_Actuelle
 
-title Component Diagram - Architecture Système ACTUEL Direction-Affaires
+title Component Diagram - Architecture Systeme ACTUEL Direction-Affaires
 
 skinparam componentStyle rectangle
 
@@ -11,7 +11,7 @@ package "Responsables Affaires (4)" #FFE4E1 {
   [RA 4] as RA4 #FFB6C1
 
   note right of Laurent
-    🔴 Travail isolé
+    🔴 Travail isole
     🔴 Templates personnels
     🔴 Excel perso
   end note
@@ -22,13 +22,13 @@ package "Direction & BE" #E6F3FF {
   [Thomas\nBE] as Thomas #98FB98
 
   note right of Marie
-    🔴 Aucune visibilité TR
+    🔴 Aucune visibilite TR
     ⏰ 3h pour un chiffre
   end note
 }
 
-package "Système Legacy" #FFCCCC {
-  database "Sage MDE/ERP\n(Obsolète)" as SageMDE #FF0000 {
+package "Systeme Legacy" #FFCCCC {
+  database "Sage MDE/ERP\n(Obsolete)" as SageMDE #FF0000 {
     [Module Devis]
     [Module Affaires]
     [Module Facturation]
@@ -36,11 +36,11 @@ package "Système Legacy" #FFCCCC {
 
   note right of SageMDE
     ⚠️ **CALAMITEUX**
-    - 30-40s par écran
+    - 30-40s par ecran
     - VPN + Citrix lent
     - Interface complexe
-    - Télétravail impossible
-    - Timeouts fréquents
+    - Teletravail impossible
+    - Timeouts frequents
   end note
 }
 
@@ -49,12 +49,12 @@ package "Documents (Chaos)" #FFF9E6 {
   [Word\nDevis] as WordDevis #FFD700
   [Excel\nPerso Laurent] as ExcelL #FFD700
   [Excel\nPerso RA2] as ExcelRA2 #FFD700
-  [Dossiers\nPartagés\n200+ fichiers] as Dossiers #FF6B6B
+  [Dossiers\nPartages\n200+ fichiers] as Dossiers #FF6B6B
 
   note bottom of Dossiers
     🔴 **CHAOS FICHIERS**
     - 200+ fichiers Word
-    - Nommage incohérent:
+    - Nommage incoherent:
       "PPSPS_final_v2_OK_2023.docx"
       "PPSPS_Client_A_VRAI_FINAL.docx"
     - Pas de versioning
@@ -67,8 +67,8 @@ package "Communication" #F0F0F0 {
   [VPN/Citrix] as VPN #FF0000
 
   note bottom of VPN
-    🔴 30-40s par écran
-    🔴 Timeouts fréquents
+    🔴 30-40s par ecran
+    🔴 Timeouts frequents
     😤 Frustration 10/10
   end note
 }
@@ -85,7 +85,7 @@ cloud "Clients" #E0E0E0 {
 }
 
 ' Relations Laurent (RA principal)
-Laurent --> SageMDE : via VPN\n30-40s/écran
+Laurent --> SageMDE : via VPN\n30-40s/ecran
 Laurent --> WordPPSPS : copie-colle\n3h par PPSPS
 Laurent --> WordDevis : templates
 Laurent --> ExcelL : calculs perso
@@ -105,7 +105,7 @@ Marie ..> RA2 : demande chiffres
 
 ' Relations Thomas
 Thomas --> WordPPSPS : relecture\ncommentaires Word
-Thomas ..> Email : échange PPSPS
+Thomas ..> Email : echange PPSPS
 
 ' Relations Clients
 Email ..> Client1 : envoi devis
@@ -115,14 +115,14 @@ Client1 ..> Email : demande devis
 Client2 ..> Email : demande devis
 
 note bottom
-  **PROBLÈMES ARCHITECTURE**
-  🔴 ERP Legacy ultra-lent (30-40s/écran)
-  🔴 Télétravail impossible (VPN + Citrix)
-  🔴 Documents éparpillés (200+ fichiers)
+  **PROBLEMES ARCHITECTURE**
+  🔴 ERP Legacy ultra-lent (30-40s/ecran)
+  🔴 Teletravail impossible (VPN + Citrix)
+  🔴 Documents eparpilles (200+ fichiers)
   🔴 Pas de templates automatiques
   🔴 Chaque RA a ses propres Excel
-  🔴 Pas d'intégration système
-  🔴 Pas de visibilité direction
+  🔴 Pas d'integration systeme
+  🔴 Pas de visibilite direction
   🔴 PPSPS 100% manuel (3h)
   🔴 Recherche template 30 min
 end note

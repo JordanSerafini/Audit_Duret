@@ -6,19 +6,19 @@ left to right direction
 
 actor "Laurent\n(Resp. Affaire)" as Laurent #FFB6C1
 actor "Marie\n(Directrice)" as Marie #DDA0DD
-actor "Thomas\n(Bureau Études)" as Thomas #98FB98
+actor "Thomas\n(Bureau Etudes)" as Thomas #98FB98
 actor "Client" as Client #ADD8E6
 
-rectangle "Système Direction-Affaires ACTUEL" #FFFFCC {
+rectangle "Systeme Direction-Affaires ACTUEL" #FFFFCC {
 
-  usecase "Créer\ndevis" as UC1 #FFD700
+  usecase "Creer\ndevis" as UC1 #FFD700
   note right of UC1
     🔴 2h05 par devis
     ⏰ Recherche template 30 min
     🔴 100% manuel
   end note
 
-  usecase "Générer\nPPSPS" as UC2 #FF6B6B
+  usecase "Generer\nPPSPS" as UC2 #FF6B6B
   note right of UC2
     🔴 3h00 par PPSPS
     🔴 Ctrl+F remplacer
@@ -27,13 +27,13 @@ rectangle "Système Direction-Affaires ACTUEL" #FFFFCC {
 
   usecase "Consulter\navancement affaires" as UC3 #FF6B6B
   note right of UC3
-    🔴 Impossible en temps réel
+    🔴 Impossible en temps reel
     ⏰ 3h pour compiler
   end note
 
   usecase "Suivre\nbudget affaire" as UC4 #FFD700
   note left of UC4
-    🔴 Données dispersées
+    🔴 Donnees dispersees
     ⏰ 1h30 par affaire
   end note
 
@@ -48,14 +48,14 @@ rectangle "Système Direction-Affaires ACTUEL" #FFFFCC {
   note left of UC6
     🔴 **RECHERCHE MANUELLE**
     200+ fichiers Word
-    Nommage incohérent
+    Nommage incoherent
     ⏰ 30 min de fouille
   end note
 
-  usecase "Télétravail\n(VPN/MDE)" as UC7 #FF0000
+  usecase "Teletravail\n(VPN/MDE)" as UC7 #FF0000
   note right of UC7
-    🔴 30-40s par écran
-    🔴 Timeouts fréquents
+    🔴 30-40s par ecran
+    🔴 Timeouts frequents
     🔴 VPN + Citrix
     😤 Frustration 10/10
   end note
@@ -83,7 +83,7 @@ rectangle "Outils (Chaos)" #FFE4E1 {
   usecase "MDE/Sage\n(Legacy)" as Sage #FF0000
   usecase "Word\n(Templates)" as Word #FFD700
   usecase "Excel\n(perso)" as Excel #FFD700
-  usecase "Dossiers\nPartagés" as Dossiers #FF6B6B
+  usecase "Dossiers\nPartages" as Dossiers #FF6B6B
   usecase "Outlook" as Email
   usecase "VPN/Citrix" as VPN #FF0000
 }
@@ -125,13 +125,13 @@ UC1 .> VPN : <<extend>>\nlenteur
 UC7 .> Sage : <<extend>>\nperformance catastrophique
 
 note bottom
-  **PROBLÈMES MAJEURS**
-  🔴 ERP Legacy ultra-lent (30-40s/écran)
+  **PROBLEMES MAJEURS**
+  🔴 ERP Legacy ultra-lent (30-40s/ecran)
   🔴 Recherche manuelle 200+ fichiers
   🔴 PPSPS 100% manuel (3h)
   🔴 Pas de templates automatiques
-  🔴 Pas de visibilité direction
-  🔴 Télétravail impossible
+  🔴 Pas de visibilite direction
+  🔴 Teletravail impossible
 end note
 
 @enduml

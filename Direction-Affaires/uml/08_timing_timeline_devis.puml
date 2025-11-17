@@ -1,11 +1,11 @@
 @startuml Timing_Devis
 
-title Timing Diagram - Timeline Création Devis Type
+title Timing Diagram - Timeline Creation Devis Type
 
 concise "Laurent\n(Resp. Affaire)" as Laurent
 robust "MDE/Sage" as MDE
 robust "Client" as Client
-binary "Productivité" as Productif
+binary "Productivite" as Productif
 
 ' Jour 1 - Lundi 9h00
 @0

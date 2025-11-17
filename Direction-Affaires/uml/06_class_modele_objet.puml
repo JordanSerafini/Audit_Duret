@@ -1,6 +1,6 @@
 @startuml Class_Diagram_Modele
 
-title Class Diagram - Modèle Objet Direction-Affaires
+title Class Diagram - Modele Objet Direction-Affaires
 
 ' Acteurs
 class ResponsableAffaire {
@@ -29,10 +29,10 @@ class Directrice {
 }
 
 note right of Directrice
-  🔴 **PROBLÈME ACTUEL**
+  🔴 **PROBLEME ACTUEL**
   Impossible de consulter
-  avancement en temps réel
-  ⏰ 3h pour compiler les données
+  avancement en temps reel
+  ⏰ 3h pour compiler les donnees
   Dashboards inexistants
 end note
 
@@ -46,7 +46,7 @@ class BureauEtudes {
   +verifierClauses()
 }
 
-' Entités métier
+' Entites metier
 class Devis {
   +numero: string
   +dateCreation: Date
@@ -63,12 +63,12 @@ class Devis {
 }
 
 note right of Devis
-  🔴 **PROBLÈME ACTUEL**
-  Création: 2h05
+  🔴 **PROBLEME ACTUEL**
+  Creation: 2h05
   - Recherche template: 30 min
   - Ouverture MDE: 5 min
   - Saisie 30 lignes: 1h30
-  - Vérifications: 15 min
+  - Verifications: 15 min
   - PDF & envoi: 10 min
 
   😤 Frustration: 9/10
@@ -120,7 +120,7 @@ class PPSPS {
 
 note left of PPSPS
   🔴 **CALVAIRE ACTUEL**
-  Génération: 3h00
+  Generation: 3h00
   - Recherche template: 30 min
   - Copie & Adaptation: 2h30
     • Section 1: 15 min (Ctrl+F)
@@ -159,7 +159,7 @@ class Affaire {
 }
 
 note bottom of Affaire
-  🔴 **VISIBILITÉ NULLE**
+  🔴 **VISIBILITE NULLE**
   Direction ne peut pas:
   - Suivre avancement TR
   - Consulter budgets
@@ -202,7 +202,7 @@ class Template {
 note right of Template
   🔴 **CHAOS TEMPLATES**
   - 200+ fichiers Word
-  - Nommage incohérent:
+  - Nommage incoherent:
     "PPSPS_final_v2_OK_2023.docx"
     "PPSPS_Client_A_VRAI_FINAL.docx"
   - Aucune structure
@@ -231,13 +231,13 @@ class Reliquat {
 
 note bottom of Reliquat
   🔴 **AUCUN SUIVI**
-  Reliquats non tracés
+  Reliquats non traces
   Pertes importantes
 end note
 
 ' Relations
-ResponsableAffaire "1" -- "*" Devis : crée >
-ResponsableAffaire "1" -- "*" PPSPS : génère >
+ResponsableAffaire "1" -- "*" Devis : cree >
+ResponsableAffaire "1" -- "*" PPSPS : genere >
 ResponsableAffaire "1" -- "*" Affaire : pilote >
 ResponsableAffaire "1" -- "*" Template : recherche >
 
@@ -249,7 +249,7 @@ BureauEtudes "1" -- "*" PPSPS : valide >
 Devis "1" *-- "*" LigneDevis : contient
 Devis "*" -- "1" StatutDevis
 Devis "*" -- "1" Client : pour >
-Devis "*" -- "1" Affaire : génère >
+Devis "*" -- "1" Affaire : genere >
 
 PPSPS "*" -- "1" Affaire : pour >
 PPSPS "*" -- "1" StatutPPSPS
@@ -262,29 +262,29 @@ Affaire "1" *-- "*" Reliquat : peut avoir
 Template "*" -- "1" TypeTemplate
 
 note top
-  **PROBLÈMES MODÈLE ACTUEL**
+  **PROBLEMES MODELE ACTUEL**
 
   🔴 **Processus manuels**
   - Devis: 2h05 par devis (30 lignes)
   - PPSPS: 3h00 par document
   - Templates: recherche 30 min
 
-  🔴 **Pas de visibilité**
+  🔴 **Pas de visibilite**
   - Direction aveugle
   - Avancement inconnu TR
-  - Budget dispersé
+  - Budget disperse
 
   🔴 **Performance catastrophique**
-  - ERP: 30-40s par écran
+  - ERP: 30-40s par ecran
   - VPN + Citrix lent
-  - Télétravail impossible
+  - Teletravail impossible
 
-  🔴 **Données éparpillées**
+  🔴 **Donnees eparpillees**
   - MDE/Sage + Word + Excel perso
   - 200+ fichiers templates
   - Aucune structure
 
-  Impact: Process très inefficace
+  Impact: Process tres inefficace
 end note
 
 @enduml
