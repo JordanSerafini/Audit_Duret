@@ -1,0 +1,87 @@
+@startuml UseCase_Acteurs
+
+title Use Case - Systeme SAV Maintenance (CIBLE)
+
+left to right direction
+
+actor "Gaetan\n(Technicien)" as Tech
+actor "Clothilde\n(Planning)" as Clo
+actor "Client" as Client
+actor "Direction" as Dir
+
+rectangle "ERP/CRM Terrain" {
+  usecase "Consulter\nplanning jour" as UC1
+  usecase "Remplir rapport\nintervention digital" as UC2
+  usecase "Generer devis\nterrain" as UC3
+  usecase "Pointer GPS\narrivee/depart" as UC4
+  usecase "Prendre photos\nintegrees" as UC5
+  usecase "Signature\nelectronique" as UC6
+
+  usecase "Planifier\ninterventions" as UC7
+  usecase "Gerer base\nclients (300)" as UC8
+  usecase "Valider RDV\nportail" as UC9
+  usecase "Gerer alertes\nfin contrat" as UC10
+
+  usecase "Prendre RDV\nen ligne 24/7" as UC11
+  usecase "Voir historique\ninterventions" as UC12
+  usecase "Telecharger\nrapports PDF" as UC13
+  usecase "Renouveler\ncontrat" as UC14
+
+  usecase "Consulter\ndashboards KPI" as UC15
+  usecase "Analyser\nsatisfaction" as UC16
+  usecase "Optimiser\ntournees (Zoning)" as UC17
+}
+
+Tech --> UC1
+Tech --> UC2
+Tech --> UC3
+Tech --> UC4
+Tech --> UC5
+Tech --> UC6
+
+Clo --> UC7
+Clo --> UC8
+Clo --> UC9
+Clo --> UC10
+
+Client --> UC11
+Client --> UC12
+Client --> UC13
+Client --> UC14
+
+Dir --> UC15
+Dir --> UC16
+Dir --> UC17
+
+UC2 ..> UC5 : <<include>>
+UC2 ..> UC6 : <<include>>
+
+UC7 ..> UC17 : <<extend>>\noptimisation IA
+
+UC10 ..> UC14 : <<trigger>>\nalertes auto
+
+note right of UC3
+  **NOUVEAU** : 45K€/an
+  50 devis terrain/an
+  vs 0 actuellement
+end note
+
+note right of UC4
+  **NOUVEAU** : 30K€/an
+  Refacturation heures
+  supplementaires
+end note
+
+note right of UC11
+  **NOUVEAU** : 35K€/an
+  Reduction appels -40%
+  Disponibilite 24/7
+end note
+
+note left of UC17
+  **PHASE 3** : 15K€/an
+  Optimisation tournees
+  -20% km parcourus
+end note
+
+@enduml
