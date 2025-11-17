@@ -1,0 +1,182 @@
+----------------------------------------------------------------------------------------------
+
+responsable: 
+- intervention  a signature du devis
+gere reappro , client etude, fournisseurs
+equipe qui realise le chantier
+
+creation du logicel: informatique, reunion passation chiffrage et , reu lancement repon affaire tude avchat repso,sable chantier
+
+serveru dossier , dossier etude de prix a production
+
+suivi acheminement et suivi de projet, erp 
+remarque: vieux, obsolete, ralentissement, pas mal plantage, impression pdf bof, generation rapport, connexion distance
++ : 
+- : 
+
+4 responsables affaires
+recoit reliquat chaque semaine
+
+
+réunion, chantier, role relationnel final, maitrise œuvre , plus administratif
+
+commande stratégique et materiel pus important, gros volumes
+
+validation final, gere les délais, suivi - avancement chantier
+
+planning : semaine réunion chantier, constate avancement 
+
+suivi commande plutôt ok : reliquat toutes les semaines, ds suivi des affaires logiciel remontent les affaires
+
+logiciel complet mais obsolete 
+
+sécurité pas plus important, document pas fait a faire: pssp plan prevention, fiche accueil salarié (important)
+
++ : devis fait par servuice chiffrage les gros, clients recuperent par eux en direct, chef de chantier reste, le supplément.
+-Demande maj auto prix fournisseur
+-copier un ancien devis pour repartir de lui - copier/coller  
+-probleme majeur acces a distance, tres lent, problematique 
+
+- : 
+
+
+
+----------------------------------------------------------------------------------------------
+
+chef de chantier x10-15 :
+
+travail: charge affaire donne un chantier, ensuite plans, gérer les commandes, réunion chantier, toujours sur le chantier
+
+remonté info actuellement: oral, WhatsApp, 
+
+pas de logiciels au quotidien, telephone: mails, appels, envoi plan par mail etc et enreistré sur telephone
+
++: accès au telephone
+
+entretient vehicule est géré en direct
+
+volonté max photos > serveur
+
+-- générer rapport intervention PDF petit chantier
+passe commande petit matériel
+
+
+--------------------------------------------------------------------------------------------
+
+responsable affaire :
+1 seul responsable par affaire
+
+
+--------------------------------------------------------------------------------------------
+
+responsable activité:
+
+travail: depuis qq soucis de recrutement, il assure responsable affaire pour annecy
+il fait 100% de ces devis, 
+
+Affaire > code chantier > TOUT rattacher > ceux qui ont doit passé commande
+
+communique avec tous les pôles: 2 dirigeants en direct
+
+gros chantier: tertiaire: 1 million (2.5m sur 2ans)
+
+coeur métier: moyen 50/500k
+
+clients ~20 aines
+
+volonté: 
+-devis: actuellement ouvrir logiciel devis + ouverture rexel
+-projet: avoir/etre capable anoter, demander alertes, 20devis meme client meme semaine, 9 passé tout de suite, difficulté : est ce que pour ce devis la la commande est bien passé
+groupement chiffrage - commande
+gestion: outils actuel complet, situation travau depuis logiciel
+compta: analytique  
+actuellement rien du tout 
+
+intervention avec les RH, projection annuelle
+suivi actuellement sur excel
+
+turnover par vagues, 2025
+
+recrutement : difficile
+
+suivi multi chantier: planifier 
+
+bon intervention a faire signer par ouvrier chez le client
+
+actuellemnt du mal a retrouver et faire les liens
+
+volonté consultation historique du chantier 
+
+pour petit travaux: page a4 lancement travaux : a automatiser
+
+reception liste de reserve avec levée, photos, dates > chef chantier part avec la liste et l'annoter et renvoyer par mail
+
+apres projet: RetourExpérience : respo,sable affaire , fait petit réunion de fin d'affaire mettant point sur le bon et mauvais, a faire et maintenir
+
+Reunion mensuelles clotures société avec la direction et contfolleur de gestion, tous les mois projection 1 fois par mois, reunion commercial, 
+
+fais la liste matériel
+
+remonter ouvrier > vers cadre
+
+entretient individuel
+
+remarque fin de chantier
+
+Global: logiciel actuel pas mal surtout UI UX, rapidité 
+
+tel: mail et photo surtout
+
+
++: un seul tuyau entré qui est l'affaire > qui découle sur l'affaire 
+devis accepté auto en buget comptable deja est fait 
+retour mail de la commande passé pour petits devis notemment
+acces chantier: qd affaire crée av un chef que si il est en vacances 
+rien nest en place
+
+
+
+
+
+- : création devis pas top, un peu en retard
+
+
+--------------------------------------------------------------------------------------------
+
+Asssistante relation client:
+missions quotidiennes: 
+repond au telephone: client: prise a la main, pas ticket ou suivi (postit)
+il y a equipe petit travaux, cest elle qui met dans agenda Outlook , consultation si derniere minute appelel
+
+logiciel: Mde erp, SAGE, Outlook
+
+coiolmunication equipe: technicien: tel 
+autres services: mails
+
+creation chantier
+
+classement/archivage: excel 
+
+relance: tout individuel
+
+delai traitement: environ 1 ou 2j
+
+mail par jours environ: -50mails :  demande clients, modif client
+
+questionnaire mis en place pour satisfaction client
+
+pas spécialement relance, un petit peu
+
+delai moyen emiision: généralement semaine
+
+modification pour erp de base: quand créer nouveau client actuemment 2 bases
+
++ : 
+
+- :  quand on fait des devis sur sage, on les enleve du logiciel pour mettre dossier partagé pour tous, ajout autre fichiers 
+
+
+a apporter: relance , pop up, 
+système relance automatique, pas besoin resumé mail journalier
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

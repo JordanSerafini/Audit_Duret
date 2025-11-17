@@ -1,0 +1,60 @@
+bcp de fiches produits a faire valider (propositionsau client) ans la phase devis
+
+signatuere, comme le plan
+
+possibilité agrégager des documents complémentaoires dans lexport 
+
+
+gestion des litiges et recommandé: remontée infopriorisé
+
+
+- transparence de la donnée, des chiffres : ex: analys+ gestion chantier, le chef chantier doit y avoir acces, augmenter la transparence de certain niveau information
+
+- tableau de bord excel KPI, exercice
+
+controlleur gestion > intégration globale au dela de la production marge etc.. Excel
+
+fiabilité
+
+priorité entreprise > logiciel aide et ne dirige pas
+
+nouvel arrivant: pas 4j de formations
+
+mauvaise remontée information: trop longue, trop tard, mauvaise interprétation
+
+alerte / kpi
+
+erp et outils associé.
+
+apporvusinement, gestion affaire, devis, suivi client, fournisseurs
+
+excel, tout perso
+
+
+app importante, accès au fichier
+
+gestion en mode projt > recu de la data alimenté et stocké dans un dossier
+
+alerte-anomalies
+
+probleme visio , regler probleme technique
+
+
+- irrite: de plus en plus ds lentrperise de focntion transversale: ex le bureau detude doit trabuoler pour toute lentreprise, les demandes viennetn de x personnes, doivent implémenter le plannign des equipes: concatener demande , vrai sujet de progression > traitement 
+
+simplifier l'usage, multi casquette: des besoins a qualifier > transcrit en donnée > donnée traitées de manieres équitables
+
+
+- gestion des stocks, réutilisation du stock : important
+valorisaiton d'un meme produit a 2 prix différents
+
+- ne plus receptionner manuellement volonté, bcp temps perdu en comptage  
+
+- puce rfid cf decathlon
+
+- 
+
+
+
+
+

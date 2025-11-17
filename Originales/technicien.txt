@@ -1,0 +1,49 @@
+technicien:
+installation entretien
+rdv client, relevé, maintenance entretient, 
+
+outils utilisé: gestion assisté ordi
+
+appli
+
+planning: Clothilde prend rdv; tous les mercredi reunion
+actuellment base de donnée client sur excel, 
+
+zoning intéréssant par exemple pour l'entretien / maintenance
+
+client > compte cloent chez eux: agenda client se connecte et choisit 
+
+acces app: plan , prestation vendu
+
+rapport intervention
+
+contrat entretien (word) > interventions en décoiulant et acces service de maointenance
+
+client en maintrnant : 250/300
+
+axe développement
+
+gaetan: quand il va en clientele, souvent demande de devis , ojd on sait la documenter, possibilité de générer les devis en live 
+- les interventions sont sous cerfa, ojd ils sont tous rempli a la main
+signature > workflow 
+
+demande dépannage > compte rendu
+
+pointage: heure arrivée, heure départ
+
+voir dépassement heure, refacturation difficile
+
+photos ? > app , avant après, suivi historique , date / endroit
+
+certificat de mise en service : digitalisé : actuellement papier scanné
+
+alerte 
+
+le client : code accès, platforme sur le site centralisé
+
+
+enquete satisfaction a développer, systematisation
+
+
+
+

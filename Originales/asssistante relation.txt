@@ -1,0 +1,43 @@
+asssistante relation:
+
+ouvrage (nomenclature) , devis volonté préremplir
+
+mise a jour de status automatisée sur les devis
+
+notion webserver, se connecter sur loutils
+
+papier actuellemnt, suivi client
+
+donnée entrée multiple: 
+
+pas suivi appelle,  
+volonté tracabilité
+
+délai rappelle: 
+
+clients tous les jours ok, apres vente pas suffisant
+
+planning: sur loutils, partage avec les techniciens
+partie chantier: affectation sur app éventuellement 
+
+ bon intevrention via le tel
+
+suivi demande : exemple technicien dit cliente demande devis sur X choses
+
+Hors ligne
+
+disponibilité, stock: pas vu sur inventaire , fiabilité, cout du matériel, 
+coté achat: transformer nature des devis en commande 
+long de consolidé le débourser dans le devis, double saisie chronophage
+
+volume mails: client, demande inter, renseignement : rien automatisé pour le moment, 
+
+
+important: 
+
+planning de gaetan, prise de rdv pour les entreitent: acutel: tableau excel client, mail reponse client attend, resaisir. Préserver 
+
+automatisé tel > planning gaetan
+
+centralisé information pour gagner du temps
+
