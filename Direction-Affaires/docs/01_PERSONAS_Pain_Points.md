@@ -244,21 +244,21 @@
 
 ### Gains Attendus Solution Moderne
 
-| Solution | Gain/an |
-|----------|---------|
-| ERP rapide | 120K€ |
-| Templates | 130K€ |
-| PPSPS auto | 55K€ |
-| Reliquats | 80K€ |
-| Maj prix auto | 35K€ |
-| **TOTAL** | **420K€** |
+| Solution | Gain Temps Mesuré |
+|----------|-------------------|
+| ERP rapide (< 2s) | 95% temps chargement économisé |
+| Templates devis | 2h05 → 31 min (75% plus rapide) |
+| PPSPS auto | 3h00 → 27 min (85% plus rapide) |
+| Reliquats tracés | 100% vs 0% actuellement |
+| Maj prix auto | 1 semaine/an → automatique |
+| Visibilité direction | 3h → Temps réel |
 
 ---
 
 ## 🎯 CONCLUSION
 
-**Actuel :** 510K€/an pertes + frustration  
-**Solution Odoo :** 420K€/an gains  
-**ROI :** Gains >> Coûts (13.8K€/an)
+**Actuel :** Inefficacité majeure (2h05 devis, 3h PPSPS, 30-40s/écran) + Frustration 9-10/10
+**Solution Moderne :** Gains temps 75-85% + Visibilité temps réel + Télétravail fonctionnel
+**Satisfaction attendue :** > 4.5/5
 
-➡️ **GO immédiat**
+➡️ **Transformation nécessaire** - Voir [Plan d'Action](../plan/Plan_Action_Direction_Affaires.md)
