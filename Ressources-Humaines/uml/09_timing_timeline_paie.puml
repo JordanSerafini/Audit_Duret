@@ -252,7 +252,7 @@ end note
 @71
 Sophie is "Repos"
 
-note bottom
+note bottom of Sophie
   **BILAN TEMPOREL MENSUEL**
 
   ⏰ **DURÉE**: Tout le mois (réparti)
@@ -275,12 +275,12 @@ note bottom
      • Avant le 9: Course contre la montre
      • Le 16: Calcul TR cauchemar
 
-  💰 **COÛT MENSUEL**
-     • Sophie: 25-30h × temps = temps mensuel: 25-30h
-     • Virginie: 4-6h 
+  💰 **TEMPS MENSUEL**
+     • Sophie: 25-30h
+     • Virginie: 4-6h
      = **temps mensuel important**
 
-  💰 **COÛT ANNUEL: temps annuel important**
+  💰 **TEMPS ANNUEL: temps annuel important**
 
   💬 "Je passe 3 JOURS par mois sur la paie.
       C'est du travail de robot, pas de RH..."

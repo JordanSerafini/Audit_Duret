@@ -16,110 +16,84 @@ Chantier is 1
 
 @5
 Marc is ChercheDoc
-note bottom: Cherche bon papier\n⏰ 5 min
 
 @10
 Marc is RemplitBon
-note bottom: Remplit à la main\n🔴 Référence imprécise
 
 @15
 Marc is AppelSylvie
 Sylvie is Reunion
-note bottom: 🔴 Pas de réponse\nEn réunion
 
 @40
 Marc is Attend
-note bottom: Rappelle x3\n⏰ 25 min perdu
 
 @45
 Marc is AppelSylvie
 Sylvie is TraiteAppel
-note bottom: Enfin disponible!
 
 @50
 Marc is Attend
 Sylvie is ChercheSage
-note bottom: Recherche produit\n🔴 12 références!
 
 @62
 Sylvie is ChercheExcel
-note bottom: Cherche fournisseur\n⏰ 8 min
 
 @70
 Sylvie is AppelFourn
-note bottom: Appel téléphone\n🔴 Pas de cmd en ligne\n⏰ 15 min
 
 @85
 Sylvie is EmailConfirm
-note bottom: Email confirmation\n🔴 RE-SAISIE #4
 
 @95
 Sylvie is SaisieSage
-note bottom: Saisit Sage\n🔴 RE-SAISIE #5
 
 @100
 Sylvie is SaisieExcel
-note bottom: Saisit Excel\n🔴 RE-SAISIE #6
 
 @105
 Sylvie is Disponible
 Marc is Attend
-note bottom: Attente livraison
 
-' Blocage chantier
 @110
 Chantier is 0
-note bottom: ⛔ CHANTIER BLOQUÉ\nChantier bloqué
 
-' Jour 2 - Mardi (attente)
 @1440
 Marc is AppelSuivi
 Sylvie is RenseigneMarc
-note bottom: Marc inquiet\nAppelle pour suivi
 
 @1455
 Marc is Attend
 Sylvie is Disponible
 
-' Jour 3 - Mercredi - Livraison
 @2880
 Eric is Reception
-note bottom: Camion arrive
 
 @2895
 Eric is ChercheDoc
-note bottom: Cherche bon de cmd\n⏰ 15 min
 
 @2910
 Eric is CompareRef
-note bottom: Compare références\n🔴 Nomenclatures ≠
 
 @2920
 Eric is AppelSylvie
 Sylvie is RenseigneEric
-note bottom: Vérification\n⏰ 10 min
 
 @2930
 Eric is Compte
 Sylvie is Disponible
-note bottom: Compte manuellement\n🔴 Pas de scan\n⏰ 10 min
 
 @2940
 Eric is Range
-note bottom: Range "quelque part"\n🔴 Pas de plan
 
 @2950
 Eric is AttendPC
-note bottom: Attend le PC\n🔴 1 seul poste!\n⏰ 15 min
 
 @2965
 Eric is SaisieSage
-note bottom: Saisit réception\n🔴 RE-SAISIE #7\n⏰ 20 min
 
 @2985
 Eric is Attente
 Marc is RecupereDepot
-note bottom: Marc va au dépôt
 
 @3000
 Marc is RetourChantier
@@ -130,12 +104,10 @@ Marc is Deballage
 @3020
 Marc is ERREUR
 Chantier is 0
-note bottom: ❌ MAUVAIS CÂBLE!\n🔴 Chantier bloqué 3j\nChantier bloqué perdu
 
 @3025
 Marc is AppelFurieux
 Sylvie is GereErreur
-note bottom: 😭 Marc furieux\nIl faut recommencer
 
 @3040
 Marc is Attend
