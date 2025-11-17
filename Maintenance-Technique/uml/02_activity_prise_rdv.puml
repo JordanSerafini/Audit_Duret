@@ -1,0 +1,80 @@
+@startuml Activity_Prise_RDV
+
+title Processus Prise RDV Maintenance - ACTUEL vs CIBLE
+
+|Client|
+start
+:Client souhaite\nRDV entretien;
+
+|#LightCoral|ACTUEL|
+:Appelle Clothilde\n(8h-18h uniquement);
+
+|Clothilde|
+:Décroche téléphone;
+:Recherche client\nExcel (2 min);
+:Vérifie contrat\nWord (2 min);
+:Consulte planning\nOutlook (3 min);
+
+if (Créneau dispo ?) then (oui)
+  :Propose créneau;
+else (non)
+  :Recherche autre\ncréneau (5 min);
+  :Propose;
+endif
+
+|Client|
+:Accepte ou\nnégocie;
+
+|Clothilde|
+:Saisie Outlook\n(2 min);
+:Saisie Excel\n(1 min);
+:Saisie GAO\n(2 min);
+:Rédaction email\nconfirmation\n(5 min);
+
+|Client|
+:Reçoit email\nconfirmation;
+
+stop
+
+note right
+**TEMPS TOTAL : 19 min**
+Client attend : 8 min
+Clothilde : 19 min
+Triple saisie (Outlook+Excel+GAO)
+Disponibilité 8h-18h uniquement
+end note
+
+|#LightGreen|CIBLE (Portail Client)|
+|Client|
+start
+:Se connecte\nportail web\n(20h30 - soir);
+
+:Sélectionne\n"Prendre RDV";
+
+:Calendrier affiche\ncréneaux dispos\nzone géographique;
+
+:Choisit créneau\n(2 clics);
+
+:Confirmation\nautomatique;
+
+:Reçoit email +\nSMS rappel J-2;
+
+|Clothilde|
+:Reçoit alerte\n"Nouveau RDV";
+
+:Valide RDV\n(2 min);
+
+stop
+
+note right
+**TEMPS TOTAL : 3 min**
+Client : 1 min (autonome)
+Clothilde : 2 min (validation)
+Zéro ressaisie
+Disponibilité 24/7
+
+**GAIN : 17 min × 600 RDV**
+**= 170h/an = 8,500€**
+end note
+
+@enduml
