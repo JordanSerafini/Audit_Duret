@@ -1,0 +1,46 @@
+@startmindmap Pain_Points_Service_Client
+
+title Pain Points Service Client - 748K€/an
+
+* 🔴 SERVICE CLIENT\n**748K€/an**
+** Temps perdu\n**154K€/an**
+*** Prise RDV (10h/j)\n110K€/an
+*** Recherche info\n5.5K€/an
+*** Double saisie\n7.9K€/an
+*** Relances manuelles\n30K€/an
+
+** Opportunités perdues\n**294K€/an**
+*** Demandes techniciens\n93.6K€/an
+*** Clients SAV\n100K€/an
+*** Devis terrain\n45K€/an
+*** Refacturation heures\n30K€/an
+*** Clients oubliés (post-it)\n25K€/an
+
+** Clients perdus\n**300K€/an**
+*** Insatisfaction (rétention -10%)\n200K€/an
+*** Délais inacceptables\n50K€/an
+*** Oublis\n50K€/an
+
+left side
+
+** Système post-it\n**🔴 Critique**
+*** Aucune traçabilité\n(80% risque oubli)
+*** Post-it perdu/jeté\n10 clients/an perdus
+
+** Données éparpillées\n**🔴 Critique**
+*** 7 outils (ERP, SAGE, Excel...)\nAucune intégration
+*** Double/triple saisie\nIncohérences
+
+** Planning RDV archaïque\n**🔴 Critique**
+*** 48h pour RDV\nvs 2 min possible
+*** Excel non sync\nGaëtan pas consulté
+
+** CERFA papier\n**🟠 Important**
+*** Chronophage (10 min/intervention)\n400h/an
+*** Illisible\nPas pro
+
+** Portail client inexistant\n**🟠 Important**
+*** Appels entrants élevés\n-40% possible
+*** Disponibilité 8h-18h\nvs 24/7
+
+@endmindmap

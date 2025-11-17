@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for dir in \"c:\\Users\\j.serafini\\Desktop\\Audit_Duret\"/*/)",
+      "Bash(done)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

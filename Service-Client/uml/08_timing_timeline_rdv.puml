@@ -1,0 +1,70 @@
+@startuml Timing_Timeline_RDV
+
+title Timeline Comparée - Prise de RDV
+
+robust "Système ACTUEL (48h)" as Actuel
+concise "Système CIBLE (2min)" as Cible
+
+@0
+Actuel is "Appel client"
+Cible is "Appel/Portail"
+
+@5
+Actuel is "Cherche post-it"
+
+@10
+Actuel is "Recherche client\n(3 outils)"
+
+@15
+Actuel is "Propose créneau\n(INCERTAIN)"
+
+@20
+Actuel is "Mail Gaëtan"
+
+@420
+Actuel is "Attend 7h..."
+
+@425
+Actuel is "Gaëtan répond"
+
+@430
+Actuel is "Appel client\n(répondeur)"
+
+@435
+Actuel is "Mail client"
+
+@900
+Actuel is "Attend 15h..."
+
+@905
+Actuel is "Client répond"
+
+@910
+Actuel is "Saisie Excel"
+
+@915
+Actuel is "Saisie Outlook"
+
+@920
+Actuel is "Mails confirmation"
+Cible is "RDV confirmé"
+
+@2880
+Actuel is "RDV confirmé\nAPRÈS 48H !!"
+
+@0
+Cible is "Client portail"
+note bottom: Consultation créneaux disponibles
+
+@1
+Cible is "Choisit créneau"
+note bottom: 1 clic
+
+@2
+Cible is "Confirmation auto"
+note bottom: Email + SMS automatiques\nSync planning automatique
+
+highlight 0 to 2880 #FFAAAA : 48 HEURES (Système actuel)
+highlight 0 to 2 #AAFFAA : 2 MINUTES (Système cible)
+
+@enduml

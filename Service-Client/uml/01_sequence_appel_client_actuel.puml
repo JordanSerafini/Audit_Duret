@@ -1,0 +1,150 @@
+@startuml Appel_Client_Service_Actuel
+
+title Processus Appel Client - ÉTAT ACTUEL (Système Post-it)
+
+actor "Client\nM. Dupont" as Client #FFB6C1
+actor "Claire\n(Assistante)" as Claire #ADD8E6
+actor "Gaëtan\n(Technicien)" as Gaetan #98FB98
+participant "Post-it" as Postit #FFD700
+participant "MDE ERP" as ERP #FF6B6B
+participant "SAGE" as SAGE #FF6B6B
+participant "Excel" as Excel #FFD700
+participant "Outlook" as Outlook
+
+== LUNDI 9:15 - Appel Entrant ==
+
+note over Client #FFAAAA
+  **Problème électrique**
+  Tableau dysfonctionnel
+end note
+
+Client -> Claire: 📞 Appel téléphonique
+
+note over Claire #FF6B6B
+  🔴 **PAS DE CRM**
+  Aucune remontée fiche auto
+end note
+
+Claire -> Postit: Cherche post-it vierge
+note right #FF6B6B
+  ⏰ 30 secondes
+  🔴 Risque perte 80%
+end note
+
+Claire -> Postit: Note "M Dupont pb tableau"
+note right #FF6B6B
+  🔴 **Informations incomplètes**
+  Pas de n° téléphone
+  Pas d'adresse
+end note
+
+Claire -> ERP: Ouvre... ferme
+Claire -> SAGE: Ouvre... ferme
+Claire -> Excel: Ouvre enfin
+note right #FF6B6B
+  🔴 **Données éparpillées**
+  ⏰ 5 minutes de recherche
+end note
+
+Claire -> SAGE: Trouve client
+note right #FFD700
+  ⚠️ Historique incomplet
+  ❌ Pas d'historique appels
+end note
+
+Claire -> Client: "Je vous rappelle ce soir"
+note over Claire #FF6B6B
+  🔴 **Pas de confirmation immédiate**
+  Délai inacceptable
+end note
+
+note over Claire
+  😰 "J'espère que je vais pas oublier..."
+end note
+
+== LUNDI 10:45 - Recherche Technicien ==
+
+Claire -> Gaetan: 📞 Appel
+Gaetan -x Claire: Pas de réponse
+note right #FF6B6B
+  🔴 Sur intervention
+  ⏰ 2 minutes perdues
+end note
+
+Claire -> Gaetan: 💬 SMS
+note right #FF6B6B
+  🔴 **Pas de système structuré**
+  "Client Dupont pb tableau peux tu?"
+end note
+
+note over Claire
+  ⏰ **ATTENTE... ATTENTE...**
+  Aucune notification système
+end note
+
+== LUNDI 16:00 - Gaëtan répond ENFIN ==
+
+Gaetan -> Claire: 💬 "Ok demain 14h"
+
+Claire -> Postit: Regarde post-it...
+note over Claire #FF0000
+  😱 **CATASTROPHE**
+  Numéro client pas noté !!
+end note
+
+Claire -> SAGE: Recherche n° téléphone
+note right #FF6B6B
+  ⏰ 3 minutes
+end note
+
+Claire -> Client: 📞 Appel
+Client -x Claire: Répondeur
+note right #FFD700
+  😕 Client absent 17h
+end note
+
+Claire -> Outlook: Écrit mail MANUELLEMENT
+note right #FF6B6B
+  🔴 **Pas de template**
+  ⏰ 5 minutes
+end note
+
+Claire -> Postit: Jette le post-it
+note right #FF0000
+  🔴 **AUCUNE TRAÇABILITÉ conservée !!**
+end note
+
+== MARDI 13:00 - Client rappelle ÉNERVÉ ==
+
+Client -> Claire: 📞 "Vous deviez me rappeler hier soir !!"
+note over Claire #FF0000
+  😱 **OUBLI**
+  Post-it jeté trop tôt
+end note
+
+Claire -> Client: "Toutes mes excuses..."
+note over Client
+  😠 Image dégradée
+  Satisfaction 4/10
+end note
+
+Claire -> Postit: NOUVEAU post-it
+note right #FF6B6B
+  🔴 **Retour au même système défaillant**
+end note
+
+== BILAN ==
+
+note over Client, Outlook #FFCCCC
+  **MÉTRIQUES PROCESSUS**
+  ⏰ Durée totale: **2 JOURS**
+  📞 Contacts: **8** (appels, SMS, mails)
+  ⏱️ Temps perdu: **40 minutes**
+  📝 Post-it: **2** (dont 1 jeté prématurément)
+  🔴 Risque oubli: **80%**
+  😤 Satisfaction: **4/10**
+
+  💰 **COÛT: 748K€/AN**
+end note
+
+@enduml
