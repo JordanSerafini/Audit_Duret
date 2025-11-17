@@ -1,0 +1,59 @@
+@startuml Activity_Generation_Rapport
+
+title Workflow Generation Rapport Intervention
+
+start
+
+:Chef chantier termine\nintervention petit chantier;
+
+if (Systeme ?) then (ACTUEL: Manuel)
+
+  :Rentrer au bureau ou a la maison;
+  note right: Pas sur chantier,\ndoit attendre
+
+  :Ouvrir PC\nLancer Word/Excel;
+
+  :Saisir manuellement :\n- Client, adresse\n- Date, heures debut/fin\n- Materiel utilise\n- Observations;
+  note right: 15-20 min saisie
+
+  :Telecharger photos depuis telephone;
+  note right: Cable USB,\nrecherche photos pertinentes
+
+  :Inserer photos dans Word;
+  note right: 5-10 min
+
+  :Generer PDF;
+
+  :Envoyer email manuel\nClient + Bureau;
+  note right: 30-45 min total
+
+else (CIBLE: Application Mobile)
+
+  :Ouvrir app mobile\nModule Rapports;
+  note left: Sur chantier,\nimmediatement
+
+  :Selectionner chantier\n(pre-rempli);
+  note left: Infos client/adresse\nautomatiques
+
+  :Verifier heures debut/fin\n(tracees automatiquement);
+  note left: GPS + timestamps
+
+  :Photos avant/after\n(deja uploadees);
+  note left: Prises avec app,\nautomatiquement attachees
+
+  :Ajouter observations\n(optionnel, voix possible);
+  note left: Reconnaissance vocale
+
+  :Clic "Generer Rapport PDF";
+  note left: Template automatique
+
+  :App genere PDF\n+ envoie auto email;
+  note left: 2 min total
+
+endif
+
+:Rapport PDF envoye\nClient + Bureau;
+
+stop
+
+@enduml

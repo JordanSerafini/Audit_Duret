@@ -1,0 +1,67 @@
+@startuml UseCase_Application_Mobile
+
+title Cas d'Usage Application Mobile Chantier
+
+left to right direction
+
+actor "Chef Chantier" as Chef
+actor "Responsable Affaire" as RA
+actor "Bureau Etudes" as BE
+actor "Magasinier" as Mag
+actor "Client" as Client
+
+rectangle "Application Mobile Chantier" {
+
+  usecase "Consulter plans" as UC1
+  usecase "Annoter plans" as UC2
+  usecase "Prendre photos" as UC3
+  usecase "Upload auto photos" as UC4
+  usecase "Generer rapport PDF" as UC5
+  usecase "Signer electroniquement" as UC6
+  usecase "Remonter incident" as UC7
+  usecase "Commander materiel" as UC8
+  usecase "Suivre livraisons" as UC9
+  usecase "Consulter budget chantier" as UC10
+  usecase "Voir planning equipe" as UC11
+  usecase "Messagerie chantier" as UC12
+  usecase "Mode hors ligne" as UC13
+}
+
+Chef --> UC1
+Chef --> UC2
+Chef --> UC3
+Chef --> UC4
+Chef --> UC5
+Chef --> UC6
+Chef --> UC7
+Chef --> UC8
+Chef --> UC9
+Chef --> UC10
+Chef --> UC11
+Chef --> UC12
+Chef --> UC13
+
+UC7 ..> RA : notifie
+UC7 ..> BE : notifie (si technique)
+UC8 ..> Mag : notifie
+UC5 ..> Client : envoie PDF
+
+UC4 ..> UC3 : inclut
+UC5 ..> UC4 : inclut
+UC6 ..> UC5 : etend
+
+note right of UC13
+  Fonctionnement sans connexion
+  Synchronisation automatique
+  des que connexion retablie
+end note
+
+note bottom of UC7
+  Formulaire structure:
+  - Type incident
+  - Urgence
+  - Photos
+  - Description
+end note
+
+@enduml
