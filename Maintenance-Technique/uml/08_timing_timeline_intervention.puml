@@ -51,28 +51,21 @@ Cible@1 <-> @21 : 20min
 Cible@21 <-> @116 : 1h35
 Cible@116 <-> @138 : 3min
 
-highlight 21 to 26 #LightCoral : Temps perdu (5 min)
-highlight 116 to 135 #LightCoral : CERFA + photos (19 min)
+highlight 21 to 26 #LightCoral : Temps perdu
+highlight 116 to 135 #LightCoral : CERFA + photos
 
-highlight 116 to 138 #LightGreen : Rapport digital (3 min seulement)
+highlight 116 to 138 #LightGreen : Rapport digital
 
-note bottom
-**COMPARAISON** :
-ACTUEL :
-• Total : 2h44 (164 min)
-• Dont intervention : 1h30 (90 min)
-• Dont admin : 1h14 (74 min) ← TEMPS PERDU
+note bottom of Actuel
+  ACTUEL : 2h44 (164 min)
+  Admin : 1h14 (74 min) perdu
+end note
 
-CIBLE :
-• Total : 2h17 (137 min)
-• Dont intervention : 1h35 (95 min) [meme duree]
-• Dont admin : 0h42 (42 min)
-
-**GAIN : 27 min/intervention**
-× 4 interventions/jour
-× 220 jours/an
-× 5 techniciens
-= **1,980h/an = 99,000€**
+note bottom of Cible
+  CIBLE : 2h17 (137 min)
+  Admin : 0h42 (42 min)
+  GAIN : 27 min/intervention
+  = 1,980h/an = 99,000 euros
 end note
 
 @enduml

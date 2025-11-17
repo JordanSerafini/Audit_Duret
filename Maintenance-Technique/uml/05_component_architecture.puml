@@ -19,7 +19,7 @@ package "ERP/CRM Terrain (SaaS Cloud)" {
   Workflows ..> Analytics : logs
 }
 
-package "Donnees (Data)" {
+package "Donnees Data" {
   database "Base ERP\n(PostgreSQL)" as DB {
     [Tables]
     [Clients]
@@ -49,7 +49,7 @@ package "Donnees (Data)" {
   end note
 }
 
-package "Integrations (Externe)" {
+package "Integrations Externe" {
   [GAO\nActuel] as GAO
   [SAGE\nComptabilite] as SAGE
   [Twilio\nSMS] as SMS
@@ -72,7 +72,7 @@ Analytics --> DB : read-only
 AppMobile --> Cloud : upload\nphotos/PDF
 PortailWeb --> Cloud : download\nrapports
 
-CRM <--> GAO : API/CSV\nconsultation
+CRM <--> GAO : API CSV\nconsultation
 CRM --> SAGE : facturation\nautomatique
 Workflows --> SMS : notifications\nclients
 Workflows --> Email : confirmations\nalertes
