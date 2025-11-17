@@ -1,0 +1,206 @@
+# 1️⃣ Achats – Stocks – Logistique
+
+## Contexte & enjeux
+
+L'entreprise gère un volume important de commandes (9 à 11 000 références/an) avec des délais courts : 80 % des flux livrés en 24 h. Mais le processus est fragmenté et génère des pertes de temps et d'information.
+
+## Points de souffrance
+
+### Fiabilité des livraisons
+
+- Environ la moitié seulement des commandes arrivent complètes.
+- L'application Rexel (bons de livraison) n'assure pas le suivi des problèmes de picking.
+
+### Suivi des reliquats
+
+- Le suivi des reliquats n'est pas généralisé.
+- Pas de reporting hebdomadaire par chantier.
+
+### Retours & traçabilité
+
+- Les retours sont aujourd'hui saisis manuellement (fournisseur, montant…).
+- Impossible de relier simplement un retour à la commande d'origine.
+- Traçabilité insuffisante de bout en bout.
+
+### Gestion du stock et des références
+
+- Inventaires très chronophages.
+- Pas d'outils pour alerter sur les références obsolètes ou périmées.
+- Mise à jour automatique des prix absente, entraînant erreurs et incohérences (ex. 2 tarifs pour le même article).
+- Base de données jugée « chaotique ».
+
+### Pilotage des achats
+
+- Seuils d'approvisionnement (en €) non définis, donc pas de pilotage automatique.
+- Risque de commandes directes chantiers non contrôlées.
+
+## Besoins exprimés
+
+- **Un workflow unique "de la commande au retour"** : création, réception, reliquats, retours et avoirs intégrés.
+- **Alertes automatisées** : reliquats, livraison partielle, prix plus bas chez un autre fournisseur.
+- **Optimisation des stocks** : IA pour proposer réapprovisionnements ou sorties de stock, inventaire simplifié.
+- **Gouvernance des données articles** : gestion de l'obsolescence, mise à jour tarifaire fiable (API fournisseurs).
+- **Contrôle centralisé** : toute commande validée par le bureau/dépôt, blocage des approvisionnements directs chantiers.
+
+---
+
+# 2️⃣ Ressources Humaines
+
+## Contexte & enjeux
+
+Près de 100 collaborateurs, avec une forte proportion de personnel chantier et d'intérimaires. Les outils actuels (SAGE, Popaye, MDE) couvrent des morceaux du processus mais ne communiquent pas efficacement.
+
+## Points de souffrance
+
+### Suivi des heures et des indemnités
+
+- Calcul des indemnités km : départ non sélectionnable automatiquement.
+- Popaye gère bien les heures passées et les heures sup (paiement/mise de côté) mais reste cantonné à l'historique.
+- Projection d'activité impossible.
+
+### Gestion des intérimaires
+
+- Suivi dans des Excel séparés, pas d'intégration au SI RH.
+
+### Workflows administratifs lourds
+
+- Tickets restaurant, notes de frais, absences : multiples exports et vérifications manuelles.
+- Onboarding : nécessité de prévenir 4–5 personnes à chaque embauche.
+
+### Pointage et affectation
+
+- Souhait que les managers saisissent les heures plutôt que les collaborateurs.
+- Outil actuel peu ludique, pas de vision globale par chantier/type de travaux.
+
+## Besoins exprimés
+
+- **Outil RH centralisé** : registre du personnel, contrats, absences, notes de frais.
+- **Automatisation des workflows** : onboarding, absences, tickets restaurant, notes de frais.
+- **Pointage chantier** : affectation par type de travaux, interface simple, éventuellement gamification.
+- **Intégration des intérimaires** dans le système RH.
+- **Suivi et reporting RH** : entretiens d'intégration, rapports d'étonnement, interviews d'exit.
+
+---
+
+# 3️⃣ Comptabilité & Gestion
+
+## Contexte & enjeux
+
+Le pilotage économique des chantiers repose sur des points de gestion mensuels longs (~1 mois), limitant la réactivité.
+
+## Points de souffrance
+
+### Clôtures et reporting lents
+
+- Retard lié aux BL et à la saisie incomplète des heures.
+
+### Manque de suivi chantier en temps réel
+
+- Pas de vision partagée (notes d'affaires dispersées).
+
+### Écarts entre paie et comptabilité
+
+- Heures sup, paniers, grands déplacements créent un décalage.
+- Pas de "compte d'écart" formel.
+
+### Projection insuffisante
+
+- Difficile de prévoir dépenses, marge, chiffre d'affaires en cours d'année.
+- Chantiers à cheval sur deux exercices non correctement ventilés.
+
+## Besoins exprimés
+
+- **Point de gestion hebdomadaire** : marge physique, état d'avancement.
+- **Comptabilité prédictive** : IA pour dépenses à venir, projection CA.
+- **Segmentation par activité** (maintenance, logement, montagne…) pour mieux analyser la rentabilité.
+- **Blocage mensuel en comptabilité** pour fiabiliser les clôtures.
+- **Outil intégré** (Sage BI, OptimBTP) capable d'importer les données chantiers en temps réel.
+- **Gestion des véhicules** : affectation dynamique avec refacturation automatique au bon chantier.
+
+---
+
+# 4️⃣ Chiffrage, Devis & Bureau d'Études
+
+## Contexte & enjeux
+
+Le chiffrage est volumineux et chronophage, avec des devis pouvant atteindre 3 000 lignes. La vérification des prix et des marges est un goulot d'étranglement.
+
+## Points de souffrance
+
+### Lenteur et complexité
+
+- Copie/colle Excel nécessaire, logiciel très lent, pas d'enregistrement auto.
+- Vérification manuelle de chaque prix fournisseur.
+
+### Fiabilité des données prix
+
+- Tarifeo parfois peu fiable, remises exceptionnelles difficiles à tracer.
+- Mise à jour tarifaire non automatisée.
+
+### Suivi des marges
+
+- Ventilation des frais annexes manuelle, risque de frais cachés.
+
+### Gestion des variantes
+
+- Devis optionnels/variantes pas gérés nativement.
+
+## Besoins exprimés
+
+- **Intégration d'une feuille de marge** directement dans le logiciel, avec calcul automatique des frais annexes.
+- **Mise à jour tarifaire via API fournisseurs** (ex. Rexel).
+- **Enregistrement automatique des devis**, DPGF en copier-coller rapide.
+- **Analyse IA** : statistiques de taux de réussite, prédiction basée sur chantiers comparables.
+- **Suivi des modifications** sur documents, intégration de notes et fiches techniques.
+
+---
+
+# 5️⃣ Système d'Information & Données
+
+## Points de souffrance
+
+- **Qualité des données** : base de données jugée chaotique, erreurs multiples, absence de mise à jour prix automatique.
+- **Manque de gouvernance** : rôles/permissions à clarifier, suivi de l'accès aux données insuffisant.
+
+## Besoins exprimés
+
+- **Gouvernance de la donnée** : politique de mise à jour, gestion des droits d'accès.
+- **Exploitation IA** : pour la prédiction (stocks, devis, prévisions financières, recommandations fournisseurs).
+
+---
+
+# Enjeux stratégiques transverses
+
+- **Fiabiliser la donnée** : avant toute IA ou automatisation, corriger la base de données et mettre en place une gouvernance claire.
+- **Automatiser les workflows clés** : achats/retours, RH (onboarding, absences), compta (clôture mensuelle), chiffrage (devis, marges).
+- **Passer d'une vision mensuelle à une vision en temps réel** : points de gestion hebdomadaires, tableau de bord unifié.
+- **Mettre en place des capacités prédictives** : IA pour anticipation des achats, prévisions de CA/marge, optimisation du stock.
+- **Réduire la charge manuelle** : supprimer les saisies redondantes (Excel, copier-coller) et fiabiliser les intégrations (ERP, API fournisseurs).
+
+---
+
+# Proposition de trajectoire
+
+## Court terme (0-6 mois)
+
+- Nettoyage et gouvernance de la base de données.
+- Automatisation des retours de stock et des reliquats.
+- Blocage des approvisionnements directs chantiers.
+
+## Moyen terme (6-18 mois)
+
+- Mise en place d'un ERP ou d'une refonte SI intégrant achats, RH et comptabilité.
+- Déploiement d'un outil RH centralisé et d'un module de pointage chantier.
+
+## Long terme (>18 mois)
+
+- Intégration de modules prédictifs IA (achats, CA, marge).
+- Analytique avancée (segmentation activités, prévisions commerciales).
+
+---
+
+# 🔑 Résumé exécutif
+
+- **Les processus actuels sont fortement silotés**, reposant sur de nombreux fichiers Excel et des outils partiellement connectés (SAGE, Popaye, MDE, Tarifeo, Rexel).
+- **Les conséquences** : perte de temps, erreurs de prix, manque de visibilité en temps réel et faible capacité prédictive.
+- **La priorité** est de fiabiliser la donnée et d'automatiser les workflows critiques, avant de déployer des outils d'IA ou de reporting avancé.

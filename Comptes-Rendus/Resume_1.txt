@@ -1,0 +1,209 @@
+1️⃣ Gestion des commandes, stocks & logistique
+Points clés
+
+Commandes & reliquats
+
+80 % des flux livrés en 24 h, mais ~50 % seulement arrivent complets (beaucoup de petites commandes).
+
+Besoin de généraliser le suivi des reliquats, par chantier et en hebdomadaire.
+
+Problème avec l’app Rexel (BL/picking → livraisons incomplètes).
+
+Souhait : alerte sur l’app chantier des livraisons prévues pour les gros chantiers.
+
+Process retours & suivi
+
+Actuellement manuel (noter fournisseur, montant, etc.).
+
+Objectif : retour automatique lié à la commande, suivi automatisé.
+
+Tout doit partir de la commande : réception, retour, modifications.
+
+Stock & inventaires
+
+Inventaires très chronophages.
+
+Volonté d’optimiser le stock informatique et d’utiliser l’IA pour proposer sorties de stock ou réappros.
+
+Sorties de stock MDE à mieux intégrer.
+
+Référencement & prix
+
+Outils performants souhaités pour la création/suivi de références, gestion de l’obsolescence, alertes quand une référence n’est plus suivie.
+
+Problèmes : références périmées, pas de mise à jour automatique des prix, bugs et erreurs multiples.
+
+Cas de double tarification pour un même article.
+
+Idée d’alerte IA : produit moins cher chez un autre fournisseur.
+
+Gouvernance & contrôle
+
+Définir un seuil euro de déclenchement d’appro (non défini aujourd’hui).
+
+Blocage des approvisionnements : tout doit passer et être contrôlé par bureau/dépôt, pas de livraisons directes chantier.
+
+Création de fiches produit avec validation préalable.
+
+2️⃣ Ressources Humaines (RH)
+Points clés
+
+Effectifs & pointage
+
+~100 personnes.
+
+Popaye gère l’affectation d’heures passées → idéalement projeter l’activité future.
+
+Souhait : managers remplissent les heures à la place des collaborateurs.
+
+Pointage par chantier, affectation par type de travaux, ludicité/gamification.
+
+Paie & indemnités
+
+SAGE calcule indemnités km mais départ à choisir manuellement.
+
+Export mensuel pour l’URSSAF uniquement.
+
+Popaye : choix entre paiement ou mise de côté des heures sup. (fonctionnement apprécié, à conserver).
+
+Process RH
+
+Multiplication des tableaux de suivi → besoin d’un outil centralisé (registre personnel, contrats…).
+
+Automatiser les workflows d’absence (tickets resto, notes de frais, absences).
+
+Onboarding : prévenir 4-5 personnes lors d’une embauche → automatiser.
+
+Réunions hebdo responsables affaires/activité : besoin d’un tableau de suivi centralisé (rôles/permissions).
+
+Autres
+
+Gestion intérimaires : actuellement dans un Excel, besoin d’intégration RH complète.
+
+Capacité d’interviews d’exit (rapports d’étonnement – entrée J+10, J+1 mois).
+
+Intégrer la géolocalisation (fiche interventions).
+
+Canaux de communication : WhatsApp utilisé.
+
+3️⃣ Comptabilité & Gestion
+Points clés
+
+Reporting & suivi chantiers
+
+Points de gestion mensuels et états de fin (marge, KPI) → processus trop long (~1 mois).
+
+Blocage : retours de BL, heures pas assez saisies.
+
+Manque de suivi chantier en temps réel, besoin d’une vision partagée (notes d’affaires).
+
+Besoin de points de gestion hebdo pour suivre la marge physique.
+
+Corrélation paie/compta
+
+Écarts entre heures remontées (popaye) et compta.
+
+Besoin de compte d’écart pour gérer ces différences.
+
+Prendre en compte éléments variables (heures sup, paniers, grands déplacements).
+
+Prédictif & analytique
+
+IA pour prévisions de dépenses, projection du chiffre d’affaires.
+
+Suivi par activité (maintenance, logement, montagne…).
+
+Projection facturation et heures jusqu’à la fin d’affaires.
+
+Gestion des chantiers chevauchant deux années (répartition %).
+
+Outils & fonctionnalités
+
+Possibilité de bloquer les mois comptables.
+
+Intégration automatique des données (Sage BI, OptimBTP évoqués).
+
+Gestion des notes de frais : idéalement via scan tickets.
+
+CRM / commercial
+
+Module CRM souhaité : probabilité d’obtention prévisionnelle (pipeline commercial, prévisions de CA).
+
+Intégration de fichiers PDF dans les affaires.
+
+4️⃣ Devis, chiffrage & achats
+Points clés
+
+Process de devis
+
+Devis très longs (ex : 3 000 lignes).
+
+Souhait d’intégrer la feuille de marge directement dans le logiciel, avec ventilation des frais annexes.
+
+Automatiser AR, enregistrement auto toutes les 2 min, copier-coller DPGF.
+
+Gérer devis options/variantes.
+
+Suivi des modifications sur les documents.
+
+Tarification & fiabilité
+
+Tarifeo pas toujours fiable → envisager API Rexel pour fiabilité des prix.
+
+Mise à jour tarifaire automatique.
+
+Gestion des remises (entrée + exceptionnelles) à fiabiliser.
+
+Vérification des prix fournisseurs fastidieuse → automatiser.
+
+Analytique & IA
+
+Analyse prédictive : comparer chantiers similaires.
+
+Statistiques sur taux de réussite des dossiers.
+
+Carnet d’équipement : retrouver data & documents via la référence.
+
+Avertissement stock (quantité, lignes vides).
+
+Devis par application.
+
+5️⃣ Base de données & Systèmes d’information
+Points clés
+
+Problèmes critiques
+
+Base de données chaotique : erreurs, absence de mise à jour des prix, bugs multiples.
+
+Gouvernance des données à structurer.
+
+Gestion des permissions et rôles sur les accès.
+
+Opportunités
+
+IA prédictive (commandes, devis, prévisions financières).
+
+Alerte IA sur opportunités d’achat (produit moins cher ailleurs).
+
+Enjeux transverses
+
+Automatisation & centralisation : besoin d’outils qui unifient les données (commandes, RH, compta, devis) pour réduire la saisie manuelle.
+
+Prédictif & IA : forte volonté d’intégrer l’IA pour optimiser commandes, stock, chiffrage, prévisions financières et commerciales.
+
+Qualité de la donnée : base de données actuelle peu fiable ; nécessite une gouvernance stricte.
+
+Expérience utilisateur : outils plus ludiques, gamification du pointage, interfaces plus fluides.
+
+Recommandations globales (à explorer)
+
+Lancer un projet ERP ou refonte SI (ou optimiser l’existant) en priorisant :
+
+Data management (qualité, gouvernance, automatisation des mises à jour de prix).
+
+Automatisation des workflows (RH, retours stock, notes de frais, devis).
+
+Modules prédictifs IA (stocks, chiffrage, prévisions CA).
+
+Mettre en place une roadmap progressive (court terme : fiabilisation données / workflows critiques ; moyen terme : IA et analytique avancée).
+
