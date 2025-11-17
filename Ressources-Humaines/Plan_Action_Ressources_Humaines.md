@@ -470,7 +470,7 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 
 ## 🎯 PISTES RECOMMANDÉES
 
-### Option A : SIRH Intégré Cloud (Recommandé si budget >150K€)
+### Option A : SIRH Intégré Cloud (Recommandé si budget >)
 
 **Solutions possibles**
 
@@ -480,16 +480,16 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - ✅ UX excellente, mobile natif
 - ✅ Intégrations : SAGE, Popaye (à vérifier), SILAE
 - ✅ Éditeur français, support qualité
-- 💰 ~12-18€/utilisateur/mois → 14-22K€/an pour 100 pers
-- 💰 Setup : 30-50K€
+- 💰 ~12-/utilisateur/mois → 14-/an pour 100 pers
+- 💰 Setup : 30-
 
 **2. Factorial**
 - ✅ Moderne, compétitif prix
 - ✅ Modules : congés, NDF, temps, recrutement, onboarding, docs
 - ✅ API ouvertes
 - ✅ Croissance rapide
-- 💰 ~8-12€/user/mois → 10-14K€/an
-- 💰 Setup : 20-30K€
+- 💰 ~8-/user/mois → 10-/an
+- 💰 Setup : 20-
 
 **3. PayFit (Paie + SIRH)**
 - ✅ Paie intégrée (remplacement SILAE)
@@ -497,8 +497,8 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - ✅ BTP ready
 - ✅ Automatisation poussée
 - ⚠️ Vendor lock-in paie
-- 💰 ~15-25€/user/mois → 18-30K€/an
-- 💰 Setup : 40-60K€
+- 💰 ~15-/user/mois → 18-/an
+- 💰 Setup : 40-
 
 **4. Silae SIRH (extension actuelle)**
 - ✅ Intégration native paie SILAE
@@ -506,8 +506,8 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - ✅ Éditeur connu
 - ⚠️ UX moins moderne
 - ⚠️ Modules RH moins riches
-- 💰 ~10-15€/user/mois → 12-18K€/an
-- 💰 Setup : 25-35K€
+- 💰 ~10-/user/mois → 12-/an
+- 💰 Setup : 25-
 
 **Modules complémentaires à développer/intégrer**
 
@@ -516,48 +516,48 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - Géofencing chantiers
 - Mode offline
 - Sync SIRH + Popaye
-- 💰 Développement : 40-60K€
-- 💰 Maintenance : 8K€/an
+- 💰 Développement : 40-
+- 💰 Maintenance : /an
 
 **2. Automatisation paie**
 - Scripts intégration Popaye → SIRH → SILAE
 - Contrôles automatiques (heures, km, paniers, GD)
 - Calcul auto TR
 - Alertes anomalies
-- 💰 Développement : 25-35K€
+- 💰 Développement : 25-
 
 **3. Analytics RH avancé**
 - Power BI/Tableau dashboards
 - Connexions SIRH + SAGE + Popaye
 - KPIs automatisés
 - Prédictions ML
-- 💰 Développement : 30-40K€
-- 💰 Licences BI : 5K€/an
+- 💰 Développement : 30-
+- 💰 Licences BI : /an
 
 **4. Gestion intérimaires**
 - Module custom si SIRH ne gère pas nativement
 - Base unifiée CDI+intérimaires
 - Alertes fin contrat
 - Facturation automatique
-- 💰 Développement : 20-30K€
+- 💰 Développement : 20-
 
 **Investissement Total Option A**
-- **Setup SIRH** : 30-60K€ (selon solution)
-- **Intégrations & développements** : 115-165K€
-- **Formation** : 15K€
-- **Total initial** : 160-240K€
-- **Run annuel** : 35-55K€/an (SIRH + maintenance + BI)
+- **Setup SIRH** : 30- (selon solution)
+- **Intégrations & développements** : 115-
+- **Formation** : 
+- **Total initial** : 160-
+- **Run annuel** : 35-/an (SIRH + maintenance + BI)
 
 **ROI Option A**
-- **Gains temps** : 1500h/an × 50€/h = 75K€/an
-- **Réduction erreurs paie** : 30K€/an
-- **Optimisation intérimaires** : 50K€/an
-- **Turnover réduit** : 100K€/an
-- **Total gains** : 255K€/an
+- **Gains temps** : 1500h/an × /h = /an
+- **Réduction erreurs paie** : /an
+- **Optimisation intérimaires** : /an
+- **Turnover réduit** : /an
+- **Total gains** : /an
 - **Payback** : 11 mois
-- **ROI 2 ans** : +350K€ net
+- **ROI 2 ans** : + net
 
-### Option B : Solution Légère (Budget 50-100K€)
+### Option B : Solution Légère (Budget 50-)
 
 **Approche**
 - SIRH SaaS basique (Factorial, Nibelis)
@@ -566,26 +566,26 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - Dashboard BI externe
 
 **Modules**
-1. **SIRH basique** : congés, NDF, documents (40K€ setup + 12K€/an)
-2. **Workflow onboarding** : custom simple (15K€)
-3. **App pointage** : basique sans géofencing (25K€)
-4. **Automatisation TR** : script Python (5K€)
-5. **Dashboard RH** : Power BI (10K€ + 3K€/an)
+1. **SIRH basique** : congés, NDF, documents ( setup + /an)
+2. **Workflow onboarding** : custom simple ()
+3. **App pointage** : basique sans géofencing ()
+4. **Automatisation TR** : script Python ()
+5. **Dashboard RH** : Power BI ( + /an)
 
 **Investissement Total Option B**
-- **Initial** : 95K€
-- **Run annuel** : 15K€/an
+- **Initial** : 
+- **Run annuel** : /an
 
 **ROI Option B**
-- **Gains temps** : 600h/an × 50€/h = 30K€/an
-- **Réduction erreurs** : 10K€/an
-- **Total gains** : 40K€/an
+- **Gains temps** : 600h/an × /h = /an
+- **Réduction erreurs** : /an
+- **Total gains** : /an
 - **Payback** : 29 mois
-- **ROI 2 ans** : -35K€ (breakeven à 30 mois)
+- **ROI 2 ans** : - (breakeven à 30 mois)
 
 ⚠️ **Limites** : gains limités, silos persistent, évolution vers Option A inévitable dans 2-3 ans
 
-### Option C : Optimisation Existant (Budget <50K€)
+### Option C : Optimisation Existant (Budget <)
 
 **Approche**
 - Conservation tous outils actuels
@@ -594,20 +594,20 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - Formation équipes
 
 **Actions**
-1. **Automatisation calcul TR** : Python (5K€)
-2. **Workflow onboarding** : Excel VBA + Outlook (10K€)
-3. **Dashboard basique** : Excel Power Query (8K€)
-4. **Formation Popaye avancé** : 5K€
-5. **Process optimization** : consultant (15K€)
+1. **Automatisation calcul TR** : Python ()
+2. **Workflow onboarding** : Excel VBA + Outlook ()
+3. **Dashboard basique** : Excel Power Query ()
+4. **Formation Popaye avancé** : 
+5. **Process optimization** : consultant ()
 
 **Investissement Total Option C**
-- **Initial** : 43K€
-- **Run annuel** : 2K€/an
+- **Initial** : 
+- **Run annuel** : /an
 
 **ROI Option C**
-- **Gains temps** : 200h/an × 50€/h = 10K€/an
+- **Gains temps** : 200h/an × /h = /an
 - **Payback** : 52 mois
-- **ROI 2 ans** : -23K€
+- **ROI 2 ans** : -
 
 ⚠️ **Limites** : gains très limités, problèmes structurels non résolus, dette technique
 
@@ -669,7 +669,7 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - 10-15 KPIs temps réel
 - Formation direction
 
-**ROI 6 mois** : 600h/an économisées, gains process 50K€/an
+**ROI 6 mois** : 600h/an économisées, gains process /an
 
 ### 🟢 STRUCTURANT (Mois 7-18)
 
@@ -1018,9 +1018,9 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 **Gains Phase 3**
 - Productivité +20% via pointage intelligent
 - GPEC : compétences pilotées vs estimations
-- NDF : 90% automatisées
+- NDF  automatisées
 - Prédictions : turnover -30%, absentéisme -20%
-- **ROI cumulé : 1500h/an + 100K€ turnover évité**
+- **ROI cumulé : 1500h/an +  turnover évité**
 
 ---
 
@@ -1032,120 +1032,120 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 
 | Poste | Détail | Montant |
 |-------|--------|---------|
-| **Licences SIRH** | 100 users × 15€/mois × 6 mois | 9K€ |
-| **Setup Lucca** | Forfait implémentation | 35K€ |
-| **Formation** | RH (2j) + Managers (1j) + Collab (webinars) | 12K€ |
-| **Intégrations** | Popaye, SAGE, SILAE (connecteurs) | 18K€ |
-| **Accompagnement** | Consultant 20j | 15K€ |
-| **Contingence 10%** | Imprévus | 9K€ |
-| **TOTAL PHASE 1** | | **98K€** |
+| **Licences SIRH** | 100 users × /mois × 6 mois |  |
+| **Setup Lucca** | Forfait implémentation |  |
+| **Formation** | RH (2j) + Managers (1j) + Collab (webinars) |  |
+| **Intégrations** | Popaye, SAGE, SILAE (connecteurs) |  |
+| **Accompagnement** | Consultant 20j |  |
+| **Contingence 10%** | Imprévus |  |
+| **TOTAL PHASE 1** | | **** |
 
 **Développements Phase 2 (Mois 7-12)**
 
 | Poste | Détail | Montant |
 |-------|--------|---------|
-| **App mobile pointage** | React Native iOS + Android | 45K€ |
-| **Module intérimaires** | Custom si Lucca insuffisant | 25K€ |
-| **Automatisation paie** | Scripts intégration + contrôles | 20K€ |
-| **Dashboard BI** | Power BI : dev + licences | 25K€ |
-| **Intranet custom** | Si module Lucca insuffisant | 15K€ |
-| **Contingence 10%** | Imprévus | 13K€ |
-| **TOTAL PHASE 2** | | **143K€** |
+| **App mobile pointage** | React Native iOS + Android |  |
+| **Module intérimaires** | Custom si Lucca insuffisant |  |
+| **Automatisation paie** | Scripts intégration + contrôles |  |
+| **Dashboard BI** | Power BI : dev + licences |  |
+| **Intranet custom** | Si module Lucca insuffisant |  |
+| **Contingence 10%** | Imprévus |  |
+| **TOTAL PHASE 2** | | **** |
 
 **Innovations Phase 3 (Mois 13-18)**
 
 | Poste | Détail | Montant |
 |-------|--------|---------|
-| **Géofencing avancé** | Algorithmes + tests | 15K€ |
-| **ML prédictif** | 3 modèles (turnover, absentéisme, recrutement) | 35K€ |
-| **OCR/IA NDF** | Intégration APIs IA | 18K€ |
-| **GPEC avancée** | Compétences + certifications | 12K€ |
-| **Contingence 10%** | Imprévus | 8K€ |
-| **TOTAL PHASE 3** | | **88K€** |
+| **Géofencing avancé** | Algorithmes + tests |  |
+| **ML prédictif** | 3 modèles (turnover, absentéisme, recrutement) |  |
+| **OCR/IA NDF** | Intégration APIs IA |  |
+| **GPEC avancée** | Compétences + certifications |  |
+| **Contingence 10%** | Imprévus |  |
+| **TOTAL PHASE 3** | | **** |
 
 **Coûts Récurrents (annuels)**
 
 | Poste | Détail | Montant/an |
 |-------|--------|------------|
-| **Licences SIRH** | 100 users × 15€/mois × 12 | 18K€ |
-| **Power BI** | 10 licences Pro | 3K€ |
-| **Maintenance app mobile** | Évolutions + support | 8K€ |
-| **Support Lucca** | Premium (si souhaité) | 5K€ |
-| **Hébergement données** | Si cloud privé | 3K€ |
-| **TOTAL RÉCURRENT** | | **37K€/an** |
+| **Licences SIRH** | 100 users × /mois × 12 |  |
+| **Power BI** | 10 licences Pro |  |
+| **Maintenance app mobile** | Évolutions + support |  |
+| **Support Lucca** | Premium (si souhaité) |  |
+| **Hébergement données** | Si cloud privé |  |
+| **TOTAL RÉCURRENT** | | **/an** |
 
-**INVESTISSEMENT TOTAL 18 MOIS : 329K€**
-**RUN ANNUEL : 37K€/an**
+**INVESTISSEMENT TOTAL 18 MOIS : **
+**RUN ANNUEL : /an**
 
 ### ROI Détaillé Option A (sur 2 ans)
 
-**Gains Temps (valorisés à 50€/h)**
+**Gains Temps (valorisés à /h)**
 
 | Gain | Avant | Après | Économie h/an | Valeur €/an |
 |------|-------|-------|---------------|-------------|
-| Calcul TR manuel | 4h/mois | 0.5h/mois | 42h | 2.1K€ |
-| Onboarding (4-5 pers) | 10h/embauche × 25 | 2h/embauche × 25 | 200h | 10K€ |
-| Offboarding | 6h/sortie × 15 | 1h/sortie × 15 | 75h | 3.75K€ |
-| Relances FH | 5h/semaine | 0.5h/semaine | 234h | 11.7K€ |
-| Contrôles paie | 12h/mois | 2h/mois | 120h | 6K€ |
-| Exports Popaye/SILAE | 3h/mois | 0.5h/mois | 30h | 1.5K€ |
-| Gestion intérimaires Excel | 6h/mois | 1h/mois | 60h | 3K€ |
-| Congés (4 saisies → 1) | 15min × 300 demandes | 2min × 300 | 65h | 3.25K€ |
-| NDF manuelles | 30min × 400 NDF | 5min × 400 | 167h | 8.35K€ |
-| Tableaux Excel manuels | 10h/mois | 1h/mois | 108h | 5.4K€ |
-| Recherche infos (silos) | 30min/jour × 2 pers | 5min/jour × 2 pers | 417h | 20.85K€ |
-| Reporting RH manuel | 8h/mois | 1h/mois | 84h | 4.2K€ |
-| **TOTAL GAINS TEMPS** | | | **1602h/an** | **80.1K€/an** |
+| Calcul TR manuel | 4h/mois | 0.5h/mois | 42h | 2. |
+| Onboarding (4-5 pers) | 10h/embauche × 25 | 2h/embauche × 25 | 200h |  |
+| Offboarding | 6h/sortie × 15 | 1h/sortie × 15 | 75h | 3. |
+| Relances FH | 5h/semaine | 0.5h/semaine | 234h | 11. |
+| Contrôles paie | 12h/mois | 2h/mois | 120h |  |
+| Exports Popaye/SILAE | 3h/mois | 0.5h/mois | 30h | 1. |
+| Gestion intérimaires Excel | 6h/mois | 1h/mois | 60h |  |
+| Congés (4 saisies → 1) | 15min × 300 demandes | 2min × 300 | 65h | 3. |
+| NDF manuelles | 30min × 400 NDF | 5min × 400 | 167h | 8. |
+| Tableaux Excel manuels | 10h/mois | 1h/mois | 108h | 5. |
+| Recherche infos (silos) | 30min/jour × 2 pers | 5min/jour × 2 pers | 417h | 20. |
+| Reporting RH manuel | 8h/mois | 1h/mois | 84h | 4. |
+| **TOTAL GAINS TEMPS** | | | **1602h/an** | **80./an** |
 
 **Gains Qualité**
 
 | Gain | Estimation | Valeur €/an |
 |------|------------|-------------|
-| Réduction erreurs paie (retards, oublis, calculs) | 15 erreurs/an × 2K€ | 30K€ |
-| Réduction litiges congés (traçabilité) | 5 litiges/an × 3K€ | 15K€ |
-| Optimisation intérimaires (alertes fin contrat, comparaison coûts) | -5% coûts intérimaires (500K€) | 25K€ |
-| Turnover réduit (satisfaction, rapports étonnement précoces) | -5 départs/an × 15K€ coût recrutement | 75K€ |
-| Absentéisme réduit (suivi, alertes précoces) | -2% absentéisme (base 100 pers, 3% actuel) | 40K€ |
-| Conformité améliorée (DPAE, médecine, CIBTP auto) | Risques évités | 10K€ |
-| **TOTAL GAINS QUALITÉ** | | **195K€/an** |
+| Réduction erreurs paie (retards, oublis, calculs) | 15 erreurs/an ×  |  |
+| Réduction litiges congés (traçabilité) | 5 litiges/an ×  |  |
+| Optimisation intérimaires (alertes fin contrat, comparaison coûts) | -5% coûts intérimaires () |  |
+| Turnover réduit (satisfaction, rapports étonnement précoces) | -5 départs/an ×  coût recrutement |  |
+| Absentéisme réduit (suivi, alertes précoces) | -2% absentéisme (base 100 pers, 3% actuel) |  |
+| Conformité améliorée (DPAE, médecine, CIBTP auto) | Risques évités |  |
+| **TOTAL GAINS QUALITÉ** | | **/an** |
 
 **Gains Stratégiques**
 
 | Gain | Estimation | Valeur €/an |
 |------|------------|-------------|
-| Productivité +5% (pointage, planning optimisé) | 100 pers × 40K€ coût moyen × 5% | 200K€ |
-| Engagement collaborateurs +20% (outils modernes, transparence) | Productivité indirecte | 50K€ |
-| Attractivité employeur (recrutement facilité) | Délais recrutement -30% | 30K€ |
+| Productivité +5% (pointage, planning optimisé) | 100 pers ×  coût moyen × 5% |  |
+| Engagement collaborateurs +20% (outils modernes, transparence) | Productivité indirecte |  |
+| Attractivité employeur (recrutement facilité) | Délais recrutement -30% |  |
 | Image innovation (différenciation marché) | Intangible mais réel | - |
-| **TOTAL GAINS STRATÉGIQUES** | | **280K€/an** |
+| **TOTAL GAINS STRATÉGIQUES** | | **/an** |
 
-**TOTAL GAINS ANNUELS : 555K€/an**
+**TOTAL GAINS ANNUELS : /an**
 
 **ROI 2 ans**
-- **Investissement 18 mois** : 329K€
-- **Run 18 mois** : 37K€ × 1.5 = 55.5K€
-- **Total coûts 2 ans** : 384.5K€
-- **Gains 2 ans** : 555K€ × 2 = 1110K€
-- **Net gain 2 ans** : +725.5K€
-- **ROI** : 189%
+- **Investissement 18 mois** : 
+- **Run 18 mois** :  × 1.5 = 55.
+- **Total coûts 2 ans** : 384.
+- **Gains 2 ans** :  × 2 = 
+- **Net gain 2 ans** : +725.
+- **ROI** 
 - **Payback** : 8 mois
 
 ### Comparaison 3 Options (2 ans)
 
 | Critère | Option C<br/>Light | Option B<br/>Moyen | Option A<br/>Complet |
 |---------|---------------------|---------------------|----------------------|
-| **Investissement initial** | 43K€ | 95K€ | 329K€ |
-| **Run 2 ans** | 4K€ | 30K€ | 74K€ |
-| **TOTAL COÛTS 2 ANS** | **47K€** | **125K€** | **403K€** |
+| **Investissement initial** |  |  |  |
+| **Run 2 ans** |  |  |  |
+| **TOTAL COÛTS 2 ANS** | **** | **** | **** |
 | | | | |
 | **Gains temps (h/an)** | 200h | 600h | 1602h |
-| **Gains temps (€/an)** | 10K€ | 30K€ | 80K€ |
-| **Gains qualité (€/an)** | 15K€ | 60K€ | 195K€ |
-| **Gains stratégiques (€/an)** | - | 50K€ | 280K€ |
-| **TOTAL GAINS/AN** | **25K€** | **140K€** | **555K€** |
-| **GAINS 2 ANS** | 50K€ | 280K€ | 1110K€ |
+| **Gains temps (€/an)** |  |  |  |
+| **Gains qualité (€/an)** |  |  |  |
+| **Gains stratégiques (€/an)** | - |  |  |
+| **TOTAL GAINS/AN** | **** | **** | **** |
+| **GAINS 2 ANS** |  |  |  |
 | | | | |
-| **NET 2 ANS** | +3K€ | +155K€ | +707K€ |
+| **NET 2 ANS** | + | + | + |
 | **ROI %** | 6% | 124% | 175% |
 | **Payback** | 23 mois | 11 mois | 8 mois |
 | | | | |
@@ -1176,13 +1176,13 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 
 **Congés & Absences**
 - Temps traitement demande congés : 2 jours → **<4 heures**
-- Taux dématérialisation : 0% → **100%**
+- Taux dématérialisation  → **100%**
 - Erreurs planning : X/mois → **<2/mois**
 - Satisfaction processus : - → **>4.5/5**
 
 **Notes de Frais**
 - Temps traitement NDF : 5 jours → **<48h**
-- Taux scan automatique : 0% → **>80%**
+- Taux scan automatique  → **>80%**
 - Erreurs catégorisation : X% → **<5%**
 - Satisfaction : - → **>4/5**
 
@@ -1222,10 +1222,10 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - Fiche heures validation : 3 jours → **<24h**
 
 **Automatisation**
-- Taux processus automatisés : 10% → **80%**
+- Taux processus automatisés  → **80%**
 - Interventions manuelles/mois : 100 → **<20**
-- Relances automatiques : 0% → **100%**
-- Exports automatiques : 0% → **90%**
+- Relances automatiques  → **100%**
+- Exports automatiques  → **90%**
 
 **Adoption**
 - Taux utilisation SIRH : - → **>90%**
@@ -1244,13 +1244,13 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 **Turnover & Rétention**
 - Turnover global : X% → **-30%**
 - Turnover <1 an : X% → **-50%**
-- Coût turnover : X€/an → **-75K€**
+- Coût turnover : X€/an → **-**
 - Taux rétention talents : X% → **>90%**
 
 **Absentéisme**
-- Taux absentéisme : 3% → **2%**
-- Coût absentéisme : X€ → **-40K€**
-- Détection précoce : 0% → **80%**
+- Taux absentéisme  → **2%**
+- Coût absentéisme : X€ → **-**
+- Détection précoce  → **80%**
 - Actions correctives : 0 → **>10/an**
 
 **Productivité**
@@ -1274,7 +1274,7 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 - Coût par embauche : X€ → **-25%**
 
 **Compétences**
-- Taux collaborateurs avec plan formation : 0% → **100%**
+- Taux collaborateurs avec plan formation  → **100%**
 - Heures formation/employé/an : Xh → **+50%**
 - Taux certifications à jour : X% → **100%**
 - Gap compétences identifiés : - → **100%**
@@ -1299,7 +1299,7 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
   - Vérifier connecteurs natifs phase sélection
   - Budget développement connecteurs custom
   - POC technique avant signature
-- **Backup** : Développement ETL custom (15-25K€)
+- **Backup** : Développement ETL custom (15-)
 
 **2. Qualité données migration**
 - **Risque** : Données RH actuelles incomplètes/incohérentes
@@ -1491,25 +1491,25 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 
 ### Modules Complémentaires Obligatoires
 
-**1. App mobile pointage géolocalisé** (45K€)
+**1. App mobile pointage géolocalisé** ()
 - Indispensable personnel chantier (rarement sur PC)
 - Géofencing chantiers → fiabilité présences
 - Mode offline → fonctionne partout
 - Gamification → adoption
 
-**2. Automatisation paie complète** (20K€)
+**2. Automatisation paie complète** ()
 - Éliminer exports manuels Popaye → SILAE
 - Contrôles automatiques (heures, km, paniers, GD)
 - Calcul TR automatique
 - Fin 4 jours/mois préparation paie → 1 jour
 
-**3. Dashboard RH Power BI** (25K€)
+**3. Dashboard RH Power BI** ()
 - KPIs temps réel (vs manuels actuellement)
 - Direction : effectifs, coûts, turnover, productivité
 - Managers : équipes, absences, heures
 - RH : opérationnel (FH manquantes, tâches, échéances)
 
-**4. Module intérimaires** (25K€)
+**4. Module intérimaires** ()
 - Si Lucca natif insuffisant
 - Base unifiée CDI + intérimaires
 - Alertes fin contrat
@@ -1518,21 +1518,21 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 ### Investissement & ROI Récapitulatif
 
 **Coûts**
-- Phase 1 (M1-6) : 98K€
-- Phase 2 (M7-12) : 143K€
-- Phase 3 (M13-18) : 88K€
-- Run 18 mois : 55.5K€
-- **TOTAL 18 MOIS : 384.5K€**
+- Phase 1 (M1-6) : 
+- Phase 2 (M7-12) : 
+- Phase 3 (M13-18) : 
+- Run 18 mois : 55.
+- **TOTAL 18 MOIS : 384.**
 
 **Gains annuels**
-- Temps : 1602h × 50€ = 80K€/an
-- Qualité : 195K€/an
-- Stratégique : 280K€/an
-- **TOTAL : 555K€/an**
+- Temps : 1602h ×  = /an
+- Qualité : /an
+- Stratégique : /an
+- **TOTAL : /an**
 
 **ROI**
-- Gains 2 ans : 1110K€
-- Net 2 ans : **+725.5K€**
+- Gains 2 ans : 
+- Net 2 ans : **+725.**
 - ROI : **189%**
 - Payback : **8 mois**
 
@@ -1573,7 +1573,7 @@ STC, informer services, registre, Popaye, SAGE, tableaux, médecine, Empowill, r
 
 **Semaine 1-2 : Validation Direction**
 - Présentation plan à CODIR
-- Validation budget (384K€ sur 18 mois)
+- Validation budget ( sur 18 mois)
 - Désignation sponsor exécutif
 - Go/No-Go global
 

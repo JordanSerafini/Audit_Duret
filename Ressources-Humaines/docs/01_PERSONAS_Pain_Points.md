@@ -19,7 +19,7 @@
 **🔴 CRITIQUE - Processus paie ultra-manuel**
 > "Je passe 3 jours CHAQUE semaine sur la paie. Entre les contrôles hebdo, les relances FH, le calcul manuel des tickets resto, les exports..."
 
-- **Impact**: 60% du temps sur tâches à faible valeur ajoutée
+- **Impact** du temps sur tâches à faible valeur ajoutée
 - **Détail**:
   - Relances manuelles managers pour feuilles d'heures
   - Valorisation manuelle heures récup (calcul 35h/semaine pour chaque personne)

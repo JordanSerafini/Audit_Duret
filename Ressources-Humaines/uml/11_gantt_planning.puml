@@ -1,0 +1,105 @@
+@startgantt Gantt_Planning_Implementation
+
+title Planning Implementation 18 Mois Digitalisation RH
+
+printscale monthly
+
+project starts 2025-11-17
+
+-- Phase 1 : Quick Wins (M1-M4) --
+
+[SIRH Core] as [SIRH] lasts 120 days and is colored in LightBlue
+[SIRH] starts 2025-11-17
+
+[Benchmark SIRH] as [SIRHBench] lasts 30 days and is colored in Yellow and starts at [SIRH]'s start
+[POC Solution] as [SIRHPOC] lasts 30 days and is colored in Yellow and starts at [SIRHBench]'s end
+[Migration + Formation] as [SIRHMigr] lasts 60 days and is colored in LightGreen and starts at [SIRHPOC]'s end
+
+[Module Absences] as [Absences] lasts 90 days and is colored in Orange
+[Absences] starts 2025-12-17
+
+[Workflow Conges] as [AbsWork] lasts 60 days and is colored in Yellow and starts at [Absences]'s start
+[Integration Tests] as [AbsTests] lasts 30 days and is colored in LightGreen and starts at [AbsWork]'s end
+
+[Module Pointage] as [Pointage] lasts 60 days and is colored in Pink
+[Pointage] starts 2026-01-17
+
+[App Mobile] as [PointApp] lasts 30 days and is colored in LightPink and starts at [Pointage]'s start
+[Validation Managers] as [PointVal] lasts 30 days and is colored in LightGreen and starts at [PointApp]'s end
+
+-- Phase 2 : Structurant (M5-M12) --
+
+[Automatisation Paie] as [Paie] lasts 90 days and is colored in LightBlue
+[Paie] starts at [SIRH]'s end
+
+[Calcul TR + km Auto] as [PaieCalc] lasts 60 days and is colored in Cyan and starts at [Paie]'s start
+[Integration SILAE] as [PaieSILAE] lasts 30 days and is colored in LightGreen and starts at [PaieCalc]'s end
+
+[Module Onboarding] as [Onboard] lasts 60 days and is colored in Purple
+[Onboard] starts at [Paie]'s end
+
+[Checklist 39 taches] as [OnboardCheck] lasts 45 days and is colored in Violet and starts at [Onboard]'s start
+[Notifications Auto] as [OnboardNotif] lasts 30 days and is colored in LightGreen and starts at [OnboardCheck]'s end
+
+[Module Offboarding] as [Offboard] lasts 60 days and is colored in Green
+[Offboard] starts at [Onboard]'s start
+
+[Checklist 22 taches] as [OffboardCheck] lasts 45 days and is colored in LightGreen and starts at [Offboard]'s start
+[Restitution Materiel] as [OffboardMat] lasts 30 days and is colored in DarkGreen and starts at [OffboardCheck]'s end
+
+[Integration Interimaires] as [Interim] lasts 60 days and is colored in Brown
+[Interim] starts at [Onboard]'s end
+
+[Import + Suivi] as [InterimImport] lasts 45 days and is colored in BurlyWood and starts at [Interim]'s start
+[Alertes Missions] as [InterimAlert] lasts 30 days and is colored in BurlyWood and starts at [InterimImport]'s end
+
+[Dashboards RH] as [Dashboard] lasts 60 days and is colored in Gold
+[Dashboard] starts at [Interim]'s start
+
+[KPIs Temps Reel] as [DashKPI] lasts 45 days and is colored in Yellow and starts at [Dashboard]'s start
+[Alertes Auto] as [DashAlert] lasts 30 days and is colored in Yellow and starts at [DashKPI]'s end
+
+-- Phase 3 : Optimisation (M13-M18) --
+
+[Module Formation] as [Formation] lasts 60 days and is colored in LightBlue
+[Formation] starts at [Dashboard]'s end
+
+[Plan Formation] as [FormPlan] lasts 45 days and is colored in Cyan and starts at [Formation]'s start
+[Alertes Renouvellement] as [FormAlert] lasts 30 days and is colored in LightGreen and starts at [FormPlan]'s end
+
+[Entretiens Digitalises] as [Entretiens] lasts 60 days and is colored in Orange
+[Entretiens] starts at [Formation]'s start
+
+[Entretiens Annuels] as [EntrAnnuel] lasts 45 days and is colored in Yellow and starts at [Entretiens]'s start
+[Rapports Etonnement] as [EntrRapport] lasts 30 days and is colored in Yellow and starts at [EntrAnnuel]'s end
+
+[Portail Collaborateur] as [Portail] lasts 60 days and is colored in Pink
+[Portail] starts at [Formation]'s end
+
+[Bulletins + Attestations] as [PortailDoc] lasts 45 days and is colored in LightPink and starts at [Portail]'s start
+[Demandes RH] as [PortailDem] lasts 30 days and is colored in LightGreen and starts at [PortailDoc]'s end
+
+[Formation Deploiement] as [Deploy] lasts 60 days and is colored in Green
+[Deploy] starts at [Entretiens]'s end
+
+[Documentation] as [DeployDoc] lasts 30 days and is colored in LightGreen and starts at [Deploy]'s start
+[Formation Complete] as [DeployForm] lasts 30 days and is colored in DarkGreen and starts at [DeployDoc]'s end
+
+-- Jalons GO/NO-GO --
+
+[GO/NO-GO Phase 1] as [Jalon1] happens at 2025-11-24
+[Jalon1] is colored in Red
+
+[GO/NO-GO SIRH] as [Jalon2] happens at [SIRHPOC]'s end
+[Jalon2] is colored in Red
+
+[Bilan Phase 1] as [Jalon3] happens at [SIRHMigr]'s end
+[Jalon3] is colored in Red
+
+[Bilan Phase 2] as [Jalon4] happens at [DashAlert]'s end
+[Jalon4] is colored in Red
+
+[GO-LIVE Final] as [Jalon5] happens at [DeployForm]'s end
+[Jalon5] is colored in Red
+
+@endgantt

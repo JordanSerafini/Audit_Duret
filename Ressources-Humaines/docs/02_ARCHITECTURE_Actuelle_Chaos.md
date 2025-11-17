@@ -230,7 +230,7 @@ Problèmes :
 
 **L'architecture RH actuelle = 22 systèmes isolés** générant :
 - ✅ **Ressaisies massives** : Même donnée 5-6 fois
-- ✅ **Surcharge Sophie** : 65% temps sur tâches faible valeur
+- ✅ **Surcharge Sophie**  temps sur tâches faible valeur
 - ✅ **Aucune visibilité** : Impossible piloter temps réel
 - ✅ **Erreurs fréquentes** : Triple saisie = triple risque
 - ✅ **Processus lourds** : Onboarding 8-10h, offboarding 5-8h
