@@ -1,0 +1,11 @@
+Critere,Avant (Systeme Actuel),Apres (Systeme Cible),Amelioration
+Generation KPI mensuels,Plusieurs jours consolidation manuelle,Quelques heures generation automatique,Reduction drastique temps Sylvie
+Remontee info,Donnees decalees plusieurs jours,Temps reel dashboards,Pilotage temps reel vs aveugle
+Reception stocks,Comptage manuel long penible,Scan RFID rapide automatique,Reduction drastique temps erreurs
+Productivite BE,Surcharge chronique heures non traitees,Capacite respectee priorisation algorithmique,Productivite amelioree equite
+Erreurs saisie,Frequentes triple saisie,Quasi nulles saisie unique,Fiabilite donnees amelioree
+Nombre Excel,30+ fichiers disperses,0 (ERP centralise),Simplification drastique
+Transparence donnees,Silos aucune visibilite chefs,RBAC chef voit son budget/marge,Transparence responsabilisation
+Depassements budgets,Eleves detection tardive,Reduits alertes temps reel,Anticipation amelioree
+Valorisation stocks,Incoherente 2 prix meme produit,Coherente CUMP unique,Fiabilite stocks amelioree
+Lenteurs ERP,MDE tres lent plantages frequents,ERP moderne rapide fiable,Productivite amelioree

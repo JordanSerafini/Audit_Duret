@@ -1,0 +1,11 @@
+Categorie,Pain Point,Description,Gravite
+Excel Chaos,30+ fichiers Excel non connectes,KPI marges stocks planning tous disperses - Triple/quadruple saisie meme info,CRITIQUE
+Processus Manuels,Generation KPI tres longue,Sylvie passe beaucoup temps consolidation manuelle - Majoritairement saisies verifications,HAUTE
+Processus Manuels,Reception stocks comptage manuel,Comptage papier chronophage - Erreurs frequentes - Inventaires penibles,HAUTE
+ERP Obsolete,MDE ancien tres lent plantages,15 ans anciennete - Inutilisable distance - Plantages 2-3 fois/semaine,CRITIQUE
+Transparence,Chef chantier sans visibilite,Pilote SANS voir budget/marge son chantier - Manque transparence donnees,HAUTE
+Remontee Info,Donnees tres decalees,Donnees plusieurs jours retard vs temps reel necessaire - Decisions retardees,HAUTE
+BE Transverse,Surcharge systeme tickets absent,Priorisation subjective conflits - Demandes depassent capacite - Heures non traitees,HAUTE
+Stocks,Valorisation incoherente,Meme produit a 2 prix differents - Impossible reutiliser stock correctement,MOYENNE
+Silos Donnees,Ressaisies multiples,SAGE MDE Excel x3 - Erreurs incoherences - Perte temps,MOYENNE
+Dependance Personnes,Si Sylvie part chaos,Systeme repose sur connaissance Sylvie - Depart futur risque majeur,MOYENNE

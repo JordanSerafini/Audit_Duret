@@ -1,0 +1,7 @@
+Acteur,Role,Pain Points Principaux,Besoins Exprimes
+Sylvie,Controleuse Gestion 52 ans,Surcharge fin mois - KPI manuels tres longs - Donnees decalees - Burn-out risque,KPI automatises temps reel - Dashboards BI - Alertes automatiques
+Thomas,Responsable BE Transverse 38 ans,Surcharge chronique - Priorisation subjective conflits - Heures sup quotidiennes,Systeme tickets centralise - Priorisation algorithmique - Transparence file attente
+Isabelle,Responsable Stocks 45 ans,Comptage manuel chronophage - Valorisation incoherente - Inventaires penibles,Reception RFID automatisee - Valorisation unique CUMP - Inventaires rapides
+Direction,Decision Generale,Donnees decalees - Pilotage aveugle - Depassements non anticipes,Dashboards temps reel - KPI consolides - Alertes proactives
+Responsables Affaires,Gestion Affaires,Pas visibilite stock - Ressaisies multiples - Excel disperses,Acces stock temps reel - ERP centralise - Dashboards leurs affaires
+Chefs Chantier,Terrain Chantiers,Aucun acces budget/marge leur chantier - Pilotage aveugle,Transparence donnees RBAC - Acces budget consomme - Application mobile

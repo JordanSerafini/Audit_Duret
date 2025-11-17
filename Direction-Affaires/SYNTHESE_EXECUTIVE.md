@@ -78,16 +78,18 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 | **Thomas** (Bureau Études) | PPSPS manuels chronophages, 40% temps tâches à faible valeur ajoutée |
 | **Équipe Commerciale** | Délais création devis trop longs, manque réactivité vs concurrence |
 
-### 💰 Coûts de l'Inefficacité Actuelle
+### ⏰ Temps Perdu Mesuré (Factuel)
 
-| Pain Point | Coût Annuel Estimé |
-|------------|-------------------|
-| ERP lent (temps perdu × 4 RA) | 120K€ (4×250j×2h×50€×60% évitable) |
-| Templates absents (devis manuels) | 80K€ (60×1.5h×50€×12 mois) |
-| PPSPS manuels | 45K€ (18×3h×50€×12 mois) |
-| Maj prix fournisseurs | 35K€ (temps + erreurs pricing) |
-| Reliquats non tracés | 70K€ (oublis refacturation estimés) |
-| **TOTAL PERTES** | **350K€/an** |
+| Pain Point | Temps Perdu Constaté |
+|------------|---------------------|
+| ERP lent (30-40s/écran) | Significatif quotidien (100-200 écrans/jour × 4 RA) |
+| Création devis manuelle | 2h05 par devis vs 30 min possible avec templates |
+| PPSPS manuels | 3h00 par PPSPS vs 27 min possible avec auto-génération |
+| Recherche templates | 30 min par recherche (40-80 fois/mois) |
+| Compilation chiffres direction | 3h par demande (~10-15 fois/mois) |
+| Reliquats non tracés | Pertes constatées mais non quantifiées |
+
+**Note:** Voir [PAIN_POINTS_Faits_Seulement.md](docs/PAIN_POINTS_Faits_Seulement.md) pour détails factuels complets
 
 ---
 
@@ -264,46 +266,34 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 | Maintenance & Support | 2.4K€ |
 | **TOTAL RUN** | **13.8K€/an** |
 
-### 📈 Gains & ROI
+### 📈 Gains Mesurables Attendus
 
-**Gains Annuels Récurrents :**
+**Gains Temps Observables (Base Factuelle) :**
 
-| Source Gains | Calcul | Montant |
-|--------------|--------|---------|
-| **ERP rapide** | 4 RA × 250j × 2h × 60% économie × 50€/h | 120K€/an |
-| **Templates devis** | 60 devis × 1.5h économie × 50€/h × 12 mois | 54K€/an |
-| **PPSPS automatiques** | 18 PPSPS × 2.5h économie × 50€/h × 12 mois | 27K€/an |
-| **Reliquats tracés** | 60% × 30 reliquats/mois × 400€ moyen × 12 mois | 86K€/an |
-| **Maj prix auto** | Temps économisé + erreurs pricing évitées | 28K€/an |
-| **Meilleure réactivité** | +15% taux transformation × 2M€ CA/RA × 8% marge × 4 RA × 15% attribuable | 15K€/an |
-| **TOTAL GAINS ANNUELS** | | **330K€/an** |
+| Source Gains | Baseline Actuel | Cible | Amélioration |
+|--------------|----------------|-------|--------------|
+| **Chargement écrans** | 30-40s par écran | < 2s | ~95% plus rapide |
+| **Création devis** | 2h05 par devis | ~31 min | ~75% plus rapide |
+| **Génération PPSPS** | 3h00 par PPSPS | ~27 min | ~85% plus rapide |
+| **Recherche templates** | 30 min | < 1 min | ~97% plus rapide |
+| **Visibilité direction** | 3h pour compiler | Temps réel | Immédiat |
+| **Reliquats** | Aucun suivi (pertes) | 100% tracés | Traçabilité complète |
 
-**ROI Financier :**
-```
-Année 1:
-  - Investment: 60K€
-  - Run costs: 13.8K€
-  - Gains: 330K€ (prorata 10 mois après M2) = 275K€
-  - Net Year 1: 275K€ - 60K€ - 13.8K€ = 201K€ ✅
+**Volume d'Activité (Constaté) :**
+- 40-80 devis/mois → Gain temps: 63-126h/mois (1.5-3 semaines ETP)
+- ~15-20 PPSPS/mois → Gain temps: 38-51h/mois (1 semaine ETP)
+- 100-200 écrans/jour × 4 RA → Gain quotidien: 3-5h/jour équipe
 
-Année 2:
-  - Run costs: 13.8K€
-  - Gains: 330K€
-  - Net Year 2: 330K€ - 13.8K€ = 316K€ ✅
+**Gains Qualitatifs :**
+- ✅ **Satisfaction utilisateurs** : Objectif > 4.5/5 (vs frustration 9-10/10 actuelle)
+- ✅ **Télétravail efficace** : Fonctionnel (vs impossible actuellement)
+- ✅ **Réactivité commerciale** : Temps devis réduit 75%
+- ✅ **Qualité PPSPS** : Clauses obligatoires intégrées (vs checklist papier)
+- ✅ **Conformité RGPD** : Chiffrement, traçabilité, audit trail
+- ✅ **Visibilité direction** : KPIs temps réel (vs 3h compilation)
+- ✅ **Attractivité RH** : Outils modernes
 
-Cumul 2 ans: 201K€ + 316K€ = 517K€
-ROI 2 ans: 517K€ / 60K€ = 862%
-Payback: ~4 mois (dès M6 !)
-```
-
-**Gains Non-Financiers :**
-- ✅ **Satisfaction Responsables Affaires** : +60% (ERP moderne)
-- ✅ **Télétravail efficace** : 100% fonctionnel (vs 10% actuellement)
-- ✅ **Réactivité commerciale** : -70% temps création devis
-- ✅ **Qualité PPSPS** : 100% clauses obligatoires (vs 80%)
-- ✅ **Conformité RGPD** : Chiffrement, traçabilité, droits
-- ✅ **Visibilité direction** : KPIs temps réel (vs reporting mensuel)
-- ✅ **Attractivité RH** : Outils modernes recrutement
+**Note ROI:** Valorisation financière à définir selon taux horaire et volume réel. Voir [Plan d'Action](plan/Plan_Action_Direction_Affaires.md) pour méthodologie calcul.
 
 ---
 

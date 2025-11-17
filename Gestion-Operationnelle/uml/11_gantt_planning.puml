@@ -6,31 +6,31 @@ printscale monthly
 
 project starts 2025-11-17
 
--- Phase 1 : Quick Wins (M1-M6) 185K€ --
+-- Phase 1 : Quick Wins (M1-M6) --
 
-[RFID Stocks 65K€] as [RFID] lasts 120 days and is colored in LightBlue
+[RFID Stocks] as [RFID] lasts 120 days and is colored in LightBlue
 [RFID] starts 2025-11-17
 
 [POC RFID Annecy] as [RFIDPOC] lasts 60 days and is colored in LightGreen and starts at [RFID]'s start
 [Deploiement Annecy+Albertville] as [RFIDDeploy] lasts 60 days and is colored in LightGreen and starts at [RFIDPOC]'s end
 
-[Dashboards Power BI 70K€] as [PBI] lasts 150 days and is colored in Orange
+[Dashboards Power BI] as [PBI] lasts 150 days and is colored in Orange
 [PBI] starts 2025-11-17
 
 [Audit Donnees] as [PBIAudit] lasts 30 days and is colored in Yellow and starts at [PBI]'s start
 [Dev Dashboards] as [PBIDev] lasts 90 days and is colored in Yellow and starts at [PBIAudit]'s end
 [Formation GO-LIVE] as [PBIGL] lasts 30 days and is colored in LightGreen and starts at [PBIDev]'s end
 
-[Systeme Tickets BE 50K€] as [Tickets] lasts 150 days and is colored in Pink
+[Systeme Tickets BE] as [Tickets] lasts 150 days and is colored in Pink
 [Tickets] starts 2025-12-17
 
 [Benchmark Solutions] as [TicketsBench] lasts 30 days and is colored in LightPink and starts at [Tickets]'s start
 [Config Linear] as [TicketsConfig] lasts 60 days and is colored in LightPink and starts at [TicketsBench]'s end
 [Tests GO-LIVE] as [TicketsGL] lasts 60 days and is colored in LightGreen and starts at [TicketsConfig]'s end
 
--- Phase 2 : Structurant (M7-M18) 280K€ --
+-- Phase 2 : Structurant (M7-M18) --
 
-[Migration ERP Odoo 200K€] as [Odoo] lasts 300 days and is colored in LightBlue
+[Migration ERP Odoo] as [Odoo] lasts 300 days and is colored in LightBlue
 [Odoo] starts at [RFID]'s end
 
 [Benchmark ERP] as [OdooBench] lasts 60 days and is colored in Cyan and starts at [Odoo]'s start
@@ -39,30 +39,30 @@ project starts 2025-11-17
 [Migration Progressive] as [OdooMigr] lasts 150 days and is colored in Cyan and starts at [OdooGO]'s end
 [Integrations GO-LIVE] as [OdooGL] lasts 30 days and is colored in LightGreen and starts at [OdooMigr]'s end
 
-[RBAC Transparence 30K€] as [RBAC] lasts 90 days and is colored in Purple
+[RBAC Transparence] as [RBAC] lasts 90 days and is colored in Purple
 [RBAC] starts at [OdooMigr]'s start
 
 [Definition Roles] as [RBACDef] lasts 30 days and is colored in Violet and starts at [RBAC]'s start
 [Config Odoo+PBI] as [RBACConfig] lasts 30 days and is colored in Violet and starts at [RBACDef]'s end
 [Tests Formation] as [RBACGL] lasts 30 days and is colored in LightGreen and starts at [RBACConfig]'s end
 
-[ML Predictif 50K€] as [ML] lasts 120 days and is colored in Green
+[ML Predictif] as [ML] lasts 120 days and is colored in Green
 [ML] starts at [OdooMigr]'s end
 
 [Data Lake Setup] as [MLSetup] lasts 30 days and is colored in LightGreen and starts at [ML]'s start
 [Dev Modeles ML] as [MLDev] lasts 60 days and is colored in LightGreen and starts at [MLSetup]'s end
 [Integration GO-LIVE] as [MLGL] lasts 30 days and is colored in DarkGreen and starts at [MLDev]'s end
 
--- Phase 3 : Optimisation (M19-M24) 115K€ --
+-- Phase 3 : Optimisation (M19-M24) --
 
-[Gouvernance Donnees 50K€] as [Gov] lasts 90 days and is colored in Brown
+[Gouvernance Donnees] as [Gov] lasts 90 days and is colored in Brown
 [Gov] starts at [MLGL]'s end
 
 [Audit Data Quality] as [GovAudit] lasts 30 days and is colored in BurlyWood and starts at [Gov]'s start
 [Nettoyage MDM] as [GovClean] lasts 30 days and is colored in BurlyWood and starts at [GovAudit]'s end
 [Gouvernance CDO] as [GovCDO] lasts 30 days and is colored in BurlyWood and starts at [GovClean]'s end
 
-[Culture Data-Driven 65K€] as [Culture] lasts 180 days and is colored in Gold
+[Culture Data-Driven] as [Culture] lasts 180 days and is colored in Gold
 [Culture] starts at [Gov]'s start
 
 [Formation Direction] as [CultureDir] lasts 60 days and is colored in Yellow and starts at [Culture]'s start

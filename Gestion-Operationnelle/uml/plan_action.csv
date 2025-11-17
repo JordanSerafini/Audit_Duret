@@ -1,0 +1,9 @@
+Phase,Periode,Projet,Description,Gains Attendus
+Phase 1 Quick Wins,M1-M4,RFID Stocks,POC RFID Annecy - Deploiement Annecy Albertville - Formation magasiniers,Reduction drastique temps reception - Valorisation coherente - Inventaires rapides
+Phase 1 Quick Wins,M1-M5,Dashboards BI KPI,Audit donnees SAGE/MDE - Dev dashboards Direction RA Chefs - Formation utilisateurs,Reduction drastique temps KPI Sylvie - Temps reel vs decale - Alertes automatiques
+Phase 1 Quick Wins,M2-M6,Systeme Tickets BE,Benchmark solutions - Config workflows - Algo priorisation - Tests deploiement,Productivite BE amelioree - Equite transparence - Surcharge reduite
+Phase 2 Structurant,M7-M16,Migration ERP moderne,Benchmark ERP Odoo - POC 6 sem - Go/No-Go - Migration progressive Affaires Achats Compta - Formation equipes,Suppression lenteurs MDE - Mobilite iOS Android - Collaboration amelioree
+Phase 2 Structurant,M13-M15,RBAC Transparence,Definition roles - Permissions granulaires ERP BI - Audit trail qui fait quoi,Transparence chef voit budget - Reduction turnover - Responsabilisation
+Phase 2 Structurant,M15-M18,Analyses Avancees,Data Warehouse centralisation - Analyses consolidees automatiques - Detection anomalies budgets - Integration dashboards BI,Anticipation amelioree - Reduction depassements - Decisions data-driven
+Phase 3 Optimisation,M19-M21,Gouvernance Donnees,Data Quality nettoyage deduplication - MDM Clients Produits Fournisseurs - Propriete donnees responsable designe,Fiabilite decisions amelioree - Qualite donnees garantie
+Phase 3 Optimisation,M19-M24,Culture Data-Driven,Formation direction managers - Accompagnement changement continu - Champions internes Sylvie Thomas RA,Adoption amelioree - Reduction resistance - Culture data perenne
