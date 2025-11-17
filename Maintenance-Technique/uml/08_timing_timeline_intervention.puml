@@ -1,6 +1,6 @@
 @startuml Timing_Timeline_Intervention
 
-title Timeline Comparee - Intervention SAV (CERFA Papier vs Digital)
+title Timeline Comparee Intervention SAV CERFA Papier vs Digital
 
 concise "ACTUEL (CERFA Papier)" as Actuel
 concise "CIBLE (App Mobile)" as Cible

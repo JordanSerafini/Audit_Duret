@@ -1,14 +1,14 @@
 @startuml Network_Flux_Donnees
 
-title Flux de Donnees - Architecture Cible SAV Maintenance
+title Flux de Donnees Architecture Cible SAV Maintenance
 
 package "Internet" #E0F7FA {
   [Portail Client\n(Web)] as client
   [App Mobile\nTechniciens] as mobile
 }
 
-package "Azure Cloud (EU - France)" #E3F2FD {
-  [ERP/CRM Terrain\n(Praxedo/Synchroteam)] as erp
+package "Azure Cloud EU France" #E3F2FD {
+  [ERP CRM Terrain\nPraxedo Synchroteam] as erp
   [Azure Blob\nStorage] as blob
   database "PostgreSQL\nBase ERP" as db
 }
@@ -19,7 +19,7 @@ package "Services Complementaires" #F3E5F5 {
   [Power BI\nAnalytics] as powerbi
 }
 
-package "On-Premise Duret - Annecy" #FFF8E1 {
+package "On Premise Duret Annecy" #FFF8E1 {
   [GAO\nLegacy] as gao
   [SAGE\nComptabilite] as sage
 }
@@ -36,7 +36,7 @@ erp --> email : API\nconfirmations\nrapports
 
 db --> powerbi : DirectQuery\nanalytics
 
-erp ..> gao : API/CSV\nconsultation\n(optionnel)
+erp ..> gao : API CSV\nconsultation\noptionnel
 erp --> sage : API\nfacturation\nautomatique
 
 note as N1
