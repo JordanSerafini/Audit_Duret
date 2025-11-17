@@ -56,7 +56,7 @@ state "Embauche / Onboarding" as Onboard #FFB6C1 {
 Onboard --> Integration : Premier jour passé
 note on link
   ⏰ Total onboarding: 8-10h
-  💰 Coût: 240-300€
+  💰 Coût: 8-10h
 end note
 
 state "Intégration" as Integration #98FB98 {
@@ -190,11 +190,11 @@ note bottom
   🔴 Pas de visibilité temps réel
 
   **COÛTS PAR PHASE**
-  💰 Onboarding: 240-300€ (×30/an = 9K€)
-  💰 Opérationnel: 60K€/an (paie, FH, congés)
-  💰 Offboarding: 150-200€ (×30/an = 6K€)
+  💰 Onboarding: 8-10h (×30/an = )
+  💰 Opérationnel: temps considérable (paie, FH, congés)
+  💰 Offboarding: 5-6h (×30/an = )
 
-  **TOTAL ANNUEL: 75K€**
+  **TOTAL ANNUEL: temps très élevé**
 end note
 
 @enduml

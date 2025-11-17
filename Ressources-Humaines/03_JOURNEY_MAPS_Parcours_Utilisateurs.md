@@ -295,7 +295,6 @@ FIN MOIS - Réception bulletins
 | **Stress level** | 9/10 |
 | **Points de friction** | 15+ |
 | **Sentiment final** | 😓 Épuisement |
-| **Coût annuel** | 300-360h = 9-11K€ |
 
 ---
 
@@ -410,7 +409,6 @@ VENDREDI 17:30 - Validation
 | **Stress level** | 7/10 |
 | **Points de friction** | 8 |
 | **Sentiment final** | 😞 Découragement |
-| **Coût annuel** | 180h = 8K€ |
 
 ---
 
@@ -773,8 +771,8 @@ JOUR +30 - Rapport étonnement 2
 | **Stress level** | 8/10 |
 | **Points de friction** | 18 |
 | **Sentiment final** | 😮‍💨 Soulagement mais épuisée |
-| **Coût unitaire** | 8-10h × 30€ = 240-300€ |
-| **Coût annuel** | 30 embauches × 300€ = 9K€ |
+| **Temps unitaire** | 8-10h par embauche |
+| **Volume annuel** | ~30 embauches/sorties par an |
 
 ---
 
@@ -971,8 +969,7 @@ MER  ┬ 10:00 SOPHIE: Distribution bulletins
 │ NOMBRE D'OUTILS: 6                                              │
 │ NOMBRE DE RE-SAISIES: 6-8                                       │
 │ NIVEAU DE STRESS: 🔴🔴🔴 9/10                                    │
-│ COÛT MENSUEL: 25-30h × 30€ = 750-900€                          │
-│ COÛT ANNUEL: 9-11K€                                             │
+│ TEMPS MENSUEL: 25-30h                                           │
 │ SENTIMENT: 😭 "C'est du travail de robot, pas de RH"           │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -1016,27 +1013,24 @@ MER  ┬ 10:00 SOPHIE: Distribution bulletins
 | **Stress moyen** | 8/10 |
 | **Temps onboarding** | 8-10h par embauche |
 
-### 💰 Coût total mensuel du chaos RH
+### ⏰ Temps total mensuel du chaos RH
 
 ```
 Temps RH (Sophie):
-  Paie:        25h × 30€ =    750€
-  Onboarding:  20h × 30€ =    600€ (2-3/mois)
-  Divers:      15h × 30€ =    450€
-                          --------
-  TOTAL RH              =  1,800€/mois
+  Paie:        ~25h/mois
+  Onboarding:  ~20h/mois (2-3/mois)
+  Divers:      ~15h/mois
+
+  TOTAL RH     ~60h/mois
 
 Temps Managers:
-  Validation FH: 15h × 45€ =  675€
+  Validation FH: ~15h/mois (tous managers)
 
 Temps Salariés:
-  Saisie FH:   80h × 28€ = 2,240€
-  Congés:      10h × 28€ =   280€
-                          --------
-  TOTAL                  = 2,520€/mois
+  Saisie FH:   ~80h/mois (tous salariés)
+  Congés:      ~10h/mois
 
-TOTAL MENSUEL CHAOS     = 5,000€/mois
-TOTAL ANNUEL            = 60K€/an
+IMPACT: Temps considérable perdu sur tâches manuelles
 ```
 
 ---
@@ -1058,7 +1052,7 @@ TOTAL ANNUEL            = 60K€/an
 > "Chaque mois c'est la course. Je reçois des formats Excel différents, je dois tout reformater. S'il y avait une connexion directe POPAYE-SILAE, je gagnerais 4-5h."
 
 ### Christine (DG)
-> "Sophie passe 60% de son temps sur des tâches robotiques au lieu de faire de la vraie RH stratégique. On perd 60-80K€ par an en inefficacités."
+> "Sophie passe 60% de son temps sur des tâches robotiques au lieu de faire de la vraie RH stratégique. On perd un temps et un argent considérables en inefficacités."
 
 ---
 

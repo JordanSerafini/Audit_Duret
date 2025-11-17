@@ -233,14 +233,13 @@
 **🔴 CRITIQUE - Coûts RH opaques**
 > "Je ne connais pas le coût réel par chantier, CDI vs intérimaires. Impossible d'optimiser"
 
-- **Impact**: Marge réduite
-- **Estimation**: 100-150K€ d'optimisation possible
+- **Impact**: Marge réduite, impossible d'optimiser
 
 **🟠 IMPORTANT - Temps administratif excessif**
 > "Sophie passe 60% de son temps sur des tâches manuelles au lieu de faire de la vraie RH stratégique"
 
 - **Impact**: Pas de GPEC, recrutement, rétention
-- **Coût opportunité**: 200-300h/an perdues
+- **Conséquence**: RH opérationnelle au lieu de stratégique
 
 **🟠 IMPORTANT - Attractivité employeur**
 > "Pour recruter les jeunes, on doit moderniser. Les process papier, ça nous dessert"
@@ -257,7 +256,7 @@
 
 **❌ Ce qu'elle ne veut PAS**
 - ❌ Projet IT de 3 ans qui n'aboutit jamais
-- ❌ Investissement >200K€ sans garantie ROI
+- ❌ Investissement trop important sans garantie ROI
 - ❌ Bloquer l'activité pendant la transformation
 
 ---
@@ -266,38 +265,38 @@
 
 ### 🔴 CRITIQUES (Blocages Business)
 
-| Pain Point | Personas touchés | Impact h/an | Fréquence |
-|-----------|------------------|-------------|-----------|
-| **Processus paie manuel** | Sophie, Virginie | 600h | Mensuel |
-| **15+ outils non connectés** | Sophie | 400h | Permanent |
-| **39 tâches onboarding manuelles** | Sophie | 300h | 30/an |
-| **Validation FH chronophage** | Thomas, Sophie | 200h | Hebdo |
-| **Saisie FH fastidieuse** | Lucas, Tous terrain | 180h | Hebdo |
-| **Pas de visibilité temps réel** | Tous | 150h | Permanent |
+| Pain Point | Personas touchés | Impact | Fréquence |
+|-----------|------------------|--------|-----------|
+| **Processus paie manuel** | Sophie, Virginie | Très élevé | Mensuel |
+| **15+ outils non connectés** | Sophie | Élevé | Permanent |
+| **39 tâches onboarding manuelles** | Sophie | 240-300h/an | 30/an |
+| **Validation FH chronophage** | Thomas, Sophie | Élevé | Hebdo |
+| **Saisie FH fastidieuse** | Lucas, Tous terrain | Moyen | Hebdo |
+| **Pas de visibilité temps réel** | Tous | Élevé | Permanent |
 
-**💰 Total Impact Critique : ~1,830h/an = 55K€**
+**💰 Total Impact Critique : Très important**
 
 ### 🟠 IMPORTANTS (Inefficacités)
 
-| Pain Point | Personas touchés | Impact h/an | Fréquence |
-|-----------|------------------|-------------|-----------|
-| **Congés papier** | Thomas, Lucas, Sophie | 120h | Quotidien |
-| **Gestion intérimaires fragmentée** | Sophie | 100h | Permanent |
-| **KPIs manuels** | Sophie, Christine | 80h | Hebdo |
-| **Planning Excel obsolète** | Thomas, Lucas | 60h | Quotidien |
-| **Délais courts paie** | Virginie, Sophie | 50h | Mensuel |
+| Pain Point | Personas touchés | Impact | Fréquence |
+|-----------|------------------|--------|-----------|
+| **Congés papier** | Thomas, Lucas, Sophie | Moyen | Quotidien |
+| **Gestion intérimaires fragmentée** | Sophie | Moyen | Permanent |
+| **KPIs manuels** | Sophie, Christine | Moyen | Hebdo |
+| **Planning Excel obsolète** | Thomas, Lucas | Faible | Quotidien |
+| **Délais courts paie** | Virginie, Sophie | Moyen | Mensuel |
 
-**💰 Total Impact Important : ~410h/an = 12K€**
+**💰 Total Impact Important : Modéré**
 
 ### 🟢 SOUHAITABLES (Améliorations Confort)
 
-| Pain Point | Personas touchés | Impact h/an | Fréquence |
-|-----------|------------------|-------------|-----------|
-| **Notes de frais papier** | Lucas, Tous | 80h | Hebdo |
-| **Rapports étonnement manuels** | Sophie | 40h | 30/an |
-| **Pas de gamification** | Lucas, Terrain | - | - |
+| Pain Point | Personas touchés | Impact | Fréquence |
+|-----------|------------------|--------|-----------|
+| **Notes de frais papier** | Lucas, Tous | Faible | Hebdo |
+| **Rapports étonnement manuels** | Sophie | Faible | 30/an |
+| **Pas de gamification** | Lucas, Terrain | Faible | - |
 
-**💰 Total Impact Souhaitable : ~120h/an = 3.5K€**
+**💰 Total Impact Souhaitable : Faible**
 
 ---
 
@@ -331,7 +330,7 @@
 
 > **Virginie** : *"Chaque mois c'est la course. Je passe mon temps à reformater les données au lieu de faire la paie..."*
 
-> **Christine** : *"On perd entre 60K et 80K€ par an en inefficacités RH. C'est de l'argent qui part en fumée."*
+> **Christine** : *"On perd un temps et un argent considérables en inefficacités RH. C'est inacceptable."*
 
 ### 🎯 Les Attentes
 
