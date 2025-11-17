@@ -2,78 +2,34 @@
 
 title Timeline Reception Stocks (Avant vs Apres RFID)
 
-robust "Isabelle (Magasinier)" as ISA
-concise "BL Fournisseur" as BL
-concise "Systeme Lireco" as LIR
-concise "Odoo Inventory" as ODO
+robust "Systeme ACTUEL (Long)" as Actuel
+concise "Systeme CIBLE RFID (Rapide)" as Cible
 
 @0
-ISA is Attente
-BL is Papier_Recu
-LIR is Vide
-ODO is Vide
+Actuel is "BL Recu"
+Cible is "BL Recu"
 
-@1
-ISA is Comptage_Manuel : "Compte colis 1/20"
-note bottom : Comptage manuel\ncolis par colis
-
-@5
-ISA is Comptage_Manuel : "Compte colis 5/20"
-
-@10
-ISA is Comptage_Manuel : "Compte colis 10/20"
+@2
+Actuel is "Comptage manuel\ncolis par colis"
+note bottom: Processus manuel long
 
 @15
-ISA is Comptage_Manuel : "Compte colis 15/20"
-note bottom : Fatigue,\nerreurs 15%
+Actuel is "Saisie manuelle\nLireco"
+note bottom: Erreurs possibles
 
 @20
-ISA is Saisie_Manuelle : "Saisit Lireco"
-BL is Papier_Classe
-note bottom : Saisie manuelle\n(typos possibles)
+Actuel is "Reception validee"
+Cible is "Scan RFID\nportique"
+note bottom: Detection auto instantanee
 
-@23
-ISA is Saisie_Manuelle : "Saisit quantites"
-LIR is Reception_Creee
+@21
+Cible is "Reconciliation\nautomatique"
 
-@25
-ISA is Terminee : "Termine"
-LIR is Reception_Validee
-note bottom : TOTAL AVANT :\n25 min/BL\nErreurs 15%
+@22
+Cible is "Reception auto\ncreee + validee"
+note bottom: Zero saisie manuelle
 
-@26
-ISA is Repos : "Passe BL suivant"
-
-@30
-ISA is Scan_RFID : "Scan portique RFID"
-BL is QR_Code_Scanne
-note bottom : Scan QR Code BL\n+ passage portique RFID
-
-@30.25
-ISA is Scan_RFID : "Tags RFID detectes"
-LIR is Lecture_RFID : "Detection auto\n20 tags RFID"
-note bottom : Lecture instantanee\ntous tags (0 sec)
-
-@30.5
-LIR is Reconciliation : "Rapprochement\nauto BL vs tags"
-note bottom : Algorithme\nrapprochement\nautomatique
-
-@30.75
-LIR is Reception_Creee : "Reception auto creee"
-ODO is Sync_Auto : "Sync Odoo auto"
-note bottom : Webhook Lireco\n→ Odoo (API)
-
-@31
-ISA is Validation : "Valide ecran\n(1 clic)"
-LIR is Reception_Validee : "Reception validee"
-ODO is Stock_MAJ : "Stock MAJ temps reel"
-note bottom : TOTAL APRES :\n45 sec/BL\nErreurs 0%
-
-@31.5
-ISA is Terminee : "Termine"
-note bottom : GAIN :\n-96% temps\n-100% erreurs
-
-@32
-ISA is Disponible : "Disponible\nautres taches"
+highlight 0 to 20 #FFAAAA : AVANT (Comptage + Saisie manuels)
+highlight 0 to 22 #AAFFAA : APRES (Scan RFID automatique)
 
 @enduml
