@@ -221,6 +221,45 @@ Service-Client/
 
 ---
 
+## 🎨 Utilisation des Diagrammes UML
+
+### Pour PowerPoint / Google Slides
+1. Les fichiers `.puml` sont dans le dossier `/uml/`
+2. Générez les **SVG** (qualité vectorielle) avec PlantUML :
+   ```bash
+   cd Service-Client/uml
+   java -jar plantuml.jar -tsvg *.puml
+   ```
+3. Importez les SVG dans vos slides
+4. Redimensionnez sans perte de qualité
+
+### Pour Impression / PDF
+- Générez les **PNG** haute résolution :
+  ```bash
+  java -jar plantuml.jar -tpng *.puml
+  ```
+
+### Pour Modifier les Diagrammes
+1. Éditez les fichiers `.puml` dans un éditeur de texte
+2. Régénérez avec PlantUML (voir ci-dessus)
+3. Syntaxe PlantUML : https://plantuml.com
+
+### Diagrammes Disponibles (12)
+- **Sequence** : Appel client actuel (système post-it)
+- **Activity** : Processus prise RDV (48h)
+- **Use Case** : Acteurs et interactions
+- **State** : Cycle de vie ticket (cible)
+- **Component** : Architecture cible (HubSpot + CTI)
+- **Class** : Modèle objet (Client, Ticket, RDV...)
+- **Deployment** : Infrastructure cloud (HubSpot EU, Azure)
+- **Timing** : Timeline comparée (48h → 2min)
+- **Mind Map** : Pain points (748K€)
+- **WBS** : Work Breakdown Structure (206K€)
+- **Gantt** : Comparaison avant/après
+- **Network** : Flux de données (sécurité RGPD)
+
+---
+
 ## 📅 Historique
 
 - **2025-11-17** - Création initiale
