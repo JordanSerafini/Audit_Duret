@@ -2,52 +2,42 @@
 
 title Flux de Donnees - Architecture Cible SAV Maintenance
 
-nwdiag {
-  network "Internet" {
-    address = "Public"
-
-    client [description = "Portail Client\n(Web)"];
-    mobile [description = "App Mobile\nTechniciens"];
-  }
-
-  network "Azure Cloud (EU - France)" {
-    address = "SaaS - RGPD Compliant"
-
-    erp [description = "ERP/CRM Terrain\n(Praxedo/Synchroteam)"];
-    blob [description = "Azure Blob\nStorage"];
-    db [description = "PostgreSQL\nBase ERP"];
-  }
-
-  network "Services Complementaires" {
-    address = "External APIs"
-
-    sms [description = "Twilio\nSMS Gateway"];
-    email [description = "SendGrid\nEmail"];
-    powerbi [description = "Power BI\nAnalytics"];
-  }
-
-  network "On-Premise Duret - Annecy" {
-    address = "192.168.1.0/24"
-
-    gao [description = "GAO\nLegacy"];
-    sage [description = "SAGE\nComptabilite"];
-  }
-
-  client -- erp [label = "HTTPS\nREST API"];
-  mobile -- erp [label = "HTTPS\nREST API"];
-  mobile -- blob [label = "Upload\nphotos/PDF"];
-
-  erp -- db [label = "SQL\nCRUD"];
-  erp -- blob [label = "Store/Retrieve\nfichiers"];
-
-  erp -- sms [label = "API\nnotifications\nclients"];
-  erp -- email [label = "API\nconfirmations\nrapports"];
-
-  db -- powerbi [label = "DirectQuery\nanalytics"];
-
-  erp -- gao [label = "API/CSV\nconsultation\n(optionnel)"];
-  erp -- sage [label = "API\nfacturation\nautomatique"];
+package "Internet" #E0F7FA {
+  [Portail Client\n(Web)] as client
+  [App Mobile\nTechniciens] as mobile
 }
+
+package "Azure Cloud (EU - France)" #E3F2FD {
+  [ERP/CRM Terrain\n(Praxedo/Synchroteam)] as erp
+  [Azure Blob\nStorage] as blob
+  database "PostgreSQL\nBase ERP" as db
+}
+
+package "Services Complementaires" #F3E5F5 {
+  [Twilio\nSMS Gateway] as sms
+  [SendGrid\nEmail] as email
+  [Power BI\nAnalytics] as powerbi
+}
+
+package "On-Premise Duret - Annecy" #FFF8E1 {
+  [GAO\nLegacy] as gao
+  [SAGE\nComptabilite] as sage
+}
+
+client --> erp : HTTPS\nREST API
+mobile --> erp : HTTPS\nREST API
+mobile --> blob : Upload\nphotos/PDF
+
+erp --> db : SQL\nCRUD
+erp --> blob : Store/Retrieve\nfichiers
+
+erp --> sms : API\nnotifications\nclients
+erp --> email : API\nconfirmations\nrapports
+
+db --> powerbi : DirectQuery\nanalytics
+
+erp ..> gao : API/CSV\nconsultation\n(optionnel)
+erp --> sage : API\nfacturation\nautomatique
 
 note as N1
   **Flux Principaux:**

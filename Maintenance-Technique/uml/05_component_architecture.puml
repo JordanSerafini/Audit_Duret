@@ -20,21 +20,33 @@ package "ERP/CRM Terrain (SaaS Cloud)" {
 }
 
 package "Donnees (Data)" {
-  database "Base ERP\n(PostgreSQL)" as DB
+  database "Base ERP\n(PostgreSQL)" as DB {
+    [Tables]
+    [Clients]
+    [Contrats]
+    [Interventions]
+    [Planning]
+    [Factures]
+  }
+
   cloud "Stockage Cloud\n(Azure Blob)" as Cloud
 
-  DB : Tables :
-  DB : - clients
-  DB : - contrats
-  DB : - interventions
-  DB : - planning
-  DB : - factures
+  note right of DB
+    **Tables:**
+    - clients
+    - contrats
+    - interventions
+    - planning
+    - factures
+  end note
 
-  Cloud : Fichiers :
-  Cloud : - Photos interventions
-  Cloud : - PDF rapports
-  Cloud : - PDF devis
-  Cloud : - Certificats
+  note right of Cloud
+    **Fichiers:**
+    - Photos interventions
+    - PDF rapports
+    - PDF devis
+    - Certificats
+  end note
 }
 
 package "Integrations (Externe)" {
