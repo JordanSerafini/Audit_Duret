@@ -1,0 +1,57 @@
+@startwbs WBS_Problemes_Direction_Affaires
+
+title WBS - Décomposition des Problèmes Direction & Gestion Affaires
+
+* Problèmes\nDirection-Affaires
+
+** 🔴 ERP LEGACY
+*** MDE/Sage\ncalamiteux
+**** 30-40s/écran
+**** VPN + Citrix
+**** Timeouts
+*** Télétravail\nimpossible
+*** Interface\nobsolète
+*** Pas d'API
+
+** 🔴 TEMPLATES
+*** 200+ fichiers\nWord chaos
+**** Nommage\nincohérent
+**** Pas de\nversioning
+**** Recherche\n30 min
+*** Pas d'auto\nremplissage
+*** Chaque RA\nses propres
+
+** 🔴 DEVIS
+*** Création\n2h05
+**** Recherche\ntemplate 30min
+**** Saisie\n1h30
+**** Vérif\n15min
+*** 30 lignes\n× 5min
+*** 100% manuel
+
+left side
+
+** 🔴 PPSPS
+*** Génération\n3h00
+**** Ctrl+F\nremplacer
+**** Copie-colle\nmanuel
+**** Plans\ninsertion
+*** Risque oublis\nclauses
+*** 100% Word\nmanuel
+
+** 🔴 VISIBILITÉ
+*** Direction\naveugle
+**** Pas de\ndashboards
+**** Pas KPIs TR
+**** Avancement\ninconnu
+*** Budget\ndispersé
+*** 3h pour\ncompiler
+
+** 🔴 PROCESSUS
+*** 100% manuel
+**** Zéro\nautomatisation
+**** Zéro\ndigitalisation
+*** Reliquats\nnon suivis
+*** Pas de\ntraçabilité
+
+@endwbs
