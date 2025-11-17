@@ -28,7 +28,7 @@ end note
 cloud "Réseau Téléphonique" as Tel #FFD700 {
 }
 
-node "Bureau Albertville" as Bureau #E6F3FF {
+node "Bureau Siège" as Bureau #E6F3FF {
 
   node "Serveur Windows 2012" as Server #FF6B6B {
     component "Sage MDE" as SageMDE #FF6B6B
@@ -159,8 +159,10 @@ note bottom
   - Pas d'EDI fournisseurs
   - Fax encore utilisé (!!)
 
-  💰 **Coût maintenance**: ~50K€/an
-  💰 **Coût inefficacité**: 910K€/an
+  🔴 **Impact**
+  - 50% commandes incomplètes (constaté)
+  - Processus 100% manuel
+  - Aucune traçabilité
 end note
 
 @enduml

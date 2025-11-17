@@ -20,7 +20,7 @@ nwdiag {
     sylvie
   }
 
-  network "LAN Bureau Albertville" {
+  network "LAN Bureau Siège" {
     address = "192.168.1.0/24"
     color = "#E6F3FF"
 
@@ -75,12 +75,12 @@ note as N1
      - Téléphone (pas de trace)
      - Papier (bons)
   4. Pas d'intégration fournisseurs
-  5. Re-saisie 6x des mêmes données
+  5. Multiples re-saisies des mêmes données
 
   **Impact:**
-  💰 910K€/an de pertes
-  ⏰ 6h30 de travail humain/commande
-  ❌ 50% d'erreurs
+  🔴 Processus très inefficace
+  ❌ 50% commandes incomplètes (constaté)
+  ⏸️ Chantiers bloqués fréquemment
 end note
 
 @enduml

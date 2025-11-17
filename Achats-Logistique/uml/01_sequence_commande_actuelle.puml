@@ -164,8 +164,8 @@ note over Marc #FF0000
   ❌ **CATASTROPHE**
   C'EST LE MAUVAIS CÂBLE !
 
-  🔴 Chantier bloqué 3 jours
-  💰 Perte: 2,400€
+  🔴 Chantier bloqué
+  😭 Il faut tout recommencer
 end note
 
 Marc -> Sylvie: Appel furieux 🤬
@@ -178,14 +178,13 @@ end note
 == BILAN ==
 
 note over Marc, Fourn #FFCCCC
-  **MÉTRIQUES**
-  ⏰ Durée totale: **3 JOURS**
-  👥 Temps humain: **6h30**
-  📞 Appels: **12**
-  ♻️ Re-saisies: **7 fois**
-  ❌ Taux erreur: **50%**
-  💰 Coût: **2,708€** par commande ratée
-  😭 Stress: **9/10**
+  **MÉTRIQUES PROCESSUS**
+  ⏰ Durée totale: **~3 jours**
+  📞 Nombreux appels
+  ♻️ Multiples re-saisies
+  ❌ Taux erreur: **50%** (constaté)
+  😭 Stress élevé
+  ⏸️ Chantier bloqué
 end note
 
 @enduml

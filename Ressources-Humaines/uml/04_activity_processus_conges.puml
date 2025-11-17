@@ -1,0 +1,197 @@
+@startuml Activity_Processus_Conges_Actuel
+
+title Processus Demande de Congés - ACTUEL (Papier)
+
+|Salarié|
+start
+
+:Décide de poser
+des congés;
+
+:Cherche formulaire
+papier;
+note right #FF6B6B
+  🔴 Formulaire papier en 2025
+  ⏰ 5 min
+end note
+
+:Remplit formulaire
+à la main;
+note right #FF6B6B
+  🔴 Saisie manuelle:
+  • Nom, prénom
+  • Dates
+  • Type congés
+  ⏰ 5 min
+end note
+
+:Cherche manager;
+note right #FF6B6B
+  🔴 Validation synchrone
+  obligatoire
+end note
+
+if (Manager disponible ?) then (non)
+  :Laisse papier
+  sur bureau;
+  note right #FF6B6B
+    🔴 Pas de notification
+    Risque perte document
+  end note
+
+  |Salarié|
+  :Attente...;
+  note right #FFFFCC
+    Peut prendre 1-2 jours
+  end note
+else (oui)
+  |Manager|
+  :Examine demande;
+endif
+
+|Manager|
+if (Congés OK ?) then (non)
+  :Refuse verbalement;
+  |Salarié|
+  stop
+else (oui)
+  :Signe formulaire
+  papier;
+  note right
+    ⏰ 2 min
+  end note
+endif
+
+|Salarié|
+:Récupère formulaire
+signé;
+
+:Cherche scanner;
+note right #FF6B6B
+  🔴 Dépendance matériel
+end note
+
+if (Scanner dispo ?) then (non)
+  :Scanne avec
+  smartphone perso;
+  note right #FF6B6B
+    🔴 Workaround personnel
+    ⏰ 10 min
+  end note
+else (oui)
+  :Scanne formulaire;
+  note right
+    ⏰ 5 min
+  end note
+endif
+
+:Envoie email
+à Sophie (RH);
+note right #FF6B6B
+  🔴 Email avec pièce jointe
+  Pas de workflow structuré
+  ⏰ 5 min
+end note
+
+|Sophie (RH)|
+:Réceptionne email;
+
+if (Email vu ?) then (non)
+  :Attente...;
+  note right #FFFFCC
+    Peut prendre 1 jour
+  end note
+else (oui)
+endif
+
+:Vérifie solde CP
+dans Excel;
+note right #FF6B6B
+  🔴 Vérification manuelle
+  ⏰ 5 min
+end note
+
+if (Solde suffisant ?) then (non)
+  :Email refus
+  au salarié;
+  |Salarié|
+  stop
+else (oui)
+endif
+
+:Saisit dans POPAYE;
+note right #FF6B6B
+  🔴 **RE-SAISIE #1**
+  ⏰ 5 min
+end note
+
+:Saisit dans CIBTP;
+note right #FF6B6B
+  🔴 **RE-SAISIE #2**
+  ⏰ 5 min
+end note
+
+:Mise à jour
+planning Excel;
+note right #FF6B6B
+  🔴 **RE-SAISIE #3**
+  "Planning_CP_2025.xlsx"
+  ⏰ 5 min
+end note
+
+:Classe papier
+dans dossier;
+note right #FF6B6B
+  🔴 **ARCHIVAGE PAPIER**
+  ⏰ 3 min
+end note
+
+:Email confirmation
+au salarié;
+note right #FF6B6B
+  🔴 Notification manuelle
+  ⏰ 2 min
+end note
+
+|Salarié|
+:Reçoit confirmation;
+
+stop
+
+note right
+  **MÉTRIQUES PROCESSUS CONGÉS**
+
+  ⏰ Durée totale: **3-5 jours**
+
+  👤 Temps salarié: **30 min**
+  👤 Temps manager: **5 min**
+  👤 Temps Sophie: **25 min**
+  = **TOTAL: 1h**
+
+  🔧 Nombre d'étapes: **8**
+  🔧 Nombre d'outils: **5**
+     (Papier, Scanner, Email,
+      POPAYE, CIBTP, Excel)
+
+  ♻️ Re-saisies: **4 fois**
+     (Papier → Email → POPAYE
+      → CIBTP → Excel → Classement)
+
+  ❌ Taux de perte: **10%**
+     (papiers perdus)
+
+  😰 Stress: 6/10
+
+  💰 Coût par demande:
+     1h × 30€ = **30€**
+
+  💰 Coût annuel:
+     ~500 demandes × 30€ = **15K€**
+
+  💬 Citation Lucas (Terrain):
+  "Mes potes dans d'autres boîtes
+   font ça en 2 clics sur une app.
+   Ça prend 3 JOURS ici..."
+end note
+
+@enduml

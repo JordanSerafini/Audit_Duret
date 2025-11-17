@@ -76,7 +76,7 @@ state "En Cours" as EnCours #FFFFAA
 note right of EnCours
   Attente 2-3 jours
   ⏸️ Chantier bloqué
-  💰 800€/jour perdu
+  Chantier bloqué perdu
 end note
 
 EnCours --> Livraison : Fournisseur livre
@@ -126,7 +126,7 @@ note left of Erreur
   **CATASTROPHE**
   Mauvaise référence !
   🔴 Chantier bloqué 3j
-  💰 2,400€ perdu
+  Chantier bloqué perdu
   😭 Marc furieux
 end note
 
@@ -140,8 +140,8 @@ note bottom
   ⏰ Durée succès: 3 jours
   ⏰ Durée échec: 6 jours (recommence)
   ❌ Taux erreur: 50%
-  💰 Coût moyen/commande: 2,708€
-  👥 Temps humain: 6h30
+  Process très inefficace
+  Temps perdu important
   📞 Nombre appels: 12
 end note
 

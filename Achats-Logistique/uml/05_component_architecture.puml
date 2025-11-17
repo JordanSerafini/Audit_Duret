@@ -16,7 +16,7 @@ package "Chantiers (5 sites)" #FFE4E1 {
   end note
 }
 
-package "Bureau Albertville" #E6F3FF {
+package "Bureau Siège" #E6F3FF {
   [Gestionnaire Achats] as Sylvie #ADD8E6
   [Responsable Affaires] as Julien #FFDAB9
 
@@ -134,10 +134,10 @@ note bottom
   🔴 Aucune intégration système
   🔴 Sylvie = goulot d'étranglement
   🔴 Données éparpillées (6 outils)
-  🔴 Re-saisie 6-7 fois
+  🔴 Multiples re-saisies
   🔴 Pas d'automatisation
   🔴 Pas de visibilité temps réel
-  💰 Coût: 910K€/an
+  🔴 50% commandes incomplètes (constaté)
 end note
 
 @enduml

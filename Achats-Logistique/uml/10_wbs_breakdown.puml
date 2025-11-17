@@ -2,49 +2,54 @@
 
 title WBS - Décomposition des Problèmes Achats-Logistique
 
-* Problèmes\nAchats-Logistique\n**910K€/an**
+* Problèmes\nAchats-Logistique
 
-** 🔴 DONNÉES\n350K€/an
-*** Base chaos\n12 réf/produit
-*** Doublons
-*** Obsolètes
-*** Stock non fiable\n40%
+** 🔴 DONNÉES
+*** Base chaos
+**** Doublons
+**** Sage MDE\n"calamiteux"
+*** Obsolètes\nnon gérés
+*** Stock non fiable
+*** Double tarification
 
-** 🔴 PROCESSUS\n270K€/an
-*** 6 re-saisies
+** 🔴 LIVRAISONS
+*** 50% incomplets
+**** Reliquats\nnon suivis
+**** Retours\nnon liés
+**** Re-commandes
+*** Chantiers bloqués
+*** Équipes en attente
+
+** 🔴 PROCESSUS
+*** 100% manuel
+**** Multiples\nressaisies
 **** Papier
 **** Téléphone
 **** Email
 **** Sage
-**** Excel x2
-*** 100% manuel
+**** Excel
 *** 0% automatisation
+*** Inventaires\nchronophages
 
-** 🔴 OUTILS\n150K€/an
+** 🔴 OUTILS
 *** Sage MDE obsolète
-**** Windows 2012
-**** Client lourd
 **** Pas d'API
+**** Pas de mobile
 *** Excel chaos
-**** 4+ fichiers
+**** Fichiers\nmultiples
 **** Incohérences
-*** 1 seul PC dépôt
+*** Pas d'intégration
 
-** 🔴 COMMUNICATION\n90K€/an
-*** 100% téléphone
-**** 15-20 appels/jour
-**** Pas de traçabilité
+** 🔴 COMMUNICATION
+*** 100% téléphone/email
 *** Pas d'EDI
 *** Pas d'API
-*** Sylvie = goulot
+*** Aucune traçabilité
 
-** 🔴 ERREURS\n50K€/an
-*** Taux 50%
-**** Mauvaises réf
-**** Quantités
-**** Livraisons
-*** Chantier bloqué
-**** 💰 2,400€
-**** 3 jours
+** 🔴 GOUVERNANCE
+*** Commandes directes\nnon contrôlées
+*** Pas de validation
+*** Pas de KPIs
+*** Achats hors circuit
 
 @endwbs

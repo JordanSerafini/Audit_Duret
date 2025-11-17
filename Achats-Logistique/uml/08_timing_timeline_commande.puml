@@ -69,7 +69,7 @@ note bottom: Attente livraison
 ' Blocage chantier
 @110
 Chantier is 0
-note bottom: ⛔ CHANTIER BLOQUÉ\n💰 800€/jour
+note bottom: ⛔ CHANTIER BLOQUÉ\nChantier bloqué
 
 ' Jour 2 - Mardi (attente)
 @1440
@@ -130,7 +130,7 @@ Marc is Deballage
 @3020
 Marc is ERREUR
 Chantier is 0
-note bottom: ❌ MAUVAIS CÂBLE!\n🔴 Chantier bloqué 3j\n💰 2,400€ perdu
+note bottom: ❌ MAUVAIS CÂBLE!\n🔴 Chantier bloqué 3j\nChantier bloqué perdu
 
 @3025
 Marc is AppelFurieux
@@ -149,7 +149,7 @@ note bottom
   ⏰ Temps perdu: **4,200 min** (70h)
 
   ❌ Résultat: **ÉCHEC** (50% des cas)
-  💰 Coût: **2,708€**
+  Process inefficace
 
   Si succès: 3 jours
   Si échec: 6 jours (recommence)

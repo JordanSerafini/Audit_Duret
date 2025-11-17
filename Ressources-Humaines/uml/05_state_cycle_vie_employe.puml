@@ -1,0 +1,200 @@
+@startuml State_Cycle_Vie_Employe
+
+title Cycle de Vie Employé - États et Transitions
+
+[*] --> Candidature
+
+state "Candidature" as Candidat #ADD8E6 {
+  state "CV reçu" as CV
+  state "Entretien" as Interview
+  state "Proposition" as Offer
+
+  CV --> Interview : Sélectionné
+  Interview --> Offer : Validé
+  Interview --> [*] : Refusé
+  Offer --> [*] : Décliné
+}
+
+Candidat --> Embauche : Accepte offre
+note on link #FFD700
+  ⚠️ Processus manuel
+  Relances multiples
+end note
+
+state "Embauche / Onboarding" as Onboard #FFB6C1 {
+  state "Contrat signé" as Contract
+  state "Tâches admin (39)" as Admin
+  state "Matériel" as Material
+  state "Premier jour" as FirstDay
+
+  Contract --> Admin : J-7
+  note right #FF6B6B
+    🔴 39 tâches manuelles
+    • DPAE
+    • Création POPAYE
+    • Création SAGE
+    • 7× Excel différents
+    • Médecine, BTP, CSE...
+    ⏰ 5h
+  end note
+
+  Admin --> Material : J-1
+  note right #FF6B6B
+    🔴 Relances manuelles:
+    • IT (PC, tél)
+    • Logistique (véhicule, EPI)
+    ⏰ 2h30
+  end note
+
+  Material --> FirstDay : J0
+  note right #FFFFCC
+    😊 Accueil
+    ⏰ 2h30
+  end note
+}
+
+Onboard --> Integration : Premier jour passé
+note on link
+  ⏰ Total onboarding: 8-10h
+  💰 Coût: 240-300€
+end note
+
+state "Intégration" as Integration #98FB98 {
+  state "Période essai" as Trial
+  state "Rapport J+10" as Rep1
+  state "Rapport J+30" as Rep2
+
+  Trial --> Rep1 : Après 10 jours
+  note right #FF6B6B
+    🔴 Rappel manuel Outlook
+    Pas d'exploitation data
+  end note
+
+  Rep1 --> Rep2 : Après 30 jours
+  note right #FF6B6B
+    🔴 Même processus manuel
+  end note
+
+  Rep2 --> [*] : Confirmé
+  Trial --> [*] : Non confirmé
+}
+
+Integration --> Actif : Titularisé
+
+state "Actif / Opérationnel" as Actif #90EE90 {
+
+  state "Travail normal" as Work {
+    state "Saisie FH hebdo" as FH
+    state "Validation manager" as Valid
+    state "Traitement paie" as Paie
+
+    FH --> Valid : Chaque vendredi
+    note right #FF6B6B
+      🔴 Saisie manuelle POPAYE
+      Relances fréquentes
+      60% retards
+    end note
+
+    Valid --> Paie : Avant le 9
+    note right #FF6B6B
+      🔴 Vérif manuelle manager
+      3h30/semaine
+    end note
+
+    Paie --> FH : Mois suivant
+    note right #FF6B6B
+      🔴 25-30h/mois Sophie
+      Calculs manuels
+    end note
+  }
+
+  state "Congés" as Leave
+  note right of Leave #FFD700
+    🔴 Processus papier:
+    • Formulaire papier
+    • Scan
+    • Email
+    • 4× re-saisies
+    ⏰ 3-5 jours délai
+  end note
+
+  state "Absence" as Absent
+  note right of Absent #FFD700
+    🔴 Déclaration manuelle
+    • Papier/Email
+    • Saisie POPAYE
+    • MAJ planning
+  end note
+
+  state "Formation" as Training
+  note right of Training
+    Suivi Excel
+  end note
+
+  Work --> Leave : Demande congés
+  Leave --> Work : Retour congés
+
+  Work --> Absent : Maladie/Accident
+  Absent --> Work : Retour
+
+  Work --> Training : Formation
+  Training --> Work : Retour
+}
+
+Actif --> Sortie : Démission/Licenciement/Retraite
+note on link #FFD700
+  ⚠️ Offboarding manuel
+  22 tâches
+end note
+
+state "Sortie / Offboarding" as Sortie #FFCCCC {
+  state "Préavis" as Notice
+  state "Tâches admin (22)" as AdminOut
+  state "Dernier jour" as LastDay
+
+  Notice --> AdminOut
+  note right #FF6B6B
+    🔴 22 tâches manuelles:
+    • STC
+    • Radiation mutuelle
+    • Invalidation carte BTP
+    • MAJ registre
+    • MAJ tableaux (×7)
+    • Restitution matériel
+    ⏰ 5-6h
+  end note
+
+  AdminOut --> LastDay
+}
+
+Sortie --> Sorti : Terminé
+
+state "Sorti" as Sorti #AAAAAA {
+  state "Interview exit" as Exit
+  note right #FF6B6B
+    🔴 Si fait (rare):
+    • Email manuel
+    • Pas d'analyse
+  end note
+}
+
+Sorti --> [*]
+
+note bottom
+  **PROBLÈMES TRANSVERSAUX**
+
+  🔴 Aucune automatisation (0%)
+  🔴 15+ outils non connectés
+  🔴 Re-saisies permanentes (6-8×)
+  🔴 Workflows 100% manuels
+  🔴 Pas de visibilité temps réel
+
+  **COÛTS PAR PHASE**
+  💰 Onboarding: 240-300€ (×30/an = 9K€)
+  💰 Opérationnel: 60K€/an (paie, FH, congés)
+  💰 Offboarding: 150-200€ (×30/an = 6K€)
+
+  **TOTAL ANNUEL: 75K€**
+end note
+
+@enduml

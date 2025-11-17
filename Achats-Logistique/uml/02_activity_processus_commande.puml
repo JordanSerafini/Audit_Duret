@@ -98,7 +98,7 @@ end note
 note right #FFFFAA
   ⏸️ **CHANTIER BLOQUÉ**
   2-3 jours d'attente
-  💰 800€/jour de perte
+  Chantier bloqué de perte
 end note
 
 |Éric (Magasinier)|
@@ -171,7 +171,7 @@ if (Bon matériel ?) then (NON - 50% !)
     **CATASTROPHE**
     Mauvaise référence
     🔴 Chantier bloqué 3j
-    💰 Perte: 2,400€
+    Chantier bloqué
   end note
 
   :Appelle Sylvie furieux;
