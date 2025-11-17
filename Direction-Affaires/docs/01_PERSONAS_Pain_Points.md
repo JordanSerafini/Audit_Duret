@@ -77,7 +77,7 @@
 **Citation verbatim :**
 > "Je perds ma vie à attendre que les écrans se chargent. 30 secondes par écran, ça paraît rien, mais multiplié par 50 écrans par jour, c'est 25 minutes d'attente par jour ! Je deviens fou."
 
-**Coût estimé :** 120K€/an (4 RA × 250j × 2h × 60% évitable × 50€/h)
+**Impact observé :** Temps perdu significatif quotidien (100-200 écrans/jour × 4 RA)
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -94,7 +94,7 @@
 **Citation verbatim :**
 > "Le télétravail, c'est un cauchemar. Le VPN plante toutes les 30 minutes, Citrix rame, et quand j'arrive enfin à ouvrir l'ERP, c'est tellement lent que je préfère retourner au bureau."
 
-**Coût estimé :** 40K€/an + perte bien-être
+**Impact observé :** Laurent évite de travailler depuis domicile, télétravail abandonné
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -111,7 +111,7 @@
 **Citation verbatim :**
 > "Chaque devis, c'est repartir de zéro. Je dois ressaisir tous les postes standards à la main. Si on avait une bibliothèque, je ferais mes devis 3 fois plus vite."
 
-**Coût estimé :** 130K€/an (temps + opportunités)
+**Impact observé :** 2h05 par devis vs 30 min possible avec templates (40-80 devis/mois)
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -127,7 +127,7 @@
 **Citation verbatim :**
 > "Les PPSPS, c'est mon cauchemar. 3 heures à copier-coller un vieux Word. Si c'était généré auto, ça prendrait 30 minutes max."
 
-**Coût estimé :** 55K€/an
+**Impact observé :** 3h par PPSPS, ~15-20 PPSPS/mois, 100% manuel
 
 **Sévérité : 🔴 CRITIQUE**
 
@@ -140,7 +140,7 @@
 - Risques erreurs pricing
 - Tarifs rapidement obsolètes
 
-**Coût estimé :** 35K€/an
+**Impact observé :** 1 semaine/an temps perdu + risques erreurs
 
 **Sévérité : 🟠 IMPORTANT**
 
