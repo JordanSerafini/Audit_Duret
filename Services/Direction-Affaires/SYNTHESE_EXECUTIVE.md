@@ -287,21 +287,21 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 
 ### 📈 Gains Mesurables Attendus
 
-**Gains Temps Observables (Base Factuelle) :**
+**Gains Temps Attendus (À mesurer précisément) :**
 
 | Source Gains | Baseline Actuel | Cible | Amélioration |
 |--------------|----------------|-------|--------------|
-| **Chargement écrans** | 30-40s par écran | < 2s | Réduction drastique |
-| **Création devis** | 2h05 par devis | ~31 min | Réduction significative |
-| **Génération PPSPS** | 3h00 par PPSPS | ~27 min | Réduction importante |
-| **Recherche templates** | 30 min | < 1 min | Réduction drastique |
-| **Visibilité direction** | 3h pour compiler | Temps réel | Immédiat |
-| **Reliquats** | Aucun suivi (pertes) | 100% tracés | Traçabilité complète |
+| **Chargement écrans** | Très lent (à mesurer) | Rapide | Réduction drastique attendue |
+| **Création devis** | Chronophage (à mesurer) | Accéléré | Réduction significative attendue |
+| **Génération PPSPS** | Très chronophage (à mesurer) | Automatisé rapide | Réduction importante attendue |
+| **Recherche templates** | Temps important (à mesurer) | Instantané | Réduction drastique |
+| **Visibilité direction** | Compilation manuelle (à mesurer) | Temps réel | Immédiat |
+| **Reliquats** | Aucun suivi (pertes à quantifier) | 100% tracés | Traçabilité complète |
 
-**Volume d'Activité (Constaté) :**
-- 40-80 devis/mois → Gain temps significatif à mesurer
-- ~15-20 PPSPS/mois → Gain temps important à mesurer
-- 100-200 écrans/jour × 4 RA → Gain quotidien à mesurer
+**Volume d'Activité (À confirmer) :**
+- Devis/mois → Gain temps à mesurer après collecte volume
+- PPSPS/mois → Gain temps à mesurer après collecte volume
+- Écrans/jour × 4 RA → Gain quotidien à mesurer après chronométrage
 
 **Gains Qualitatifs :**
 - ✅ **Satisfaction utilisateurs** : Amélioration significative attendue
@@ -334,7 +334,7 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 **Tests :** 2 Responsables Affaires pilotes
 
 **Gains immédiats M2 :**
-- ERP rapide : < 2s chargement (vs 30-40s)
+- ERP rapide : Chargement accéléré significativement
 - Templates devis : Temps création réduit significativement
 - Accès cloud : télétravail fonctionnel
 
