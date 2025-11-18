@@ -1,6 +1,6 @@
 @startuml Creation_Devis_Actuel
 
-title Processus Creation Devis - ETAT ACTUEL (ERP Legacy MDE)
+title Processus Création Devis - ÉTAT ACTUEL (ERP Legacy MDE)
 
 actor "Laurent\n(Resp. Affaire)" as Laurent #FFB6C1
 participant "MDE/Sage" as MDE #FF6B6B
@@ -13,13 +13,13 @@ actor "Client" as Client #ADD8E6
 
 Client -> Laurent: Email demande devis
 note right #ADD8E6
-  Specifications projet
-  Delai: 48-72h attendu
+  Spécifications projet
+  Délai: 48-72h attendu
 end note
 
 Laurent -> Laurent: Lecture email (15 min)
 note right #FFD700
-  ⚠️ Infos eparpillees
+  ⚠️ Infos éparpillées
 end note
 
 Laurent -> Dossiers: Recherche ancien devis similaire
@@ -48,7 +48,7 @@ note right #FF6B6B
 end note
 
 Laurent -> MDE: Login
-MDE --> Laurent: Ecran accueil (30s)
+MDE --> Laurent: Écran accueil (30s)
 note right #FF6B6B
   [!] Attente...
 end note
@@ -87,7 +87,7 @@ loop Pour CHAQUE ligne (30 lignes)
     Laurent -> Laurent: Copie depuis Excel
     note right #FFD700
       Saisie manuelle:
-      - Quantite
+      - Quantité
       - Prix
       - Remise
     end note
@@ -102,17 +102,17 @@ end
 note over Laurent, MDE #FFAAAA
   [TIME] **TEMPS SAISIE**
   30 lignes × 5min = 2h30
-  Reduit a 1h30 avec Excel
-  mais TOUJOURS tres long !
+  Réduit à 1h30 avec Excel
+  mais TOUJOURS très long !
 end note
 
-== 11h35 - Verifications ==
+== 11h35 - Vérifications ==
 
-Laurent -> Excel: Verif calculs
+Laurent -> Excel: Vérif calculs
 note right #FFD700
   - Marge globale
   - Prix vs concurrence
-  - Coherence quantites
+  - Cohérence quantités
   [TIME] 10 min
 end note
 
@@ -121,23 +121,23 @@ note right #FF6B6B
   [!] Re-chargements (5 min)
 end note
 
-== 11h50 - Generation PDF ==
+== 11h50 - Génération PDF ==
 
-Laurent -> MDE: "Generer PDF"
+Laurent -> MDE: "Générer PDF"
 MDE --> Laurent: PDF (45s)
 
-Laurent -> Laurent: Verif mise en page
+Laurent -> Laurent: Vérif mise en page
 note right #FF6B6B
   [!] Parfois bugs affichage
-  → Regeneration
+  → Régénération
   [TIME] 3 min
 end note
 
-Laurent -> Email: Redaction email client
+Laurent -> Email: Rédaction email client
 note right
   - Recherche contact
-  - Redaction
-  - Piece jointe
+  - Rédaction
+  - Pièce jointe
   [TIME] 7 min
 end note
 
@@ -146,19 +146,19 @@ Laurent -> Client: Envoi devis
 == BILAN ==
 
 note over Laurent, Client #FFCCCC
-  **METRIQUES PROCESSUS**
-  [TIME] Duree totale: **2h05**
+  **MÉTRIQUES PROCESSUS**
+  [TIME] Durée totale: **2h05**
 
-  Decomposition:
+  Décomposition:
   • Recherche ancien devis: 45 min
   • Ouverture MDE: 5 min
   • Saisie 30 lignes: 1h30
-  • Verifications: 15 min
+  • Vérifications: 15 min
   • PDF & envoi: 10 min
 
   [FRUSTRE] **FRUSTRATION: Très élevée**
   [!] Avec templates: 30 min possible !
-  Economie potentielle: 1h35/devis
+  Économie potentielle: 1h35/devis
 end note
 
 @enduml
