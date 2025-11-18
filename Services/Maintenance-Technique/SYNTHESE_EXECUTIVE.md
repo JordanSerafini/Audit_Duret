@@ -427,7 +427,7 @@ M1-3            M4-6            M7-18
 - J105 : Tests génération devis app mobile
 - J110 : Formation techniciens module devis
 - J115 : Activation module devis terrain
-- J120 : **1er devis généré terrain** 🎉
+- J120 : 1er devis généré terrain 🎉
 
 **M5 (Mois 5) - Portail Client**
 - J125 : Configuration portail client
@@ -435,7 +435,7 @@ M1-3            M4-6            M7-18
 - J135 : Création comptes clients (100 premiers)
 - J140 : Tests prise RDV en ligne
 - J145 : Email invitation clients (batch 1)
-- J150 : Portail client LIVE → **1er RDV en ligne** 🎉
+- J150 : Portail client LIVE → 1er RDV en ligne 🎉
 
 **M6 (Mois 6) - Workflows & Intégrations**
 - J155 : Configuration workflows automatisés :
@@ -469,7 +469,7 @@ M1-3            M4-6            M7-18
 **M10-12 (Mois 10-12) - Enquête Satisfaction**
 - M10 : Configuration enquête satisfaction (10 questions)
 - M11 : Tests envoi auto J+2 post-intervention
-- M12 : Activation enquête systématique → **Taux réponse 40%**
+- M12 : Activation enquête systématique → Amélioration feedback
 
 **M13-18 (Mois 13-18) - Analytics & Optimisation**
 - M13 : Configuration dashboards Power BI / Analytics ERP
@@ -480,11 +480,11 @@ M1-3            M4-6            M7-18
 - M18 : Certificats mise en service digitalisés
 
 **Livrables Phase 3** :
-- ✅ Zoning intelligent actif (-20% déplacements)
+- ✅ Zoning intelligent actif (optimisation déplacements)
 - ✅ Enquête satisfaction 100% automatisée
 - ✅ Analytics temps réel (5 dashboards)
 - ✅ Intégration SAGE comptabilité
-- ✅ Gain cumulé : **270K€/an**
+- ✅ Gains cumulés finaux à mesurer
 
 ---
 
@@ -522,7 +522,7 @@ M1-3            M4-6            M7-18
 ✅ **Quick Win visible** : 1er rapport digital en 3 min (vs 12 min CERFA)
 ✅ **Formation** : 2 sessions × 3h (pratique terrain)
 ✅ **Support** : Hotline 8h-18h M1-3
-✅ **Incentive** : Prime 500€ si adoption 100% M3
+✅ **Incentive** : Système de motivation à définir
 
 **Probabilité après mitigation** : 10%
 
@@ -538,7 +538,7 @@ M1-3            M4-6            M7-18
 **Mitigation** :
 ✅ **Audit technique** : J5 → vérifier API GAO disponible
 ✅ **Plan B** : Import ponctuel CSV (pas de sync temps réel)
-✅ **Plan C** : Remplacement GAO par ERP Terrain (coût +10K€)
+✅ **Plan C** : Remplacement GAO par ERP Terrain (coût additionnel)
 
 **Probabilité après mitigation** : 10%
 
@@ -555,7 +555,7 @@ M1-3            M4-6            M7-18
 ✅ **Double canal** : Portail + téléphone (2 ans min)
 ✅ **Incitation** : Email "Prenez RDV en 2 clics" + tutoriel vidéo
 ✅ **Simplicité** : UX mobile-first, 3 clics max
-✅ **Objectif réaliste** : 30% adoption an 1 → 60% an 2
+✅ **Objectif réaliste** : Adoption progressive sur 2 ans
 
 **Probabilité après mitigation** : 5%
 
@@ -569,7 +569,7 @@ M1-3            M4-6            M7-18
 - Formation supplémentaire
 
 **Mitigation** :
-✅ **Contingence 10%** : 10K€ réservés
+✅ **Contingence** : Budget sécurité à prévoir
 ✅ **Périmètre figé** : Cahier charges validé J1
 ✅ **Change control** : Comité validation changements
 
@@ -584,7 +584,7 @@ M1-3            M4-6            M7-18
 - Adoption partielle
 
 **Mitigation** :
-✅ **Hypothèses conservatrices** : ROI calculé sur 70% adoption
+✅ **Hypothèses conservatrices** : ROI à calculer avec adoption progressive
 ✅ **KPI suivi mensuel** : Dashboard gains réalisés vs prévus
 ✅ **Ajustements** : Revue trimestrielle
 
@@ -608,27 +608,27 @@ M1-3            M4-6            M7-18
 
 | Critère | Valeur |
 |---------|--------|
-| **Investissement** | 75-105K€ (18 mois) |
-| **Gains annuels** | 270K€/an |
-| **ROI 2 ans** | +435K€ (414%) |
-| **Payback** | 4-5 mois |
+| **Investissement** | À chiffrer (étude de faisabilité) |
+| **Gains annuels** | Significatifs (à mesurer) |
+| **ROI** | À calculer avec données réelles |
+| **Payback** | Rapide attendu |
 | **Risque** | Faible (solution éprouvée) |
-| **Impact équipes** | Stress -60%, Satisfaction +80% |
-| **Impact clients** | Satisfaction +50%, Rétention +10% |
+| **Impact équipes** | Réduction stress, amélioration satisfaction |
+| **Impact clients** | Amélioration satisfaction et rétention |
 
 ---
 
 ### Décision Recommandée
 
-> **GO PHASE 1 (M1-3) immédiatement**
+> **Lancer l'étude de faisabilité détaillée**
 >
-> Quick Wins visibles en 3 mois :
+> Quick Wins visibles en 3 mois (Phase 1) :
 > - CERFA papier = 0
 > - App mobile techniciens
 > - Pointage GPS actif
-> - **ROI : 95K€/an** (payback 4 mois)
+> - Gains immédiats mesurables
 >
-> **Puis GO Phase 2+3 si Phase 1 succès**
+> **Puis Phase 2+3 si Phase 1 succès**
 
 ---
 
@@ -636,7 +636,7 @@ M1-3            M4-6            M7-18
 
 **Semaine 1** :
 - ✅ Présentation synthèse → DG/DT
-- ✅ Validation budget 105K€
+- ✅ Lancement étude de faisabilité détaillée
 - ✅ Constitution comité projet (DT + Gaëtan + Clothilde + IT)
 
 **Semaine 2-3** :
@@ -653,5 +653,6 @@ M1-3            M4-6            M7-18
 
 **📧 Contact** : Maintenance Technique - Duret Électricité
 **🎯 Objectif** : Digitaliser SAV end-to-end, supprimer CERFA papier
-**💰 Enjeu** : 270K€/an de gains + satisfaction client +50%
-**⏱️ Urgence** : Démarrage recommandé sous 30 jours
+**💰 Enjeu** : Gains opérationnels et commerciaux significatifs + amélioration satisfaction client
+**⏱️ Urgence** : Lancement étude de faisabilité recommandé sous 30 jours
+**⚠️ Note** : Chiffrage précis requis via étude de faisabilité détaillée

@@ -272,22 +272,22 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 
 | Source Gains | Baseline Actuel | Cible | Amélioration |
 |--------------|----------------|-------|--------------|
-| **Chargement écrans** | 30-40s par écran | < 2s | ~95% plus rapide |
-| **Création devis** | 2h05 par devis | ~31 min | ~75% plus rapide |
-| **Génération PPSPS** | 3h00 par PPSPS | ~27 min | ~85% plus rapide |
-| **Recherche templates** | 30 min | < 1 min | ~97% plus rapide |
+| **Chargement écrans** | 30-40s par écran | < 2s | Réduction drastique |
+| **Création devis** | 2h05 par devis | ~31 min | Réduction significative |
+| **Génération PPSPS** | 3h00 par PPSPS | ~27 min | Réduction importante |
+| **Recherche templates** | 30 min | < 1 min | Réduction drastique |
 | **Visibilité direction** | 3h pour compiler | Temps réel | Immédiat |
 | **Reliquats** | Aucun suivi (pertes) | 100% tracés | Traçabilité complète |
 
 **Volume d'Activité (Constaté) :**
-- 40-80 devis/mois → Gain temps: 63-126h/mois (1.5-3 semaines ETP)
-- ~15-20 PPSPS/mois → Gain temps: 38-51h/mois (1 semaine ETP)
-- 100-200 écrans/jour × 4 RA → Gain quotidien: 3-5h/jour équipe
+- 40-80 devis/mois → Gain temps significatif à mesurer
+- ~15-20 PPSPS/mois → Gain temps important à mesurer
+- 100-200 écrans/jour × 4 RA → Gain quotidien à mesurer
 
 **Gains Qualitatifs :**
-- ✅ **Satisfaction utilisateurs** : Objectif > 4.5/5 (vs frustration 9-10/10 actuelle)
+- ✅ **Satisfaction utilisateurs** : Amélioration significative attendue
 - ✅ **Télétravail efficace** : Fonctionnel (vs impossible actuellement)
-- ✅ **Réactivité commerciale** : Temps devis réduit 75%
+- ✅ **Réactivité commerciale** : Réduction temps devis
 - ✅ **Qualité PPSPS** : Clauses obligatoires intégrées (vs checklist papier)
 - ✅ **Conformité RGPD** : Chiffrement, traçabilité, audit trail
 - ✅ **Visibilité direction** : KPIs temps réel (vs 3h compilation)

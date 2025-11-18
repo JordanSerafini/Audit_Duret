@@ -2,56 +2,56 @@
 
 title WBS - Transformation Service Client Digital (18 mois)
 
-* Transformation\nService Client\n**206K€**
-** Phase 1\nQuick Wins\n**68K€ - M1-3**
-*** Setup HubSpot\n25K€
-**** Sélection & POC\n5K€
-**** Configuration CRM\n10K€
-**** Import données\n5K€
-**** Formation\n5K€
-*** Templates & Planning\n8K€
-**** Création templates (30)\n3K€
-**** Setup Calendly\n5K€
-*** Workflows basiques\n10K€
-*** Questionnaire satisfaction\n5K€
-*** Contingence 10%\n6K€
+* Transformation\nService Client
+** Phase 1\nQuick Wins\n**M1-3**
+*** Setup HubSpot
+**** Sélection & POC
+**** Configuration CRM
+**** Import données
+**** Formation
+*** Templates & Planning
+**** Création templates (30)
+**** Setup Calendly
+*** Workflows basiques
+*** Questionnaire satisfaction
+*** Contingence
 
-** Phase 2\nIntégrations\n**77K€ - M4-6**
-*** CTI Téléphonie\n12K€
-**** Sélection solution\n2K€
-**** Connecteur\n8K€
-**** Tests & formation\n2K€
-*** Sync SAGE\n20K€
-**** Analyse API\n5K€
-**** Développement ETL\n12K€
-**** Tests\n3K€
-*** Portail Client\n15K€
-**** Développement custom\n12K€
-**** Tests utilisateurs\n3K€
-*** GED intégrée\n8K€
-*** Workflows avancés\n7K€
-*** Contingence 10%\n7K€
+** Phase 2\nIntégrations\n**M4-6**
+*** CTI Téléphonie
+**** Sélection solution
+**** Connecteur
+**** Tests & formation
+*** Sync SAGE
+**** Analyse API
+**** Développement ETL
+**** Tests
+*** Portail Client
+**** Développement custom
+**** Tests utilisateurs
+*** GED intégrée
+*** Workflows avancés
+*** Contingence
 
-** Phase 3\nExcellence\n**50K€ - M7-18**
-*** App Mobile Technicien\n35K€
-**** Développement React Native\n25K€
-**** Backend API\n6K€
-**** Tests & déploiement\n4K€
-*** Chatbot IA\n15K€
-**** Configuration HubSpot\n5K€
-**** Intégration OpenAI\n8K€
-**** Entraînement\n2K€
-*** ML (3 modèles)\n20K€
-**** Prévision appels\n8K€
-**** Risque churn\n6K€
-**** Optimisation planning\n6K€
-*** Analytics avancés\n10K€
-*** Contingence 10%\n5K€
+** Phase 3\nExcellence\n**M7-18**
+*** App Mobile Technicien
+**** Développement React Native
+**** Backend API
+**** Tests & déploiement
+*** Chatbot IA
+**** Configuration HubSpot
+**** Intégration OpenAI
+**** Entraînement
+*** ML (3 modèles)
+**** Prévision appels
+**** Risque churn
+**** Optimisation planning
+*** Analytics avancés
+*** Contingence
 
-** Run 18 mois\n**11K€**
-*** Licences HubSpot\n1.6K€/an
-*** Téléphonie CTI\n810€/an
-*** Maintenance app\n7.5K€/an
-*** Hosting ML\n1.8K€/an
+** Coûts récurrents\n**18 mois**
+*** Licences HubSpot
+*** Téléphonie CTI
+*** Maintenance app
+*** Hosting ML
 
 @endwbs

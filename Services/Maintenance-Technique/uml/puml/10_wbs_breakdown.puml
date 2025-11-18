@@ -2,57 +2,57 @@
 
 title WBS - Digitalisation SAV Maintenance (18 mois)
 
-* Digitalisation\nSAV Maintenance\n**105K€**
-** Phase 1\nQuick Wins\n**30K€ - M1-3**
-*** Setup ERP Terrain\n10K€
-**** Selection POC (3 solutions)\n0K€
-**** Signature contrat\n10K€
-*** Configuration\n8K€
-**** Import 300 clients\n2K€
-**** Templates rapports (10)\n3K€
-**** Parametrage\n3K€
-*** App Mobile\n5K€
-**** Configuration iOS/Android\n2K€
-**** Tests pilote\n1K€
-**** Deploiement 7 techniciens\n2K€
-*** Formation\n3K€
-**** Clothilde (admin)\n1K€
-**** Techniciens (7×0.5j)\n2K€
-*** Integration GAO\n4K€
+* Digitalisation\nSAV Maintenance
+** Phase 1\nQuick Wins\n**M1-3**
+*** Setup ERP Terrain
+**** Sélection POC (3 solutions)
+**** Signature contrat
+*** Configuration
+**** Import ~300 clients
+**** Templates rapports
+**** Paramétrage
+*** App Mobile
+**** Configuration iOS/Android
+**** Tests pilote
+**** Déploiement techniciens
+*** Formation
+**** Clothilde (admin)
+**** Techniciens
+*** Intégration GAO
 
-** Phase 2\nIntegrations\n**35K€ - M4-6**
-*** Module Devis Terrain\n8K€
-**** Configuration catalogue\n3K€
-**** Formation techniciens\n2K€
-**** Tests\n3K€
-*** Portail Client\n15K€
-**** Configuration branding\n5K€
-**** Creation comptes (200)\n5K€
-**** Tests UAT\n5K€
-*** Workflows Auto\n7K€
-**** Alertes fin contrat\n3K€
-**** Interventions auto\n2K€
-**** Enquete satisfaction\n2K€
-*** Integration SAGE\n5K€
+** Phase 2\nIntégrations\n**M4-6**
+*** Module Devis Terrain
+**** Configuration catalogue
+**** Formation techniciens
+**** Tests
+*** Portail Client
+**** Configuration branding
+**** Création comptes clients
+**** Tests UAT
+*** Workflows Auto
+**** Alertes fin contrat
+**** Interventions automatiques
+**** Enquête satisfaction
+*** Intégration SAGE
 
-** Phase 3\nExcellence\n**25K€ - M7-18**
-*** Zoning Intelligent\n10K€
-**** Geolocalisation 300 clients\n3K€
-**** Algo routing (ML)\n5K€
-**** Tests\n2K€
-*** Analytics Avances\n10K€
-**** Dashboards Power BI (5)\n5K€
-**** KPI temps reel (15)\n3K€
-**** Alertes churn (ML)\n2K€
-*** Enquete Systematique\n3K€
-**** Configuration (5 questions)\n2K€
-**** Tests\n1K€
-*** Optimisation Planning IA\n2K€
+** Phase 3\nExcellence\n**M7-18**
+*** Zoning Intelligent
+**** Géolocalisation clients
+**** Algorithme routing
+**** Tests
+*** Analytics Avancés
+**** Dashboards BI
+**** KPI temps réel
+**** Alertes prédictives
+*** Enquête Systématique
+**** Configuration questionnaire
+**** Tests
+*** Optimisation Planning
 
-** Run 18 mois\n**15K€**
-*** Licences ERP\n12K€
-*** Stockage cloud\n0.5K€
-*** SMS Twilio\n0.06K€
-*** Maintenance\n2.5K€
+** Coûts récurrents\n**18 mois**
+*** Licences ERP
+*** Stockage cloud
+*** SMS
+*** Maintenance
 
 @endwbs

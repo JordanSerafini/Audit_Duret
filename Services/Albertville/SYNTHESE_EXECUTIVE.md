@@ -253,13 +253,13 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 
 **KPIs Phase 1 :**
 - ✅ Traçabilité BL temps réel (vs plusieurs jours)
-- ✅ Visibilité budgets complémentaires 100%
-- ✅ Délai traitement devis -50%
+- ✅ Visibilité budgets complémentaires améliorée
+- ✅ Réduction délai traitement devis
 - ✅ Temps recherche références : minutes → secondes
 
-**Investissement :** 115K€
-**Gains :** 210K€/an
-**Payback :** 7 mois
+**Investissement :** À chiffrer lors de l'étude de faisabilité
+**Gains :** À mesurer après déploiement
+**Payback :** À calculer avec données réelles
 
 ---
 
@@ -280,14 +280,14 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 9. ✅ Plateforme collaborative (fin Excel silos)
 
 **KPIs Phase 2 :**
-- ✅ Temps traitement situations : plusieurs jours → quelques heures
-- ✅ Homogénéité chiffrages +80%
-- ✅ Excel opérationnels : 15+ → <3
-- ✅ Temps admin -40%
+- ✅ Réduction drastique temps traitement situations
+- ✅ Amélioration homogénéité chiffrages
+- ✅ Réduction significative fichiers Excel
+- ✅ Réduction temps admin
 
-**Investissement :** 195K€
-**Gains additionnels :** +280K€/an (cumulé : 490K€/an)
-**Payback Phase 2 :** 10 mois
+**Investissement :** À chiffrer
+**Gains additionnels :** À mesurer (cumulés avec Phase 1)
+**Payback Phase 2 :** À calculer
 
 ---
 
@@ -313,13 +313,13 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 
 **KPIs Phase 3 :**
 - ✅ Cycle commercial accéléré (devis immédiat terrain)
-- ✅ Taux transformation +25-35%
+- ✅ Amélioration taux transformation
 - ✅ Sécurité renforcée (RBAC, 2FA)
-- ✅ Prédictions ML précision >90%
+- ✅ Prédictions ML opérationnelles
 
-**Investissement :** 175K€ (Option A : Optimisation Sage)
-**Gains additionnels :** +200K€/an (cumulé : 690K€/an)
-**Payback Phase 3 :** 12-18 mois
+**Investissement :** À chiffrer
+**Gains additionnels :** À mesurer (cumulés avec Phases 1-2)
+**Payback Phase 3 :** À calculer
 
 ---
 
@@ -327,42 +327,42 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 
 ### 📊 Gains Opérationnels
 
-| Indicateur | AVANT | APRÈS (M18) | APRÈS (M24) |
-|------------|-------|-------------|-------------|
-| **Situations mensuelles** | Plusieurs jours | <4 heures | <2 heures |
-| **Visibilité budgets complémentaires** | 0% | 100% | 100% |
-| **Remontée BL** | 2-5 jours | Temps réel (<1h) | Temps réel |
-| **Recherche références** | 3-5 min | <30 sec | <10 sec |
-| **Validation commandes** | Sans prix | Prix visible | Prix + alertes |
-| **Fichiers Excel** | 15+ | 5-8 | <3 |
-| **Délai traitement devis** | 5-7 jours | <48h | <24h |
-| **Chiffrages standardisés** | 0% | 70% | >90% |
+| Indicateur | AVANT | OBJECTIF APRÈS |
+|------------|-------|----------------|
+| **Situations mensuelles** | Plusieurs jours | Réduction drastique |
+| **Visibilité budgets complémentaires** | Aucune | Complète |
+| **Remontée BL** | Plusieurs jours | Temps réel |
+| **Recherche références** | Lent | Rapide |
+| **Validation commandes** | Sans prix | Prix visible + alertes |
+| **Fichiers Excel** | Nombreux (15+) | Réduit significativement |
+| **Délai traitement devis** | Long | Réduit significativement |
+| **Chiffrages standardisés** | Aucun | Largement standardisés |
 
 ### 💡 Bénéfices Utilisateurs
 
 **Sophie (Assistante Relation Client) :**
-- Plateforme collaborative centralisée (vs 15+ Excel)
+- Plateforme collaborative centralisée (vs nombreux Excel)
 - Notifications automatiques
-- Temps admin -40%
-- Satisfaction accès info 4/5
+- Réduction temps admin
+- Amélioration satisfaction
 
 **Thomas (Responsable Affaire) :**
-- Situations mensuelles : plusieurs jours → <4h
+- Situations mensuelles : réduction drastique du temps
 - Dashboard budgets temps réel (initial + complémentaires)
-- Délai facturation : J+15 → J+3
-- Taux erreurs factures <1%
+- Réduction délai facturation
+- Réduction taux erreurs factures
 
 **Laurent (Chef de Chantier) :**
-- Remontée BL mobile (scan QR Code en 30 sec vs plusieurs jours)
+- Remontée BL mobile rapide (vs plusieurs jours)
 - Tracking livraison temps réel
-- Taux erreurs saisie BL : 15% → <2%
-- Satisfaction 4/5
+- Réduction taux erreurs saisie BL
+- Amélioration satisfaction
 
 **Pierre (Responsable Activité) :**
-- Recherche références : 3-5 min → <30 sec
+- Recherche références accélérée
 - Chiffrage standardisé (bibliothèque prix m²)
 - Travail collaboratif (multi-fichiers simultanés)
-- Temps création devis -30%
+- Réduction temps création devis
 
 ### 💰 ROI & Financier
 
@@ -370,13 +370,15 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 
 | Phase | Investissement | Gains/an | Cumulé |
 |-------|---------------|----------|--------|
-| **Phase 1 (M1-M6)** | 115K€ | 210K€ | +95K€ |
-| **Phase 2 (M7-M18)** | 195K€ | 490K€ | +180K€ |
-| **Phase 3 (M19-M24)** | 175K€ | 690K€ | +695K€ |
-| **TOTAL 24 MOIS** | **485K€** | **690K€** | **+695K€** |
+| **Phase 1 (M1-M6)** | À chiffrer | À mesurer | À calculer |
+| **Phase 2 (M7-M18)** | À chiffrer | À mesurer | À calculer |
+| **Phase 3 (M19-M24)** | À chiffrer | À mesurer | À calculer |
+| **TOTAL 24 MOIS** | **À chiffrer** | **À mesurer** | **À calculer** |
 
-**ROI :** 143%
-**Payback global :** 10 mois
+**ROI :** À calculer avec données réelles
+**Payback global :** À calculer
+
+**Note :** Chiffrage précis requis via étude de faisabilité détaillée
 
 ### 🛡️ Risques Maîtrisés
 
@@ -394,7 +396,7 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 
 ### 1️⃣ **VALIDATION DIRECTION (Semaine 1-2)**
 - Présenter plan à CODIR/Direction Albertville
-- Valider budget Phase 1 (115K€)
+- Lancer étude de faisabilité détaillée
 - Désigner sponsor exécutif
 - Constitution équipe projet
 - Go/No-Go
@@ -422,7 +424,7 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 - Formation équipes
 - Go-live progressif
 
-**Objectif M6 :** Phase 1 déployée, 210K€/an gains mesurés, Go Phase 2 validé
+**Objectif M6 :** Phase 1 déployée, gains mesurés, Go Phase 2 validé
 
 ---
 
@@ -436,14 +438,14 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 - ✅ Risque migration élevé (disruption, résistance)
 - ✅ Sage actuel connu, maîtrisé
 - ✅ Quick Wins possibles sans migration
-- ✅ ROI excellent (10 mois)
+- ✅ ROI attendu favorable
 - ✅ Décision migration peut être prise M18-24 avec recul
 
 **Évaluer Optima UNIQUEMENT SI :**
-- POC démontre gains fonctionnels >40% vs Sage
-- ROI migration < 24 mois clairement démontré
+- POC démontre gains fonctionnels significatifs vs Sage
+- ROI migration clairement démontré
 - Volonté direction transformation profonde
-- Budget >250K€ disponible
+- Budget suffisant disponible
 
 **Planning Évaluation :**
 - M13-M18 : POC Optima détaillé (6 semaines, données réelles)
@@ -456,4 +458,5 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 **🎯 Projet :** Transformation Digitale Site Albertville
 **⏱️ Durée :** 24 mois | **🎭 Approche :** IT + Data/ML en parallèle
 **📊 Objectif :** Automatiser situations, digitaliser BL, standardiser chiffrage
-**💰 ROI :** 143-192% sur 2 ans | **⏰ Payback :** 8-10 mois
+**💰 ROI :** À calculer avec données réelles | **⏰ Payback :** À déterminer
+**⚠️ Note :** Chiffrage précis requis via étude de faisabilité détaillée
