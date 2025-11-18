@@ -38,17 +38,17 @@
 
 ---
 
-## ⚠️ PROBLÈME : 22 SYSTÈMES ISOLÉS = CHAOS ORGANISATIONNEL
+## ⚠️ PROBLÈME : NOMBREUX SYSTÈMES ISOLÉS = CHAOS ORGANISATIONNEL
 
 ### Situation Actuelle
 
-Le service RH gère **~100 collaborateurs** avec **15 outils + 7 Excel** non connectés :
+Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs Excel** non connectés (inventaire exhaustif en cours) :
 
 **Outils actuels** :
-- ✅ **15 outils RH** : SAGE Paie, POPAYE, SILAE, SWILE, Empowill, PRO BTP, CIBTP, Radiance, HelloCSE + 6 autres
-- ✅ **7 fichiers Excel** : Planning absences, suivi intérimaires, checklist onboarding/offboarding, période essai, registre personnel, KPIs
-- ✅ **Aucune intégration** : Ressaisie même donnée 5-6 fois
-- ✅ **Processus ultra-manuels** : Paie (3j/semaine), onboarding (8-10h), KPIs (demi-journée)
+- ✅ **Nombreux outils RH** : SAGE Paie, POPAYE, SILAE, SWILE, Empowill, PRO BTP, CIBTP, Radiance, HelloCSE + autres (liste exhaustive en cours)
+- ✅ **Plusieurs fichiers Excel** : Planning absences, suivi intérimaires, checklist onboarding/offboarding, période essai, registre personnel, KPIs (comptage exact en cours)
+- ✅ **Aucune intégration** : Ressaisie même donnée plusieurs fois (comptage exact en cours)
+- ✅ **Processus ultra-manuels** : Paie (temps important/semaine à mesurer), onboarding (chronophage, à mesurer), KPIs (compilation manuelle chronophage)
 
 ### Problèmes Identifiés
 
