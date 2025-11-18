@@ -5,6 +5,25 @@
 
 ---
 
+## ⚠️ NOTE MÉTHODOLOGIQUE
+
+**Constats confirmés audit terrain** :
+- ✅ 9-11K références commandées/an (confirmé)
+- ✅ Processus 100% manuel (téléphone, papier, Excel) (confirmé)
+- ✅ Sage MDE "calamiteux" (verbatim utilisateurs)
+- ✅ Ressaisies multiples constatées (confirmé qualitativement)
+- ✅ Taux élevé commandes incomplètes constaté (confirmé qualitativement)
+- ✅ Chantiers bloqués fréquemment par manque matériel (confirmé)
+
+**Mesures en cours** (via [questionnaires terrain](../../Synthese/QUESTIONNAIRE_COLLECTE_DONNEES_ACHATS_LOGISTIQUE.md)) :
+- ⏱️ Taux réel succès commandes (analyse 50 dernières commandes en cours)
+- ⏱️ Délai moyen commande (chronométrage 20 dernières en cours)
+- ⏱️ Nombre exact ressaisies (traçage processus complet en cours)
+
+**Prochaine étape** : Intégration mesures réelles (semaines 2-3)
+
+---
+
 ## 📋 PARTIE 1 : ÉTAT DES LIEUX (AUDIT)
 
 ### 🔴 Constats Terrain
