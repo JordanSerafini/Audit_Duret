@@ -48,20 +48,20 @@
 ### 🔍 Causes Racines
 
 **1. ERP legacy techniquement obsolète**
-- Interface années 2000 non ergonomique
-- Temps chargement écran : 30-40 secondes
-- Architecture client-serveur desktop only
-- Pas de mobilité, pas de cloud
-- Maintenance complexe et coûteuse
+- Interface années 2000 non ergonomique (constaté)
+- Temps chargement écran : Très lent (chronométrage en cours)
+- Architecture client-serveur desktop only (confirmé)
+- Pas de mobilité, pas de cloud (confirmé)
+- Maintenance complexe et coûteuse (confirmé)
 
 **2. Accès distant inadapté au télétravail**
 ```
-Responsable Affaire en déplacement → VPN connexion (lent)
-  → Citrix virtual desktop (plantages fréquents)
-    → MDE chargement (30-40s par écran)
-      → Timeout fréquents → Perte modifications
+Responsable Affaire en déplacement → VPN connexion (lent constaté)
+  → Citrix virtual desktop (plantages fréquents confirmés)
+    → MDE chargement (très lent, temps à mesurer)
+      → Timeout fréquents → Perte modifications (confirmé)
 
-RÉSULTAT: Télétravail quasi impossible, frustration maximale
+RÉSULTAT: Télétravail quasi impossible, frustration maximale (confirmé audit)
 ```
 
 **3. Aucune bibliothèque ni réutilisation**
@@ -74,12 +74,12 @@ RÉSULTAT: Télétravail quasi impossible, frustration maximale
 **4. Processus PPSPS archaïque**
 ```
 Responsable Affaire démarre nouvelle affaire
-  → Recherche ancien PPSPS similaire (30min)
-    → Copier-coller Word (1h)
-      → Modifications manuelles (1h30)
-        → Vérification clauses obligatoires (30min)
+  → Recherche ancien PPSPS similaire (temps à mesurer)
+    → Copier-coller Word (chronophage)
+      → Modifications manuelles (chronophage)
+        → Vérification clauses obligatoires (temps à mesurer)
 
-TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
+TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 ```
 
 **5. Mise à jour tarifs fournisseurs chronophage**
@@ -92,23 +92,23 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 
 | Persona | Pain Points Critiques |
 |---------|----------------------|
-| **Laurent** (Resp. Affaire) | 12h/semaine perdues admin, frustration ERP lent, télétravail impossible |
-| **Marie** (Direction) | 0% visibilité temps réel affaires, reporting manuel tardif, décisions retardées |
-| **Thomas** (Bureau Études) | PPSPS manuels chronophages, 40% temps tâches à faible valeur ajoutée |
-| **Équipe Commerciale** | Délais création devis trop longs, manque réactivité vs concurrence |
+| **Laurent** (Resp. Affaire) | Temps important perdu admin (à mesurer), frustration ERP lent, télétravail impossible |
+| **Marie** (Direction) | Visibilité temps réel limitée, reporting manuel tardif, décisions retardées |
+| **Thomas** (Bureau Études) | PPSPS manuels chronophages (à mesurer), temps important tâches faible valeur ajoutée |
+| **Équipe Commerciale** | Délais création devis importants, manque réactivité vs concurrence |
 
-### ⏰ Temps Perdu Mesuré (Factuel)
+### ⏰ Temps Perdu Constatés (Mesures en cours)
 
-| Pain Point | Temps Perdu Constaté |
-|------------|---------------------|
-| ERP lent (30-40s/écran) | Significatif quotidien (100-200 écrans/jour × 4 RA) |
-| Création devis manuelle | 2h05 par devis vs 30 min possible avec templates |
-| PPSPS manuels | 3h00 par PPSPS vs 27 min possible avec auto-génération |
-| Recherche templates | 30 min par recherche (40-80 fois/mois) |
-| Compilation chiffres direction | 3h par demande (~10-15 fois/mois) |
-| Reliquats non tracés | Pertes constatées mais non quantifiées |
+| Pain Point | Constat Audit |
+|------------|---------------|
+| ERP lent | Temps chargement important quotidien (chronométrage en cours) |
+| Création devis manuelle | Processus chronophage constaté (mesure 3 devis en cours) |
+| PPSPS manuels | Processus très chronophage constaté (mesure 2 PPSPS en cours) |
+| Recherche templates | Temps recherche à mesurer |
+| Compilation chiffres direction | Compilation manuelle chronophage (temps à mesurer) |
+| Reliquats non tracés | Pertes constatées (taux à quantifier via questionnaire) |
 
-**Note:** Voir [PAIN_POINTS_Faits_Seulement.md](docs/PAIN_POINTS_Faits_Seulement.md) pour détails factuels complets
+**Note:** Voir [Questionnaire Direction-Affaires](../../Synthese/QUESTIONNAIRE_COLLECTE_DONNEES_DIRECTION_AFFAIRES.md) pour protocole mesure
 
 ---
 
@@ -117,9 +117,9 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 ### 🎯 Vision Cible
 
 **Transformation vers ERP moderne cloud & mobile**
-- 🚀 **Cloud-first** : Accès partout < 2s chargement (vs 30-40s)
-- 📚 **Bibliothèque templates** : Devis 30min (vs 2h)
-- 🤖 **Automatisation PPSPS** : Génération 30min (vs 3h)
+- 🚀 **Cloud-first** : Accès partout, chargement rapide (amélioration importante visée)
+- 📚 **Bibliothèque templates** : Devis accélérés significativement
+- 🤖 **Automatisation PPSPS** : Génération rapide et automatisée
 - 🔌 **APIs fournisseurs** : Maj prix automatiques (Rexel, Sonepar)
 - 📊 **Dashboards temps réel** : Visibilité direction 100%
 - 📱 **Mobile-friendly** : Consultation/validation affaires terrain
@@ -132,7 +132,7 @@ TOTAL: 3 HEURES pour un document qui pourrait être auto-généré !!
 **Pourquoi Odoo ?**
 - ✅ Interface moderne et intuitive (vs années 2000)
 - ✅ Cloud EU hébergé (RGPD compliant)
-- ✅ Performance < 2s (vs 30-40s ERP actuel)
+- ✅ Performance rapide (amélioration significative vs ERP actuel)
 - ✅ Mobile responsive natif (iOS/Android/Web)
 - ✅ Bibliothèque templates intégrée
 - ✅ Workflow validation paramétrable
