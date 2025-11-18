@@ -228,9 +228,9 @@ Sources → Data Lake → Data Warehouse → Analytics → Dashboards
 
 | Indicateur | AVANT | OBJECTIF APRÈS |
 |------------|-------|----------------|
-| **Taux succès commandes** | Insuffisant | Amélioration significative |
-| **Délai moyen** | Plusieurs jours | Réduction drastique |
-| **Re-saisies** | Multiples (6-7 fois) | Automatisé |
+| **Taux succès commandes** | Insuffisant (taux à mesurer) | Amélioration significative |
+| **Délai moyen** | Important (délai à mesurer) | Réduction drastique |
+| **Re-saisies** | Multiples (nombre exact à compter) | Automatisé |
 | **Traçabilité** | ❌ Aucune | ✅ Complète |
 | **Visibilité temps réel** | ❌ Aucune | ✅ Dashboards |
 | **Chantiers bloqués** | Fréquent | Exceptionnel |
