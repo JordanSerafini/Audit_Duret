@@ -7,6 +7,16 @@
 
 ---
 
+## ⚠️ NOTE IMPORTANTE
+
+**Chiffres confirmés** : 8 services audités, ~100 collaborateurs, ~300 contrats maintenance, CERFA papier, post-it service client ✅
+
+**Mesures en cours** : Temps processus (devis, PPSPS, paie), taux échec commandes, nombre Excel → Questionnaires terrain distribués pour chiffrage précis
+
+**Prochaine étape** : Présentation CODIR avec chiffres mesurés (30 jours)
+
+---
+
 ## 🎯 LE CONSTAT EN 3 POINTS
 
 ### 1. Dette Technique & Organisationnelle Critique
@@ -194,22 +204,22 @@
 
 ## 📊 LES CHIFFRES CLÉS
 
-### Situation Actuelle
+### Situation Actuelle (Confirmée)
 
-- **8 services** audités
-- **~100 collaborateurs** impactés
-- **60+ fichiers Excel** comme systèmes
-- **22 systèmes isolés** en RH seule
-- **Taux traçabilité** : 20-50%
-- **Temps processus critiques** : 2-3h
-- **Satisfaction outils** : Faible
+- **8 services** audités ✅
+- **~100 collaborateurs** impactés ✅
+- **Nombreux fichiers Excel** comme systèmes (inventaire en cours)
+- **Systèmes multiples** en RH (inventaire en cours)
+- **Taux traçabilité** : Faible (à mesurer)
+- **Temps processus critiques** : Importants (mesure en cours)
+- **Satisfaction outils** : Faible (constaté terrain)
 
 ### Objectifs M24
 
 - **Fichiers Excel opérationnels** : < 5
 - **Taux processus digitalisés** : 90%
 - **Taux traçabilité** : 95%
-- **Temps processus critiques** : Réduction importante
+- **Temps processus critiques** : Réduction significative
 - **Satisfaction utilisateurs** : > 4/5
 - **Taux adoption** : > 85%
 
