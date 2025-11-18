@@ -8,24 +8,28 @@
 ## 1. 📞 **Missions Quotidiennes**
 
 ### Gestion Communication Client
+
 - **Accueil téléphonique** : Prise d'appels clients
 - **Traitement emails** : ~50 mails/jour (demandes clients, modifications)
 - **Suivi clients** : Actuellement sur papier (post-its)
 - **Pas de système de ticketing** ni suivi structuré
 
 ### Gestion Planning & Interventions
+
 - **Équipe petits travaux** : Mise en agenda Outlook
 - **Consultation dernière minute** : Par appel téléphonique
 - **Planning partagé** : Communication avec techniciens par téléphone
 - **Bons d'intervention** : Envoyés via téléphone
 
 ### Gestion Administrative
+
 - **Création de chantiers** dans l'ERP
 - **Classement/archivage** : Sur Excel
 - **Relances clients** : Tout individuel, pas d'automatisation
 - **Délai de traitement** : Environ 1-2 jours
 
 ### Questionnaire Satisfaction Client
+
 - Système mis en place
 - Relances peu fréquentes
 
@@ -34,12 +38,14 @@
 ## 2. 🛠️ **Outils Actuellement Utilisés**
 
 ### Logiciels
+
 - **MDE** (ERP)
 - **SAGE** (Devis)
 - **Outlook** (Agenda, emails)
 - **Excel** (Archivage, suivi)
 
 ### Communication
+
 - **Techniciens** : Téléphone
 - **Autres services** : Emails
 
@@ -48,6 +54,7 @@
 ## 3. ⚠️ **Points de Souffrance**
 
 ### A. Manque de Traçabilité
+
 **Problèmes actuels** :
 - Pas de suivi des appels clients
 - Pas de système de tickets
@@ -55,12 +62,15 @@
 - Informations dispersées (post-its, Excel, emails)
 
 **Impact** :
+
 - Perte d'informations
 - Difficultés à retrouver l'historique
 - Risque d'oublis
 
 ### B. Relances et Rappels Non Automatisés
+
 **Problèmes actuels** :
+
 - Délais de rappel non suivis
 - Relances manuelles chronophages
 - Pas de système d'alertes
