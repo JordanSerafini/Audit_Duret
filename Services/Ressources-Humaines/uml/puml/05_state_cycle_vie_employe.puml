@@ -92,7 +92,7 @@ state "Actif / Opérationnel" as Actif #90EE90 {
     note right #FF6B6B
       🔴 Saisie manuelle POPAYE
       Relances fréquentes
-      60% retards
+      Retards fréquents
     end note
 
     Valid --> Paie : Avant le 9

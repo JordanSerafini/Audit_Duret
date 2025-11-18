@@ -52,7 +52,7 @@ Confusion --> ChoixReference : Sylvie choisit "au hasard"
 
 state "Choix Référence" as ChoixReference #FFD700
 note left of ChoixReference
-  ⚠️ 40% chance de se tromper
+  ⚠️ Risque élevé de se tromper
 end note
 
 ChoixReference --> Saisies : Passe commande
@@ -118,8 +118,8 @@ Recupere --> Verification : Marc vérifie
 
 state "Vérification Chantier" as Verification #FFD700
 
-Verification --> Erreur : 50% mauvais produit
-Verification --> Utilise : 50% bon produit
+Verification --> Erreur : Taux élevé mauvais produit
+Verification --> Utilise : Taux insuffisant bon produit
 
 state "❌ ERREUR" as Erreur #FF0000
 note left of Erreur
@@ -139,7 +139,7 @@ note bottom
   **MÉTRIQUES GLOBALES**
   ⏰ Durée succès: 3 jours
   ⏰ Durée échec: 6 jours (recommence)
-  ❌ Taux erreur: 50%
+  ❌ Taux erreur: Élevé
   Process très inefficace
   Temps perdu important
   📞 Nombre appels: 12

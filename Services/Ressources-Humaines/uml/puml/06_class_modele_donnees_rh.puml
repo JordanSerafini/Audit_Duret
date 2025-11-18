@@ -41,7 +41,7 @@ package "POPAYE (Temps)" #FFD700 {
     +statut : String
     --
     🔴 Saisie 100% manuelle
-    60% retards
+    Retards fréquents
   }
 
   class "Absence" as Abs {

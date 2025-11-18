@@ -71,7 +71,7 @@ note right of Devis
   - Verifications: 15 min
   - PDF & envoi: 10 min
 
-  [FRUSTRE] Frustration: 9/10
+  [FRUSTRE] Frustration: Très élevée
 end note
 
 enum StatutDevis {
@@ -132,7 +132,7 @@ note left of PPSPS
 
   [!] 100% manuel
   [!] Risque oublis clauses
-  [FRUSTRE] Frustration: 10/10
+  [FRUSTRE] Frustration: Maximale
 end note
 
 enum StatutPPSPS {

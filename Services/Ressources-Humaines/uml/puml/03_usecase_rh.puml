@@ -15,13 +15,13 @@ rectangle "Système RH ACTUEL" #FFFFCC {
   usecase "Gérer\npaie" as UC1 #FF6B6B
   note right of UC1
     🔴 25-30h/mois
-    10% erreurs
+    Erreurs fréquentes
   end note
 
   usecase "Saisir\nfeuilles heures" as UC2 #FFD700
   note right of UC2
     🔴 100% manuel
-    60% retards
+    Retards fréquents
   end note
 
   usecase "Valider\nfeuilles heures" as UC3 #FFD700

@@ -14,13 +14,13 @@ rectangle "Système Achats-Logistique ACTUEL" #FFFFCC {
 
   usecase "Commander\nmatériel" as UC1 #FFD700
   note right of UC1
-    🔴 50% d'erreurs
+    🔴 Taux d'erreur élevé
     ⏰ 3 jours
   end note
 
   usecase "Consulter\nstock" as UC2 #FFD700
   note right of UC2
-    🔴 Données non fiables (40%)
+    🔴 Données non fiables
   end note
 
   usecase "Traiter\ncommandes" as UC3 #FFD700
@@ -45,7 +45,7 @@ rectangle "Système Achats-Logistique ACTUEL" #FFFFCC {
   note left of UC6
     🔴 Données incohérentes
     ⏰ 3h pour un chiffre
-    ±20% d'erreur
+    Marge d'erreur importante
   end note
 
   usecase "Gérer\nstock dépôt" as UC7 #FFD700
@@ -127,7 +127,7 @@ note bottom
   🔴 Aucune intégration entre outils
   🔴 Re-saisie 6-7 fois des mêmes données
   🔴 Pas de visibilité temps réel
-  🔴 Taux d'erreur 50%
+  🔴 Taux d'erreur élevé
   🔴 Pertes importantes
 end note
 

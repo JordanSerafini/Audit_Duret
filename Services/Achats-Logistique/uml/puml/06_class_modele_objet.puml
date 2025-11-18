@@ -104,7 +104,7 @@ note right of Produit
   - ...
 
   ⚠️ Confusion totale
-  ❌ 50% d'erreurs
+  ❌ Taux d'erreur élevé
 end note
 
 class Fournisseur {
@@ -155,7 +155,7 @@ note bottom of Affaire
   🔴 Impossible de suivre
   les coûts en temps réel
   ⏰ 3h pour sortir un chiffre
-  ±20% d'erreur
+  Marge d'erreur importante
 end note
 
 class Stock {
@@ -169,7 +169,7 @@ class Stock {
 }
 
 note right of Stock
-  🔴 Données non fiables (40%)
+  🔴 Données non fiables
   🔴 Pas de traçabilité
   🔴 Rangement chaotique
 end note
@@ -218,7 +218,7 @@ note top
   🔴 **Données**
   - Produit: 12 références pour 1 produit physique
   - Fournisseur: Doublons et données obsolètes
-  - Stock: Non fiable (40% de confiance)
+  - Stock: Non fiable
 
   🔴 **Processus**
   - Re-saisie 6-7 fois des mêmes données

@@ -137,7 +137,7 @@ note right #FF0000
   4. Saisit résultat Excel TR
 
   ⏰ **3h30** ⏰⏰⏰⏰
-  ❌ Erreur estimée: ±5%
+  ❌ Risque d'erreur
 end note
 
 Sophie -> Excel: Commande SWILE
@@ -269,8 +269,8 @@ note over Sophie, Virginie #FFCCCC
   👤 Temps Virginie: 4-6h/mois
   ♻️ Nombre outils: 6
   ♻️ Re-saisies: 6-8 fois
-  ❌ Taux d'erreur: 5-10%
-  😰 Stress: 9/10
+  ❌ Taux d'erreur: Significatif
+  😰 Stress: Très élevé
 
   💰 Coût mensuel: temps mensuel: 25-30h
   💰 Coût annuel: **temps important**

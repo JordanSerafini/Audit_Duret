@@ -57,7 +57,7 @@ rectangle "Systeme Direction-Affaires ACTUEL" #FFFFCC {
     [!] 30-40s par ecran
     [!] Timeouts frequents
     [!] VPN + Citrix
-    [FRUSTRE] Frustration 10/10
+    [FRUSTRE] Frustration maximale
   end note
 
   usecase "Suivre\nreliquats" as UC8 #FF6B6B

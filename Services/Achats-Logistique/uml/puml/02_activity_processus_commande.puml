@@ -50,7 +50,7 @@ if (Trouve référence ?) then (12 références!)
   note right #FF6B6B
     🔴 **BASE DONNÉES CHAOS**
     12 variantes du même produit
-    40% de chance de se tromper
+    Risque élevé de se tromper
   end note
 else (0 résultat)
   :Appelle Marc pour précisions;
@@ -130,7 +130,7 @@ note right #FF6B6B
   ⏰ 10 min
 end note
 
-if (Quantité OK ?) then (non - 30% des cas)
+if (Quantité OK ?) then (non - fréquent)
   :Note écart;
   note right #FFD700
     ⚠️ Pas de workflow réclamation
@@ -165,7 +165,7 @@ end note
 :Retour chantier;
 :Déballage;
 
-if (Bon matériel ?) then (NON - 50% !)
+if (Bon matériel ?) then (NON - taux élevé)
   #FF6B6B:❌ ERREUR;
   note right
     **CATASTROPHE**
@@ -185,7 +185,7 @@ if (Bon matériel ?) then (NON - 50% !)
   end note
 
   stop
-else (OUI - 50%)
+else (OUI - taux insuffisant)
   #90EE90:✅ Installation;
   stop
 endif
