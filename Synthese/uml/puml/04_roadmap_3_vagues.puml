@@ -2,104 +2,123 @@
 
 title Roadmap Transformation Digitale - 24 Mois (3 Vagues)
 
-Project starts the 1st of january 2026
-printscale monthly
+@startwbs
 
--- VAGUE 1 : QUICK WINS --
-[VAGUE 1 - Quick Wins (M1-M6)] as [Vague1] lasts 180 days and is colored in Red
-[Vague1] starts 2026-01-01
+* **TRANSFORMATION\nDIGITALE**\n24 MOIS
 
-[#1 SIRH Cloud] as [P1] lasts 120 days and is colored in Salmon
-[P1] starts 2026-01-01
-[P1] ends 2026-04-30
+** 🌊 VAGUE 1\nQUICK WINS\n**M1-M6**
 
-[#2 CRM/Ticketing] as [P2] lasts 90 days and is colored in Salmon
-[P2] starts 2026-01-15
-[P2] ends 2026-04-15
+*** 🔴 #1 SIRH Cloud\nScore: 9.4\nM1-M4
+**** RH: 22 systèmes → 1 SIRH
+**** Paie: 3j/sem → 1j/sem (avec #8)
+**** Ressaisies 5-6x → 1x
 
-[#3 Dashboards BI] as [P3] lasts 120 days and is colored in Salmon
-[P3] starts 2026-01-01
-[P3] ends 2026-04-30
+*** 🔴 #2 CRM/Ticketing\nScore: 9.0\nM1-M4
+**** Post-it → Traçabilité 100%
+**** Délai RDV → 2 min
+**** Version gratuite HubSpot
 
-[#4 App Mobile Chantiers] as [P4] lasts 150 days and is colored in Salmon
-[P4] starts 2026-02-01
-[P4] ends 2026-06-30
+*** 🔴 #3 Dashboards BI\nScore: 8.7\nM1-M5
+**** KPIs temps réel
+**** Direction: Visibilité 100%
+**** Sylvie: KPIs auto vs manuel
 
-[#5 Templates Devis/PPSPS] as [P5] lasts 90 days and is colored in Salmon
-[P5] starts 2026-03-01
-[P5] ends 2026-05-30
+*** 🔴 #4 App Mobile\nScore: 8.1\nM2-M6
+**** Photos géolocalisées
+**** Rapports: 2h → 10-25min
+**** Mode offline
 
-[#6 RFID Stocks] as [P6] lasts 120 days and is colored in Salmon
-[P6] starts 2026-03-01
-[P6] ends 2026-06-30
+*** 🔴 #5 Templates\nScore: 8.3\nM3-M6
+**** Devis: 2h → 30min
+**** PPSPS: 3h → 30min
+**** Bibliothèque réutilisable
 
-[🎯 Bilan Vague 1] as [Bilan1] happens at 2026-06-30 and is colored in Red
+*** 🟠 #6 RFID Stocks\nScore: 7.3\nM3-M6
+**** Comptage manuel → Scan
+**** Valorisation cohérente
+**** Inventaires rapides
 
--- VAGUE 2 : STRUCTURANTS --
-[VAGUE 2 - Structurants (M7-M18)] as [Vague2] lasts 365 days and is colored in Orange
-[Vague2] starts 2026-07-01
+***< 🎯 **BILAN M6**\nGo/No-Go Vague 2
 
-[#7 Migration ERP Odoo] as [P7] lasts 300 days and is colored in Gold
-[P7] starts 2026-07-01
-[P7] ends 2027-04-30
+** 🌊 VAGUE 2\nSTRUCTURANTS\n**M7-M18**
 
-[#8 Automatisation Paie] as [P8] lasts 180 days and is colored in Gold
-[P8] starts 2026-07-01
-[P8] ends 2026-12-31
+*** 🔴 #8 Paie Auto\nScore: 8.1\nM7-M12
+**** Calcul TR automatique
+**** Heures récup auto
+**** Temps Sophie: 3j → 1j
 
-[#9 Plateforme E-Procurement] as [P9] lasts 240 days and is colored in Gold
-[P9] starts 2026-08-01
-[P9] ends 2027-03-31
+*** 🟠 #7 ERP Odoo\nScore: 7.8\nM7-M16
+**** 30-40s → <2s
+**** Cloud accessible partout
+**** Migration progressive
 
-[#10 Système Tickets BE] as [P10] lasts 150 days and is colored in Gold
-[P10] starts 2026-09-01
-[P10] ends 2027-01-31
+*** 🟠 #9 E-Procurement\nScore: 7.1\nM8-M15
+**** Taux succès amélioré
+**** APIs fournisseurs
+**** 3 jours → Temps réel
 
-[#11 Portails Clients] as [P11] lasts 180 days and is colored in Gold
-[P11] starts 2026-10-01
-[P11] ends 2027-03-31
+*** 🟠 #10 Tickets BE\nScore: 7.3\nM9-M13
+**** Priorisation objective
+**** Surcharge Thomas réduite
+**** Transparence
 
-[#12 APIs Fournisseurs] as [P12] lasts 150 days and is colored in Gold
-[P12] starts 2026-11-01
-[P12] ends 2027-03-31
+*** 🟠 #11 Portails\nScore: 6.7\nM10-M15
+**** Self-service 24/7
+**** Clients autonomes
+**** Réduction appels
 
-[🎯 Bilan Vague 2] happens at 2027-06-30 and is colored in Orange
+*** 🟠 #12 APIs Fourn\nScore: 6.4\nM11-M15
+**** Prix automatiques
+**** Catalogues à jour
+**** Commandes EDI
 
--- VAGUE 3 : EXCELLENCE --
-[VAGUE 3 - Excellence IA/ML (M19-M24)] as [Vague3] lasts 180 days and is colored in LightBlue
-[Vague3] starts 2027-07-01
+***< 🎯 **BILAN M18**\nGo/No-Go Vague 3
 
-[#13 ML Prédictions Budgets] as [P13] lasts 120 days and is colored in SkyBlue
-[P13] starts 2027-07-01
-[P13] ends 2027-10-31
+** 🌊 VAGUE 3\nEXCELLENCE\n**M19-M24**
 
-[#14 ML Optimisation Chiffrages] as [P14] lasts 120 days and is colored in SkyBlue
-[P14] starts 2027-07-01
-[P14] ends 2027-10-31
+*** 🔵 #13 ML Budgets\nScore: 5.4\nM19-M22
+**** Prédictions dépassements
+**** Anticipation
+**** Optimisation trésorerie
 
-[#15 ML Prévision Besoins] as [P15] lasts 90 days and is colored in SkyBlue
-[P15] starts 2027-08-01
-[P15] ends 2027-10-31
+*** 🔵 #14 ML Chiffrage\nScore: 5.4\nM19-M22
+**** Benchmark internes
+**** Précision améliorée
+**** Standardisation
 
-[#16 Analytics Avancés] as [P16] lasts 150 days and is colored in SkyBlue
-[P16] starts 2027-07-01
-[P16] ends 2027-11-30
+*** 🔵 #15 ML Prévision\nScore: 4.7\nM20-M22
+**** Achats groupés
+**** Ruptures stock
+**** Optimisation
 
-[#17 Gouvernance Données] as [P17] lasts 180 days and is colored in SkyBlue
-[P17] starts 2027-07-01
-[P17] ends 2027-12-31
+*** 🔵 #16 Analytics\nScore: 5.7\nM19-M23
+**** Analyses consolidées
+**** Détection patterns
+**** Amélioration continue
 
-[#18 Culture Data-Driven] as [P18] lasts 180 days and is colored in SkyBlue
-[P18] starts 2027-07-01
-[P18] ends 2027-12-31
+*** 🔵 #17 Gouvernance\nScore: 5.4\nM19-M24
+**** Qualité données
+**** MDM
+**** Fiabilité décisions
 
-[🎯 Bilan Final M24] happens at 2027-12-31 and is colored in LightBlue
+*** 🔵 #18 Culture\nScore: 6.8\nM19-M24
+**** Formation continue
+**** Data-driven généralisé
+**** Adoption complète
 
--- JALONS CRITIQUES --
-[Go/No-Go Vague 2] as [GoVague2] happens at 2026-06-30 and is colored in Red
-[GoVague2] is 100% completed
+***< 🎯 **BILAN M24**\nTransformation\nComplète
 
-[Go/No-Go Vague 3] as [GoVague3] happens at 2027-06-30 and is colored in Orange
-[GoVague3] is 100% completed
+@endwbs
+
+legend bottom
+  **APPROCHE PROGRESSIVE PAR VAGUES**
+
+  🌊 **Vague 1** (M1-M6): Quick Wins → Gains immédiats mesurables
+  🌊 **Vague 2** (M7-M18): Structurants → Automatisation & intégrations
+  🌊 **Vague 3** (M19-M24): Excellence → IA/ML & culture data-driven
+
+  🎯 Go/No-Go après chaque vague (validation gains réels)
+  💰 Gains Vague 1 financent Vagues 2-3 (auto-financement partiel)
+end legend
 
 @enduml
