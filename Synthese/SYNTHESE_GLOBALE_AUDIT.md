@@ -18,6 +18,31 @@
 
 ---
 
+## ⚠️ NOTE MÉTHODOLOGIQUE
+
+**Données factuelles mesurées** :
+- ✅ 10-15 chefs de chantier (confirmé audit terrain)
+- ✅ 4 responsables d'affaires (confirmé)
+- ✅ ~100 collaborateurs (confirmé)
+- ✅ ~300 contrats maintenance (confirmé audit terrain)
+- ✅ ~50 mails/jour assistante (confirmé)
+- ✅ 7 fichiers Excel RH (confirmé inventaire)
+- ✅ 4 versions Excel désynchronisées Achats (confirmé)
+- ✅ CERFA "tous remplis à la main" (confirmé terrain)
+- ✅ Post-it service client (confirmé terrain)
+
+**Constats qualitatifs (à quantifier précisément)** :
+- ⏱️ Temps création devis : "Important" → **Mesure en cours via questionnaires**
+- ⏱️ Temps génération PPSPS : "Chronophage" → **Mesure en cours**
+- ⏱️ Temps ERP : "Très lent" → **Chronométrage prévu**
+- ⏱️ Taux échec commandes : "Élevé" → **Analyse 50 commandes en cours**
+- ⏱️ Reliquats oubliés : "Fréquents" → **Calcul taux en cours**
+- ⏱️ Nombre Excel Gestion-Op/Albertville : "Nombreux" → **Inventaire complet en cours**
+
+**Prochaine étape** : Collecte mesures terrain (semaines 2-3) via [questionnaires dédiés](INDEX_QUESTIONNAIRES_COLLECTE_DONNEES.md) pour quantifier précisément ces constats qualitatifs.
+
+---
+
 ## 🔍 PARTIE 1 : CONSTAT GLOBAL
 
 ### Vue d'Ensemble des 8 Services Audités

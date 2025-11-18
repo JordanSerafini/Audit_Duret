@@ -11,15 +11,15 @@
 
 ### 1. Dette Technique & Organisationnelle Critique
 
-- **60+ fichiers Excel** non connectés comme systèmes d'information
-- **Processus 100% manuels** : 2h/devis, 3h/PPSPS, 3j/semaine paie
-- **Systèmes obsolètes** : ERP 30-40s/écran, plantages fréquents
-- **Aucune traçabilité** : Post-it, WhatsApp, papier (50% infos perdues)
+- **Nombreux fichiers Excel** non connectés comme systèmes d'information
+- **Processus 100% manuels** : devis, PPSPS, paie (temps importants à mesurer)
+- **Systèmes obsolètes** : ERP très lent, plantages fréquents
+- **Aucune traçabilité** : Post-it, WhatsApp, papier (infos perdues fréquentes)
 
 ### 2. Impact Business Majeur
 
 - ❌ **Pertes opérationnelles** : Temps important sur tâches admin vs métier
-- ❌ **Opportunités perdues** : Devis terrain impossibles, reliquats oubliés (60% affaires)
+- ❌ **Opportunités perdues** : Devis terrain impossibles, reliquats fréquemment oubliés
 - ❌ **Chantiers bloqués** : Taux élevé commandes incomplètes
 - ❌ **Clients perdus** : Post-it tombé/jeté, délais excessifs
 - ❌ **Risque burn-out** : 3-4 personnes clés en surcharge chronique
@@ -37,7 +37,7 @@
 ### 🌊 VAGUE 1 : Quick Wins (M1-M6)
 
 **6 Projets Prioritaires :**
-1. SIRH Cloud (fin 22 systèmes RH isolés)
+1. SIRH Cloud (centralisation systèmes RH multiples)
 2. CRM/Ticketing (fin post-it, traçabilité clients)
 3. App Mobile Chantiers (photos, rapports digitaux)
 4. Dashboards BI Direction (KPIs temps réel)
