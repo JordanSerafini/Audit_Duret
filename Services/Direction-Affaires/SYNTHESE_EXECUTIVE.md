@@ -375,9 +375,9 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 - ✅ Coupure ERP legacy définitive
 
 **Gains cumulés M6 :**
-- Templates devis : ~31 min (vs 2h05)
-- PPSPS auto : ~27 min (vs 3h00)
-- Visibilité direction : temps réel (vs 3h compilation)
+- Templates devis : Temps création réduit significativement
+- PPSPS auto : Génération automatisée rapide
+- Visibilité direction : temps réel (vs compilation manuelle)
 - Satisfaction utilisateurs : Objectif > 4.5/5
 
 ---
@@ -417,9 +417,9 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 - ✅ Formation complète tous utilisateurs
 - ✅ Documentation finalisée
 - ✅ Coupure ERP legacy
-- ✅ Bilan ROI (objectif : gains > 200K€ annualisés)
+- ✅ Bilan ROI (chiffrage précis après mesures terrain)
 
-**Critère succès :** Gains temps mesurables > 70%, satisfaction > 4.5/5
+**Critère succès :** Gains temps mesurables significatifs, satisfaction > 4.5/5
 
 ---
 
@@ -459,7 +459,7 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 - ✅ **Cloud EU** : RGPD compliant, performance garantie
 - ✅ **APIs ouvertes** : Intégrations fournisseurs robustes
 - ✅ **Sécurité** : Chiffrement, MFA, backups quotidiens
-- ✅ **Performance** : < 2s chargement (vs 30-40s legacy)
+- ✅ **Performance** : Chargement rapide (amélioration majeure vs ERP legacy lent)
 
 ### 2. Change Management
 - ✅ **Communication transparente** : Roadmap partagée, bénéfices clairs
@@ -481,11 +481,11 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 ### ✅ RECOMMANDATION : GO IMMÉDIAT
 
 **Pourquoi maintenant ?**
-- 🔴 **Inefficacité critique** : 2h05 par devis, 3h par PPSPS, 30-40s par écran
+- 🔴 **Inefficacité critique** : Processus devis/PPSPS chronophages, ERP très lent (mesures en cours)
 - 🔴 **Risques métier** : ERP obsolète, télétravail impossible, frustration équipe
 - 🔴 **Obsolescence technique** : Maintenance ERP legacy coûteuse et complexe
 - 🟢 **Technologie mature** : Odoo éprouvé (7M+ users), APIs disponibles
-- 🟢 **Gains mesurables** : 75-85% temps process, visibilité temps réel
+- 🟢 **Gains attendus** : Réduction temps significative sur processus critiques, visibilité temps réel
 - 🟢 **Quick wins** : Gains visibles dès M2 (ERP rapide + templates)
 
 **Investissement :**
@@ -493,15 +493,15 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 - **Run** : 13.8K€/an
 
 **Retours Attendus :**
-- **Gains temps** : 63-126h/mois devis + 38-51h/mois PPSPS + 3-5h/jour écrans
+- **Gains temps** : Réduction significative temps devis/PPSPS, amélioration vitesse ERP (chiffrage précis après mesures terrain)
 - **Gains qualité** : Clauses obligatoires intégrées, reliquats tracés 100%
-- **Gains visibilité** : Direction temps réel vs 3h compilation
-- **Satisfaction** : > 4.5/5 vs frustration 9-10/10 actuelle
+- **Gains visibilité** : Direction temps réel vs compilation manuelle
+- **Satisfaction** : Objectif > 4.5/5 vs frustration élevée actuelle
 
 **Décision recommandée :**
 👉 **Lancer Phase 1 immédiatement (25K€, 2 mois)**
 - Risque limité (phasing, budget modéré, Go/No-Go M2)
-- Quick wins rapides (ERP < 2s, templates opérationnels)
+- Quick wins rapides (ERP rapide, templates opérationnels)
 - Validation terrain par pilotes avant généralisation
 - Gains temps mesurables dès M2
 
