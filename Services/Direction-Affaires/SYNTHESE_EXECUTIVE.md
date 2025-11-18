@@ -354,7 +354,7 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 **Déploiement :** Tous les 4 Responsables Affaires
 
 **Gains cumulés M4 :**
-- PPSPS auto : Temps génération ~27-35 min (vs 3h00)
+- PPSPS auto : Temps génération réduit drastiquement
 - Maj prix auto : 100% tarifs automatiques
 - Reliquats tracés : 100% vs aucun suivi actuel
 
