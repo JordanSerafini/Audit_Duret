@@ -1,0 +1,130 @@
+@startuml Architecture_Cible_Globale
+
+title Architecture IT Cible - Transformation Digitale Duret
+
+!define RECTANGLE class
+
+' Couche Utilisateurs
+package "UTILISATEURS FINAUX" #E6F3FF {
+  actor "Direction\n(Dashboards)" as Dir
+  actor "Managers\n(Web/Mobile)" as Mgr
+  actor "Terrain\n(Apps Mobile)" as Terrain
+  actor "Clients\n(Portails)" as Clients
+}
+
+' Couche Applications
+package "APPLICATIONS MÉTIER" #E8F5E9 {
+  component "ERP Moderne\n(Odoo BTP)" as ERP #90EE90
+  component "SIRH Cloud\n(Lucca/PayFit)" as SIRH #90EE90
+  component "CRM/Ticketing\n(HubSpot)" as CRM #90EE90
+  component "Apps Chantiers\n(React Native)" as AppsMobile #90EE90
+}
+
+' Couche Intégration
+package "COUCHE INTÉGRATION (APIs)" #FFF4E4 {
+  component "API Gateway" as Gateway #FFD700
+  component "ETL Legacy\n(Sage MDE)" as ETL #FFD700
+  component "Webhooks\nNotifications" as Webhooks #FFD700
+  component "APIs Fournisseurs\n(Rexel, Sonepar)" as APIFourn #FFD700
+}
+
+' Couche Données
+package "DATA WAREHOUSE CENTRAL" #E4E4FF {
+  database "PostgreSQL\nDonnées Métier" as DB #4169E1
+  database "S3 / Blob Storage\nPhotos, Documents" as Storage #4169E1
+  component "Analytics & BI\n(Power BI)" as BI #6495ED
+  component "ML/IA Engine\n(Prédictions)" as ML #6495ED
+}
+
+' Connexions Utilisateurs → Applications
+Dir --> ERP
+Dir --> SIRH
+Dir --> CRM
+Dir --> BI
+
+Mgr --> ERP
+Mgr --> SIRH
+Mgr --> CRM
+
+Terrain --> AppsMobile
+
+Clients --> CRM
+
+' Connexions Applications → Intégration
+ERP --> Gateway
+SIRH --> Gateway
+CRM --> Gateway
+AppsMobile --> Gateway
+
+' Connexions Intégration → Data
+Gateway --> DB
+ETL --> DB
+Webhooks --> DB
+APIFourn --> DB
+
+Gateway --> Storage
+AppsMobile --> Storage
+
+' Connexions Data → Analytics
+DB --> BI
+DB --> ML
+Storage --> BI
+
+note right of ERP
+  **ERP MODERNE**
+  • Odoo Enterprise Cloud
+  • Affaires, Devis, Achats, Stocks
+  • Mobile-first
+  • < 2s chargement (vs 30-40s MDE)
+  • RBAC granulaire
+end note
+
+note right of SIRH
+  **SIRH CLOUD**
+  • Fin 22 systèmes RH isolés
+  • Paie automatisée
+  • Workflow congés digital
+  • App mobile pointage
+  • Dashboards RH temps réel
+end note
+
+note right of CRM
+  **CRM/TICKETING**
+  • Fin post-it (traçabilité 100%)
+  • Portail client self-service
+  • Workflow validation
+  • Analytics & KPIs
+end note
+
+note right of AppsMobile
+  **APPS MOBILE TERRAIN**
+  • Photos géolocalisées
+  • Rapports digitaux
+  • Bon intervention digital
+  • Mode offline complet
+  • Signature électronique
+end note
+
+note bottom of DB
+  **SINGLE SOURCE OF TRUTH**
+
+  ✅ Centralisation toutes données
+  ✅ Historisation complète (audit trail)
+  ✅ Analyses consolidées multi-services
+  ✅ ML/IA (prédictions, détections, optimisations)
+  ✅ Backup automatique quotidien
+  ✅ RGPD compliant
+end note
+
+legend bottom
+  **BÉNÉFICES ARCHITECTURE CIBLE**
+
+  🔴 Fin silos Excel (60+ fichiers → Systèmes intégrés)
+  🔴 Fin processus manuels (automatisation workflows)
+  🔴 Traçabilité 100% (vs 20-50% actuel)
+  🔴 Visibilité temps réel (vs données décalées)
+  🔴 Mobilité terrain (apps mobiles offline)
+  🔴 Scalabilité (croissance possible)
+end legend
+
+@enduml

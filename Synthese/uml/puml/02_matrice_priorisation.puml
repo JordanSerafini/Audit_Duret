@@ -1,0 +1,109 @@
+@startuml Matrice_Priorisation_Projets
+
+title Matrice de Priorisation - Impact × Urgence (18 Projets)
+
+scale 1.5
+
+' Définition des axes
+rectangle "URGENCE\n(0-10)" as YAxis #FFFFFF
+
+' Zone CRITIQUE (Vague 1)
+rectangle "VAGUE 1\nQUICK WINS" as Vague1 #FFE4E4 {
+  card "#1 SIRH Cloud\nScore: 9.4" as P1 #FF6B6B
+  card "#2 CRM/Ticketing\nScore: 9.0" as P2 #FF6B6B
+  card "#3 Dashboards BI\nScore: 8.7" as P3 #FF6B6B
+  card "#5 Templates\nScore: 8.3" as P5 #FF8888
+  card "#4 App Mobile\nScore: 8.1" as P4 #FF8888
+  card "#6 RFID Stocks\nScore: 7.3" as P6 #FFAAAA
+}
+
+' Zone IMPORTANTE (Vague 2)
+rectangle "VAGUE 2\nSTRUCTURANTS" as Vague2 #FFF4E4 {
+  card "#8 Paie Auto\nScore: 8.1" as P8 #FFA500
+  card "#7 ERP Odoo\nScore: 7.8" as P7 #FFA500
+  card "#10 Tickets BE\nScore: 7.3" as P10 #FFBB33
+  card "#9 E-Procurement\nScore: 7.1" as P9 #FFBB33
+  card "#11 Portails\nScore: 6.7" as P11 #FFCC66
+  card "#12 APIs Fourn\nScore: 6.4" as P12 #FFCC66
+}
+
+' Zone SOUHAITABLE (Vague 3)
+rectangle "VAGUE 3\nEXCELLENCE" as Vague3 #E4F4FF {
+  card "#18 Culture\nScore: 6.8" as P18 #4169E1
+  card "#16 Analytics\nScore: 5.7" as P16 #6495ED
+  card "#13 ML Budgets\nScore: 5.4" as P13 #87CEEB
+  card "#14 ML Chiffrage\nScore: 5.4" as P14 #87CEEB
+  card "#17 Gouvernance\nScore: 5.4" as P17 #87CEEB
+  card "#15 ML Prévision\nScore: 4.7" as P15 #B0E0E6
+}
+
+P1 -[hidden]right-> P2
+P2 -[hidden]right-> P3
+P3 -[hidden]down-> P5
+P5 -[hidden]right-> P4
+P4 -[hidden]right-> P6
+
+P8 -[hidden]right-> P7
+P7 -[hidden]down-> P10
+P10 -[hidden]right-> P9
+P9 -[hidden]right-> P11
+P11 -[hidden]right-> P12
+
+P18 -[hidden]down-> P16
+P16 -[hidden]right-> P13
+P13 -[hidden]right-> P14
+P14 -[hidden]right-> P17
+P17 -[hidden]down-> P15
+
+note right of Vague1
+  **VAGUE 1 (M1-M6)**
+
+  🎯 Objectif: Quick Wins critiques
+  📊 6 projets prioritaires
+  ⏰ Durée: 6 mois
+  💰 ROI: Rapide (6-12 mois)
+
+  **Critères**:
+  • Impact > 7
+  • Urgence > 7
+  • Faisabilité > 7
+end note
+
+note right of Vague2
+  **VAGUE 2 (M7-M18)**
+
+  🎯 Objectif: Structuration
+  📊 6 projets structurants
+  ⏰ Durée: 12 mois
+  💰 ROI: Moyen (12-24 mois)
+
+  **Critères**:
+  • Impact 6-9
+  • Urgence 5-8
+  • Faisabilité 5-8
+end note
+
+note right of Vague3
+  **VAGUE 3 (M19-M24)**
+
+  🎯 Objectif: Excellence IA/ML
+  📊 6 projets avancés
+  ⏰ Durée: 6 mois
+  💰 ROI: Long (24-36 mois)
+
+  **Critères**:
+  • Impact 5-8
+  • Urgence 4-6
+  • Faisabilité 5-6
+end note
+
+legend bottom
+  **FORMULE SCORING**
+  Score = (Impact × 0.4) + (Urgence × 0.3) + (Faisabilité × 0.3)
+
+  🔴 CRITIQUE (Score > 8) → Vague 1
+  🟠 IMPORTANT (Score 6-8) → Vague 2
+  🔵 SOUHAITABLE (Score < 6) → Vague 3
+end legend
+
+@enduml

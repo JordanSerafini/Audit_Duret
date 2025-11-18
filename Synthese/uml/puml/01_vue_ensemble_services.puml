@@ -1,0 +1,53 @@
+@startuml Vue_Ensemble_Services
+
+title Vue d'Ensemble - État des 8 Services Audités
+
+skinparam componentStyle rectangle
+
+package "SERVICES CRITIQUES 🔴" #FFCCCC {
+  [Achats-Logistique\n\n❌ Taux élevé échec commandes\n❌ Processus 100% manuel\n⏰ 3 jours/commande] as Achats #FF6B6B
+
+  [Direction-Affaires\n\n❌ ERP obsolète (30-40s/écran)\n❌ 2h/devis, 3h/PPSPS\n⏰ Temps perdu important] as DirAff #FF6B6B
+
+  [Ressources-Humaines\n\n❌ 22 systèmes isolés\n❌ Ressaisies 5-6 fois\n⏰ 3j/semaine paie] as RH #FF6B6B
+
+  [Service-Client\n\n❌ Post-it (traçabilité 0%)\n❌ Délais excessifs RDV\n⏰ Clients perdus] as ServiceClient #FF6B6B
+
+  [Gestion-Opérationnelle\n\n❌ 30+ Excel non connectés\n❌ Remontée info tardive\n⏰ KPIs manuels longs] as GestOp #FF6B6B
+
+  [Albertville\n\n❌ Situations très longues\n❌ Budgets invisibles\n⏰ Plusieurs jours/mois] as Albert #FF6B6B
+}
+
+package "SERVICES IMPORTANTS 🟠" #FFE4CC {
+  [Maintenance-Technique\n\n❌ CERFA papier\n❌ Pas d'app mobile\n⏰ Temps perdu important] as Maint #FFA500
+
+  [Chantiers\n\n❌ Aucun outil métier\n❌ Traçabilité faible (50%)\n⏰ Rapports 2h] as Chantiers #FFA500
+}
+
+note right of Achats
+  **~100 collaborateurs impactés**
+  **~100 chantiers actifs**
+  **~300 contrats maintenance**
+end note
+
+note bottom of DirAff
+  **PATTERNS TRANSVERSES IDENTIFIÉS**
+
+  🔴 Dépendance Excel massive (8/8 services)
+  🔴 Processus 100% manuels (8/8 services)
+  🔴 Absence traçabilité (7/8 services)
+  🔴 Outils IT obsolètes (8/8 services)
+  🔴 Visibilité temps réel 0% (6/8 services)
+  🟠 Opportunités perdues (6/8 services)
+end note
+
+note bottom of RH
+  **RISQUES CRITIQUES**
+
+  ⚠️ Burn-out équipes clés (Sophie RH, Sylvie, Thomas)
+  ⚠️ Turnover techniciens (outils obsolètes)
+  ⚠️ Croissance impossible (systèmes ne scalent pas)
+  ⚠️ Sécurité données (RGPD non garanti)
+end note
+
+@enduml

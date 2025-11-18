@@ -1,0 +1,105 @@
+@startuml Roadmap_Transformation_3_Vagues
+
+title Roadmap Transformation Digitale - 24 Mois (3 Vagues)
+
+Project starts the 1st of january 2026
+printscale monthly
+
+-- VAGUE 1 : QUICK WINS --
+[VAGUE 1 - Quick Wins (M1-M6)] as [Vague1] lasts 180 days and is colored in Red
+[Vague1] starts 2026-01-01
+
+[#1 SIRH Cloud] as [P1] lasts 120 days and is colored in Salmon
+[P1] starts 2026-01-01
+[P1] ends 2026-04-30
+
+[#2 CRM/Ticketing] as [P2] lasts 90 days and is colored in Salmon
+[P2] starts 2026-01-15
+[P2] ends 2026-04-15
+
+[#3 Dashboards BI] as [P3] lasts 120 days and is colored in Salmon
+[P3] starts 2026-01-01
+[P3] ends 2026-04-30
+
+[#4 App Mobile Chantiers] as [P4] lasts 150 days and is colored in Salmon
+[P4] starts 2026-02-01
+[P4] ends 2026-06-30
+
+[#5 Templates Devis/PPSPS] as [P5] lasts 90 days and is colored in Salmon
+[P5] starts 2026-03-01
+[P5] ends 2026-05-30
+
+[#6 RFID Stocks] as [P6] lasts 120 days and is colored in Salmon
+[P6] starts 2026-03-01
+[P6] ends 2026-06-30
+
+[🎯 Bilan Vague 1] as [Bilan1] happens at 2026-06-30 and is colored in Red
+
+-- VAGUE 2 : STRUCTURANTS --
+[VAGUE 2 - Structurants (M7-M18)] as [Vague2] lasts 365 days and is colored in Orange
+[Vague2] starts 2026-07-01
+
+[#7 Migration ERP Odoo] as [P7] lasts 300 days and is colored in Gold
+[P7] starts 2026-07-01
+[P7] ends 2027-04-30
+
+[#8 Automatisation Paie] as [P8] lasts 180 days and is colored in Gold
+[P8] starts 2026-07-01
+[P8] ends 2026-12-31
+
+[#9 Plateforme E-Procurement] as [P9] lasts 240 days and is colored in Gold
+[P9] starts 2026-08-01
+[P9] ends 2027-03-31
+
+[#10 Système Tickets BE] as [P10] lasts 150 days and is colored in Gold
+[P10] starts 2026-09-01
+[P10] ends 2027-01-31
+
+[#11 Portails Clients] as [P11] lasts 180 days and is colored in Gold
+[P11] starts 2026-10-01
+[P11] ends 2027-03-31
+
+[#12 APIs Fournisseurs] as [P12] lasts 150 days and is colored in Gold
+[P12] starts 2026-11-01
+[P12] ends 2027-03-31
+
+[🎯 Bilan Vague 2] happens at 2027-06-30 and is colored in Orange
+
+-- VAGUE 3 : EXCELLENCE --
+[VAGUE 3 - Excellence IA/ML (M19-M24)] as [Vague3] lasts 180 days and is colored in LightBlue
+[Vague3] starts 2027-07-01
+
+[#13 ML Prédictions Budgets] as [P13] lasts 120 days and is colored in SkyBlue
+[P13] starts 2027-07-01
+[P13] ends 2027-10-31
+
+[#14 ML Optimisation Chiffrages] as [P14] lasts 120 days and is colored in SkyBlue
+[P14] starts 2027-07-01
+[P14] ends 2027-10-31
+
+[#15 ML Prévision Besoins] as [P15] lasts 90 days and is colored in SkyBlue
+[P15] starts 2027-08-01
+[P15] ends 2027-10-31
+
+[#16 Analytics Avancés] as [P16] lasts 150 days and is colored in SkyBlue
+[P16] starts 2027-07-01
+[P16] ends 2027-11-30
+
+[#17 Gouvernance Données] as [P17] lasts 180 days and is colored in SkyBlue
+[P17] starts 2027-07-01
+[P17] ends 2027-12-31
+
+[#18 Culture Data-Driven] as [P18] lasts 180 days and is colored in SkyBlue
+[P18] starts 2027-07-01
+[P18] ends 2027-12-31
+
+[🎯 Bilan Final M24] happens at 2027-12-31 and is colored in LightBlue
+
+-- JALONS CRITIQUES --
+[Go/No-Go Vague 2] as [GoVague2] happens at 2026-06-30 and is colored in Red
+[GoVague2] is 100% completed
+
+[Go/No-Go Vague 3] as [GoVague3] happens at 2027-06-30 and is colored in Orange
+[GoVague3] is 100% completed
+
+@enduml
