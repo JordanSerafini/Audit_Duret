@@ -400,7 +400,7 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 - ✅ Workflow validation fonctionnel
 - ✅ Feedback loops hebdomadaires
 
-**Critère succès :** Satisfaction pilotes > 4/5, temps devis -50%
+**Critère succès :** Satisfaction pilotes > 4/5, réduction temps devis mesurable
 
 ### Mois 4 : Déploiement Général
 - ✅ Tous RA équipés & formés (4 personnes)
@@ -469,7 +469,7 @@ TOTAL: PROCESSUS CHRONOPHAGE constaté (chronométrage en cours) !!
 - ✅ **Quick wins visibles** : M2 déjà ERP rapide + templates
 
 ### 3. Sponsoring Direction
-- ✅ **Business case solide** : Gains temps mesurables (75-85% process), quick wins M2
+- ✅ **Business case solide** : Gains temps significatifs attendus sur processus critiques, quick wins M2
 - ✅ **Gains qualitatifs** : Télétravail, visibilité temps réel, conformité
 - ✅ **Jalons clairs** : Go/No-Go tous les 2 mois
 - ✅ **Reporting** : KPIs mensuels, comité pilotage bimestriel
