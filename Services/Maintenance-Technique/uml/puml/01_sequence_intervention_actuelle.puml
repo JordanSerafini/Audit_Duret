@@ -43,7 +43,7 @@ Tech <-- "Client" : "Au fait, je voudrais\nchanger mon tableau\nsecondaire, c'es
 Tech -> Tech : ❌ **IMPOSSIBLE générer\ndevis terrain**
 Tech -> Tech : Note sur post-it :\n"Client B - devis tableau"
 
-note right : **OPPORTUNITÉ COMMERCIALE\nÀ RISQUE** (45K€/an)
+note right : **OPPORTUNITÉ COMMERCIALE\nÀ RISQUE**
 
 Tech -> CERFA : Remplit CERFA (12 min)
 
@@ -51,7 +51,7 @@ Tech -> CERFA : Remplit CERFA (12 min)
 
 Tech -> Tech : Intervention prévue 1h30\n→ Réel 2h30 (complexe)
 
-note right : ❌ **PAS DE POINTAGE\nGPS DIGITAL**\n→ Difficile prouver\n→ Refacturation impossible\n(30K€/an perdu)
+note right : ❌ **PAS DE POINTAGE\nGPS DIGITAL**\n→ Difficile prouver\n→ Refacturation impossible
 
 Tech -> CERFA : Remplit CERFA (15 min)
 
@@ -65,7 +65,7 @@ note right : **50 min admin**\npar jour Clothilde
 
 Tech -> Tech : Post-it devis Client B...\n**PERDU le lendemain** 💰
 
-note right : **-3,000€ CA perdu**
+note right : **CA perdu**
 
 == Bilan Journée ==
 
@@ -73,18 +73,16 @@ note over Tech, GAO
 **TEMPS PERDU** :
 • CERFA papier : 39 min (3 × 13 min)
 • Appels info : 5 min
-• Post-it perdu : 1 devis = 3K€
+• Post-it perdu : 1 devis
 
 **REFACTURATION IMPOSSIBLE** :
 • Dépassement 1h (intervention #3)
-• = 50€ perdu
+• Pas de preuve de dépassement
 
 **TOTAL INEFFICACITÉ** :
 • 44 min/jour × 220 jours = 161h/an
-• + 50€ × 50 dépassements/an = 2,500€
-• + Devis perdus : 45K€/an
-
-**= 50K€/an PERDU (1 technicien)**
+• Dépassements non facturés : 50/an
+• Devis perdus significatifs
 end note
 
 @enduml

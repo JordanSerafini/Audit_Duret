@@ -80,8 +80,8 @@ Workflows --> Email : confirmations\nalertes
 note right of AppMobile
   **FONCTIONS CLE** :
   • Rapport intervention digital
-  • Devis terrain (45K€/an)
-  • Pointage GPS (30K€/an)
+  • Devis terrain
+  • Pointage GPS
   • Photos integrees
   • Signature electronique
   • Mode offline
@@ -93,7 +93,6 @@ note left of PortailWeb
   • Historique interventions
   • Documents (rapports, factures)
   • Renouvellement contrat
-  → 35K€/an
 end note
 
 note bottom of Workflows
@@ -102,7 +101,6 @@ note bottom of Workflows
   • Interventions auto (contrats)
   • Enquete satisfaction J+2
   • Relances
-  → 50K€/an
 end note
 
 @enduml

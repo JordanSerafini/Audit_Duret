@@ -61,25 +61,25 @@ UC7 ..> UC17 : <<extend>>\noptimisation IA
 UC10 ..> UC14 : <<trigger>>\nalertes auto
 
 note right of UC3
-  **NOUVEAU** : 45K€/an
+  **NOUVEAU**
   50 devis terrain/an
   vs 0 actuellement
 end note
 
 note right of UC4
-  **NOUVEAU** : 30K€/an
+  **NOUVEAU**
   Refacturation heures
   supplementaires
 end note
 
 note right of UC11
-  **NOUVEAU** : 35K€/an
+  **NOUVEAU**
   Reduction appels -40%
   Disponibilite 24/7
 end note
 
 note left of UC17
-  **PHASE 3** : 15K€/an
+  **PHASE 3**
   Optimisation tournees
   -20% km parcourus
 end note
