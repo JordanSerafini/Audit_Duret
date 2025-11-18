@@ -10,11 +10,11 @@
 ### 🔴 Constats Terrain
 
 **Problèmes Majeurs Identifiés :**
-- ❌ **Système "post-it"** : Aucune traçabilité (80% risque d'oubli)
-- ❌ **48h pour un RDV** vs 2 min possible (délai inacceptable)
+- ❌ **Système "post-it"** : Aucune traçabilité (risque élevé d'oubli)
+- ❌ **Délais excessifs pour prendre RDV** (délai inacceptable)
 - ❌ **Données éparpillées** : ERP + SAGE + Excel + Outlook + Post-it
-- ❌ **10 clients perdus/an** par oublis (post-it tombé/jeté)
-- ❌ **104 opportunités commerciales perdues/an** (demandes techniciens non tracées)
+- ❌ **Clients perdus** par oublis (post-it tombé/jeté)
+- ❌ **Opportunités commerciales perdues** (demandes techniciens non tracées)
 
 **Volume d'Activité :**
 - ~50 appels/jour entrants
@@ -50,10 +50,10 @@ TOTAL: 48 HEURES pour un simple RDV !!
 
 | Persona | Pain Points |
 |---------|------------|
-| **Claire** (Assistante) | 14h/jour perdu en admin, stress 8/10, post-it everywhere |
+| **Claire** (Assistante) | Temps perdu en tâches admin, stress élevé, post-it everywhere |
 | **Gaëtan** (Technicien) | CERFA papier chronophage, pas de devis terrain, photos perdues |
-| **Client** | Attente 48h confirmation RDV, satisfaction 5/10, image "désorganisés" |
-| **Direction** | Aucun KPI service client, opportunités perdues 100K€/an |
+| **Client** | Attente excessive confirmation RDV, satisfaction faible, image "désorganisés" |
+| **Direction** | Aucun KPI service client, opportunités commerciales perdues |
 
 ---
 
