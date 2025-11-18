@@ -14,25 +14,22 @@ Achats-Logistique/
 │
 ├── 📁 plan/                        ← Plan d'action et audit
 │   └── Plan_Action_Achats_Logistique.md
-│       └── Document source complet (720 lignes)
+│       └── Document source complet
 │           • Résumé audit
 │           • Pain points détaillés
 │           • Besoins exprimés par persona
-│           • Métriques et coûts
 │
 ├── 📁 docs/                        ← Documents de synthèse
 │   ├── 01_PERSONAS_Pain_Points.md
 │   │   └── 5 personas détaillés (Marc, Sylvie, Julien, Éric, Christine)
 │   │       • Profils utilisateurs
 │   │       • Pain points par sévérité
-│   │       • Impact financier
 │   │       • Citations verbatim
 │   │
 │   ├── 02_ARCHITECTURE_Actuelle_Chaos.md
 │   │   └── État actuel du système (chaos)
 │   │       • Diagrammes ASCII
 │   │       • Processus détaillés
-│   │       • Coûts de l'inefficacité (910K€/an)
 │   │       • Les 10 impossibilités
 │   │
 │   ├── 03_JOURNEY_MAPS_Parcours_Utilisateurs.md
@@ -51,7 +48,6 @@ Achats-Logistique/
 │       └── Matrices et tableaux visuels
 │           • Matrice sévérité × fréquence
 │           • Heat maps personas × pain points
-│           • KPI actuels vs cibles
 │           • Comparaisons avant/après
 │
 └── 📁 uml/                         ← Diagrammes UML (RECOMMANDÉ)
@@ -101,25 +97,29 @@ Achats-Logistique/
 
 ### Pour une Vue Visuelle Rapide
 👉 **Diagrammes recommandés:**
-1. **Mind Map** (`uml/09_mindmap_pain_points.puml`) - Vue d'ensemble 910K€
+1. **Mind Map** (`uml/09_mindmap_pain_points.puml`) - Vue d'ensemble
 2. **Sequence** (`uml/01_sequence_commande_actuelle.puml`) - Processus détaillé
 3. **Use Case** (`uml/03_usecase_acteurs.puml`) - Les acteurs
 4. **Gantt** (`uml/11_gantt_commande_comparaison.puml`) - Avant/Après
 
 ---
 
-## 📊 Chiffres Clés
+## 📊 Situation Actuelle
 
-| Métrique | Valeur |
-|----------|--------|
-| **Coût annuel des pertes** | 910,000€ |
-| **Taux d'erreur commandes** | 50% |
-| **Délai moyen commande** | 3 jours |
-| **Temps humain/commande** | 6h30 |
-| **Nombre d'appels/jour** | 15-20 |
-| **Re-saisies/commande** | 6 fois |
-| **Fiabilité stock** | 40% |
-| **Niveau stress moyen** | 8/10 |
+### Faits Constatés
+
+| Aspect | État |
+|--------|------|
+| **Volume d'activité** | 9-11 000 références/an |
+| **Taux livraisons 24h** | 80% |
+| **Taux commandes complètes** | 50% seulement |
+| **Processus** | 100% manuel |
+| **ERP Sage MDE** | Jugé "calamiteux" |
+| **Base de données** | Chaotique (multiples références pour 1 produit) |
+| **Traçabilité** | Aucune |
+| **Intégration fournisseurs** | Pas d'EDI/API |
+| **Re-saisies par commande** | Multiples (papier → téléphone → email → Sage → Excel) |
+| **Visibilité stock** | Aucune en temps réel |
 
 ---
 
@@ -127,52 +127,75 @@ Achats-Logistique/
 
 1. **Marc** (Chef Chantier) - 45 ans
    - 🔴 Pas de visibilité stock
-   - 🔴 Chantier bloqué 50% du temps
-   - 💰 350K€/an de pertes
+   - 🔴 Chantier bloqué fréquemment (50% commandes incomplètes)
+   - 🔴 Perd du temps en appels multiples
 
 2. **Sylvie** (Gestionnaire Achats) - 38 ans
    - 🔴 6 re-saisies par commande
-   - 🔴 Hub central (goulot)
-   - 💰 270K€/an de pertes
+   - 🔴 Hub central (goulot d'étranglement)
+   - 🔴 Débordée d'appels
 
 3. **Julien** (Responsable Affaires) - 42 ans
-   - 🔴 Impossible de piloter coûts
-   - 🔴 3h pour un chiffre (±20% erreur)
-   - 💰 150K€/an de pertes
+   - 🔴 Impossible de piloter coûts en temps réel
+   - 🔴 Extraction données très chronophage
+   - 🔴 Fiabilité données incertaine
 
 4. **Éric** (Magasinier) - 52 ans
    - 🔴 80% temps admin vs logistique
    - 🔴 Stock chaotique
-   - 💰 90K€/an de pertes
+   - 🔴 Nomenclatures incohérentes
 
 5. **Christine** (Directrice Générale) - 48 ans
    - 🔴 Pas de visibilité globale
    - 🔴 Équipes épuisées
-   - 💰 50K€/an de pertes
+   - 🔴 Pas de KPIs fiables
 
 ---
 
-## 🔴 Top 5 Pain Points Critiques
+## 🔴 Top Pain Points Critiques
 
-1. **Base de données chaos**
-   - 12 références pour 1 produit
-   - 💰 350K€/an
+1. **Base de données chaotique**
+   - 12 références différentes pour 1 même produit
+   - Double tarification constatée
+   - Références obsolètes non gérées
 
-2. **Re-saisies multiples (6x)**
+2. **Re-saisies multiples (6x minimum)**
    - Papier → Téléphone → Email → Sage → Excel × 2
-   - 💰 270K€/an
+   - Chronophage et source d'erreurs
 
 3. **Pas de visibilité temps réel**
    - Stock, commandes, coûts
-   - 💰 150K€/an
+   - Impossible de piloter efficacement
 
-4. **Taux d'erreur 50%**
-   - 1 commande sur 2 est fausse
-   - 💰 200K€/an
+4. **Taux d'erreur élevé (50%)**
+   - 1 commande sur 2 incomplète
+   - Chantiers bloqués régulièrement
 
 5. **Communication archaïque**
    - 100% téléphone, pas d'EDI/API
-   - 💰 90K€/an
+   - 15-20 appels/jour
+
+6. **Pas d'intégration fournisseurs**
+   - Rexel, Sonepar : pas d'API
+   - Tarifs pas à jour automatiquement
+   - Pas de suivi livraisons
+
+7. **Processus 100% manuel**
+   - Aucune automatisation
+   - Dépendance personnes
+   - Pas de workflow digital
+
+8. **Inventaires chronophages**
+   - Pas d'optimisation
+   - Stock immobilisé non géré
+
+9. **Retours non liés aux commandes**
+   - Reliquats non suivis
+   - Perte de traçabilité
+
+10. **Pas de gouvernance**
+    - Commandes directes chantiers non contrôlées
+    - Qui peut créer/modifier références pas défini
 
 ---
 
@@ -204,7 +227,7 @@ Achats-Logistique/
   - Audit complet service Achats-Logistique
   - 5 personas détaillés
   - 12 diagrammes UML
-  - Métriques et pain points
+  - Pain points identifiés
   - Focus: État ACTUEL uniquement
 
 ---
@@ -215,7 +238,7 @@ Achats-Logistique/
 - Pain points existants
 - Problèmes constatés
 - Besoins exprimés
-- Pas de recommandations/solutions
+- Pas de recommandations/solutions chiffrées
   (en attente de la synthèse globale IT)
 
 ---
@@ -232,4 +255,4 @@ Achats-Logistique/
 
 **📧 Contact:** Direction Générale - Duret Électricité
 **🎯 Objectif:** Préparer la transformation digitale
-**💰 Enjeu:** 910K€/an de pertes à récupérer
+**⚠️ Enjeu:** Processus actuels inefficaces, besoin urgent de digitalisation

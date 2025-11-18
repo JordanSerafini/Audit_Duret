@@ -1,7 +1,7 @@
 # 🔧 Maintenance Technique & SAV - Documentation
 
-> Analyse complete du service Maintenance Technique & SAV
-> Focus: Etat ACTUEL (CERFA papier), architecture CIBLE (ERP Terrain + App Mobile)
+> Analyse complète du service Maintenance Technique & SAV
+> Focus: État ACTUEL (CERFA papier), besoins exprimés
 
 ---
 
@@ -10,67 +10,54 @@
 ```
 Maintenance-Technique/
 │
-├── 📄 README.md                    ← Vous etes ici
+├── 📄 README.md                    ← Vous êtes ici
 │
 ├── 📁 plan/                        ← Plan d'action et audit
 │   └── Plan_Action_Maintenance_Technique.md
-│       └── Document source complet (160 lignes)
-│           • Resume audit
-│           • Pain points detailles
-│           • Besoins exprimes
+│       └── Document source complet
+│           • Résumé audit
+│           • Pain points détaillés
+│           • Besoins exprimés
 │           • 2 options (A, B)
-│           • ROI detaille
 │
-├── 📁 docs/                        ← Documents de synthese
+├── 📁 docs/                        ← Documents de synthèse
 │   ├── 01_PERSONAS_Pain_Points.md
-│   │   └── 2 personas detailles (Gaetan, Clothilde)
+│   │   └── 2 personas détaillés (Gaëtan, Clothilde)
 │   │       • Profils utilisateurs
-│   │       • Pain points par severite (13 total)
-│   │       • Impact financier quantifie
+│   │       • Pain points par sévérité
 │   │       • Citations verbatim
 │   │
 │   ├── 02_ARCHITECTURE_Actuelle_Chaos.md
-│   │   └── Etat actuel du systeme (CERFA papier + Excel)
+│   │   └── État actuel du système (CERFA papier + Excel)
 │   │       • Diagrammes ASCII
-│   │       • Processus detailles (intervention, RDV)
-│   │       • Couts de l'inefficacite (373.5K€/an conservateur)
-│   │       • Les 10 impossibilites
+│   │       • Processus détaillés (intervention, RDV)
+│   │       • Les impossibilités actuelles
 │   │
-│   ├── 03_JOURNEY_MAPS_Parcours_Utilisateurs.md
-│   │   └── Journey maps detaillees
-│   │       • Parcours Gaetan (journee type, devis terrain)
-│   │       • Parcours Clothilde (prise RDV)
-│   │       • Parcours Client (contrat maintenance cycle)
-│   │       • Timeline comparee (CERFA 12min → 3min digital)
-│   │
-│   └── SYNTHESE_EXECUTIVE.md
-│       └── Synthese executive pour direction
-│           • Business case complet
-│           • ROI 2 ans : 540K€
-│           • Roadmap 18 mois (3 phases)
-│           • Risques et mitigation
+│   └── 03_JOURNEY_MAPS_Parcours_Utilisateurs.md
+│       └── Journey maps détaillées
+│           • Parcours Gaëtan (journée type, devis terrain)
+│           • Parcours Clothilde (prise RDV)
+│           • Parcours Client (contrat maintenance cycle)
 │
 ├── 📁 implementation/              ← Architecture cible
 │   ├── README.md
 │   ├── 02_Planning_Implementation.md
-│   │   └── Timeline 18 mois, 10 jalons critiques
+│   │   └── Timeline proposée
 │   │
 │   ├── 📁 it-logiciel/
 │   │   └── 01_Architecture_Cible.md
-│   │       └── Stack technique detaille
+│   │       └── Stack technique détaillé
 │   │           • ERP/CRM Terrain (Praxedo/Synchroteam)
 │   │           • App mobile techniciens (iOS/Android)
 │   │           • Portail client self-service
-│   │           • Securite RGPD
+│   │           • Sécurité RGPD
 │   │
 │   └── 📁 bi-data-ml/
 │       └── 01_Architecture_DataDriven.md
 │           └── Analytics & ML
 │               • Zoning intelligent (ML routing)
-│               • Enquete satisfaction auto
-│               • Prediction churn clients
-│               • Power BI dashboards (5)
-│               • 15 KPIs automatises
+│               • Enquête satisfaction auto
+│               • Dashboards proposés
 │
 └── 📁 uml/                         ← Diagrammes UML
     ├── 📐 Fichiers PlantUML (.puml)
@@ -87,175 +74,168 @@ Maintenance-Technique/
     │   ├── 11_gantt_comparaison.puml
     │   └── 12_network_flux_donnees.puml
     │
-    └── 🖼️ Images PNG/SVG (a generer)
-        └── 12 diagrammes prets pour slides/impression
+    └── 🖼️ Images PNG/SVG (à générer)
+        └── 12 diagrammes prêts pour slides/impression
 ```
 
 ---
 
-## 🎯 Par Ou Commencer ?
-
-### Pour une Presentation Direction
-
-👉 **Lisez d'abord:**
-1. [docs/SYNTHESE_EXECUTIVE.md](docs/SYNTHESE_EXECUTIVE.md) - Business case complet
-2. Puis allez dans `/uml/` pour les visuels (Mind Map, Gantt)
+## 🎯 Par Où Commencer ?
 
 ### Pour Comprendre le Contexte
 
 👉 **Lisez dans l'ordre:**
-1. [plan/Plan_Action_Maintenance_Technique.md](plan/Plan_Action_Maintenance_Technique.md) - Source complete (160 lignes)
-2. [docs/01_PERSONAS_Pain_Points.md](docs/01_PERSONAS_Pain_Points.md) - Qui souffre ? (Gaetan, Clothilde)
-3. [docs/02_ARCHITECTURE_Actuelle_Chaos.md](docs/02_ARCHITECTURE_Actuelle_Chaos.md) - Pourquoi le chaos ?
-4. [docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) - Experience utilisateur
+1. [plan/Plan_Action_Maintenance_Technique.md](plan/Plan_Action_Maintenance_Technique.md) - Source complète
+2. [docs/01_PERSONAS_Pain_Points.md](docs/01_PERSONAS_Pain_Points.md) - Qui souffre ? (Gaëtan, Clothilde)
+3. [docs/02_ARCHITECTURE_Actuelle_Chaos.md](docs/02_ARCHITECTURE_Actuelle_Chaos.md) - État actuel
+4. [docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) - Expérience utilisateur
 
-### Pour l'Implementation
+### Pour l'Implémentation
 
 👉 **Architecture technique:**
-1. [implementation/02_Planning_Implementation.md](implementation/02_Planning_Implementation.md) - Roadmap 18 mois
+1. [implementation/02_Planning_Implementation.md](implementation/02_Planning_Implementation.md) - Roadmap proposée
 2. [implementation/it-logiciel/01_Architecture_Cible.md](implementation/it-logiciel/01_Architecture_Cible.md) - Stack technique
 3. [implementation/bi-data-ml/01_Architecture_DataDriven.md](implementation/bi-data-ml/01_Architecture_DataDriven.md) - Analytics & ML
 
 ### Pour une Vue Visuelle Rapide
 
-👉 **Diagrammes recommandes:**
-1. **Mind Map** (`uml/09_mindmap_pain_points.puml`) - Vue d'ensemble 290K€
-2. **Gantt** (`uml/11_gantt_comparaison.puml`) - CERFA 12min → 3min digital
-3. **Sequence** (`uml/01_sequence_intervention_actuelle.puml`) - Journee type Gaetan
-4. **Network** (`uml/12_network_flux_donnees.puml`) - Architecture cible
+👉 **Diagrammes recommandés:**
+1. **Mind Map** (`uml/09_mindmap_pain_points.puml`) - Vue d'ensemble pain points
+2. **Sequence** (`uml/01_sequence_intervention_actuelle.puml`) - Journée type Gaëtan
+3. **Network** (`uml/12_network_flux_donnees.puml`) - Architecture cible
+4. **Gantt** (`uml/11_gantt_comparaison.puml`) - CERFA papier vs digital
 
 ---
 
-## 📊 Chiffres Cles
+## 📊 Situation Actuelle
 
-| Metrique | Valeur |
-|----------|--------|
-| **Cout annuel des pertes** | 290,000€ (conservateur) |
-| **Temps perdu CERFA papier** | 990h/an (880h tech + 110h Clothilde) |
-| **Temps rapport intervention** | 12 min (vs 3 min possible) |
+### Faits Constatés
+
+| Aspect | État |
+|--------|------|
 | **Clients contrats maintenance** | ~250-300 |
-| **Interventions/an** | ~600 |
-| **Devis terrain perdus/an** | 50 (0 actuellement) |
-| **Refacturation heures impossible** | 30K€/an perdu |
-| **Niveau stress Gaetan** | 7/10 |
+| **Interventions** | CERFA papier remplis à la main |
+| **Base clients** | Excel (non intégré app mobile) |
+| **Planning RDV** | Téléphone (Clothilde) |
+| **Devis terrain** | Impossible (opportunités perdues) |
+| **Pointage heures** | Pas digital (refacturation difficile) |
+| **Photos avant/après** | Téléphone perso (pas centralisées) |
+| **Portail client** | Inexistant |
 
 ---
 
 ## 👥 Personas Principaux
 
-### 1. Gaetan - Technicien SAV Senior (42 ans)
+### 1. Gaëtan - Technicien SAV Senior (42 ans)
 
-- 🔴 **CERFA papier chronophage** (12 min/intervention)
-- 🔴 **Impossible generer devis terrain** (45K€/an perdu)
-- 🔴 **Pas de pointage GPS digital** (30K€/an refacturation perdue)
-- 🔴 **Photos sur telephone perso** (pas centralisees, pas de traçabilite)
-- 🔴 **Deplacements non optimises** (pas de zoning intelligent)
-- 💰 **~50K€/an perdu** (1 technicien)
+- 🔴 **CERFA papier chronophage** (rempli à la main)
+- 🔴 **Impossible générer devis terrain** (opportunités perdues)
+- 🔴 **Pas de pointage GPS digital** (refacturation difficile)
+- 🔴 **Photos sur téléphone perso** (pas centralisées, pas de traçabilité)
+- 🔴 **Déplacements non optimisés** (pas de zoning intelligent)
 
 ### 2. Clothilde - Assistante Planning SAV (38 ans)
 
-- 🔴 **Base clients Excel** (300 lignes, pas synchronisee app mobile)
-- 🔴 **Prise RDV 100% telephone** (19 min/RDV × 600 = 190h/an)
+- 🔴 **Base clients Excel** (300 lignes, pas synchronisée app mobile)
+- 🔴 **Prise RDV 100% téléphone** (chronophage)
 - 🔴 **Contrats Word manuels** (interventions pas automatiques)
 - 🔴 **Triple saisie** (Outlook + Excel + GAO)
 - 🔴 **Pas d'alertes automatiques** (fin contrat, interventions dues)
-- 💰 **65K€/an perdu** (temps + opportunites)
 
 ---
 
-## 🔴 Top 5 Pain Points Critiques
+## 🔴 Top 10 Pain Points Identifiés
 
-1. **CERFA papier (tous remplis a la main)**
-   - 12 min/intervention × 4/jour × 220 jours × 5 techniciens = 880h/an
-   - Illisible, pas de photos integrees, pas de traçabilite
-   - 💰 20K€/an
+1. **CERFA papier (tous remplis à la main)**
+   - Chronophage, illisible, pas de photos intégrées, pas de traçabilité
 
 2. **Demande devis terrain impossible**
-   - 50 opportunites/an perdues (post-it → oublis)
-   - 💰 45K€/an
+   - Opportunités commerciales perdues
 
-3. **Pointage heure arrivee/depart pas digital**
-   - Refacturation heures supplementaires difficile
-   - Pas de preuve depassement
-   - 💰 30K€/an
+3. **Pointage heure arrivée/départ pas digital**
+   - Refacturation heures supplémentaires difficile
+   - Pas de preuve dépassement
 
-4. **Enquete satisfaction non systematisee**
-   - Risque perte clients non detecte (20/an)
-   - 💰 100K€/an
+4. **Enquête satisfaction non systématisée**
+   - Risque perte clients non détecté
 
-5. **Base donnees Excel (pas integree app)**
+5. **Base données Excel (pas intégrée app)**
    - Ressaisies multiples, erreurs
-   - Techniciens pas d'infos completes terrain
-   - 💰 15K€/an
+   - Techniciens pas d'infos complètes terrain
+
+6. **Photos téléphone perso (pas centralisées)**
+   - Pas de suivi historique, date/endroit pas automatique
+
+7. **Certificat mise en service papier**
+   - Chronophage, archivage complexe
+
+8. **Contrats Word manuels**
+   - Interventions découlant pas automatiques
+   - Planification manuelle, oublis possibles
+
+9. **Pas de portail client**
+   - Client ne peut pas prendre RDV en ligne
+   - Appels entrants élevés, disponibilité 8h-18h uniquement
+
+10. **Pas d'optimisation tournées**
+    - Déplacements non optimisés géographiquement
 
 ---
 
 ## ✅ Recommandation Principale
 
-### 👉 **Option A : ERP/CRM Terrain Integre (Recommande)**
+### 👉 **Option A : ERP/CRM Terrain Intégré (Recommandé)**
 
-**Pourquoi une Solution Integree ?**
+**Pourquoi une Solution Intégrée ?**
 
 - ✅ **Tout-en-un** : CRM + Planning + App mobile + Portail client + Workflows
-- ✅ **Eprouve** : Solutions specialisees SAV/maintenance (Praxedo, Synchroteam)
-- ✅ **Risque faible** : Pas de developpement custom
-- ✅ **ROI rapide** : 4-5 mois payback
-- ✅ **Maintenance incluse** : Support editeur
-- ✅ **Ecosysteme** : 100+ integrations natives (SAGE, telephonie, etc.)
+- ✅ **Éprouvé** : Solutions spécialisées SAV/maintenance (Praxedo, Synchroteam)
+- ✅ **Risque faible** : Pas de développement custom
+- ✅ **Maintenance incluse** : Support éditeur
+- ✅ **Écosystème** : 100+ intégrations natives (SAGE, téléphonie, etc.)
 
 **Composantes** :
-
-- **Phase 1 (M1-3)** : Setup ERP + App mobile + CERFA = 0 → 30K€
-- **Phase 2 (M4-6)** : Devis terrain + Portail client + Workflows → 35K€
-- **Phase 3 (M7-18)** : Zoning IA + Analytics + Enquete satisfaction → 25K€
-- **Run 18 mois** : Licences + maintenance → 15K€
-
-**Investissement total 18 mois** : 105K€
-**Gains annuels recurrents** : 270K€/an
-**ROI 2 ans** : +540K€ (414%)
-**Payback** : 4-5 mois
+- ERP/CRM Terrain (Praxedo, Synchroteam, FieldPro)
+- App mobile technicien (native dans ERP)
+- Portail client (intégré ERP)
+- Intégration GAO actuel
+- Formation équipe
 
 ---
 
-### Gains Detailles
+## 🎯 Bénéfices Attendus
 
-| Gain | ROI/an |
-|------|--------|
-| CERFA digitalise (rapport app mobile 3 min) | 20K€ |
-| Devis terrain (module app) | 45K€ |
-| Pointage GPS digital (refacturation auto) | 30K€ |
-| Planning RDV automatise (portail client 24/7) | 35K€ |
-| Enquete satisfaction auto (retention +10%) | 100K€ |
-| Alertes renouvellement contrats | 30K€ |
-| Zoning intelligent (optimisation tournees -20% km) | 15K€ |
-| Optimisation planning (IA) | 10K€ |
-| **TOTAL** | **270K€/an** |
+### Gains Opérationnels
 
----
+| Indicateur | AVANT | APRÈS |
+|------------|-------|-------|
+| **Rapport intervention** | CERFA papier | Digital 100% |
+| **Devis terrain** | ❌ Impossible | ✅ App mobile |
+| **Pointage heures** | ❌ Pas digital | ✅ GPS auto |
+| **Photos** | Téléphone perso | ✅ Centralisées app |
+| **Prise RDV** | Téléphone uniquement | ✅ Portail 24/7 |
+| **Base clients** | Excel | ✅ CRM intégré |
+| **Traçabilité** | ❌ Aucune | ✅ 100% |
 
-## 🎯 Quick Wins (Mois 1-3)
+### Bénéfices Utilisateurs
 
-1. ✅ **Setup ERP Terrain** (Synchroteam ou Praxedo)
-   - POC 3 solutions (J1-7)
-   - Signature contrat J10
+**Gaëtan (Technicien) :**
+- Rapport intervention digital (vs CERFA papier)
+- Génération devis terrain direct
+- Pointage GPS automatique
+- Photos intégrées géolocalisées
 
-2. ✅ **Import 300 clients Excel → CRM**
-   - Nettoyage donnees
-   - Migration complete J30
+**Clothilde (Planning) :**
+- Fini les RDV 100% téléphone
+- Portail client self-service
+- Alertes automatiques contrats
+- Base CRM intégrée
 
-3. ✅ **App mobile techniciens deployee**
-   - iOS + Android
-   - Formation 7 techniciens
-   - Deploiement J60
-
-4. ✅ **CERFA papier = 0% (J65)**
-   - 100% rapports digitaux
-   - Pointage GPS actif
-   - Signature electronique
-   - Photos integrees
-
-**ROI Phase 1 (3 mois)** : 95K€/an (CERFA + Pointage + Base Excel)
-**Payback Phase 1** : 4 mois
+**Clients :**
+- Prise RDV en ligne 24/7
+- Suivi interventions temps réel
+- Historique accessible
+- Image entreprise moderne
 
 ---
 
@@ -264,7 +244,7 @@ Maintenance-Technique/
 ### Pour PowerPoint / Google Slides
 
 1. Les fichiers `.puml` sont dans le dossier `/uml/`
-2. Generez les **SVG** (qualite vectorielle) avec PlantUML :
+2. Générez les **SVG** (qualité vectorielle) avec PlantUML :
 
    ```bash
    cd Maintenance-Technique/uml
@@ -272,51 +252,43 @@ Maintenance-Technique/
    ```
 
 3. Importez les SVG dans vos slides
-4. Redimensionnez sans perte de qualite
+4. Redimensionnez sans perte de qualité
 
 ### Pour Impression / PDF
 
-- Generez les **PNG** haute resolution :
+- Générez les **PNG** haute résolution :
 
   ```bash
   java -jar plantuml.jar -tpng *.puml
   ```
 
-### Pour Modifier les Diagrammes
-
-1. Editez les fichiers `.puml` dans un editeur de texte
-2. Regenerez avec PlantUML (voir ci-dessus)
-3. Syntaxe PlantUML : <https://plantuml.com>
-
 ### Diagrammes Disponibles (12)
 
-- **Sequence** : Intervention SAV actuelle (CERFA papier, 2h44)
-- **Activity** : Processus prise RDV (19 min vs 3 min)
+- **Sequence** : Intervention SAV actuelle (CERFA papier)
+- **Activity** : Processus prise RDV
 - **Use Case** : Acteurs et interactions (ERP Terrain)
-- **State** : Cycle de vie intervention (pointage GPS auto)
+- **State** : Cycle de vie intervention
 - **Component** : Architecture cible (App mobile + Portail + ERP)
-- **Class** : Modele objet (Client, Contrat, Intervention, Rapport...)
-- **Deployment** : Infrastructure cloud (Azure EU, securite RGPD)
-- **Timing** : Timeline comparee (CERFA 12min → 3min digital)
-- **Mind Map** : Pain points (290K€)
-- **WBS** : Work Breakdown Structure (105K€, 3 phases)
-- **Gantt** : Comparaison avant/apres (2h44 → 1h58)
-- **Network** : Flux de donnees (ERP ↔ App ↔ Portail ↔ SAGE)
+- **Class** : Modèle objet (Client, Contrat, Intervention, Rapport...)
+- **Deployment** : Infrastructure cloud (Azure EU, sécurité RGPD)
+- **Timing** : Timeline comparée (CERFA papier vs digital)
+- **Mind Map** : Pain points
+- **WBS** : Work Breakdown Structure
+- **Gantt** : Comparaison avant/après
+- **Network** : Flux de données (ERP ↔ App ↔ Portail ↔ SAGE)
 
 ---
 
 ## 📅 Historique
 
-- **2025-11-17** - Creation complete
+- **2025-11-17** - Création complète
   - Audit complet Maintenance Technique SAV
-  - 2 personas detailles (Gaetan, Clothilde)
+  - 2 personas détaillés (Gaëtan, Clothilde)
   - Architecture actuelle vs cible
-  - Pain points quantifies (290K€/an)
-  - 2 options avec ROI detaille
+  - Pain points identifiés
+  - 2 options avec analyse
   - 12 diagrammes UML PlantUML
-  - Synthese executive pour direction
-  - Architecture technique complete (IT + Data/ML)
-  - Planning implementation 18 mois
+  - Architecture technique complète (IT + Data/ML)
 
 ---
 
@@ -324,10 +296,11 @@ Maintenance-Technique/
 
 Ce dossier documente:
 
-- Etat ACTUEL (CERFA papier, Excel, GAO basique)
+- État ACTUEL (CERFA papier, Excel, GAO basique)
 - Architecture CIBLE (ERP Terrain + App mobile + Portail client)
-- Plan d'implementation detaille (18 mois, 105K€)
-- ROI business case (540K€ sur 2 ans, payback 4-5 mois)
+- Recommandations solutions
+
+**Note** : Chiffrage financier détaillé à réaliser après sélection solution et étude de faisabilité approfondie.
 
 ---
 
@@ -335,15 +308,14 @@ Ce dossier documente:
 
 ### Documents Principaux
 
-- [Plan d'Action Source](plan/Plan_Action_Maintenance_Technique.md) - 160 lignes
-- [Synthese Executive](docs/SYNTHESE_EXECUTIVE.md) - Business case
-- [Personas & Pain Points](docs/01_PERSONAS_Pain_Points.md) - Gaetan, Clothilde
+- [Plan d'Action Source](plan/Plan_Action_Maintenance_Technique.md)
+- [Personas & Pain Points](docs/01_PERSONAS_Pain_Points.md) - Gaëtan, Clothilde
 - [Architecture Actuelle](docs/02_ARCHITECTURE_Actuelle_Chaos.md) - CERFA papier
-- [Journey Maps](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) - CERFA 12min → 3min
+- [Journey Maps](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) - Parcours utilisateurs
 
-### Architecture & Implementation
+### Architecture & Implémentation
 
-- [Planning 18 mois](implementation/02_Planning_Implementation.md) - 10 jalons
+- [Planning proposé](implementation/02_Planning_Implementation.md)
 - [Architecture IT](implementation/it-logiciel/01_Architecture_Cible.md) - Stack technique
 - [Architecture Data/ML](implementation/bi-data-ml/01_Architecture_DataDriven.md) - Zoning IA, Analytics
 
@@ -353,7 +325,6 @@ Ce dossier documente:
 
 ---
 
-**📧 Contact** : Maintenance Technique & SAV - Duret Electricite
-**🎯 Objectif** : CERFA papier = 0, App mobile 100%, Portail client LIVE
-**💰 Enjeu** : 290K€/an de pertes → 540K€ de gains sur 2 ans (ROI 414%)
-**⏱️ Quick Win** : CERFA = 0 en M3 (3 mois)
+**📧 Contact** : Maintenance Technique & SAV - Duret Électricité
+**🎯 Objectif** : CERFA papier → 100% digital, App mobile, Portail client
+**⏱️ Quick Win** : Digitalisation CERFA + App mobile techniciens
