@@ -33,11 +33,11 @@
 
 **2. Processus archaïque de prise de RDV**
 ```
-Client appelle → Claire consulte Excel → Mail Gaëtan → Attente 7h
+Client appelle → Claire consulte Excel → Mail Gaëtan → Attente
   → Gaëtan répond → Claire rappelle client (répondeur) → Mail client
-    → Attente 15h → Client répond → Saisie Excel + Outlook → Confirmation
+    → Attente → Client répond → Saisie Excel + Outlook → Confirmation
 
-TOTAL: 48 HEURES pour un simple RDV !!
+TOTAL: DÉLAI EXCESSIF pour un simple RDV !!
 ```
 
 **3. Goulots d'étranglement**
@@ -90,7 +90,7 @@ TOTAL: 48 HEURES pour un simple RDV !!
 - ✅ Support & formation gratuits
 
 **Coût :**
-- Gratuit → Pro 45€/user/mois (2 users = 1.1K€/an)
+- Version gratuite disponible → Pro selon besoins (à chiffrer)
 
 #### **COMPOSANTE 2 : INTÉGRATIONS**
 
@@ -99,13 +99,13 @@ TOTAL: 48 HEURES pour un simple RDV !!
 - Création ticket automatique
 - Enregistrement appels
 - Statistiques (volume, durée, etc.)
-- **Coût :** 12K€ setup + 540€/an (3 users)
+- **Coût :** À chiffrer (setup + abonnement)
 
 **Synchronisation SAGE ↔ HubSpot :**
 - Fin double saisie clients
 - Sync automatique devis/factures
 - Temps réel ou quotidien
-- **Coût :** 20K€
+- **Coût :** À chiffrer (intégration custom)
 
 #### **COMPOSANTE 3 : APP MOBILE TECHNICIEN**
 
@@ -118,7 +118,7 @@ TOTAL: 48 HEURES pour un simple RDV !!
 - ✅ Synchronisation automatique CRM
 - ✅ Mode offline
 
-**Coût :** 35K€ (React Native iOS + Android)
+**Coût :** À chiffrer (React Native iOS + Android)
 
 #### **COMPOSANTE 4 : PORTAIL CLIENT**
 
@@ -130,27 +130,27 @@ TOTAL: 48 HEURES pour un simple RDV !!
 - 📝 Questionnaire satisfaction
 - 📞 Messagerie (vs appels)
 
-**Coût :** Natif HubSpot ou custom 15K€
+**Coût :** Natif HubSpot ou custom (à chiffrer)
 
 ### 📅 Roadmap 18 Mois
 
-#### **PHASE 1 (Mois 1-3) : Quick Wins - 68K€**
+#### **PHASE 1 (Mois 1-3) : Quick Wins**
 
 **Déploiement :**
 - ✅ HubSpot CRM (tickets, contacts, historique)
-- ✅ Templates mails (20-30 types)
+- ✅ Templates mails
 - ✅ Planning partagé en ligne (Calendly ou HubSpot)
 - ✅ Questionnaire satisfaction automatisé
 
 **Gains Immédiats :**
-- Fin post-it (traçabilité 100%)
-- Templates mails : 165h/an économisées
-- Planning : gain immédiat Claire
+- Fin post-it (traçabilité complète)
+- Gain de temps avec templates mails
+- Amélioration efficacité planning
 - Satisfaction mesurée
 
-**ROI Phase 1 : 150h/an, satisfaction +15%**
+**Coût Phase 1 : À chiffrer**
 
-#### **PHASE 2 (Mois 4-6) : Intégrations - 77K€**
+#### **PHASE 2 (Mois 4-6) : Intégrations**
 
 **Déploiement :**
 - ✅ Intégration téléphonie (CTI)
@@ -164,24 +164,24 @@ TOTAL: 48 HEURES pour un simple RDV !!
 - Clients prennent RDV en ligne
 - Documents centralisés
 
-**ROI Phase 2 : 400h/an, appels -15%**
+**Coût Phase 2 : À chiffrer**
 
-#### **PHASE 3 (Mois 7-18) : Excellence - 50K€**
+#### **PHASE 3 (Mois 7-18) : Excellence**
 
 **Déploiement :**
 - ✅ App mobile techniciens
 - ✅ Workflows automatisés avancés
 - ✅ Portail client avancé (self-service)
 - ✅ Chatbot site web
-- ✅ Analytics & ML prédictif
+- ✅ Analytics avancés
 
 **Gains :**
-- Opportunités terrain captées (45K€/an)
-- CERFA digitalisé (20K€/an)
-- Refacturation heures améliorée (30K€/an)
-- Appels -30%
+- Opportunités terrain captées
+- CERFA digitalisé
+- Refacturation heures améliorée
+- Réduction appels entrants
 
-**ROI Phase 3 : 1200h/an, appels -40%, satisfaction +50%**
+**Coût Phase 3 : À chiffrer**
 
 ---
 
@@ -191,59 +191,40 @@ TOTAL: 48 HEURES pour un simple RDV !!
 
 | Phase | Description | Montant |
 |-------|-------------|---------|
-| **Phase 1** | CRM + Templates + Planning | 68.4K€ |
-| **Phase 2** | Intégrations (CTI, SAGE, Portail) | 77K€ |
-| **Phase 3** | App mobile + Innovations | 49.5K€ |
-| **Run 18 mois** | Licences + maintenance | 11.4K€ |
-| **TOTAL** | | **206.4K€** |
+| **Phase 1** | CRM + Templates + Planning | À chiffrer |
+| **Phase 2** | Intégrations (CTI, SAGE, Portail) | À chiffrer |
+| **Phase 3** | App mobile + Innovations | À chiffrer |
+| **Run 18 mois** | Licences + maintenance | À chiffrer |
+| **TOTAL** | | **À chiffrer** |
 
-### Gains Annuels Détaillés
+### Gains Attendus
 
-#### **1. Gains Temps (valorisés 50€/h)**
+#### **1. Gains Temps**
 
-| Gain | Temps économisé/an | Valeur/an |
-|------|-------------------|-----------|
-| Prise RDV planning | 365h | 18.25K€ |
-| Relances clients | 183h | 9.15K€ |
-| Double saisie SAGE/ERP | 21h | 1.05K€ |
-| Recherche info client | 183h | 9.15K€ |
-| Gestion documents | 183h | 9.15K€ |
-| Suivi demandes techniciens | 128h | 6.4K€ |
-| Questionnaire satisfaction | 72h | 3.6K€ |
-| Templates mails | 183h | 9.15K€ |
-| **TOTAL TEMPS** | **1318h/an** | **65.9K€/an** |
+| Gain | Description |
+|------|-------------|
+| Prise RDV planning | Réduction drastique du temps de prise de RDV |
+| Relances clients | Automatisation des relances |
+| Double saisie SAGE/ERP | Élimination de la double saisie |
+| Recherche info client | Accès immédiat aux informations |
+| Gestion documents | Centralisation et accès simplifié |
+| Suivi demandes techniciens | Traçabilité automatique |
+| Questionnaire satisfaction | Automatisation complète |
+| Templates mails | Gain de temps rédaction |
 
 #### **2. Gains Qualité & CA**
 
-| Gain | Estimation | Valeur/an |
-|------|-----------|-----------|
-| Opportunités commerciales (demandes techniciens tracées) | 50 devis × 30% × 3K€ | 45K€ |
-| Devis terrain Gaëtan (app mobile) | 50 devis × 30% × 3K€ | 45K€ |
-| Refacturation heures (pointage digital) | Récupération | 30K€ |
-| Réduction appels entrants (-30% via portail) | 10h/sem × 220j × 30% × 50€ | 33K€ |
-| Fidélisation client (+10% via satisfaction) | 20 clients × 10K€ | 200K€ |
-| Renouvellement contrats maintenance (+20%) | 15 contrats × 2K€ | 30K€ |
-| Réduction erreurs (double saisie éliminée) | 10 erreurs/an × 2K€ | 20K€ |
-| **TOTAL QUALITÉ** | | **403K€/an** |
+| Gain | Description |
+|------|-----------|
+| Opportunités commerciales | Demandes techniciens tracées et exploitées |
+| Devis terrain | App mobile permet génération devis sur site |
+| Refacturation heures | Pointage digital améliore facturation |
+| Réduction appels entrants | Portail client réduit volume d'appels |
+| Fidélisation client | Amélioration satisfaction et fidélisation |
+| Renouvellement contrats | Meilleur suivi améliore taux renouvellement |
+| Réduction erreurs | Élimination double saisie réduit erreurs |
 
-#### **3. TOTAL GAINS ANNUELS : 468.9K€/an**
-
-### ROI 2 Ans
-
-```
-┌─────────────────────────────────────────────────┐
-│  INVESTISSEMENT 18 mois     │ 206.4K€          │
-│  RUN 18 mois                │  11.4K€          │
-│  TOTAL COÛTS 2 ans          │ 217.8K€          │
-├─────────────────────────────────────────────────┤
-│  GAINS annuels              │ 468.9K€/an       │
-│  GAINS 2 ans                │ 937.8K€          │
-├─────────────────────────────────────────────────┤
-│  NET GAIN 2 ans             │ +720K€           │
-│  ROI %                      │ 331%             │
-│  PAYBACK                    │ 5-6 mois         │
-└─────────────────────────────────────────────────┘
-```
+**Note :** Les gains doivent être mesurés et chiffrés avec des données réelles lors de l'étude de faisabilité détaillée.
 
 ---
 
@@ -278,8 +259,8 @@ TOTAL: 48 HEURES pour un simple RDV !!
 - Marché BTP : portail rare (concurrents n'ont pas)
 - Image moderne, innovante
 - Disponibilité 24/7
-- Réduction appels -40%
-- Satisfaction +50%
+- Réduction appels entrants
+- Amélioration satisfaction client
 
 ---
 
@@ -309,51 +290,43 @@ TOTAL: 48 HEURES pour un simple RDV !!
 
 | KPI | Actuel | Cible M3 |
 |-----|--------|----------|
-| Délai réponse appel | 1-2j | <4h |
-| Temps prise RDV | 40 min | <5 min |
-| Taux traçabilité appels | 0% | 100% |
-| Post-it utilisés/jour | 15 | 0 |
+| Délai réponse appel | Élevé | Réduction significative |
+| Temps prise RDV | Long | Réduction drastique |
+| Taux traçabilité appels | Aucune | Complète |
+| Post-it utilisés/jour | Nombreux | Zéro |
 
 ### Qualité (6 mois)
 
 | KPI | Actuel | Cible M6 |
 |-----|--------|----------|
-| Satisfaction client | 5/10 | >7/10 |
-| NPS | ~20 | >40 |
-| Clients perdus (oublis) | 10/an | 0 |
-| Opportunités captées | 50% | 90% |
+| Satisfaction client | Faible | Amélioration significative |
+| NPS | Faible | Amélioration mesurable |
+| Clients perdus (oublis) | Existant | Élimination |
+| Opportunités captées | Insuffisant | Amélioration importante |
 
 ### Business (12 mois)
 
 | KPI | Actuel | Cible M12 |
 |-----|--------|----------|
-| Temps admin Claire | 14h/j | <5h/j |
-| Appels entrants | 50/j | 30/j (-40%) |
-| RDV pris en ligne | 0% | >40% |
-| CA additionnel | 0 | +120K€/an |
+| Temps admin Claire | Excessif | Réduction significative |
+| Appels entrants | Volume élevé | Réduction mesurable |
+| RDV pris en ligne | Aucun | Adoption progressive |
+| CA additionnel | - | Croissance mesurable |
 
 ---
 
 ## ✅ PARTIE 6 : RECOMMANDATION FINALE
 
-### Décision : GO avec Option A (HubSpot Complet)
+### Décision : Solution CRM Complète Recommandée
 
 **Pourquoi ?**
-1. ✅ **ROI exceptionnel** : 331% sur 2 ans, payback 5-6 mois
-2. ✅ **Risque maîtrisé** : HubSpot gratuit pour tester, approche progressive
+1. ✅ **Amélioration significative** : Gains opérationnels et commerciaux importants
+2. ✅ **Risque maîtrisé** : Solution éprouvée, approche progressive
 3. ✅ **Différenciation marché** : Portail client rare dans BTP
 4. ✅ **Scalabilité** : Solution évolutive avec croissance entreprise
 5. ✅ **Quick wins** : Gains dès M1-3
 
-**Alternative Option B (Légère) écartée car :**
-- ⚠️ Gains limités (50K€/an vs 469K€)
-- ⚠️ Problèmes structurels non résolus
-- ⚠️ Migration vers Option A inévitable dans 2-3 ans
-
-**Alternative Option C (Optimisation) écartée car :**
-- ❌ Gains très faibles (7.5K€/an)
-- ❌ Payback 52 mois (vs 6 mois Option A)
-- ❌ Dette technique persistante
+**Note :** Les alternatives doivent être évaluées lors de l'étude de faisabilité avec des chiffrages précis
 
 ### Prochaines Étapes Immédiates
 
@@ -377,9 +350,9 @@ TOTAL: 48 HEURES pour un simple RDV !!
 
 **Objectif M6 :**
 - Phase 1 & 2 opérationnelles
-- 400h/an économisées mesurées
-- Satisfaction +15% mesurée
-- Appels -15%
+- Gains temps mesurés
+- Satisfaction améliorée et mesurée
+- Réduction appels mesurée
 
 ---
 
@@ -387,30 +360,30 @@ TOTAL: 48 HEURES pour un simple RDV !!
 
 ### 1. URGENCE
 Le système actuel est **non tenable** :
-- Claire passe 14h/jour sur tâches admin répétitives
-- 10 clients perdus/an par oublis (post-it)
-- 104 opportunités commerciales perdues/an
+- Temps excessif sur tâches admin répétitives
+- Clients perdus par oublis (post-it)
+- Opportunités commerciales non exploitées
 - Image "désorganisés" auprès clients
-- **COÛT : 748K€/an**
+- **COÛT OPÉRATIONNEL ÉLEVÉ**
 
 ### 2. OPPORTUNITÉ
-La transformation digitale service client offre un **ROI exceptionnel** :
-- Investissement : 206K€ sur 18 mois
-- Gains : 469K€/an récurrents
-- Net : +720K€ sur 2 ans
-- Payback : **5-6 mois seulement**
+La transformation digitale service client offre des **gains significatifs** :
+- Investissement : À chiffrer lors étude de faisabilité
+- Gains : Opérationnels et commerciaux importants
+- ROI : À calculer avec données réelles
 - Différenciation concurrentielle (portail client)
 
 ### 3. RECOMMANDATION
-**GO IMMÉDIAT** avec approche progressive :
+**Lancer l'étude de faisabilité** avec approche progressive :
 - ✅ Mois 1-3 : Quick wins (CRM, templates, planning)
 - ✅ Mois 4-6 : Intégrations (CTI, SAGE, portail)
-- ✅ Mois 7-18 : Excellence (app mobile, chatbot, ML)
-- ✅ Commencer par HubSpot gratuit (risque zéro)
+- ✅ Mois 7-18 : Excellence (app mobile, automatisations avancées)
+- ✅ Commencer par phase pilote (risque maîtrisé)
 
 ---
 
 **📧 Contact:** Direction Générale - Duret Électricité
 **🎯 Objectif:** Transformer service client réactif → proactif & digital
-**💰 Enjeu:** 720K€ de gains sur 2 ans + différenciation marché
+**💰 Enjeu:** Gains opérationnels et commerciaux significatifs + différenciation marché
 **⏰ Urgence:** CRITIQUE (système actuel non scalable)
+**⚠️ Note:** Chiffrage précis requis via étude de faisabilité détaillée
