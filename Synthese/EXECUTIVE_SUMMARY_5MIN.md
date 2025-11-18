@@ -56,8 +56,8 @@
 ### 🌊 VAGUE 2 : Structurants (M7-M18)
 
 **6 Projets Majeurs :**
-1. Migration ERP Moderne (Odoo : <2s vs 30-40s)
-2. Automatisation Paie (3j/sem → 1j/sem)
+1. Migration ERP Moderne (Odoo : rapidité améliorée significativement)
+2. Automatisation Paie (réduction temps importante)
 3. Plateforme E-Procurement (amélioration taux succès commandes)
 4. Système Tickets BE (priorisation objective)
 5. Portails Clients (self-service 24/7)
@@ -65,7 +65,7 @@
 
 **Gains M18 :**
 - ✅ ERP rapide et moderne
-- ✅ Temps Sophie RH paie divisé par 3
+- ✅ Temps paie RH réduit significativement
 - ✅ Transparence totale (RBAC, audit trail)
 
 **Investissement** : À chiffrer
