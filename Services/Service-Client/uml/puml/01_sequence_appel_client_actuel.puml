@@ -28,7 +28,7 @@ end note
 Claire -> Postit: Cherche post-it vierge
 note right #FF6B6B
   ⏰ 30 secondes
-  🔴 Risque perte 80%
+  🔴 Risque perte élevé
 end note
 
 Claire -> Postit: Note "M Dupont pb tableau"
@@ -141,8 +141,8 @@ note over Client, Outlook #FFCCCC
   📞 Contacts: **8** (appels, SMS, mails)
   ⏱️ Temps perdu: **40 minutes**
   📝 Post-it: **2** (dont 1 jeté prématurément)
-  🔴 Risque oubli: **80%**
-  😤 Satisfaction: **4/10**
+  🔴 Risque oubli: **Très élevé**
+  😤 Satisfaction: **Faible**
 end note
 
 @enduml
