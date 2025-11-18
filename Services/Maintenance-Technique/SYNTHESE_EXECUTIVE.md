@@ -147,18 +147,17 @@
 <a name="business-case"></a>
 ## 3. BUSINESS CASE
 
-### Coût du Statu Quo (2 ans)
+### Coût du Statu Quo
 
-| Année | Coût |
-|-------|------|
-| An 1 | 290K€ |
-| An 2 | 290K€ |
-| **Total 2 ans** | **580K€** |
-
-**Sans compter** :
+**Impact continu** :
+- Perte de temps et productivité
+- Opportunités commerciales manquées
+- Insatisfaction clients
 - Perte compétitivité vs concurrents digitaux
 - Stress équipes (turnover techniciens)
 - Image "pas moderne"
+
+**Note :** Chiffrage précis à établir lors de l'étude de faisabilité
 
 ---
 
@@ -167,51 +166,42 @@
 #### Option A : Solution Complète ERP Terrain (Recommandé)
 
 **Investissement** :
-- ERP/CRM Terrain (Praxedo, Synchroteam, FieldPro) : 15-25K€
-- App mobile technicien (native ERP ou custom) : 30K€ (si custom)
-- Portail client (intégré ERP ou custom) : 15K€
-- Intégration GAO actuel : 10K€
-- Formation : 5K€
-- Run 18 mois (licences + maintenance) : 15K€
+- ERP/CRM Terrain (solutions du marché) : À chiffrer
+- App mobile technicien (native ou custom) : À chiffrer
+- Portail client (intégré ou custom) : À chiffrer
+- Intégration GAO actuel : À chiffrer
+- Formation : À chiffrer
+- Licences et maintenance : À chiffrer
 
-**Total** : **75-105K€** sur 18 mois
+**Total** : **À chiffrer lors de l'étude de faisabilité**
 
-**Gains annuels récurrents** :
-- CERFA digitalisé → Rapport app mobile : 20K€/an
-- Devis terrain → Module app : 45K€/an
-- Pointage digital : 30K€/an
-- Optimisation tournées (zoning IA) : 15K€/an
-- Planning RDV automatisé : 35K€/an
-- Enquête satisfaction auto : 100K€/an
-- Alertes renouvellement : 30K€/an
-- **TOTAL : 270K€/an**
+**Gains attendus** :
+- CERFA digitalisé → Gain de temps important
+- Devis terrain → Opportunités captées
+- Pointage digital → Refacturation améliorée
+- Optimisation tournées → Réduction déplacements
+- Planning RDV automatisé → Gain de temps
+- Enquête satisfaction auto → Rétention clients
+- Alertes renouvellement → Amélioration CA
 
-**ROI 2 ans** :
-- Gains : 270K€ × 2 = **540K€**
-- Investissement : **-105K€**
-- **Net : +435K€** (ROI 414%)
-- **Payback : 4-5 mois**
+**ROI** : À calculer avec données réelles mesurées
 
 ---
 
 #### Option B : App Mobile Custom + Portail
 
 **Investissement** :
-- App mobile React Native : 40K€
-- Portail client : 20K€
-- Backend API : 25K€
-- Formation : 5K€
-- Run 18 mois : 10K€
+- App mobile React Native : À chiffrer
+- Portail client : À chiffrer
+- Backend API : À chiffrer
+- Formation : À chiffrer
+- Maintenance : À chiffrer
 
-**Total** : **90K€**
+**Total** : **À chiffrer**
 
-**Gains annuels** : 220K€/an (partiel, pas de CRM complet)
+**Gains annuels** : Gains partiels (pas de CRM complet)
 
-**ROI 2 ans** :
-- Gains : 220K€ × 2 = **440K€**
-- Investissement : **-90K€**
-- **Net : +350K€** (ROI 389%)
-- **Payback : 5 mois**
+**ROI** : À calculer, probablement moins avantageux que l'Option A
 
 ---
 
@@ -219,14 +209,14 @@
 
 | Critère | Option A (ERP Terrain) | Option B (Custom) |
 |---------|------------------------|-------------------|
-| Investissement | 75-105K€ | 90K€ |
-| Gains/an | 270K€ | 220K€ |
-| ROI 2 ans | +435K€ (414%) | +350K€ (389%) |
-| Payback | 4-5 mois | 5 mois |
+| Investissement | À chiffrer | À chiffrer |
+| Gains/an | Significatifs | Partiels |
+| ROI | À calculer | À calculer |
+| Payback | Rapide attendu | Plus long |
 | Risque | Faible (solution éprouvée) | Moyen (développement) |
-| Maintenance | Incluse éditeur | À prévoir (15K€/an) |
+| Maintenance | Incluse éditeur | À prévoir en plus |
 | Évolutivité | Forte (écosystème) | Moyenne |
-| Intégrations | Natives (100+) | À développer |
+| Intégrations | Natives (nombreuses) | À développer |
 | **Recommandation** | ⭐⭐⭐ **OUI** | ⭐⭐ Possible |
 
 ---
@@ -241,9 +231,9 @@
 ✅ **Tout-en-un** : CRM + Planning + App mobile + Portail + Workflows
 ✅ **Éprouvé** : Solutions spécialisées SAV/maintenance depuis 10+ ans
 ✅ **Risque faible** : Pas de développement custom
-✅ **ROI rapide** : 4-5 mois
+✅ **ROI rapide attendu** : À valider avec chiffres réels
 ✅ **Maintenance incluse** : Pas de coût caché
-✅ **Écosystème** : 100+ intégrations natives (comptabilité, téléphonie, etc.)
+✅ **Écosystème** : Nombreuses intégrations natives (comptabilité, téléphonie, etc.)
 
 ---
 
@@ -252,27 +242,27 @@
 ##### 1. Praxedo (Leader France)
 - **Focus** : SAV/Maintenance multi-secteurs
 - **Points forts** : IA planning, mobile offline, portail client
-- **Tarif** : ~18K€/an (10 licences) + 15K€ setup
+- **Tarif** : À demander (dépend nombre licences et options)
 - **Clients** : Enedis, Engie, Bouygues
 
 ##### 2. Synchroteam
 - **Focus** : PME SAV électricité/plomberie
 - **Points forts** : Simplicité, rapport qualité/prix
-- **Tarif** : ~12K€/an (10 licences) + 10K€ setup
+- **Tarif** : À demander (dépend configuration)
 - **Clients** : 5000+ PME Europe
 
 ##### 3. FieldPro / Coresystems
 - **Focus** : Techniciens terrain
 - **Points forts** : Intégration SAGE/ERP
-- **Tarif** : ~20K€/an + 20K€ setup
+- **Tarif** : À demander
 
-**Recommandation** : **Synchroteam** (PME, bon rapport qualité/prix) ou **Praxedo** (si budget OK)
+**Recommandation** : Comparer les 3 solutions lors de l'étude de faisabilité
 
 ---
 
 #### Modules Essentiels
 
-**Phase 1 (M1-3) - Quick Wins : 30K€**
+**Phase 1 (M1-3) - Quick Wins**
 - ✅ Setup ERP/CRM Terrain
 - ✅ Import base clients Excel → CRM (300 contrats)
 - ✅ App mobile techniciens (iOS/Android)
@@ -280,11 +270,11 @@
 - ✅ Signature électronique
 - ✅ Pointage arrivée/départ GPS
 
-**ROI Phase 1 : 95K€/an** (CERFA + Pointage + Base Excel)
+**Coût Phase 1 : À chiffrer**
 
 ---
 
-**Phase 2 (M4-6) - Intégrations : 35K€**
+**Phase 2 (M4-6) - Intégrations**
 - ✅ Module devis terrain (app mobile)
 - ✅ Photos avant/après intégrées (géolocalisées/datées)
 - ✅ Portail client self-service
@@ -293,29 +283,29 @@
   - Téléchargement documents
 - ✅ Intégration GAO actuel (API)
 - ✅ Workflows automatisés :
-  - Alertes fin contrat (J-60, J-30, J-7)
+  - Alertes fin contrat
   - Interventions automatiques (contrats)
   - Relances satisfaction
 
-**ROI Phase 2 : +130K€/an** (Devis + Portail + Alertes)
+**Coût Phase 2 : À chiffrer**
 
 ---
 
-**Phase 3 (M7-18) - Excellence : 25K€**
-- ✅ Zoning intelligent (ML optimisation tournées)
+**Phase 3 (M7-18) - Excellence**
+- ✅ Zoning intelligent (optimisation tournées)
 - ✅ Enquête satisfaction automatisée (post-intervention)
-- ✅ Analytics avancés (prédiction churn, optimisation planning)
+- ✅ Analytics avancés (amélioration continue)
 - ✅ Intégration comptabilité SAGE (facturation auto)
 - ✅ Certificats mise en service digitalisés
 
-**ROI Phase 3 : +45K€/an** (Optimisation + Rétention)
+**Coût Phase 3 : À chiffrer**
 
 ---
 
-**Run 18 mois : 15K€**
-- Licences ERP : 12K€/an (prorata 18 mois = 18K€)
-- Formation continue : 5K€
-- Support éditeur : Inclus
+**Run 18 mois : À chiffrer**
+- Licences ERP : À chiffrer
+- Formation continue : À chiffrer
+- Support éditeur : Généralement inclus
 
 ---
 
@@ -372,7 +362,7 @@
 PHASE 1         PHASE 2         PHASE 3         RUN
 Quick Wins      Intégrations    Excellence
 M1-3            M4-6            M7-18
-30K€            35K€            25K€            15K€
+À chiffrer      À chiffrer      À chiffrer      À chiffrer
 ════════════════════════════════════════════════════════════════
 
 │     🚀      │    🔗      │    ⭐     │    ▶️     │
@@ -380,8 +370,6 @@ M1-3            M4-6            M7-18
 │ Rapport     │  Client    │  Intel.   │  Continu  │
 │ Digital     │  Devis     │  Enquête  │           │
 │ Pointage    │  Workflows │  Analytics│           │
-│             │            │           │           │
-│ ROI:95K€/an │ ROI:+130K€ │ ROI:+45K€ │           │
 └─────────────┴────────────┴───────────┴───────────┘
 ```
 
@@ -416,7 +404,7 @@ M1-3            M4-6            M7-18
 - J70 : Pointage GPS activé (refacturation heures)
 - J75 : Signature électronique clients OK
 - J80 : Photos avant/après intégrées app
-- J85 : Bilan Phase 1 → **95K€/an économisés**
+- J85 : Bilan Phase 1 → Mesure gains réels
 - J90 : Go Phase 2
 
 **Livrables Phase 1** :
@@ -425,7 +413,7 @@ M1-3            M4-6            M7-18
 - ✅ CERFA papier = 0 (100% rapports digitaux)
 - ✅ Pointage GPS actif
 - ✅ Signature électronique active
-- ✅ Gain immédiat : **95K€/an**
+- ✅ Gains immédiats à mesurer
 
 ---
 
@@ -457,14 +445,14 @@ M1-3            M4-6            M7-18
 - J165 : Intégration GAO (API consultation)
 - J170 : Tests e2e workflows
 - J175 : Activation workflows automatisés
-- J180 : Bilan Phase 2 → **+130K€/an supplémentaires**
+- J180 : Bilan Phase 2 → Mesure gains cumulés
 
 **Livrables Phase 2** :
 - ✅ Module devis terrain actif (50 devis/an)
 - ✅ Portail client LIVE (prise RDV 24/7)
 - ✅ Workflows alertes automatiques
 - ✅ Intégration GAO (consultation)
-- ✅ Gain cumulé : **225K€/an**
+- ✅ Gains cumulés à mesurer
 
 ---
 
@@ -476,7 +464,7 @@ M1-3            M4-6            M7-18
 - M7 : Cartographie clients (géolocalisation 300 adresses)
 - M8 : Configuration algorithme zoning/routing
 - M9 : Tests optimisation tournées (Gaëtan)
-- M9 : Activation zoning intelligent → **-20% km**
+- M9 : Activation zoning intelligent → Optimisation déplacements
 
 **M10-12 (Mois 10-12) - Enquête Satisfaction**
 - M10 : Configuration enquête satisfaction (10 questions)

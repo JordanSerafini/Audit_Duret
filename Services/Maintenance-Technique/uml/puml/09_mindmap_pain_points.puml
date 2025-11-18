@@ -1,57 +1,57 @@
 @startmindmap Pain_Points_Maintenance
 
-title Pain Points Maintenance Technique - 290K€/an
+title Pain Points Maintenance Technique SAV
 
-* 🔴 MAINTENANCE SAV\n**290K€/an**
-** Temps perdu\n**92.5K€/an**
-*** CERFA papier (880h tech)\n49.5K€/an
-*** Planning RDV manuel\n9.5K€/an
-*** Base Excel (ressaisies)\n15K€/an
-*** Certificats papier\n2.5K€/an
-*** Deplacements non optimises\n15K€/an
+* 🔴 MAINTENANCE SAV
+** Temps perdu
+*** CERFA papier chronophage
+*** Planning RDV manuel (téléphone)
+*** Base Excel (ressaisies)
+*** Certificats papier
+*** Déplacements non optimisés
 
-** Opportunites perdues\n**105K€/an**
-*** Devis terrain impossibles\n45K€/an
-*** Refacturation heures\n30K€/an
-*** Renouvellement contrats\n30K€/an
+** Opportunités perdues
+*** Devis terrain impossibles
+*** Refacturation heures difficile
+*** Renouvellement contrats non alerté
 
-** Clients perdus\n**150K€/an**
-*** Satisfaction non mesuree\n100K€/an
-*** Contrats Word (oublis)\n15K€/an
-*** RDV manuel (insatisfaction)\n25K€/an
-*** Erreurs base Excel\n10K€/an
+** Risque clients perdus
+*** Satisfaction non mesurée
+*** Contrats Word (oublis possibles)
+*** RDV manuel (insatisfaction)
+*** Erreurs base Excel
 
 left side
 
 ** CERFA papier\n**🔴 Critique**
-*** 12 min/intervention\nvs 3 min possible
-*** Illisible (ecriture main)
-*** Pas de photos integrees
-*** 880h/an techniciens perdues
+*** 12 min/intervention\nvs 3 min possible digital
+*** Illisible (écriture main)
+*** Pas de photos intégrées
+*** Chronophage pour techniciens
 
 ** Devis terrain impossible\n**🔴 Critique**
-*** 50 opportunites/an perdues
-*** Post-it → oublis (80%)
-*** 45K€/an CA perdu
+*** Opportunités perdues
+*** Post-it → oublis
+*** Pas d'outil mobile
 
 ** Pointage GPS absent\n**🔴 Critique**
 *** Refacturation difficile
-*** 30K€/an perdu
-*** Pas de preuve depassement
+*** Pas de preuve dépassement
+*** Temps approximatifs
 
 ** Base Excel\n**🔴 Critique**
-*** 300 clients non synchro app
+*** ~300 clients non synchro app
 *** Ressaisies multiples
-*** Risque erreur eleve
+*** Risque erreur élevé
 
 ** Portail client inexistant\n**🟠 Important**
-*** Appels entrants eleves
-*** Disponibilite 8h-18h
+*** Appels entrants élevés
+*** Disponibilité 8h-18h uniquement
 *** Pas de RDV 24/7
 
-** Enquete satisfaction absente\n**🔴 Critique**
+** Enquête satisfaction absente\n**🔴 Critique**
 *** Pas de mesure NPS
-*** Risque churn non detecte
-*** 100K€/an clients perdus
+*** Risque churn non détecté
+*** Perte clients non anticipée
 
 @endmindmap
