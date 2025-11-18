@@ -54,21 +54,21 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 
 | Problème | Description | Gravité |
 |----------|-------------|---------|
-| **Ressaisies massives** | Même donnée 5-6 fois (POPAYE → Excel → SILAE → SAGE → CIBTP) | CRITIQUE |
-| **Surcharge Sophie RH** | Temps sur tâches manuelles à faible valeur ajoutée | CRITIQUE |
-| **Processus paie manuel** | 3 jours/semaine : calculs TR, km, paniers manuels pour 100 personnes | CRITIQUE |
-| **Onboarding chronophage** | 39 tâches manuelles, 8-10h par embauche, relances 4-5 personnes | HAUTE |
+| **Ressaisies massives** | Même donnée ressaisie plusieurs fois entre systèmes (POPAYE → Excel → SILAE → SAGE → CIBTP...) - nombre exact à mesurer | CRITIQUE |
+| **Surcharge Sophie RH** | Temps important sur tâches manuelles à faible valeur ajoutée | CRITIQUE |
+| **Processus paie manuel** | Temps important/semaine sur calculs manuels TR, km, paniers pour ~100 personnes (à chronométrer) | CRITIQUE |
+| **Onboarding chronophage** | 39 tâches manuelles, temps important par embauche (à mesurer), relances multiples personnes | HAUTE |
 | **Aucune visibilité temps réel** | Impossible savoir FH manquantes, absences, KPIs | HAUTE |
 | **Gestion intérimaires fragmentée** | Excel isolé, pas d'alertes fin mission, vision partielle workforce | MOYENNE |
-| **KPIs tous manuels** | Compilation demi-journée, données obsolètes | MOYENNE |
+| **KPIs tous manuels** | Compilation manuelle chronophage, données obsolètes | MOYENNE |
 
 ### Personas Impactés
 
 **Sophie** (Responsable RH, 42 ans) :
-- Surcharge chronique : 3 jours/semaine sur paie (vs 1 jour possible)
-- Ressaisies multiples : Même donnée 5-6 fois
-- Onboarding/Offboarding : 8-10h par personne × 30/an
-- KPIs manuels : Demi-journée de compilation par KPI
+- Surcharge chronique : Temps important/semaine sur paie (chronométrage en cours)
+- Ressaisies multiples : Même donnée ressaisie plusieurs fois (comptage en cours)
+- Onboarding/Offboarding : Temps important par personne (mesure en cours) × ~30/an
+- KPIs manuels : Compilation manuelle chronophage par KPI
 
 **Managers** (×10) :
 - Relances FH hebdomadaires : 1h/semaine perdue
@@ -86,9 +86,9 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 
 ### Vision Cible
 
-**"De 22 systèmes isolés à 1 SIRH unifié"**
+**"De nombreux systèmes isolés à 1 SIRH unifié"**
 
-1. **SIRH Central** : Remplacement 15 outils + 7 Excel
+1. **SIRH Central** : Remplacement nombreux outils + Excel actuels
 2. **Automatisation Paie** : Calcul TR, km, paniers automatique
 3. **Workflows Digitaux** : Onboarding 39 tâches auto, Offboarding 22 tâches auto
 4. **App Mobile** : Pointage, demandes congés, consultation
@@ -129,7 +129,7 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 - Calcul heures récup automatique : 35h/semaine
 - Valorisation km, paniers, déplacements automatique
 - Export SILAE automatique
-- Temps Sophie paie : 3j/sem → 1j/sem
+- Temps Sophie paie : Réduction significative attendue (chiffrage après mesure)
 
 **2. Workflows Digitaux** (vs papier/Excel/emails)
 - Onboarding : Checklist 39 tâches automatisée, notifications 4-5 personnes
