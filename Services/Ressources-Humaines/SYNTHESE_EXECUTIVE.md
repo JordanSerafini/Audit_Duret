@@ -190,17 +190,17 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 1. ✅ **Automatisation Paie** (M5-M7)
    - Calcul TR, km, paniers automatique (M5-M6)
    - Intégration SILAE (M6-M7)
-   - **Gain** : Temps Sophie paie 3j/sem → 1j/sem
+   - **Gain** : Temps Sophie paie réduit significativement (chiffrage après mesure terrain)
 
 2. ✅ **Module Onboarding** (M7-M8)
    - Workflow 39 tâches digitalisé (M7-M8)
-   - Notifications automatiques 4-5 personnes
-   - **Gain** : Temps embauche 8-10h → 2-3h
+   - Notifications automatiques multiples personnes
+   - **Gain** : Temps embauche réduit significativement (chiffrage après mesure)
 
 3. ✅ **Module Offboarding** (M9-M10)
    - Workflow 22 tâches digitalisé (M9)
    - Restitution matériel tracée (M10)
-   - **Gain** : Temps départ 5-8h → 1-2h
+   - **Gain** : Temps départ réduit significativement (chiffrage après mesure)
 
 4. ✅ **Intégration Intérimaires** (M10-M11)
    - Import données Excel (M10)
@@ -245,11 +245,11 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 
 | KPI | Avant | Cible Après |
 |-----|-------|-------------|
-| **Temps Sophie paie/semaine** | 3 jours | 1 jour |
-| **Nombre outils RH** | 22 systèmes | 1 SIRH centralisé |
-| **Ressaisies même donnée** | 5-6 fois | 1 fois |
-| **Temps onboarding/embauche** | 8-10h | 2-3h |
-| **Temps génération KPI** | Demi-journée | Instantané |
+| **Temps Sophie paie/semaine** | Important (à mesurer) | Réduit significativement |
+| **Nombre outils RH** | Nombreux systèmes isolés (inventaire en cours) | 1 SIRH centralisé |
+| **Ressaisies même donnée** | Plusieurs fois (à compter) | 1 fois |
+| **Temps onboarding/embauche** | Important (à mesurer) | Réduit significativement |
+| **Temps génération KPI** | Compilation manuelle chronophage | Instantané |
 | **Demandes congés papier** | 100% | 0% (mobile) |
 
 ### Indicateurs Business
@@ -314,7 +314,7 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 
 **Pourquoi GO ?**
 
-1. ✅ **Pain points critiques** : 22 systèmes isolés = surcharge massive Sophie
+1. ✅ **Pain points critiques** : Nombreux systèmes isolés = surcharge massive Sophie
 2. ✅ **Risque maîtrisé** : Approche progressive (18 mois), pas de big-bang
 3. ✅ **Quick wins rapides** : SIRH Core M1-M4, gains immédiats
 4. ✅ **Scalabilité** : Système actuel ne scale pas (croissance impossible)
@@ -371,7 +371,7 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 
 ---
 
-**🎯 Objectif M4 : SIRH Core déployé, 22 systèmes → 1 SIRH, gains mesurés**
+**🎯 Objectif M4 : SIRH Core déployé, nombreux systèmes isolés → 1 SIRH, gains mesurés**
 
 ---
 
