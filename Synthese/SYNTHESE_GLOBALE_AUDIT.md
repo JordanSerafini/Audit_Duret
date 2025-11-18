@@ -25,12 +25,12 @@
 | Service | Problème Principal | Impact Business | Criticité |
 |---------|-------------------|-----------------|-----------|
 | **Achats-Logistique** | Taux élevé de commandes incomplètes, processus 100% manuel | Chantiers bloqués, perte de temps importante | 🔴 CRITIQUE |
-| **Direction-Affaires** | ERP obsolète ultra lent, aucun template devis/PPSPS | Temps perdu important (2h devis, 3h PPSPS) | 🔴 CRITIQUE |
-| **Ressources-Humaines** | 22 systèmes isolés, ressaisies multiples (5-6 fois) | Surcharge RH, risque burn-out | 🔴 CRITIQUE |
+| **Direction-Affaires** | ERP obsolète ultra lent, aucun template devis/PPSPS | Temps perdu important sur devis/PPSPS | 🔴 CRITIQUE |
+| **Ressources-Humaines** | Nombreux systèmes isolés, ressaisies multiples | Surcharge RH, risque burn-out | 🔴 CRITIQUE |
 | **Service-Client** | Système post-it, délais excessifs prise RDV | Clients perdus, opportunités manquées | 🔴 CRITIQUE |
 | **Maintenance-Technique** | CERFA papier, pas d'app mobile | Temps perdu important, opportunités perdues | 🟠 IMPORTANT |
-| **Chantiers** | Aucun outil métier terrain, traçabilité faible | Infos perdues, rapports longs (2h) | 🟠 IMPORTANT |
-| **Gestion-Opérationnelle** | 30+ Excel non connectés, remontée info tardive | Pilotage à l'aveugle, burn-out équipes | 🔴 CRITIQUE |
+| **Chantiers** | Aucun outil métier terrain, traçabilité faible | Infos perdues, rapports manuels chronophages | 🟠 IMPORTANT |
+| **Gestion-Opérationnelle** | Multiples Excel non connectés, remontée info tardive | Pilotage à l'aveugle, burn-out équipes | 🔴 CRITIQUE |
 | **Albertville** | Situations très longues, budgets complémentaires invisibles | Facturation retardée, risque dépassement | 🔴 CRITIQUE |
 
 ### Effectifs et Volume Impactés
@@ -51,14 +51,14 @@
 ### Pattern #1 : 🔴 DÉPENDANCE EXCEL MASSIVE
 
 **Constat** :
-- **30+ fichiers Excel** en Gestion-Opérationnelle seule
-- **15+ fichiers Excel** à Albertville
-- **7 fichiers Excel** en RH
-- **4 versions Excel** désynchronisées Achats-Logistique
+- **Nombreux fichiers Excel** en Gestion-Opérationnelle
+- **Multiples fichiers Excel** à Albertville
+- **7 fichiers Excel** en RH (confirmé audit)
+- **4 versions Excel** désynchronisées Achats-Logistique (confirmé audit)
 - **Multiples Excel** Service-Client, Direction-Affaires, Chantiers, Maintenance
 
 **Impact** :
-- ❌ Ressaisies multiples de la même donnée (jusqu'à 6-7 fois)
+- ❌ Ressaisies multiples de la même donnée
 - ❌ Incohérences et erreurs fréquentes
 - ❌ Impossible de travailler collaboratif (1 personne à la fois)
 - ❌ Pas de traçabilité (qui a modifié quoi, quand)
@@ -73,22 +73,22 @@
 
 **Exemples terrain identifiés** :
 
-| Service | Processus Manuel | Temps Perdu Constaté |
-|---------|------------------|---------------------|
-| **Direction-Affaires** | Création devis | 2h05 (vs 30min possible) |
-| **Direction-Affaires** | Génération PPSPS | 3h00 (vs 30min possible) |
-| **RH** | Paie mensuelle | 3 jours/semaine (vs 1 jour possible) |
-| **RH** | Calcul TR | 3h30 pour 100 personnes |
-| **Achats** | Commande matériel | 3 jours + taux élevé d'échec |
-| **Service-Client** | Prise RDV | Délai excessif (vs 2 min possible) |
-| **Chantiers** | Rapports intervention | 2h (vs 10-25min possible) |
-| **Albertville** | Situations mensuelles | Plusieurs jours (vs automatisable) |
-| **Gestion-Op** | Génération KPIs | Important (vs temps réel) |
+| Service | Processus Manuel | Constat |
+|---------|------------------|---------|
+| **Direction-Affaires** | Création devis | Temps important constaté (à mesurer) |
+| **Direction-Affaires** | Génération PPSPS | Processus chronophage (à mesurer) |
+| **RH** | Paie mensuelle | Temps hebdomadaire important (à mesurer) |
+| **RH** | Calcul TR | Calculs manuels pour 100 personnes |
+| **Achats** | Commande matériel | Délai important + taux élevé d'échec |
+| **Service-Client** | Prise RDV | Délai excessif constaté |
+| **Chantiers** | Rapports intervention | Processus manuel chronophage |
+| **Albertville** | Situations mensuelles | Traitement très long constaté |
+| **Gestion-Op** | Génération KPIs | Compilation manuelle chronophage |
 
 **Impact global** :
 - ❌ Surcharge équipes sur tâches à faible valeur ajoutée
 - ❌ Risque burn-out (Sophie RH, Sylvie Contrôle Gestion, Thomas BE)
-- ❌ Temps important perdu (vs temps métier à haute valeur)
+- ❌ Temps important perdu sur tâches administratives
 - ❌ Frustration maximale des équipes
 
 **Services concernés** : TOUS (8/8)
