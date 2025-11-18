@@ -287,7 +287,7 @@ Chantiers/
 
 ## 📅 Historique
 
-- **2025-01-17** - Création complète
+- **2025-11-17** - Création complète
   - Audit complet Gestion Chantiers
   - Personas détaillés (Chefs, Responsables, BE)
   - Architecture actuelle vs cible

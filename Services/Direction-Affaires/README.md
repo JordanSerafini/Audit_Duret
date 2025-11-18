@@ -315,7 +315,7 @@ Direction-Affaires/
 
 ## 📅 Historique
 
-- **2025-01-17** - Création complète
+- **2025-11-17** - Création complète
   - Audit complet Direction & Gestion Affaires
   - Personas détaillés (Responsables, Direction, BE)
   - Architecture actuelle vs cible
