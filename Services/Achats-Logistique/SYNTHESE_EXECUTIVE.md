@@ -52,9 +52,9 @@
 ```
 Marc (Chantier) → Téléphone → Sylvie (Bureau) → Téléphone → Fournisseur
                                     ↓
-                            RE-SAISIE x6-7 fois
+                        RE-SAISIES MULTIPLES (nombre à mesurer)
                                     ↓
-                            3 jours + 50% échec
+                    Délais importants + Taux échec élevé (à mesurer)
 ```
 
 **3. Goulots d'étranglement**
@@ -68,7 +68,7 @@ Marc (Chantier) → Téléphone → Sylvie (Bureau) → Téléphone → Fourniss
 | Persona | Pain Points |
 |---------|------------|
 | **Marc** (Chef Chantier) | Perd du temps en appels, chantier bloqué fréquemment |
-| **Sylvie** (Achats) | Débordée, re-saisie x6-7, validation manuelle, pompier |
+| **Sylvie** (Achats) | Débordée, ressaisies multiples (à compter), validation manuelle, pompier |
 | **Éric** (Dépôt) | Nomenclatures incohérentes, 1 seul PC, pas de scan |
 | **Julien** (Resp. Affaires) | Aucune visibilité temps réel sur ses chantiers |
 | **Christine** (Direction) | Pas de KPIs, pas de pilotage, pas de prévisions |
