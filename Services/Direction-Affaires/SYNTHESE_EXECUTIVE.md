@@ -5,26 +5,45 @@
 
 ---
 
+## ⚠️ NOTE MÉTHODOLOGIQUE
+
+**Constats confirmés audit terrain** :
+- ✅ 4 Responsables d'Affaires
+- ✅ ERP "obsolète, lent, plantages" (verbatim utilisateurs)
+- ✅ Accès distant "très lent, problématique" (confirmé audit)
+- ✅ PPSPS et fiches accueil "pas faits" (confirmé audit)
+- ✅ Pas de templates devis/PPSPS (confirmé)
+
+**Mesures en cours** (via [questionnaires terrain](../../Synthese/QUESTIONNAIRE_COLLECTE_DONNEES_DIRECTION_AFFAIRES.md)) :
+- ⏱️ Temps réel chargement ERP (chronométrage 5 écrans)
+- ⏱️ Temps réel création devis (chronométrage 3 devis)
+- ⏱️ Temps réel génération PPSPS (chronométrage 2 PPSPS)
+- ⏱️ Taux réel reliquats oubliés (analyse 20 affaires)
+
+**Prochaine étape** : Intégration mesures réelles (semaines 2-3)
+
+---
+
 ## 📋 PARTIE 1 : ÉTAT DES LIEUX (AUDIT)
 
 ### 🔴 Constats Terrain
 
 **Problèmes Majeurs Identifiés :**
-- ❌ **ERP obsolète ultra lent** : 30-40 secondes par écran (MDE + Sage legacy)
+- ❌ **ERP obsolète ultra lent** : Temps chargement important constaté (à mesurer)
 - ❌ **Accès distant catastrophique** : VPN instable, Citrix plantages fréquents
-- ❌ **Aucun template devis** : Ressaisie manuelle complète (2h vs 30min possible)
-- ❌ **PPSPS manuels** : 3h de création/affaire (copier-coller Word)
+- ❌ **Aucun template devis** : Ressaisie manuelle complète (temps important)
+- ❌ **PPSPS manuels** : Processus chronophage constaté (à mesurer)
 - ❌ **Maj prix fournisseurs manuelles** : 1 semaine/an, risques erreurs
-- ❌ **Reliquats non tracés** : 60% affaires avec oublis refacturation
+- ❌ **Reliquats non tracés** : Oublis refacturation fréquents (taux à mesurer)
 
 **Volume d'Activité :**
-- 4 Responsables d'Affaires
-- 15-20 affaires actives/mois
-- 50K€ à 2.5M€ budget/affaire
-- 40-80 devis créés/mois
-- ~15 PPSPS générés/mois
-- ~30 reliquats/mois (dont 60% mal suivis)
-- ~10 mises à jour prix fournisseurs/an
+- 4 Responsables d'Affaires (confirmé audit)
+- 15-20 affaires actives/mois (confirmé)
+- 50K€ à 2.5M€ budget/affaire (confirmé)
+- 40-80 devis créés/mois (à confirmer via questionnaire)
+- ~15 PPSPS générés/mois (à confirmer via questionnaire)
+- ~30 reliquats/mois (dont taux mal suivis à mesurer)
+- ~10 mises à jour prix fournisseurs/an (à confirmer)
 
 ### 🔍 Causes Racines
 
