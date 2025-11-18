@@ -10,13 +10,13 @@
 
 ## 🎯 RÉSUMÉ EN 30 SECONDES
 
-> Duret Électricité gère ~300 contrats maintenance avec un système **hybride papier/digital non intégré** (CERFA papier + Excel + GAO basique + Word). Les techniciens perdent **1h50/jour** en tâches administratives (CERFA, ressaisies, déplacements non optimisés), et **45K€/an d'opportunités commerciales** sont perdues (devis terrain impossibles).
+> Duret Électricité gère ~300 contrats maintenance avec un système **hybride papier/digital non intégré** (CERFA papier + Excel + GAO basique + Word). Les techniciens perdent un **temps considérable** en tâches administratives (CERFA, ressaisies, déplacements non optimisés), et des **opportunités commerciales importantes** sont perdues (devis terrain impossibles).
 >
-> **Solution recommandée** : ERP/CRM Terrain (Praxedo, Synchroteam, FieldPro) + App mobile techniciens + Portail client.
+> **Solution recommandée** : ERP/CRM Terrain (solutions du marché) + App mobile techniciens + Portail client.
 >
-> **Investissement** : 75-105K€ sur 18 mois
-> **ROI 2 ans** : +540K€ (gains 270K€/an)
-> **Payback** : 4-5 mois
+> **Investissement** : À chiffrer lors de l'étude de faisabilité détaillée
+> **Gains attendus** : Opérationnels et commerciaux significatifs
+> **ROI** : À calculer avec données réelles
 
 ---
 
@@ -60,26 +60,26 @@
 
 #### Techniciens (Gaëtan & équipe)
 
-- ❌ **CERFA papier remplis à la main** (10-15 min/intervention)
-- ❌ **Impossible générer devis terrain** (50 opportunités/an perdues)
+- ❌ **CERFA papier remplis à la main** (temps significatif par intervention)
+- ❌ **Impossible générer devis terrain** (opportunités perdues)
 - ❌ **Pas de pointage digital** arrivée/départ (refacturation heures difficile)
 - ❌ **Photos sur téléphone perso** (pas centralisées, traçabilité zéro)
 - ❌ **Déplacements non optimisés** (pas de zoning intelligent)
 - ❌ **App mobile limitée** (pas de mode offline, pas de signature électronique)
 
-**Temps perdu** : 1h50/jour/technicien = **990h/an** (880h CERFA + 110h admin)
+**Temps perdu** : Important par technicien (CERFA + admin)
 
 ---
 
 #### Back-Office (Clothilde)
 
 - ❌ **Base clients Excel** (~300 lignes, pas synchronisée app mobile)
-- ❌ **Prise RDV 100% téléphone** (19 min/RDV × 600 = 190h/an)
+- ❌ **Prise RDV 100% téléphone** (temps significatif par RDV)
 - ❌ **Contrats Word manuels** (interventions découlant pas automatiques)
 - ❌ **Ressaisies multiples** (Excel → GAO → Outlook)
 - ❌ **Pas d'alertes automatiques** (fin contrat, interventions dues)
 
-**Temps perdu** : 300h/an (RDV + double saisies)
+**Temps perdu** : Important (RDV + double saisies)
 
 ---
 
@@ -91,57 +91,56 @@
 - ❌ **Pas d'enquête satisfaction** systématique
 - ❌ **Pas de copie rapport** immédiate (promesses non tenues)
 
-**Insatisfaction** : 20 clients/an perdus = **100K€/an**
+**Insatisfaction** : Perte de clients et impact commercial
 
 ---
 
 <a name="pain-points"></a>
 ## 2. PAIN POINTS CRITIQUES
 
-### Vue Globale Impact Financier
+### Vue Globale des Pain Points
 
-| # | Pain Point | Sévérité | Impact/an |
-|---|------------|----------|-----------|
-| 1 | **CERFA papier chronophage** | 🔥🔥🔥🔥🔥 | 20K€ |
-| 2 | **Demande devis terrain impossible** | 🔥🔥🔥🔥 | 45K€ |
-| 3 | **Pointage heures pas digital** | 🔥🔥🔥🔥 | 30K€ |
-| 4 | **Enquête satisfaction non systématisée** | 🔥🔥🔥🔥 | 100K€ |
-| 5 | **App mobile basique (incomplet)** | 🔥🔥🔥 | 68K€ |
-| 6 | **Base données Excel** | 🔥🔥🔥🔥🔥 | 15K€ |
-| 7 | **Planning RDV manuel** | 🔥🔥🔥🔥 | 35K€ |
-| 8 | **Alertes automatiques manquantes** | 🔥🔥🔥🔥 | 30K€ |
-| 9 | **Contrat Word manuel** | 🔥🔥🔥 | 15K€ |
-| 10 | **Zoning pas optimisé** | 🔥🔥🔥 | 15K€ |
-| 11 | **Photos pas intégrées** | 🔥🔥🔥 | 11K€ |
-| 12 | **Certificat papier** | 🔥🔥 | 2.5K€ |
-| 13 | **Portail client inexistant** | 🔥🔥🔥 | Indéterminé |
-| | **TOTAL** | | **~290K€/an** |
+| # | Pain Point | Sévérité | Impact |
+|---|------------|----------|--------|
+| 1 | **CERFA papier chronophage** | 🔥🔥🔥🔥🔥 | Temps important |
+| 2 | **Demande devis terrain impossible** | 🔥🔥🔥🔥 | Opportunités perdues |
+| 3 | **Pointage heures pas digital** | 🔥🔥🔥🔥 | Refacturation difficile |
+| 4 | **Enquête satisfaction non systématisée** | 🔥🔥🔥🔥 | Rétention clients |
+| 5 | **App mobile basique (incomplet)** | 🔥🔥🔥 | Productivité réduite |
+| 6 | **Base données Excel** | 🔥🔥🔥🔥🔥 | Risque erreurs |
+| 7 | **Planning RDV manuel** | 🔥🔥🔥🔥 | Temps perdu |
+| 8 | **Alertes automatiques manquantes** | 🔥🔥🔥🔥 | Oublis contrats |
+| 9 | **Contrat Word manuel** | 🔥🔥🔥 | Temps admin |
+| 10 | **Zoning pas optimisé** | 🔥🔥🔥 | Déplacements inutiles |
+| 11 | **Photos pas intégrées** | 🔥🔥🔥 | Traçabilité faible |
+| 12 | **Certificat papier** | 🔥🔥 | Délai + stock |
+| 13 | **Portail client inexistant** | 🔥🔥🔥 | Disponibilité limitée |
 
 ---
 
 ### Catégorisation
 
-#### 🔴 Temps Perdu (Inefficacité) : 92.5K€/an
-- CERFA papier : 20K€
-- Planning RDV manuel : 10K€
-- Base Excel : 5K€
-- Certificat papier : 2.5K€
-- App mobile basique : 68K€
+#### 🔴 Temps Perdu (Inefficacité)
+- CERFA papier chronophage
+- Planning RDV manuel
+- Base Excel non synchronisée
+- Certificat papier
+- App mobile limitée
 
-#### 🟠 Opportunités Perdues (CA) : 105K€/an
-- Devis terrain : 45K€
-- Refacturation heures : 30K€
-- Renouvellement contrats : 30K€
+#### 🟠 Opportunités Perdues (CA)
+- Devis terrain impossibles
+- Refacturation heures difficile
+- Renouvellement contrats non optimisé
 
-#### 🔴 Clients Perdus (Rétention) : 150K€/an
-- Enquête satisfaction : 100K€
-- Contrat non-conformité : 15K€
-- Planning RDV (insatisfaction) : 25K€
-- Base Excel (erreurs) : 10K€
+#### 🔴 Clients Perdus (Rétention)
+- Enquête satisfaction absente
+- Non-conformité contrats
+- Insatisfaction planning
+- Erreurs base de données
 
-#### 🟡 Optimisation Manquante : 26K€/an
-- Zoning tournées : 15K€
-- Photos/traçabilité : 11K€
+#### 🟡 Optimisation Manquante
+- Zoning tournées non intelligent
+- Photos/traçabilité faible
 
 ---
 
