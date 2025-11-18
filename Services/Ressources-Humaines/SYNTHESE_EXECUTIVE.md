@@ -7,9 +7,30 @@
 
 ---
 
+## ⚠️ NOTE MÉTHODOLOGIQUE
+
+**Constats confirmés audit terrain** :
+- ✅ ~100 collaborateurs (confirmé)
+- ✅ Nombreux outils RH distincts : SAGE Paie, POPAYE, SILAE, SWILE, Empowill, PRO BTP, CIBTP, Radiance, HelloCSE + autres (confirmé audit)
+- ✅ Plusieurs fichiers Excel RH (planning absences, suivi intérimaires, checklist onboarding/offboarding, etc.) (confirmé)
+- ✅ Ressaisies multiples même donnée (confirmé qualitativement)
+- ✅ Processus paie manuel chronophage (confirmé)
+- ✅ Onboarding manuel long (confirmé)
+
+**Mesures en cours** (via [questionnaires terrain](../../Synthese/QUESTIONNAIRE_COLLECTE_DONNEES_RESSOURCES_HUMAINES.md)) :
+- ⏱️ Nombre exact outils RH utilisés (inventaire exhaustif en cours)
+- ⏱️ Nombre exact fichiers Excel (inventaire en cours)
+- ⏱️ Temps réel paie/semaine (chronométrage en cours)
+- ⏱️ Temps réel onboarding/embauche (mesure 3 dernières embauches)
+- ⏱️ Nombre exact ressaisies (traçage 1 donnée collaborateur)
+
+**Prochaine étape** : Intégration mesures réelles (semaines 2-3)
+
+---
+
 ## 🎯 RÉSUMÉ EN 30 SECONDES
 
-> **L'architecture RH actuelle repose sur 22 systèmes isolés (15 outils + 7 Excel), générant des ressaisies massives (même donnée 5-6 fois) et une surcharge critique de Sophie RH (temps sur tâches manuelles à faible valeur ajoutée).**
+> **L'architecture RH actuelle repose sur de nombreux systèmes isolés (nombreux outils + plusieurs Excel, inventaire en cours), générant des ressaisies massives (même donnée ressaisie plusieurs fois, comptage en cours) et une surcharge critique de Sophie RH (temps important sur tâches manuelles à faible valeur ajoutée).**
 >
 > **Proposition** : SIRH centralisé + Automatisation workflows (paie, absences, onboarding)
 >
