@@ -280,9 +280,9 @@ note over Sophie, New #FFCCCC
   🔧 Nombre d'outils: **12**
   👥 Personnes contactées: **4-5**
   📧 Nombre de relances: **15-20**
-  ❌ Taux d'oubli: **10-15%**
+  ❌ Risque oubli: **Important**
 
-  😰 Stress: 8/10
+  😰 Stress: Élevé
   🔴 Points de friction: **18**
 
   ⏰ Temps unitaire: **8-10h par embauche**
@@ -291,7 +291,7 @@ note over Sophie, New #FFCCCC
   💬 Citation Sophie:
   "39 tâches pour une embauche. Tout est manuel.
    Si on avait un workflow automatisé, je
-   gagnerais 80% de ce temps..."
+   gagnerais beaucoup de temps..."
 end note
 
 @enduml
