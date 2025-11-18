@@ -61,7 +61,7 @@ end note
 
 Sylvie -> Sylvie: Choisit une réf "au hasard"
 note right #FFD700
-  ⚠️ 40% de chance
+  ⚠️ Faible chance
   que ce soit la bonne
 end note
 
@@ -181,7 +181,7 @@ note over Marc, Fourn #FFCCCC
   ⏰ Durée totale: **~3 jours**
   📞 Nombreux appels
   ♻️ Multiples re-saisies
-  ❌ Taux erreur: **50%** (constaté)
+  ❌ Taux erreur: **Élevé**
   😭 Stress élevé
   ⏸️ Chantier bloqué
 end note

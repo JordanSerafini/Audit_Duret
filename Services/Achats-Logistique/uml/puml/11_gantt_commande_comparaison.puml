@@ -38,13 +38,13 @@ Project starts 2024-01-08
 
 note bottom
   **COMPARAISON**
-  ⏰ ACTUEL: **3 jours** (50% d'échec → 6 jours)
+  ⏰ ACTUEL: **3 jours** (taux d'échec élevé)
   ⏰ CIBLE: **< 1 jour** (livraison rapide)
 
   📊 AMÉLIORATION:
   - Temps fortement réduit
   - Process digital optimisé
-  - Taux succès: 50% → Très amélioré
+  - Taux succès: Insuffisant → Très amélioré
 end note
 
 @endgantt
