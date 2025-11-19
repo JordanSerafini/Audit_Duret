@@ -1,0 +1,33 @@
+@startuml Processus_Onboarding_CIBLE
+
+title Onboarding - CIBLE (Automatisé)
+
+|Recrutement (Odoo)|
+start
+:Candidat Signe Offre;
+:RH clique "Créer Employé";
+:Odoo crée Fiche Employé;
+
+|Orchestration (Odoo Plan)|
+fork
+  :Notif IT (Préparer PC);
+fork again
+  :Notif Logistique (EPI/Véhicule);
+fork again
+  :Notif Manager (Préparer Arrivée);
+fork again
+  :Notif RH (Contrat & DPAE);
+end fork
+
+|Paie (PayFit)|
+:Sync Nouveau Salarié;
+:Création Dossier Paie;
+:Invitation Espace Personnel;
+
+|Employé (Jour J)|
+:Reçoit Matériel & Accès;
+:Installe App Odoo;
+:Complète Dossier (RIB, Sécu);
+stop
+
+@enduml
