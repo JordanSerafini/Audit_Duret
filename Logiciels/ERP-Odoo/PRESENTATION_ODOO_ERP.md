@@ -463,7 +463,7 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 - **Total gains/an** : ~115k€ **(estimation théorique)**
 
 **Payback estimé** : ~16-20 mois (selon gains réels)
-**ROI 3 ans estimé** : **(345k€ gains estimés - 156k€ investissement) / 156k€ = ~121%** *(hypothèse à valider)*
+**ROI 3 ans estimé** : **Positif (à valider par mesures terrain)**
 
 **Recommandation** : Mettre en place des **KPIs avant déploiement** pour mesurer gains réels post-implémentation.
 

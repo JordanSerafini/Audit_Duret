@@ -34,6 +34,15 @@
 | **09_mindmap_pain_points.puml** | Mind Map | Arbre des pain points (910K€) | Vue globale |
 | **10_wbs_breakdown.puml** | WBS | Décomposition des problèmes | Structure |
 
+### 🚀 Diagrammes CIBLES (Solution Odoo)
+
+| Fichier | Type | Description | Usage Slide |
+|---------|------|-------------|-------------|
+| **13_sequence_commande_CIBLE.puml** | Sequence | Processus optimisé (App + Odoo + RFID) | **Timeline Cible** |
+| **14_activity_processus_CIBLE.puml** | Activity | Workflow avec swimlanes (Qui fait quoi) | **Processus Cible** |
+| **15_component_architecture_CIBLE.puml** | Component | Architecture intégrée (Odoo Core) | **Architecture Cible** |
+| **16_mindmap_SOLUTIONS.puml** | Mind Map | Solutions face aux problèmes | **Solutions** |
+
 ---
 
 ## 🎨 Comment Utiliser

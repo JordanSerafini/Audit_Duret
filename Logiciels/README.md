@@ -111,97 +111,74 @@
 
 ---
 
-## 💰 COMPARATIFS PAR SCÉNARIO
+## 💰 COMPARATIFS DES 2 OPTIONS STRATÉGIQUES
 
-⚠️ **DISCLAIMER PRIX** : Les coûts présentés sont des **estimations** basées sur recherches web (janvier 2025) et tarifs publics disponibles. Certains prix (notamment EBP) sont estimés car non publics. **Recommandation impérative : Demander devis personnalisés** aux éditeurs avant toute décision.
+### Option 1 : **L'Approche Unifiée (Full Odoo)**
+**"La Rationalité & L'Efficacité"**
 
-### Scénario A : **Odoo Tout-en-Un** (RECOMMANDÉ)
+Cette option mise sur la puissance d'un outil unique intégrant nativement le mobile. C'est le choix de la cohérence et de la maîtrise des coûts.
 
-**Configuration** :
-- **Odoo ERP Enterprise** : ERP, CRM, Field Service, Stocks, Compta, RH, BI
-- **PayFit** : Moteur paie uniquement
+**Architecture** :
+- **Cœur** : Odoo Enterprise (ERP, CRM, Ventes, Stocks, Compta)
+- **Terrain** : App Odoo Field Service (Native)
+- **Logistique** : **App Odoo Inventaire (Scan RFID & Code-barres)**
+- **RH** : Odoo RH + PayFit (Paie)
+- **BI** : Dashboards Odoo intégrés
 
-**Modules Odoo activés** :
-- CRM + Helpdesk
-- Ventes + Devis
-- Projet / Chantiers
-- Field Service
-- Stocks + RFID (modules tiers)
-- Comptabilité analytique
-- RH (Congés, Frais, Entretiens)
-- Tableaux de bord
-
-**Coût 3 ans (100 users)** :
-- Odoo Enterprise (100 users x 24,90€/mois x 36 mois) : **89 640€**
-- PayFit Paie seule (100 users x 17€/mois + 66€ base) : **63 576€**
-- Intégrateur (setup 30j x 700€) : 21 000€
-- Formation (6j x 1 200€) : 7 200€
-- **TOTAL** : **🟢 181 416€**
-
-**Note** : Hébergement Odoo.sh (+18 000€ sur 3 ans) optionnel selon infrastructure
+**Budget 3 ans (Estimé)** : **~181 000 €**
+- Licences : ~150k€
+- Intégration : ~30k€
 
 **Avantages** :
-- ✅ Solution unique (90% besoins)
-- ✅ Prix imbattable
-- ✅ Tout intégré nativement
-- ✅ Open source
+- ✅ Donnée unique (pas d'interfaces à gérer)
+- ✅ Coût maîtrisé
+- ✅ Déploiement rapide
 
 ---
 
-### Scénario B : EBP + Compléments
+### Option 2 : **L'Approche Best-of-Breed & IA (Premium)**
+**"L'Excellence Métier & L'Innovation"**
 
-**Configuration** :
-- **EBP Bâtiment PRO** : ERP spécialisé BTP
-- **HubSpot Service Pro** : CRM + Service client
-- **Lucca** : SIRH
-- **Silae** : Paie
+Cette option assemble les meilleurs outils du marché pour chaque métier, connectés par une couche de données intelligente (Data Warehouse + IA). C'est le choix de la performance maximale, mais avec une complexité supérieure.
 
-**Coût 3 ans** :
-- EBP PRO (20 users bureau) : 72 000€
-- HubSpot Service Pro (10 users) : 32 400€
-- Lucca SIRH (100 users) : 43 560€
-- Silae paie : 36 000€
-- App mobile Field Service tierce : 30 000€
-- **TOTAL** : **🔴 213 960€**
+**Architecture** :
+- **CRM** : **HubSpot** (L'excellence relation client)
+- **ERP Back-Office** : **Odoo** (Juste pour la gestion/compta)
+- **RH** : **Lucca** ou **PayFit** (SIRH dédié)
+- **Terrain** : **App Mobile Sur-Mesure** (UX parfaite pour les techniciens)
+- **Logistique** : **App RFID Dépôt Sur-Mesure** (Scan ultra-rapide)
+- **Intelligence** : **Dashboard PowerBI + Algorithmes ML Perso** (Prédictif)
+
+**Budget 3 ans (Estimé)** : **~265 000 €**
+- **HubSpot** (20 users Pro) : ~54 000 €
+- **Odoo** (20 users Back-office) : ~25 000 €
+- **SIRH** (100 users) : ~45 000 €
+- **App Mobile + RFID Custom** (Dev + Maint) : ~60 000 €
+- **Data/ML/BI** (Setup + Licences) : ~50 000 €
+- **Intégration (APIs)** : ~30 000 €
+
+**Avantages** :
+- ✅ UX parfaite pour chaque métier (HubSpot pour les commerciaux, App Custom pour le terrain)
+- ✅ Intelligence artificielle sur-mesure (Prédictions fines)
+- ✅ Indépendance des briques (Modularité)
 
 **Inconvénients** :
-- ❌ 4 solutions à gérer
-- ❌ Synchronisations complexes
-- ❌ Formations multiples
-- ❌ Field Service limité
+- ❌ Coût plus élevé (+45%)
+- ❌ Complexité technique (Maintenance des connecteurs)
 
 ---
 
-### Scénario C : Solutions "Légères" (Budget Serré)
+## 📊 TABLEAU COMPARATIF FINAL
 
-**Configuration** :
-- **Odoo Community** (gratuit)
-- **HubSpot CRM Free** (gratuit)
-- **Factorial SIRH** (11€/user/mois)
-- **PayFit Paie** (17€/user/mois)
-
-**Coût 3 ans** :
-- Odoo Community : 0€ (mais support limité)
-- HubSpot Free : 0€
-- Factorial (11€/user/mois x 100 x 36 mois) : 39 600€
-- PayFit Paie seule (comme Scénario A) : 63 576€
-- **TOTAL** : **🟢 103 176€**
-
-**Limites** :
-- ❌ Support Odoo Community limité
-- ❌ HubSpot Free : 2 users seulement
-- ❌ Factorial moins mature que Lucca
-- ❌ Synchronisations à gérer
-
----
-
-## 📊 TABLEAU COMPARATIF GLOBAL
-
-| Scénario | Coût 3 ans | Couverture | Complexité | Support | Recommandé |
-|----------|------------|------------|------------|---------|------------|
-| **🏆 A : Odoo + PayFit** | **181k€** | ✅ **100%** | 🟢 **Simple** | 🟢 **Bon** | ✅ **OUI** |
-| B : EBP + Compléments | 214k€ | ⚠️ 95% | 🔴 Complexe | 🟢 Bon | ⚠️ Non |
-| C : Solutions légères | 113k€ | ⚠️ 85% | 🔶 Moyen | 🔶 Limité | ⚠️ Risqué |
+| Critère | Option 1 : Full Odoo | Option 2 : Best-of-Breed & IA |
+|---------|----------------------|-------------------------------|
+| **Philosophie** | Tout-en-un intégré | Les meilleurs outils par métier |
+| **Expérience Utilisateur** | Homogène (Standard) | Excellente (Spécialisée) |
+| **Mobile Terrain** | App Standard Odoo | App Sur-Mesure (UX Optimisée) |
+| **Intelligence (BI/IA)** | Dashboards Standards | ML Perso & Prédictif Avancé |
+| **Complexité IT** | 🟢 Faible | 🔴 Élevée (Connecteurs) |
+| **Budget 3 ans** | **~181 k€** | **~265 k€** |
+| **Recommandation** | **✅ Pour Démarrer & Scaler** | **⚠️ Pour une maturité digitale avancée** |
 
 ---
 
@@ -426,17 +403,17 @@
 
 **Justification** :
 1. ✅ **Couverture 100%** : Tous besoins Duret résolus
-2. ✅ **Prix imbattable** : 209k€ vs 214k€+ alternatives
+2. ✅ **Prix imbattable** : 181k€ vs 214k€+ alternatives
 3. ✅ **Solution unique** : 90% besoins dans Odoo
 4. ✅ **Scalable** : Croissance supportée
 5. ✅ **Open source** : Pérennité garantie
 6. ✅ **Modulaire** : Démarrage progressif
 
-**Économie vs alternatives** : **156k€ sur 3 ans**
+**Économie vs alternatives** : **~33 000€ sur 3 ans**
 
-**Payback estimé** : **16 mois**
+**Payback estimé** : **16-20 mois**
 
-**ROI 3 ans** : **121%**
+**ROI 3 ans** : **Positif (à valider par mesures terrain)**
 
 ---
 
