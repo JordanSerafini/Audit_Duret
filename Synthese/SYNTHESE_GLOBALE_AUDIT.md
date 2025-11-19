@@ -294,7 +294,7 @@
 
 ---
 
-### Risque #3 : 🔴 CROISSANCE IMPOSSIBLE SANS TRANSFORMATION
+### Risque #5 : 🔴 CROISSANCE IMPOSSIBLE SANS TRANSFORMATION
 
 **Constats** :
 - Systèmes actuels ne scalent pas (Excel 30+ fichiers, MDE obsolète)
@@ -309,7 +309,7 @@
 
 ---
 
-### Risque #4 : 🔴 SÉCURITÉ & CONFORMITÉ DONNÉES
+### Risque #6 : 🔴 SÉCURITÉ & CONFORMITÉ DONNÉES
 
 **Constats** :
 - Photos chantiers sur téléphones personnels (perte si casse/vol)
