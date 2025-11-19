@@ -135,5 +135,20 @@ def check_weather_alert(lat, lon, date_check):
 - **Image de marque**: Professionnalisme (on prévient le client "On ne vient pas car trop de vent").
 - **Sécurité**: Réduction risques accidents.
 
+## Usage pour l'IA Prédictive
+
+### 📊 Source de donnée critique pour l'algorithme de planification dynamique (Vague 3)
+
+L'API Météo n'est pas qu'un outil de consultation - elle devient la **source de données d'entraînement** pour le futur algorithme d'optimisation des plannings.
+
+**Stockage Data Lake** : Toutes les données météo doivent être archivées dans le Data Lake Odoo pour :
+- **Corréler retards et intempéries** : Analyser les patterns historiques pour calibrer l'algorithme prédictif
+- **Machine Learning sur 5 ans de données** : Prédire les périodes optimales par type de chantier (ex: "Éviter les tranchées en février")
+- **Optimisation automatique** : L'algorithme ajustera automatiquement les plannings en fonction des prévisions à 10 jours
+
+**Intégration IA** : Les données météo alimenteront l'Assistant de Planification Intelligente qui proposera les meilleurs créneaux pour maximiser la productivité.
+
+---
+
 ## Recommandation
 **GO Phase 2**. À intégrer après la géolocalisation des chantiers (Google Maps), car on a besoin des coordonnées GPS précises pour la météo locale.

@@ -1,5 +1,7 @@
 # Étude API SAGE - 2025
 
+⚠️ **CHANGEMENT STRATÉGIQUE** : Suite à la validation de la migration Odoo, cette API ne sera utilisée que pour l'ETL initial (Extraction des historiques). Aucun connecteur permanent ne sera développé pour éviter la dette technique.
+
 ## Vue d'ensemble
 
 SAGE est le leader français des logiciels de gestion et comptabilité pour PME. L'entreprise propose plusieurs solutions (SAGE 100 Cloud, SAGE 50, SAGE Business Cloud) avec des capacités d'intégration variables.

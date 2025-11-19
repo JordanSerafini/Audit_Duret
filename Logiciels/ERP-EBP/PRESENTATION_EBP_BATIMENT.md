@@ -182,6 +182,42 @@ EBP Bâtiment est un ERP français spécialisé pour les entreprises du BTP, not
 
 ---
 
+## 🔬 ANALYSES CAPACITÉS DATA & IA
+
+### ❌ **EBP BÂTIMENT : IMPASSE TECHNOLOGIQUE**
+
+| Critère Data/IA | EBP Bâtiment | Score | Commentaire |
+|------------------|--------------|-------|-------------|
+| **Architecture données** | ❌ Fermée | 1/10 | Base propriétaire, export limité |
+| **Extractibilité** | ❌ Difficile | 1/10 | Données difficilement extractibles pour l'IA |
+| **APIs ouvertes** | ❌ Limitées | 2/10 | Intégrations restreintes (Tarifeo, Sonepar) |
+| **Langage/Stack** | ❌ Propriétaire | 1/10 | Pas de Python/R natif pour IA |
+| **Capacité prédictive** | ❌ Nulle | 1/10 | Aucun module IA/ML intégré |
+
+**Score Data Global EBP : 1,2/10** ⚠️ **IMPASSE TECHNOLOGIQUE**
+
+### ⚠️ **Conséquences pour la stratégie Data-Driven**
+
+- ❌ **Impossible d'entraîner des modèles prédictifs** de réapprovisionnement stock
+- ❌ **Analytics limités** : Tableaux de bord statiques uniquement  
+- ❌ **Pas d'IA maintenance prédictive** sur les équipements clients
+- ❌ **Données dispersées** : Besoin de 4-5 solutions (EBP + CRM + SIRH + Stocks)
+- ❌ **ROI Data compromis** : Pas de Data Lake unifié pour algorithmes
+
+### ✅ **Alternative Odoo : Score Data 9/10**
+
+| Critère Data/IA | Odoo ERP | Score | Avantage |
+|------------------|----------|-------|----------|
+| **Base PostgreSQL** | ✅ Ouverte | 10/10 | Requêtes SQL directes, export illimité |
+| **Stack Python** | ✅ Natif | 10/10 | Idéal pour scikit-learn, TensorFlow, pandas |
+| **APIs REST/GraphQL** | ✅ Complètes | 9/10 | Intégration BI/ML externe facilitée |
+| **Modules IA** | ✅ Disponibles | 8/10 | Prédictions stock, scoring client |
+| **Data Lake ready** | ✅ Compatible | 9/10 | Export vers Databricks, Snowflake |
+
+**Score Data Global Odoo : 9,2/10** 🏆 **LEADERSHIP TECHNOLOGIQUE**
+
+---
+
 ## 🎯 RECOMMANDATION POUR DURET ÉLECTRICITÉ
 
 ### ❌ **EBP Bâtiment NON RECOMMANDÉ** comme solution unique

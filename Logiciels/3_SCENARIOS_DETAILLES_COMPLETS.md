@@ -90,9 +90,15 @@
 
 ---
 
-### PayFit Paie
+### Stratégie Paie Progressive
 
-**Formule** : Paie seule (moteur paie uniquement, RH déjà dans Odoo)
+**Phase 1 (An 1) : Odoo RH natif**
+- Utilisation des modules RH Odoo pour centraliser données
+- Gestion variables paie (heures, primes, absences) 
+- **Gain** : Data Lake unique indispensable pour IA
+- **Économie** : -21 192€ sur l'An 1
+
+**Phase 2 (An 2) : PayFit si nécessaire**
 
 | Élément | Détail | Prix |
 |---------|--------|------|
@@ -101,18 +107,10 @@
 | **Total mensuel** | 66€ + (100 × 17€) | **1 766€/mois** |
 | **Total annuel** | 1 766€ × 12 | **21 192€/an** |
 
-**Fonctionnalités PayFit** :
-- Génération bulletins paie
-- DSN automatique
-- Prélèvement à la source
-- Coffre-fort digital bulletins
-- Déclarations URSSAF
-
-**Intégration Odoo ↔ PayFit** :
-- Export CSV variables paie depuis Odoo (heures, primes, absences)
-- Import dans PayFit
-- Génération bulletins PayFit
-- Retour écritures comptables vers Odoo
+**Argument centralisation Data** :
+- ✅ **Data Lake unique** : 100% données dans PostgreSQL Odoo
+- ✅ **Algorithmes prédictifs** : Stock, maintenance, scores clients
+- ✅ **Temps réel strict** : Indispensable pour l'IA
 
 ---
 
@@ -123,25 +121,25 @@
 | Poste | Détail | Coût |
 |-------|--------|------|
 | **Licences Odoo Y1** | 100 users × 24,90€ × 12 mois | 29 880€ |
-| **PayFit Y1** | (66€ + 100×17€) × 12 mois | 21 192€ |
+| **Modules RH Odoo Y1** | Variables paie natives, économie -21k€ vs PayFit | 0€ |
 | **Intégrateur Odoo** | 30j × 700€/j (paramétrage, config, migration) | 21 000€ |
 | **Formation** | 6j × 1 200€/j (3 sessions 2j par rôle) | 7 200€ |
 | **Migration données** | Import clients, produits, historique (inclus intégrateur) | 0€ |
 | **Modules custom** | RFID stocks, templates BTP spécifiques | 10 000€ |
 | **Connecteurs APIs** | Open Banking, BOAMP, Sonepar/Rexel | 5 000€ |
-| **TOTAL AN 1** | | **89 272€** |
+| **TOTAL AN 1** | | **68 080€** |
 
 ### Coûts Récurrents (An 2-3)
 
 | Poste | An 2 | An 3 |
 |-------|------|------|
 | Licences Odoo | 29 880€ | 29 880€ |
-| PayFit | 21 192€ | 21 192€ |
+| PayFit (optionnel An 2+) | 21 192€ | 21 192€ |
 | Support intégrateur | 5 000€ | 5 000€ |
 | Modules custom (évolutions) | 5 000€ | 5 000€ |
 | **TOTAL** | **61 072€** | **61 072€** |
 
-### TOTAL 3 ANS : **181 416€**
+### TOTAL 3 ANS : **160 224€** (phase 1) ou **181 416€** (avec PayFit An 2-3)
 
 ⚠️ **Hébergement** : Odoo.sh (+6 000€/an soit +18 000€ sur 3 ans) optionnel si infrastructure existante
 
@@ -949,9 +947,9 @@
 
 | Scénario | An 1 | An 2 | An 3 | **TOTAL 3 ans** | Δ vs Scénario 1 |
 |----------|------|------|------|-----------------|------------------|
-| **1. Odoo Tout-en-Un** | 89 272€ | 61 072€ | 61 072€ | **🟢 211 416€** | Référence |
-| **2. EBP + Compléments** | 112 320€ | 91 320€ | 91 320€ | **🔴 294 960€** | **+83 544€** (+40%) |
-| **3. Hybride Best-of-Breed** | 183 200€ | 106 600€ | 106 600€ | **🔴 396 400€** | **+185 000€** (+87%) |
+| **1. Odoo Tout-en-Un** | 68 080€ | 61 072€ | 61 072€ | **🟢 190 224€** | Référence |
+| **2. EBP + Compléments** | 112 320€ | 91 320€ | 91 320€ | **🔴 294 960€** | **+104 736€** (+55%) |
+| **3. Hybride Best-of-Breed** | 183 200€ | 106 600€ | 106 600€ | **🔴 396 400€** | **+206 176€** (+108%) |
 
 ---
 
@@ -959,9 +957,9 @@
 
 | Critère | 🟢 Scénario 1 | 🔶 Scénario 2 | 🟣 Scénario 3 |
 |---------|---------------|---------------|---------------|
-| **Coût 3 ans** | **211k€** | 295k€ | 396k€ |
+| **Coût 3 ans** | **190k€** | 295k€ | 396k€ |
 | **Couverture besoins** | ✅ 100% | ⚠️ 88% | ✅ 100% |
-| **Nombre outils** | **2** | 5 | 4 |
+| **Nombre outils** | **1** (Phase 1) puis **2** | 5 | 4 |
 | **Complexité** | 🟢 Simple | 🔴 Complexe | 🔴 Complexe |
 | **UX CRM** | 🟡 Bonne | ✅ Excellente (HubSpot) | ✅ Excellente (HubSpot) |
 | **UX SIRH** | 🟡 Bonne | ✅ Excellente (Lucca) | ✅ Excellente (Lucca) |
@@ -1003,9 +1001,9 @@
 
 **Justification** :
 
-1. **Meilleur ROI** : 211k€ vs 295k€ (Sc2) et 396k€ (Sc3)
+1. **Meilleur ROI** : 190k€ vs 295k€ (Sc2) et 396k€ (Sc3)
 2. **Couverture 100%** : Tous besoins résolus nativement
-3. **Simplicité** : 2 outils vs 4-5
+3. **Simplicité** : 1 outil Phase 1, centralisation Data Lake unique
 4. **Scalabilité** : Croissance supportée sans limite
 5. **Déploiement rapide** : Quick wins M1-3
 
@@ -1060,7 +1058,7 @@
 - [ ] UX acceptable >80% testeurs
 - [ ] App mobile Field Service validée techniciens
 - [ ] CERFA digital répond besoin (templates personnalisables suffisants)
-- [ ] Budget 211k€ validé
+- [ ] Budget 190k€ validé (économie -21k€ vs dispersion)
 - [ ] Intégrateur BTP identifié
 
 ### Critères Go Scénario 3 (Hybride) :

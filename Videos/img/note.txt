@@ -1,0 +1,65 @@
+📸 SÉRIE 1 : IMAGES POUR TES SLIDES (Midjourney / DALL-E 3)
+
+Slide 1 : Titre & Vision
+
+    A professional electrician seen from behind, wearing a white safety helmet and a high-vis vest with "DURET" written on the back. He is looking at a modern building under construction at twilight. Digital blue and green data lines surround the building structure like a protective network. Cinematic lighting, 4k, highly detailed, photorealistic.
+
+Slide 2 : Le Diagnostic (Le Chaos)
+
+    Close-up photography of a stressed construction manager's hands, head in hands, sitting at a messy desk. The desk is overflowing with crumpled invoices, scattered post-it notes, and old binders. Dim lighting, dramatic atmosphere, conveying stress and disorganization. High resolution.
+
+Slide 3 : L'Urgence Data (La Pyramide)
+
+    A futuristic glass pyramid floating in a dark void, divided into three glowing levels. The wide bottom base is solid dark blue labeled "DATA". The middle layer is cyan labeled "AUTOMATION". The top tip is glowing gold labeled "IA". 3D render, clean, corporate style, minimal background.
+
+Slide 4 : L'Arbitrage (EBP vs Odoo)
+
+    Split screen comparison. Left side: An old, dusty beige computer monitor from the 90s with disconnected cables, dim lighting (representing the old system). Right side: A sleek, modern tablet floating in the air displaying a bright, futuristic cloud interface with data charts (representing Odoo). High contrast, 4k.
+
+Slide 5 : La Vie de Marc (L'App Mobile)
+
+    Close-up on a hand wearing a construction glove holding a rugged black smartphone. The screen displays a very simple, clean mobile app interface with 4 large colorful buttons: Blue, Green, Orange, Purple. Blurred background of a construction site in daylight. Sharp focus on the phone screen, UI design style.
+
+Slide 6 : La Roadmap (Le Voyage)
+
+    A winding mountain road seen from above, leading to a sunny peak. There are 3 distinct milestones along the road marked by glowing flags. Flag 1: "FONDATIONS". Flag 2: "OPTIMISATION". Flag 3: "INTELLIGENCE". Beautiful landscape, clear sky, inspiring, photorealistic.
+
+Slide 7 : Budget & ROI (La Croissance)
+
+    A close-up of a growing digital plant rising from a tablet screen. The leaves of the plant are made of glowing green euro symbols (€) and light connections. Clean white background, depth of field, symbol of profitable investment, corporate tech style.
+
+Slide 8 : Le Futur (Ton Expertise IA)
+
+    First-person view (POV) of an engineer looking at a technical electrical panel. A futuristic Augmented Reality (AR) overlay appears in the air, displaying floating green statistics, predictive maintenance alerts, and a "98% HEALTH" score. Iron Man HUD style but for construction, realistic.
+
+Slide 9 : L'Humain (Formation)
+
+    A young friendly trainer showing something on a tablet to an older construction worker on a job site. Both are smiling and looking at the screen. Warm sunlight, collaborative atmosphere, wearing safety gear. Corporate photography style.
+
+Slide 10 : Conclusion (Le Pacte)
+
+    A close-up of a firm handshake between two professionals in suits, with a blurred background of a modern construction site. Lighting is bright and professional. Symbol of trust and partnership. High resolution.
+
+🎥 SÉRIE 2 : VIDÉOS POUR L'INTRO (Runway / Pika / Veo)
+
+Ces prompts décrivent le mouvement pour l'IA vidéo.
+
+Clip 1 : Le Chaos (Stress)
+
+    Cinematic close-up inside a construction van. A stressed construction manager searches frantically through a messy pile of papers and folders on the dashboard. Handheld camera movement, realistic lighting, high tension.
+
+Clip 2 : La Solution (Scan)
+
+    POV shot of a hand holding a rugged smartphone on a construction site. The user presses a large green "SCAN" button on the screen. The screen glows. Sharp focus, daylight, high tech feel.
+
+Clip 3 : La Connexion (Flux de données)
+
+    A warehouse worker scans a box on a shelf. Digital blue data streams flow upwards from the box into the air, visualizing cloud connection. Cinematic sci-fi effect in a warehouse setting, 4k.
+
+Clip 4 : Le Pilotage (Croissance)
+
+    Over-the-shoulder view of a CEO looking at a large computer monitor displaying dynamic green business charts and graphs growing upwards. Modern office environment, soft lighting, professional.
+
+Clip 5 : L'Avenir (Drone & IA)
+
+    Aerial drone shot of a modern building under construction. Futuristic white wireframe overlays and AI data analytics appear over the structure. Smart city concept, high tech, smooth motion.

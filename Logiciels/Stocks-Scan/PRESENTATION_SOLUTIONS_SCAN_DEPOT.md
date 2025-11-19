@@ -89,17 +89,23 @@
 
 ### 💻 Intégration Logicielle
 
-#### Option 1 : Odoo Inventaire (Recommandé)
+#### 🏆 **SOLUTION RETENUE : Odoo Inventory (App Native)**
 
-**Fonctionnalités** :
-- ✅ Scan réception automatique
-- ✅ Mise à jour stock temps réel  
-- ✅ Génération codes-barres produits
-- ✅ Inventaires cycliques scan
-- ✅ Mouvements tracés
-- ✅ Alertes rupture/surstock
+**Fonctionnalités natives** :
+- ✅ **Scan réception automatique** sur terminaux Android durcis
+- ✅ **Mise à jour stock temps réel strict** (indispensable pour IA)
+- ✅ **Génération codes-barres** produits automatique
+- ✅ **Inventaires cycliques** scan avec géolocalisation
+- ✅ **Mouvements 100% tracés** dans PostgreSQL
+- ✅ **Alertes prédictives** rupture/surstock by algorithme ML
 
-**Coût** : **Inclus dans licence Odoo** (déjà budgétée)
+**Argument stratégique Data** :
+- 🎯 **Temps réel strict** nécessaire pour algorithme de réapprovisionnement automatique
+- 🎯 **PostgreSQL natif** : Données stock directement exploitables par IA
+- 🎯 **APIs ouvertes** : Machine Learning sur historique mouvements
+- 🎯 **Pas de synchronisation** : Élimination risque incohérences data
+
+**Coût** : **Inclus dans licence Odoo** (0€ additionnel)
 
 #### Option 2 : Solutions Dédiées
 
@@ -243,16 +249,22 @@
 
 ## 🔧 INTÉGRATION AVEC SOLUTIONS EXISTANTES
 
-### Avec Odoo ERP (Scénario 1)
+### 🏆 Avec Odoo ERP (Scénario recommandé)
 
-**Natif** :
-- ✅ Module Inventaire avec scan intégré
-- ✅ Réception/Expédition automatisées
-- ✅ Codes-barres générés auto
-- ✅ Rapports stock temps réel
-- ✅ Intégration comptabilité
+**Intégration native totale** :
+- ✅ **App Odoo Inventory** sur terminaux Android durcis (Zebra, Honeywell)
+- ✅ **Réception scan** : Mise à jour automatique stock + comptabilité
+- ✅ **Codes-barres EAN13** générés automatiquement à la création produit
+- ✅ **Inventaires géolocalisés** : Scan + GPS pour traçabilité emplacement
+- ✅ **Algorithmes prédictifs** : IA réapprovisionnement sur données temps réel
+- ✅ **Comptabilité intégrée** : Valorisation stock automatique
 
-**Coût additionnel** : **0€** (inclus dans licence)
+**Arguments stratégiques** :
+- 🎯 **Data Lake unique** : 100% données dans PostgreSQL (vs multi-sources)
+- 🎯 **Temps réel strict** : Algorithme ML sur flux instantanés
+- 🎯 **Pas de synchronisation** : Élimination pertes/incohérences
+
+**Coût additionnel** : **0€** (inclus dans licence Odoo)
 
 ### Avec EBP Bâtiment (Scénario 2)
 

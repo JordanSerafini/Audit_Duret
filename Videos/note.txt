@@ -1,0 +1,51 @@
+C'est parfait. Puisque Google Veo (via VideoFX) génère des clips de 8 secondes, nous allons adopter une stratégie de "Montage Séquencé".
+
+Au lieu d'essayer de faire une seule longue vidéo, nous allons générer 5 clips de 8 secondes (Total = 40 secondes) que tu n'auras plus qu'à coller bout à bout dans ton logiciel de montage (Premiere, CapCut, ou même PowerPoint).
+
+Voici les Prompts Exacts (en Anglais, car Veo comprend mieux l'anglais pour les détails visuels) à copier-coller dans Veo, clip par clip.
+
+🎬 TITRE DU FILM : "DURET 2.0 - L'ÈRE DE LA DATA"
+
+Style Visuel Global (à garder en tête) : Cinematic, photorealistic, 4k, corporate documentary style, construction site lighting.
+
+🎞️ CLIP 1 : LE CHAOS (0s - 8s)
+
+Objectif : Montrer la douleur actuelle ("Marc" dans sa camionnette). Voix Off (à enregistrer ou lire) : "Hier, nos équipes naviguaient à vue. Noyées sous le papier, perdant des heures précieuses."
+
+    📋 PROMPT VEO (Copier-Coller) : Cinematic close-up shot inside a construction van. A stressed construction site manager in a high-vis vest is overwhelmed, searching through a chaotic pile of crumpled papers and post-it notes on the dashboard. Natural lighting, realistic, 4k, high detail.
+
+🎞️ CLIP 2 : LA SOLUTION MOBILE (8s - 16s)
+
+Objectif : Montrer l'App Odoo simplifiée (l'action immédiate). Voix Off : "Aujourd'hui, la complexité s'efface. Un clic, une photo, une commande. Le terrain est connecté."
+
+    📋 PROMPT VEO (Copier-Coller) : First-person point of view (POV) of a hand holding a rugged smartphone on a construction site. The screen displays a very simple, clean blue mobile app interface with big buttons. The thumb presses a green "Scan" button. Blurred construction background, high tech, sharp focus on phone.
+
+🎞️ CLIP 3 : LA CONNEXION TEMPS RÉEL (16s - 24s)
+
+Objectif : Montrer le flux de données (Le stock/Dépôt). Voix Off : "L'information circule instantanément. Du chantier au stock, plus aucune rupture, plus aucun oubli."
+
+    📋 PROMPT VEO (Copier-Coller) : A warehouse worker scanning an electrical box on a shelf. As he scans, a futuristic glowing digital data stream flows from the box upwards into a digital cloud. Cinematic lighting, warehouse environment, visualization of data connection, 4k.
+
+🎞️ CLIP 4 : LE PILOTAGE INTELLIGENT (24s - 32s)
+
+Objectif : Montrer le Dashboard Odoo/BI (La Direction). Voix Off : "La direction ne subit plus. Elle pilote. Avec des données fiables et consolidées en temps réel."
+
+    📋 PROMPT VEO (Copier-Coller) : Over-the-shoulder shot of a business executive in a modern office looking at a wide computer monitor. The screen displays a sophisticated business dashboard with rising green graphs and data charts. Soft daylight, professional atmosphere, sense of control.
+
+🎞️ CLIP 5 : LE FUTUR PRÉDICTIF (32s - 40s)
+
+Objectif : Ton "Diplôme" (L'IA et la prédiction). Voix Off : "Demain, nous ne ferons plus que réagir. Grâce à l'IA, nous anticiperons. Bienvenue chez Duret Électricité 2.0."
+
+    📋 PROMPT VEO (Copier-Coller) : Drone shot of a modern building under construction. Futuristic white wireframe data lines and AI analytics overlays appear over the building structure, visualizing predictive maintenance and planning. High tech, clean aesthetic, smart city vibe.
+
+💡 CONSEILS POUR LE MONTAGE
+
+    Génération : Lance les 5 prompts dans Veo. Si un clip est bizarre (ex: mains à 6 doigts), relance juste ce prompt-là.
+
+    Assemblage : Mets les 5 vidéos bout à bout.
+
+    Transitions : Utilise des transitions simples ("Fondu au noir" ou "Cut" sec) entre les clips. Ne mets pas d'effets kitchs.
+
+    Musique : Ajoute une musique de fond type "Corporate Technology Upbeat" (tu en trouves sur YouTube Audio Library gratuitement).
+
+C'est la méthode la plus sûre pour avoir une vidéo de 40s cohérente avec l'IA actuelle ! 🚀

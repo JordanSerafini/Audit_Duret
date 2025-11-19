@@ -210,6 +210,12 @@
 
 ## 🚨 PARTIE 3 : RISQUES CRITIQUES IDENTIFIÉS
 
+### ⚠️ **MISE À JOUR POST-CHALLENGE STRATÉGIQUE**
+
+**🔧 CORRECTIONS APPORTÉES** : Suite à l'analyse approfondie (audit DSI + analyse charge), 3 risques critiques supplémentaires identifiés :
+
+---
+
 ### Risque #1 : 🔴 BURN-OUT ÉQUIPES CLÉS
 
 **Personnes en surcharge chronique** :
@@ -225,9 +231,54 @@
 
 **Recommandation** : URGENCE - Digitaliser/automatiser pour réduire surcharge AVANT départs
 
+**🔧 CORRECTION CRITIQUE** : **Plan initial sous-estimait surcharge Sylvie**
+- Charge projet prévue : 30% = 12h/sem
+- Charge normale Sylvie : 60-70h/sem (fin mois)
+- **TOTAL** : **82h/semaine = BURN-OUT GARANTI**
+- **MESURE CORRECTIVE** : Recrutement assistant contrôle gestion OBLIGATOIRE avant M0
+
 ---
 
-### Risque #2 : 🔴 TURNOVER TECHNICIENS & CHEFS CHANTIER
+### Risque #2 : 🔴 VENDOR LOCK-IN AZURE CRITIQUE
+
+**🔧 NOUVEAU RISQUE IDENTIFIÉ** :
+- Architecture 100% Azure = Dépendance totale Microsoft
+- Coûts imprévisibles : 2 400€/mois → 6 000€/mois possible
+- Complexité technique : 15+ points intégration
+- Exit strategy impossible sans refonte complète
+
+**Impact** :
+- ❌ Explosion budgets IT (inflation 15-25%/an Azure)
+- ❌ Risque géopolitique (Cloud Act USA vs RGPD EU)
+- ❌ Complexité maintenance (4× dev externes permanent)
+
+**🔧 MESURE CORRECTIVE** : Architecture hybride implémentée
+- Production on-premise (Annecy) + backup cloud
+- Économies : -41% coûts (-7 440€/an)
+- Maîtrise technique + exit strategy claire
+
+---
+
+### Risque #3 : 🔴 DÉPENDANCES SÉQUENTIELLES PLANNING
+
+**🔧 NOUVEAU RISQUE IDENTIFIÉ** :
+- Formation techniciens APRÈS déploiement = Échec garanti
+- Clothilde surchargée M1 : 88h/semaine (2,2 ETP pour 1 personne)
+- Jalons sans conditions = Risque effet domino
+
+**Impact** :
+- ❌ Adoption technologie échouée (résistance + formation bâclée)
+- ❌ Retards projet (goulots d'étranglement)
+- ❌ Qualité compromise (surcharge = erreurs)
+
+**🔧 MESURE CORRECTIVE** : Planning reséquencé
+- Formation 100% techniciens AVANT déploiement
+- Externalisation imports données (délestage Clothilde)
+- Jalons conditionnels stricts ajoutés
+
+---
+
+### Risque #4 : 🔴 TURNOVER TECHNICIENS & CHEFS CHANTIER
 
 **Causes identifiées** :
 - Outils obsolètes (jeunes refusent de travailler avec MDE années 2000)
@@ -243,7 +294,7 @@
 
 ---
 
-### Risque #3 : 🔴 CROISSANCE IMPOSSIBLE SANS TRANSFORMATION
+### Risque #5 : 🔴 CROISSANCE IMPOSSIBLE SANS TRANSFORMATION
 
 **Constats** :
 - Systèmes actuels ne scalent pas (Excel 30+ fichiers, MDE obsolète)
@@ -258,7 +309,7 @@
 
 ---
 
-### Risque #4 : 🔴 SÉCURITÉ & CONFORMITÉ DONNÉES
+### Risque #6 : 🔴 SÉCURITÉ & CONFORMITÉ DONNÉES
 
 **Constats** :
 - Photos chantiers sur téléphones personnels (perte si casse/vol)

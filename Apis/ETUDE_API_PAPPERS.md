@@ -3,7 +3,7 @@
 ## 1. 📋 Fiche d'Identité
 - **Nom** : Pappers (ou API Sirene INSEE)
 - **Catégorie** : Data / Conformité / KYC
-- **Priorité** : 🟢 **HAUTE** (Sécurité Juridique)
+- **Priorité** : 🟡 **MOYENNE** (Post-Migration Odoo)
 - **Complexité** : Faible (API REST simple)
 - **Coût API** : Gratuit (Open Data) ou Freemium (Pappers)
 
@@ -40,6 +40,19 @@ def check_solvency(siret):
         return 'DANGER'
     return 'OK'
 ```
+
+## Usage pour l'IA Prédictive
+
+### 📊 Données d'enrichissement pour l'analyse de risque client
+
+L'API Pappers alimentera les futurs modèles prédictifs de **scoring client** :
+- **Score de solvabilité automatique** : Intégrer les bilans financiers dans l'algorithme d'évaluation crédit
+- **Alertes prédictives** : Détecter les signaux faibles avant défaillance (baisse CA, retards paiements, procédures)
+- **Optimisation portefeuille client** : L'IA recommandera les clients les plus sûrs pour les gros chantiers
+
+Cette API sera intégrée en **Phase 2** après stabilisation du socle Odoo.
+
+---
 
 ## 5. 💰 Analyse Coûts & ROI
 

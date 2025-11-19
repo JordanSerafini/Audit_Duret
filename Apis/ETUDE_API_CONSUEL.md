@@ -1,111 +1,171 @@
-# Étude Automatisation CONSUEL - 2025
+# 🔌 ÉTUDE DÉTAILLÉE : API CONSUEL (Conformité Électrique)
 
-## Vue d'ensemble
+## 1. 📋 Fiche d'Identité
+- **Nom** : CONSUEL (Comité National pour la Sécurité des Usagers de l'Électricité)
+- **Catégorie** : Certification / Conformité Réglementaire
+- **Priorité** : 🟡 **MOYENNE** (Phase 2 - Post-Migration Odoo)
+- **Complexité** : Moyenne (Dématérialisation en cours)
+- **Coût API** : À déterminer (pas d'API publique confirmée)
 
-Le **CONSUEL** (Comité National pour la Sécurité des Usagers de l'Électricité) délivre les attestations de conformité obligatoires pour le raccordement au réseau Enedis.
-Pour Duret Électricité, c'est une étape critique : **Pas de Consuel = Pas de courant = Client mécontent**.
+## 2. 🎯 Contexte & Enjeux pour Duret Électricité
 
-Actuellement, la gestion est manuelle (Portail Web + Excel), source d'oublis et de délais.
+### Obligation légale
+CONSUEL délivre les **attestations de conformité électrique** obligatoires pour toute installation neuve ou entièrement rénovée. Sans cette attestation, impossible de mettre sous tension.
 
-## État de l'Art API
+### Problème Actuel
+- **Processus manuel** : Saisie papier/web des DRE (Documents Résumé de Conclusion)
+- **Suivi dispersé** : Pas de traçabilité centralisée des attestations par chantier
+- **Délais imprévisibles** : Pas de visibilité sur l'avancement des dossiers
+- **Risque de retard** : Chantiers bloqués en attente d'attestation
 
-### ⚠️ Constat
-À ce jour, le CONSUEL **ne propose pas d'API publique** documentée pour les installateurs standards.
-Les échanges se font via le portail `mon.consuel.com`.
+### Opportunité Digitale 2025
+À partir du **1er janvier 2025**, CONSUEL transmet électroniquement les attestations de conformité au GRD (Gestionnaire de Réseau de Distribution) sous **1-2 jours** au lieu de plusieurs semaines.
 
-### Alternatives Techniques
-1. **RPA (Robotic Process Automation)** : Un robot logiciel simule les clics sur le portail.
-2. **EDI** : Réservé aux très gros faiseurs (à vérifier si Duret est éligible, peu probable < 1000 dossiers/an).
-3. **Gestion Workflow Odoo** : Structurer la donnée en interne pour faciliter la saisie manuelle.
+## 3. 🛠️ Fonctionnalités Souhaitées (API Future)
 
-## Stratégie Recommandée : "Odoo Assisted Workflow"
-
-Plutôt que de tenter un "Hack" instable du site du CONSUEL, nous recommandons de **bétonner le processus interne** dans Odoo pour que la saisie manuelle ne prenne que 2 minutes.
-
-### Le Processus Cible
-
-1. **Fin de Chantier (Odoo)**
-   - Le technicien valide sa tâche "Contrôle Final".
-   - Il remplit un formulaire mobile (Mesures de terre, Isolement, Schéma unifilaire photo).
-   
-2. **Préparation Dossier (Automatique)**
-   - Odoo génère un PDF "Pré-dossier CONSUEL" contenant TOUTES les infos nécessaires (Adresse précise, Puissance, Type installation, Nom client).
-   - Odoo crée une tâche "Acheter CONSUEL" pour l'assistante.
-
-3. **Achat & Saisie (Manuel optimisé)**
-   - L'assistante se connecte au portail CONSUEL.
-   - Elle recopie les données (ou utilise un script copier-coller).
-   - Elle télécharge l'attestation provisoire.
-
-4. **Suivi (Automatique)**
-   - Odoo relance automatiquement le statut tous les 15 jours.
-   - Si visite prévue : Odoo prévient le conducteur de travaux + client.
-   - Si validé : Odoo envoie l'attestation au client + Enedis (si mandat).
-
-## Solution Technique : Module `duret_consuel`
-
-### Modèle de Données
+### 1. Dépôt Automatique DRE
 ```python
-class ProjectTask(models.Model):
-    _inherit = 'project.task'
-    
-    consuel_required = fields.Boolean("Consuel Requis", default=False)
-    consuel_status = fields.Selection([
-        ('to_do', 'À faire'),
-        ('submitted', 'Dossier déposé'),
-        ('visit_scheduled', 'Visite prévue'),
-        ('correction', 'Retouches demandées'),
-        ('done', 'Validé / Reçu')
-    ])
-    consuel_number = fields.Char("N° Dossier")
-    consuel_file = fields.Binary("Attestation PDF")
+# Depuis Odoo après validation chantier
+POST /api/v1/dre
+{
+  "chantier_id": "DURET-2025-001",
+  "installation_type": "domestique",
+  "pdl_prm": "12345678901234",
+  "organisme_controle": "Bureau Veritas",
+  "dre_document": "base64_pdf_content"
+}
 ```
 
-### Automatisation RPA (Optionnelle - Phase 2)
+### 2. Suivi Statut Attestation
+```python
+GET /api/v1/attestation/status/{dossier_id}
+{
+  "status": "en_cours_verification",
+  "date_depot": "2025-01-15",
+  "date_prevue": "2025-01-20",
+  "etapes": [
+    {"nom": "Réception", "status": "validé"},
+    {"nom": "Vérification", "status": "en_cours"},
+    {"nom": "Validation", "status": "attente"}
+  ]
+}
+```
 
-Si le volume dépasse 200 dossiers/an, un script **Selenium/Playwright** peut être envisagé.
+### 3. Récupération Attestation
+```python
+GET /api/v1/attestation/download/{numero}
+# Retourne le PDF de l'attestation validée
+```
 
-**Concept**:
-- Script Python lancé depuis Odoo.
-- Ouvre un navigateur "Headless".
-- Se loggue sur `mon.consuel.com`.
-- Remplit les champs formulaires avec les données Odoo.
-- Valide et récupère le N° de dossier.
+## 4. 💻 Intégration Odoo Cible
 
-**Risques RPA**:
-- Maintenance élevée (si le site Consuel change, le robot casse).
-- Blocage compte si détection de bot.
-- **Recommandation** : Éviter en Phase 1.
+### Module `duret_consuel`
 
-## Logique Métier & Gains
+**Modèle : `project.task`**
+- Champ `consuel_required` (Boolean)
+- Champ `consuel_dossier_id` (Char)
+- Champ `consuel_status` (Selection : Aucun/En cours/Validé/Refusé)
+- Champ `consuel_attestation` (Binary - PDF)
 
-### 1. Zéro Oubli
-**Problème**: On finit le chantier, on oublie de demander le Consuel. 3 semaines plus tard, le client hurle car pas de courant.
-**Solution**: Odoo bloque la clôture du projet tant que le Consuel n'est pas "Submitted".
+**Workflow Automatisé**
+1. **Fin de chantier** → Odoo détecte `consuel_required = True`
+2. **Auto-création dossier** → API CONSUEL (si disponible)
+3. **Suivi automatique** → Cron quotidien vérifie statut
+4. **Alerte si retard** → Email automatique si > 15 jours
+5. **Archivage PDF** → Téléchargement automatique une fois validé
 
-### 2. Qualité du Dossier
-**Problème**: Dossier rejeté car mauvaise adresse ou puissance erronée.
-**Solution**: Les données viennent du Devis/Étude technique validée, pas d'une ressaisie manuelle approximative.
+## 5. 🔍 État Actuel de la Dématérialisation CONSUEL
 
-### 3. Anticipation Visite
-**Problème**: Le contrôleur Consuel passe, personne n'est là, visite ratée = 150€ de frais + 2 semaines délai.
-**Solution**: Odoo notifie le client et le chef de chantier dès que la date de visite est connue (saisie dans Odoo).
+### ✅ Disponible en 2025
+- **Portail "Mon Espace Consuel"** : Création de compte et suivi en ligne
+- **Service AC-Express** : Formulaires dématérialisés
+- **Transmission automatique GRD** : À partir du 1er janvier 2025
 
-## ROI Estimé
+### ❓ API Publique
+- **Statut** : Non confirmée publiquement
+- **Alternative** : Scraping du portail web (non recommandé)
+- **Recommandation** : Contact direct CONSUEL pour partenariat API
+
+## 6. 💰 Analyse Coûts & ROI (Estimation)
 
 ### Coûts
-- **Module Odoo**: 3 jours (1500€).
-- **Pas de coût API**.
+- **Développement module Odoo** : 3-5 jours (3-5K€)
+- **Intégration API** (si disponible) : 2 jours (2K€)
+- **API CONSUEL** : Probablement gratuit (service public)
 
-### Gains
-- **Administratif**: 15 min gagnées par dossier (recherche infos, relances).
-  - 100 dossiers/an x 15 min = 25h = **1250€/an**.
-- **Frais Re-visite**: Éviter 5 visites ratées/an = 5 x 150€ = **750€/an**.
-- **Satisfaction Client**: Inestimable (le courant est là le jour du déménagement).
+### ROI
+- **Gain administratif** : 30 min/chantier économisées → 2h/semaine
+- **Réduction retards** : Anticipation blocages → Évite 1-2 jours perdus/mois
+- **Traçabilité** : Toutes attestations centralisées dans Odoo
 
-## Conclusion
+## Usage pour l'IA Prédictive
 
-Bien qu'il n'y ait pas d'API publique, la **digitalisation du processus** est indispensable.
-L'approche "Workflow Odoo rigoureux" est plus rentable et robuste que l'approche "Robotisation fragile" pour une PME.
+### 📊 Source de données pour l'analyse prédictive des délais
 
-**Recommandation**: **GO Phase 1** (Module de suivi Odoo simple).
+L'intégration CONSUEL alimentera les futurs modèles de **prédiction de délais** :
+
+- **Machine Learning sur délais** : Analyser les patterns de validation par type d'installation et organisme de contrôle
+- **Prédiction goulots** : Identifier les périodes de surcharge CONSUEL (fin d'année fiscale)
+- **Optimisation planning** : L'algorithme de planification intégrera les délais CONSUEL prévisibles
+- **Alertes prédictives** : Recommander de déposer le DRE plus tôt pour certains types d'installation
+
+Ces données enrichiront l'**Assistant de Planification Intelligente** pour une gestion proactive des contraintes réglementaires.
+
+## 7. 📅 Planning d'Implémentation Recommandé
+
+### Phase 1 : Investigation (Mois 1-2)
+1. ✅ **Contact CONSUEL** : Demande officielle d'API ou partenariat
+2. ✅ **Audit besoins** : Cartographie processus actuel Duret
+3. ✅ **POC portail** : Test manuel du portail "Mon Espace Consuel"
+
+### Phase 2 : Développement (Mois 3-4)
+1. 🔄 **Module Odoo** : Développement interface CONSUEL
+2. 🔄 **Intégration** : API si disponible, sinon RPA léger
+3. 🔄 **Tests** : Validation sur vrais dossiers
+
+### Phase 3 : Déploiement (Mois 5)
+1. ⏳ **Formation équipes** : Nouveaux workflows
+2. ⏳ **Go-Live** : Migration historique optionnelle
+3. ⏳ **Monitoring** : Suivi ROI 3 mois
+
+## 8. ⚠️ Points d'Attention
+
+### Contraintes Techniques
+- **API non garantie** : Peut nécessiter développement RPA (Robot Process Automation)
+- **Authentification** : Probablement OAuth complexe
+- **Rate limits** : À négocier avec CONSUEL
+
+### Contraintes Métier
+- **Formation nécessaire** : Nouveaux processus pour les équipes
+- **Responsabilité** : CONSUEL reste autorité finale
+- **Backup manuel** : Prévoir processus de secours
+
+## 9. 📞 Contacts & Prochaines Étapes
+
+### CONSUEL Contact
+- **Adresse** : Tour Kupka B CS 50339 92057 PARIS LA DEFENSE CEDEX
+- **Site** : https://www.consuel.com/
+- **Portail** : Mon Espace Consuel
+
+### Actions Immédiates
+1. **Contact commercial CONSUEL** : Demande API/partenariat
+2. **Audit interne** : Volume annuel attestations Duret
+3. **Benchmark concurrents** : Solutions existantes marché
+
+## 10. ✅ Recommandation Finale
+
+### 🟡 **PHASE 2 - Post-Migration Odoo**
+
+**Logique** : 
+- Attendre stabilisation socle Odoo avant cette intégration
+- Négocier API CONSUEL en parallèle (6-12 mois)
+- ROI intéressant mais non critique court terme
+
+**Alternative immédiate** :
+- Créer champ "CONSUEL" dans Odoo pour traçabilité manuelle
+- Former équipes au nouveau portail dématérialisé 2025
+
+**Si API disponible** : Développement prioritaire (ROI excellent)
+
+---
+*Dernière mise à jour : Novembre 2025 - Basé sur réglementation 2025*

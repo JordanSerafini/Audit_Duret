@@ -32,6 +32,9 @@ Google Maps Platform propose un ensemble d'APIs permettant d'intégrer des fonct
 - 📍 Localisation client sur fiche CRM
 - 🚧 Zones d'intervention par technicien
 
+### 🧠 **PRIORITÉ IA** : Source géodonnées pour algorithme de planification
+L'API Google Maps fournira les **coordonnées GPS** essentielles pour alimenter l'algorithme de planification dynamique (Vague 3). Ces données géographiques permettront d'optimiser automatiquement les tournées et de corréler les données météo aux chantiers spécifiques.
+
 ### 2. Geocoding API
 **URL**: `https://maps.googleapis.com/maps/api/geocode/json`
 
