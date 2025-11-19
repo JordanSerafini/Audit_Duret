@@ -1,0 +1,53 @@
+@startuml Sequence_Creation_Devis_Cible
+
+title Processus Cible : Création Devis (Odoo)
+
+actor "Responsable Affaire" as RA
+participant "Odoo CRM" as CRM
+participant "Odoo Ventes" as Ventes
+participant "Bibliothèque\nTemplates" as Templates
+participant "Direction" as Dir
+actor "Client" as Client
+
+== 1. Qualification (CRM) ==
+RA -> CRM : Créer Opportunité
+activate CRM
+CRM -> CRM : Enrichissement Auto (Societe.com)
+RA -> CRM : Convertir en Devis
+deactivate CRM
+
+== 2. Chiffrage (Ventes) ==
+activate Ventes
+RA -> Ventes : Sélectionner Template (ex: "Rénovation T3")
+Ventes -> Templates : Charger Postes & Ouvrages
+Templates --> Ventes : Devis pré-rempli (80%)
+
+RA -> Ventes : Ajuster Quantités & Marges
+note right
+  **Gain de temps** :
+  Plus de ressaisie manuelle
+  Prix à jour (APIs Fournisseurs)
+end note
+deactivate Ventes
+
+== 3. Validation (Workflow) ==
+RA -> Ventes : Demande Validation
+activate Ventes
+alt Montant > 50k€
+  Ventes -> Dir : Notification Email/Mobile
+  Dir -> Ventes : Valider (1 clic)
+else Montant < 50k€
+  Ventes -> Ventes : Auto-Validation
+end
+deactivate Ventes
+
+== 4. Envoi & Signature ==
+Ventes -> Client : Email + Lien Portail
+Client -> Client : Consulter & Signer (e-Signature)
+Client -> Ventes : Devis Signé
+activate Ventes
+Ventes -> CRM : Gagné !
+Ventes -> "Odoo Projets" : Créer Affaire Auto
+deactivate Ventes
+
+@enduml

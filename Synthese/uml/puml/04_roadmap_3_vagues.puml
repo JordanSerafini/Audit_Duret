@@ -1,124 +1,64 @@
 @startuml Roadmap_Transformation_3_Vagues
 
-title Roadmap Transformation Digitale - 24 Mois (3 Vagues)
+title Roadmap Transformation Digitale - 18 Mois (3 Phases)
 
 @startwbs
 
-* **TRANSFORMATION\nDIGITALE**\n24 MOIS
+* **TRANSFORMATION\nDIGITALE**\n18 MOIS
 
-** 🌊 VAGUE 1\nQUICK WINS\n**M1-M6**
+** 🌊 PHASE 1\nSOCLE & QUICK WINS\n**M1-M4**
 
-*** 🔴 #1 SIRH Cloud\nScore: 9.4\nM1-M4
-**** RH: 22 systèmes → 1 SIRH
-**** Paie: 3j/sem → 1j/sem (avec #8)
-**** Ressaisies 5-6x → 1x
+*** 🟢 #1 CRM Simple\n(Odoo CRM)\nM1-M2
+**** Fin des Post-it
+**** Traçabilité Clients
+**** Adoption immédiate
 
-*** 🔴 #2 CRM/Ticketing\nScore: 9.0\nM1-M4
-**** Post-it → Traçabilité 100%
-**** Délai RDV → 2 min
-**** Version gratuite HubSpot
+*** 🟢 #2 Chat Pro\n(Odoo Discuss)\nM1-M2
+**** Fin WhatsApp perso
+**** Historique centralisé
+**** Photos sécurisées
 
-*** 🔴 #3 Dashboards BI\nScore: 8.7\nM1-M5
+*** 🟢 #3 Devis Rapides\n(Odoo Ventes)\nM2-M4
+**** Fin SAGE Devis
+**** Bibliothèque Templates
+**** Devis en 30min
+
+** 🌊 PHASE 2\nCŒUR DU RÉACTEUR\n**M5-M10**
+
+*** 🔴 #4 App Mobile\n(Odoo Field Service)\nM5-M8
+**** Rapports digitaux
+**** Signature client
+**** Mode Offline
+
+*** 🔴 #5 Stocks & Achats\n(Odoo Stock)\nM8-M10
+**** Scan RFID
+**** Réception mobile
+**** Fin ruptures
+
+** 🌊 PHASE 3\nADMIN & RH\n**M11-M15**
+
+*** 🟠 #6 SIRH & Paie\n(PayFit + Odoo)\nM11-M13
+**** Paie automatisée
+**** Portail salariés
+**** Fin Excel RH
+
+*** 🟠 #7 Dashboards\n(Odoo BI)\nM13-M15
+**** Pilotage Direction
 **** KPIs temps réel
-**** Direction: Visibilité 100%
-**** Sylvie: KPIs auto vs manuel
+**** Rentabilité chantiers
 
-*** 🔴 #4 App Mobile\nScore: 8.1\nM2-M6
-**** Photos géolocalisées
-**** Rapports: 2h → 10-25min
-**** Mode offline
-
-*** 🔴 #5 Templates\nScore: 8.3\nM3-M6
-**** Devis: 2h → 30min
-**** PPSPS: 3h → 30min
-**** Bibliothèque réutilisable
-
-*** 🟠 #6 RFID Stocks\nScore: 7.3\nM3-M6
-**** Comptage manuel → Scan
-**** Valorisation cohérente
-**** Inventaires rapides
-
-***< 🎯 **BILAN M6**\nGo/No-Go Vague 2
-
-** 🌊 VAGUE 2\nSTRUCTURANTS\n**M7-M18**
-
-*** 🔴 #8 Paie Auto\nScore: 8.1\nM7-M12
-**** Calcul TR automatique
-**** Heures récup auto
-**** Temps Sophie: 3j → 1j
-
-*** 🟠 #7 ERP Odoo\nScore: 7.8\nM7-M16
-**** 30-40s → <2s
-**** Cloud accessible partout
-**** Migration progressive
-
-*** 🟠 #9 E-Procurement\nScore: 7.1\nM8-M15
-**** Taux succès amélioré
-**** APIs fournisseurs
-**** 3 jours → Temps réel
-
-*** 🟠 #10 Tickets BE\nScore: 7.3\nM9-M13
-**** Priorisation objective
-**** Surcharge Thomas réduite
-**** Transparence
-
-*** 🟠 #11 Portails\nScore: 6.7\nM10-M15
-**** Self-service 24/7
-**** Clients autonomes
-**** Réduction appels
-
-*** 🟠 #12 APIs Fourn\nScore: 6.4\nM11-M15
-**** Prix automatiques
-**** Catalogues à jour
-**** Commandes EDI
-
-***< 🎯 **BILAN M18**\nGo/No-Go Vague 3
-
-** 🌊 VAGUE 3\nEXCELLENCE\n**M19-M24**
-
-*** 🔵 #13 ML Budgets\nScore: 5.4\nM19-M22
-**** Prédictions dépassements
-**** Anticipation
-**** Optimisation trésorerie
-
-*** 🔵 #14 ML Chiffrage\nScore: 5.4\nM19-M22
-**** Benchmark internes
-**** Précision améliorée
-**** Standardisation
-
-*** 🔵 #15 ML Prévision\nScore: 4.7\nM20-M22
-**** Achats groupés
-**** Ruptures stock
-**** Optimisation
-
-*** 🔵 #16 Analytics\nScore: 5.7\nM19-M23
-**** Analyses consolidées
-**** Détection patterns
-**** Amélioration continue
-
-*** 🔵 #17 Gouvernance\nScore: 5.4\nM19-M24
-**** Qualité données
-**** MDM
-**** Fiabilité décisions
-
-*** 🔵 #18 Culture\nScore: 6.8\nM19-M24
-**** Formation continue
-**** Data-driven généralisé
-**** Adoption complète
-
-***< 🎯 **BILAN M24**\nTransformation\nComplète
+***< 🎯 **BILAN M15**\nTransformation\nRéussie
 
 @endwbs
 
 legend bottom
-  **APPROCHE PROGRESSIVE PAR VAGUES**
+  **NOUVELLE APPROCHE SÉQUENCÉE**
 
-  🌊 **Vague 1** (M1-M6): Quick Wins → Gains immédiats mesurables
-  🌊 **Vague 2** (M7-M18): Structurants → Automatisation & intégrations
-  🌊 **Vague 3** (M19-M24): Excellence → IA/ML & culture data-driven
+  🌊 **Phase 1 (M1-M4)** : SOCLE → On remplace le papier sans bloquer le métier.
+  🌊 **Phase 2 (M5-M10)** : PRODUCTION → Le gros morceau (Terrain + Stocks).
+  🌊 **Phase 3 (M11-M15)** : ADMIN → On optimise le back-office une fois que le terrain tourne.
 
-  🎯 Go/No-Go après chaque vague (validation gains réels)
-  💰 Gains Vague 1 financent Vagues 2-3 (auto-financement partiel)
+  🎯 **Objectif** : Éviter l'indigestion digitale et garantir l'adoption.
 end legend
 
 @enduml

@@ -1,6 +1,6 @@
 @startuml Architecture_Cible_Globale
 
-title Architecture IT Cible - Transformation Digitale Duret
+title Architecture IT Cible - Option 1 : Full Odoo (Recommandée)
 
 !define RECTANGLE class
 
@@ -8,123 +8,89 @@ title Architecture IT Cible - Transformation Digitale Duret
 package "UTILISATEURS FINAUX" #E6F3FF {
   actor "Direction\n(Dashboards)" as Dir
   actor "Managers\n(Web/Mobile)" as Mgr
-  actor "Terrain\n(Apps Mobile)" as Terrain
-  actor "Clients\n(Portails)" as Clients
+  actor "Terrain\n(Odoo Mobile)" as Terrain
+  actor "Clients\n(Portail Odoo)" as Clients
 }
 
 ' Couche Applications
-package "APPLICATIONS MÉTIER" #E8F5E9 {
-  component "ERP Moderne\n(Odoo BTP)" as ERP #90EE90
-  component "SIRH Cloud\n(Lucca/PayFit)" as SIRH #90EE90
-  component "CRM/Ticketing\n(HubSpot)" as CRM #90EE90
-  component "Apps Chantiers\n(React Native)" as AppsMobile #90EE90
+package "CŒUR DU SYSTÈME : ODOO ENTERPRISE" #E8F5E9 {
+  component "Odoo CRM\n(Ventes & Devis)" as CRM #90EE90
+  component "Odoo Projets\n(Suivi Affaires)" as Projet #90EE90
+  component "Odoo Field Service\n(Interventions)" as FSM #90EE90
+  component "Odoo Achats & Stock\n(Logistique)" as Stock #90EE90
+  component "Odoo Compta\n(Facturation)" as Compta #90EE90
 }
 
-' Couche Intégration
-package "COUCHE INTÉGRATION (APIs)" #FFF4E4 {
-  component "API Gateway" as Gateway #FFD700
-  component "ETL Legacy\n(Sage MDE)" as ETL #FFD700
-  component "Webhooks\nNotifications" as Webhooks #FFD700
-  component "APIs Fournisseurs\n(Rexel, Sonepar)" as APIFourn #FFD700
+' Couche RH Spécialisée
+package "RH & PAIE" #FFF4E4 {
+  component "PayFit\n(Paie & DSN)" as PayFit #FFD700
+  component "Odoo Employés\n(Dossier RH)" as RH #90EE90
 }
 
-' Couche Données
-package "DATA WAREHOUSE CENTRAL" #E4E4FF {
-  database "PostgreSQL\nDonnées Métier" as DB #4169E1
-  database "S3 / Blob Storage\nPhotos, Documents" as Storage #4169E1
-  component "Analytics & BI\n(Power BI)" as BI #6495ED
-  component "ML/IA Engine\n(Prédictions)" as ML #6495ED
+' Couche Données & Intégration
+package "INFRASTRUCTURE & DATA" #E4E4FF {
+  database "PostgreSQL\n(Odoo DB)" as DB #4169E1
+  component "Odoo Documents\n(GED Centralisée)" as GED #6495ED
+  component "Connecteurs APIs\n(Rexel, Sonepar)" as APIs #FFD700
 }
 
-' Connexions Utilisateurs → Applications
-Dir --> ERP
-Dir --> SIRH
+' Connexions
 Dir --> CRM
-Dir --> BI
+Dir --> Projet
+Dir --> Compta
 
-Mgr --> ERP
-Mgr --> SIRH
 Mgr --> CRM
+Mgr --> Projet
+Mgr --> RH
 
-Terrain --> AppsMobile
+Terrain --> FSM
+Terrain --> Stock
 
-Clients --> CRM
+Clients --> CRM : Portail Client
 
-' Connexions Applications → Intégration
-ERP --> Gateway
-SIRH --> Gateway
-CRM --> Gateway
-AppsMobile --> Gateway
+' Flux Internes Odoo
+CRM -> Projet : Gagné -> Nouveau Projet
+Projet -> FSM : Tâche -> Intervention
+FSM -> Stock : Consommation Matériel
+Stock -> Compta : Facture Fournisseur
+Projet -> Compta : Facturation Client
 
-' Connexions Intégration → Data
-Gateway --> DB
-ETL --> DB
-Webhooks --> DB
-APIFourn --> DB
+' Flux RH
+RH -> PayFit : Variables Paie (Absences, Heures)
+PayFit -> Compta : Écritures Paie (OD)
 
-Gateway --> Storage
-AppsMobile --> Storage
-
-' Connexions Data → Analytics
-DB --> BI
-DB --> ML
-Storage --> BI
-
-note right of ERP
-  **ERP MODERNE**
-  • Odoo Enterprise Cloud
-  • Affaires, Devis, Achats, Stocks
-  • Mobile-first
-  • < 2s chargement (vs 30-40s MDE)
-  • RBAC granulaire
-end note
-
-note right of SIRH
-  **SIRH CLOUD**
-  • Fin 22 systèmes RH isolés
-  • Paie automatisée
-  • Workflow congés digital
-  • App mobile pointage
-  • Dashboards RH temps réel
-end note
+' Flux Externes
+Stock <--> APIs : Prix & Dispo
+APIs --> Stock : Commandes EDI
 
 note right of CRM
-  **CRM/TICKETING**
-  • Fin post-it (traçabilité 100%)
-  • Portail client self-service
-  • Workflow validation
-  • Analytics & KPIs
-end note
-
-note right of AppsMobile
-  **APPS MOBILE TERRAIN**
-  • Photos géolocalisées
-  • Rapports digitaux
-  • Bon intervention digital
-  • Mode offline complet
+  **ODOO CRM & VENTES**
+  • Fin des Post-it
+  • Devis en 30min (Templates)
   • Signature électronique
 end note
 
-note bottom of DB
-  **SINGLE SOURCE OF TRUTH**
+note right of FSM
+  **ODOO FIELD SERVICE**
+  • App Mobile Native (Offline)
+  • Rapports d'intervention
+  • Signature client sur écran
+end note
 
-  ✅ Centralisation toutes données
-  ✅ Historisation complète (audit trail)
-  ✅ Analyses consolidées multi-services
-  ✅ ML/IA (prédictions, détections, optimisations)
-  ✅ Backup automatique quotidien
-  ✅ RGPD compliant
+note right of PayFit
+  **PAYFIT (BEST-OF-BREED)**
+  • Expert Paie Française
+  • DSN Automatisée
+  • Bulletins simples
 end note
 
 legend bottom
-  **BÉNÉFICES ARCHITECTURE CIBLE**
+  **ARCHITECTURE UNIFIÉE (FULL ODOO)**
 
-  🔴 Fin silos Excel (60+ fichiers → Systèmes intégrés)
-  🔴 Fin processus manuels (automatisation workflows)
-  🔴 Traçabilité 100% (vs 20-50% actuel)
-  🔴 Visibilité temps réel (vs données décalées)
-  🔴 Mobilité terrain (apps mobiles offline)
-  🔴 Scalabilité (croissance possible)
+  ✅ **Simplicité** : Une seule interface pour 90% des besoins.
+  ✅ **Cohérence** : Donnée unique (Client, Article, Projet).
+  ✅ **Mobilité** : App Odoo native pour le terrain.
+  ✅ **Paie** : Délégée à un expert (PayFit) pour la conformité.
 end legend
 
 @enduml

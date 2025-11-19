@@ -64,11 +64,12 @@ Nous présentons **2 approches** pour la transformation digitale de Duret Élect
 | Poste | Coût ✅ Corrigé |
 |-------|----------------|
 | **Licences Odoo Enterprise** | ~90 000 € (100 users x 3 ans) |
-| **PayFit** (Paie) | ~27 000 € (100 salariés x 3 ans) |
+| **PayFit** (Paie) | ~64 000 € (100 salariés x 3 ans) |
+| **Matériel Terrain** (Smartphones/Tablets) | ~20 000 € (Nouveau !) |
 | **CTI Téléphonie** | ~15 000 € (setup + 3 ans) |
 | **Intégrations & Développements** | ~30 000 € (Connecteurs SAGE, RFID) |
 | **Formation & Change Management** | ~19 000 € |
-| **TOTAL 3 ANS** | **~329 000 €** |
+| **TOTAL 3 ANS** | **~238 000 €** |
 
 ### ✅ Avantages
 
@@ -150,8 +151,8 @@ Nous présentons **2 approches** pour la transformation digitale de Duret Élect
 
 | Critère | 🔵 Option 1 (Full Odoo) | 🟣 Option 2 (Best-of-Breed) |
 |---------|-------------------------|------------------------------|
-| **Investissement 3 ans** | **329 000 €** | **447 000 €** |
-| **Gains/an estimés** | ~1 000 000 € | ~1 100 000 € |
+| **Investissement 3 ans** | **~238 000 €** | **~447 000 €** |
+| **Gains/an estimés** | Gains significatifs (à mesurer) | Gains significatifs (à mesurer) |
 | **Payback** | < 12 mois | < 12 mois |
 | **Nombre d'éditeurs** | 2-3 (Odoo, PayFit, CTI) | 5-6 (HubSpot, Odoo, PayFit, Dev custom, PowerBI) |
 | **Complexité maintenance** | ⭐⭐ Faible | ⭐⭐⭐⭐ Élevée |
@@ -183,30 +184,26 @@ Nous présentons **2 approches** pour la transformation digitale de Duret Élect
 
 ## 📅 ROADMAP GLOBALE RECOMMANDÉE
 
-### ✅ **Wave 1 : Services Critiques** (Mois 1-6)
-*   Achats-Logistique (RFID + Odoo Achats).
-*   Chantiers (Odoo Field Service + App Mobile).
-*   Service-Client (Odoo CRM + Helpdesk).
+### ✅ **Phase 1 : Socle & "Quick Wins"** (Mois 1-4)
+*   **Objectif** : Remplacer le plus critique sans paralyser.
+*   **Actions** : CRM Simple (fin Post-it), Chat Pro (fin WhatsApp), Devis (fin Sage).
 
-**Objectif** : Résoudre les 3 crises (perte clients, rapports manuels, stock chaotique).
+### ✅ **Phase 2 : Le Cœur du Réacteur** (Mois 5-10)
+*   **Objectif** : La production terrain.
+*   **Actions** : App Mobile Chantiers (Odoo Field Service), Gestion Stocks (RFID).
 
-### ✅ **Wave 2 : Services Urgents** (Mois 7-12)
-*   RH (Odoo RH + PayFit).
-*   Albertville (Odoo Projet + App BL Mobile).
+### ✅ **Phase 3 : Admin & RH** (Mois 11-15)
+*   **Objectif** : Back-office.
+*   **Actions** : SIRH/Paie (PayFit), Dashboards Direction.
 
-**Objectif** : Soulager la surcharge RH, digitaliser le site BTP.
-
-### ✅ **Wave 3 : Optimisations** (Mois 13-18)
-*   Direction-Affaires (Dashboards BI).
-*   Gestion Opérationnelle (Odoo Planning).
-*   Maintenance Technique (Odoo FSM).
-
-**Objectif** : Excellence opérationnelle, pilotage temps réel.
+### ⚠️ **Pré-requis Critiques**
+*   **Audit Connectivité** : Fibre optique obligatoire avant bascule Cloud.
+*   **Matériel** : Achat smartphones/tablettes robustes pour équipes terrain.
 
 ---
 
 **📧 Contact** : Direction Générale - Duret Électricité  
 **🎯 Objectif** : Transformation digitale complète (8 services, 18 mois)  
-**💰 Enjeu** : 1M€/an de gains récurrents  
+**💰 Enjeu** : Modernisation & Fiabilité (ROI à confirmer par mesures)  
 **⏰ Urgence** : CRITIQUE (3 services en crise)
 
