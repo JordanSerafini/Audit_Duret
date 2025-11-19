@@ -2,14 +2,14 @@
 !theme plain
 autonumber
 
-header État des lieux - PROCESSUS ACTUEL
-title Séquence : Commande de Matériel (Le parcours du combattant)
+header Etat des lieux - PROCESSUS ACTUEL
+title Sequence : Commande de Materiel (Le parcours du combattant)
 
 box "Chantier" #White
     actor "Marc\n(Chef Chantier)" as Marc
 end box
 
-box "Bureau / Siège" #AliceBlue
+box "Bureau / Siege" #AliceBlue
     actor "Sylvie\n(Achats)" as Sylvie
     database "Sage MDE" as Sage
     collections "Excel\n(Suivi/Fourn.)" as Excel
@@ -17,7 +17,7 @@ box "Bureau / Siège" #AliceBlue
 end box
 
 box "Logistique / Externe" #White
-    actor "Éric\n(Dépôt)" as Eric
+    actor "Eric\n(Depot)" as Eric
     participant "Fournisseur" as Fourn
 end box
 

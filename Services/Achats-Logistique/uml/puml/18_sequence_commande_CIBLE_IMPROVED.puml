@@ -3,8 +3,8 @@
 autonumber
 skinparam backgroundColor #F8F8FF
 
-header Architecture CIBLE - PROCESSUS OPTIMISÉ
-title Séquence : Commande Matériel (Version DIGITALISÉE)
+header Architecture CIBLE - PROCESSUS OPTIMISE
+title Sequence : Commande Materiel (Version DIGITALISEE)
 
 box "Terrain Mobile" #E6FFE6
     actor "Marc (Chef Chantier)" as Marc
