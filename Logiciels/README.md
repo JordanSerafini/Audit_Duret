@@ -111,6 +111,24 @@
 
 ---
 
+### 4. Gestion Stocks (Scan/Douchette)
+
+#### 📦 [Solutions Scan Dépôt](Stocks-Scan/PRESENTATION_SOLUTIONS_SCAN_DEPOT.md)
+
+**2 approches** :
+
+1. **Code-Barres** (Phase 1)
+   - Prix : **5 170€** initial + 2 500€/an
+   - ROI : **3 mois**
+   - Recommandation : ✅ **Démarrage immédiat**
+
+2. **RFID** (Phase 2)
+   - Prix : 26 500€ initial + 12 500€/an
+   - ROI : 8,5 mois
+   - Recommandation : ⚠️ **Après maîtrise code-barres**
+
+---
+
 ## 💰 COMPARATIFS DES 2 OPTIONS STRATÉGIQUES
 
 ### Option 1 : **L'Approche Unifiée (Full Odoo)**
