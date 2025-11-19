@@ -60,8 +60,8 @@
 
 #### Techniciens (Gaëtan & équipe)
 
-- ❌ **CERFA papier remplis à la main** (temps significatif par intervention)
-- ❌ **Impossible générer devis terrain** (opportunités perdues)
+- ❌ **CERFA papier remplis à la main** (temps significatif par intervention, **source d'erreurs**)
+- ❌ **Impossible générer devis terrain** (opportunités perdues, **demande client fréquente**)
 - ❌ **Pas de pointage digital** arrivée/départ (refacturation heures difficile)
 - ❌ **Photos sur téléphone perso** (pas centralisées, traçabilité zéro)
 - ❌ **Déplacements non optimisés** (pas de zoning intelligent)
