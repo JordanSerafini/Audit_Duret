@@ -1,6 +1,8 @@
-# Études des APIs Sonepar et Rexel
+# Études des APIs - Stratégie "Odoo Native + IA"
 
-Ce dossier contient une analyse complète des possibilités d'intégration avec les APIs des fournisseurs Sonepar et Rexel, mise à jour en novembre 2025.
+🎯 **ALIGNEMENT STRATÉGIQUE** : Ce dossier a été réorganisé pour prioriser les APIs qui supportent la migration Odoo et la future roadmap IA/Data.
+
+⚠️ **CHANGEMENTS NOVEMBRE 2025** : Certaines APIs initialement prévues ont été disqualifiées suite à la validation de la stratégie "Odoo Native + IA".
 
 ## 📁 Contenu du dossier
 

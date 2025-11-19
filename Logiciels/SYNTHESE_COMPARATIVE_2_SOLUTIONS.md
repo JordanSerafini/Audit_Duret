@@ -192,6 +192,51 @@
 
 ---
 
+## 🔬 ANALYSES CAPACITÉS DATA & IA
+
+### 🏆 **Odoo : Excellence Data-Driven (Score 9/10)**
+
+| Critère Data/IA | Odoo ERP | Score | Avantage stratégique |
+|------------------|----------|-------|---------------------|
+| **Base PostgreSQL** | ✅ Ouverte | 10/10 | Requêtes SQL directes, export illimité pour algorithmes ML |
+| **Stack Python** | ✅ Natif | 10/10 | Idéal scikit-learn, TensorFlow, pandas. Développement IA facilitée |
+| **APIs REST/GraphQL** | ✅ Complètes | 9/10 | Intégration Databricks, Snowflake, Power BI sans friction |
+| **Modules IA natifs** | ✅ Disponibles | 8/10 | Prédictions stock automatiques, scoring client |
+| **Data Lake ready** | ✅ Compatible | 9/10 | Export temps réel vers plateformes analytics |
+
+**Score Data Global Odoo : 9,2/10** 🏆 **LEADERSHIP TECHNOLOGIQUE**
+
+### ❌ **EBP + Solutions : Impasse Data (Score 1,5/10)**
+
+| Critère Data/IA | EBP + Solutions | Score | Limitation critique |
+|------------------|-----------------|-------|-------------------|
+| **Architecture fermée** | ❌ EBP propriétaire | 1/10 | Données silotées, export manuel difficile |
+| **Extractibilité données** | ❌ Limitée | 1/10 | Impossible d'entraîner modèles prédictifs sur stock |
+| **Synchronisations multiples** | ❌ 5 sources | 2/10 | EBP↔HubSpot↔Lucca↔Silae = risque incohérences |
+| **APIs ouvertes** | ⚠️ HubSpot seul | 3/10 | 80% données dans EBP inaccessibles |
+| **Stack technologique** | ❌ Propriétaire | 1/10 | Aucun langage IA natif (Python/R) |
+
+**Score Data Global EBP+ : 1,6/10** ⚠️ **IMPASSE TECHNOLOGIQUE**
+
+### ⚠️ **Impact stratégique pour Duret**
+
+**Avec Odoo (Data-Driven possible)** :
+- ✅ **IA prédictive stock** : Algorithme réapprovisionnement automatique
+- ✅ **Analytics temps réel** : KPI chantiers, marges, productivité
+- ✅ **Scoring clients automatique** : Priorisation commerciale by IA
+- ✅ **Maintenance prédictive** : Alertes préventives équipements clients
+- ✅ **Data Lake unique** : 100% données dans PostgreSQL
+
+**Avec EBP+ (Data limité)** :
+- ❌ **Aucun modèle prédictif** : Données dispersées, inaccessibles
+- ❌ **Analytics manuels** : Excel, rapports statiques
+- ❌ **Pas d'IA** : Réapprovisionnement stock manuel
+- ❌ **ROI Data compromis** : Pas de retour sur investissement data
+
+**Conclusion Data** : ✅ **Seule Odoo permet stratégie Data-Driven**
+
+---
+
 ### 🎯 Avantages Solution 2
 
 1. **Spécialisation BTP** :

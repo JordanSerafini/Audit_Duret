@@ -46,6 +46,21 @@ Pour le tracking et la dispo, utilisation des APIs REST spécifiques (ex: Rexel 
 - **Gain Financier** : Plus d'erreurs de prix (Prix nets contractuels appliqués automatiquement).
 - **Gain Opérationnel** : Chantier sait exactement quand le matériel arrive (fin des appels "C'est où ?").
 
+## Usage pour l'IA Prédictive
+
+### 📊 Flux de prix temps réel indispensable pour l'Assistant de Chiffrage Intelligent (IA)
+
+Les APIs Rexel/Sonepar ne sont pas qu'un outil de commande - elles deviennent la **source de données prix** pour l'algorithme de pricing prédictif.
+
+**Data Intelligence** : Les flux de prix temps réel permettront de :
+- **Analyser les fluctuations de prix matériaux** : Identifier les périodes d'augmentation/baisse pour optimiser les achats groupés
+- **Alimenter l'Assistant de Chiffrage IA** : Prix réels actualisés automatiquement dans les modèles de devis
+- **Prédiction marges** : L'algorithme préviendra si un devis risque de devenir non rentable en cas de hausse des matières premières
+
+**Machine Learning** : L'historique des prix sur 2-3 ans permettra de prédire les évolutions saisonnières et d'optimiser la stratégie d'achat.
+
+---
+
 ## 6. ✅ Verdict
 **CRITIQUE**.
 Remplace avantageusement l'idée d'une API "Chronopost" générique. Ici, on se connecte à la source (le distributeur) qui gère sa logistique. C'est le standard de l'industrie BTP efficace.

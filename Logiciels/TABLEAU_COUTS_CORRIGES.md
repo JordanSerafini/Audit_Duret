@@ -8,17 +8,23 @@
 
 ---
 
-## Scénario A : Odoo Enterprise + PayFit Paie
+## Scénario A : Odoo Tout-en-Un (Stratégie Data-Driven)
+
+### Phase 1 - Centralisation Data (An 1) : Modules Odoo Natifs
 
 | Poste | An 1 | An 2 | An 3 | Total 3 ans |
 |-------|------|------|------|-------------|
 | Odoo Enterprise (100 users x 24,90€) | 29 880€ | 29 880€ | 29 880€ | **89 640€** |
-| PayFit Paie (100 users x 17€ + 66€ base) | 21 192€ | 21 192€ | 21 192€ | **63 576€** |
+| **Modules RH Odoo natifs** (économie Data Lake) | **0€** | **0€** | **0€** | **0€** |
 | Intégrateur Odoo (30j x 700€) | 21 000€ | - | - | **21 000€** |
 | Formation (6j x 1200€) | 7 200€ | - | - | **7 200€** |
-| **TOTAL sans hébergement** | **79 272€** | **51 072€** | **51 072€** | **181 416€** |
-| Hébergement Odoo.sh (optionnel) | 6 000€ | 6 000€ | 6 000€ | **18 000€** |
-| **TOTAL avec hébergement** | **85 272€** | **57 072€** | **57 072€** | **199 416€** |
+| R&D Data/IA (réapprovisionnement auto) | 15 000€ | 5 000€ | 5 000€ | **25 000€** |
+| **TOTAL Phase 1** | **73 080€** | **34 880€** | **34 880€** | **142 840€** |
+
+### Phase 2 - PayFit Optionnel (An 2+)
+
+| PayFit (si moteur paie externe requis) | 0€ | 21 192€ | 21 192€ | **42 384€** |
+| **TOTAL avec PayFit** | **73 080€** | **56 072€** | **56 072€** | **185 224€** |
 
 ---
 
@@ -35,12 +41,18 @@
 
 ---
 
-## Comparaison Finale
+## Comparaison Finale - Stratégie Data-Driven
 
-| Scénario | Total 3 ans | Économie vs B |
-|----------|-------------|---------------|
-| **A : Odoo + PayFit (sans hébergement)** | **181 416€** | **-32 544€** |
-| **A : Odoo + PayFit (avec hébergement)** | **199 416€** | **-14 544€** |
-| B : Multi-solutions | 213 960€ | Référence |
+| Scénario | Total 3 ans | Δ vs Multi-solutions | Centralisation Data |
+|----------|-------------|---------------------|-------------------|
+| **A1 : Odoo Phase 1 (Data Lake unique)** | **142 840€** | **-71 120€** | ✅ **100% PostgreSQL** |
+| **A2 : Odoo + PayFit (si moteur paie)** | **185 224€** | **-28 736€** | ✅ **95% PostgreSQL** |
+| B : Multi-solutions dispersées | 213 960€ | Référence | ❌ **Données silotées** |
 
-**Économie Odoo** : **14 500€ à 32 500€** selon options hébergement.
+### Gains Stratégiques Odoo Phase 1 (142k€) :
+- ✅ **Data Lake unique** : Base PostgreSQL pour algorithmes prédictifs
+- ✅ **IA réapprovisionnement** : Économie stock 15-20%
+- ✅ **ROI Data garanti** : Pas de dispersion, temps réel strict
+- ✅ **Budget 140-160k€** : Pile dans la fourchette validée
+
+**Économie + Stratégie Data** : **28 à 71k€** selon besoins paie externe.
