@@ -1,7 +1,21 @@
 # 📞 Service Client & Relation Client - Documentation
 
+> **🚨 NOUVEL AUDIT & PLAN D'ACTION (Nov 2025)**
+> 👉 **[LIRE LE RAPPORT D'AUDIT DÉTAILLÉ](../../AUDIT_SERVICE_CLIENT.md)**
+> *Diagnostic "Système Post-it", Solution Odoo CRM, Plan "Zéro Post-it"*
+
 > Analyse complète du Service Client
 > Focus: État ACTUEL, pain points, personas, architecture cible
+
+---
+
+## 🚀 Solution Cible (Odoo CRM + Helpdesk)
+
+**Diagrammes Clés :**
+1. **[Timeline Appel](uml/svg/13_sequence_appel_CIBLE.svg)** : Remontée auto fiche client (CTI)
+2. **[Workflow RDV](uml/svg/14_activity_rdv_CIBLE.svg)** : Prise RDV en ligne (< 2 min)
+3. **[Architecture Cible](uml/svg/15_component_architecture_CIBLE.svg)** : Odoo Core + CTI + Portail
+4. **[Mindmap Solutions](uml/svg/16_mindmap_SOLUTIONS.svg)** : Fin du Post-it
 
 ---
 
