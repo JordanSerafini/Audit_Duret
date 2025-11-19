@@ -273,9 +273,12 @@ Un SIRH (Système d'Information Ressources Humaines) centralise et automatise la
 - ✅ **Une seule plateforme** (Odoo) pour 90% besoins
 
 **Coût 3 ans (100 collaborateurs)** :
-- Odoo Enterprise (déjà budgété) : 107 640€
-- PayFit Paie : 24 492€/an x 3 = **73 476€**
-- **TOTAL** : **181 116€** (ERP + RH + Paie)
+- Odoo Enterprise (déjà budgété) : 89 640€
+- PayFit Paie seule (66€ base + 17€/user x 100) : 21 192€/an x 3 = **63 576€**
+- Intégrateur et formation (déjà budgété) : 28 200€
+- **TOTAL** : **181 416€** (ERP + RH + Paie)
+
+**Note** : RH inclus gratuitement dans licence Odoo Enterprise (congés, frais, entretiens)
 
 ---
 

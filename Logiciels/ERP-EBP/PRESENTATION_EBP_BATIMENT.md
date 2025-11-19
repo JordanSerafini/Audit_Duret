@@ -232,13 +232,15 @@ EBP Bâtiment est un ERP français spécialisé pour les entreprises du BTP, not
 | Solution | Coût an 1 | Coût an 2 | Coût an 3 | **Total 3 ans** |
 |----------|-----------|-----------|-----------|-----------------|
 | **EBP PRO** (20 users) | 24 000€ | 24 000€ | 24 000€ | **72 000€** |
-| + HubSpot Pro | 24 000€ | 24 000€ | 24 000€ | 72 000€ |
-| + Lucca SIRH | 40 000€ | 40 000€ | 40 000€ | 120 000€ |
-| **TOTAL EBP + Compléments** | **88 000€** | **88 000€** | **88 000€** | **🔴 264 000€** |
+| + HubSpot Pro (10 users) | 10 800€ | 10 800€ | 10 800€ | 32 400€ |
+| + Lucca SIRH (100 users) | 14 520€ | 14 520€ | 14 520€ | 43 560€ |
+| + Silae Paie | 12 000€ | 12 000€ | 12 000€ | 36 000€ |
+| + Field Service app | 10 000€ | 10 000€ | 10 000€ | 30 000€ |
+| **TOTAL EBP + Compléments** | **71 320€** | **71 320€** | **71 320€** | **🔴 213 960€** |
 
-| **Odoo Enterprise** (100 users) | 35 880€ | 35 880€ | 35 880€ | **🟢 107 640€** |
+| **Odoo Enterprise + PayFit** | **60 472€** | **60 472€** | **60 472€** | **🟢 181 416€** |
 
-**Économie Odoo vs EBP+Compléments** : **156 360€ sur 3 ans**
+⚠️ **Note** : Coûts EBP estimatifs (pas de tarifs publics). Économie Odoo : **~32k€ sur 3 ans** vs solutions multiples
 
 ---
 

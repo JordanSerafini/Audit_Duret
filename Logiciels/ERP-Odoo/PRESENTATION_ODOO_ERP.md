@@ -222,7 +222,7 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 
 ### 2. Prix Imbattable
 ✅ **24,90€/user/mois** (vs 80-150€/user pour solutions spécialisées)
-✅ **Économie 156k€ sur 3 ans** vs EBP+HubSpot+Lucca
+✅ **Économie estimée 15-32k€ sur 3 ans** vs solutions multiples (à valider selon configuration)
 
 ### 3. Modularité et Progressivité
 ✅ **Démarrer simple** : CRM + Ventes (Mois 1-3)
@@ -443,24 +443,29 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 | Scénario | Coût 3 ans | Couverture | Complexité |
 |----------|------------|------------|------------|
 | **Odoo seul** | **155 840€** | ✅ **100%** | 🟢 **Simple** |
-| EBP + HubSpot + Lucca | 264 000€ | ⚠️ 95% | 🔴 Complexe (3 outils) |
+| Odoo + PayFit Paie | 181 416€ | ✅ **100%** | 🟢 **Simple** |
+| EBP + HubSpot + Lucca | 213 960€ | ⚠️ 95% | 🔴 Complexe (3-4 outils) |
 | Sage X3 + Compléments | >400 000€ | ✅ 100% | 🔴 Très complexe |
 
-**Économie Odoo** : **108 160€ sur 3 ans** vs solutions multiples
+**Note** : Coûts estimatifs sur 3 ans. Odoo seul ne comprend pas de moteur de paie (nécessite PayFit/Silae en complément).
 
 ---
 
 ### ROI Estimé
 
-**Gains annuels attendus** (à valider par mesures terrain) :
-- Temps administratif : -40% → ~30k€/an
-- Opportunités commerciales : +15% → ~50k€/an
-- Refacturation dépassements : +30% → ~20k€/an
-- Erreurs/reprises : -60% → ~15k€/an
-- **Total gains/an** : ~115k€
+⚠️ **DISCLAIMER** : Les gains ci-dessous sont des **estimations théoriques** basées sur les problèmes identifiés lors de l'audit. Ils nécessitent une **validation terrain** avec mesures avant/après déploiement.
 
-**Payback** : ~16 mois
-**ROI 3 ans** : **(345k€ gains - 156k€ investissement) / 156k€ = 121%**
+**Gains annuels potentiels** (estimations à valider) :
+- Temps administratif : -40% → ~30k€/an (estimation)
+- Opportunités commerciales : +15% → ~50k€/an (estimation)
+- Refacturation dépassements : +30% → ~20k€/an (estimation)
+- Erreurs/reprises : -60% → ~15k€/an (estimation)
+- **Total gains/an** : ~115k€ **(estimation théorique)**
+
+**Payback estimé** : ~16-20 mois (selon gains réels)
+**ROI 3 ans estimé** : **(345k€ gains estimés - 156k€ investissement) / 156k€ = ~121%** *(hypothèse à valider)*
+
+**Recommandation** : Mettre en place des **KPIs avant déploiement** pour mesurer gains réels post-implémentation.
 
 ---
 
@@ -474,9 +479,9 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
    - ✅ Résout **100% des problèmes identifiés** dans l'audit
    - ✅ **Une seule solution** vs 3-4 outils séparés
 
-2. **Prix imbattable** :
-   - ✅ **108k€ économisés** sur 3 ans vs alternatives
+2. **Prix compétitif** :
    - ✅ **24,90€/user/mois** (vs 80-150€ concurrents)
+   - ✅ Économie estimée **15-32k€ sur 3 ans** vs solutions multiples
 
 3. **Approche progressive** :
    - ✅ Démarrage rapide (CRM M1-M2)
