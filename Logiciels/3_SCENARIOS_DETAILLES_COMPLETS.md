@@ -128,6 +128,7 @@
 | **Formation** | 6j × 1 200€/j (3 sessions 2j par rôle) | 7 200€ |
 | **Migration données** | Import clients, produits, historique (inclus intégrateur) | 0€ |
 | **Modules custom** | RFID stocks, templates BTP spécifiques | 10 000€ |
+| **Connecteurs APIs** | Open Banking, BOAMP, Sonepar/Rexel | 5 000€ |
 | **TOTAL AN 1** | | **89 272€** |
 
 ### Coûts Récurrents (An 2-3)

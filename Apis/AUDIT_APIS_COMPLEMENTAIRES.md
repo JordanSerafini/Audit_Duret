@@ -80,21 +80,4 @@
 
 ### Phase 1 : Le Socle (Mois 1-3)
 - [ ] **Sonepar/Rexel** (Achats)
-- [ ] **SAGE** (Compta)
-- [ ] **Open Banking** (Trésorerie)
-- [ ] **Marchés Publics** (Ventes - Quick Win)
-
-### Phase 2 : L'Opérationnel (Mois 4-9)
-- [ ] **Google Maps** (Optimisation)
-- [ ] **Chronopost** (Suivi Matériel)
-- [ ] **Twilio** (Relation Client)
-- [ ] **CONSUEL** (Workflow Interne)
-
-### Phase 3 : L'Expérience Client (Mois 10-12)
-- [ ] **Stripe** (Paiement Facile)
-- [ ] **Météo** (Anticipation)
-- [ ] **Qualibat** (Conformité RGE)
-
----
-
 **📧 Contact** : Direction IT - Duret Électricité

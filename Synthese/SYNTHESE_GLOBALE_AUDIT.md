@@ -373,8 +373,11 @@
 | **2** | CRM/Ticketing (HubSpot) | Service-Client | ÉLEVÉ | Faible (version gratuite) | Immédiat |
 | **3** | App Mobile Chantiers (Photos + Rapports) | Chantiers, Maintenance | ÉLEVÉ | À chiffrer | Rapide |
 | **4** | Dashboards BI KPIs Direction | Gestion-Op, Albertville | TRÈS ÉLEVÉ | À chiffrer | Rapide |
-| **5** | RFID/QR Stocks | Gestion-Op, Achats | MOYEN | À chiffrer | Moyen |
-| **6** | Templates Devis/PPSPS | Direction-Affaires | ÉLEVÉ | À chiffrer | Rapide |
+| **5** | **Veille Marchés Publics (API BOAMP)** | Direction-Affaires | ÉLEVÉ | Faible (Dev script) | **Immédiat** |
+| **6** | **Rapprochement Bancaire (Open Banking)** | Gestion-Op (Compta) | ÉLEVÉ | Faible (Module Odoo) | **Immédiat** |
+| **7** | **Tracking Fournisseurs (Rexel/Sonepar)** | Achats-Logistique | MOYEN | Faible (Connecteurs) | Rapide |
+| **8** | RFID/QR Stocks | Gestion-Op, Achats | MOYEN | À chiffrer | Moyen |
+| **9** | Templates Devis/PPSPS | Direction-Affaires | ÉLEVÉ | À chiffrer | Rapide |
 
 **Gains attendus M6** :
 - ✅ Réduction temps important sur processus critiques

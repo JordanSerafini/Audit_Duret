@@ -118,8 +118,7 @@ Marc (Chantier) → Téléphone → Sylvie (Bureau) → Téléphone → Fourniss
 
 **Intégrations :**
 - 🔌 Sage MDE (transition douce, coexistence)
-- 🔌 Rexel API (catalogue, commandes, EDI)
-- 🔌 Sonepar API (tarifs négociés, factures électroniques)
+- 🔌 **Sonepar/Rexel API** (Catalogues, commandes EDI, factures, tracking)
 - 🔌 Comptabilité (export écritures, analytique)
 
 #### **VOLET 2 : BI / DATA**
