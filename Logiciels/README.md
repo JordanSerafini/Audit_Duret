@@ -113,6 +113,8 @@
 
 ## 💰 COMPARATIFS PAR SCÉNARIO
 
+⚠️ **DISCLAIMER PRIX** : Les coûts présentés sont des **estimations** basées sur recherches web (janvier 2025) et tarifs publics disponibles. Certains prix (notamment EBP) sont estimés car non publics. **Recommandation impérative : Demander devis personnalisés** aux éditeurs avant toute décision.
+
 ### Scénario A : **Odoo Tout-en-Un** (RECOMMANDÉ)
 
 **Configuration** :

@@ -36,6 +36,8 @@ Un SIRH (Système d'Information Ressources Humaines) centralise et automatise la
 
 ## 💰 TARIFS DÉTAILLÉS 2025
 
+⚠️ **DISCLAIMER PRIX** : Les tarifs ci-dessous sont basés sur recherches web janvier 2025 et sources publiques. Prix indicatifs susceptibles d'évoluer. **Recommandation : Demander devis personnalisés** aux éditeurs pour obtenir tarifs contractuels adaptés à votre configuration.
+
 ### LUCCA
 
 **Modèle** : **Modules à la carte** (démarrer petit, enrichir progressivement)
@@ -312,11 +314,12 @@ Un SIRH (Système d'Information Ressources Humaines) centralise et automatise la
 
 | Scénario | ERP | SIRH | Paie | **Total 3 ans** | Économie |
 |----------|-----|------|------|-----------------|----------|
-| **🏆 Odoo + RH + PayFit** | Odoo | Odoo RH | PayFit | **181 116€** | **Référence** |
-| Odoo + Lucca + Silae | Odoo | Lucca | Silae | 187 200€ | -6 084€ |
-| EBP + Lucca + Silae | EBP | Lucca | Silae | 223 560€ | -42 444€ |
-| EBP + PayFit | EBP | PayFit | PayFit | 237 564€ | -56 448€ |
-| EBP + HubSpot + Lucca + Silae | EBP | Lucca | Silae | 343 560€ | -162 444€ |
+| **🏆 Odoo + RH + PayFit** | Odoo | Odoo RH | PayFit | **181 416€** | **Référence** |
+| Odoo + Lucca + Silae | Odoo | Lucca | Silae | 161 400€ | +20 016€ |
+| EBP + Lucca + Silae | EBP | Lucca | Silae | 151 560€ | +29 856€ |
+| EBP + HubSpot + Lucca + Silae | EBP + HubSpot | Lucca | Silae | 213 960€ | -32 544€ |
+
+⚠️ **Note** : Coûts incluent ERP + CRM + SIRH + Paie + intégrateur + formation. Odoo intègre CRM nativement (avantage tout-en-un).
 
 **Gagnant** : **🏆 Odoo ERP + Modules RH Odoo + PayFit Paie**
 
