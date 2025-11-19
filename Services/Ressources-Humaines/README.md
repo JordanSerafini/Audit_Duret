@@ -1,13 +1,3 @@
-# 📊 RESSOURCES HUMAINES - Duret Électricité
-
-**Service** : Ressources Humaines
-**Date audit** : Novembre 2025
-**Statut projet** : Prêt implémentation
-
----
-
-## 🎯 VUE D'ENSEMBLE
-
 Les **Ressources Humaines** chez Duret Électricité gèrent **~100 collaborateurs** avec **22 systèmes isolés** (15 outils + 7 fichiers Excel) générant des **ressaisies massives** (même donnée 5-6 fois) et une **surcharge critique** de Sophie RH.
 
 ### Personas Impactés
