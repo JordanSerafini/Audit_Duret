@@ -1,8 +1,8 @@
 # 💻 SOLUTIONS LOGICIELLES - AUDIT DURET ÉLECTRICITÉ
 
 **Date** : Janvier 2025
-**Contexte** : Transformation digitale PME BTP (~100 collaborateurs)
-**Objectif** : Présentation solutions ERP, CRM, SIRH avec alternatives
+**Contexte** : Transformation digitale PME BTP (~100 collaborateurs) avec capacités développement internes
+**Objectif** : Présentation solutions ERP, CRM, SIRH avec perspective développement custom
 
 ---
 
@@ -36,15 +36,17 @@
 
 ## 🏆 RECOMMANDATION GLOBALE
 
-### **SOLUTION UNIQUE : ODOO ERP ENTERPRISE**
+### **SOLUTION UNIQUE : ODOO ERP ENTERPRISE + DÉVELOPPEMENTS CUSTOM**
 
-**Couverture** : ✅ **100% des besoins Duret**
+**Couverture** : ✅ **100% des besoins Duret + extensibilité illimitée**
+
+🔧 **AVANTAGE STRATÉGIQUE** : Plateforme de développement complète permettant apps mobiles sur-mesure et intégrations métier avancées
 
 | Besoin | Module Odoo | Couverture |
 |--------|-------------|------------|
 | ERP (Devis, affaires) | Ventes, Projet | ✅ 100% |
 | CRM (Tickets, clients) | CRM, Helpdesk | ✅ 100% |
-| Field Service | Field Service | ✅ 100% |
+| Field Service | Field Service + Apps Custom | ✅ **120%** (Apps métier sur-mesure) |
 | Stocks | Inventaire | ✅ 100% |
 | Comptabilité | Comptabilité | ✅ 100% |
 | RH | RH, Recrutement | ✅ 100% |
@@ -53,7 +55,9 @@
 
 **Prix** : **24,90€/user/mois** (vs 80-150€ solutions spécialisées)
 
-**Complément paie** : PayFit (17€/user/mois) ou Silae
+**Complément paie** : Silae (12€/user/mois) ou PayFit (17€/user/mois)
+
+**🚀 BONUS DÉVELOPPEMENT** : ROI apps custom développées internalement
 
 ---
 
@@ -65,15 +69,17 @@
 - **Type** : ERP spécialisé BTP français
 - **Prix** : ~80-120€/user/mois
 - **Forces** : Spécialisation BTP, intégration Sonepar, support français
-- **Limites** : Prix élevé, pas CRM, pas SIRH, pas Field Service
-- **Recommandation** : ❌ Non recommandé (couverture insuffisante, prix élevé)
+- **Limites** : Prix élevé, **plateforme fermée** (pas d'extensibilité), pas CRM, pas Field Service
+- **🚫 BLOQUANT DÉVELOPPEUR** : APIs limitées, pas de customisation possible
+- **Recommandation** : ❌ Non recommandé (couverture insuffisante, pas évolutif)
 
 #### 🟢 [Odoo ERP](ERP-Odoo/PRESENTATION_ODOO_ERP.md) - **RECOMMANDÉ #1**
-- **Type** : ERP modulaire open source tout-en-un
+- **Type** : **Plateforme de développement** + ERP modulaire open source
 - **Prix** : **24,90€/user/mois**
-- **Forces** : Couverture 100%, prix imbattable, modulaire, Field Service complet
-- **Limites** : Généraliste (pas spécialisé BTP), besoin paramétrage initial
-- **Recommandation** : ✅ **FORTEMENT RECOMMANDÉ**
+- **Forces** : Couverture 100%, **APIs complètes**, framework dev intégré, apps custom natives
+- **🚀 AVANTAGE DÉVELOPPEUR** : Python/JS, REST APIs, modules custom, apps mobile natives
+- **Opportunités** : Templates BTP custom, intégrations fournisseurs, apps métier uniques
+- **Recommandation** : ✅ **FORTEMENT RECOMMANDÉ** (seule solution évolutive)
 
 ---
 
@@ -99,8 +105,8 @@
    - Couverture : Congés, frais, entretiens, recrutement
    - Recommandation : ✅ **Si Odoo ERP choisi**
 
-2. **Lucca + Silae**
-   - Prix : ~26k€/an (100 users)
+2. **Lucca + Silae** (CORRIGÉ)
+   - Prix : ~20k€/an (100 users) - Silae moins cher que PayFit
    - Couverture : SIRH complet + paie
    - Recommandation : ✅ **Si autre ERP que Odoo**
 
@@ -129,7 +135,41 @@
 
 ---
 
-### 5. Solutions Complémentaires Critiques
+### 5. 🚀 Développements Custom (NOUVEAU)
+
+#### Apps Mobiles Sur-Mesure
+
+**Opportunités développement avec Odoo** :
+
+1. **App CERFA Intelligente**
+   - Formulaires adaptatifs selon type intervention
+   - OCR automatique plaques/compteurs
+   - Signature électronique avancée
+   - Mode offline complet
+
+2. **Scanner Inventaire IA**
+   - Reconnaissance visuelle produits
+   - Géolocalisation automatique
+   - Prédictions stock intelligent
+   - Integration RFID native
+
+3. **Portail Client Enrichi**
+   - Suivi interventions temps réel
+   - Notifications push personnalisées
+   - Prise RDV intelligente
+   - Facturation interactive
+
+4. **Intégrations Fournisseurs**
+   - API Rexel/Sonepar automatisées
+   - Import tarifs temps réel
+   - Comparateur prix intelligent
+   - Workflow commandes optimisé
+
+**ROI Développements** : Apps valorisables pour autres PME BTP (revente possible)
+
+---
+
+### 6. Solutions Complémentaires Critiques
 
 #### 🔧 [Solutions Complémentaires](SOLUTIONS_COMPLEMENTAIRES.md)
 
