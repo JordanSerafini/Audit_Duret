@@ -11,10 +11,10 @@ box "Terrain Mobile" #E6FFE6
     participant "App Mobile\nOdoo" as AppMobile
 end box
 
-box "Système Central" #E6F3FF  
-    database "ERP Odoo\nModerne" as Odoo
+box "Système Central" #E6F3FF
+    database "ERP Odoo Moderne" as Odoo
     participant "API Gateway" as API
-    component "ML Engine\n(Suggestions)" as ML
+    participant "ML Engine Suggestions" as ML
 end box
 
 box "Achats & Logistique" #FFF0E6
