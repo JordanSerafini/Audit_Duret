@@ -85,15 +85,17 @@ PAYBACK : 4-5 mois
 - Création comptes utilisateurs
 - **Livrable** : Clothilde autonome admin
 
-**J20-J25 : Import Base Clients**
+**J20-J25 : Import Base Clients (EXTERNALISÉ)**
+- **🔧 CORRECTION CHARGE CLOTHILDE** : Prestataire data externe
 - Export Excel → CSV (300 contrats)
-- Nettoyage données (doublons, erreurs)
-- Import CRM (mapping champs)
-- Validation données (Clothilde)
+- Nettoyage données (doublons, erreurs) → Prestataire
+- Import CRM (mapping champs) → Prestataire
+- Validation données (Clothilde 2h/jour max)
 - **Livrable** : 300 clients dans CRM ✅
 
-**J26-J30 : Templates Rapports Interventions**
-- Création 10 templates types :
+**J26-J30 : Templates Rapports Interventions (CO-CRÉATION)**
+- **🔧 DÉLESTAGE CLOTHILDE** : Gaëtan + Consultant co-créent
+- Création 10 templates types (Gaëtan expertise métier) :
   - Entretien annuel (Bronze/Argent/Or)
   - Dépannage urgence
   - Mise en service
@@ -104,7 +106,7 @@ PAYBACK : 4-5 mois
   - Diagnostic panne
   - Installation nouveau
   - Autre (personnalisé)
-- Tests templates (Clothilde)
+- Tests templates (Clothilde validation finale 4h)
 - **Livrable** : 10 templates validés
 
 ---
@@ -121,31 +123,31 @@ PAYBACK : 4-5 mois
 - Mode offline configuration
 - **Livrable** : App configurée 7 techniciens
 
-**J36-J40 : Tests Pilote (2 Techniciens)**
-- Gaëtan + 1 technicien junior volontaire
-- 10 interventions tests :
-  - Rapport digital (vs CERFA papier)
-  - Photos avant/après
-  - Signature électronique
-  - Pointage GPS arrivée/départ
-- Recueil feedback quotidien
-- Ajustements ergonomie
-- **Livrable** : Retours pilote + ajustements faits
-
-**J41-J45 : Formation Techniciens (Groupe 1)**
-- Formation 3h × 2 sessions :
-  - Session 1 : Rapport intervention digital
-  - Session 2 : Devis terrain (préparation Phase 2)
-- Pratique terrain (1 intervention accompagnée)
+**J36-J40 : Formation TOUS Techniciens (OBLIGATOIRE)**
+- Formation 3h × 2 sessions TOUTE L'ÉQUIPE :
+  - **Session 1 (Gaëtan + 3 techniciens)** : J36-J38
+  - **Session 2 (4 techniciens restants)** : J39-J41
+- Contenu : Rapport intervention digital, pointage GPS, photos
+- Pratique terrain (1 intervention accompagnée par technicien)
 - Support hotline 8h-18h
-- **Livrable** : 5 techniciens formés
+- **Livrable** : 7 techniciens formés ET validés
+- **🔴 CONDITION** : Validation formation 100% AVANT déploiement
+
+**J41-J42 : Tests Pilote (2 Techniciens Volontaires)**
+- Gaëtan + 1 technicien junior (déjà formés)
+- 5 interventions tests de validation finale
+- Recueil feedback + ajustements ergonomie
+- **Livrable** : Tests concluants
 
 ---
 
-#### Semaine 7-8 (J46-J60) : Déploiement Général
+#### Semaine 7-8 (J43-J60) : Déploiement Général
 
-**J46-J50 : Déploiement Pilote Étendu**
-- 5 techniciens (tous sauf 2 seniors)
+**🔴 JALONS CONDITIONNELS AJOUTÉS**
+
+**J43-J50 : Déploiement Pilote Étendu**
+- **🚨 PRÉ-REQUIS** : Formation 7/7 techniciens validée (J41)
+- Déploiement 5 techniciens (formation déjà faite J36-J41)
 - Suivi quotidien (réunion 15 min/jour)
 - Résolution blocages terrain
 - Hotline dédiée
@@ -234,19 +236,22 @@ PAYBACK : 4-5 mois
 
 ### MOIS 4 : Module Devis Terrain
 
-**J95-J100 : Configuration Module Devis**
+**J95-J100 : Configuration Module Devis (DÉLÉGUÉ)**
+- **🔧 DÉLESTAGE CLOTHILDE** : Technicien référent formé
 - Import catalogue produits/services (50 références)
 - Grille tarifs (Bronze/Argent/Or)
 - Templates devis (5 types)
 - Tests génération PDF
 - **Livrable** : Module devis configuré
 
-**J101-J110 : Formation Techniciens Devis Terrain**
+**J101-J105 : Formation Techniciens Devis Terrain**
+- **🚨 PRÉ-REQUIS** : Module configuré ET validé (J100)
 - Formation 2h : Module devis app mobile
 - Pratique : Génération 1 devis terrain/technicien
 - **Livrable** : 7 techniciens formés devis
 
-**J111-J120 : Activation Module Devis**
+**J106-J120 : Activation Module Devis**
+- **🚨 PRÉ-REQUIS** : Formation 100% validée (J105)
 - Activation production
 - Suivi quotidien premiers devis
 - **J120 : 🎉 1er DEVIS GÉNÉRÉ TERRAIN**
@@ -268,13 +273,15 @@ PAYBACK : 4-5 mois
 - **Livrable** : Portail configuré
 
 **J131-J140 : Création Comptes Clients (Batch 1)**
+- **🚨 PRÉ-REQUIS** : Portail configuré ET testé (J130)
 - Sélection 100 clients pilotes (les plus actifs)
 - Création comptes (email unique)
 - Email invitation + tutoriel vidéo (2 min)
 - Hotline clients 8h-18h
-- **Livrable** : 100 comptes créés
+- **Livrable** : 100 comptes créés ET testés
 
 **J141-J150 : Activation Portail Client**
+- **🚨 PRÉ-REQUIS** : 100 comptes créés ET validés (J140)
 - Lancement portail LIVE
 - Monitoring connexions/RDV
 - **J150 : 🎉 1er RDV PRIS EN LIGNE**

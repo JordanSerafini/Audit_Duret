@@ -489,3 +489,9 @@ Coûts Qualité/Litiges () :
 - ✅ /an économies
 
 **Urgence : 🔴 CRITIQUE**
+
+---
+
+## 📊 VISUALISATION PROCESSUS
+
+**[📊 DIAGRAMME MERMAID PROCESSUS](03_DIAGRAMME_PROCESSUS_ACTUEL_MERMAID.md)** : Séquence détaillée du processus rapport d'intervention montrant 89% de temps perdu

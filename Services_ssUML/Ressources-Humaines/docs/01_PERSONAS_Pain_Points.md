@@ -346,6 +346,12 @@
 
 ---
 
+## 📊 VISUALISATION COMPLÉMENTAIRE
+
+**[📊 MATRICE IMPACT/EFFORT](02_MATRICE_IMPACT_EFFORT_RH.md)** : Analyse détaillée et priorisation des 10 pain points avec roadmap recommandée
+
+---
+
 **📅 Document créé** : Novembre 2025
-**🔄 Version** : 1.0
+**🔄 Version** : 1.1 (+ lien matrice)
 **👤 Source** : Audits terrain + Interviews

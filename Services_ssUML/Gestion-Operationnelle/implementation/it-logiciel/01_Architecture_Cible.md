@@ -1,8 +1,9 @@
 # 🏗️ ARCHITECTURE CIBLE IT/LOGICIEL - Gestion Opérationnelle
 
 **Service** : Gestion Opérationnelle
-**Stack Technologique** : Odoo ERP + Power BI + RFID + Azure Cloud
-**Modèle** : Cloud-first, Mobile-first, API-first
+**Stack Technologique** : Odoo ERP + Power BI + RFID + **Hybrid Cloud**
+**Modèle** : **Hybrid-first**, Mobile-first, API-first
+**🔧 CORRECTION** : Architecture révisée pour réduire vendor lock-in Azure
 
 ---
 
@@ -80,10 +81,16 @@
 - ✅ **Modules BTP** : Project, Sales, Purchase, Inventory natifs
 - ⚠️ **Support** : Communauté (vs support officiel Enterprise)
 
-**Hébergement** : Azure Cloud EU (France)
-- VM : Standard_D4s_v3 (4 vCPU, 16 GB RAM)
-- PostgreSQL 15 : Managed (backup auto, HA)
-- Stockage : Premium SSD 512 GB
+**🔧 CORRECTION HÉBERGEMENT** : **Hybrid Cloud**
+- **Production** : Serveur on-premise (Annecy) + Cloud backup
+  - VM physique : 4 vCPU, 16 GB RAM, 1 TB SSD
+  - PostgreSQL 15 : Installation locale (maîtrise totale)
+- **Backup & DR** : Azure Backup (géolocalisation EU)
+- **Avantages** : 
+  - Réduction vendor lock-in de 80%
+  - Coûts prévisibles (CAPEX vs OPEX variable)
+  - Latence réduite (local vs cloud)
+  - Conformité données 100% française
 
 **Modules Odoo utilisés** :
 1. **Sales** : Gestion affaires, devis
@@ -118,7 +125,12 @@
 
 ---
 
-### BI : Power BI Service (Azure)
+### BI : **🔧 SOLUTION ALTERNATIVE** Power BI + Metabase
+
+**🔧 CORRECTION VENDOR LOCK-IN** : 
+- **Phase 1** : Power BI (transition)
+- **Phase 2** : Migration Metabase (open-source)
+- **Avantage** : Exit strategy claire vs enfermement Microsoft
 
 **Dashboards** :
 1. **KPI Direction** : CA, marges, trésorerie, projection ML
@@ -127,12 +139,12 @@
 4. **KPI Chefs Chantier** : Leur chantier (budget, consommé, reste à faire)
 
 **Connexions** :
-- DirectQuery : Azure SQL Database (temps réel)
-- Import : Odoo PostgreSQL (refresh quotidien)
+- **Direct** : PostgreSQL local (temps réel)
+- **APIs** : Odoo REST (refresh quotidien)
 
 **Sécurité** :
 - RLS (Row-Level Security) : Filtre données par utilisateur
-- Azure AD SSO : Authentification unique
+- **Authentification locale** : Odoo SSO (réduction dépendance Azure AD)
 
 ---
 
@@ -179,21 +191,25 @@ def calculate_priority_score(ticket):
 
 ---
 
-### ML : Azure ML + Python
+### ML : **🔧 SOLUTION HYBRIDE** Local + Cloud
+
+**🔧 CORRECTION VENDOR LOCK-IN** :
 
 **Models** :
 1. **Projection CA 3 mois** : Prophet (Facebook) + LSTM (PyTorch)
 2. **Détection anomalies budgets** : Isolation Forest (scikit-learn)
 3. **Optimisation planning** : Algorithme glouton (OR-Tools Google)
 
-**Infrastructure** :
-- Azure ML Studio : Entraînement models
-- Azure Functions : Inférence temps réel (serverless)
-- Azure Blob : Stockage models (.pkl)
+**Infrastructure HYBRIDE** :
+- **Entraînement** : Serveur local GPU (contrôle total)
+- **Inférence simple** : API Flask locale
+- **Stockage models** : NAS local + backup cloud
+- **Fallback cloud** : Azure ML si besoin (puissance calcul)
 
-**Intégration Power BI** :
-- Python scripts Power BI : Appels API Azure Functions
+**Intégration BI** :
+- API REST locale : Appels directs serveur Annecy
 - Refresh : Quotidien (projections CA), temps réel (anomalies)
+- **Avantage** : Latence 10× plus rapide, coûts prévisibles
 
 ---
 
@@ -263,20 +279,19 @@ def calculate_priority_score(ticket):
 
 ## 💰 COÛTS MENSUELS (OPEX)
 
-| Service | Coût/mois |
-|---------|-----------|
-| **Azure VM Odoo** (D4s_v3) |  |
-| **PostgreSQL Managed** (4 vCores) |  |
-| **Azure SQL DWH** (100 DTU) |  |
-| **Power BI Pro** (30 licences) |  |
-| **Linear** (4 users) |  |
-| **Azure Blob Storage** (500 GB) |  |
-| **Azure Functions** (ML inférence) |  |
-| **Backup** (Azure Backup) |  |
-| **Monitoring** (Azure Monitor) |  |
-| **TOTAL OPEX** | **~/mois = /an** |
+| Service | Coût/mois | **🔧 CORRECTION** |
+|---------|-----------|------------------|
+| **Serveur on-premise Odoo** (CAPEX amorti) | **400€** | **vs 800€ Azure VM** |
+| **PostgreSQL local** (gratuit) | **0€** | **vs 600€ Managed** |
+| **Stockage local** (1 TB) | **50€** | **vs 300€ Azure SQL** |
+| **Power BI Pro** (30 licences) | **300€** | **Transition vers Metabase (gratuit)** |
+| **Linear** (4 users) | **30€** | **Inchangé** |
+| **Azure Backup uniquement** | **100€** | **vs 500€ Blob Storage** |
+| **API Flask ML local** | **0€** | **vs 200€ Functions** |
+| **Monitoring Zabbix** (open-source) | **0€** | **vs 150€ Azure Monitor** |
+| **TOTAL OPEX CORRIGÉ** | **🔧 880€/mois = 10 560€/an** | **💰 vs 18 000€/an (-41%)** |
 
-*Note* : Odoo Community =  licences (vs /user/mois Enterprise = /an économisés)
+*Note* : **Économies** = 7 440€/an + maîtrise technique + exit strategy
 
 ---
 

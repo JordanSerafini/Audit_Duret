@@ -493,3 +493,17 @@ Résultat : Sophie traite dans le désordre
 
 **📊 ROI Total Potentiel : 1./an de pertes évitables**
 **🎯 Objectif Réaliste : Récupérer 40-50% = 600-/an**
+
+---
+
+## 📊 VISUALISATIONS COMPLÉMENTAIRES
+
+**[🏗️ ARCHITECTURE ACTUELLE](02_ARCHITECTURE_Actuelle_Chaos.md)** : État des lieux technique - Le "Non-Système"
+
+**[📊 DIAGRAMME PROCESSUS](03_DIAGRAMME_PROCESSUS_ACTUEL_MERMAID.md)** : Séquence Mermaid du processus rapport (2h15 vs 15min possible)
+
+---
+
+**📅 Document créé** : Novembre 2025
+**🔄 Version** : 1.1 (+ liens visuels)
+**👤 Source** : Audits terrain

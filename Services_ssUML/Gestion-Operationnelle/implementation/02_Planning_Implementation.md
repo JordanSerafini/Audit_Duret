@@ -86,10 +86,12 @@ Résoudre pain points critiques immédiats avec ROI rapide
 | **M4** | Dev Dashboards Chefs + Tests | - Dashboard Chefs Chantier (RBAC : leur chantier)<br>- Tests utilisateurs (Sylvie, 2 RA, 3 chefs)<br>- Ajustements UX |
 | **M5** | Formation + GO-LIVE | - Formation direction (2h)<br>- Formation Sylvie + RA + Chefs (1j)<br>- **GO-LIVE progressif**<br>- Support réactif (hotline 2 mois) |
 
-**Équipe** :
-- Chef projet : Sylvie (30%)
+**🔧 CORRECTION CHARGE SYLVIE** :
+- **Chef projet** : **Consultant externe (100%)** + Sylvie support (10%)
+- **Assistant contrôle gestion** : **RECRUTÉ M0** (délestage Sylvie 40%)
 - Consultant Power BI : Externe (senior)
 - Data engineer : Externe (ETL SAGE/MDE)
+- **🚨 PRÉ-REQUIS** : Sylvie délestée AVANT démarrage projet
 
 **KPIs succès** :
 - Temps génération KPI mensuels : 24h → 2h (-92%)
@@ -145,10 +147,12 @@ Résoudre pain points critiques immédiats avec ROI rapide
 | **M16** | Intégrations + Clôture | - Intégration SAGE Comptabilité (API)<br>- Intégration Power BI (data source Odoo)<br>- App mobile Odoo (iOS + Android)<br>- Formation générale (5j × 30 users)<br>- **GO-LIVE complet** |
 
 **Équipe** :
-- Chef projet : RA senior (50%)
+- **Chef projet** : **Consultant externe ERP** (100%)
+- **Sylvie** : **Support métier uniquement (15% max)**
 - Intégrateur Odoo : Externe (certifié)
 - Dev custom : 2× externes (Python Odoo)
 - Data engineer : Migration données
+- **🚨 CONDITION** : Assistant contrôle gestion opérationnel AVANT migration
 
 **KPIs succès** :
 - Vitesse écrans : <2 sec (vs 30 sec MDE)
@@ -218,7 +222,7 @@ Résoudre pain points critiques immédiats avec ROI rapide
 |------|--------|-----------|
 | **M19** | Audit Data Quality | - Audit qualité données (doublons, incohérences, complétude)<br>- Rapport data quality (score actuel) |
 | **M20** | Nettoyage + MDM | - Nettoyage automatisé (scripts Python)<br>- MDM Master Data Management (Clients, Produits, Fournisseurs)<br>- Référentiels uniques |
-| **M21** | Gouvernance + CDO | - Désignation Chief Data Officer (Sylvie ?)<br>- Politique gouvernance données (doc)<br>- Contrôles qualité automatisés (alertes)<br>- **GO-LIVE** |
+| **M21** | Gouvernance + CDO | - **🔧 CORRECTION CDO** : **Sylvie = Chief Data Officer GRADUEL**<br>- Désignation progressive (éviter surcharge brutale)<br>- **Phase 1** : Formation CDO (2j)<br>- **Phase 2** : Délégation 50% tâches courantes à assistant<br>- **Phase 3** : Prise responsabilité CDO (10h/sem max)<br>- Politique gouvernance données (doc)<br>- Contrôles qualité automatisés (alertes)<br>- **Livrable** : Transition CDO progressive ✅ |
 
 ---
 
@@ -239,7 +243,8 @@ Résoudre pain points critiques immédiats avec ROI rapide
 
 | Mois | Jalon | Décision |
 |------|-------|----------|
-| **M0** | **Validation Direction** | GO/NO-GO Phase 1 () |
+| **M-2** | **🚨 PRÉ-REQUIS SYLVIE** | **RECRUTEMENT Assistant contrôle gestion (OBLIGATOIRE)** |
+| **M0** | **Validation Direction** | GO/NO-GO Phase 1 () **+ Délestage Sylvie validé** |
 | **M6** | **Bilan Phase 1** | GO/NO-GO Phase 2 () basé ROI réel P1 |
 | **M11** | **POC Odoo** | GO/NO-GO migration ERP (après POC 6 sem) |
 | **M18** | **Bilan Phase 2** | GO/NO-GO Phase 3 () |
