@@ -31,7 +31,7 @@
 **Problèmes Majeurs Identifiés :**
 - ❌ **Taux élevé de commandes incomplètes** (fait constaté)
 - ❌ **Processus 100% manuel** (téléphone, papier, Excel)
-- ❌ **Base de données chaotique** (Sage MDE "calamiteux")
+- ❌ **Base de données chaotique** (Sage MDE "calamiteux", **même produit à 2 prix différents**)
 - ❌ **Aucune traçabilité** digitale
 - ❌ **Chantiers souvent bloqués** par manque de matériel
 
