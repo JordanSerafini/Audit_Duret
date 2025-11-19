@@ -6,6 +6,7 @@
 - **Priorité** : 🔴 **CRITIQUE** (Cœur de métier)
 - **Complexité** : Moyenne (EDIFACT ou API REST propriétaires)
 - **Coût API** : Inclus dans le contrat cadre
+- **Détails Techniques** : [Voir Étude Rexel](ETUDE_API_REXEL.md) | [Voir Étude Sonepar](ETUDE_API_SONEPAR.md)
 
 ## 2. 🎯 Contexte & Enjeux pour Duret
 Les achats de matériel électrique représentent une part majeure des coûts.
