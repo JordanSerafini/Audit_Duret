@@ -1,0 +1,110 @@
+@startuml
+!theme plain
+title Architecture CIBLE - Système Intégré & Moderne
+
+node "Terrain Mobile" as Terrain #E6FFE6 {
+    agent "Marc\n(Chef Chantier)" as Marc
+    component "App Odoo Native\n(iOS + Android)" as AppMobile #90EE90
+    component "Mode Offline\n(Sync auto)" as Offline #98FB98
+}
+
+node "Data Center Hybrid" as DataCenter #E6F3FF {
+    component "ERP Odoo v17\n(On-premise)" as Odoo #87CEEB
+    database "PostgreSQL 15\n(Haute Performance)" as Postgres #4682B4
+    component "API Gateway\n(REST + GraphQL)" as APIGateway #5F9EA0
+    component "ML Engine\n(Prédictions)" as MLEngine #48D1CC
+}
+
+node "Dépôt Connecté" as DepotConnecte #FFF0E6 {
+    agent "Éric\n(Magasinier)" as Eric
+    component "Portique RFID\n(Zebra FX9600)" as PortiqueRFID #FFD700
+    component "Douchettes Scan\n(Zebra MC3300)" as Douchettes #FFA500
+    database "Stock Temps Réel\n(RFID Tags)" as StockReel #FF8C00
+}
+
+cloud "Fournisseurs Connectés" as CloudAPI #F0F8FF {
+    component "Rexel API\n(Catalogue + Stock)" as RexelAPI #B0E0E6
+    component "Sonepar API\n(Prix + Dispo)" as SoneAPI #B0E0E6
+    component "Autres APIs\n(Extensible)" as AutresAPI #B0E0E6
+}
+
+cloud "Services Cloud" as ServicesCloud #F5F5F5 {
+    component "Power BI\n(Dashboards)" as PowerBI #FFE4B5
+    component "Azure Backup\n(DR)" as Backup #D3D3D3
+    component "Monitoring\n(24/7)" as Monitor #C0C0C0
+}
+
+' Connexions principales - Vert pour les flux optimisés
+Marc -down-> AppMobile : 📱 Interface tactile\n(UX optimisée)
+AppMobile -down-> APIGateway : 🔐 HTTPS + JWT\n(Sécurisé)
+
+APIGateway -right-> Odoo : 🔄 Transactions\n(Temps réel)
+Odoo -down-> Postgres : 💾 Persistance\n(ACID compliant)
+APIGateway -up-> MLEngine : 🤖 Suggestions\n(IA intégrée)
+
+Eric -up-> PortiqueRFID : 📦 Scan automatique\n(2 sec/colis)
+Eric -up-> Douchettes : 📱 Scan mobile\n(QR + Code barre)
+PortiqueRFID -down-> StockReel : 🏷️ RFID tags\n(5000 produits)
+
+' APIs externes
+APIGateway -right-> RexelAPI : 🌐 Catalogue sync\n(Temps réel)
+APIGateway -right-> SoneAPI : 💰 Prix comparaison\n(Auto)
+APIGateway -right-> AutresAPI : 📈 Extensibilité\n(Future)
+
+' Services cloud
+Odoo -up-> PowerBI : 📊 Analytics\n(DirectQuery)
+Postgres -up-> Backup : ☁️ Sauvegarde\n(Quotidienne)
+Odoo -up-> Monitor : 📈 Métriques\n(Alertes)
+
+' Flux de données principaux
+StockReel -left-> Odoo : 📊 Stock sync\n(Bidirectionnel)
+MLEngine -down-> Postgres : 🧠 Apprentissage\n(Historique)
+
+' Annotations des améliorations
+note right of AppMobile #E6FFE6
+    🟢 **AMÉLIORATIONS TERRAIN**
+    • Interface intuitive
+    • Mode offline robuste
+    • Scan QR/Code barre
+    • Photos géolocalisées
+    • Signature électronique
+end note
+
+note right of Odoo #E6F3FF
+    🟢 **CŒUR SYSTÈME MODERNE**
+    • Architecture microservices
+    • APIs REST documentées
+    • Haute disponibilité 99.9%
+    • Scalabilité horizontale
+    • Intégrations natives
+end note
+
+note right of PortiqueRFID #FFF0E6
+    🟢 **AUTOMATISATION TOTALE**
+    • Réception 2 sec vs 20 min
+    • 0 erreur comptage
+    • Stock temps réel
+    • Traçabilité complète
+    • ROI 6 mois
+end note
+
+note right of RexelAPI #F0F8FF
+    🟢 **ÉCOSYSTÈME CONNECTÉ**
+    • Catalogues synchronisés
+    • Prix temps réel
+    • Stock fournisseurs live
+    • Commandes automatiques
+    • 0 ressaisie manuelle
+end note
+
+' Métriques de performance
+legend bottom
+    🟢 = Amélioration majeure
+    📱 = Mobile-first
+    🤖 = IA/ML intégré
+    🔐 = Sécurité renforcée
+    ⚡ = Performance optimisée
+    📊 = Analytics temps réel
+end legend
+
+@enduml

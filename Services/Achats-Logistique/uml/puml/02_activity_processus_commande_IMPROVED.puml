@@ -1,0 +1,75 @@
+@startuml
+!theme plain
+title Processus Commande Matériel - Swimlanes (État ACTUEL)
+
+|#Pink|Marc (Chantier)|
+start
+:Identifie besoin matériel;
+note right: Câble 3G2.5 - 50m
+:Cherche bon papier;
+note right #FFCCCC: 🔴 5 min recherche
+:Remplit à la main (5 min);
+note right #FFCCCC: 🔴 Référence imprécise
+
+|#LightBlue|Sylvie (Bureau)|
+if (Sylvie disponible ?) then (Non)
+  |Marc (Chantier)|
+  :Attente + Rappel (x3);
+  note right #FFCCCC: 🔴 25 min perdues
+else (Oui)
+endif
+
+|Sylvie (Bureau)|
+:Reçoit appel;
+:Cherche dans Sage MDE;
+note right: Base données chaotique
+
+if (Référence trouvée ?) then (Non / Flou)
+  :Choisit référence au hasard;
+  note right #FFCCCC: 🔴 12 variantes possibles\nRisque erreur 50%
+else (Oui)
+endif
+
+:Cherche fournisseur (Excel);
+note right #FFCCCC: 🔴 Données éparpillées
+:Appelle fournisseur;
+note right #FFCCCC: 🔴 Pas de commande en ligne
+:Envoie Email confirmation;
+note right #FFCCCC: 🔴 Ressaisie #4
+:Saisit dans Sage;
+note right #FFCCCC: 🔴 Ressaisie #5
+:Saisit dans Excel Suivi;
+note right #FFCCCC: 🔴 Ressaisie #6
+
+|Fournisseur|
+:Traite commande;
+:Livre (2-3 jours);
+
+|#LightYellow|Éric (Dépôt)|
+:Réceptionne livraison;
+:Vérifie nomenclature;
+note right #FFCCCC: 🔴 Incompatibilité fréquente
+:Compte manuellement;
+note right #FFCCCC: 🔴 Pas de scan
+:Saisit réception dans Sage;
+note right #FFCCCC: 🔴 Ressaisie #7 (20 min)
+
+|Marc (Chantier)|
+:Récupère matériel;
+
+if (Matériel conforme ?) then (Non)
+  #Red:❌ Chantier bloqué;
+  note right #FF0000
+    💰 Coût erreur: 2,400€
+    ⏰ Retard: 3 jours
+    😭 Stress équipes
+  end note
+  detach
+else (Oui)
+  #Green:✅ Fin (Chantier continue);
+  stop
+endif
+
+floating note left: **STATISTIQUES PROCESSUS**\n⏰ Durée moyenne: 3 jours\n♻️ Ressaisies: 7 fois\n❌ Taux erreur: 50%\n📞 Appels: 15/commande\n💰 Coût erreurs: 60K€/an
+
+@enduml
