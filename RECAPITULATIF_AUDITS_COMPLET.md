@@ -68,7 +68,7 @@ Nous présentons **2 approches** pour la transformation digitale de Duret Élect
 | **CTI Téléphonie** | ~15 000 € (setup + 3 ans) |
 | **Intégrations & Développements** | ~30 000 € (Connecteurs SAGE, RFID) |
 | **Formation & Change Management** | ~19 000 € |
-| **TOTAL 3 ANS** | **~181 000 €** |
+| **TOTAL 3 ANS** | **~329 000 €** |
 
 ### ✅ Avantages
 
@@ -125,7 +125,7 @@ Nous présentons **2 approches** pour la transformation digitale de Duret Élect
 | **PowerBI + Azure ML** | ~20 000 € (licences + dev 3 ans) |
 | **Intégrations HubSpot-Odoo** | ~15 000 € (Zapier/API custom) |
 | **Formation & Change Management** | ~14 000 € |
-| **TOTAL 3 ANS** | **~265 000 €** |
+| **TOTAL 3 ANS** | **~447 000 €** |
 
 ### ✅ Avantages
 
@@ -150,7 +150,7 @@ Nous présentons **2 approches** pour la transformation digitale de Duret Élect
 
 | Critère | 🔵 Option 1 (Full Odoo) | 🟣 Option 2 (Best-of-Breed) |
 |---------|-------------------------|------------------------------|
-| **Investissement 3 ans** | **181 000 €** | **265 000 €** |
+| **Investissement 3 ans** | **329 000 €** | **447 000 €** |
 | **Gains/an estimés** | ~1 000 000 € | ~1 100 000 € |
 | **Payback** | < 12 mois | < 12 mois |
 | **Nombre d'éditeurs** | 2-3 (Odoo, PayFit, CTI) | 5-6 (HubSpot, Odoo, PayFit, Dev custom, PowerBI) |
@@ -167,14 +167,14 @@ Nous présentons **2 approches** pour la transformation digitale de Duret Élect
 ### ✅ **Pour Duret Électricité : OPTION 1 (Full Odoo)**
 
 **Pourquoi ?**
-1.  ✅ **Budget optimisé** : -84K€ sur 3 ans (-32%).
+1.  ✅ **Budget optimisé** : -118K€ sur 3 ans vs Scénario 2.
 2.  ✅ **Simplicité opérationnelle** : Une seule plateforme = moins de risques.
 3.  ✅ **Maintenance allégée** : Un seul éditeur principal (Odoo).
 4.  ✅ **Besoin couvert à 90%** : Odoo suffit pour les cas d'usage de Duret.
 5.  ✅ **Évolutivité** : Si besoin futur, migration vers Option 2 possible (ajout HubSpot, PowerBI).
 
 **Quand choisir Option 2 ?**
-*   Si le budget > 265K€ est disponible immédiatement.
+*   Si le budget > 447K€ est disponible immédiatement.
 *   Si le CRM/Marketing est **stratégique** (beaucoup de leads entrants, nurturing complexe).
 *   Si Duret veut se différencier par l'excellence technologique (ML, Apps custom).
 *   Si l'équipe IT interne est **forte** (capable de gérer 5-6 outils).

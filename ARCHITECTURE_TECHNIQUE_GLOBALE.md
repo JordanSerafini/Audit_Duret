@@ -165,6 +165,7 @@ Coût : ~3000€/mois (inclus dans licence Odoo)
 SLA : 99.9% uptime
 ```
 
+
 ### Option B : Self-Hosted (Azure/AWS)
 
 ```
@@ -349,5 +350,5 @@ def export_invoices_to_sage():
 
 **📧 Contact** : Direction IT - Duret Électricité  
 **🎯 Objectif** : Infrastructure scalable, sécurisée, moderne  
-**💰 Budget** : 181K€ (Option 1) ou 265K€ (Option 2) sur 3 ans  
+**💰 Budget** : 329K€ (Option 1 avec solutions complémentaires) ou 447K€ (Option 2) sur 3 ans  
 **⏱️ Timeline** : 18 mois (Phases 1-4)

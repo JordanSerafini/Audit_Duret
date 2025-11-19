@@ -225,7 +225,7 @@ Cette option assemble les meilleurs outils du marché pour chaque métier, conne
 | **Mobile Terrain** | App Standard Odoo | App Sur-Mesure (UX Optimisée) |
 | **Intelligence (BI/IA)** | Dashboards Standards | ML Perso & Prédictif Avancé |
 | **Complexité IT** | 🟢 Faible | 🔴 Élevée (Connecteurs) |
-| **Budget 3 ans** | **~181 k€** | **~265 k€** |
+| **Budget 3 ans** | **~329 k€** | **~447 k€** |
 | **Recommandation** | **✅ Pour Démarrer & Scaler** | **⚠️ Pour une maturité digitale avancée** |
 
 ---
@@ -451,7 +451,7 @@ Cette option assemble les meilleurs outils du marché pour chaque métier, conne
 
 **Justification** :
 1. ✅ **Couverture 100%** : Tous besoins Duret résolus
-2. ✅ **Prix imbattable** : 181k€ vs 214k€+ alternatives
+2. ✅ **Prix imbattable** : 329k€ vs 447k€+ alternatives
 3. ✅ **Solution unique** : 90% besoins dans Odoo
 4. ✅ **Scalable** : Croissance supportée
 5. ✅ **Open source** : Pérennité garantie
