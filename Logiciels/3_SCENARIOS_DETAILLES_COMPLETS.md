@@ -140,7 +140,7 @@
 | Modules custom (évolutions) | 5 000€ | 5 000€ |
 | **TOTAL** | **61 072€** | **61 072€** |
 
-### TOTAL 3 ANS : **211 416€**
+### TOTAL 3 ANS : **181 416€**
 
 ⚠️ **Hébergement** : Odoo.sh (+6 000€/an soit +18 000€ sur 3 ans) optionnel si infrastructure existante
 

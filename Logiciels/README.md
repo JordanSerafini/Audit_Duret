@@ -129,6 +129,36 @@
 
 ---
 
+### 5. Solutions Complémentaires Critiques
+
+#### 🔧 [Solutions Complémentaires](SOLUTIONS_COMPLEMENTAIRES.md)
+
+**5 domaines critiques** :
+
+1. **Interface Comptable**
+   - Prix : 500€ setup (si Odoo)
+   - Recommandation : ✅ **Export FEC automatique**
+
+2. **Backup/Sauvegarde**
+   - Prix : **3 600€/an** (Veeam + NAS + Cloud)
+   - Criticité : 🔴 **CRITIQUE** (risque perte données)
+
+3. **Téléphonie/CTI**
+   - Prix : 2 520€/an (Ringover)
+   - Recommandation : ✅ **Intégration CRM**
+
+4. **Cybersécurité**
+   - Prix : **25 800€/an** (pack complet)
+   - Criticité : 🔴 **CRITIQUE** (attaques +400%)
+
+5. **Formation/Change Management**
+   - Prix : 23 000€ (programme 12 mois)
+   - Criticité : 🟡 **Important** (succès adoption)
+
+**Total solutions complémentaires** : **+134 860€ sur 3 ans**
+
+---
+
 ## 💰 COMPARATIFS DES 2 OPTIONS STRATÉGIQUES
 
 ### Option 1 : **L'Approche Unifiée (Full Odoo)**
