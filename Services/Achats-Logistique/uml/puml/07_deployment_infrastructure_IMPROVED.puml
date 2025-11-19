@@ -1,33 +1,33 @@
 @startuml
 !theme plain
-title Architecture Système ACTUELLE - "Le Chaos Organisé"
+title Architecture Systeme ACTUELLE - "Le Chaos Organise"
 
 node "Chantier (Mobile)" as Chantier #Pink {
-    agent "Marc\n(Téléphone Perso)" as Marc
+    agent "Marc\n(Telephone Perso)" as Marc
     file "Bons Papier\n(Illisibles)" as Papier #FFCCCC
 }
 
 node "Bureau Albertville" as Bureau #LightBlue {
     node "Poste Sylvie" as PosteSylvie {
-        component "Excel Multiples\n(Non connectés)" as Excel #FFD700
+        component "Excel Multiples\n(Non connectes)" as Excel #FFD700
         component "Email Outlook\n(Ressaisies)" as Outlook #FFE4B5
     }
     
-    database "Serveur Sage MDE\n(Obsolète 2010)" as Sage #FF6B6B
+    database "Serveur Sage MDE\n(Obsolete 2010)" as Sage #FF6B6B
     note right of Sage
-        🔴 **PROBLÈMES CRITIQUES**
-        • 30-40 sec/écran
-        • Base données chaotique
-        • 12 réf pour 1 produit
+        🔴 **PROBLEMES CRITIQUES**
+        • 30-40 sec/ecran
+        • Base donnees chaotique
+        • 12 ref pour 1 produit
         • Pas d'API moderne
-        • Plantages fréquents
+        • Plantages frequents
     end note
 }
 
-node "Dépôt Annecy" as Depot #LightYellow {
-    agent "Éric\n(Magasinier)" as Eric
+node "Depot Annecy" as Depot #LightYellow {
+    agent "Eric\n(Magasinier)" as Eric
     component "PC Partagé\n(1 seul poste)" as PCDepot #FFB6C1
-    file "Stock Physique\n(Désorganisé)" as StockPhys #FFCCCC
+    file "Stock Physique\n(Desorganise)" as StockPhys #FFCCCC
 }
 
 cloud "Fournisseurs Externes" as CloudFourn #LightGray {
