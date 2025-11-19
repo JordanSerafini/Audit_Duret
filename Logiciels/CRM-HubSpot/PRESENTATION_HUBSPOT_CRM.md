@@ -106,7 +106,8 @@ HubSpot est une plateforme CRM cloud leader mondial, reconnue pour sa simplicit�
 - **Idéal** : PME démarrant digitalisation
 
 ### Service Hub Professional
-- **Prix** : **90€/mois/user** (engagement annuel)
+- **Prix** : **90€/mois/user** (engagement annuel obligatoire)
+- **Frais onboarding** : **1 500€** (one-time)
 - **Fonctionnalités clés** :
   - Tickets illimités
   - SLA et automation
@@ -117,7 +118,8 @@ HubSpot est une plateforme CRM cloud leader mondial, reconnue pour sa simplicit�
 - **Support** : 24/7 email + chat + téléphone
 
 ### Service Hub Enterprise
-- **Prix** : **150€/mois/user** (engagement annuel)
+- **Prix** : **150€/mois/user** (engagement annuel obligatoire)
+- **Frais onboarding** : **3 500€** (one-time)
 - **Fonctionnalités avancées** :
   - Playbooks techniciens
   - Objectifs équipe
@@ -125,7 +127,10 @@ HubSpot est une plateforme CRM cloud leader mondial, reconnue pour sa simplicit�
   - Permissions granulaires
 - **Support** : Prioritaire 24/7 + account manager
 
-**⚠️ Réduction 10% engagement annuel vs mensuel**
+**⚠️ Important 2025** : 
+- Engagement annuel **obligatoire** pour plans Professional+
+- Frais onboarding **non-remboursables** ajoutés depuis 2024
+- Prix en euros susceptibles de fluctuer selon taux de change USD/EUR
 
 ---
 
@@ -338,10 +343,10 @@ HubSpot est une plateforme CRM cloud leader mondial, reconnue pour sa simplicit�
 
 | Solution | An 1 | An 2 | An 3 | **Total 3 ans** |
 |----------|------|------|------|-----------------|
-| **HubSpot Service Pro** (10 users x 90€) | 10 800€ | 10 800€ | 10 800€ | **32 400€** |
+| **HubSpot Service Pro** (10 users x 90€ + 1 500€ setup) | 12 300€ | 10 800€ | 10 800€ | **33 900€** |
 | **Odoo ERP** (100 users x 24,90€) | 29 880€ | 29 880€ | 29 880€ | **89 640€** |
-| **Lucca SIRH** (100 users x 40€) | 48 000€ | 48 000€ | 48 000€ | **144 000€** |
-| **TOTAL** | **88 680€** | **88 680€** | **88 680€** | **🔴 266 040€** |
+| **Lucca SIRH** (100 users x 12,10€) | 14 520€ | 14 520€ | 14 520€ | **43 560€** |
+| **TOTAL** | **56 700€** | **55 200€** | **55 200€** | **🔴 167 100€** |
 
 ---
 
@@ -349,9 +354,11 @@ HubSpot est une plateforme CRM cloud leader mondial, reconnue pour sa simplicit�
 
 | Solution | An 1 | An 2 | An 3 | **Total 3 ans** |
 |----------|------|------|------|-----------------|
-| **Odoo ERP** (100 users, tous modules) | 35 880€ | 35 880€ | 35 880€ | **🟢 107 640€** |
+| **Odoo ERP + PayFit** (100 users, tous modules) | 60 472€ | 51 072€ | 51 072€ | **🟢 162 616€** |
 
-**Économie Odoo vs HubSpot+Compléments** : **158 400€ sur 3 ans**
+**⚠️ Note** : Coût Odoo inclut PayFit paie (21 192€/an), intégrateur (21k€) et formation (7k€)
+
+**Coût différentiel** : **+4 484€** (Odoo légèrement plus cher mais couverture 100% vs 30% HubSpot seul)
 
 ---
 

@@ -49,11 +49,11 @@
 
 | Service | Problème Principal | Impact Business | Criticité |
 |---------|-------------------|-----------------|-----------|
-| **Achats-Logistique** | Taux élevé de commandes incomplètes, processus 100% manuel | Chantiers bloqués, perte de temps importante | 🔴 CRITIQUE |
+| **Achats-Logistique** | Base articles polluée (ex: même produit à 2 prix), commandes manuelles | Chantiers bloqués, perte de temps importante | 🔴 CRITIQUE |
 | **Direction-Affaires** | ERP obsolète ultra lent, aucun template devis/PPSPS | Temps perdu important sur devis/PPSPS | 🔴 CRITIQUE |
 | **Ressources-Humaines** | Nombreux systèmes isolés, ressaisies multiples | Surcharge RH, risque burn-out | 🔴 CRITIQUE |
 | **Service-Client** | Système post-it, délais excessifs prise RDV | Clients perdus, opportunités manquées | 🔴 CRITIQUE |
-| **Maintenance-Technique** | CERFA papier, pas d'app mobile | Temps perdu important, opportunités perdues | 🟠 IMPORTANT |
+| **Maintenance-Technique** | CERFA papier remplis à la main, pas d'app mobile | Temps perdu important, opportunités perdues | 🟠 IMPORTANT |
 | **Chantiers** | Aucun outil métier terrain, traçabilité faible | Infos perdues, rapports manuels chronophages | 🟠 IMPORTANT |
 | **Gestion-Opérationnelle** | Multiples Excel non connectés, remontée info tardive | Pilotage à l'aveugle, burn-out équipes | 🔴 CRITIQUE |
 | **Albertville** | Situations très longues, budgets complémentaires invisibles | Facturation retardée, risque dépassement | 🔴 CRITIQUE |
@@ -100,7 +100,7 @@
 
 | Service | Processus Manuel | Constat |
 |---------|------------------|---------|
-| **Direction-Affaires** | Création devis | Temps important constaté (à mesurer) |
+| **Direction-Affaires** | Création devis | Pas de fonction "Dupliquer" = Ressaisie complète (à mesurer) |
 | **Direction-Affaires** | Génération PPSPS | Processus chronophage (à mesurer) |
 | **RH** | Paie mensuelle | Temps hebdomadaire important (à mesurer) |
 | **RH** | Calcul TR | Calculs manuels pour 100 personnes |
@@ -125,7 +125,7 @@
 **Constats** :
 - **Post-it** pour noter appels clients (Service-Client)
 - **CERFA papier** bons intervention (Maintenance)
-- **WhatsApp/Oral** pour remontées chantiers (Chantiers)
+- **WhatsApp/Oral** pour remontées chantiers (aucune archive centralisée, photos perdues)
 - **Papier** demandes congés (RH)
 - **Téléphone** uniquement commandes achats (Achats)
 - **Aucun système ticketing** (Service-Client, BE Transverse)
@@ -173,7 +173,7 @@
 - Chefs chantier pilotent SANS voir budget/marge de leur chantier
 - Responsables Affaires compilent manuellement pour chiffres direction (3h)
 - Dépassements budgets détectés trop tard
-- Reliquats non tracés (60% affaires avec oublis refacturation)
+- Reliquats non tracés (nombreuses affaires avec oublis refacturation - taux à mesurer)
 - KPIs générés manuellement fin de mois (vs dashboards temps réel)
 
 **Impact** :
@@ -373,8 +373,11 @@
 | **2** | CRM/Ticketing (HubSpot) | Service-Client | ÉLEVÉ | Faible (version gratuite) | Immédiat |
 | **3** | App Mobile Chantiers (Photos + Rapports) | Chantiers, Maintenance | ÉLEVÉ | À chiffrer | Rapide |
 | **4** | Dashboards BI KPIs Direction | Gestion-Op, Albertville | TRÈS ÉLEVÉ | À chiffrer | Rapide |
-| **5** | RFID/QR Stocks | Gestion-Op, Achats | MOYEN | À chiffrer | Moyen |
-| **6** | Templates Devis/PPSPS | Direction-Affaires | ÉLEVÉ | À chiffrer | Rapide |
+| **5** | **Veille Marchés Publics (API BOAMP)** | Direction-Affaires | ÉLEVÉ | Faible (Dev script) | **Immédiat** |
+| **6** | **Rapprochement Bancaire (Open Banking)** | Gestion-Op (Compta) | ÉLEVÉ | Faible (Module Odoo) | **Immédiat** |
+| **7** | **Tracking Fournisseurs (Rexel/Sonepar)** | Achats-Logistique | MOYEN | Faible (Connecteurs) | Rapide |
+| **8** | RFID/QR Stocks | Gestion-Op, Achats | MOYEN | À chiffrer | Moyen |
+| **9** | Templates Devis/PPSPS | Direction-Affaires | ÉLEVÉ | À chiffrer | Rapide |
 
 **Gains attendus M6** :
 - ✅ Réduction temps important sur processus critiques
@@ -463,8 +466,8 @@
 
 | Processus | Avant | Après | Gain |
 |-----------|-------|-------|------|
-| Création devis | 2h05 | ~30min | Réduction significative |
-| Génération PPSPS | 3h00 | ~30min | Réduction importante |
+| Création devis | Temps excessif (à mesurer) | ~30min | Réduction significative |
+| Génération PPSPS | Processus long (à mesurer) | ~30min | Réduction importante |
 | Temps paie Sophie | 3j/sem | 1j/sem | Réduction drastique |
 | Rapports intervention | 2h | 10-25min | Réduction importante |
 | Commande matériel | 3 jours | Temps réel | Réduction drastique |

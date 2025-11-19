@@ -167,7 +167,7 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
    - POC solution retenue (M1-M2)
    - Go/No-Go (M2)
    - Migration données + Formation (M3-M4)
-   - **Gain** : Centralisation vs 22 systèmes, suppression ressaisies
+   - **Gain** : Centralisation vs nombreux systèmes isolés, suppression ressaisies
 
 2. ✅ **Module Absences** (M2-M4)
    - Workflow congés, maladie, RTT (M2)
@@ -384,7 +384,7 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 
 **Documents annexes disponibles** :
 - [docs/01_PERSONAS_Pain_Points.md](docs/01_PERSONAS_Pain_Points.md) : Sophie RH, Managers, Collaborateurs
-- [docs/02_ARCHITECTURE_Actuelle_Chaos.md](docs/02_ARCHITECTURE_Actuelle_Chaos.md) : 22 systèmes isolés
+- [docs/02_ARCHITECTURE_Actuelle_Chaos.md](docs/02_ARCHITECTURE_Actuelle_Chaos.md) : Nombreux systèmes isolés
 - [docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) : Parcours avant/après
 
 ---

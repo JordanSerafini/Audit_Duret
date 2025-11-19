@@ -1,7 +1,21 @@
 # 🏗️ Gestion Chantiers - Documentation
 
+> **🚨 NOUVEL AUDIT & PLAN D'ACTION (Nov 2025)**
+> 👉 **[LIRE LE RAPPORT D'AUDIT DÉTAILLÉ](../../AUDIT_SERVICE_CHANTIERS.md)**
+> *Diagnostic critique, Solution Odoo Field Service, Plan "Zéro Papier"*
+
 > Analyse complète Gestion Chantiers & Remontée Terrain
 > Focus: État ACTUEL, pain points, personas, architecture cible
+
+---
+
+## 🚀 Solution Cible (Odoo Field Service)
+
+**Diagrammes Clés :**
+1. **[Timeline Intervention](uml/svg/13_sequence_intervention_CIBLE.svg)** : Processus optimisé (App Mobile)
+2. **[Workflow Rapport](uml/svg/14_activity_rapport_CIBLE.svg)** : Génération automatique PDF
+3. **[Architecture Cible](uml/svg/15_component_architecture_CIBLE.svg)** : Odoo Core + Mobile
+4. **[Mindmap Solutions](uml/svg/16_mindmap_SOLUTIONS.svg)** : Réponses aux Pain Points
 
 ---
 

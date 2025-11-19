@@ -41,6 +41,9 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 - ✅ **Photos géolocalisées** : Avant/après, horodatage automatique
 - ✅ **Génération rapports** : PDF automatiques post-intervention
 - ✅ **Pointage géolocalisé** : Arrivée/départ chantier
+- 🆕 **Groupement géographique** : Tâches regroupées par code postal (Odoo 18)
+- 🆕 **Affectation par compétences** : Techniciens assignés selon skills
+- 🆕 **Produits visibles** : Liste matériel à emporter via bouton smart
 
 ### 4. Stocks et Achats
 - ✅ **Gestion stocks multi-dépôts** : Temps réel, mouvements tracés
@@ -70,10 +73,14 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 - ✅ **RBAC** : Accès données par rôle (transparence contrôlée)
 
 ### 8. Nouveautés 2025 (Odoo 18)
+- 🆕 **Field Service amélioré** : Groupement tâches géographique, planification par localisation
+- 🆕 **Mobile-first** : Interface mobile optimisée pour techniciens terrain
+- 🆕 **Géolocalisation** : Tracking GPS automatique, optimisation tournées
+- 🆕 **Skills-based assignment** : Affectation tâches selon compétences techniciens
+- 🆕 **Maintenance intégrée** : Lien natif Field Service ↔ Module maintenance
+- 🆕 **Package Électriciens** : Templates spécialisés métier électricité
 - 🆕 **IA générative** : Rédaction automatique emails, descriptions produits
-- 🆕 **Améliorations mobile** : Field Service optimisé
 - 🆕 **Comptabilité** : Rapprochement bancaire IA amélioré
-- 🆕 **Dashboard Studio** : Création dashboards no-code
 
 ---
 
@@ -463,7 +470,7 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 - **Total gains/an** : ~115k€ **(estimation théorique)**
 
 **Payback estimé** : ~16-20 mois (selon gains réels)
-**ROI 3 ans estimé** : **(345k€ gains estimés - 156k€ investissement) / 156k€ = ~121%** *(hypothèse à valider)*
+**ROI 3 ans estimé** : **Positif (à valider par mesures terrain)**
 
 **Recommandation** : Mettre en place des **KPIs avant déploiement** pour mesurer gains réels post-implémentation.
 

@@ -1,5 +1,9 @@
 # 📦 Achats & Logistique - Documentation
 
+> **🚨 NOUVEL AUDIT & PLAN D'ACTION (Nov 2025)**
+> 👉 **[LIRE LE RAPPORT D'AUDIT DÉTAILLÉ](../../AUDIT_SERVICE_ACHATS_LOGISTIQUE.md)**
+> *Diagnostic critique, Solution Odoo + RFID, Plan "Zéro Ressaisie"*
+
 > Analyse complète du service Achats-Logistique
 > Focus: État ACTUEL, pain points, personas, besoins
 
@@ -104,7 +108,17 @@ Achats-Logistique/
 
 ---
 
-## 📊 Situation Actuelle
+## � Solution Cible (Odoo + RFID)
+
+**Diagrammes Clés :**
+1. **[Timeline Cible](uml/svg/13_sequence_commande_CIBLE.svg)** : Processus en 2 jours (vs 3)
+2. **[Workflow Cible](uml/svg/14_activity_processus_CIBLE.svg)** : Qui fait quoi (Swimlanes)
+3. **[Architecture Cible](uml/svg/15_component_architecture_CIBLE.svg)** : Odoo + App Mobile + RFID
+4. **[Mindmap Solutions](uml/svg/16_mindmap_SOLUTIONS.svg)** : Réponses aux Pain Points
+
+---
+
+## �📊 Situation Actuelle
 
 ### Faits Constatés
 

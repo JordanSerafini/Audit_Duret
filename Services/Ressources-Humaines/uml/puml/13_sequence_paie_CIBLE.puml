@@ -1,0 +1,41 @@
+@startuml Processus_Paie_CIBLE
+
+title Processus Paie - CIBLE (Odoo + PayFit)
+
+actor "Sophie\n(RH)" as Sophie #FFB6C1
+actor "Manager" as Manager #ADD8E6
+actor "Salarié" as Emp #90EE90
+participant "Odoo RH\n(Congés/NDF)" as Odoo #87CEEB
+participant "PayFit\n(Moteur Paie)" as PayFit #FFA500
+participant "Banque" as Bank
+
+== Tout au long du mois ==
+
+Emp -> Odoo: Pose Congés / NDF (App Mobile)
+activate Odoo
+Odoo -> Manager: Notif Validation
+Manager -> Odoo: Valide
+deactivate Odoo
+
+== Fin du mois (Préparation Paie) ==
+
+Sophie -> Odoo: Clôture Période
+activate Odoo
+Odoo -> PayFit: Sync Variables (API)\n(Absences, Primes, NDF)
+deactivate Odoo
+
+activate PayFit
+PayFit -> PayFit: Calcul Paie & Cotisations
+PayFit -> Sophie: Synthèse pour Contrôle
+Sophie -> PayFit: Valide Paie
+PayFit -> Bank: Ordre Virement SEPA
+PayFit -> Emp: Bulletin Paie (Email/Coffre-fort)
+PayFit -> Admin: DSN Automatique
+deactivate PayFit
+
+note right of Sophie #E8F5E9
+  **Gain de temps**
+  3j -> 0.5j
+end note
+
+@enduml

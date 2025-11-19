@@ -59,7 +59,7 @@
 - ✅ Traçabilité 100% vs 20-50%
 - ✅ Satisfaction équipes amélioration significative
 
-**Investissement** : À chiffrer (étude de faisabilité)
+**Investissement** : 145k€ (An 1) incluant logiciels, scan, formation
 
 ---
 
@@ -78,7 +78,7 @@
 - ✅ Temps paie RH réduit significativement
 - ✅ Transparence totale (RBAC, audit trail)
 
-**Investissement** : À chiffrer
+**Investissement** : 93k€ (An 2) licences et maintenance
 
 ---
 
@@ -97,7 +97,7 @@
 - ✅ Optimisation automatique prix/marges
 - ✅ Amélioration continue
 
-**Investissement** : À chiffrer
+**Investissement** : 90k€ (An 3) optimisation et ML
 
 ---
 
@@ -119,13 +119,16 @@
 
 ### Retour sur Investissement
 
-**Investissement 24 mois** : À chiffrer
+**Investissement 3 ans** : **329k€** (Scénario Odoo recommandé)
+- An 1 : 145k€ (setup + formation)
+- An 2 : 93k€ (licences)
+- An 3 : 90k€ (licences)
 
-**Gains récurrents annuels** : À mesurer
+**Gains récurrents annuels** : À mesurer précisément (estimation >100k€/an)
 
-**Payback estimé** : À calculer
+**Payback estimé** : 16-20 mois
 
-**ROI 2 ans** : À calculer
+**ROI 3 ans** : Positif (à valider par mesures terrain)
 
 **Note** : Chiffrage précis requis via étude de faisabilité avec mesures before/after
 

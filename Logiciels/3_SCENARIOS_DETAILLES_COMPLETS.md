@@ -71,10 +71,10 @@
 |--------|----------|-------|
 | **CRM** | Pipeline commercial, scoring leads | 20 bureau |
 | **Helpdesk** | Tickets support, SLA, satisfaction | 20 bureau |
-| **Ventes** | Devis, commandes, e-signature | 20 bureau |
-| **Achats** | Commandes fournisseurs, réceptions | 10 bureau |
-| **Projet** | Gestion chantiers, budgets, tâches, Gantt | 20 bureau + 15 chefs |
-| **Field Service** | Interventions, planning, app mobile | 80 terrain + 10 planif |
+| **Ventes** | Devis, commandes, e-signature, **duplication devis** | 20 bureau |
+| **Achats** | Commandes fournisseurs, réceptions, **MAJ prix fournisseurs** | 10 bureau |
+| **Projet** | Gestion chantiers, budgets, tâches, Gantt, **PPSPS auto** | 20 bureau + 15 chefs |
+| **Field Service** | Interventions, planning, app mobile, **rapports PDF** | 80 terrain + 10 planif |
 | **Inventaire** | Stocks multi-dépôts, scan, RFID | 10 magasin + 80 terrain |
 | **Comptabilité** | Analytique, facturation, rapprochement bancaire | 5 compta |
 | **Employés** | Dossiers RH, organigramme | 3 RH |
@@ -128,6 +128,7 @@
 | **Formation** | 6j × 1 200€/j (3 sessions 2j par rôle) | 7 200€ |
 | **Migration données** | Import clients, produits, historique (inclus intégrateur) | 0€ |
 | **Modules custom** | RFID stocks, templates BTP spécifiques | 10 000€ |
+| **Connecteurs APIs** | Open Banking, BOAMP, Sonepar/Rexel | 5 000€ |
 | **TOTAL AN 1** | | **89 272€** |
 
 ### Coûts Récurrents (An 2-3)
@@ -140,7 +141,7 @@
 | Modules custom (évolutions) | 5 000€ | 5 000€ |
 | **TOTAL** | **61 072€** | **61 072€** |
 
-### TOTAL 3 ANS : **211 416€**
+### TOTAL 3 ANS : **181 416€**
 
 ⚠️ **Hébergement** : Odoo.sh (+6 000€/an soit +18 000€ sur 3 ans) optionnel si infrastructure existante
 
@@ -150,7 +151,7 @@
 
 | Besoin Audit | Module(s) Odoo | Couverture | Détail |
 |--------------|----------------|------------|--------|
-| **1. ERP** | Ventes + Projet + Achats | ✅ **100%** | Devis templates, gestion affaires, budgets chantiers |
+| **1. ERP** | Ventes + Projet + Achats | ✅ **100%** | Devis templates, **duplication**, gestion affaires, budgets, **PPSPS** |
 | **2. CRM** | CRM + Helpdesk | ✅ **100%** | Tickets digitaux, fin post-it, relances auto |
 | **3. Field Service** | Field Service | ✅ **100%** | App mobile native, bons digitaux, CERFA, photos géolocalisées, signature tablette |
 | **4. Stocks** | Inventaire + modules RFID | ✅ **100%** | Scan codes-barres natif, RFID via modules tiers (ex: IoT Box) |
@@ -193,8 +194,8 @@
 - ✅ Géolocalisation automatique
 - ✅ Photos avant/après horodatées
 - ✅ Signature client tablette
-- ✅ Génération PDF bons intervention
-- ✅ CERFA digitalisés
+- ✅ Génération PDF bons intervention **& rapports chantier**
+- ✅ CERFA digitalisés **& PPSPS automatisés**
 
 ### 6. Scalabilité
 - ✅ 5 à 5000+ users (même plateforme)

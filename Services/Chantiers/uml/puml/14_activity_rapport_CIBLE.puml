@@ -1,0 +1,36 @@
+@startuml Processus_Rapport_CIBLE
+
+title Processus Rapport - CIBLE (Automatisé)
+
+|Chantier (Marc)|
+start
+:Termine travaux;
+:Ouvre App Odoo;
+:Prend photos (Avant/Après);
+:Dicte commentaires vocaux;
+:Fait signer Client;
+:Valide Rapport;
+
+|Systeme (Odoo)|
+if (Réseau 4G ?) then (Oui)
+  :Sync Immédiate;
+else (Non)
+  :Stockage Local;
+  :Sync dès connexion;
+endif
+
+:Génère PDF;
+:Envoie Email Client;
+:Notifie Bureau;
+
+|Bureau (Julien)|
+:Reçoit Notif;
+:Vérifie Photos/Heures;
+if (Conforme ?) then (Oui)
+  :Valide pour Facturation;
+else (Non)
+  :Demande Précision (Chat);
+endif
+stop
+
+@enduml

@@ -111,6 +111,7 @@ La Gestion Opérationnelle de Duret Électricité repose sur **Excel et processu
 │  - Centralisation toutes données                   │
 │  - Historisation (audit trail)                     │
 │  - Analyses consolidées                            │
+│  - **Open Banking API** (Rapprochement Bancaire)   │
 └────────────────────────────────────────────────────┘
 ```
 

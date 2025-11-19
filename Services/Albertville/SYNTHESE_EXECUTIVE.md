@@ -16,7 +16,7 @@
 
 **Problèmes Majeurs Identifiés :**
 - ❌ **Situations mensuelles extrêmement longues** (traitement plusieurs jours/mois)
-- ❌ **Budgets complémentaires invisibles** (impossible de piloter)
+- ❌ **Budgets complémentaires invisibles** (impossible de piloter, **risque dépassement**)
 - ❌ **Remontée BL 100% manuelle** (papier, pas de traçabilité)
 - ❌ **Recherche références compliquée** (perte temps Sage)
 - ❌ **Excel omniprésent** (15+ fichiers non connectés)

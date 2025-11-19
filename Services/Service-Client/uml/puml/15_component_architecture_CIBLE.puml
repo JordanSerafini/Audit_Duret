@@ -1,0 +1,43 @@
+@startuml Component_Architecture_CIBLE
+
+title Architecture Service Client CIBLE (Odoo Ecosystem)
+
+package "Front-End (Web + Mobile)" #E3F2FD {
+  [Portail Client] as Portal #90EE90
+  [App Claire (Web)] as WebClaire #ADD8E6
+}
+
+package "Odoo Enterprise Core" #E1BEE7 {
+  [Module CRM] as ModCRM
+  [Module Helpdesk] as ModHelpdesk
+  [Module Planning] as ModPlanning
+  [Module Portal] as ModPortal
+  
+  database "Base Unique" as DB #BA68C8
+  
+  ModCRM <--> DB
+  ModHelpdesk <--> DB
+  ModPlanning <--> DB
+  ModPortal <--> DB
+}
+
+package "Intégrations Externes" #FFF3E0 {
+  [CTI Téléphonie] as CTI #FFA500
+  [SAGE Compta] as SAGE #FFCC80
+}
+
+' Relations
+Portal --> ModPortal : Prise RDV
+WebClaire --> ModCRM : Fiche Client
+WebClaire --> ModHelpdesk : Tickets
+CTI --> ModCRM : Remontée Auto
+ModCRM --> SAGE : Sync Clients (API)
+
+note right of DB
+  **DONNEE UNIQUE**
+  - Fini les post-it
+  - Historique complet
+  - Recherche instantanée
+end note
+
+@enduml

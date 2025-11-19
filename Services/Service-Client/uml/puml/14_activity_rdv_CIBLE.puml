@@ -1,0 +1,28 @@
+@startuml Prise_RDV_CIBLE
+
+title Prise RDV - CIBLE (Portail Client Odoo)
+
+|Client|
+start
+:Ouvre Portail Odoo;
+:Consulte Créneaux Dispos;
+note right
+  **Calendrier Temps Réel**
+  Synchronisé avec Planning Techniciens
+end note
+
+:Sélectionne Créneau;
+:Confirme RDV (1 clic);
+
+|Systeme (Odoo)|
+:Bloque Créneau Planning;
+:Envoi Email Confirmation;
+:Envoi SMS Rappel J-1;
+:Notif Technicien (App Mobile);
+
+|Technicien (Gaetan)|
+:Reçoit RDV dans Planning;
+:Prépare Intervention;
+stop
+
+@enduml

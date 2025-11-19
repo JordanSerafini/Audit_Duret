@@ -1,0 +1,97 @@
+@startuml Component_Architecture_CIBLE
+
+title Component Diagram - Architecture Système CIBLE (ODOO)
+
+skinparam componentStyle rectangle
+
+package "Terrain (Mobilité)" #E8F5E9 {
+  [Chef Chantier] as Marc #FFB6C1
+  component "App Mobile Odoo" as AppMobile #90EE90 {
+    [Catalogue]
+    [Panier]
+    [Suivi Commandes]
+  }
+  
+  Marc --> AppMobile : Utilise
+}
+
+package "Dépôt (Logistique)" #FFF3E0 {
+  [Magasinier] as Eric #98FB98
+  component "Terminal RFID" as Scanner #FFA500 {
+    [Scan Réception]
+    [Scan Sortie]
+    [Inventaire]
+  }
+  
+  Eric --> Scanner : Utilise
+}
+
+package "Siège (Back-Office)" #E3F2FD {
+  [Gestionnaire Achats] as Sylvie #ADD8E6
+  [Responsable Affaires] as Julien #FFDAB9
+  
+  component "Odoo Web" as OdooWeb #87CEEB {
+    [Validation Achats]
+    [Dashboards BI]
+    [Gestion Stock]
+  }
+  
+  Sylvie --> OdooWeb : Valide & Pilote
+  Julien --> OdooWeb : Consulte KPIs
+}
+
+package "Odoo Enterprise Core" #E1BEE7 {
+  database "Base de Données Unique\n(PostgreSQL)" as DB #BA68C8
+  
+  [Module Achats] as ModAchats
+  [Module Inventaire] as ModStock
+  [Module Comptabilité] as ModCompta
+  [Module Projet] as ModProjet
+  
+  ModAchats <--> DB
+  ModStock <--> DB
+  ModCompta <--> DB
+  ModProjet <--> DB
+}
+
+cloud "Écosystème Externe" #F5F5F5 {
+  [Fournisseur A (Rexel)] as F1
+  [Fournisseur B (Sonepar)] as F2
+  [Banques / Expert Comptable] as Ext
+}
+
+' Relations Internes
+AppMobile <--> ModAchats : API / Sync
+AppMobile <--> ModProjet : Imputation
+Scanner <--> ModStock : API / Sync
+OdooWeb <--> ModAchats : UI
+OdooWeb <--> ModStock : UI
+OdooWeb <--> ModCompta : UI
+
+' Relations Externes
+ModAchats --> F1 : Email / EDI (Commandes)
+ModAchats --> F2 : Email / EDI (Commandes)
+F1 --> ModStock : BL Électronique (Futur)
+
+note bottom of DB
+  ✅ **SINGLE SOURCE OF TRUTH**
+  - Donnée unique
+  - Mise à jour temps réel
+  - Plus de doublons
+end note
+
+note right of AppMobile
+  ✅ **UX OPTIMISÉE**
+  - Mode Offline
+  - Photos produits
+  - Scan Code-barres
+end note
+
+note right of Scanner
+  ✅ **EFFICACITÉ**
+  - Réception en 30s
+  - Inventaire permanent
+  - Zéro erreur
+end note
+
+@enduml

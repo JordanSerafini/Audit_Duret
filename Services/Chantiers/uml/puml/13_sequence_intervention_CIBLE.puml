@@ -1,0 +1,60 @@
+@startuml Intervention_Chantier_CIBLE
+
+title Processus Intervention - CIBLE (Odoo Field Service)
+
+actor "Marc\n(Chef Chantier)" as Marc #FFB6C1
+actor "Julien\n(Bureau)" as Julien #ADD8E6
+participant "App Mobile\n(Odoo Field)" as App #90EE90
+participant "Odoo ERP\n(Projet/Planning)" as Odoo #87CEEB
+actor "Client" as Client
+
+== Planification (J-7) ==
+
+Julien -> Odoo: Planifie Intervention
+activate Odoo
+Odoo -> App: Sync Planning
+deactivate Odoo
+
+== Intervention (Jour J) ==
+
+Marc -> App: Consulte Planning
+activate App
+App --> Marc: "Chantier: Villa Martin"
+deactivate App
+
+Marc -> App: Start Timer (Début)
+activate App
+note right #90EE90
+  Suivi temps
+  automatique
+end note
+
+Marc -> App: 📸 Prise Photos (Avant)
+App -> App: Stockage Offline
+Marc -> App: Réalise Travaux...
+Marc -> App: 📸 Prise Photos (Après)
+
+Marc -> App: Stop Timer (Fin)
+Marc -> App: Remplit Rapport (Dictée Vocale)
+note right #90EE90
+  Rapide &
+  Standardisé
+end note
+
+Marc -> Client: Fait signer sur l'écran
+Client -> App: Signature
+App -> Odoo: Sync (Dès que 4G)
+deactivate App
+
+== Post-Intervention ==
+
+activate Odoo
+Odoo -> Julien: Notif "Intervention Terminée"
+Odoo -> Client: Envoi Rapport PDF (Email)
+note right #87CEEB
+  Facturation
+  déclenchée
+end note
+deactivate Odoo
+
+@enduml
