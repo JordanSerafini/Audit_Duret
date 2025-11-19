@@ -7,8 +7,8 @@ header Architecture CIBLE - PROCESSUS OPTIMISÉ
 title Séquence : Commande Matériel (Version DIGITALISÉE)
 
 box "Terrain Mobile" #E6FFE6
-    actor "Marc\n(Chef Chantier)" as Marc
-    participant "App Mobile\nOdoo" as AppMobile
+    actor "Marc (Chef Chantier)" as Marc
+    participant "App Mobile Odoo" as AppMobile
 end box
 
 box "Système Central" #E6F3FF
@@ -18,10 +18,10 @@ box "Système Central" #E6F3FF
 end box
 
 box "Achats & Logistique" #FFF0E6
-    actor "Sylvie\n(Achats)" as Sylvie
-    participant "E-Procurement\nPortal" as Portal
-    actor "Éric\n(Dépôt)" as Eric
-    component "RFID Scanner" as RFID
+    actor "Sylvie (Achats)" as Sylvie
+    participant "E-Procurement Portal" as Portal
+    actor "Eric (Depot)" as Eric
+    participant "RFID Scanner" as RFID
 end box
 
 box "Fournisseurs Connectés" #F0F0F0
