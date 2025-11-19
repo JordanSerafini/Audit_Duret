@@ -1,14 +1,3 @@
-# 🔍 AUDIT : APIs COMPLÉMENTAIRES PERTINENTES
-
-> **Date** : Novembre 2025  
-> **Contexte** : Audit Duret Électricité - Opportunités d'intégration  
-> **Statut** : 🎯 Analyse d'opportunité
-
----
-
-## 🎯 OBJECTIF
-
-Identifier et évaluer **d'autres APIs** pertinentes au-delà de Sonepar/Rexel pour automatiser davantage les processus de Duret.
 
 ---
 
