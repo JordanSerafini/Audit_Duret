@@ -278,7 +278,7 @@ J'ai effectué un **audit complet et approfondi** de tous les livrables du proje
 ### Pour l'Auditeur
 
 **Actions prioritaires** :
-1. 🔴 **Corriger synthèses** (retirer chiffres inventés) → **2-3 heures**
+1. 🟢 **Corriger synthèses** (retirer chiffres inventés) → **FAIT**
 2. 🟠 **Distribuer questionnaires** → **Semaine 2-3**
 3. 🟢 **Mettre à jour avec mesures réelles** → **Semaine 4**
 
