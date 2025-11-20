@@ -185,6 +185,20 @@ TOTAL: DÉLAI EXCESSIF pour un simple RDV !!
 
 ---
 
+## 🧠 PARTIE 2 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+Le CRM sera le cœur de la connaissance client. Voici comment l'exploiter selon [ETUDE_DATA_DRIVEN.md](../../data-ml/ETUDE_DATA_DRIVEN.md) :
+
+### 1. Analyse de Sentiment (NLP)
+*   **Concept** : L'IA analyse les emails et les transcriptions d'appels pour détecter les clients mécontents AVANT qu'ils ne partent.
+*   **Gain** : Réduction du churn (perte client), intervention proactive du manager.
+
+### 2. Segmentation Intelligente
+*   **Concept** : Clustering automatique des clients (ex: "Bailleurs pressés", "Particuliers exigeants", "Syndics récurrents") pour adapter la communication.
+*   **Gain** : Campagnes marketing ciblées, augmentation du panier moyen.
+
+---
+
 ## 💰 PARTIE 3 : BUSINESS CASE
 
 ### Investissement Total 18 Mois

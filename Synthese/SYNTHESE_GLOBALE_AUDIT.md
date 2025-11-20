@@ -147,7 +147,7 @@
 
 | Outil | Problème | Services Impactés |
 |-------|----------|-------------------|
-| **SAGE MDE** | Obsolète, ultra lent (30-40s/écran), plantages fréquents | Direction-Affaires, Albertville, Gestion-Op |
+| **SAGE MDE** | Obsolète, ultra lent (Temps important/écran, à mesurer), plantages fréquents | Direction-Affaires, Albertville, Gestion-Op |
 | **POPAYE** | Pas d'app mobile, saisie manuelle chronophage | RH |
 | **GAO** | Basique, pas d'intégration | Maintenance |
 | **CERFA papier** | Chronophage, pas de digitalisation | Maintenance, Chantiers |
@@ -196,7 +196,7 @@
 | **Chantiers** | Demandes clients terrain | Remontée WhatsApp/oral perdues |
 | **Service-Client** | Clients perdus oublis | Post-it tombé/jeté |
 | **Achats** | Commandes optimisées | Pas d'intégration APIs fournisseurs |
-| **Direction-Affaires** | Reliquats non refacturés | 60% affaires avec oublis |
+| **Direction-Affaires** | Reliquats non refacturés | Fréquents oublis (taux à mesurer) |
 | **Albertville** | Retard facturation | Situations extrêmement longues |
 
 **Impact estimé** :
@@ -510,7 +510,7 @@ Ces études détaillent comment la "Dette de Donnée" actuelle peut être transf
 
 | Type Perte | Estimation Annuelle |
 |------------|-------------------|
-| **Temps perdu processus manuels** | Important (2h devis × 40-80/mois, 3h PPSPS × 15/mois, 3j paie/sem × 12 mois, etc.) |
+| **Temps perdu processus manuels** | Important (Temps important devis × 40-80/mois, Temps important PPSPS × 15/mois, Temps important paie/sem × 12 mois, etc.) |
 | **Opportunités commerciales perdues** | Significatif (devis terrain, reliquats oubliés, clients perdus) |
 | **Erreurs/reprises** | Mesurable (commandes incomplètes, erreurs saisie, litiges) |
 | **Turnover & recrutement** | Important (burn-out, démotivation, image "pas moderne") |
