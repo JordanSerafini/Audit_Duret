@@ -1,6 +1,0 @@
-Nom,Role,Departement,Pain_Points_Principaux,Besoin_Principal
-Technicien SAV,Intervention terrain,Technique,CERFA papier - Photos separees - Pas d info client,Application mobile intervention
-Clothilde,Secretariat SAV,Administratif,Gestion RDV manuelle - Rappels manuels - Archivage papier,Portail prise RDV automatise
-Client,Beneficiaire contrat,Externe,Pas de visibilite - Relances manuelles - Pas de self-service,Portail client 24/7
-Direction,Supervision,Management,Pas de dashboards - Pas de KPI temps reel - Decisions au feeling,Analytics et reporting
-Comptabilite,Facturation,Finance,Facturation retardee - Saisies manuelles - Erreurs frequentes,Integration ERP automatique

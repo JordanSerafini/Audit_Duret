@@ -158,6 +158,20 @@ Sources → Data Lake → Data Warehouse → Analytics → Dashboards
 
 ---
 
+## 🧠 PARTIE 2 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+En lien avec l'étude globale [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md), voici les applications spécifiques pour les Achats :
+
+### 1. Saisie Automatique des Factures (OCR)
+*   **Concept** : L'IA lit les PDFs (Rexel, Sonepar) et saisit les lignes automatiquement.
+*   **Gain** : Fin des erreurs de saisie, gain de temps massif pour Sylvie.
+
+### 2. Prédiction des Besoins (Procurement Prédictif)
+*   **Concept** : Analyse des chantiers à venir pour suggérer les commandes de câbles/matériel 2 semaines à l'avance.
+*   **Gain** : Réduction du stock dormant, fin des ruptures urgentes, optimisation des prix (commandes groupées).
+
+---
+
 ## 📅 PARTIE 3 : APPROCHE PROGRESSIVE
 
 ### 🔷 PHASE 1 : FONDATIONS
