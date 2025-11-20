@@ -221,6 +221,20 @@
 
 ---
 
+## 🧠 PARTIE 3 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+L'optimisation des tournées et la maintenance prédictive sont des leviers majeurs identifiés dans [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md) :
+
+### 1. Optimisation de Tournées (Routing AI)
+*   **Concept** : Algorithme qui recalcule en temps réel le planning des techniciens selon les urgences et la géolocalisation.
+*   **Gain** : 20% de trajets en moins, 1 intervention de plus par jour et par technicien.
+
+### 2. Maintenance Prédictive
+*   **Concept** : Analyse de l'historique des pannes pour suggérer le remplacement préventif de pièces avant la panne critique.
+*   **Gain** : Satisfaction client maximale, intervention planifiée (moins chère) vs urgence (coûteuse).
+
+---
+
 <a name="recommandations"></a>
 ## 4. RECOMMANDATIONS
 
