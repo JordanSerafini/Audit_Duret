@@ -1,15 +1,15 @@
 @startuml
 !theme plain
-title Processus Commande Matériel - Swimlanes (État ACTUEL)
+title Processus Commande Materiel - Swimlanes (Etat ACTUEL)
 
 |#Pink|Marc (Chantier)|
 start
-:Identifie besoin matériel;
-note right: Câble 3G2.5 - 50m
+:Identifie besoin materiel;
+note right: Cable 3G2.5 - 50m
 :Cherche bon papier;
 note right #FFCCCC: 🔴 5 min recherche
 :Remplit à la main (5 min);
-note right #FFCCCC: 🔴 Référence imprécise
+note right #FFCCCC: 🔴 Reference imprecise
 
 |#LightBlue|Sylvie (Bureau)|
 if (Sylvie disponible ?) then (Non)
@@ -22,16 +22,16 @@ endif
 |Sylvie (Bureau)|
 :Reçoit appel;
 :Cherche dans Sage MDE;
-note right: Base données chaotique
+note right: Base donnees chaotique
 
-if (Référence trouvée ?) then (Non / Flou)
-  :Choisit référence au hasard;
+if (Reference trouvee ?) then (Non / Flou)
+  :Choisit reference au hasard;
   note right #FFCCCC: 🔴 12 variantes possibles\nRisque erreur 50%
 else (Oui)
 endif
 
 :Cherche fournisseur (Excel);
-note right #FFCCCC: 🔴 Données éparpillées
+note right #FFCCCC: 🔴 Donnees eparpillees
 :Appelle fournisseur;
 note right #FFCCCC: 🔴 Pas de commande en ligne
 :Envoie Email confirmation;
@@ -45,24 +45,24 @@ note right #FFCCCC: 🔴 Ressaisie #6
 :Traite commande;
 :Livre (2-3 jours);
 
-|#LightYellow|Éric (Dépôt)|
-:Réceptionne livraison;
-:Vérifie nomenclature;
-note right #FFCCCC: 🔴 Incompatibilité fréquente
+|#LightYellow|Eric (Depot)|
+:Receptionne livraison;
+:Verifie nomenclature;
+note right #FFCCCC: 🔴 Incompatibilite frequente
 :Compte manuellement;
 note right #FFCCCC: 🔴 Pas de scan
-:Saisit réception dans Sage;
+:Saisit reception dans Sage;
 note right #FFCCCC: 🔴 Ressaisie #7 (20 min)
 
 |Marc (Chantier)|
-:Récupère matériel;
+:Recupere materiel;
 
-if (Matériel conforme ?) then (Non)
-  #Red:❌ Chantier bloqué;
+if (Materiel conforme ?) then (Non)
+  #Red:❌ Chantier bloque;
   note right #FF0000
-    💰 Coût erreur: 2,400€
+    💰 Cout erreur: 2,400€
     ⏰ Retard: 3 jours
-    😭 Stress équipes
+    😭 Stress equipes
   end note
   detach
 else (Oui)
@@ -70,6 +70,6 @@ else (Oui)
   stop
 endif
 
-floating note left: **STATISTIQUES PROCESSUS**\n⏰ Durée moyenne: 3 jours\n♻️ Ressaisies: 7 fois\n❌ Taux erreur: 50%\n📞 Appels: 15/commande\n💰 Coût erreurs: 60K€/an
+floating note left: **STATISTIQUES PROCESSUS**\n⏰ Duree moyenne: 3 jours\n♻️ Ressaisies: 7 fois\n❌ Taux erreur: 50%\n📞 Appels: 15/commande\n💰 Cout erreurs: 60K€/an
 
 @enduml

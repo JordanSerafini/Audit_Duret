@@ -1,6 +1,6 @@
 @startuml
 !theme plain
-title Architecture CIBLE - Système Intégré & Moderne
+title Architecture CIBLE - Systeme Integre & Moderne
 
 node "Terrain Mobile" as Terrain #E6FFE6 {
     agent "Marc\n(Chef Chantier)" as Marc
@@ -12,17 +12,17 @@ node "Data Center Hybrid" as DataCenter #E6F3FF {
     component "ERP Odoo v17\n(On-premise)" as Odoo #87CEEB
     database "PostgreSQL 15\n(Haute Performance)" as Postgres #4682B4
     component "API Gateway\n(REST + GraphQL)" as APIGateway #5F9EA0
-    component "ML Engine\n(Prédictions)" as MLEngine #48D1CC
+    component "ML Engine\n(Predictions)" as MLEngine #48D1CC
 }
 
-node "Dépôt Connecté" as DepotConnecte #FFF0E6 {
-    agent "Éric\n(Magasinier)" as Eric
+node "Depot Connecte" as DepotConnecte #FFF0E6 {
+    agent "Eric\n(Magasinier)" as Eric
     component "Portique RFID\n(Zebra FX9600)" as PortiqueRFID #FFD700
     component "Douchettes Scan\n(Zebra MC3300)" as Douchettes #FFA500
-    database "Stock Temps Réel\n(RFID Tags)" as StockReel #FF8C00
+    database "Stock Temps Reel\n(RFID Tags)" as StockReel #FF8C00
 }
 
-cloud "Fournisseurs Connectés" as CloudAPI #F0F8FF {
+cloud "Fournisseurs Connectes" as CloudAPI #F0F8FF {
     component "Rexel API\n(Catalogue + Stock)" as RexelAPI #B0E0E6
     component "Sonepar API\n(Prix + Dispo)" as SoneAPI #B0E0E6
     component "Autres APIs\n(Extensible)" as AutresAPI #B0E0E6
@@ -34,77 +34,77 @@ cloud "Services Cloud" as ServicesCloud #F5F5F5 {
     component "Monitoring\n(24/7)" as Monitor #C0C0C0
 }
 
-' Connexions principales - Vert pour les flux optimisés
-Marc -down-> AppMobile : 📱 Interface tactile\n(UX optimisée)
-AppMobile -down-> APIGateway : 🔐 HTTPS + JWT\n(Sécurisé)
+' Connexions principales - Vert pour les flux optimises
+Marc -down-> AppMobile : 📱 Interface tactile\n(UX optimisee)
+AppMobile -down-> APIGateway : 🔐 HTTPS + JWT\n(Securise)
 
-APIGateway -right-> Odoo : 🔄 Transactions\n(Temps réel)
+APIGateway -right-> Odoo : 🔄 Transactions\n(Temps reel)
 Odoo -down-> Postgres : 💾 Persistance\n(ACID compliant)
-APIGateway -up-> MLEngine : 🤖 Suggestions\n(IA intégrée)
+APIGateway -up-> MLEngine : 🤖 Suggestions\n(IA integree)
 
 Eric -up-> PortiqueRFID : 📦 Scan automatique\n(2 sec/colis)
 Eric -up-> Douchettes : 📱 Scan mobile\n(QR + Code barre)
 PortiqueRFID -down-> StockReel : 🏷️ RFID tags\n(5000 produits)
 
 ' APIs externes
-APIGateway -right-> RexelAPI : 🌐 Catalogue sync\n(Temps réel)
+APIGateway -right-> RexelAPI : 🌐 Catalogue sync\n(Temps reel)
 APIGateway -right-> SoneAPI : 💰 Prix comparaison\n(Auto)
-APIGateway -right-> AutresAPI : 📈 Extensibilité\n(Future)
+APIGateway -right-> AutresAPI : 📈 Extensibilite\n(Future)
 
 ' Services cloud
 Odoo -up-> PowerBI : 📊 Analytics\n(DirectQuery)
 Postgres -up-> Backup : ☁️ Sauvegarde\n(Quotidienne)
-Odoo -up-> Monitor : 📈 Métriques\n(Alertes)
+Odoo -up-> Monitor : 📈 Metriques\n(Alertes)
 
-' Flux de données principaux
+' Flux de donnees principaux
 StockReel -left-> Odoo : 📊 Stock sync\n(Bidirectionnel)
 MLEngine -down-> Postgres : 🧠 Apprentissage\n(Historique)
 
-' Annotations des améliorations
+' Annotations des ameliorations
 note right of AppMobile #E6FFE6
-    🟢 **AMÉLIORATIONS TERRAIN**
+    🟢 **AMELIORATIONS TERRAIN**
     • Interface intuitive
     • Mode offline robuste
     • Scan QR/Code barre
-    • Photos géolocalisées
-    • Signature électronique
+    • Photos geolocalisees
+    • Signature electronique
 end note
 
 note right of Odoo #E6F3FF
-    🟢 **CŒUR SYSTÈME MODERNE**
+    🟢 **COEUR SYSTEME MODERNE**
     • Architecture microservices
-    • APIs REST documentées
-    • Haute disponibilité 99.9%
-    • Scalabilité horizontale
-    • Intégrations natives
+    • APIs REST documentees
+    • Haute disponibilite 99.9%
+    • Scalabilite horizontale
+    • Integrations natives
 end note
 
 note right of PortiqueRFID #FFF0E6
     🟢 **AUTOMATISATION TOTALE**
-    • Réception 2 sec vs 20 min
+    • Reception 2 sec vs 20 min
     • 0 erreur comptage
-    • Stock temps réel
-    • Traçabilité complète
+    • Stock temps reel
+    • Tracabilite complete
     • ROI 6 mois
 end note
 
 note right of RexelAPI #F0F8FF
-    🟢 **ÉCOSYSTÈME CONNECTÉ**
-    • Catalogues synchronisés
-    • Prix temps réel
+    🟢 **ECOSYSTEME CONNECTE**
+    • Catalogues synchronises
+    • Prix temps reel
     • Stock fournisseurs live
     • Commandes automatiques
     • 0 ressaisie manuelle
 end note
 
-' Métriques de performance
+' Metriques de performance
 legend bottom
-    🟢 = Amélioration majeure
+    🟢 = Amelioration majeure
     📱 = Mobile-first
-    🤖 = IA/ML intégré
-    🔐 = Sécurité renforcée
-    ⚡ = Performance optimisée
-    📊 = Analytics temps réel
+    🤖 = IA/ML integre
+    🔐 = Securite renforcee
+    ⚡ = Performance optimisee
+    📊 = Analytics temps reel
 end legend
 
 @enduml

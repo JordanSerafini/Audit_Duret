@@ -399,6 +399,17 @@
 
 ---
 
+## 🧠 FOCUS : STRATÉGIE DATA & IA
+
+Pour aller plus loin que la simple digitalisation, deux études spécifiques ont été réalisées :
+
+1.  **[ETUDE_DATA_DRIVEN.md](../data-ml/ETUDE_DATA_DRIVEN.md)** : Comment passer d'un pilotage à vue à un pilotage par la donnée (Gains financiers et opérationnels).
+2.  **[ETUDE_ML_IA.md](../data-ml/ETUDE_ML_IA.md)** : Cas d'usage concrets de l'IA pour Duret (OCR Factures, Prédiction Budgétaire, Optimisation Tournées).
+
+Ces études détaillent comment la "Dette de Donnée" actuelle peut être transformée en avantage concurrentiel une fois le socle Odoo en place.
+
+---
+
 ## 📅 PARTIE 5 : PLAN D'ACTION GLOBAL RECOMMANDÉ
 
 ### Approche : TRANSFORMATION PAR VAGUES

@@ -155,6 +155,20 @@ Le service RH gère **~100 collaborateurs** avec **nombreux outils + plusieurs E
 
 ---
 
+## 🧠 PARTIE 2 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+En lien avec l'étude globale [ETUDE_DATA_DRIVEN.md](../../data-ml/ETUDE_DATA_DRIVEN.md), le service RH est un candidat idéal pour l'automatisation intelligente :
+
+### 1. Analyse Prédictive de l'Absentéisme
+*   **Concept** : Détection des signaux faibles (pics saisonniers, services spécifiques) pour anticiper les besoins en intérim.
+*   **Gain** : Réactivité accrue, moins de stress pour les managers.
+
+### 2. Assistant RH (Chatbot Interne)
+*   **Concept** : Un bot qui répond aux questions récurrentes des collaborateurs ("Où est mon bulletin ?", "Combien de congés me reste-t-il ?").
+*   **Gain** : Libère du temps pour Sophie pour des tâches à plus forte valeur ajoutée.
+
+---
+
 ## 📅 PLAN D'ACTION RECOMMANDÉ
 
 ### Phase 1 : Quick Wins (Mois 1-4)

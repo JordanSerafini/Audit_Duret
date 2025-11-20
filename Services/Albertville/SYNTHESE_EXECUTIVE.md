@@ -233,6 +233,20 @@ Sources (Sage, MDE, Lireco) → Data Lake → Data Warehouse → Analytics → D
 
 ---
 
+## 🧠 PARTIE 2 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+En complément de l'étude globale [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md), Albertville présente des cas d'usage spécifiques :
+
+### 1. Prédiction des Situations de Travaux
+*   **Concept** : Analyse de l'avancement réel (heures + achats) pour pré-remplir la situation mensuelle.
+*   **Gain** : Réduction drastique du temps administratif (plusieurs jours -> quelques heures).
+
+### 2. Détection d'Anomalies Budgétaires
+*   **Concept** : Comparaison automatique entre le devis initial, les budgets complémentaires et le réalisé.
+*   **Gain** : Alerte immédiate en cas de dérive, sécurisation de la marge.
+
+---
+
 ## 📅 PARTIE 3 : PLAN D'IMPLÉMENTATION 24 MOIS
 
 ### 🔷 PHASE 1 : QUICK WINS (M1-M6)

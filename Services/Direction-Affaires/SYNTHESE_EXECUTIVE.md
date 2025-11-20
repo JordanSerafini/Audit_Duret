@@ -70,6 +70,20 @@
 
 ---
 
+## 🧠 PARTIE 4 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+L'intégration d'Odoo ouvre la porte à des fonctionnalités avancées décrites dans [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md) :
+
+### 1. Chiffrage Intelligent (Smart Quoting)
+*   **Concept** : L'IA analyse l'historique des devis gagnés/perdus pour suggérer le prix optimal.
+*   **Gain** : Augmentation du taux de transformation des devis.
+
+### 2. Détection de Dérive Budgétaire
+*   **Concept** : Algorithme surveillant la consommation d'heures et de matériel en temps réel pour alerter AVANT que la marge ne soit compromise.
+*   **Gain** : Sauvegarde de la rentabilité des chantiers.
+
+---
+
 ## 🎯 PARTIE 5 : JALONS CRITIQUES
 
 ### Mois 1 : Kick-off Projet

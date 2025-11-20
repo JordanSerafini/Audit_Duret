@@ -149,6 +149,20 @@ La Gestion Opérationnelle de Duret Électricité repose sur **Excel et processu
 
 ---
 
+## 🧠 PARTIE 2 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+La centralisation des données ouvre la voie à des analyses avancées décrites dans [ETUDE_DATA_DRIVEN.md](../../data-ml/ETUDE_DATA_DRIVEN.md) :
+
+### 1. Rapprochement Bancaire Automatique (Open Banking)
+*   **Concept** : Connexion directe aux banques pour lettrer automatiquement 90% des écritures.
+*   **Gain** : Gain de temps massif pour la comptabilité, trésorerie à jour au jour le jour.
+
+### 2. Prévision de Trésorerie (Cash Flow Forecasting)
+*   **Concept** : L'IA analyse les échéances clients et fournisseurs pour projeter la courbe de trésorerie à 3 mois.
+*   **Gain** : Anticipation des besoins de financement, sérénité pour la direction.
+
+---
+
 ## 📅 PLAN D'ACTION RECOMMANDÉ
 
 ### Phase 1 : Quick Wins (Mois 1-6)
