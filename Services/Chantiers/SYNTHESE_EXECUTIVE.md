@@ -262,6 +262,20 @@ Payback: ~18 mois
 
 ---
 
+## 🧠 PARTIE 3 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+L'application mobile chantier sera la source de données la plus riche de l'entreprise. Voici comment l'exploiter selon [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md) :
+
+### 1. Assistant Vocal de Rapport (Generative AI)
+*   **Concept** : Le chef de chantier dicte "J'ai posé 30m de câble et le client a demandé de déplacer la prise". L'IA génère le rapport formel PDF.
+*   **Gain** : Adoption massive par les équipes terrain (plus besoin de taper sur un clavier), rapports plus complets.
+
+### 2. Analyse Automatique des Photos
+*   **Concept** : L'IA détecte automatiquement les équipements sur les photos (ex: "Tableau électrique", "Tranchée") pour les classer sans effort.
+*   **Gain** : Retrouver une photo en 3 secondes en tapant "Tableau chantier X" au lieu de fouiller 500 fichiers.
+
+---
+
 ## 📅 PARTIE 4 : ROADMAP 12 MOIS
 
 ### Phase 1 : MVP Core (Mois 1-3) - 
