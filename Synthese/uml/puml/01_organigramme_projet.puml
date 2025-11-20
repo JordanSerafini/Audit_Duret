@@ -1,0 +1,190 @@
+@startuml 01_organigramme_projet
+
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.0
+' Type Diagramme: Component hierarchique
+' Description: Organigramme gouvernance projet transformation avec 5 niveaux
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
+title Organigramme Gouvernance Projet Transformation
+
+' === NIVEAU 1: COMITE DIRECTION (CODIR) ===
+package "NIVEAU 1 - COMITE DIRECTION (CODIR)" COLOR_ACTOR_DIRECTION {
+  rectangle "**SPONSOR EXECUTIF**\nDG Duret Electricite" as CODIR_DG #DDA0DD
+  rectangle "**CFO**\nDirecteur Financier" as CODIR_CFO #DDA0DD
+  rectangle "**SPONSOR METIER**\nDirecteur Operations" as CODIR_OPS #DDA0DD
+
+  note right of CODIR_DG
+    **ROLE CODIR:**
+    - Validation budget global
+    - Arbitrages strategiques
+    - Jalons GO/NO-GO
+    - Comite pilotage mensuel
+  end note
+}
+
+' === NIVEAU 2: DIRECTION PROJET ===
+package "NIVEAU 2 - DIRECTION PROJET (PMO)" COLOR_ACTOR_BUREAU {
+  rectangle "**CHEF PROJET**\nPMO Transformation\n(Temps plein)" as PMO_CHEF #ADD8E6
+  rectangle "**REFERENT IT**\nDSI/Architecte Technique\n(50%)" as PMO_IT #ADD8E6
+  rectangle "**REFERENT CHANGE**\nConduite Changement\n(30%)" as PMO_CHANGE #ADD8E6
+
+  note right of PMO_CHEF
+    **ROLE PMO:**
+    - Pilotage planning/budget
+    - Coordination prestataires
+    - Reporting hebdomadaire CODIR
+    - Gestion risques
+    - Animation comites
+  end note
+}
+
+' === NIVEAU 3: SPONSORS METIERS (8 SERVICES) ===
+package "NIVEAU 3 - SPONSORS METIERS (8 SERVICES)" COLOR_ACTOR_BUREAU {
+  rectangle "**Julien**\nSponsor Direction Affaires" as SPONSOR_DA #98FB98
+  rectangle "**Sophie**\nSponsor RH" as SPONSOR_RH #98FB98
+  rectangle "**Sylvie**\nSponsor Achats-Logistique" as SPONSOR_ACHATS #98FB98
+  rectangle "**Marc (Chef)**\nSponsor Chantiers" as SPONSOR_CHANTIERS #98FB98
+
+  rectangle "**Christine**\nSponsor Service Client" as SPONSOR_SC #98FB98
+  rectangle "**Laurent**\nSponsor Gestion-Op" as SPONSOR_GO #98FB98
+  rectangle "**Pierre**\nSponsor Maintenance" as SPONSOR_MT #98FB98
+  rectangle "**Responsable**\nSponsor Albertville" as SPONSOR_ALB #98FB98
+
+  note bottom of SPONSOR_DA
+    **ROLE SPONSORS:**
+    - Validation besoins metier
+    - Recette fonctionnelle
+    - Formation super-users
+    - Communication equipes
+    - Suivi adoption (KPI)
+  end note
+}
+
+' === NIVEAU 4: PRESTATAIRES EXTERNES ===
+package "NIVEAU 4 - PRESTATAIRES EXTERNES" COLOR_INTEGRATION {
+  rectangle "**INTEGRATEUR ODOO**\nCertifie Gold Partner\n(4-6 mois)" as PRESTA_ODOO #E6D4FF
+  rectangle "**DEV MOBILE**\nAgence Apps Natives\n(3-5 mois)" as PRESTA_MOBILE #E6D4FF
+  rectangle "**CONSULTANT SIRH**\nPayFit/Lucca Expert\n(2-3 mois)" as PRESTA_SIRH #E6D4FF
+  rectangle "**ARCHITECTE DATA**\nBI/ML Specialist\n(2-4 mois)" as PRESTA_DATA #E6D4FF
+
+  note bottom of PRESTA_ODOO
+    **ROLE PRESTATAIRES:**
+    - Implementation technique
+    - Parametrage solutions
+    - Formation utilisateurs
+    - Documentation
+    - Support post-GO-LIVE (3 mois)
+  end note
+}
+
+' === NIVEAU 5: SUPER-USERS (CHAMPIONS) ===
+package "NIVEAU 5 - SUPER-USERS (CHAMPIONS INTERNES)" COLOR_ACTOR_CHANTIER {
+  rectangle "**3 Champions/Service**\n24 personnes total" as CHAMPIONS #FFB6C1
+
+  note bottom of CHAMPIONS
+    **ROLE SUPER-USERS:**
+    - Formation approfondie (3j)
+    - Tests recette metier
+    - Support pair-a-pair
+    - Remontee bugs/suggestions
+    - Evangelisation equipes
+  end note
+}
+
+' === NIVEAU 6: UTILISATEURS FINAUX ===
+package "NIVEAU 6 - UTILISATEURS FINAUX" COLOR_ACTOR_CHANTIER {
+  rectangle "**30 Users Bureau**\nDA, SC, RH, GO, Achats" as USERS_BUREAU #FFB6C1
+  rectangle "**50 Users Terrain**\nChantiers, MT, Depot" as USERS_TERRAIN #FFB6C1
+
+  note bottom of USERS_BUREAU
+    **ROLE UTILISATEURS:**
+    - Formation 2 jours
+    - Tests UAT (recette)
+    - Feedback quotidien
+    - Adoption outils
+  end note
+}
+
+' === RELATIONS HIERARCHIQUES ===
+CODIR_DG -down-> PMO_CHEF : Pilote
+CODIR_CFO -down-> PMO_CHEF : Valide budget
+CODIR_OPS -down-> PMO_CHEF : Arbitre
+
+PMO_CHEF -down-> SPONSOR_DA : Coordonne
+PMO_CHEF -down-> SPONSOR_RH : Coordonne
+PMO_CHEF -down-> SPONSOR_ACHATS : Coordonne
+PMO_CHEF -down-> SPONSOR_CHANTIERS : Coordonne
+PMO_CHEF -down-> SPONSOR_SC : Coordonne
+PMO_CHEF -down-> SPONSOR_GO : Coordonne
+PMO_CHEF -down-> SPONSOR_MT : Coordonne
+PMO_CHEF -down-> SPONSOR_ALB : Coordonne
+
+PMO_IT -down-> PRESTA_ODOO : Pilote technique
+PMO_IT -down-> PRESTA_MOBILE : Pilote technique
+PMO_IT -down-> PRESTA_DATA : Pilote technique
+PMO_CHANGE -down-> PRESTA_SIRH : Pilote RH
+
+SPONSOR_DA -down-> CHAMPIONS : Nomme
+SPONSOR_RH -down-> CHAMPIONS : Nomme
+SPONSOR_ACHATS -down-> CHAMPIONS : Nomme
+SPONSOR_CHANTIERS -down-> CHAMPIONS : Nomme
+SPONSOR_SC -down-> CHAMPIONS : Nomme
+SPONSOR_GO -down-> CHAMPIONS : Nomme
+SPONSOR_MT -down-> CHAMPIONS : Nomme
+SPONSOR_ALB -down-> CHAMPIONS : Nomme
+
+PRESTA_ODOO -down-> CHAMPIONS : Forme (3j)
+PRESTA_MOBILE -down-> CHAMPIONS : Forme (2j)
+PRESTA_SIRH -down-> CHAMPIONS : Forme (2j)
+
+CHAMPIONS -down-> USERS_BUREAU : Supporte
+CHAMPIONS -down-> USERS_TERRAIN : Supporte
+
+' === COMITES TRANSVERSES ===
+note top of PMO_CHEF
+  **COMITES PROJET:**
+
+  EMO_CRITICAL **COPIL (Comite Pilotage):**
+  - Frequence: Mensuel
+  - Participants: CODIR + PMO
+  - Objectif: Validation jalons, arbitrages
+
+  EMO_WARNING **COPROJ (Comite Projet):**
+  - Frequence: Hebdomadaire
+  - Participants: PMO + Sponsors + Prestataires
+  - Objectif: Suivi operationnel, risques
+
+  EMO_INFO **COTECH (Comite Technique):**
+  - Frequence: Bi-hebdomadaire
+  - Participants: PMO IT + Prestataires
+  - Objectif: Architecture, integration
+
+  EMO_SUCCESS **FORMATION:**
+  - Frequence: Continue
+  - Participants: Champions + Users
+  - Objectif: Adoption, support
+end note
+
+' === EFFECTIFS TOTAUX ===
+note bottom
+  **EFFECTIFS PROJET:**
+
+  - **Direction (CODIR):** 3 personnes
+  - **PMO:** 3 personnes (1.8 ETP)
+  - **Sponsors Metiers:** 8 personnes (0.3 ETP chacun)
+  - **Prestataires:** 4 societes (10-15 ETP cumules sur pics)
+  - **Super-users:** 24 champions (formation 3j + support continu)
+  - **Utilisateurs finaux:** 80 personnes (formation 2j)
+
+  **TOTAL IMPLIQUES:** 120+ personnes
+end note
+
+@enduml

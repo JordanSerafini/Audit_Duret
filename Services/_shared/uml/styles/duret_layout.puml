@@ -1,0 +1,97 @@
+@startuml
+' ============================================================================
+' LAYOUT STANDARDISE DURET ELECTRICITE
+' ============================================================================
+' Version: 1.0
+' Date: 2025-11-20
+' Description: Configuration layout commune (polices, espacements, bordures)
+' Usage: !include ../../_shared/uml/styles/duret_layout.puml
+' ============================================================================
+
+' === CONFIGURATION GENERALE ===
+skinparam backgroundColor white
+skinparam defaultFontName Arial
+skinparam defaultFontSize 11
+skinparam defaultTextAlignment center
+
+' === DIAGRAMMES SEQUENCE ===
+skinparam sequenceMessageAlign center
+skinparam sequenceReferenceAlign center
+skinparam sequenceBoxBorderColor #999999
+skinparam sequenceLifeLineBorderColor #333333
+skinparam sequenceArrowThickness 2
+skinparam sequenceParticipantBorderThickness 2
+
+' === NOTES ===
+skinparam noteBorderColor #333333
+skinparam noteFontSize 10
+skinparam noteSeparation 20
+skinparam noteBackgroundColor #FFFFCC
+skinparam noteBorderThickness 1
+
+' === ACTEURS ===
+skinparam actorBorderColor #333333
+skinparam actorBorderThickness 2
+skinparam actorFontSize 11
+skinparam actorFontStyle bold
+
+' === PARTICIPANTS (SYSTEMES) ===
+skinparam participantBorderColor #333333
+skinparam participantBorderThickness 2
+skinparam participantFontSize 11
+skinparam participantPadding 20
+
+' === FLECHES/RELATIONS ===
+skinparam ArrowColor #333333
+skinparam ArrowFontSize 10
+skinparam ArrowThickness 2
+
+' === COMPOSANTS ===
+skinparam componentBorderColor #333333
+skinparam componentBorderThickness 2
+skinparam componentFontSize 12
+skinparam componentStyle rectangle
+
+' === PACKAGES ===
+skinparam packageBorderColor #666666
+skinparam packageBorderThickness 2
+skinparam packageFontStyle bold
+skinparam packageFontSize 13
+
+' === BASES DE DONNEES ===
+skinparam databaseBorderColor #333333
+skinparam databaseBorderThickness 2
+skinparam databaseFontSize 11
+
+' === ETATS (STATE DIAGRAMS) ===
+skinparam stateBorderColor #333333
+skinparam stateBorderThickness 2
+skinparam stateFontSize 11
+skinparam stateBackgroundColor #E8F5E9
+
+' === CLASSES ===
+skinparam classBorderColor #333333
+skinparam classBorderThickness 2
+skinparam classFontSize 11
+skinparam classAttributeFontSize 10
+
+' === RECTANGLES/BOITES ===
+skinparam rectangleBorderColor #333333
+skinparam rectangleBorderThickness 2
+skinparam rectangleFontSize 11
+
+' === LEGENDES ===
+skinparam legendBorderColor #333333
+skinparam legendBackgroundColor #F5F5F5
+skinparam legendFontSize 10
+
+' === TITRES ===
+skinparam titleFontSize 16
+skinparam titleFontStyle bold
+
+' === MARGES ET ESPACEMENTS ===
+skinparam padding 10
+skinparam nodesep 20
+skinparam ranksep 30
+
+@enduml
