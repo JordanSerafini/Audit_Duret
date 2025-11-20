@@ -1,0 +1,201 @@
+@startuml 09_architecture_it_globale_actuelle
+
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.0
+' Type Diagramme: Component
+' Description: Vue 360 degres du chaos IT actuel sur les 8 services
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
+title Architecture IT Globale - ETAT ACTUEL (CHAOS SYSTEMIQUE)
+
+package "8 SERVICES DURET ELECTRICITE" {
+
+  package "Direction Affaires" as DA COLOR_ACTOR_DIRECTION {
+    [Word Manual\nDevis/PPSPS] as DA_Word COLOR_SYSTEME_EXCEL
+    [Excel Chiffrage\n12 fichiers] as DA_Excel COLOR_SYSTEME_EXCEL
+    [Sage MDE\n(Partiel)] as DA_Sage COLOR_SYSTEME_LEGACY
+    note right of DA_Excel
+      EMO_TIME 8h/devis
+      EMO_ERROR 30% erreurs
+      EMO_RESAISIE Tout en double
+    end note
+  }
+
+  package "Service Client" as SC COLOR_ACTOR_CLIENT {
+    [Post-it\nChaos Appels] as SC_Postit COLOR_SYSTEME_LEGACY
+    [Excel Planning\n3 fichiers] as SC_Excel COLOR_SYSTEME_EXCEL
+    [Telephone\nOral uniquement] as SC_Phone COLOR_SYSTEME_LEGACY
+    note right of SC_Postit
+      EMO_CRITICAL 40 min perdues/appel
+      EMO_BLOCKED 8 contacts moyens
+      EMO_ERROR Rdv oublies
+    end note
+  }
+
+  package "Chantiers (15 chefs)" as CH COLOR_ACTOR_CHANTIER {
+    [WhatsApp\nMessagier] as CH_WA COLOR_SYSTEME_LEGACY
+    [Telephone\nOral] as CH_Phone COLOR_SYSTEME_LEGACY
+    [Photos Personnelles\nNon centralisees] as CH_Photos COLOR_SYSTEME_LEGACY
+    [Cahier Papier\nRapports] as CH_Paper COLOR_SYSTEME_LEGACY
+    note right of CH_WA
+      EMO_CRITICAL Aucune tracabilite
+      EMO_TIME 2h/jour communications
+      EMO_BLOCKED Chantiers bloques
+    end note
+  }
+
+  package "Ressources Humaines" as RH COLOR_ACTOR_RH {
+    [POPAYE\nPayFit] as RH_PayFit COLOR_SYSTEME_CIBLE
+    [Excel Conges\n5 fichiers] as RH_Excel COLOR_SYSTEME_EXCEL
+    [Email Validations\nChaos] as RH_Email COLOR_SYSTEME_LEGACY
+    note right of RH_Excel
+      EMO_TIME 25-30h/mois paie
+      EMO_RESAISIE 7 fichiers differents
+      EMO_ERROR Erreurs couts 3-5%
+    end note
+  }
+
+  package "Achats Logistique" as AL COLOR_ACTOR_BUREAU {
+    [Sage MDE\nERP Legacy] as AL_Sage COLOR_SYSTEME_LEGACY
+    [Excel Stock\n8 fichiers] as AL_Excel COLOR_SYSTEME_EXCEL
+    [Email/Tel\nCommandes] as AL_Comm COLOR_SYSTEME_LEGACY
+    note right of AL_Sage
+      EMO_TIME 6h traitement/commande
+      EMO_RESAISIE 4-5 saisies manuelles
+      EMO_CRITICAL Stock jamais a jour
+    end note
+  }
+
+  package "Maintenance Technique" as MT COLOR_ACTOR_BUREAU {
+    [Papier CERFA\nManuel] as MT_Papier COLOR_SYSTEME_LEGACY
+    [Excel Planning\n2 fichiers] as MT_Excel COLOR_SYSTEME_EXCEL
+    [Telephone\nRDV] as MT_Phone COLOR_SYSTEME_LEGACY
+    note right of MT_Papier
+      EMO_TIME Papier perdu/oublie
+      EMO_ERROR Certifications invalides
+      EMO_BLOCKED Pas optimisation tournees
+    end note
+  }
+
+  package "Gestion Operationnelle" as GO COLOR_ACTOR_BUREAU {
+    [Sage MDE\nAffaires] as GO_Sage COLOR_SYSTEME_LEGACY
+    [Excel Reporting\n15 fichiers] as GO_Excel COLOR_SYSTEME_EXCEL
+    [Email\nValidations] as GO_Email COLOR_SYSTEME_LEGACY
+    note right of GO_Excel
+      EMO_TIME 24h generation KPI
+      EMO_RESAISIE Copier-coller manuel
+      EMO_ERROR Donnees perimees
+    end note
+  }
+
+  package "Albertville (BTP)" as ALB COLOR_ACTOR_DEPOT {
+    [BL Papier\nSituations] as ALB_Papier COLOR_SYSTEME_LEGACY
+    [Excel Suivi\n4 fichiers] as ALB_Excel COLOR_SYSTEME_EXCEL
+    [Comptage Manuel\nStocks] as ALB_Stock COLOR_SYSTEME_LEGACY
+    note right of ALB_Papier
+      EMO_TIME Situations 3j/mois
+      EMO_ERROR Erreurs facturations
+      EMO_RESAISIE Tout manuscrit
+    end note
+  }
+}
+
+' === SYSTEMES CENTRAUX ACTUELS ===
+package "INFRASTRUCTURE IT ACTUELLE" COLOR_PROBLEME {
+  database "Sage MDE\n(Legacy ERP)" as SAGE_CENTRAL COLOR_SYSTEME_LEGACY {
+    [Module Ventes]
+    [Module Achats]
+    [Comptabilite]
+  }
+
+  cloud "60+ FICHIERS EXCEL\nNON CONNECTES" as EXCEL_CENTRAL COLOR_SYSTEME_EXCEL {
+    [Stock (×8)]
+    [Planning (×7)]
+    [Reporting (×15)]
+    [Chiffrage (×12)]
+    [Conges (×5)]
+    [Autres (×13)]
+  }
+
+  node "COMMUNICATIONS ORALES" as COMM_CENTRAL COLOR_SYSTEME_LEGACY {
+    [Telephone]
+    [WhatsApp]
+    [Email]
+    [Post-it]
+  }
+}
+
+' === RELATIONS CHAOS ===
+DA_Sage -down-> SAGE_CENTRAL : Saisie manuelle
+AL_Sage -down-> SAGE_CENTRAL : Partiel sync
+GO_Sage -down-> SAGE_CENTRAL : Extractions
+
+DA_Excel -down-> EXCEL_CENTRAL : EMO_RESAISIE
+SC_Excel -down-> EXCEL_CENTRAL : EMO_RESAISIE
+AL_Excel -down-> EXCEL_CENTRAL : EMO_RESAISIE
+RH_Excel -down-> EXCEL_CENTRAL : EMO_RESAISIE
+MT_Excel -down-> EXCEL_CENTRAL : EMO_RESAISIE
+GO_Excel -down-> EXCEL_CENTRAL : EMO_RESAISIE
+ALB_Excel -down-> EXCEL_CENTRAL : EMO_RESAISIE
+
+SC_Phone -down-> COMM_CENTRAL : Oral
+CH_WA -down-> COMM_CENTRAL : Non trace
+MT_Phone -down-> COMM_CENTRAL : Oral
+GO_Email -down-> COMM_CENTRAL : Disperse
+
+' === NOTES GLOBALES ===
+note top of SAGE_CENTRAL
+  EMO_CRITICAL SYSTEME LEGACY
+  - Obsolete (15+ ans)
+  - Mal adapte electricite
+  - Pas d'API moderne
+  - Maintenance couteuse
+end note
+
+note top of EXCEL_CENTRAL
+  EMO_ERROR CHAOS DOCUMENTAIRE
+  - 60+ fichiers isoles
+  - Versions multiples
+  - Aucune source verite
+  - Consolidation impossible
+end note
+
+note top of COMM_CENTRAL
+  EMO_BLOCKED TRACABILITE ZERO
+  - Informations perdues
+  - Pas d'historique
+  - Recherche impossible
+  - Decisions non documentees
+end note
+
+' === METRIQUES GLOBALES ===
+note bottom
+  **BILAN ETAT ACTUEL**
+
+  EMO_MONEY **Couts caches annuels estimes:**
+  - Temps perdu: 180h/mois × 8 services = 1440h/mois
+  - Erreurs reprises: ~15% temps productif
+  - Opportunites perdues: 50K€/an (devis non suivis)
+
+  EMO_CRITICAL **Problemes critiques:**
+  - Aucun systeme unifie multi-services
+  - 6 systemes legacy differents (Sage, Post-it, Papier, WhatsApp...)
+  - 60+ fichiers Excel dupliques et non synchronises
+  - Tracabilite quasi-nulle des decisions
+
+  EMO_ERROR **Impact business:**
+  - Satisfaction client: 4/10
+  - Productivite equipes: -30% estimation
+  - Risques conformite: ELEVES
+end note
+
+LEGEND_COLORS()
+
+@enduml

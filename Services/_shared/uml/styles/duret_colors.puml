@@ -1,0 +1,80 @@
+@startuml
+' ============================================================================
+' PALETTE COULEURS DURET ELECTRICITE
+' ============================================================================
+' Version: 1.0
+' Date: 2025-11-20
+' Description: Palette couleurs standardisee pour tous les diagrammes PlantUML
+' Usage: !include ../../_shared/uml/styles/duret_colors.puml
+' ============================================================================
+
+' === ACTEURS HUMAINS ===
+!define COLOR_ACTOR_CHANTIER #FFB6C1
+!define COLOR_ACTOR_BUREAU #ADD8E6
+!define COLOR_ACTOR_DEPOT #98FB98
+!define COLOR_ACTOR_DIRECTION #DDA0DD
+!define COLOR_ACTOR_RH #FFDAB9
+!define COLOR_ACTOR_CLIENT #E6E6FA
+!define COLOR_ACTOR_FOURNISSEUR #F5DEB3
+
+' === SYSTEMES IT ===
+!define COLOR_SYSTEME_LEGACY #FF6B6B
+!define COLOR_SYSTEME_CIBLE #90EE90
+!define COLOR_SYSTEME_EXCEL #FFD700
+!define COLOR_SYSTEME_CLOUD #E8F4F8
+!define COLOR_SYSTEME_MOBILE #B8E6B8
+!define COLOR_SYSTEME_ERP #E8F5E9
+!define COLOR_SYSTEME_SIRH #FFF9E6
+!define COLOR_SYSTEME_CRM #E3F2FD
+
+' === ETATS PROCESSUS ===
+!define COLOR_ETAT_OK #E8F5E9
+!define COLOR_ETAT_WARNING #FFF9E6
+!define COLOR_ETAT_ERROR #FFCCCC
+!define COLOR_ETAT_BLOCKED #FFFFCC
+!define COLOR_ETAT_INPROGRESS #E3F2FD
+!define COLOR_ETAT_PENDING #F5F5F5
+
+' === PROBLEMES ET SOLUTIONS ===
+!define COLOR_PROBLEME #FF6B6B
+!define COLOR_SOLUTION #90EE90
+!define COLOR_ATTENTION #FFA500
+!define COLOR_INFO #ADD8E6
+!define COLOR_MANUEL #FFD700
+!define COLOR_SUCCESS #E8F5E9
+
+' === ARCHITECTURE TECHNIQUE ===
+!define COLOR_DATA #FFE4B5
+!define COLOR_INTEGRATION #E6D4FF
+!define COLOR_API #D4E6FF
+!define COLOR_DATABASE #FFE4B5
+!define COLOR_CACHE #E0E0E0
+!define COLOR_QUEUE #FFF3CD
+
+' === PRIORITES ===
+!define COLOR_CRITIQUE #FF0000
+!define COLOR_IMPORTANT #FFA500
+!define COLOR_SOUHAITABLE #FFD700
+!define COLOR_BONUS #90EE90
+
+' === EMOJIS STANDARDISES ===
+!define EMO_CRITICAL 🔴
+!define EMO_WARNING 🟠
+!define EMO_INFO 🔵
+!define EMO_SUCCESS ✅
+!define EMO_ERROR ❌
+!define EMO_TIME ⏰
+!define EMO_MONEY 💰
+!define EMO_RESAISIE ♻️
+!define EMO_BLOCKED ⏸️
+!define EMO_PHONE 📞
+!define EMO_EMAIL 📧
+!define EMO_MESSAGE 💬
+!define EMO_DOCUMENT 📄
+!define EMO_EXCEL 📊
+!define EMO_CHANTIER 🏗️
+!define EMO_DEPOT 🏢
+!define EMO_CAMION 🚚
+!define EMO_OUTILS 🔧
+
+@enduml
