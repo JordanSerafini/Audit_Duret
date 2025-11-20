@@ -1,0 +1,31 @@
+@startmindmap Pain_Points_Albertville
+
+title Pain Points - Agence Albertville
+
+* <&flag> **AGENCE ALBERTVILLE**
+** <&warning> **ISOLEMENT SI**
+*** Pas d'accès direct à Sage
+*** Excel local uniquement
+*** Dépendance au Siège
+** <&clock> **LENTEUR ADMINISTRATIVE**
+*** Situations manuelles (2j/mois)
+*** Validation factures par email
+*** Pas de visibilité temps réel
+** <&graph> **PILOTAGE AVEUGLE**
+*** Budgets connus à M-1
+*** Pas de KPI agence
+*** Marge chantier floue
+** <&people> **FRUSTRATION**
+*** Sentiment d'être "à part"
+*** Outils inadaptés
+*** Perte de temps
+
+legend right
+  Légende:
+  <&warning> Critique
+  <&clock> Perte de temps
+  <&graph> Pilotage
+  <&people> Humain
+endlegend
+
+@endmindmap

@@ -1,0 +1,60 @@
+@startuml Architecture_Albertville
+
+title Architecture SI - Agence Albertville (ACTUEL vs CIBLE)
+
+package "ACTUEL (SILO)" #FFCCCC {
+  [PC Responsable] as PC
+  file "Excel Suivi" as Excel
+  file "Excel Factures" as ExcelFact
+  
+  PC --> Excel : Saisie manuelle
+  PC --> ExcelFact : Saisie manuelle
+  
+  cloud "Email" {
+    [Outlook]
+  }
+  
+  PC --> Outlook : Envoi fichiers
+}
+
+package "SIÈGE (LYON)" #EEEEEE {
+  database "Sage 100" as Sage
+  [Comptabilité] as Compta
+  
+  Outlook ..> Compta : Réception
+  Compta --> Sage : Ressaisie manuelle
+}
+
+package "CIBLE (INTÉGRÉ)" #CCFFCC {
+  [Tablette Chantier] as Tablette
+  [PC Agence] as PCAgence
+  
+  cloud "Cloud Duret" {
+    [API Services] as API
+    database "Data Warehouse" as DWH
+  }
+  
+  Tablette --> API : Pointage / Avancement
+  PCAgence --> API : Validation
+  API --> Sage : Synchro auto
+  API --> DWH : Données KPI
+  
+  [Dashboard PowerBI] as PBI
+  PBI <-- DWH : Visibilité TR
+}
+
+note right of ACTUEL
+  🔴 **RUPTURE DE FLUX**
+  - Pas de lien direct
+  - Echanges par mail
+  - Ressaisies
+end note
+
+note right of CIBLE
+  ✅ **CONTINUITÉ NUMÉRIQUE**
+  - Saisie unique
+  - Synchro temps réel
+  - Visibilité totale
+end note
+
+@enduml

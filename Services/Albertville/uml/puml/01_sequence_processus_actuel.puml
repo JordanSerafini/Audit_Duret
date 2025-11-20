@@ -1,0 +1,64 @@
+@startuml Processus_Albertville_Actuel
+
+title Processus Albertville - ÉTAT ACTUEL (ISOLEMENT)
+
+actor "Responsable\nAgence" as Resp #FFB6C1
+actor "Technicien" as Tech #ADD8E6
+participant "Excel\nLocal" as Excel #FFD700
+participant "Email" as Email
+participant "Siège\n(Lyon)" as Siege #CCCCCC
+
+== Gestion des Situations (Mensuel) ==
+
+Resp -> Excel: Saisie avancement chantiers
+note right #FF6B6B
+  🔴 **FICHIER ISOLÉ**
+  Pas de lien avec le SI central
+  Risque d'erreur de saisie
+end note
+
+Resp -> Resp: Calcul facturation manuelle
+note right #FF6B6B
+  ⏰ 2 jours / mois
+  Calculs complexes
+end note
+
+Resp -> Email: Envoi Excel au Siège
+note right #FF6B6B
+  🔴 **ENVOI MANUEL**
+  Pas de validation automatique
+end note
+
+Siege -> Siege: Réception & Resaisie
+note right #FF6B6B
+  🔴 **DOUBLE SAISIE**
+  Risque d'erreur élevé
+end note
+
+== Gestion des Budgets ==
+
+Resp -> Resp: "Où en est mon budget ?"
+Resp -> Excel: Vérifie ses tableaux
+note right #FFD700
+  ⚠️ Données non à jour
+  Décalage de 1 mois
+end note
+
+Resp -> Siege: Appel pour confirmation
+Siege --> Resp: "Je t'envoie l'export Sage"
+note right #FF6B6B
+  ⏰ Perte de temps
+  Pas d'autonomie
+end note
+
+== BILAN ==
+
+note over Resp, Siege #FFCCCC
+  **MÉTRIQUES**
+  ❌ Visibilité financière: **M-1**
+  ❌ Temps administratif: **3j / mois**
+  ❌ Risque erreur: **Élevé**
+  ❌ Sentiment: **Abandon / Isolement**
+end note
+
+@enduml

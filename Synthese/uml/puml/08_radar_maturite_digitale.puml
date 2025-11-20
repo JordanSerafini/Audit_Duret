@@ -1,0 +1,32 @@
+@startuml Radar_Maturite_Digitale
+
+title Maturité Digitale par Service (Actuel vs Cible)
+
+skinparam radar {
+  BackgroundWhite
+  ColorBlack
+}
+
+radar "Maturité Digitale" {
+  
+  axis "Outils Métier" 
+  axis "Mobilité"
+  axis "Data & KPI"
+  axis "Automatisation"
+  axis "Collaboration"
+
+  data "Actuel (Moyenne)" [20, 10, 10, 5, 30] #FF0000
+  data "Cible (2026)" [90, 95, 100, 80, 90] #008000
+  
+}
+
+note bottom
+  **LÉGENDE**
+  0-20 : Papier / Excel / Manuel
+  20-40 : Outils isolés / Email
+  40-60 : Outils connectés
+  60-80 : Digitalisé & Automatisé
+  80-100 : Data Driven & IA
+end note
+
+@enduml

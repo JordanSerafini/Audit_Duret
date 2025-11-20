@@ -1,0 +1,61 @@
+@startuml Flux_Donnees_Global_Cible
+
+title Flux de Données Global - Vision Cible (Data Driven)
+
+skinparam componentStyle rectangle
+
+package "Opérations Terrain" {
+  [Chantiers] as Chantier #98FB98
+  [Maintenance] as Maint #98FB98
+  [Albertville] as Albert #98FB98
+}
+
+package "Support & Gestion" {
+  [Achats-Logistique] as Achats #ADD8E6
+  [Ressources-Humaines] as RH #ADD8E6
+  [Direction-Affaires] as DirAff #ADD8E6
+  [Service-Client] as SvcClient #ADD8E6
+  [Gestion-Opérationnelle] as GestOp #ADD8E6
+}
+
+database "Data Warehouse\n(Snowflake/BigQuery)" as DWH #FFD700
+database "ERP Central\n(Sage 100 Cloud)" as ERP #FFD700
+
+' Flux Chantiers
+Chantier --> DWH : Heures, Avancement, Photos
+Chantier --> Achats : Demandes Matériel
+Chantier --> RH : Pointages
+
+' Flux Maintenance
+Maint --> DWH : Rapports, Statut
+Maint --> SvcClient : Clôture Intervention
+Maint --> Achats : Pièces détachées
+
+' Flux Albertville (Intégré)
+Albert --> DWH : KPI, Financier
+Albert --> ERP : Facturation
+
+' Flux Support
+Achats --> Chantier : Statut Livraison
+Achats --> Maint : Dispo Pièces
+Achats --> ERP : Commandes/Factures
+
+RH --> DWH : Effectifs, Absences
+RH --> ERP : Paie
+
+DirAff --> ERP : Devis, Situations
+DirAff --> Chantier : Dossier Technique
+
+SvcClient --> Maint : Planification
+SvcClient --> DWH : Satisfaction, Tickets
+
+GestOp --> DWH : Objectifs
+DWH --> GestOp : Tableaux de Bord TR
+
+note bottom of DWH
+  **CENTRALISATION DE LA DONNÉE**
+  Toutes les données remontent au DWH
+  pour alimenter les dashboards PowerBI
+end note
+
+@enduml
