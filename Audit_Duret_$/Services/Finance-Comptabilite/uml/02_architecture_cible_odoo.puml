@@ -1,7 +1,6 @@
 @startuml Architecture_Cible_Odoo
 
-title Architecture Cible - Finance & Comptabilité (Odoo)
-subtitle ✅ ERP intégré - Automatisations - Temps réel
+title Architecture Cible - Finance et Comptabilité (Odoo)
 
 !define APP_COLOR #B8E6B8
 !define DATA_COLOR #FFE4B5

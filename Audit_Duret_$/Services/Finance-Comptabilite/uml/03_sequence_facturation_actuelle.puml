@@ -1,7 +1,6 @@
 @startuml Sequence_Facturation_Actuelle
 
 title Processus Facturation ACTUEL (Sage)
-subtitle 🔴 Délai 5-10 jours - Ressaisies multiples - Risques d'erreurs
 
 actor "👷 Chef\nChantier" as Chef
 participant "📧 Email/\nTéléphone" as Email

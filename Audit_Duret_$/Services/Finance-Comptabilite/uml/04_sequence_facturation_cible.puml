@@ -1,7 +1,6 @@
 @startuml Sequence_Facturation_Cible
 
 title Processus Facturation CIBLE (Odoo)
-subtitle ✅ Délai < 48h - Automatisation - Zéro ressaisie
 
 actor "👷 Chef\nChantier" as Chef
 participant "📱 Odoo Mobile\nApp" as MobileApp

@@ -1,7 +1,6 @@
 @startuml Architecture_Actuelle_Sage
 
-title Architecture Actuelle - Finance & Comptabilité (Sage)
-subtitle 🔴 Silos isolés - Processus manuels - Absence d'intégration
+title Architecture Actuelle - Finance et Comptabilité (Sage)
 
 !define LEGACY_COLOR #FFE4E1
 !define MANUAL_COLOR #FFE4B5
