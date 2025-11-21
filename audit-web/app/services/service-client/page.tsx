@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Users, MessageSquare, PhoneCall, Clock, RefreshCw, Smartphone, LayoutDashboard } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
-import UMLGallery from '@/components/UMLGallery';
+import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
 
 export const metadata = {
   title: 'Service Client - Audit IT Duret',
@@ -482,17 +482,7 @@ export default function ServiceClientPage() {
       </div>
 
       {/* Diagrammes UML */}
-      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
-        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-          <LayoutDashboard className="w-8 h-8 text-teal-600" />
-          Diagrammes UML - Visualisation & Téléchargement
-        </h2>
-        <p className="text-slate-600 mb-6">
-          Explorez tous les diagrammes UML du Service Client : architecture, processus, cas d&apos;usage, et plus encore.
-          Visualisez-les directement ou téléchargez-les individuellement.
-        </p>
-        <UMLGallery serviceKey="service-client" />
-      </div>
+      <CollapsibleUMLSection serviceKey="service-client" serviceLabel="Service Client" />
 
       {/* Prochaines Étapes */}
       <div className="bg-gradient-to-r from-teal-700 to-cyan-700 rounded-2xl p-8 text-white mb-12">
