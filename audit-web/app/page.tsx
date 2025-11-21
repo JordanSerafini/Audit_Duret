@@ -88,30 +88,13 @@ export default function Home() {
                 ⚡
               </div>
               <div>
-                <div className="inline-block bg-emerald-500/20 border border-emerald-400/30 px-4 py-1 rounded-full mb-3">
-                  <span className="text-emerald-300 text-sm font-bold">⭐⭐⭐⭐⭐ Audit Externe Validé</span>
-                </div>
                 <h1 className="text-5xl font-bold text-white mb-3">
                   Audit IT - Duret Électricité
                 </h1>
                 <p className="text-blue-200 text-xl max-w-2xl">
-                  PME en crise de croissance : 100 collaborateurs freinés par des systèmes obsolètes
+                  Transformation Digitale & Architecture SI
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 mb-6">
-            <p className="text-white text-lg mb-4 leading-relaxed">
-              <strong className="text-blue-300">Contexte :</strong> Duret Électricité (électricité générale, maintenance, chantiers)
-              gère des chantiers de 50k€ à 2.5M€ mais perd <strong className="text-red-300">4 000h/an</strong> en ressaisies
-              et découvre sa rentabilité <strong className="text-orange-300">uniquement à la clôture comptable</strong>.
-            </p>
-            <div className="flex items-center gap-3 text-blue-200">
-              <Shield className="w-5 h-5 text-emerald-400" />
-              <p className="text-sm">
-                <strong>Verdict :</strong> Solution recommandée validée par audit externe indépendant (Gemini AI) - ROI &lt;18 mois
-              </p>
             </div>
           </div>
 
@@ -220,41 +203,176 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Navigation rapide */}
+      {/* Roadmap Transformation - Timeline visuelle */}
+      <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 border border-slate-200 mb-12">
+        <div className="flex items-center gap-3 mb-8">
+          <Clock className="w-9 h-9 text-slate-700" />
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900">Roadmap de Transformation</h2>
+            <p className="text-slate-600 text-sm">Feuille de route en 3 phases sur 18 mois</p>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-xl p-6 border-l-4 border-blue-500 shadow-sm hover:shadow-lg transition-shadow">
+            <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase mb-3">Phase 1 • M1-M6</span>
+            <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <Target className="w-5 h-5 text-blue-600" />
+              Arrêter l&apos;Hémorragie
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>ERP Odoo + CRM (unifier processus)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>App Mobile Chantier (sécuriser facturation)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Socle Achats/Ventes (remplacer ERP lent)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 border-l-4 border-emerald-500 shadow-sm hover:shadow-lg transition-shadow">
+            <span className="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold uppercase mb-3">Phase 2 • M6-M12</span>
+            <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <Building2 className="w-5 h-5 text-emerald-600" />
+              Structurer
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Stocks Code-barres (RFID M18)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Migration RH/SIRH</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Compta Analytique par chantier</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>APIs Rexel/Sonepar (prix temps réel)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 border-l-4 border-purple-500 shadow-sm hover:shadow-lg transition-shadow">
+            <span className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold uppercase mb-3">Phase 3 • M12-M18</span>
+            <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-purple-600" />
+              Optimiser & IA
+            </h3>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Portail Client 24/7</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>IA Prédictive (dérives budgétaires)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Optimisation achats automatique</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>Data Lake centralisé</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation rapide améliorée */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">Navigation</h2>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="flex items-center gap-3 mb-6">
+          <Folder className="w-8 h-8 text-slate-700" />
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900">Explorer l&apos;Audit</h2>
+            <p className="text-slate-600 text-sm">Navigation rapide vers les sections clés</p>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
           <Link
             href="/services/achats-logistique"
-            className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-xl p-6 hover:shadow-lg transition-all group"
+            className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-2xl p-8 hover:shadow-2xl hover:scale-[1.02] transition-all group relative overflow-hidden"
           >
-            <Folder className="w-8 h-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold text-lg text-slate-900 mb-2">Services</h3>
-            <p className="text-slate-600 text-sm">
-              Analyse détaillée des 8 services de l'entreprise
-            </p>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/30 rounded-full blur-2xl group-hover:w-48 group-hover:h-48 transition-all"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-blue-600 p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
+                  <Folder className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-2xl text-slate-900">Services</h3>
+                  <p className="text-blue-700 text-sm font-medium">8 services analysés</p>
+                </div>
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed mb-4">
+                Analyse détaillée de chaque service : Achats-Logistique, Chantiers, Finance, RH, Service Client, Maintenance, Direction Affaires, Gestion Opérationnelle
+              </p>
+              <div className="flex items-center gap-2 text-blue-600 font-semibold text-sm">
+                <span>Explorer les services</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+              </div>
+            </div>
           </Link>
 
           <Link
             href="/annexes/logiciels"
-            className="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-xl p-6 hover:shadow-lg transition-all group"
+            className="bg-gradient-to-br from-emerald-50 to-green-100 border-2 border-emerald-200 rounded-2xl p-8 hover:shadow-2xl hover:scale-[1.02] transition-all group relative overflow-hidden"
           >
-            <FileText className="w-8 h-8 text-green-600 mb-3 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold text-lg text-slate-900 mb-2">Annexes</h3>
-            <p className="text-slate-600 text-sm">
-              Documentation logiciels et APIs
-            </p>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-200/30 rounded-full blur-2xl group-hover:w-48 group-hover:h-48 transition-all"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-emerald-600 p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-2xl text-slate-900">Annexes</h3>
+                  <p className="text-emerald-700 text-sm font-medium">Documentation technique</p>
+                </div>
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed mb-4">
+                Fiches logiciels (Odoo ERP), documentation APIs (Rexel, Sonepar Punchout), guides techniques et recommandations d&apos;intégration
+              </p>
+              <div className="flex items-center gap-2 text-emerald-600 font-semibold text-sm">
+                <span>Consulter les annexes</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+              </div>
+            </div>
           </Link>
 
           <Link
             href="/synthese"
-            className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 rounded-xl p-6 hover:shadow-lg transition-all group col-span-2"
+            className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 rounded-2xl p-8 hover:shadow-2xl hover:scale-[1.02] transition-all group relative overflow-hidden md:col-span-2"
           >
-            <CheckCircle className="w-8 h-8 text-purple-600 mb-3 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold text-lg text-slate-900 mb-2">Synthèse & Validation Externe</h3>
-            <p className="text-slate-600 text-sm">
-              Analyse de cohérence globale et recommandations stratégiques
-            </p>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl group-hover:w-48 group-hover:h-48 transition-all"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-purple-600 p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-2xl text-slate-900">Synthèse & Validation Externe</h3>
+                  <p className="text-purple-700 text-sm font-medium">Audit indépendant - Note 5/5</p>
+                </div>
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed mb-4">
+                Analyse de cohérence globale par IA externe (Gemini). Validation méthodologique, architecture technique, ROI économique, conduite du changement.
+                <strong className="text-purple-700"> Verdict : GO SOLIDE - Confiance haute</strong>
+              </p>
+              <div className="flex items-center gap-2 text-purple-600 font-semibold text-sm">
+                <span>Lire la synthèse complète</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+              </div>
+            </div>
           </Link>
         </div>
       </div>
