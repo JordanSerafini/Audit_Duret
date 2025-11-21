@@ -107,10 +107,30 @@ export default function AchatsLogistiquePage() {
         <div className="flex items-start gap-4">
           <AlertTriangle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
           <div>
-            <h2 className="text-2xl font-bold text-red-900 mb-3">Urgence : Processus 100% Manuel</h2>
+            <h2 className="text-2xl font-bold text-red-900 mb-3">Constat Critique : 50% Commandes Incomplètes</h2>
             <p className="text-red-900 text-lg mb-4">
-              "Le processus actuel repose entièrement sur le téléphone et le papier. Les erreurs de commande et les ressaisies multiples bloquent régulièrement les chantiers, créant une frustration majeure chez les équipes terrain."
+              <strong>Faits constatés :</strong> Seulement 50% des commandes arrivent complètes. Processus 100% manuel (téléphone, papier, Excel).
+              Sage MDE jugé &quot;calamiteux&quot; avec doublons et même produit à 2 prix différents.
+              <strong>Impact :</strong> Chantiers régulièrement bloqués, 6 ressaisies par commande, 3 jours de délai moyen.
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+              <div className="bg-white/50 rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-red-700">40%</div>
+                <div className="text-xs text-red-800">Fiabilité Stock</div>
+              </div>
+              <div className="bg-white/50 rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-red-700">0%</div>
+                <div className="text-xs text-red-800">Traçabilité</div>
+              </div>
+              <div className="bg-white/50 rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-red-700">0</div>
+                <div className="text-xs text-red-800">API Fournisseur</div>
+              </div>
+              <div className="bg-white/50 rounded-lg p-3 text-center">
+                <div className="text-2xl font-bold text-red-700">100%</div>
+                <div className="text-xs text-red-800">Processus Manuel</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
