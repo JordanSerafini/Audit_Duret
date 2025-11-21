@@ -4,10 +4,10 @@ import { Download, FileImage } from 'lucide-react';
 import { useState } from 'react';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
+import { serviceToUMLMapping, serviceLabelMapping } from '@/lib/serviceNameMapping';
 
 interface UMLDownloadButtonProps {
-  serviceName: string;
-  serviceLabel: string;
+  serviceKey: string; // kebab-case service key (e.g., 'service-client')
 }
 
 export default function UMLDownloadButton({ serviceName, serviceLabel }: UMLDownloadButtonProps) {
