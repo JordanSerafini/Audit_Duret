@@ -109,21 +109,25 @@ export default function MarkdownViewer({ files, title = "Documents Markdown", de
             </div>
 
             {/* Content Viewer */}
-            <div className="md:col-span-2 p-6 max-h-96 overflow-y-auto">
+            <div className="md:col-span-2 bg-white p-8 max-h-[600px] overflow-y-auto">
               {loading ? (
-                <div className="flex items-center justify-center py-12">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                <div className="flex flex-col items-center justify-center py-16">
+                  <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent"></div>
+                  <p className="mt-4 text-gray-600 font-medium">Chargement...</p>
                 </div>
               ) : selectedFile ? (
-                <article className="prose prose-sm max-w-none">
+                <div className="prose prose-base max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-strong:text-gray-900 prose-strong:font-bold prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:my-1">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {content}
                   </ReactMarkdown>
-                </article>
+                </div>
               ) : (
-                <div className="text-center py-12 text-gray-400">
-                  <FileText className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                  <p>Sélectionnez un document pour le consulter</p>
+                <div className="text-center py-20">
+                  <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FileText className="w-10 h-10 text-gray-400" />
+                  </div>
+                  <p className="text-gray-500 text-lg font-medium">Sélectionnez un document</p>
+                  <p className="text-gray-400 text-sm mt-2">Cliquez sur un document dans la liste pour le consulter</p>
                 </div>
               )}
             </div>
