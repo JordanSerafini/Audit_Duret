@@ -150,7 +150,7 @@ export default function OdooERPPage() {
             <h3 className="text-white font-bold text-xl">📊 Dashboard Principal</h3>
           </div>
           <img
-            src="https://www.odoo.com/web/image/3967818/odoo_dashboard.png"
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
             alt="Dashboard Odoo"
             className="w-full h-auto"
           />
@@ -167,7 +167,7 @@ export default function OdooERPPage() {
             <h3 className="text-white font-bold text-xl">📱 Field Service Mobile</h3>
           </div>
           <img
-            src="https://www.odoo.com/documentation/18.0/_images/mobile-app-scan.png"
+            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
             alt="Odoo Field Service Mobile"
             className="w-full h-auto"
           />
@@ -185,7 +185,7 @@ export default function OdooERPPage() {
               <h3 className="text-white font-bold text-lg">💼 CRM & Pipeline</h3>
             </div>
             <img
-              src="https://www.odoo.com/web/image/3938622/crm_pipeline.png"
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80"
               alt="CRM Odoo"
               className="w-full h-auto"
             />
@@ -201,7 +201,7 @@ export default function OdooERPPage() {
               <h3 className="text-white font-bold text-lg">📦 Gestion Stocks</h3>
             </div>
             <img
-              src="https://www.odoo.com/web/image/3938690/inventory_overview.png"
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80"
               alt="Gestion stocks Odoo"
               className="w-full h-auto"
             />
@@ -219,7 +219,7 @@ export default function OdooERPPage() {
             <h3 className="text-white font-bold text-xl">📅 Planning Collaboratif</h3>
           </div>
           <img
-            src="https://www.odoo.com/web/image/3967810/planning_gantt.png"
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80"
             alt="Planning Odoo"
             className="w-full h-auto"
           />
