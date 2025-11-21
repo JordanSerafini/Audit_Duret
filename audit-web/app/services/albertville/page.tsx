@@ -1,61 +1,55 @@
 import Link from 'next/link';
-import { AlertTriangle, CheckCircle, Users, FileText, Clock, Database, Zap, ArrowRight, LayoutDashboard, Smartphone, TrendingUp, Package, MapPin, Calendar } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Users, FileText, Clock, Database, Zap, ArrowRight, LayoutDashboard, Smartphone, TrendingUp, Package, MapPin, Calendar, BarChart3, Shield, Wrench } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 
 export const metadata = {
-  title: 'Albertville - Audit IT Duret',
-  description: 'Albertville (Chantiers BTP) - Transformation digitale des grands chantiers',
+  title: 'Gestion Opérationnelle - Audit IT Duret',
+  description: 'Gestion Opérationnelle - Du chaos Excel au pilotage temps réel data-driven',
 };
 
 export default function AlbertvillePage() {
   const personas = [
     {
-      name: 'Thomas',
-      role: 'Responsable d\'Affaire',
+      name: 'Sylvie',
+      role: 'Contrôleuse de Gestion',
+      age: '52 ans',
       painPoints: [
-        'Situations mensuelles extrêmement longues',
-        'Budgets complémentaires invisibles',
-        'Délais traitement devis trop longs',
-        'Risque dépassement non détecté'
+        'Tableau Excel KPI entièrement manuel (3-4 jours/mois)',
+        'Remontée info J-15 minimum (pas temps réel)',
+        '30+ fichiers Excel non connectés (silos)',
+        'Aucune transparence: chefs chantier sans visibilité budget'
       ],
       color: 'bg-blue-50 border-blue-200 text-blue-900',
-      icon: TrendingUp
+      icon: BarChart3,
+      impact: '40 jours/an perdus en consolidation'
     },
     {
-      name: 'Laurent',
-      role: 'Chef de Chantier',
+      name: 'Thomas',
+      role: 'Responsable BE Transverse',
+      age: '38 ans',
       painPoints: [
-        'Remontée BL 100% manuelle (papier)',
-        'Aucune info sur réception',
-        'Délai remontée plusieurs jours',
-        'Erreurs saisie, facturation retardée'
+        'Surcharge chronique: 220h demandes vs 160h capacité',
+        'Priorisation subjective sans système tickets',
+        'Demandes de 20+ personnes (chaos)',
+        'Planning BE manuel Excel (gestion chaotique)'
       ],
       color: 'bg-orange-50 border-orange-200 text-orange-900',
-      icon: Package
+      icon: Wrench,
+      impact: '60h/semaine non traitées → retards'
     },
     {
-      name: 'Pierre',
-      role: 'Responsable Activité',
+      name: 'Isabelle',
+      role: 'Responsable Stocks',
+      age: '45 ans',
       painPoints: [
-        'Recherche références compliquée',
-        'Chiffrage non standardisé',
-        'Impossible ouvrir 2 fichiers simultanément',
-        'Méthodologie non documentée'
+        'Valorisation incohérente: même produit à 2 prix',
+        'Réception 100% manuelle: 8h20/jour comptage',
+        'Stock sous-utilisé: achats inutiles (15-20%)',
+        'Inventaires mensuels pénibles (2-3 jours)'
       ],
       color: 'bg-purple-50 border-purple-200 text-purple-900',
-      icon: FileText
-    },
-    {
-      name: 'Sophie',
-      role: 'Assistante Relation Client',
-      painPoints: [
-        '15+ fichiers Excel à gérer',
-        'Multiples saisies manuelles',
-        'Dispersion de l\'information',
-        'Temps admin excessif'
-      ],
-      color: 'bg-pink-50 border-pink-200 text-pink-900',
-      icon: Users
+      icon: Package,
+      impact: '2000h/an perdues en comptage manuel'
     }
   ];
 
