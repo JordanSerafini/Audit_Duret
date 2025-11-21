@@ -241,13 +241,174 @@ export default function AchatsLogistiquePage() {
         </div>
       </div>
 
-      {/* Recommandation */}
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white mb-8">
-        <h2 className="text-3xl font-bold mb-4">Recommandation</h2>
-        <p className="text-green-100 text-lg leading-relaxed">
-          Transformation critique vers <strong>Odoo ERP + APIs Fournisseurs</strong> (Rexel, Sonepar).
-          Déploiement en 3 phases sur 18 mois avec Quick Wins dès la Phase 1.
-        </p>
+      {/* Opportunités Data & IA */}
+      <div className="bg-indigo-50 border-l-4 border-indigo-500 rounded-xl p-8 mb-8 shadow-lg">
+        <div className="flex items-center gap-3 mb-6">
+          <BarChart3 className="w-8 h-8 text-indigo-600" />
+          <h2 className="text-2xl font-bold text-indigo-900">Opportunités Data & IA</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-lg p-6 border border-indigo-100">
+            <h3 className="font-bold text-indigo-900 mb-2">1. Saisie Automatique (OCR)</h3>
+            <p className="text-indigo-800 text-sm mb-3">
+              L'IA lit les PDFs (Rexel, Sonepar) et saisit les lignes automatiquement.
+            </p>
+            <div className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-xs inline-block font-semibold">
+              Gain : Fin des erreurs de saisie
+            </div>
+          </div>
+          <div className="bg-white rounded-lg p-6 border border-indigo-100">
+            <h3 className="font-bold text-indigo-900 mb-2">2. Prédiction des Besoins</h3>
+            <p className="text-indigo-800 text-sm mb-3">
+              Analyse des chantiers à venir pour suggérer les commandes 2 semaines à l'avance.
+            </p>
+            <div className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-xs inline-block font-semibold">
+              Gain : Fin des ruptures urgentes
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Approche Progressive (Roadmap) */}
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6">Approche Progressive</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Phase 1 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-blue-500">
+            <div className="bg-blue-50 p-4 border-b border-blue-100">
+              <h3 className="font-bold text-blue-900">PHASE 1 : FONDATIONS</h3>
+              <p className="text-xs text-blue-700 mt-1">Objectif : Système fonctionnel</p>
+            </div>
+            <div className="p-6">
+              <ul className="space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-500 font-bold">•</span>
+                  <span>Nettoyage Sage MDE</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-500 font-bold">•</span>
+                  <span>Catalogue unifié v1</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-500 font-bold">•</span>
+                  <span><strong>PILOTE 1-2 chantiers</strong></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-500 font-bold">•</span>
+                  <span>Dashboards essentiels</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Phase 2 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-orange-500">
+            <div className="bg-orange-50 p-4 border-b border-orange-100">
+              <h3 className="font-bold text-orange-900">PHASE 2 : AUTOMATISATION</h3>
+              <p className="text-xs text-orange-700 mt-1">Objectif : Optimiser</p>
+            </div>
+            <div className="p-6">
+              <ul className="space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500 font-bold">•</span>
+                  <span>APIs Rexel + Sonepar</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500 font-bold">•</span>
+                  <span>3-way matching auto</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500 font-bold">•</span>
+                  <span><strong>GÉNÉRALISATION</strong></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-500 font-bold">•</span>
+                  <span>Scoring fournisseurs</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Phase 3 */}
+          <div className="bg-white rounded-xl shadow-md overflow-hidden border-t-4 border-green-500">
+            <div className="bg-green-50 p-4 border-b border-green-100">
+              <h3 className="font-bold text-green-900">PHASE 3 : EXCELLENCE</h3>
+              <p className="text-xs text-green-700 mt-1">Objectif : Auto-pilotage</p>
+            </div>
+            <div className="p-6">
+              <ul className="space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 font-bold">•</span>
+                  <span>Auto-réapprovisionnement</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 font-bold">•</span>
+                  <span>Optimisation multi-objectifs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 font-bold">•</span>
+                  <span>Classification IA avancée</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Risques & Prochaines étapes */}
+      <div className="grid md:grid-cols-2 gap-8 mb-8">
+        {/* Risques */}
+        <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+          <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <AlertTriangle className="w-5 h-5 text-amber-500" />
+            Risques à Maîtriser
+          </h3>
+          <div className="space-y-4">
+            <div>
+              <p className="text-sm font-semibold text-slate-800">Adoption utilisateurs</p>
+              <p className="text-xs text-slate-500">Mitigation : Pilote intensif, formation, champions</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-slate-800">Migration données</p>
+              <p className="text-xs text-slate-500">Mitigation : Nettoyage préalable, coexistence Sage</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-slate-800">APIs fournisseurs</p>
+              <p className="text-xs text-slate-500">Mitigation : Fallback Excel, cache, retry</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Prochaines étapes */}
+        <div className="bg-slate-900 rounded-xl shadow-sm p-6 text-white">
+          <h3 className="font-bold mb-4 flex items-center gap-2">
+            <TrendingUp className="w-5 h-5 text-blue-400" />
+            Prochaines Étapes
+          </h3>
+          <ul className="space-y-4">
+            <li className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold">1</div>
+              <div>
+                <p className="text-sm font-semibold">Validation Direction</p>
+                <p className="text-xs text-slate-400">Valider approche progressive</p>
+              </div>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold">2</div>
+              <div>
+                <p className="text-sm font-semibold">Étude Faisabilité</p>
+                <p className="text-xs text-slate-400">Chiffrage précis & Planning</p>
+              </div>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold">3</div>
+              <div>
+                <p className="text-sm font-semibold">Préparation Pilote</p>
+                <p className="text-xs text-slate-400">Identifier 1-2 chantiers</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
 
       {/* Footer navigation */}
