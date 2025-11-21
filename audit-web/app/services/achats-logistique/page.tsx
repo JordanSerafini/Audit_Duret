@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { AlertTriangle, TrendingUp, Database, Zap, Users, Clock, LayoutDashboard } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
-import UMLGallery from '@/components/UMLGallery';
+import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import PersonaCard from '@/components/ui/PersonaCard';
 import ProblemCard from '@/components/ui/ProblemCard';
@@ -233,17 +233,7 @@ export default function AchatsLogistiquePage() {
       </div>
 
       {/* Diagrammes UML */}
-      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
-        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-          <LayoutDashboard className="w-8 h-8 text-blue-600" />
-          Diagrammes UML - Visualisation & Téléchargement
-        </h2>
-        <p className="text-slate-600 mb-6">
-          Explorez tous les diagrammes UML de ce service : architecture, processus, cas d'usage, et plus encore.
-          Visualisez-les directement ou téléchargez-les individuellement.
-        </p>
-        <UMLGallery serviceKey="achats-logistique" />
-      </div>
+      <CollapsibleUMLSection serviceKey="achats-logistique" serviceLabel="Achats & Logistique" />
 
       {/* CTA Final */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center mb-12 shadow-xl">
