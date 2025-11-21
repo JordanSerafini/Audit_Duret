@@ -343,9 +343,32 @@ export default function LogicielsPage() {
                   <p className="text-sm text-slate-600">{logiciel.category}</p>
                 </div>
               </div>
-              <p className="text-slate-700 text-sm leading-relaxed">
+              <p className="text-slate-700 text-sm leading-relaxed mb-3">
                 {logiciel.description}
               </p>
+
+              {/* Informations clés */}
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-600">Prix</span>
+                  <span className="font-bold text-slate-900">{logiciel.price}</span>
+                </div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-600">Couverture</span>
+                  <span className="font-bold text-slate-900">{logiciel.coverage}</span>
+                </div>
+              </div>
+
+              {/* Points clés */}
+              <div className="space-y-1 mb-4">
+                {logiciel.highlights.map((highlight, idx) => (
+                  <div key={idx} className="flex items-center text-xs">
+                    <CheckCircle className="w-3 h-3 text-green-500 mr-1.5" />
+                    <span className="text-slate-700">{highlight}</span>
+                  </div>
+                ))}
+              </div>
+
               <div className="mt-4 flex items-center text-blue-600 text-sm font-semibold group-hover:text-blue-800">
                 Voir les détails
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
