@@ -138,13 +138,17 @@ export default function MaintenanceTechniquePage() {
               {comparison.map((row, index) => (
                 <tr key={index} className="hover:bg-slate-50 transition-colors">
                   <td className="p-4 font-semibold text-slate-900">{row.process}</td>
-                  <td className="p-4 text-slate-600 flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-slate-400" />
-                    {row.before}
+                  <td className="p-4 text-slate-600">
+                    <div className="flex items-center gap-2">
+                      <FileText className="w-4 h-4 text-slate-400" />
+                      {row.before}
+                    </div>
                   </td>
-                  <td className="p-4 text-slate-900 font-medium flex items-center gap-2">
-                    <Smartphone className="w-4 h-4 text-green-500" />
-                    {row.after}
+                  <td className="p-4 text-slate-900 font-medium">
+                    <div className="flex items-center gap-2">
+                      <Smartphone className="w-4 h-4 text-green-500" />
+                      {row.after}
+                    </div>
                   </td>
                   <td className="p-4 text-blue-700 font-bold bg-blue-50/50">
                     {row.gain}
