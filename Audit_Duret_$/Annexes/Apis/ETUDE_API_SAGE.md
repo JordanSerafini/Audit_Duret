@@ -443,7 +443,7 @@ class AccountMove(models.Model):
 1. SAGE 100 Cloud OU SAGE Business Cloud déjà déployé
 2. Volume factures > 100/mois (sinon CSV suffit)
 3. Comptable débordée (gain temps critique)
-4. Budget 30K€ disponible
+4. Budget disponible pour intégration
 
 ### ⏳ ATTENDRE si...
 1. SAGE 50 desktop (migration lourde nécessaire)
