@@ -4,15 +4,7 @@
 **Contexte** : Transformation digitale PME BTP (~100 collaborateurs)
 **Périmètre** : ERP, CRM, Field Service, SIRH, Paie, BI
 
-⚠️ **Note Méthodologique Importante**
-
-Ce document compare 3 scénarios d'architecture logicielle. Les estimations budgétaires présentées sont des **ordres de grandeur indicatifs** basés sur des tarifs publics éditeurs.
-
-**Pour un chiffrage précis et adapté à Duret Électricité, il est impératif de :**
-1. Obtenir des devis personnalisés auprès des éditeurs/intégrateurs
-2. Définir le périmètre fonctionnel exact par phase
-3. Valider les hypothèses d'effectifs et de volumétries
-4. Réaliser une étude de faisabilité avec POC (Proof of Concept)
+**Note** : Les estimations budgétaires nécessitent un chiffrage détaillé via étude de faisabilité et devis personnalisés auprès des éditeurs
 
 ---
 
@@ -39,20 +31,17 @@ Ce scénario repose sur une plateforme unique, **Odoo Enterprise**, couvrant 90%
 *   **Cœur du système** : Odoo Enterprise (ERP, CRM, Field Service, Stocks, Compta, RH, BI).
 *   **Paie** : PayFit (ou Silae), connecté via export des variables.
 
-### Configuration et Coûts
+### Configuration
 
 **Licences Odoo Enterprise** :
-*   100 utilisateurs ( bureau + terrain).
-*   Coût annuel : **29 880 €** (24,90 € / user / mois).
+*   100 utilisateurs (bureau + terrain).
+*   Coût annuel : À chiffrer selon négociation avec l'éditeur.
 
 **Stratégie de Déploiement** :
 *   **Phase 1 (An 1)** : Déploiement du socle ERP/CRM et des modules RH natifs (Congés, Frais). Centralisation des données dans Odoo.
 *   **Phase 2 (An 2)** : Intégration PayFit pour la gestion de la paie (si nécessaire).
 
-**Budget Estimé sur 3 ans** :
-*   Investissement initial (An 1) : **68 080 €** (Licences, Intégration, Formation).
-*   Récurrent (An 2-3) : **61 072 € / an**.
-*   **Total 3 ans : ~190 000 €**.
+**Budget Estimé sur 3 ans** : À définir lors de l'étude de faisabilité (licences, intégration, formation, maintenance).
 
 ### Analyse
 *   **Avantages** : Unicité de la donnée, coût maîtrisé, évolutivité forte, application mobile native performante.
@@ -71,12 +60,9 @@ Ce scénario privilégie des logiciels spécialisés pour chaque fonction, conne
 *   **SIRH** : Lucca.
 *   **Paie** : Silae.
 
-### Configuration et Coûts
+### Configuration
 
-**Budget Estimé sur 3 ans** :
-*   Investissement initial (An 1) : **112 320 €**.
-*   Récurrent (An 2-3) : **91 320 € / an**.
-*   **Total 3 ans : ~295 000 €**.
+**Budget Estimé sur 3 ans** : À définir lors de l'étude de faisabilité (licences EBP, HubSpot, Praxedo, Lucca, Silae + intégrations entre solutions).
 
 ### Analyse
 *   **Avantages** : Solutions expertes dans leur domaine (HubSpot pour le CRM, Lucca pour les RH), fonctionnalités BTP natives dans EBP.
