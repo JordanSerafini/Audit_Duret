@@ -4,6 +4,16 @@
 **Contexte** : Transformation digitale PME BTP (~100 collaborateurs)
 **Périmètre** : ERP, CRM, Field Service, SIRH, Paie, BI
 
+⚠️ **Note Méthodologique Importante**
+
+Ce document compare 3 scénarios d'architecture logicielle. Les estimations budgétaires présentées sont des **ordres de grandeur indicatifs** basés sur des tarifs publics éditeurs.
+
+**Pour un chiffrage précis et adapté à Duret Électricité, il est impératif de :**
+1. Obtenir des devis personnalisés auprès des éditeurs/intégrateurs
+2. Définir le périmètre fonctionnel exact par phase
+3. Valider les hypothèses d'effectifs et de volumétries
+4. Réaliser une étude de faisabilité avec POC (Proof of Concept)
+
 ---
 
 ## 1. RAPPEL DES BESOINS
