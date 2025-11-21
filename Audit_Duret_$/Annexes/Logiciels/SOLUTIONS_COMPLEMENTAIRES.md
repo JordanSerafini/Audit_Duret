@@ -7,16 +7,15 @@
 
 ## 1. SYNTHÈSE BUDGÉTAIRE
 
-Le budget global pour les solutions complémentaires est estimé à **135 000 €** sur 3 ans. Ce montant est indispensable pour sécuriser la transformation digitale et assurer l'adoption des nouveaux outils.
+Le budget pour les solutions complémentaires doit être établi lors de l'étude de faisabilité. Ces postes sont indispensables pour sécuriser la transformation digitale et assurer l'adoption des nouveaux outils.
 
-| Poste | Investissement Initial (An 1) | Récurrent (An 2) | Récurrent (An 3) | Total 3 ans |
-| :--- | :--- | :--- | :--- | :--- |
-| **Comptabilité** | 500 € | - | - | **500 €** |
-| **Sauvegarde (Backup)** | 4 200 € | 3 600 € | 3 600 € | **11 400 €** |
-| **Téléphonie** | 2 520 € | 2 520 € | 2 520 € | **7 560 €** |
-| **Cybersécurité** | 27 800 € | 25 800 € | 25 800 € | **79 400 €** |
-| **Formation & Accompagnement** | 23 000 € | 8 000 € | 5 000 € | **36 000 €** |
-| **TOTAL** | **58 020 €** | **39 920 €** | **36 920 €** | **134 860 €** |
+| Poste | Description |
+| :--- | :--- |
+| **Comptabilité** | Bridge comptable avec cabinet |
+| **Sauvegarde (Backup)** | Solution hybride locale + cloud |
+| **Téléphonie** | VoIP intégré au CRM |
+| **Cybersécurité** | EDR, anti-phishing, formation |
+| **Formation & Accompagnement** | Champions internes, support |
 
 ---
 
@@ -26,19 +25,19 @@ Le budget global pour les solutions complémentaires est estimé à **135 000 �
 **Besoin** : Fluidifier les échanges avec le cabinet comptable.
 **Recommandation** : **Odoo Bridge Comptable** (si scénario Odoo).
 *   Permet l'export automatique des écritures (FEC) et donne un accès lecture seule à l'expert-comptable.
-*   **Coût** : Inclus dans la licence Odoo + 500 € de paramétrage.
+*   **Coût** : Inclus dans la licence Odoo + paramétrage initial.
 
 ### 2.2. Sauvegarde (Backup)
 **Besoin** : Sécuriser les données face aux risques de perte ou de corruption.
 **Recommandation** : **Solution Hybride Veeam**.
 *   Sauvegarde locale sur NAS (récupération rapide) + Sauvegarde Cloud (sécurité site distant).
-*   **Coût** : ~3 600 € / an + investissement matériel initial.
+*   **Coût** : Abonnement annuel + investissement matériel initial à chiffrer.
 
 ### 2.3. Téléphonie
 **Besoin** : Intégrer la téléphonie au CRM pour tracer les appels clients.
 **Recommandation** : **Ringover** (ou équivalent VoIP intégré).
 *   Intégration native avec Odoo/HubSpot, remontée de fiche client.
-*   **Coût** : ~2 500 € / an pour 10 lignes.
+*   **Coût** : Abonnement annuel à chiffrer selon nombre de lignes.
 
 ### 2.4. Cybersécurité
 **Besoin** : Protéger l'entreprise contre les cybermenaces (Ransomware, Phishing) en forte hausse.
@@ -46,20 +45,20 @@ Le budget global pour les solutions complémentaires est estimé à **135 000 �
 *   Protection des postes (EDR/Antivirus).
 *   Sécurisation des emails (Anti-phishing).
 *   Formation des collaborateurs (Sensibilisation).
-*   **Coût** : ~26 000 € / an. *Note : Ce poste est critique.*
+*   **Coût** : Budget annuel à définir. *Note : Ce poste est critique.*
 
 ### 2.5. Formation & Conduite du Changement
 **Besoin** : Assurer l'adoption des nouveaux outils par les équipes.
 **Recommandation** : **Formation Interne Renforcée**.
 *   Formation de "Champions" en interne par un expert externe.
 *   Support dédié durant les premiers mois.
-*   **Coût** : ~36 000 € sur 3 ans (dégressif).
+*   **Coût** : Budget sur 3 ans à définir (dégressif).
 
 ---
 
 ## 3. CONCLUSION
 
-Ces solutions ne sont pas optionnelles mais constituent le socle de sécurité et d'efficacité du projet. Le budget de **135 k€** doit être intégré au plan de financement global (portant le total du projet Odoo à 473 k€).
+Ces solutions ne sont pas optionnelles mais constituent le socle de sécurité et d'efficacité du projet. Le budget des solutions complémentaires doit être intégré au plan de financement global.
 
 **Priorités** :
 1.  **Cybersécurité & Backup** (Immédiat - Critique).
