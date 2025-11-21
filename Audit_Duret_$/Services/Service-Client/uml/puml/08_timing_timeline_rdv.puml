@@ -64,17 +64,4 @@ Cible is "Confirmation auto"
 highlight 0 to 2880 #FFAAAA : 48 HEURES (Système actuel)
 highlight 0 to 2 #AAFFAA : 2 MINUTES (Système cible)
 
-note bottom
-  **Système ACTUEL:** 48 HEURES
-  - Appel client → Recherche infos → Propose créneau incertain
-  - Mail Gaëtan → Attente 7h → Gaëtan répond
-  - Appel client (répondeur) → Mail client → Attente 15h
-  - Client répond → Double saisie Excel + Outlook → Confirmation
-
-  **Système CIBLE:** 2 MINUTES
-  - Client sur portail → Consultation créneaux disponibles
-  - Choisit créneau (1 clic)
-  - Confirmation automatique (Email + SMS auto, Sync planning)
-end note
-
 @enduml
