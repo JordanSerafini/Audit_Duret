@@ -1,0 +1,148 @@
+@startuml State_Cycle_Commande
+
+title State Diagram - Cycle de Vie d'une Commande
+
+[*] --> BesoinIdentifie : Marc identifie besoin
+
+state "Besoin Identifié" as BesoinIdentifie #90EE90
+note right of BesoinIdentifie
+  Marc a besoin de matériel
+  pour son chantier
+end note
+
+BesoinIdentifie --> TentativeContact : Marc appelle Sylvie
+
+state "Tentative de Contact" as TentativeContact #FFD700
+note right of TentativeContact
+  🔴 Pas de canal asynchrone
+  Dépend disponibilité Sylvie
+end note
+
+TentativeContact --> EnAttente : Sylvie pas dispo
+TentativeContact --> RechercheProduit : Sylvie répond
+
+state "En Attente" as EnAttente #FF6B6B
+note left of EnAttente
+  ⏰ 25 min perdu en moyenne
+  Marc rappelle 3-4 fois
+end note
+
+EnAttente --> TentativeContact : Rappelle
+
+state "Recherche Produit" as RechercheProduit #FFD700
+note right of RechercheProduit
+  Sylvie cherche dans Sage
+end note
+
+RechercheProduit --> Confusion : Trouve 12 références !
+
+state "Confusion Références" as Confusion #FF6B6B
+note right of Confusion
+  🔴 **CHAOS BASE DONNÉES**
+  12 variantes pour 1 produit
+  CABLE-3G2.5-ROUGE-50M
+  CBL_3G25_R_50
+  3G2.5-CABLE-ROUGE
+  CABLE_3G_2.5_ROUGE
+  3G2,5 CABLE ROUGE 50M
+  ...
+end note
+
+Confusion --> ChoixReference : Sylvie choisit "au hasard"
+
+state "Choix Référence" as ChoixReference #FFD700
+note left of ChoixReference
+  ⚠️ Risque élevé de se tromper
+end note
+
+ChoixReference --> Saisies : Passe commande
+
+state "Saisies Multiples" as Saisies #FF6B6B {
+  [*] --> SaisieEmail
+  SaisieEmail --> SaisieSage : RE-SAISIE #5
+  SaisieSage --> SaisieExcel : RE-SAISIE #6
+  SaisieExcel --> [*]
+}
+
+note right of Saisies
+  🔴 **6 RE-SAISIES**
+  des mêmes données !
+  ⏰ 45 min perdu
+end note
+
+Saisies --> EnCours : Commande fournisseur passée
+
+state "En Cours" as EnCours #FFFFAA
+note right of EnCours
+  Attente 2-3 jours
+  ⏸️ Chantier bloqué
+  Chantier bloqué perdu
+end note
+
+EnCours --> Livraison : Fournisseur livre
+
+state "Livraison au Dépôt" as Livraison #98FB98
+
+Livraison --> ReceptionEric : Éric vérifie
+
+state "Réception" as ReceptionEric #FFD700 {
+  [*] --> ChercheCommande
+  ChercheCommande --> CompareRef : Trouvé (15 min)
+  CompareRef --> DoubteRef : Nomenclatures ≠
+  DoubteRef --> AppelSylvie : Appelle Sylvie
+  AppelSylvie --> Comptage : Confirmé
+  Comptage --> SaisieReception : Compte manuellement
+  SaisieReception --> [*] : RE-SAISIE #7
+}
+
+note left of ReceptionEric
+  🔴 100% manuel
+  🔴 Pas de scan
+  🔴 Nomenclatures incompatibles
+  ⏰ 1h30
+end note
+
+ReceptionEric --> Stocke : Rangement
+
+state "Stocké au Dépôt" as Stocke #FFD700
+note right of Stocke
+  🔴 Pas de plan rangement
+  "Quelque part" dans le dépôt
+end note
+
+Stocke --> Recupere : Marc vient chercher
+
+state "Récupéré" as Recupere #90EE90
+
+Recupere --> Verification : Marc vérifie
+
+state "Vérification Chantier" as Verification #FFD700
+
+Verification --> Erreur : Taux élevé mauvais produit
+Verification --> Utilise : Taux insuffisant bon produit
+
+state "❌ ERREUR" as Erreur #FF0000
+note left of Erreur
+  **CATASTROPHE**
+  Mauvaise référence !
+  🔴 Chantier bloqué 3j
+  Chantier bloqué perdu
+  😭 Marc furieux
+end note
+
+Erreur --> BesoinIdentifie : Recommence TOUT
+
+state "✅ Utilisé" as Utilise #90EE90
+Utilise --> [*]
+
+note bottom
+  **MÉTRIQUES GLOBALES**
+  ⏰ Durée succès: 3 jours
+  ⏰ Durée échec: 6 jours (recommence)
+  ❌ Taux erreur: Élevé
+  Process très inefficace
+  Temps perdu important
+  📞 Nombre appels: 12
+end note
+
+@enduml

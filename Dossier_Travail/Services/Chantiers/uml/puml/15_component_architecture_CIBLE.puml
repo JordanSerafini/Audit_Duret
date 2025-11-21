@@ -1,0 +1,64 @@
+@startuml Component_Architecture_CIBLE
+
+title Architecture Système CIBLE (Odoo Field Service)
+
+package "Terrain (Mobilité)" #E8F5E9 {
+  [Chef Chantier] as Marc #FFB6C1
+  component "App Mobile Odoo" as AppMobile #90EE90 {
+    [Planning]
+    [Rapports]
+    [Photos]
+    [Signature]
+    [Mode Offline]
+  }
+  
+  Marc --> AppMobile : Utilise
+}
+
+package "Bureau (Pilotage)" #E3F2FD {
+  [Responsable Affaires] as Julien #ADD8E6
+  
+  component "Odoo Web" as OdooWeb #87CEEB {
+    [Planification]
+    [Validation Rapports]
+    [Suivi Rentabilité]
+  }
+  
+  Julien --> OdooWeb : Pilote
+}
+
+package "Odoo Enterprise Core" #E1BEE7 {
+  database "Base de Données Unique" as DB #BA68C8
+  
+  [Module Projet] as ModProjet
+  [Module Field Service] as ModField
+  [Module Documents] as ModDoc
+  [Module Facturation] as ModFact
+  
+  ModProjet <--> DB
+  ModField <--> DB
+  ModDoc <--> DB
+  ModFact <--> DB
+}
+
+' Relations
+AppMobile <--> ModField : Sync (API)
+AppMobile <--> ModDoc : Upload Photos
+OdooWeb <--> ModField : UI
+OdooWeb <--> ModProjet : UI
+ModField --> ModFact : Déclenche Facture
+
+note right of AppMobile
+  **ZERO PAPIER**
+  - Plus de Word/Excel
+  - Photos centralisées
+  - Signature client
+end note
+
+note bottom of DB
+  **DONNEE UNIQUE**
+  - Temps réel
+  - Historique complet
+end note
+
+@enduml

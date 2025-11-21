@@ -1,0 +1,49 @@
+@startgantt Gantt_Comparaison_Actuel_Cible
+
+title Gantt - Comparaison Processus DEVIS ACTUEL vs CIBLE
+
+printscale daily
+
+<style>
+ganttDiagram {
+  timeline {
+    BackgroundColor lightgray
+  }
+}
+</style>
+
+Project starts 2024-01-08
+
+[PROCESSUS ACTUEL (2h05)] as [ACTUEL] lasts 1 day and is colored in Red
+
+-- Jour 1 - Lundi 9h-12h --
+[Laurent: Lit email (15min)] as [A1] lasts 1 day and is colored in LightPink
+[Laurent: Recherche template (45min)] as [A2] lasts 1 day and starts at [A1]'s start and is colored in Red
+[Laurent: Ouvre MDE (5min)] as [A3] lasts 1 day and starts at [A2]'s start and is colored in Orange
+[Laurent: Saisit 30 lignes (1h30)] as [A4] lasts 1 day and starts at [A3]'s start and is colored in Red
+[Laurent: Verifications (15min)] as [A5] lasts 1 day and starts at [A4]'s start and is colored in Orange
+[Laurent: PDF & envoi (10min)] as [A6] lasts 1 day and starts at [A5]'s start and is colored in LightGreen
+
+-- PROCESSUS CIBLE --
+[PROCESSUS CIBLE (31 min)] as [CIBLE] lasts 1 day and starts at 2024-01-10 and is colored in Green
+
+[Laurent: Choisit template (2min)] as [C1] lasts 1 day and starts at [CIBLE]'s start and is colored in LightGreen
+[Odoo: Auto-remplit (5min)] as [C2] lasts 1 day and starts at [C1]'s start and is colored in LightGreen
+[Laurent: Ajustements (15min)] as [C3] lasts 1 day and starts at [C2]'s start and is colored in LightGreen
+[Odoo: Genere & envoie (4min)] as [C4] lasts 1 day and starts at [C3]'s start and is colored in LightGreen
+
+note bottom
+  **COMPARAISON**
+  [TIME] ACTUEL: **2h05** (125 min)
+  [TIME] CIBLE: **31 min**
+
+  [DATA] AMELIORATION: Réduction significative
+  - Templates automatiques
+  - Auto-remplissage
+  - Interface rapide cloud
+
+  [FRUSTRE] ACTUEL: Frustration élevée
+  [OK] CIBLE: Satisfaction élevée
+end note
+
+@endgantt

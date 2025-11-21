@@ -1,0 +1,137 @@
+@startuml UseCase_Direction_Affaires
+
+title Use Case Diagram - Direction & Gestion Affaires ACTUEL
+
+left to right direction
+
+actor "Laurent\n(Resp. Affaire)" as Laurent #FFB6C1
+actor "Marie\n(Directrice)" as Marie #DDA0DD
+actor "Thomas\n(Bureau Etudes)" as Thomas #98FB98
+actor "Client" as Client #ADD8E6
+
+rectangle "Systeme Direction-Affaires ACTUEL" #FFFFCC {
+
+  usecase "Creer\ndevis" as UC1 #FFD700
+  note right of UC1
+    [!] 2h05 par devis
+    [TIME] Recherche template 30 min
+    [!] 100% manuel
+  end note
+
+  usecase "Generer\nPPSPS" as UC2 #FF6B6B
+  note right of UC2
+    [!] 3h00 par PPSPS
+    [!] Ctrl+F remplacer
+    [!] Risque oublis clauses
+  end note
+
+  usecase "Consulter\navancement affaires" as UC3 #FF6B6B
+  note right of UC3
+    [!] Impossible en temps reel
+    [TIME] 3h pour compiler
+  end note
+
+  usecase "Suivre\nbudget affaire" as UC4 #FFD700
+  note left of UC4
+    [!] Donnees dispersees
+    [TIME] 1h30 par affaire
+  end note
+
+  usecase "Valider\nPPSPS" as UC5 #FFD700
+  note right of UC5
+    [!] Email Word
+    Commentaires Word
+    [TIME] 30 min
+  end note
+
+  usecase "Rechercher\nancien devis" as UC6 #FF6B6B
+  note left of UC6
+    [!] **RECHERCHE MANUELLE**
+    200+ fichiers Word
+    Nommage incoherent
+    [TIME] 30 min de fouille
+  end note
+
+  usecase "Teletravail\n(VPN/MDE)" as UC7 #FF0000
+  note right of UC7
+    [!] 30-40s par ecran
+    [!] Timeouts frequents
+    [!] VPN + Citrix
+    [FRUSTRE] Frustration maximale
+  end note
+
+  usecase "Suivre\nreliquats" as UC8 #FF6B6B
+  note left of UC8
+    [!] Aucun suivi
+    [!] Pertes importantes
+  end note
+
+  usecase "Analyser\nperformances" as UC9 #FF0000
+  note right of UC9
+    [!] Impossible
+    Pas de dashboards
+  end note
+
+  usecase "Envoyer\ndevis client" as UC10
+  note left of UC10
+    [TIME] 7 min
+    PDF + Email
+  end note
+}
+
+rectangle "Outils (Chaos)" #FFE4E1 {
+  usecase "MDE/Sage\n(Legacy)" as Sage #FF0000
+  usecase "Word\n(Templates)" as Word #FFD700
+  usecase "Excel\n(perso)" as Excel #FFD700
+  usecase "Dossiers\nPartages" as Dossiers #FF6B6B
+  usecase "Outlook" as Email
+  usecase "VPN/Citrix" as VPN #FF0000
+}
+
+' Relations Laurent
+Laurent --> UC1
+Laurent --> UC2
+Laurent --> UC4
+Laurent --> UC6
+Laurent --> UC7
+Laurent --> UC10
+Laurent ..> Sage : utilise
+Laurent ..> Word : utilise
+Laurent ..> Excel : utilise
+Laurent ..> Dossiers : fouille
+Laurent ..> VPN : souffre
+
+' Relations Marie
+Marie --> UC3
+Marie --> UC9
+Marie ..> Excel : demande exports
+
+' Relations Thomas
+Thomas --> UC5
+Thomas ..> Word : commente
+Thomas ..> Email : utilise
+
+' Relations Client
+Client <-- UC10
+
+' Includes
+UC1 .> UC6 : <<include>>
+UC2 .> UC6 : <<include>>
+UC2 .> UC5 : <<include>>
+UC4 .> UC8 : <<include>>
+
+' Extensions
+UC1 .> VPN : <<extend>>\nlenteur
+UC7 .> Sage : <<extend>>\nperformance catastrophique
+
+note bottom
+  **PROBLEMES MAJEURS**
+  [!] ERP Legacy ultra-lent (30-40s/ecran)
+  [!] Recherche manuelle 200+ fichiers
+  [!] PPSPS 100% manuel (3h)
+  [!] Pas de templates automatiques
+  [!] Pas de visibilite direction
+  [!] Teletravail impossible
+end note
+
+@enduml

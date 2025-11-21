@@ -1,0 +1,218 @@
+@startuml Deployment_Infrastructure_RH
+
+title Infrastructure & Déploiement RH - ACTUEL
+
+node "Bureau Annecy" as Annecy {
+
+  node "PC Sophie (RH)" as PC_Sophie #FFB6C1 {
+    artifact "SAGE Paie\n(Client lourd)" as Sage_Client
+    artifact "Excel\n(×7 fichiers)" as Excel_Files
+    artifact "Outlook" as Outlook
+    artifact "Navigateur Web" as Browser_S
+
+    note right of Excel_Files #FF6B6B
+      🔴 7 fichiers Excel locaux:
+      • Effectifs_2025.xlsx
+      • Planning_CP_2025.xlsx
+      • Mutuelle_2025.xlsx
+      • Interimaires_2025.xlsx
+      • TicketsResto_11_2025.xlsx
+      • Checklist_Onboarding.xlsx
+      • Demandes_IT.xlsx
+
+      Risques:
+      • Corruption fichiers
+      • Perte données
+      • Versions multiples
+    end note
+  }
+
+  node "PC Managers" as PC_Mgr #FFDAB9 {
+    artifact "Navigateur Web" as Browser_M
+    artifact "Outlook" as Outlook_M
+    artifact "WhatsApp Desktop" as WA
+  }
+
+  folder "Armoires\nArchives Papier" as Archives #FFCCCC {
+    artifact "Dossiers salariés (100)" as Dossiers
+    artifact "Contrats papier" as Contrats
+    artifact "Demandes congés" as Conges_Paper
+    artifact "Classeur rose" as Classeur
+
+    note right of Archives #FF6B6B
+      🔴 ARCHIVES PAPIER
+      • Recherche manuelle
+      • Risque perte/incendie
+      • Pas de backup
+      • Non-confiance RGPD
+    end note
+  }
+}
+
+node "Terrain (Chantiers)" as Terrain {
+  node "Smartphones Salariés" as Phones #ADD8E6 {
+    artifact "POPAYE Mobile\n(App basique)" as Popaye_Mobile
+    artifact "WhatsApp" as WA_Mobile
+    artifact "Email" as Email_Mobile
+
+    note right of Phones #FFD700
+      ⚠️ App POPAYE basique
+      • Saisie FH uniquement
+      • Pas de workflow congés
+      • Pas de notifications
+      • UX datée
+    end note
+  }
+}
+
+cloud "SaaS / Cloud" as Cloud {
+  node "POPAYE\n(Hébergement éditeur)" as Popaye_Cloud #FFD700 {
+    database "Base POPAYE" as DB_Popaye
+
+    note right of DB_Popaye #FFD700
+      ⚠️ Système vieillissant
+      • Pas d'API moderne
+      • Export manuel
+      • Interface obsolète
+    end note
+  }
+
+  node "SAGE\n(On-premise ou cloud ?)" as Sage_Server #FF6B6B {
+    database "Base SAGE Paie" as DB_Sage
+
+    note right of DB_Sage #FF6B6B
+      🔴 Isolation totale
+      • Pas d'export auto
+      • Pas d'intégration
+    end note
+  }
+
+  node "SWILE\n(SaaS)" as Swile_Cloud {
+    database "Commandes TR" as DB_Swile
+
+    note right of DB_Swile #FF6B6B
+      🔴 Saisie manuelle
+      • Pas de connexion POPAYE
+      • Calcul TR manuel (3h30)
+    end note
+  }
+
+  node "Autres SaaS" as Others_Cloud {
+    database "Empowill" as DB_Emp
+    database "Radiance" as DB_Rad
+    database "PRO BTP" as DB_BTP
+    database "CIBTP" as DB_CIBTP
+    database "HelloCSE" as DB_CSE
+
+    note right of Others_Cloud #FF6B6B
+      🔴 Chacun isolé
+      Pas d'intégration
+    end note
+  }
+}
+
+node "Only RH\n(Prestataire externe)" as OnlyRH #DDA0DD {
+  node "PC Virginie" as PC_Virg {
+    artifact "SILAE\n(Client lourd)" as Silae_Client
+    artifact "Excel\n(reçu)" as Excel_Received
+    artifact "Outlook" as Outlook_V
+  }
+
+  database "SILAE Cloud" as Silae_Cloud #FFA07A {
+    note right
+      ✅ Système paie
+      Mais isolé du reste
+    end note
+  }
+}
+
+' Connexions réseau
+PC_Sophie -down-> Sage_Server : "Accès VPN ?"
+PC_Sophie --> Popaye_Cloud : HTTPS
+PC_Mgr --> Popaye_Cloud : HTTPS
+Phones --> Popaye_Cloud : "App mobile"
+
+PC_Sophie --> Swile_Cloud : "Saisie\nmanuelle web"
+PC_Sophie --> Others_Cloud : "Saisie\nmanuelle web"
+
+' Flux email (middleware !)
+PC_Sophie ..> Outlook : "Export Excel"
+Outlook ..> PC_Virg : "Email\navec PJ"
+note on link #FF6B6B
+  🔴 EMAIL = MIDDLEWARE
+  • Pièces jointes
+  • Pas de sécurité
+  • Risque perte
+end note
+
+PC_Virg --> Silae_Cloud : "Saisie données"
+Silae_Cloud ..> Outlook_V : "Bulletins PDF"
+Outlook_V ..> Outlook : "Email retour"
+
+' Pas de connexion directe !
+Popaye_Cloud -[hidden]-> DB_Sage
+DB_Sage -[hidden]-> Silae_Cloud
+
+note as N1 #FFCCCC
+  **INFRASTRUCTURE PROBLÉMATIQUE**
+
+  🔴 **AUCUNE INTÉGRATION**
+  • Systèmes isolés (silos)
+  • Pas d'API entre eux
+  • Email comme bus de données
+
+  🔴 **DONNÉES FRAGMENTÉES**
+  • SAGE Paie (Annecy)
+  • POPAYE (Cloud éditeur)
+  • Excel (PC Sophie - local !)
+  • SILAE (Only RH externe)
+  • Papier (Armoires)
+
+  🔴 **RISQUES SÉCURITÉ**
+  • Fichiers Excel locaux (pas backup)
+  • Emails avec données RH sensibles
+  • Papier non sécurisé
+  • Pas de chiffrement
+  • RGPD non respecté
+
+  🔴 **PAS DE BACKUP CENTRALISÉ**
+  • Excel: backup local ?
+  • Papier: risque incendie
+  • Dépendance PC Sophie
+
+  🔴 **MOBILITÉ LIMITÉE**
+  • SAGE: PC bureau uniquement
+  • Excel: PC Sophie uniquement
+  • POPAYE mobile: basique
+
+  💰 **COÛTS CACHÉS**
+  • Maintenance multiples systèmes
+  • Licences dispersées
+  • Support complexe
+  • Risque perte données: très élevé
+end note
+
+note as N2 #90EE90
+  **ARCHITECTURE CIBLE SOUHAITÉE**
+
+  ✅ **SIRH CLOUD UNIQUE**
+  • Centralisation données
+  • API moderne
+  • Mobile natif
+
+  ✅ **INTÉGRATIONS**
+  • POPAYE ↔ SIRH
+  • SIRH ↔ SILAE (auto)
+  • SIRH ↔ SWILE (auto)
+
+  ✅ **GED CENTRALISÉE**
+  • Fin du papier
+  • Backup automatique
+  • RGPD compliant
+
+  ✅ **SSO (Single Sign-On)**
+  • 1 login pour tout
+  • Sécurité renforcée
+end note
+
+@enduml

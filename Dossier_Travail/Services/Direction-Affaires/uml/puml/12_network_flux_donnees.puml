@@ -1,0 +1,53 @@
+@startuml Network_Flux_Donnees
+
+title Network Diagram - Flux de Donnees ACTUEL Direction-Affaires
+
+package "Bureau Siege" {
+  [Laurent RA] as laurent
+  [RA 2] as ra2
+  [RA 3] as ra3
+  [Marie Direction] as marie
+  [Serveur Sage MDE] as server
+}
+
+cloud VPN_Citrix {
+  [VPN] as vpn
+  [Citrix] as citrix
+}
+
+cloud OneDrive {
+  [Dossiers Word] as dossiers
+  [Excel Laurent] as excelL
+}
+
+cloud Clients {
+  [Client A] as client1
+}
+
+vpn --> citrix
+citrix ..> server
+
+laurent --> server
+ra2 --> server
+ra3 --> server
+
+laurent --> dossiers
+laurent --> excelL
+ra2 --> dossiers
+
+marie ..> laurent
+marie ..> server
+
+laurent --> client1
+client1 ..> laurent
+
+note right of server
+  **FLUX CHAOTIQUES**
+  - ERP obsolete
+  - 30-40s/ecran
+  - Teletravail impossible
+  - Documents eparpilles
+  - Direction aveugle
+end note
+
+@enduml

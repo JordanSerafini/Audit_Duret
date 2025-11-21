@@ -1,0 +1,67 @@
+@startuml Network_Flux_Donnees
+
+title Network Diagram - Flux de Données ACTUEL
+
+package "Chantiers (Terrain)" #FFE4E1 {
+  [📱 Marc\nChef 1] as marc1
+  [📱 Marc\nChef 2] as marc2
+  [📱 Marc\nChef 3] as marc3
+}
+
+package "Bureau Siège" #E6F3FF {
+  [💻 Sylvie\nAchats] as sylvie
+  [💻 Julien\nAffaires] as julien
+  [🖥️ Serveur\nSage MDE] as server
+}
+
+package "Dépôt" #E8F5E9 {
+  [💻 Éric\nDépôt\n🔴 1 seul PC!] as eric
+}
+
+cloud "Internet" #E0F7FA {
+  [☁️ OneDrive\nExcel x4] as cloud
+  [📧 Email\nOutlook] as email
+}
+
+package "Fournisseurs" #E0E0E0 {
+  [📞 Fourn A\n🔴 Téléphone] as fourn1
+  [📞 Fourn B\n🔴 Téléphone] as fourn2
+}
+
+marc1 ..> sylvie : Téléphone
+marc2 ..> sylvie : Téléphone
+marc3 ..> sylvie : Téléphone
+
+sylvie --> server : LAN
+julien --> server : LAN
+eric --> server : LAN
+
+sylvie --> cloud : Internet
+julien --> cloud : Internet
+
+sylvie --> email : Internet
+sylvie ..> fourn1 : Téléphone
+sylvie ..> fourn2 : Téléphone
+
+note as N1
+  🔴 **FLUX DE DONNÉES CHAOTIQUES**
+
+  **Problèmes:**
+  1. Chantiers DÉCONNECTÉS (téléphone only)
+  2. Sylvie = HUB CENTRAL (goulot)
+  3. Données éparpillées:
+     - Sage MDE (serveur local)
+     - Excel x4 (OneDrive)
+     - Email (Outlook)
+     - Téléphone (pas de trace)
+     - Papier (bons)
+  4. Pas d'intégration fournisseurs
+  5. Multiples re-saisies des mêmes données
+
+  **Impact:**
+  🔴 Processus très inefficace
+  ❌ Taux élevé de commandes incomplètes
+  ⏸️ Chantiers bloqués fréquemment
+end note
+
+@enduml

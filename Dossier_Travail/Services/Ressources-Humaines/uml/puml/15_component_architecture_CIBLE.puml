@@ -1,0 +1,47 @@
+@startuml Component_Architecture_CIBLE
+
+title Architecture RH CIBLE (Odoo + PayFit)
+
+package "Odoo Enterprise (Master Data)" #E1BEE7 {
+  database "Base Employés" as DB #BA68C8
+  
+  [Module Employés] as ModEmp
+  [Module Recrutement] as ModRecrut
+  [Module Congés] as ModConges
+  [Module NDF] as ModNDF
+  [Module Parc Auto] as ModFleet
+  
+  ModEmp <--> DB
+  ModRecrut --> ModEmp : Crée
+  ModConges <--> DB
+  ModNDF <--> DB
+}
+
+package "Paie & Social (SaaS)" #FFF3E0 {
+  component "PayFit (ou Silae)" as PayFit #FFA500 {
+    [Moteur Paie]
+    [Déclarations DSN]
+    [Coffre-fort Numérique]
+  }
+}
+
+package "Utilisateurs" #E3F2FD {
+  [App Mobile Odoo] as App #90EE90
+  [Portail PayFit] as Portal #FFCC80
+}
+
+' Relations
+App --> ModConges : Demandes
+App --> ModNDF : Scan Tickets
+ModEmp --> PayFit : Sync Salariés (API)
+ModConges --> PayFit : Sync Absences (API)
+ModNDF --> PayFit : Sync Remboursements (API)
+PayFit --> Portal : Bulletins Paie
+
+note bottom of DB
+  **SINGLE SOURCE OF TRUTH**
+  Toutes les données RH
+  sont centralisées ici
+end note
+
+@enduml

@@ -1,0 +1,164 @@
+@startuml Creation_Devis_Actuel
+
+title Processus Création Devis - ÉTAT ACTUEL (ERP Legacy MDE)
+
+actor "Laurent\n(Resp. Affaire)" as Laurent #FFB6C1
+participant "MDE/Sage" as MDE #FF6B6B
+participant "Excel\n(perso)" as Excel #FFD700
+participant "Dossiers\nPartages" as Dossiers
+participant "Outlook" as Email
+actor "Client" as Client #ADD8E6
+
+== JOUR 1 - Lundi 9h00 ==
+
+Client -> Laurent: Email demande devis
+note right #ADD8E6
+  Spécifications projet
+  Délai: 48-72h attendu
+end note
+
+Laurent -> Laurent: Lecture email (15 min)
+note right #FFD700
+  ⚠️ Infos éparpillées
+end note
+
+Laurent -> Dossiers: Recherche ancien devis similaire
+note right #FF6B6B
+  [!] **RECHERCHE MANUELLE**
+  - Fouille dossiers
+  - 200+ fichiers
+  - Pas de base connaissance
+  [TIME] 30 min perdues
+end note
+
+Dossiers --> Laurent: Trouve devis similaire
+
+Laurent -> Excel: Copie lignes types
+note right #FFD700
+  Excel personnel
+  Templates artisanaux
+end note
+
+== 9h50 - Ouverture MDE ==
+
+Laurent -> MDE: Ouverture MDE
+note right #FF6B6B
+  [!] **TEMPS CHARGEMENT**
+  [TIME] 15 secondes
+end note
+
+Laurent -> MDE: Login
+MDE --> Laurent: Écran accueil (30s)
+note right #FF6B6B
+  [!] Attente...
+end note
+
+Laurent -> MDE: Navigation menu "Devis"
+MDE --> Laurent: Module devis (40s)
+note right #FF6B6B
+  [!] Encore attente...
+  [TIME] Total 5 min juste pour ouvrir !
+end note
+
+Laurent -> MDE: Recherche client
+MDE --> Laurent: Liste clients (30s)
+
+Laurent -> Laurent: Scroll + recherche (2 min)
+
+Laurent -> MDE: Nouveau devis
+MDE --> Laurent: Formulaire vide (40s)
+
+== 10h05 - Saisie lignes (CALVAIRE) ==
+
+loop Pour CHAQUE ligne (30 lignes)
+    Laurent -> MDE: Clic "Ajouter ligne"
+    MDE --> Laurent: Popup catalogue (35s)
+    note right #FF6B6B
+      [!] 35 secondes d'attente
+      par ligne !!!
+    end note
+
+    Laurent -> MDE: Recherche article
+    note right #FF6B6B
+      [!] Recherche inefficace
+      [TIME] 2 min par article
+    end note
+
+    Laurent -> Laurent: Copie depuis Excel
+    note right #FFD700
+      Saisie manuelle:
+      - Quantité
+      - Prix
+      - Remise
+    end note
+
+    Laurent -> MDE: Sauvegarde ligne
+    MDE --> Laurent: Refresh (25s)
+    note right #FF6B6B
+      [!] 25s d'attente par ligne
+    end note
+end
+
+note over Laurent, MDE #FFAAAA
+  [TIME] **TEMPS SAISIE**
+  30 lignes × 5min = 2h30
+  Réduit à 1h30 avec Excel
+  mais TOUJOURS très long !
+end note
+
+== 11h35 - Vérifications ==
+
+Laurent -> Excel: Vérif calculs
+note right #FFD700
+  - Marge globale
+  - Prix vs concurrence
+  - Cohérence quantités
+  [TIME] 10 min
+end note
+
+Laurent -> MDE: Ajustements 2-3 lignes
+note right #FF6B6B
+  [!] Re-chargements (5 min)
+end note
+
+== 11h50 - Génération PDF ==
+
+Laurent -> MDE: "Générer PDF"
+MDE --> Laurent: PDF (45s)
+
+Laurent -> Laurent: Vérif mise en page
+note right #FF6B6B
+  [!] Parfois bugs affichage
+  → Régénération
+  [TIME] 3 min
+end note
+
+Laurent -> Email: Rédaction email client
+note right
+  - Recherche contact
+  - Rédaction
+  - Pièce jointe
+  [TIME] 7 min
+end note
+
+Laurent -> Client: Envoi devis
+
+== BILAN ==
+
+note over Laurent, Client #FFCCCC
+  **MÉTRIQUES PROCESSUS**
+  [TIME] Durée totale: **2h05**
+
+  Décomposition:
+  • Recherche ancien devis: 45 min
+  • Ouverture MDE: 5 min
+  • Saisie 30 lignes: 1h30
+  • Vérifications: 15 min
+  • PDF & envoi: 10 min
+
+  [FRUSTRE] **FRUSTRATION: Très élevée**
+  [!] Avec templates: 30 min possible !
+  Économie potentielle: 1h35/devis
+end note
+
+@enduml

@@ -1,0 +1,183 @@
+@startuml Component_Architecture_RH_Actuel
+
+title Architecture Systèmes RH - ACTUEL (Silos)
+
+skinparam componentStyle rectangle
+
+package "Utilisateurs" {
+  [Sophie RH] as Sophie #FFB6C1
+  [Managers] as Mgr #FFDAB9
+  [Salariés] as Sal #ADD8E6
+  [Virginie Paie] as Virg #DDA0DD
+  [Direction] as DG
+}
+
+package "Systèmes Métier" {
+  component "SAGE Paie" as Sage #FF6B6B {
+    [Gestion salariés]
+    [Calcul paie]
+    [Indemnités km]
+  }
+  note right of Sage #FF6B6B
+    🔴 Pas d'API
+    Pas d'export auto
+  end note
+
+  component "POPAYE" as Popaye #FFD700 {
+    [Saisie FH]
+    [Gestion absences]
+    [Compteurs]
+  }
+  note right of Popaye #FFD700
+    ⚠️ Interface vieillissante
+    Export manuel
+    Pas d'API moderne
+  end note
+
+  component "SILAE\n(Externe Only RH)" as Silae #FFA07A {
+    [Traitement paie]
+    [Génération bulletins]
+    [DSN]
+  }
+  note right of Silae
+    ✅ Fonctionne
+    Mais isolé
+  end note
+
+  component "SWILE" as Swile {
+    [Commande TR]
+    [Gestion carte]
+  }
+  note right of Swile #FF6B6B
+    🔴 Saisie manuelle
+    Pas d'intégration
+  end note
+}
+
+package "Outils Périphériques" {
+  component "Empowill" as Emp
+  component "Radiance" as Rad
+  component "PRO BTP" as BTP
+  component "CIBTP" as CIBTP
+  component "HelloCSE" as CSE
+
+  note right of Emp
+    🔴 Pas d'intégration
+    avec systèmes RH
+  end note
+}
+
+package "Excel (×7 fichiers)" #90EE90 {
+  database "Effectifs.xlsx" as Eff
+  database "Planning_CP.xlsx" as CP
+  database "Mutuelle.xlsx" as Mut
+  database "Interimaires.xlsx" as Int
+  database "TicketsResto.xlsx" as TR
+  database "Checklist_Onb.xlsx" as Onb
+  database "Demandes_IT.xlsx" as IT_Req
+
+  note bottom of Eff #FF6B6B
+    🔴 7 FICHIERS EXCEL
+    Source de vérité = ?
+    Risque corruption
+    Pas de contrôles
+  end note
+}
+
+package "Documents" {
+  folder "Dossiers Papier" as Paper #FFCCCC {
+    [Contrats]
+    [Fiches paie]
+    [Demandes congés]
+    [Justificatifs]
+  }
+  note bottom of Paper #FF6B6B
+    🔴 Archivage papier
+    Recherche difficile
+    Risque perte
+  end note
+}
+
+package "Communication" {
+  [Email / Outlook] as Email
+  [WhatsApp] as WA
+  [Téléphone] as Phone
+}
+
+' Flux Sophie RH
+Sophie --> Sage : Saisie manuelle
+Sophie --> Popaye : Saisie + contrôle
+Sophie --> Eff : MAJ manuelle
+Sophie --> CP : MAJ manuelle
+Sophie --> Mut : MAJ manuelle
+Sophie --> TR : **Calcul manuel 3h30**
+Sophie --> Onb : Checklist manuelle
+Sophie --> Paper : Archivage
+Sophie --> Email : Relances manuelles
+Sophie --> Swile : Commande manuelle
+Sophie --> Emp : Saisie
+Sophie --> CIBTP : Saisie
+Sophie --> CSE : Saisie
+
+' Flux Managers
+Mgr --> Popaye : Validation FH
+Mgr --> Email : Relances salariés
+Mgr --> WA : Communication terrain
+
+' Flux Salariés
+Sal --> Popaye : Saisie FH
+Sal --> Paper : Demandes congés
+Sal --> Email : Communication
+
+' Flux Virginie
+Popaye ..> Email : Export manuel
+Email ..> Virg : Transfert fichiers
+Virg --> Silae : Traitement
+Silae ..> Email : Bulletins
+Email ..> Sophie : Réception
+
+note as N1 #FFCCCC
+  **FLUX DE DONNÉES**
+  🔴 100% MANUEL
+  • Pas d'API entre systèmes
+  • Export/Import manuels
+  • Email comme middleware
+  • Excel comme hub
+end note
+
+' Absence totale d'intégration
+Sage -[hidden]-> Popaye
+Popaye -[hidden]-> Silae
+Eff -[hidden]-> Sage
+
+note as N2 #FF6B6B
+  **ARCHITECTURE PROBLÉMATIQUE**
+
+  🔴 **SILOS COMPLETS**
+  • 15+ systèmes isolés
+  • Aucune intégration
+  • Pas de Single Sign-On
+
+  🔴 **PAS DE BUS D'INTÉGRATION**
+  • Pas d'API
+  • Pas de webhooks
+  • Pas de synchronisation
+
+  🔴 **EXCEL = MIDDLEWARE**
+  • 7 fichiers de liaison
+  • Source de vérité floue
+  • Risque incohérences
+
+  🔴 **EMAIL = WORKFLOW**
+  • Relances manuelles
+  • Pièces jointes
+  • Pas de traçabilité
+
+  💰 **IMPACT**
+  • Re-saisies: 6-8×
+  • Erreurs: 10%
+  • Temps gaspillé: 850h/an
+  • Coût: temps considérable
+end note
+
+@enduml

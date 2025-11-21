@@ -1,0 +1,193 @@
+@startuml Processus_Commande_Activity
+
+title Activity Diagram - Processus Commande ACTUEL
+
+|Marc (Chef Chantier)|
+start
+:Identifie besoin matériel;
+note right
+  Ex: Câble 3G2.5 - 50m
+end note
+
+:Cherche bon de commande papier;
+note right #FF6B6B
+  🔴 Support papier uniquement
+  ⏰ 5 min perdu
+end note
+
+:Remplit bon à la main;
+note right #FF6B6B
+  🔴 Référence imprécise
+  Risque d'erreur élevé
+end note
+
+:Essaie d'appeler Sylvie;
+
+|Sylvie (Achats)|
+if (Disponible ?) then (non)
+  |Marc (Chef Chantier)|
+  :Attend et rappelle;
+  note right #FF6B6B
+    🔴 Pas de canal asynchrone
+    ⏰ 25 min perdu en moyenne
+  end note
+
+  :Rappelle (x2-3);
+  |Sylvie (Achats)|
+else (oui)
+endif
+
+:Reçoit appel de Marc;
+:Note la demande sur post-it;
+note right #FFD700
+  ⚠️ Informations incomplètes
+end note
+
+:Cherche dans Sage MDE;
+
+if (Trouve référence ?) then (12 références!)
+  :Choisit "au hasard";
+  note right #FF6B6B
+    🔴 **BASE DONNÉES CHAOS**
+    12 variantes du même produit
+    Risque élevé de se tromper
+  end note
+else (0 résultat)
+  :Appelle Marc pour précisions;
+  stop
+endif
+
+:Vérifie stock Sage;
+note right #FF6B6B
+  🔴 Stock non fiable
+  Données obsolètes
+end note
+
+:Cherche fournisseur dans Excel;
+note right #FF6B6B
+  🔴 Données éparpillées
+  ⏰ 8 min
+end note
+
+:Appelle fournisseur (téléphone);
+note right #FF6B6B
+  🔴 Pas de commande en ligne
+  ⏰ 15 min
+end note
+
+:Écrit email de confirmation;
+note right #FF6B6B
+  🔴 **RE-SAISIE #4**
+end note
+
+:Saisit dans Sage;
+note right #FF6B6B
+  🔴 **RE-SAISIE #5**
+end note
+
+:Saisit dans Excel suivi;
+note right #FF6B6B
+  🔴 **RE-SAISIE #6**
+end note
+
+:Envoie SMS à Marc;
+
+|Marc (Chef Chantier)|
+:Reçoit confirmation;
+:Attend livraison;
+note right #FFFFAA
+  ⏸️ **CHANTIER BLOQUÉ**
+  2-3 jours d'attente
+  Chantier bloqué de perte
+end note
+
+|Éric (Magasinier)|
+:Reçoit livraison fournisseur;
+
+:Cherche bon de commande;
+note right #FF6B6B
+  🔴 Pas de référence croisée
+  ⏰ 15 min
+end note
+
+:Compare références;
+note right #FF6B6B
+  🔴 Nomenclatures incompatibles
+end note
+
+if (Références correspondent ?) then (doute)
+  :Appelle Sylvie;
+  note right #FF6B6B
+    🔴 Pas de traçabilité
+    ⏰ 10 min
+  end note
+else (ok)
+endif
+
+:Compte articles manuellement;
+note right #FF6B6B
+  🔴 Pas de scan/code-barres
+  ⏰ 10 min
+end note
+
+if (Quantité OK ?) then (non - fréquent)
+  :Note écart;
+  note right #FFD700
+    ⚠️ Pas de workflow réclamation
+  end note
+else (oui)
+endif
+
+:Range "quelque part";
+note right #FF6B6B
+  🔴 Pas de plan de rangement
+  Difficile à retrouver après
+end note
+
+:Attend disponibilité PC;
+note right #FF6B6B
+  🔴 1 seul poste pour 3 personnes
+  ⏰ 15 min d'attente
+end note
+
+:Saisit réception dans Sage;
+note right #FF6B6B
+  🔴 **RE-SAISIE #7**
+  Interface complexe
+  ⏰ 20 min
+end note
+
+:Prévient Marc;
+
+|Marc (Chef Chantier)|
+:Va au dépôt;
+:Récupère matériel;
+:Retour chantier;
+:Déballage;
+
+if (Bon matériel ?) then (NON - taux élevé)
+  #FF6B6B:❌ ERREUR;
+  note right
+    **CATASTROPHE**
+    Mauvaise référence
+    🔴 Chantier bloqué 3j
+    Chantier bloqué
+  end note
+
+  :Appelle Sylvie furieux;
+
+  |Sylvie (Achats)|
+  :Vérifie commande;
+  :Constate erreur référence;
+
+  note left #FF0000
+    😭 **RECOMMENCER TOUT LE PROCESSUS**
+  end note
+
+  stop
+else (OUI - taux insuffisant)
+  #90EE90:✅ Installation;
+  stop
+endif
+
+@enduml

@@ -1,0 +1,47 @@
+@startuml State_Incident
+
+title Cycle de Vie Incident Chantier
+
+[*] --> Nouveau
+
+Nouveau --> EnCours : Prise en charge RA/BE
+Nouveau --> Annule : Doublon ou erreur
+
+EnCours --> Bloque : Attente information
+EnCours --> Resolu : Solution trouvee
+EnCours --> Annule : Finalement non pertinent
+
+Bloque --> EnCours : Information recue
+Bloque --> Annule : Abandon
+
+Resolu --> Ferme : Validation chef chantier
+Resolu --> EnCours : Solution incomplete
+
+Ferme --> [*]
+Annule --> [*]
+
+note right of Nouveau
+  Cree par chef chantier
+  via formulaire mobile
+  Notification auto RA/BE
+end note
+
+note right of EnCours
+  RA ou BE assigne
+  Commentaires possibles
+  Suivi temps reel
+end note
+
+note right of Bloque
+  Attente reponse client
+  ou information manquante
+  Rappel automatique J+2
+end note
+
+note right of Resolu
+  Solution proposee
+  Validation chef necessaire
+  avant fermeture
+end note
+
+@enduml

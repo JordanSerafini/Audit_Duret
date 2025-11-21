@@ -1,0 +1,239 @@
+@startuml Class_Modele_Donnees_RH
+
+title Modèle de Données RH - ACTUEL (Chaos)
+
+package "SAGE Paie" #FF6B6B {
+  class "Salarié_SAGE" as SalSage {
+    +matricule : String
+    +nom : String
+    +prenom : String
+    +poste : String
+    +salaire_base : Decimal
+    +date_embauche : Date
+    --
+    🔴 Saisie manuelle #1
+  }
+}
+
+package "POPAYE (Temps)" #FFD700 {
+  class "Salarié_POPAYE" as SalPop {
+    +id_user : String
+    +nom : String
+    +prenom : String
+    +email : String
+    --
+    🔴 Saisie manuelle #2
+    ⚠️ Données ≠ SAGE
+  }
+
+  class "FeuilleHeures" as FH {
+    +id : Integer
+    +user_id : String
+    +semaine : String
+    +lundi : Decimal
+    +mardi : Decimal
+    +mercredi : Decimal
+    +jeudi : Decimal
+    +vendredi : Decimal
+    +samedi : Decimal
+    +dimanche : Decimal
+    +chantier : String
+    +statut : String
+    --
+    🔴 Saisie 100% manuelle
+    Retards fréquents
+  }
+
+  class "Absence" as Abs {
+    +id : Integer
+    +user_id : String
+    +date_debut : Date
+    +date_fin : Date
+    +type : String
+    +statut : String
+    --
+    🔴 Saisie manuelle
+  }
+
+  SalPop "1" -- "*" FH
+  SalPop "1" -- "*" Abs
+}
+
+package "Excel (×7 fichiers)" #90EE90 {
+  class "Effectifs_Excel" as Eff {
+    +nom : String
+    +prenom : String
+    +poste : String
+    +site : String
+    +date_embauche : Date
+    +statut : String
+    --
+    🔴 Saisie manuelle #3
+    ⚠️ Données ≠ SAGE ≠ POPAYE
+  }
+
+  class "Planning_CP_Excel" as CP {
+    +nom : String
+    +solde_n-1 : Decimal
+    +acquis_n : Decimal
+    +pris : Decimal
+    +solde : Decimal
+    --
+    🔴 Saisie manuelle #4
+    ⚠️ Incohérences fréquentes
+  }
+
+  class "Mutuelle_Excel" as Mut {
+    +nom : String
+    +regime : String
+    +ayants_droit : Integer
+    +cotisation : Decimal
+    --
+    🔴 Saisie manuelle #5
+  }
+
+  class "Interimaires_Excel" as Int {
+    +nom : String
+    +agence : String
+    +chantier : String
+    +date_debut : Date
+    +date_fin : Date
+    +heures_semaine : Decimal
+    +facture : Decimal
+    --
+    🔴 Excel isolé
+    Pas d'intégration SI
+  }
+
+  class "TicketsResto_Excel" as TR {
+    +nom : String
+    +jours_travailles : Integer
+    +absences : Integer
+    +ndf : Integer
+    +tr_a_commander : Integer
+    --
+    🔴 Calcul 100% MANUEL
+    3h30/mois
+    ±5% erreur
+  }
+
+  class "Checklist_Onboarding" as Onb {
+    +nom : String
+    +date_embauche : Date
+    +tache_1 : Boolean
+    +tache_2 : Boolean
+    +...
+    +tache_39 : Boolean
+    --
+    🔴 39 tâches manuelles
+    Suivi primitif
+  }
+
+  class "Demandes_IT_Excel" as IT {
+    +date : Date
+    +demandeur : String
+    +type : String
+    +statut : String
+    --
+    🔴 Suivi manuel
+  }
+}
+
+package "SILAE (Externe - Virginie)" #FFA07A {
+  class "Salarié_SILAE" as SalSil {
+    +matricule : String
+    +nom : String
+    +prenom : String
+    +elements_fixes : JSON
+    +elements_variables : JSON
+    --
+    ⚠️ Reçoit export POPAYE
+    Format non standardisé
+  }
+
+  class "BulletinPaie" as Bull {
+    +mois : String
+    +salaire_brut : Decimal
+    +cotisations : Decimal
+    +salaire_net : Decimal
+    --
+    Généré par SILAE
+  }
+
+  SalSil "1" -- "*" Bull
+}
+
+package "Dossiers Papier" #FFCCCC {
+  class "Dossier_Physique" as Paper {
+    +nom_salarié : String
+    +contrat : PDF_papier
+    +fiches_paie : Papier[]
+    +demandes_congés : Papier[]
+    +justificatifs : Papier[]
+    --
+    🔴 Archivage papier en 2025
+    Recherche difficile
+  }
+}
+
+' Relations incohérentes
+SalSage ..|> Eff : "≠ données"
+note on link #FF6B6B
+  🔴 PAS DE SYNCHRONISATION
+  Re-saisies manuelles
+end note
+
+SalPop ..|> Eff : "≠ données"
+note on link #FF6B6B
+  🔴 INCOHÉRENCES
+end note
+
+Eff --|> CP : "1 salarié"
+Eff --|> Mut : "1 salarié"
+Eff --|> TR : "1 salarié"
+
+' Pas de relation avec intérimaires !
+Int ..|> Eff : "pas d'intégration"
+note on link #FF6B6B
+  🔴 SILOS
+  Impossible vue unifiée
+end note
+
+' Export POPAYE → SILAE
+FH ..> SalSil : "export manuel mensuel"
+note on link #FF6B6B
+  🔴 Export manuel
+  Format variable
+  Nécessite reformatage
+end note
+
+note as N1 #FFCCCC
+  **PROBLÈMES MAJEURS**
+
+  🔴 **AUCUNE INTÉGRATION**
+  • 4 systèmes différents pour "Salarié"
+  • Données saisies 6-8 fois
+  • Incohérences permanentes
+
+  🔴 **PAS DE SOURCE UNIQUE**
+  • SAGE ≠ POPAYE ≠ Excel ≠ SILAE
+  • Quelle est la vérité ?
+
+  🔴 **EXCEL COMME BASE DE DONNÉES**
+  • 7 fichiers Excel différents
+  • Risque corruption
+  • Pas de contraintes
+  • Pas d'historique
+
+  🔴 **PAPIER EN 2025**
+  • Contrats papier
+  • Demandes congés papier
+  • Archivage physique
+
+  💰 **COÛT DE LA NON-QUALITÉ**
+  • Re-saisies: 400h/an
+  • Erreurs: 10%
+  • Corrections: 150h/an
+end note
+
+@enduml

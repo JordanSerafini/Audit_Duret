@@ -1,0 +1,52 @@
+@startuml Timing_Generation_Rapport
+
+title Timeline Generation Rapport (Avant vs Apres)
+
+robust "Systeme ACTUEL (Long)" as Actuel
+concise "Systeme CIBLE App (Rapide)" as Cible
+
+@0
+Actuel is "Intervention terminee"
+Cible is "Intervention terminee"
+
+@5
+Actuel is "Retour bureau/maison"
+
+@10
+Actuel is "Ouvre PC\nLance Word"
+
+@15
+Actuel is "Saisie manuelle\ninfos chantier"
+
+@25
+Actuel is "Telecharge photos\ntelephone"
+
+@30
+Actuel is "Insere photos\nWord"
+
+@40
+Actuel is "Genere PDF"
+
+@42
+Actuel is "Envoie email\nmanuel"
+
+@45
+Actuel is "Rapport envoye"
+Cible is "Ouvre app\nModule Rapports"
+
+@46
+Cible is "Chantier pre-rempli\nVerifie heures"
+
+@47
+Cible is "Photos deja\nattachees"
+
+@48
+Cible is "Clic Generer PDF"
+
+@50
+Cible is "Rapport auto-envoye\nClient + Bureau"
+
+highlight 0 to 45 #FFAAAA : AVANT (30-45 min manuel)
+highlight 45 to 50 #AAFFAA : APRES (2 min automatique)
+
+@enduml

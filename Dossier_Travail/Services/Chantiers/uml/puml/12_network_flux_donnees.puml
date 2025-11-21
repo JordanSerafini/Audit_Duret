@@ -1,0 +1,94 @@
+@startuml Network_Flux_Donnees
+
+title Flux Donnees Architecture Cible Chantiers
+
+package "Utilisateurs Mobiles" #E0F7FA {
+  [Chef Chantier\n(iOS/Android)] as Chef
+  [Responsable Affaire\n(Web)] as RA
+  [Bureau Etudes\n(Web)] as BE
+}
+
+package "Azure Cloud France" #E3F2FD {
+  [API Gateway\nNode.js] as API
+  [Auth Service\nJWT] as Auth
+  [Incidents Service] as IncSvc
+  [Photos Service] as PhotoSvc
+  [Rapports Service] as RapSvc
+  [Commandes Service] as CmdSvc
+  database "PostgreSQL\nDonnees Metier" as Postgres
+  database "Redis\nCache Sessions" as Redis
+  database "Azure Blob\nPhotos + PDF" as Blob
+  [Azure Functions\nCompression Generation] as Functions
+}
+
+package "Integrations Externes" #FFF8E1 {
+  [ERP Odoo\nChantiers Affaires] as ERP
+  [SendGrid\nEmail] as Email
+  [Push Notifications\nFCM + APNS] as Push
+}
+
+Chef --> API : HTTPS Mobile App\nCRUD Photos Incidents Rapports
+RA --> API : HTTPS Web\nConsulte Incidents Chantiers
+BE --> API : HTTPS Web\nResout Incidents Techniques
+
+API --> Auth : Validation JWT
+Auth --> Redis : Sessions
+
+API --> IncSvc : REST
+API --> PhotoSvc : REST
+API --> RapSvc : REST
+API --> CmdSvc : REST
+
+IncSvc --> Postgres : CRUD Incidents
+PhotoSvc --> Blob : Upload Photos
+PhotoSvc --> Postgres : Metadata Photos
+RapSvc --> Postgres : CRUD Rapports
+RapSvc --> Blob : Store PDF
+CmdSvc --> Postgres : CRUD Commandes
+
+PhotoSvc --> Functions : Trigger Compression
+RapSvc --> Functions : Trigger Generation PDF
+
+Functions --> Blob : Write Compressed Photos
+Functions --> Blob : Write Generated PDF
+
+IncSvc --> Push : Notification RA/BE\nNouvel incident
+RapSvc --> Email : Envoi PDF\nClient + Bureau
+CmdSvc --> ERP : Sync Commandes\nVerification stock
+
+note as N1
+  **Flux Principaux Temps Reel :**
+  1. Chef prend photo → Upload auto Blob
+  2. Chef remonte incident → Notif Push RA/BE
+  3. Chef genere rapport → PDF auto + Email
+  4. RA consulte incidents → Dashboard web
+  5. BE resout incident → Notif Push chef
+end note
+
+note as N2
+  **Mode Hors Ligne :**
+  - SQLite local sur mobile
+  - Queue upload photos
+  - Sync auto des reconnexion
+  - Conflict resolution
+end note
+
+note as N3
+  **Securite :**
+  - TLS 1.3 (transit)
+  - AES-256 (repos Blob)
+  - JWT tokens (expiration 24h)
+  - Refresh tokens (30j)
+  - MFA disponible
+end note
+
+note as N4
+  **Performance :**
+  - Latence API : <300ms
+  - Upload photo : <2 sec (compression)
+  - Generation PDF : <5 sec
+  - Sync hors ligne : <10 sec
+  - Concurrent users : 20 (chefs)
+end note
+
+@enduml

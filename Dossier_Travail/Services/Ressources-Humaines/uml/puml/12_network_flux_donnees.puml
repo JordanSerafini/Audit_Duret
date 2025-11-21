@@ -1,0 +1,95 @@
+@startuml Network_Flux_Donnees
+
+title Flux Donnees Architecture Cible RH
+
+package "Utilisateurs" #E0F7FA {
+  [Sophie RH\n(Web)] as Sophie
+  [Managers\n(Web + Mobile)] as Mgr
+  [Collaborateurs\n(Mobile)] as Collab
+  [Direction\n(Web)] as DIR
+}
+
+package "Cloud France" #E3F2FD {
+  [SIRH Central\n(ex: Lucca, PayFit)] as SIRH
+  [Module Absences\nConges Maladie RTT] as Absences
+  [Module Pointage\nHeures Chantiers] as Pointage
+  [Module Paie\nAutomatisation] as Paie
+  [Module Onboarding\n39 taches auto] as Onboard
+  [Module Offboarding\n22 taches auto] as Offboard
+  [Dashboards RH\nKPIs Temps Reel] as Dashboard
+  database "Base Donnees\nRH Unifiee" as DB
+  database "Documents\nBulletins Contrats" as Docs
+}
+
+package "Integrations" #FFF8E1 {
+  [SAGE Compta\nExport paie] as SAGE
+  [SILAE Only RH\nBulletins paie] as SILAE
+  [Banque\nVirements salaires] as Banque
+  [Email Service\nNotifications] as Email
+  [Push Mobile\nAlerts] as Push
+}
+
+Sophie --> SIRH : HTTPS Web\nCRUD Collaborateurs RH
+Mgr --> SIRH : HTTPS Web/Mobile\nValidation FH Absences
+Collab --> SIRH : Mobile App\nPointage Demandes Conges
+DIR --> Dashboard : HTTPS Web\nConsulte KPIs RH
+
+SIRH --> Absences : Gestion
+SIRH --> Pointage : Gestion
+SIRH --> Paie : Calcul auto
+SIRH --> Onboard : Workflows
+SIRH --> Offboard : Workflows
+SIRH --> Dashboard : Donnees temps reel
+
+Absences --> DB : CRUD Conges Maladie RTT
+Pointage --> DB : CRUD Heures Chantiers
+Paie --> DB : CRUD Paie Elements
+Onboard --> DB : CRUD Checklist
+Offboard --> DB : CRUD Checklist
+
+SIRH --> Docs : Store Bulletins Contrats
+
+Paie --> SILAE : Export elements paie\nGeneration bulletins
+Paie --> SAGE : Export compta paie
+Paie --> Banque : Virements salaires
+
+Absences --> Email : Notifications validations
+Onboard --> Email : Workflow taches\n4-5 personnes
+Pointage --> Push : Rappel saisie FH
+
+note as N1
+  **Flux Principaux Temps Reel :**
+  1. Collab demande conge mobile → Notif manager
+  2. Manager valide FH → Auto dans paie
+  3. Sophie calcul paie → Auto TR km paniers
+  4. Onboarding → Workflow auto 39 taches
+  5. Dashboard → KPIs temps reel (absenteisme turnover)
+end note
+
+note as N2
+  **Avant vs Apres :**
+  - Avant: 15 outils + 7 Excel = 22 systemes
+  - Apres: 1 SIRH centralise + integrations
+  - Ressaisies: 5-6 fois → 1 fois
+  - Temps Sophie paie: 3j/sem → 1j/sem
+end note
+
+note as N3
+  **Automatisations Cles :**
+  - Calcul TR automatique (vs manuel 100 pers)
+  - Calcul heures recup automatique (35h/sem)
+  - Validation FH workflow (vs relances manuelles)
+  - Onboarding checklist auto (vs 39 taches manuelles)
+  - KPIs temps reel (vs compilation demi-journee)
+end note
+
+note as N4
+  **Securite :**
+  - TLS 1.3 (transit)
+  - AES-256 (repos)
+  - SSO (authentification unique)
+  - RGPD compliant
+  - Audit trail (qui fait quoi quand)
+end note
+
+@enduml

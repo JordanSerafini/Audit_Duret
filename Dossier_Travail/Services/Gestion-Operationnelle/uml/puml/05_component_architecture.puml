@@ -1,0 +1,108 @@
+@startuml Component_Architecture
+
+title Architecture Composants Systeme Gestion Operationnelle
+
+package "Frontend" {
+  [Web Desktop\nOdoo] as WebOdoo
+  [Mobile iOS\nApp] as MobileIOS
+  [Mobile Android\nApp] as MobileAndroid
+  [Power BI\nDashboards] as PowerBI
+}
+
+package "Backend - Azure Cloud EU" {
+
+  package "Odoo ERP v17" {
+    [Module Sales\n(Affaires)] as Sales
+    [Module Purchase\n(Achats)] as Purchase
+    [Module Inventory\n(Stocks)] as Inventory
+    [Module Accounting\n(Compta)] as Accounting
+    [Module Project\n(Chantiers)] as Project
+    [Custom BE Tickets] as BETickets
+    [Custom RBAC] as RBAC
+  }
+
+  package "BI & ML" {
+    [Power BI Service] as PBIService
+    [Azure ML Studio] as MLStudio
+    [Azure Functions\n(ML Inference)] as MLFunctions
+  }
+
+  package "ETL" {
+    [Azure Data Factory] as ADF
+  }
+}
+
+database "Donnees" {
+  database "PostgreSQL\n(Odoo DB)" as Postgres
+  database "Azure SQL DWH\n(Data Warehouse)" as SQLDWH
+  database "Azure Blob\n(Data Lake)" as Blob
+}
+
+package "Integrations Externes" {
+  [SAGE Compta\n(API CSV)] as SAGE
+  [Lireco RFID\n(API REST)] as Lireco
+  [Linear Tickets\n(Webhooks)] as Linear
+  [SendGrid Email\n(Notifications)] as SendGrid
+}
+
+WebOdoo --> Sales
+WebOdoo --> Purchase
+WebOdoo --> Inventory
+WebOdoo --> Accounting
+WebOdoo --> Project
+WebOdoo --> BETickets
+WebOdoo --> RBAC
+
+MobileIOS --> Sales
+MobileIOS --> Inventory
+MobileAndroid --> Sales
+MobileAndroid --> Inventory
+
+PowerBI --> PBIService
+PBIService --> SQLDWH
+
+Sales --> Postgres
+Purchase --> Postgres
+Inventory --> Postgres
+Accounting --> Postgres
+Project --> Postgres
+BETickets --> Postgres
+RBAC --> Postgres
+
+ADF --> Postgres : Extract
+ADF --> SAGE : Extract CSV
+ADF --> Lireco : Extract API
+ADF --> SQLDWH : Load
+ADF --> Blob : Archive
+
+MLStudio --> Blob : Train Models
+MLFunctions --> SQLDWH : Inference
+MLFunctions --> SQLDWH : Write Predictions
+
+BETickets --> Linear : Sync
+BETickets --> SendGrid : Notifications
+
+Inventory --> Lireco : Sync RFID
+Accounting --> SAGE : Export
+
+note right of Sales
+  Open-Source
+  Python + PostgreSQL
+  REST APIs natives
+  Extensible (custom modules)
+end note
+
+note right of ADF
+  ETL Cloud
+  Pipelines quotidiens
+  Transformations SQL
+  Monitoring integre
+end note
+
+note right of MLFunctions
+  Serverless (Azure Functions)
+  Python models (.pkl)
+  Auto-scaling
+end note
+
+@enduml

@@ -1,0 +1,120 @@
+@startuml Class_Modele_Donnees
+
+title Modele de Donnees Application Chantier
+
+class Chantier {
+  +id: UUID
+  +code_affaire: String
+  +nom: String
+  +client_id: UUID
+  +adresse: String
+  +date_debut: Date
+  +date_fin_prevue: Date
+  +statut: Enum
+  +budget_initial: Decimal
+  +responsable_affaire_id: UUID
+  +chef_chantier_id: UUID
+  --
+  +getPhotos(): Photo[]
+  +getIncidents(): Incident[]
+  +getRapports(): Rapport[]
+}
+
+class Photo {
+  +id: UUID
+  +chantier_id: UUID
+  +chemin_blob: String
+  +type: Enum (avant/apres/probleme)
+  +zone: String
+  +date_prise: DateTime
+  +gps_latitude: Float
+  +gps_longitude: Float
+  +pris_par_user_id: UUID
+  +commentaire: Text
+  --
+  +upload(): Boolean
+  +compress(): void
+}
+
+class Incident {
+  +id: UUID
+  +chantier_id: UUID
+  +type: Enum
+  +categorie: Enum
+  +urgence: Enum (basse/moyenne/haute)
+  +titre: String
+  +description: Text
+  +statut: Enum
+  +cree_par_id: UUID
+  +assigne_a_id: UUID
+  +date_creation: DateTime
+  +date_resolution: DateTime
+  +photos: UUID[]
+  --
+  +notifierResponsable(): void
+  +changerStatut(statut): void
+  +ajouterCommentaire(texte): void
+}
+
+class Rapport {
+  +id: UUID
+  +chantier_id: UUID
+  +type: Enum (intervention/avancement)
+  +date_intervention: Date
+  +heure_debut: Time
+  +heure_fin: Time
+  +materiel_utilise: Text
+  +observations: Text
+  +photos_ids: UUID[]
+  +pdf_blob_path: String
+  +signature_client_blob: String
+  +envoye_client: Boolean
+  +date_generation: DateTime
+  --
+  +genererPDF(): String
+  +envoyerEmail(): Boolean
+}
+
+class Commande {
+  +id: UUID
+  +chantier_id: UUID
+  +produit_id: UUID
+  +quantite: Integer
+  +demande_par_id: UUID
+  +statut: Enum (demande/validee/livree)
+  +date_demande: DateTime
+  +date_livraison_prevue: Date
+  +date_livraison_reelle: Date
+  --
+  +valider(): Boolean
+  +notifierLivraison(): void
+}
+
+class User {
+  +id: UUID
+  +nom: String
+  +prenom: String
+  +email: String
+  +role: Enum
+  +telephone: String
+  +actif: Boolean
+  --
+  +authenticate(): Token
+}
+
+Chantier "1" --> "0..*" Photo
+Chantier "1" --> "0..*" Incident
+Chantier "1" --> "0..*" Rapport
+Chantier "1" --> "0..*" Commande
+Chantier "1" --> "1" User : responsable_affaire
+Chantier "1" --> "1" User : chef_chantier
+
+Incident "1" --> "0..*" Photo
+Incident "1" --> "1" User : cree_par
+Incident "1" --> "0..1" User : assigne_a
+
+Rapport "1" --> "0..*" Photo
+
+Commande "1" --> "1" User : demande_par
+
+@enduml

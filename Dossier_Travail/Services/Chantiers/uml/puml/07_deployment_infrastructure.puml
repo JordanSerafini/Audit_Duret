@@ -1,0 +1,89 @@
+@startuml Deployment_Infrastructure
+
+title Infrastructure Deploiement Application Mobile Chantier
+
+node "Utilisateurs Mobiles" {
+  artifact "App iOS" as iOS
+  artifact "App Android" as Android
+}
+
+cloud "Azure Cloud France" {
+
+  node "Azure App Service" {
+    component "API REST\nNode.js" as API
+    component "Auth JWT" as Auth
+  }
+
+  node "Azure Functions" {
+    component "Compression Photos" as FuncPhoto
+    component "Generation PDF" as FuncPDF
+    component "Notifications Push" as FuncPush
+  }
+
+  database "Azure Database PostgreSQL" as DB {
+    storage "Chantiers\nIncidents\nRapports\nCommandes"
+  }
+
+  node "Azure Blob Storage" {
+    storage "Photos\n(organisees par chantier)" as BlobPhotos
+    storage "PDF Rapports" as BlobPDF
+    storage "Plans Chantiers" as BlobPlans
+  }
+
+  node "Azure Files" {
+    storage "Plans\nAnnotations"
+  }
+
+  database "Redis Cache" {
+    storage "Sessions\nCache API"
+  }
+}
+
+cloud "Services Externes" {
+  node "SendGrid" {
+    component "Email Service"
+  }
+
+  node "Firebase/APNS" {
+    component "Push Notifications"
+  }
+}
+
+iOS --> API : HTTPS TLS 1.3
+Android --> API : HTTPS TLS 1.3
+
+API --> Auth
+API --> DB
+API --> BlobPhotos
+API --> BlobPDF
+API --> BlobPlans
+API --> Redis
+
+FuncPhoto --> BlobPhotos : Compression
+FuncPDF --> BlobPDF : Generation
+FuncPush --> "Firebase/APNS"
+
+API --> SendGrid : SMTP
+API --> FuncPush : Queue
+
+note right of DB
+  Managed PostgreSQL
+  Backup quotidien
+  Retention 30 jours
+  Encryption at rest
+end note
+
+note right of BlobPhotos
+  Stockage redondant (GRS)
+  Lifecycle management
+  Photos >1 an → Archive tier
+end note
+
+note bottom of API
+  Scaling automatique
+  Min: 2 instances
+  Max: 10 instances
+  Trigger: CPU >70%
+end note
+
+@enduml

@@ -1,0 +1,290 @@
+@startuml Class_Diagram_Modele
+
+title Class Diagram - Modele Objet Direction-Affaires
+
+' Acteurs
+class ResponsableAffaire {
+  +id: string
+  +nom: string
+  +prenom: string
+  +affairesActives: int
+  +telephone: string
+  +email: string
+  --
+  +creerDevis()
+  +genererPPSPS()
+  +suivreAffaire()
+  +rechercher Template()
+}
+
+class Directrice {
+  +id: string
+  +nom: string
+  +prenom: string
+  --
+  +consulterAvancement()
+  +analyserPerformances()
+  +validerBudget()
+  +obtenirKPIs()
+}
+
+note right of Directrice
+  [!] **PROBLEME ACTUEL**
+  Impossible de consulter
+  avancement en temps reel
+  [TIME] 3h pour compiler les donnees
+  Dashboards inexistants
+end note
+
+class BureauEtudes {
+  +id: string
+  +nom: string
+  +prenom: string
+  --
+  +validerPPSPS()
+  +commenterDocument()
+  +verifierClauses()
+}
+
+' Entites metier
+class Devis {
+  +numero: string
+  +dateCreation: Date
+  +dateValidite: Date
+  +statut: StatutDevis
+  +montantTotal: float
+  +nbLignes: int
+  +tempsSaisie: int
+  --
+  +creer()
+  +modifier()
+  +envoyer()
+  +calculerTotal()
+}
+
+note right of Devis
+  [!] **PROBLEME ACTUEL**
+  Creation: 2h05
+  - Recherche template: 30 min
+  - Ouverture MDE: 5 min
+  - Saisie 30 lignes: 1h30
+  - Verifications: 15 min
+  - PDF & envoi: 10 min
+
+  [FRUSTRE] Frustration: Très élevée
+end note
+
+enum StatutDevis {
+  BROUILLON
+  EN_COURS
+  ENVOYE
+  ACCEPTE
+  REFUSE
+  MODIFIE
+}
+
+class LigneDevis {
+  +id: string
+  +designation: string
+  +quantite: float
+  +prixUnitaire: float
+  +remise: float
+  +montant: float
+  --
+  +calculerMontant()
+}
+
+note right of LigneDevis
+  [!] Pour CHAQUE ligne:
+  - Popup catalogue: 35s
+  - Recherche article: 2 min
+  - Copie Excel perso
+  - Sauvegarde: 25s
+  [TIME] 5 min par ligne !
+end note
+
+class PPSPS {
+  +numero: string
+  +affaire: Affaire
+  +dateCreation: Date
+  +version: int
+  +statut: StatutPPSPS
+  +nbPages: int
+  +tempsCreation: int
+  --
+  +generer()
+  +modifier()
+  +valider()
+  +exporter()
+}
+
+note left of PPSPS
+  [!] **CALVAIRE ACTUEL**
+  Generation: 3h00
+  - Recherche template: 30 min
+  - Copie & Adaptation: 2h30
+    • Section 1: 15 min (Ctrl+F)
+    • Section 2: 20 min
+    • Section 3 Risques: 45 min
+    • Plans: 30 min
+    • Clauses: 30 min
+    • Mise en page: 30 min
+
+  [!] 100% manuel
+  [!] Risque oublis clauses
+  [FRUSTRE] Frustration: Maximale
+end note
+
+enum StatutPPSPS {
+  BROUILLON
+  EN_RELECTURE
+  VALIDE
+  ENVOYE_CLIENT
+}
+
+class Affaire {
+  +numero: string
+  +nom: string
+  +client: string
+  +dateDebut: Date
+  +dateFin: Date
+  +budgetTotal: float
+  +budgetDepense: float
+  +avancement: float
+  +statut: StatutAffaire
+  --
+  +suivreBudget()
+  +calculerAvancement()
+  +obtenirKPIs()
+}
+
+note bottom of Affaire
+  [!] **VISIBILITE NULLE**
+  Direction ne peut pas:
+  - Suivre avancement TR
+  - Consulter budgets
+  - Obtenir KPIs
+  [TIME] 3h pour compiler
+end note
+
+enum StatutAffaire {
+  DEVIS
+  EN_COURS
+  SUSPENDU
+  TERMINE
+  FACTURE
+}
+
+class Client {
+  +id: string
+  +raisonSociale: string
+  +contact: string
+  +email: string
+  +telephone: string
+  +adresse: string
+  --
+  +demanderDevis()
+  +accepterDevis()
+  +refuserDevis()
+}
+
+class Template {
+  +id: string
+  +nom: string
+  +type: TypeTemplate
+  +dateModif: Date
+  +cheminFichier: string
+  --
+  +utiliser()
+  +modifier()
+}
+
+note right of Template
+  [!] **CHAOS TEMPLATES**
+  - 200+ fichiers Word
+  - Nommage incoherent:
+    "PPSPS_final_v2_OK_2023.docx"
+    "PPSPS_Client_A_VRAI_FINAL.docx"
+  - Aucune structure
+  - [TIME] 30 min de recherche
+end note
+
+enum TypeTemplate {
+  DEVIS
+  PPSPS
+  FACTURE
+  RAPPORT
+}
+
+class Reliquat {
+  +id: string
+  +affaire: Affaire
+  +montant: float
+  +dateIdentification: Date
+  +suivi: boolean
+  +statut: string
+  --
+  +suivre()
+  +facturer()
+  +relancer()
+}
+
+note bottom of Reliquat
+  [!] **AUCUN SUIVI**
+  Reliquats non traces
+  Pertes importantes
+end note
+
+' Relations
+ResponsableAffaire "1" -- "*" Devis : cree >
+ResponsableAffaire "1" -- "*" PPSPS : genere >
+ResponsableAffaire "1" -- "*" Affaire : pilote >
+ResponsableAffaire "1" -- "*" Template : recherche >
+
+Directrice "1" ..> "*" Affaire : consulte
+Directrice "1" ..> "*" KPI : impossible
+
+BureauEtudes "1" -- "*" PPSPS : valide >
+
+Devis "1" *-- "*" LigneDevis : contient
+Devis "*" -- "1" StatutDevis
+Devis "*" -- "1" Client : pour >
+Devis "*" -- "1" Affaire : genere >
+
+PPSPS "*" -- "1" Affaire : pour >
+PPSPS "*" -- "1" StatutPPSPS
+PPSPS "*" ..> "0..1" Template : utilise
+
+Affaire "*" -- "1" Client : pour >
+Affaire "*" -- "1" StatutAffaire
+Affaire "1" *-- "*" Reliquat : peut avoir
+
+Template "*" -- "1" TypeTemplate
+
+note top
+  **PROBLEMES MODELE ACTUEL**
+
+  [!] **Processus manuels**
+  - Devis: 2h05 par devis (30 lignes)
+  - PPSPS: 3h00 par document
+  - Templates: recherche 30 min
+
+  [!] **Pas de visibilite**
+  - Direction aveugle
+  - Avancement inconnu TR
+  - Budget disperse
+
+  [!] **Performance catastrophique**
+  - ERP: 30-40s par ecran
+  - VPN + Citrix lent
+  - Teletravail impossible
+
+  [!] **Donnees eparpillees**
+  - MDE/Sage + Word + Excel perso
+  - 200+ fichiers templates
+  - Aucune structure
+
+  Impact: Process tres inefficace
+end note
+
+@enduml

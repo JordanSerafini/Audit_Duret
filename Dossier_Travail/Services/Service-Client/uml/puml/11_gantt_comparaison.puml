@@ -1,0 +1,80 @@
+@startgantt Gantt_Comparaison_Avant_Apres
+
+title Comparaison Temps - Avant/Après (Prise de RDV)
+
+printscale daily
+
+caption Système ACTUEL vs CIBLE - Prise de RDV Client
+
+project starts 2025-11-17
+
+[SYSTÈME ACTUEL - 48 HEURES] as [Actuel] lasts 48 hours
+[Actuel] is colored in Red
+
+[Client appelle] as [A1] lasts 5 minutes
+[A1] is colored in LightCoral
+[A1] starts at [Actuel]'s start
+
+[Claire cherche infos] as [A2] lasts 10 minutes
+[A2] is colored in LightCoral
+[A2] starts at [A1]'s end
+
+[Propose créneau incertain] as [A3] lasts 5 minutes
+[A3] is colored in Orange
+[A3] starts at [A2]'s end
+
+[Mail Gaëtan] as [A4] lasts 5 minutes
+[A4] is colored in LightCoral
+[A4] starts at [A3]'s end
+
+[ATTENTE Gaëtan] as [A5] lasts 7 hours
+[A5] is colored in Red
+[A5] starts at [A4]'s end
+
+[Gaëtan répond] as [A6] lasts 2 minutes
+[A6] is colored in LightCoral
+[A6] starts at [A5]'s end
+
+[Appel client (répondeur)] as [A7] lasts 5 minutes
+[A7] is colored in Orange
+[A7] starts at [A6]'s end
+
+[Mail client] as [A8] lasts 10 minutes
+[A8] is colored in LightCoral
+[A8] starts at [A7]'s end
+
+[ATTENTE client] as [A9] lasts 15 hours
+[A9] is colored in Red
+[A9] starts at [A8]'s end
+
+[Client répond OK] as [A10] lasts 2 minutes
+[A10] is colored in LightCoral
+[A10] starts at [A9]'s end
+
+[Saisie Excel + Outlook] as [A11] lasts 5 minutes
+[A11] is colored in LightCoral
+[A11] starts at [A10]'s end
+
+[Mails confirmation] as [A12] lasts 10 minutes
+[A12] is colored in LightCoral
+[A12] starts at [A11]'s end
+
+-- VERSUS --
+
+[SYSTÈME CIBLE - 2 MINUTES] as [Cible] lasts 2 minutes
+[Cible] is colored in LightGreen
+[Cible] starts at [Actuel]'s start
+
+[Client sur portail] as [C1] lasts 1 minute
+[C1] is colored in LightGreen
+[C1] starts at [Cible]'s start
+
+[Choisit créneau dispo] as [C2] lasts 30 seconds
+[C2] is colored in LightGreen
+[C2] starts at [C1]'s end
+
+[Confirmation automatique] as [C3] lasts 30 seconds
+[C3] is colored in LightGreen
+[C3] starts at [C2]'s end
+
+@endgantt

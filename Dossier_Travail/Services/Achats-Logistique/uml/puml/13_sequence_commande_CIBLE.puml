@@ -1,0 +1,100 @@
+@startuml Commande_Materiel_CIBLE
+
+title Processus Commande Matériel - CIBLE (ODOO + RFID)
+
+actor "Marc\n(Chef Chantier)" as Marc #FFB6C1
+actor "Sylvie\n(Achats)" as Sylvie #ADD8E6
+actor "Éric\n(Dépôt)" as Eric #98FB98
+participant "App Mobile\n(Odoo Field)" as App #90EE90
+participant "Odoo ERP\n(Achats/Stock)" as Odoo #87CEEB
+participant "Scanner RFID\n(Odoo Inventaire)" as RFID #FFA500
+participant "Fournisseur\n(Rexel/Sonepar)" as Fourn
+
+== JOUR 1 - Lundi 9h00 ==
+
+note over Marc #E0F7FA
+  **Besoin identifié**
+  Câble 3G2.5 - 50m
+end note
+
+Marc -> App: 🔍 Recherche "Câble 3G2.5"
+activate App
+App -> Odoo: Check Stock Temps Réel
+Odoo --> App: "Stock Dépôt: 0 | Dispo Fournisseur: Oui"
+App --> Marc: Affiche résultats + Photos
+deactivate App
+
+Marc -> App: 🛒 Ajoute au panier & Valide
+note right #90EE90
+  ✅ **Zéro Ressaisie**
+  Référence unique & standardisée
+  ⏱️ 30 secondes
+end note
+
+App -> Odoo: Création Demande Achat (DA)
+activate Odoo
+Odoo -> Sylvie: 🔔 Notification "Nouvelle DA de Marc"
+deactivate Odoo
+
+== Validation (9h05) ==
+
+Sylvie -> Odoo: Consulte DA
+note right #ADD8E6
+  ✅ **Validation 1 Clic**
+  Prix & Réf pré-remplis
+end note
+
+Sylvie -> Odoo: Valide Commande
+activate Odoo
+Odoo -> Fourn: 📧 Envoi Commande (Email/API)
+note right #87CEEB
+  ✅ **Automatique**
+  PDF généré & envoyé
+end note
+Odoo --> Marc: 🔔 Notif "Commande Validée - Livr. Mercredi"
+deactivate Odoo
+
+== JOUR 3 - Mercredi 8h00 ==
+
+Fourn -> Eric: 🚚 Livraison Camion
+
+Eric -> RFID: 🔫 Scanne Colis / Palette
+activate RFID
+RFID -> Odoo: Identification Réception
+Odoo --> RFID: "Commande #PO12345 pour Marc"
+note right #FFA500
+  ✅ **Reconnaissance Immédiate**
+  Pas de recherche papier
+end note
+
+Eric -> RFID: Confirme Quantité (Scan)
+RFID -> Odoo: 📦 Entrée Stock
+deactivate RFID
+
+activate Odoo
+Odoo -> Odoo: Mise à jour Stock
+Odoo -> Marc: 🔔 Notif "Matériel Reçu au Dépôt !"
+deactivate Odoo
+
+== JOUR 3 - 8h30 ==
+
+Marc -> Eric: Récupère matériel
+Eric -> RFID: 🔫 Scanne Sortie (Vers Chantier)
+RFID -> Odoo: 📉 Sortie Stock -> Chantier
+note right #90EE90
+  ✅ **Traçabilité Totale**
+  Imputation analytique auto
+end note
+
+== BILAN ==
+
+note over Marc, Fourn #E8F5E9
+  **MÉTRIQUES CIBLE**
+  ⏱️ Durée totale: **2 jours** (vs 3)
+  📞 Appels évités: **100%**
+  ♻️ Ressaisies: **0** (vs 6)
+  ✅ Taux erreur: **< 1%**
+  😊 Satisfaction: **Maximale**
+end note
+
+@enduml

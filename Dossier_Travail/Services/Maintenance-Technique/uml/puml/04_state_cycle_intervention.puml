@@ -1,0 +1,85 @@
+@startuml State_Cycle_Intervention
+
+title Machine a Etats - Cycle de Vie Intervention SAV
+
+[*] --> A_Planifier : Contrat signe\nou demande client
+
+A_Planifier : Statut : A planifier
+A_Planifier : Assignee a : null
+A_Planifier : Date : null
+
+A_Planifier --> Planifiee : Clothilde affecte\ntechnicien + date
+
+Planifiee : Statut : Planifiee
+Planifiee : Assignee a : Gaetan
+Planifiee : Date : 26/11/2025 14h
+
+Planifiee --> En_Route : Gaetan demarre\ntournee (8h30)
+
+En_Route : GPS active
+En_Route : Trajet vers client
+En_Route : Notification client\n"Technicien en route"
+
+En_Route --> En_Cours : Pointage GPS\narrivee (auto)
+
+En_Cours : Statut : En cours
+En_Cours : Heure arrivee : 14h05
+En_Cours : Duree prevue : 1h30
+En_Cours : Chronometre actif
+
+En_Cours --> Terminee_OK : Rapport digital\ncomplete + signature
+
+Terminee_OK : Statut : Terminee
+Terminee_OK : Heure depart : 15h40
+Terminee_OK : Duree reelle : 1h35
+Terminee_OK : Ecart : +5 min
+Terminee_OK : Conforme : Oui
+
+Terminee_OK --> Facturee : Facturation auto\n(integration SAGE)
+
+Facturee : Facture generee
+Facturee : Envoyee client
+Facturee : Statut : Payee
+
+Facturee --> Enquete_Envoyee : J+2 : Email\nenquete satisfaction
+
+Enquete_Envoyee : Taux reponse : 40%
+Enquete_Envoyee : Note moyenne : 4.5/5
+
+Enquete_Envoyee --> [*] : Cycle complete
+
+En_Cours --> Annulee : Client annule\n(rare)
+
+Annulee --> [*]
+
+En_Cours --> Reportee : Probleme technique\n(piece manquante)
+
+Reportee --> A_Planifier : Re-planification
+
+note right of En_Cours
+  **POINTAGE GPS AUTO**
+  - Arrivee : GPS detecte
+  - Depart : Validation tech
+  - Calcul duree reelle
+  - Alert si > 30min ecart
+  → Refacturation auto
+end note
+
+note left of Terminee_OK
+  **RAPPORT DIGITAL**
+  - 3 min (vs 12 min CERFA)
+  - Photos integrees (max 10)
+  - Signature electronique
+  - PDF envoye client auto
+end note
+
+note bottom of Enquete_Envoyee
+  **ENQUETE AUTO**
+  - J+2 post-intervention
+  - 5 questions
+  - Si note < 3/5 :
+    Alert Clothilde
+    (action corrective)
+end note
+
+@enduml

@@ -1,0 +1,50 @@
+@startgantt Gantt_Comparaison_Actuel_Cible
+
+title Gantt - Comparaison Processus ACTUEL vs CIBLE
+
+printscale daily
+
+<style>
+ganttDiagram {
+  timeline {
+    BackgroundColor lightgray
+  }
+}
+</style>
+
+Project starts 2024-01-08
+
+[PROCESSUS ACTUEL (3 JOURS)] as [ACTUEL] lasts 3 days and is colored in Red
+
+-- Jour 1 - Lundi (Matin) --
+[Marc: Besoin → Bon rempli] as [A1] lasts 1 day and is colored in LightPink
+[Marc: Essaie joindre Sylvie] as [A2] lasts 1 day and starts at [A1]'s start and is colored in Red
+[Sylvie: Traite commande] as [A3] lasts 1 day and starts at [A1]'s start and is colored in Orange
+
+-- Jour 2 - Mardi --
+[⏸️ ATTENTE LIVRAISON] as [A4] lasts 1 day and starts at [A1]'s end and is colored in Red
+[⛔ Chantier bloqué] as [A5] lasts 1 day and starts at [A4]'s start and is colored in Red
+
+-- Jour 3 - Mercredi --
+[Éric: Réception + Saisie] as [A6] lasts 1 day and starts at [A4]'s end and is colored in LightGreen
+[Marc: Récupère dépôt] as [A7] lasts 1 day and starts at [A6]'s start and is colored in LightPink
+[❌ ERREUR - Recommence] as [A8] lasts 0 days and starts at [A6]'s end and is colored in Red
+
+-- PROCESSUS CIBLE --
+[PROCESSUS CIBLE] as [CIBLE] lasts 1 day and starts at 2024-01-15 and is colored in Green
+
+[Marc: Commande mobile → Livraison] as [C1] lasts 1 day and starts at [CIBLE]'s start and is colored in LightGreen
+[✅ Succès] as [C2] lasts 0 days and starts at [C1]'s end and is colored in Green
+
+note bottom
+  **COMPARAISON**
+  ⏰ ACTUEL: **3 jours** (taux d'échec élevé)
+  ⏰ CIBLE: **< 1 jour** (livraison rapide)
+
+  📊 AMÉLIORATION:
+  - Temps fortement réduit
+  - Process digital optimisé
+  - Taux succès: Insuffisant → Très amélioré
+end note
+
+@endgantt

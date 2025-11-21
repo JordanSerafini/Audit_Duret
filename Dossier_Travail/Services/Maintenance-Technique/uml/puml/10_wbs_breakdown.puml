@@ -1,0 +1,58 @@
+@startwbs WBS_Digitalisation_SAV
+
+title WBS - Digitalisation SAV Maintenance (18 mois)
+
+* Digitalisation\nSAV Maintenance
+** Phase 1\nQuick Wins\n**M1-3**
+*** Setup ERP Terrain
+**** Sélection POC (3 solutions)
+**** Signature contrat
+*** Configuration
+**** Import ~300 clients
+**** Templates rapports
+**** Paramétrage
+*** App Mobile
+**** Configuration iOS/Android
+**** Tests pilote
+**** Déploiement techniciens
+*** Formation
+**** Clothilde (admin)
+**** Techniciens
+*** Intégration GAO
+
+** Phase 2\nIntégrations\n**M4-6**
+*** Module Devis Terrain
+**** Configuration catalogue
+**** Formation techniciens
+**** Tests
+*** Portail Client
+**** Configuration branding
+**** Création comptes clients
+**** Tests UAT
+*** Workflows Auto
+**** Alertes fin contrat
+**** Interventions automatiques
+**** Enquête satisfaction
+*** Intégration SAGE
+
+** Phase 3\nExcellence\n**M7-18**
+*** Zoning Intelligent
+**** Géolocalisation clients
+**** Algorithme routing
+**** Tests
+*** Analytics Avancés
+**** Dashboards BI
+**** KPI temps réel
+**** Alertes prédictives
+*** Enquête Systématique
+**** Configuration questionnaire
+**** Tests
+*** Optimisation Planning
+
+** Coûts récurrents\n**18 mois**
+*** Licences ERP
+*** Stockage cloud
+*** SMS
+*** Maintenance
+
+@endwbs

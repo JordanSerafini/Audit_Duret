@@ -1,0 +1,86 @@
+@startuml UseCase_Service_Client
+
+title Use Case - Service Client Duret Électricité
+
+left to right direction
+
+actor "Client" as Client
+actor "Claire\n(Assistante)" as Claire
+actor "Gaëtan\n(Technicien SAV)" as Gaetan
+actor "Direction" as Direction
+
+rectangle "Service Client" {
+  usecase "Appeler pour\nproblème" as UC1
+  usecase "Prendre RDV" as UC2
+  usecase "Demander devis" as UC3
+  usecase "Suivre intervention" as UC4
+  usecase "Donner satisfaction" as UC5
+
+  usecase "Gérer tickets" as UC6
+  usecase "Organiser planning" as UC7
+  usecase "Relancer clients" as UC8
+  usecase "Traiter mails" as UC9
+  usecase "Créer chantiers" as UC10
+
+  usecase "Réaliser intervention" as UC11
+  usecase "Remplir CERFA" as UC12
+  usecase "Générer devis terrain" as UC13
+  usecase "Pointer heures" as UC14
+
+  usecase "Consulter KPIs" as UC15
+  usecase "Analyser satisfaction" as UC16
+}
+
+Client --> UC1
+Client --> UC2
+Client --> UC3
+Client --> UC4
+Client --> UC5
+
+Claire --> UC6
+Claire --> UC7
+Claire --> UC8
+Claire --> UC9
+Claire --> UC10
+
+Gaetan --> UC11
+Gaetan --> UC12
+Gaetan --> UC13
+Gaetan --> UC14
+
+Direction --> UC15
+Direction --> UC16
+
+UC1 ..> UC6 : <<include>>
+UC2 ..> UC7 : <<include>>
+UC3 ..> UC6 : <<include>>
+
+UC11 ..> UC12 : <<include>>
+UC11 ..> UC14 : <<include>>
+
+note right of UC6
+  🔴 ACTUEL: Post-it
+  ✅ CIBLE: HubSpot CRM
+end note
+
+note right of UC7
+  🔴 ACTUEL: Excel + 48h
+  ✅ CIBLE: Calendrier temps réel
+end note
+
+note right of UC12
+  🔴 ACTUEL: Papier CERFA
+  ✅ CIBLE: App mobile
+end note
+
+note right of UC13
+  🔴 ACTUEL: Impossible
+  ✅ CIBLE: App mobile
+end note
+
+note right of UC15
+  🔴 ACTUEL: Excel manuel
+  ✅ CIBLE: Power BI temps réel
+end note
+
+@enduml

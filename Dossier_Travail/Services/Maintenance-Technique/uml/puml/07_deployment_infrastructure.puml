@@ -1,0 +1,108 @@
+@startuml Deployment_Infrastructure
+
+title Deploiement Infrastructure - SAV Cloud
+
+node "Azure Cloud (EU - France Central)" {
+
+  node "ERP/CRM Terrain SaaS" {
+    component [Application Web\nERP Terrain] as ERPApp
+    component [API REST\nNode.js] as API
+    database [PostgreSQL\nBase ERP] as DBSQL
+  }
+
+  node "Azure Blob Storage" {
+    storage [Photos\nInterventions] as BlobPhotos
+    storage [PDF Rapports] as BlobPDF
+    storage [PDF Devis] as BlobDevis
+  }
+
+  node "Services Complementaires" {
+    component [Twilio SMS\nGateway] as Twilio
+    component [SendGrid\nSMTP] as SendGrid
+  }
+}
+
+node "Technicien - Smartphone (iOS)" {
+  component [App Mobile\niOS] as AppIOS
+  database [SQLite\nLocal (Offline)] as SQLiteIOS
+}
+
+node "Technicien - Smartphone (Android)" {
+  component [App Mobile\nAndroid] as AppAndroid
+  database [SQLite\nLocal (Offline)] as SQLiteAndroid
+}
+
+node "Client - Navigateur Web" {
+  component [Portail Client\nReact.js] as PortailBrowser
+}
+
+node "Clothilde - Desktop" {
+  component [Interface ERP\nWeb Admin] as AdminWeb
+}
+
+node "Direction - Desktop" {
+  component [Dashboards\nPower BI] as PowerBI
+}
+
+node "On-Premise Duret - Annecy" {
+  database [GAO\nLegacy] as GAOLegacy
+  database [SAGE\nComptabilite] as SAGELegacy
+}
+
+AppIOS --> API : HTTPS/TLS 1.3\nAPI REST
+AppAndroid --> API : HTTPS/TLS 1.3\nAPI REST
+PortailBrowser --> API : HTTPS\nAPI REST
+AdminWeb --> ERPApp : HTTPS
+
+AppIOS --> BlobPhotos : Upload\nphotos
+AppAndroid --> BlobPhotos : Upload\nphotos
+
+API --> DBSQL : SQL\nAES-256 repos
+API --> BlobPhotos : Store/Retrieve
+API --> BlobPDF : Generate/Store
+API --> BlobDevis : Generate/Store
+
+ERPApp --> Twilio : API\nSMS clients
+ERPApp --> SendGrid : API\nEmails
+
+API <--> GAOLegacy : API/CSV\nConsultation\n(optionnel)
+API --> SAGELegacy : API\nFacturation auto
+
+SQLiteIOS -[#blue]-> API : Sync offline\n→ online
+SQLiteAndroid -[#blue]-> API : Sync offline\n→ online
+
+PowerBI --> DBSQL : DirectQuery\nAnalytics
+
+note right of AppIOS
+  **MODE OFFLINE** :
+  - Cache planning jour
+  - Rapports en attente
+  - Photos en attente
+  - Sync auto WiFi/4G
+end note
+
+note left of DBSQL
+  **SECURITE** :
+  - Chiffrement AES-256 (repos)
+  - TLS 1.3 (transit)
+  - Backup quotidien
+  - Retention 30 jours
+  - RGPD compliant
+end note
+
+note bottom of API
+  **AUTHENTIFICATION** :
+  - OAuth 2.0 + JWT
+  - MFA disponible
+  - Session timeout 30min
+  - Audit trail (logs 1 an)
+end note
+
+note right of GAOLegacy
+  **INTEGRATION** :
+  - Phase 2 (optionnelle)
+  - Consultation historique
+  - Ou remplacement complet
+end note
+
+@enduml

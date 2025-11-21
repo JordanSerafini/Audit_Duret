@@ -1,0 +1,90 @@
+@startuml Component_Architecture_Cible
+
+title Architecture Composants - Solution Service Client
+
+package "Frontend" {
+  [Portail Client Web] as PortailWeb
+  [App Mobile Technicien] as AppMobile
+  [Interface Claire (HubSpot)] as InterfaceClaire
+}
+
+package "Backend - HubSpot CRM" {
+  [CRM Core] as CRMCore
+  [Ticketing System] as Ticketing
+  [Workflow Engine] as Workflows
+  [Analytics Engine] as Analytics
+  [Chatbot IA] as Chatbot
+}
+
+package "Intégrations" {
+  [CTI Connector] as CTI
+  [SAGE Sync] as SAGESync
+  [Email Connector] as EmailConn
+  [SMS Gateway] as SMS
+}
+
+package "Data & ML" {
+  [Data Warehouse] as DWH
+  [ML Prediction] as ML
+  [Power BI] as PowerBI
+}
+
+package "Systèmes Existants" {
+  [SAGE] as SAGE
+  [MDE ERP] as ERP
+  [Standard Téléphonique] as Tel
+  [Outlook] as Outlook
+}
+
+PortailWeb --> CRMCore : REST API
+AppMobile --> CRMCore : GraphQL API
+InterfaceClaire --> CRMCore : Interface native
+
+CRMCore --> Ticketing
+CRMCore --> Workflows
+CRMCore --> Analytics
+CRMCore --> Chatbot
+
+CTI --> Tel
+CTI --> CRMCore : Remontée fiche auto
+
+SAGESync --> SAGE
+SAGESync --> CRMCore : Sync bidirectionnelle
+
+EmailConn --> Outlook
+EmailConn --> CRMCore : Parsing mails
+
+CRMCore --> DWH : Export données
+DWH --> ML : Training
+ML --> CRMCore : Prédictions
+DWH --> PowerBI : Dashboards
+
+note right of CTI
+  📞 **Remontée Fiche Auto**
+  Appel entrant →
+  Recherche n° →
+  Affiche fiche client
+end note
+
+note right of SAGESync
+  🔄 **Sync Bidirectionnelle**
+  Clients, Devis, Factures
+  Temps réel + Batch quotidien
+end note
+
+note right of ML
+  🤖 **3 Modèles ML**
+  - Prévision volume appels
+  - Risque churn client
+  - Optimisation planning
+end note
+
+note right of Workflows
+  ⚡ **Automatisations**
+  - Relances automatiques
+  - Questionnaires satisfaction
+  - Notifications multi-canal
+  - Escalades SLA
+end note
+
+@enduml
