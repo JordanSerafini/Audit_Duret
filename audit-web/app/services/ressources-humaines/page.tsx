@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, LayoutDashboard, Smartphone, RefreshCw } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
+import UMLGallery from '@/components/UMLGallery';
 
 export const metadata = {
   title: 'Ressources Humaines - Audit IT Duret',
@@ -280,7 +281,7 @@ export default function RessourcesHumainesPage() {
       </div>
 
       {/* Roadmap */}
-      <div className="border-t border-slate-200 pt-12">
+      <div className="border-t border-slate-200 pt-12 mb-12">
         <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
           <Clock className="w-8 h-8 text-slate-700" />
           Roadmap de Déploiement (18 Mois)
@@ -302,6 +303,19 @@ export default function RessourcesHumainesPage() {
             <p className="text-sm text-slate-600">Portail Collaborateur Complet, Entretiens Digitalisés, GPEC.</p>
           </div>
         </div>
+      </div>
+
+      {/* Diagrammes UML */}
+      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+          <LayoutDashboard className="w-8 h-8 text-pink-600" />
+          Diagrammes UML - Visualisation & Téléchargement
+        </h2>
+        <p className="text-slate-600 mb-6">
+          Explorez tous les diagrammes UML de ce service : architecture, processus, cas d'usage, et plus encore.
+          Visualisez-les directement ou téléchargez-les individuellement.
+        </p>
+        <UMLGallery serviceKey="ressources-humaines" />
       </div>
 
       {/* Footer navigation */}

@@ -1,90 +1,91 @@
-@startuml
-@startgantt Gantt_Planning_Implementation
+@startuml Gantt_Planning_Implementation
+
+@startgantt
 
 title Planning Implementation 24 Mois Gestion Operationnelle
 
 printscale monthly
 
-project starts 2025-11-17
+Project starts 2025-11-17
 
 -- Phase 1 : Quick Wins (M1-M6) --
 
-[RFID Stocks] as [RFID] lasts 120 days and is colored in LightBlue
+[RFID Stocks] lasts 120 days and is colored in LightBlue
 [RFID] starts 2025-11-17
 
-[POC RFID Annecy] as [RFIDPOC] lasts 60 days and is colored in LightGreen and starts at [RFID]'s start
-[Deploiement Annecy+Albertville] as [RFIDDeploy] lasts 60 days and is colored in LightGreen and starts at [RFIDPOC]'s end
+[POC RFID Annecy] lasts 60 days and is colored in LightGreen and 
+[Deploiement Annecy+Albertville] lasts 60 days and is colored in LightGreen and 
 
-[Dashboards Power BI] as [PBI] lasts 150 days and is colored in Orange
+[Dashboards Power BI] lasts 150 days and is colored in Orange
 [PBI] starts 2025-11-17
 
-[Audit Donnees] as [PBIAudit] lasts 30 days and is colored in Yellow and starts at [PBI]'s start
-[Dev Dashboards] as [PBIDev] lasts 90 days and is colored in Yellow and starts at [PBIAudit]'s end
-[Formation GO-LIVE] as [PBIGL] lasts 30 days and is colored in LightGreen and starts at [PBIDev]'s end
+[Audit Donnees] lasts 30 days and is colored in Yellow and 
+[Dev Dashboards] lasts 90 days and is colored in Yellow and 
+[Formation GO-LIVE] lasts 30 days and is colored in LightGreen and 
 
-[Systeme Tickets BE] as [Tickets] lasts 150 days and is colored in Pink
+[Systeme Tickets BE] lasts 150 days and is colored in Pink
 [Tickets] starts 2025-12-17
 
-[Benchmark Solutions] as [TicketsBench] lasts 30 days and is colored in LightPink and starts at [Tickets]'s start
-[Config Linear] as [TicketsConfig] lasts 60 days and is colored in LightPink and starts at [TicketsBench]'s end
-[Tests GO-LIVE] as [TicketsGL] lasts 60 days and is colored in LightGreen and starts at [TicketsConfig]'s end
+[Benchmark Solutions] lasts 30 days and is colored in LightPink and 
+[Config Linear] lasts 60 days and is colored in LightPink and 
+[Tests GO-LIVE] lasts 60 days and is colored in LightGreen and 
 
 -- Phase 2 : Structurant (M7-M18) --
 
-[Migration ERP Odoo] as [Odoo] lasts 300 days and is colored in LightBlue
+[Migration ERP Odoo] lasts 300 days and is colored in LightBlue
 [Odoo] starts at [RFID]'s end
 
-[Benchmark ERP] as [OdooBench] lasts 60 days and is colored in Cyan and starts at [Odoo]'s start
-[POC Odoo 6 sem] as [OdooPOC] lasts 45 days and is colored in Cyan and starts at [OdooBench]'s end
-[GO/NO-GO] as [OdooGO] lasts 15 days and is colored in Red and starts at [OdooPOC]'s end
-[Migration Progressive] as [OdooMigr] lasts 150 days and is colored in Cyan and starts at [OdooGO]'s end
-[Integrations GO-LIVE] as [OdooGL] lasts 30 days and is colored in LightGreen and starts at [OdooMigr]'s end
+[Benchmark ERP] lasts 60 days and is colored in Cyan and 
+[POC Odoo 6 sem] lasts 45 days and is colored in Cyan and 
+[GO/NO-GO] lasts 15 days and is colored in Red and 
+[Migration Progressive] lasts 150 days and is colored in Cyan and 
+[Integrations GO-LIVE] lasts 30 days and is colored in LightGreen and 
 
-[RBAC Transparence] as [RBAC] lasts 90 days and is colored in Purple
+[RBAC Transparence] lasts 90 days and is colored in Purple
 [RBAC] starts at [OdooMigr]'s start
 
-[Definition Roles] as [RBACDef] lasts 30 days and is colored in Violet and starts at [RBAC]'s start
-[Config Odoo+PBI] as [RBACConfig] lasts 30 days and is colored in Violet and starts at [RBACDef]'s end
-[Tests Formation] as [RBACGL] lasts 30 days and is colored in LightGreen and starts at [RBACConfig]'s end
+[Definition Roles] lasts 30 days and is colored in Violet and 
+[Config Odoo+PBI] lasts 30 days and is colored in Violet and 
+[Tests Formation] lasts 30 days and is colored in LightGreen and 
 
-[Analyses Avancees] as [ML] lasts 120 days and is colored in Green
+[Analyses Avancees] lasts 120 days and is colored in Green
 [ML] starts at [OdooMigr]'s end
 
-[Data Lake Setup] as [MLSetup] lasts 30 days and is colored in LightGreen and starts at [ML]'s start
-[Dev Analyses] as [MLDev] lasts 60 days and is colored in LightGreen and starts at [MLSetup]'s end
-[Integration GO-LIVE] as [MLGL] lasts 30 days and is colored in DarkGreen and starts at [MLDev]'s end
+[Data Lake Setup] lasts 30 days and is colored in LightGreen and 
+[Dev Analyses] lasts 60 days and is colored in LightGreen and 
+[Integration GO-LIVE] lasts 30 days and is colored in DarkGreen and 
 
 -- Phase 3 : Optimisation (M19-M24) --
 
-[Gouvernance Donnees] as [Gov] lasts 90 days and is colored in Brown
+[Gouvernance Donnees] lasts 90 days and is colored in Brown
 [Gov] starts at [MLGL]'s end
 
-[Audit Data Quality] as [GovAudit] lasts 30 days and is colored in BurlyWood and starts at [Gov]'s start
-[Nettoyage MDM] as [GovClean] lasts 30 days and is colored in BurlyWood and starts at [GovAudit]'s end
-[Gouvernance CDO] as [GovCDO] lasts 30 days and is colored in BurlyWood and starts at [GovClean]'s end
+[Audit Data Quality] lasts 30 days and is colored in BurlyWood and 
+[Nettoyage MDM] lasts 30 days and is colored in BurlyWood and 
+[Gouvernance CDO] lasts 30 days and is colored in BurlyWood and 
 
-[Culture Data-Driven] as [Culture] lasts 180 days and is colored in Gold
+[Culture Data-Driven] lasts 180 days and is colored in Gold
 [Culture] starts at [Gov]'s start
 
-[Formation Direction] as [CultureDir] lasts 60 days and is colored in Yellow and starts at [Culture]'s start
-[Formation Managers] as [CultureMgr] lasts 30 days and is colored in Yellow and starts at [CultureDir]'s end
-[Accompagnement Changement] as [CultureAcc] lasts 90 days and is colored in Yellow and starts at [CultureMgr]'s end
+[Formation Direction] lasts 60 days and is colored in Yellow and 
+[Formation Managers] lasts 30 days and is colored in Yellow and 
+[Accompagnement Changement] lasts 90 days and is colored in Yellow and 
 
 -- Jalons GO/NO-GO --
 
-[GO/NO-GO Phase 1] as [Jalon1] happens at 2025-11-24
+[GO/NO-GO Phase 1] happens at 2025-11-24
 [Jalon1] is colored in Red
 
-[Bilan Phase 1] as [Jalon2] happens at [PBIGL]'s end
+[Bilan Phase 1] happens at 
 [Jalon2] is colored in Red
 
-[GO/NO-GO Odoo] as [Jalon3] happens at [OdooGO]'s end
+[GO/NO-GO Odoo] happens at 
 [Jalon3] is colored in Red
 
-[Bilan Phase 2] as [Jalon4] happens at [MLGL]'s end
+[Bilan Phase 2] happens at 
 [Jalon4] is colored in Red
 
-[Bilan Final] as [Jalon5] happens at [CultureAcc]'s end
+[Bilan Final] happens at 
 [Jalon5] is colored in Red
 
 @endgantt
