@@ -66,16 +66,16 @@ TOTAL: 2 HEURES pour un simple rapport !!
 | **Sophie** (Bureau Études) | Surcharge demandes mal qualifiées, pas de priorisation, 30% temps perdu |
 | **Direction** | Aucun KPI chantiers temps réel, risques dépassements budgets, litiges non anticipés |
 
-### 💰 Coûts de l'Inefficacité Actuelle
+### 💰 Impact de l'Inefficacité Actuelle
 
-| Pain Point | Coût Annuel Estimé |
-|------------|-------------------|
-| Rapports manuels |  (200×2h××60% économisable) |
-| Remontées perdues/litiges |  |
-| Appels bureau infos |  |
-| Photos dispersées/pertes |  |
-| Commandes non tracées |  |
-| **TOTAL PERTES** | **/an** |
+| Pain Point | Impact Constaté |
+|------------|-----------------|
+| Rapports manuels | Temps important perdu (200 rapports × 2h/rapport) |
+| Remontées perdues/litiges | Risque élevé de litiges et reprises travaux |
+| Appels bureau infos | Interruptions fréquentes (~30 appels/jour) |
+| Photos dispersées/pertes | Risque perte données + temps recherche significatif |
+| Commandes non tracées | Difficultés suivi budgets et refacturation |
+| **IMPACT GLOBAL** | **Très significatif (quantification nécessite mesures précises)** |
 
 ---
 

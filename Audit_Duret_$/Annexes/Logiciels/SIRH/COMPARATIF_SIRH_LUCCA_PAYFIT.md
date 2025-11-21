@@ -93,7 +93,6 @@ Un SIRH (Système d'Information Ressources Humaines) centralise et automatise la
 
 | **PayFit** (tout-en-un) | **31 188€** | **31 188€** | **31 188€** | **🔴 93 564€** |
 
-**Économie Lucca+Silae** : **14 004€ sur 3 ans** vs PayFit
 
 **⚠️ IMPORTANT** : Odoo RH (sans paie) encore moins cher : **~10k€/an** (voir ci-dessous)
 
