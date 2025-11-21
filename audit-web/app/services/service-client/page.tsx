@@ -108,6 +108,20 @@ export default function ServiceClientPage() {
               Double saisie ERP/SAGE, planning RDV archaïque (Excel + mails), et aucune traçabilité des demandes techniciens.
               <strong> Opportunités commerciales perdues et image client dégradée.</strong>
             </p>
+            <div className="grid grid-cols-3 gap-4 mt-4">
+              <div className="bg-white p-3 rounded-lg border border-red-200">
+                <p className="text-2xl font-bold text-red-700">~100k€</p>
+                <p className="text-xs text-red-600">Clients perdus/an (10 clients × 10k€)</p>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-red-200">
+                <p className="text-2xl font-bold text-red-700">~41k€</p>
+                <p className="text-xs text-red-600">Temps perdu prise RDV/an (825h)</p>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-red-200">
+                <p className="text-2xl font-bold text-red-700">48h</p>
+                <p className="text-xs text-red-600">Délai confirmation RDV (vs 2min cible)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
