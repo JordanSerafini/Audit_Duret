@@ -197,66 +197,62 @@ TOTAL: 2 HEURES pour un simple rapport !!
 
 ---
 
-## 📊 PARTIE 3 : BUSINESS CASE
+## 📊 PARTIE 3 : APPROCHE INVESTISSEMENT
 
-### 💰 Investissement & Coûts
+### 💰 Structure Investissement
+
+⚠️ **Note méthodologique** : Les coûts précis dépendent de la solution technique retenue et nécessitent une étude de faisabilité approfondie.
 
 **Développement (One-time) :**
-| Phase | Contenu | Coût |
-|-------|---------|------|
-| Phase 1 (M1-3) | App mobile MVP + Photos + Rapports |  |
-| Phase 2 (M4-6) | Workflows + Commandes + Web dashboard |  |
-| Phase 3 (M7-12) | Plans + Offline avancé + Analytics |  |
-| **TOTAL SETUP** | | **** |
+| Phase | Contenu | Investissement |
+|-------|---------|---------------|
+| Phase 1 (M1-3) | App mobile MVP + Photos + Rapports | Modéré |
+| Phase 2 (M4-6) | Workflows + Commandes + Web dashboard | Modéré |
+| Phase 3 (M7-12) | Plans + Offline avancé + Analytics | Modéré |
+| **TOTAL SETUP** | | **Chiffrage détaillé requis** |
 
 **Coûts Récurrents (Annuel) :**
-| Poste | Coût/an |
-|-------|---------|
-| Cloud hosting (AWS/GCP) | 9. |
-| Google Maps API | 3. |
-| Signature électronique | 2. |
-| Email/SMS | 2. |
-| Monitoring | 1. |
-| Maintenance & Support |  |
-| **TOTAL RUN** | **/an** |
+| Poste | Ordre de grandeur |
+|-------|-------------------|
+| Cloud hosting (AWS/GCP) | Variable selon volumétrie |
+| APIs tierces (Maps, etc.) | Selon usage |
+| Services métier (signature, etc.) | Selon volume |
+| Monitoring & alertes | Standard |
+| Maintenance & Support | À définir selon contrat |
+| **TOTAL RUN** | **Chiffrage détaillé requis** |
 
-### 📈 Gains & ROI
+### 📈 Bénéfices Attendus
 
-**Gains Annuels Récurrents :**
+**Gains Opérationnels Anticipés :**
 
-| Source Gains | Calcul | Montant |
-|--------------|--------|---------|
-| **Temps rapports** | 200 rapports × 70% temps économisé (1.4h) × /h | /an |
-| **Réduction litiges** | -40% litiges ×  impacts | /an |
-| **Réduction appels** | -50% × 30 appels/j × 20min × 220j × /h | /an |
-| **Photos centralisées** | Temps recherche + sécurisation | /an |
-| **Traçabilité incidents** | Meilleur suivi → -15% reprises travaux | /an |
-| **Optimisation déplacements** | -10% km via meilleures infos | /an |
-| **TOTAL GAINS ANNUELS** | | **/an** |
+| Source Gains | Amélioration Visée |
+|--------------|-------------------|
+| **Temps rapports** | Réduction drastique (2h → temps très réduit) |
+| **Réduction litiges** | Meilleure traçabilité → moins de litiges |
+| **Réduction appels** | Autonomie terrain → interruptions réduites |
+| **Photos centralisées** | Temps recherche minimisé + sécurisation |
+| **Traçabilité incidents** | Meilleur suivi → moins de reprises |
+| **Optimisation déplacements** | Meilleures informations → efficacité accrue |
+| **GAINS GLOBAUX** | **Substantiels (quantification après pilote)** |
 
-**ROI Financier :**
+**Approche ROI :**
 ```
-Année 1:
-  - Investment: 
-  - Run costs: 
-  - Gains:  (prorata 9 mois après M3) = 
-  - Net Year 1:  -  -  = -
+Méthodologie recommandée :
+  1. Pilote 3 mois avec mesures précises
+  2. Mesure gains réels sur échantillon
+  3. Extrapolation prudente
+  4. Calcul ROI avec données terrain
+  5. Ajustements selon résultats
 
-Année 2:
-  - Run costs: 
-  - Gains: 
-  - Net Year 2:  -  = 
-
-Cumul 2 ans: - +  = 
-ROI 2 ans:  /  
-Payback: ~18 mois
+Objectif : ROI positif démontré avant généralisation
+Timeline : Validation gains réels avant Phase 2
 ```
 
 **Gains Non-Financiers :**
-- ✅ **Satisfaction chefs chantier** : +45% (outils adaptés)
-- ✅ **Réactivité terrain** : -60% temps réponse questions
-- ✅ **Qualité rapports** : Standardisation 100%
-- ✅ **Sécurité données**  risque perte (vs 30% actuellement)
+- ✅ **Satisfaction chefs chantier** : Amélioration notable (outils adaptés)
+- ✅ **Réactivité terrain** : Réduction temps réponse significative
+- ✅ **Qualité rapports** : Standardisation complète
+- ✅ **Sécurité données** : Risque perte minimisé vs situation actuelle
 - ✅ **Image professionnelle** : Rapports digitaux clients
 - ✅ **Attractivité RH** : Outils modernes pour recrutement
 
@@ -278,7 +274,7 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 
 ## 📅 PARTIE 4 : ROADMAP 12 MOIS
 
-### Phase 1 : MVP Core (Mois 1-3) - 
+### Phase 1 : MVP Core (Mois 1-3)
 
 **Objectif :** App mobile fonctionnelle + backend basique
 
@@ -295,11 +291,11 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 **Tests :** 2-3 chefs pilotes
 
 **Gains immédiats M3 :**
-- 100% photos centralisées (vs 40%)
-- -50% temps rapports (2h → 1h)
-- Traçabilité rapports 100% (vs 60%)
+- Photos centralisées : amélioration substantielle
+- Temps rapports : réduction significative
+- Traçabilité rapports : complète vs partielle actuellement
 
-### Phase 2 : Features Avancées (Mois 4-6) - 
+### Phase 2 : Features Avancées (Mois 4-6)
 
 **Objectif :** Workflow incidents + web dashboard
 
@@ -316,11 +312,11 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 **Déploiement :** Tous les chefs (10-15)
 
 **Gains cumulés M6 :**
-- -70% temps rapports (2h → 35min)
-- 95% incidents tracés (vs 20%)
-- -50% temps traitement incidents
+- Temps rapports : réduction très significative
+- Incidents tracés : amélioration majeure vs situation actuelle
+- Temps traitement incidents : réduction importante
 
-### Phase 3 : Optimisation & Analytics (Mois 7-12) - 
+### Phase 3 : Optimisation & Analytics (Mois 7-12)
 
 **Objectif :** Plans + offline robuste + analytics
 
@@ -337,10 +333,10 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 - ✅ Formation tous utilisateurs
 
 **Gains cumulés M12 :**
-- -80% temps rapports (2h → 25min)
-- 100% incidents tracés
-- -60% appels bureau
-- Satisfaction chefs > 4/5
+- Temps rapports : réduction drastique visée
+- Incidents tracés : traçabilité complète
+- Appels bureau : réduction substantielle
+- Satisfaction chefs : niveau élevé ciblé
 
 ---
 
@@ -362,7 +358,7 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 - ✅ Premières 100 photos centralisées
 - ✅ Feedback loops hebdomadaires
 
-**Critère succès :** Satisfaction pilotes > 3.5/5
+**Critère succès :** Satisfaction pilotes élevée, feedback positifs
 
 ### Mois 6 : Déploiement Général
 - ✅ Tous chefs équipés & formés (10-15)
@@ -371,7 +367,7 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 - ✅ Sync ERP fonctionnelle
 - ✅ Support hotline 1 mois
 
-**Critère succès :** Adoption > 80%, incidents tracés > 80%
+**Critère succès :** Adoption élevée, incidents tracés majoritairement
 
 ### Mois 9 : Optimisations
 - ✅ Mode offline robuste déployé
@@ -379,7 +375,7 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 - ✅ Analytics direction actifs
 - ✅ Tests charge réussis
 
-**Critère succès :** Uptime > 99%, satisfaction > 4/5
+**Critère succès :** Disponibilité élevée, satisfaction forte
 
 ### Mois 12 : Bilan & Industrialisation
 - ✅ Objectifs KPIs atteints
@@ -388,7 +384,7 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 - ✅ Roadmap évolutions futures
 - ✅ Bilan ROI
 
-**Critère succès :** ROI net positif, gains >  annualisés
+**Critère succès :** Gains mesurables confirmés, ROI positif démontré
 
 ---
 
@@ -415,8 +411,8 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 
 | Risque | Probabilité | Impact | Mitigation |
 |--------|-------------|--------|------------|
-| **Manque sponsor direction** | Faible | Critique | Business case solide (ROI 106%), quick wins visibles M3 |
-| **Budget dépassé** | Faible | Moyen | Contingence 10% incluse, phases indépendantes (arrêt possible) |
+| **Manque sponsor direction** | Faible | Critique | Business case solide, quick wins visibles M3 |
+| **Budget dépassé** | Faible | Moyen | Contingence prévue, phases indépendantes (arrêt possible) |
 | **Délais non tenus** | Moyenne | Moyen | Méthode Agile, sprints 2 semaines, ajustements continus |
 
 ---
@@ -438,7 +434,7 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 - ✅ **Quick wins visibles** : M3 déjà -50% temps rapports
 
 ### 3. Sponsoring Direction
-- ✅ **Business case solide** : ROI 106% sur 2 ans, payback 18 mois
+- ✅ **Business case solide** : Approche ROI méthodique, gains mesurés
 - ✅ **Gains non-financiers** : Satisfaction, image, attractivité RH
 - ✅ **Jalons clairs** : Go/No-Go tous les 3 mois
 - ✅ **Reporting** : KPIs mensuels, comité pilotage trimestriel
@@ -450,26 +446,25 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 ### ✅ RECOMMANDATION : GO
 
 **Pourquoi maintenant ?**
-- 🔴 **Coûts actuels insoutenables** : /an de pertes
+- 🔴 **Inefficacité actuelle importante** : Impact significatif constaté
 - 🔴 **Risques critiques** : Litiges, perte données, inefficacité
 - 🟢 **Technologie mature** : React Native, cloud éprouvés
-- 🟢 **ROI démontré** : Payback 18 mois, 106% ROI 2 ans
+- 🟢 **Approche ROI prudente** : Validation gains par pilote
 - 🟢 **Quick wins** : Gains visibles dès M3
 
 **Investissement :**
-- **Setup** :  sur 12 mois (phasing : 45K + 40K + 35K)
-- **Run** : /an
+- **Setup** : Phasing progressif sur 12 mois (3 phases)
+- **Run** : Coûts récurrents à définir précisément
 
 **Retours :**
-- **Gains annuels** : /an (récurrents)
-- **ROI net** : /an (après costs)
-- **Payback** : 18 mois
-- **ROI 2 ans** 
+- **Gains** : Substantiels attendus (mesure après pilote)
+- **ROI** : Démonstration progressive par phase
+- **Validation** : Gains réels avant généralisation
 
 **Décision recommandée :**
-👉 **Lancer Phase 1 immédiatement (, 3 mois)**
-- Risque limité (phasing)
-- Quick wins rapides
+👉 **Lancer Phase 1 pilote (3 mois)**
+- Risque limité (phasing progressif)
+- Quick wins mesurables
 - Go/No-Go M3 selon résultats pilotes
 
 ---
@@ -477,7 +472,7 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 ## 📞 PROCHAINES ÉTAPES
 
 ### Semaine 1-2 : Préparation
-- [ ] Validation budget  Phase 1
+- [ ] Validation budget Phase 1 (chiffrage détaillé requis)
 - [ ] Constitution équipe projet
 - [ ] Sélection 2-3 chefs pilotes
 - [ ] Choix cloud provider (AWS vs GCP)
@@ -496,12 +491,13 @@ L'application mobile chantier sera la source de données la plus riche de l'entr
 
 ### Mois 3 : Go/No-Go Phase 2
 - [ ] Bilan Phase 1 (KPIs, satisfaction, budget)
-- [ ] Décision Phase 2 (, M4-M6)
+- [ ] Décision Phase 2 (M4-M6, budget à valider)
 - [ ] Ajustements roadmap si nécessaire
 
 ---
 
 **📧 Contact Projet :** Équipe Transformation Digitale Duret Électricité
 **🎯 Objectif :** Digitaliser 100% gestion chantiers & remontée terrain
-**💰 Enjeu :** /an pertes → /an gains nets (ROI 106% sur 2 ans)
+**💰 Enjeu :** Impact significatif attendu (gains à mesurer par pilote)
 **⏱️ Horizon :** 12 mois (3 phases × 3-6 mois)
+**⚠️ Note :** Chiffrage financier précis nécessite étude de faisabilité détaillée

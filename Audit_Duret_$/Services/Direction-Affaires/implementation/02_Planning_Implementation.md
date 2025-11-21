@@ -126,7 +126,7 @@ Remplacer ERP Legacy par Odoo + créer bibliothèque templates
    - Création 5-10 devis réels
    - Tests templates
    - Tests workflows
-   - Mesure temps (objectif < 35 min vs 2h05 actuel)
+   - Mesure temps (réduction substantielle visée)
 
 ✅ Ajustements
    - Corrections bugs
@@ -136,14 +136,14 @@ Remplacer ERP Legacy par Odoo + créer bibliothèque templates
 
 **Livrables:**
 - Tests validation OK
-- Satisfaction pilotes > 4/5
-- Temps création devis < 35 min
+- Satisfaction pilotes : niveau satisfaisant
+- Temps création devis : réduction mesurable
 
 **🎯 JALON M2: Go/No-Go Phase 2**
 - ✅ Odoo opérationnel
 - ✅ 10 templates validés
-- ✅ Pilotes satisfaits > 4/5
-- ✅ Temps devis réduit > 60%
+- ✅ Pilotes satisfaits : retours positifs
+- ✅ Temps devis : réduction substantielle mesurée
 
 ---
 
@@ -175,7 +175,7 @@ Automatiser PPSPS + intégrer APIs fournisseurs
 **Livrables:**
 - Module PPSPS opérationnel
 - 5 templates PPSPS types
-- Génération < 30 min
+- Génération rapide automatisée
 
 #### Semaine 3: Formation & Tests
 ```
@@ -187,12 +187,12 @@ Automatiser PPSPS + intégrer APIs fournisseurs
 ✅ Tests terrain
    - Génération 3-5 PPSPS réels
    - Validation BE
-   - Mesure temps (objectif < 30 min vs 3h00 actuel)
+   - Mesure temps (réduction drastique visée)
 ```
 
 **Livrables:**
 - PPSPS générés automatiquement
-- Temps génération < 30 min
+- Temps génération : réduction significative mesurée
 - Validation BE fluide
 
 #### Semaine 4: Ajustements & Doc
@@ -273,7 +273,7 @@ Automatiser PPSPS + intégrer APIs fournisseurs
 - ✅ APIs fournisseurs actives
 - ✅ Reliquats tracés
 - ✅ 4 RA autonomes
-- ✅ Temps PPSPS < 30 min
+- ✅ Temps PPSPS : réduction significative confirmée
 
 ---
 
@@ -452,8 +452,8 @@ Visibilité direction + accès mobile
 - ✅ Mobile responsive déployé
 - ✅ 100% utilisateurs formés
 - ✅ Sage MDE coupé
-- ✅ ROI positif mesuré
-- ✅ Satisfaction > 4/5
+- ✅ Gains temps mesurables confirmés
+- ✅ Satisfaction : niveau élevé
 
 ---
 
@@ -463,14 +463,14 @@ Visibilité direction + accès mobile
 
 | KPI | Baseline Actuel | Objectif M2 | Objectif M4 | Objectif M6 |
 |-----|-----------------|-------------|-------------|-------------|
-| **Temps création devis** | 2h05 | < 35 min | < 32 min | < 31 min |
-| **Temps génération PPSPS** | 3h00 | - | < 30 min | < 27 min |
-| **Recherche template** | 30 min | < 2 min | < 2 min | < 1 min |
-| **Chargement écrans** | 30-40s | < 2s | < 2s | < 2s |
+| **Temps création devis** | À mesurer | Réduction significative | Amélioration continue | Optimisation finale |
+| **Temps génération PPSPS** | À mesurer | - | Réduction drastique | Amélioration continue |
+| **Recherche template** | À mesurer | Instantané | Instantané | Instantané |
+| **Chargement écrans** | À mesurer | Amélioration majeure | Optimisé | Optimisé |
 | **Taux adoption** | - | 100% pilotes | 100% RA | 100% tous |
-| **Satisfaction utilisateurs** | - | > 4/5 | > 4/5 | > 4.5/5 |
-| **Visibilité direction** | 3h | - | - | Temps réel |
-| **Reliquats suivis** | 0% | - | 100% | 100% |
+| **Satisfaction utilisateurs** | À mesurer | Satisfaisant | Élevé | Très élevé |
+| **Visibilité direction** | Compilation manuelle | - | - | Temps réel |
+| **Reliquats suivis** | Partiel | - | 100% | 100% |
 
 ### Métriques Hebdomadaires
 - Nombre devis créés
@@ -501,41 +501,48 @@ Visibilité direction + accès mobile
 
 ---
 
-## 💰 BUDGET DÉTAILLÉ
+## 💰 BUDGET
 
-### Phase 1 (M1-M2) - 25K€
-- Odoo Enterprise licences (4 × 2 mois): 2.4K€
-- Cloud hosting (2 mois): 1.6K€
-- Migration données & nettoyage: 5K€
-- Développement 10 templates: 8K€
-- Formation pilotes (2 RA × 2 jours): 3K€
-- Support M1-M2: 5K€
+⚠️ **Note importante** : Le budget dépend fortement de la solution technique retenue.
 
-### Phase 2 (M3-M4) - 20K€
-- Odoo licences (4 × 2 mois): 2.4K€
-- Cloud hosting (2 mois): 1.6K€
-- Module PPSPS automatique: 10K€
-- APIs fournisseurs (dev + intégration): 3K€
-- Formation générale (4 RA): 2K€
-- Support M3-M4: 1K€
+### Postes de coûts à prévoir
 
-### Phase 3 (M5-M6) - 15K€
-- Odoo licences (4 × 2 mois): 2.4K€
-- Cloud hosting (2 mois): 1.6K€
-- Dashboards custom: 5K€
-- Mobile responsive: 2K€
-- Documentation & vidéos: 2K€
-- Formation direction/BE: 1K€
-- Support M5-M6: 1K€
+**Phase 1 (M1-M2)**
+- Licences logicielles (période setup)
+- Cloud hosting (hébergement)
+- Migration données & nettoyage
+- Développement templates
+- Formation pilotes
+- Support initial
 
-**Total Setup 6 mois: 60K€**
+**Phase 2 (M3-M4)**
+- Licences (période déploiement)
+- Cloud hosting
+- Module PPSPS automatique
+- Intégrations APIs fournisseurs
+- Formation générale
+- Support continu
 
-### Coûts Récurrents Annuels - 13.8K€/an
-- Licences Odoo Enterprise (4 users): 3.6K€
-- Cloud hosting AWS/OVH: 4.8K€
-- APIs fournisseurs (Rexel, Sonepar): 1.8K€
-- Signature électronique: 1.2K€
-- Maintenance & Support: 2.4K€
+**Phase 3 (M5-M6)**
+- Licences (finalisation)
+- Cloud hosting
+- Dashboards personnalisés
+- Mobile responsive
+- Documentation complète
+- Formation direction/BE
+- Support
+
+💡 **Chiffrage précis nécessite** :
+- Sélection solution technique définitive
+- Évaluation périmètre exact
+- Benchmark éditeurs/intégrateurs
+
+### Coûts Récurrents Annuels
+Postes à budgétiser annuellement :
+- Licences logicielles
+- Cloud hosting
+- APIs fournisseurs
+- Maintenance & Support
 
 ---
 
@@ -558,14 +565,14 @@ Visibilité direction + accès mobile
 
 ### Go-Live Réussi si:
 1. ✅ **Performance**
-   - Temps devis < 35 min (vs 2h05)
-   - Temps PPSPS < 30 min (vs 3h00)
-   - Chargement < 2s (vs 30-40s)
+   - Temps devis : réduction substantielle mesurée
+   - Temps PPSPS : réduction drastique mesurée
+   - Chargement : amélioration majeure confirmée
 
 2. ✅ **Adoption**
-   - 100% RA utilisent Odoo quotidiennement
-   - Taux abandon Sage MDE: 100%
-   - Satisfaction > 4.5/5
+   - 100% RA utilisent solution quotidiennement
+   - Taux abandon ERP legacy : 100%
+   - Satisfaction : niveau élevé
 
 3. ✅ **Visibilité**
    - Direction consulte dashboards quotidiennement
@@ -573,13 +580,13 @@ Visibilité direction + accès mobile
    - Rapports automatiques fonctionnels
 
 4. ✅ **Automatisation**
-   - 100% devis via templates
-   - 100% PPSPS générés automatiquement
+   - Quasi-totalité devis via templates
+   - Majorité PPSPS générés automatiquement
    - 100% reliquats tracés
 
-5. ✅ **ROI**
-   - Gains mesurables dès M4
-   - Payback < 6 mois
+5. ✅ **Impact**
+   - Gains temps mesurables dès M4
+   - ROI à calculer avec données réelles
 
 ---
 

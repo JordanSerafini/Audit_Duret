@@ -121,7 +121,7 @@ Chantiers/
 | **Temps moyen rapport** | 2h (vs 10min possible) |
 | **Incidents non tracés/mois** | ~40 (sur ~80) |
 | **Appels bureau/jour** | ~30 (infos manquantes) |
-| **Coût annuel pertes** | Estimé ~ |
+| **Impact inefficacité** | Significatif (quantification requise) |
 
 ---
 
@@ -154,34 +154,34 @@ Chantiers/
 
 1. **Remontée info non structurée (Critique)**
    - WhatsApp, Oral, emails → aucune traçabilité
-   - 50% informations perdues
+   - Informations perdues fréquemment
    - Impossibilité retrouver historique décisions
-   - 💰 Coût : ~/an (litiges, reprises travaux)
+   - 💰 Impact : Litiges, reprises travaux, inefficacité
 
 2. **Aucun outil métier terrain (Critique)**
    - Chefs dépendants téléphone personnel
    - Pas d'accès infos chantier en mobilité
    - Appels bureau multiples pour infos basiques
-   - 💰 Coût : ~/an (temps perdu appels)
+   - 💰 Impact : Temps perdu significatif, interruptions fréquentes
 
 3. **Photos dispersées (Critique)**
    - Stockées téléphones individuels
    - Risque perte si téléphone endommagé
    - Difficultés retrouver photos spécifiques
    - Pas de structuration par chantier
-   - 💰 Coût : ~/an (temps recherche + pertes)
+   - 💰 Impact : Temps recherche important + risque perte données
 
 4. **Rapports intervention manuels (Important)**
    - 2h/rapport en moyenne
    - Hétérogénéité formats
    - Délai transmission
-   - 💰 Coût : ~/an (200 rapports × 2h × /h × 60% temps économisable)
+   - 💰 Impact : Temps important (200 rapports × 2h = 400h/mois)
 
 5. **Commandes matériel non tracées (Important)**
    - Pas de workflow ni validation
    - Difficultés suivi livraisons
    - Pas de vision consolidée dépenses
-   - 💰 Coût : ~/an (dépassements, oublis refacturation)
+   - 💰 Impact : Risque dépassements budgets, oublis refacturation
 
 ---
 
@@ -195,19 +195,19 @@ Chantiers/
 - ✅ Centralisation cloud automatique
 - ✅ Traçabilité totale
 - ✅ Workflow structurés
-- ✅ ROI rapide (5-6 mois)
+- ✅ ROI à démontrer par pilote
 
 **Composantes** :
-- **Phase 1 (M1-3)** : App mobile MVP + Photos + Rapports → 
-- **Phase 2 (M4-6)** : Workflow incidents + Commandes + Web dashboard → 
-- **Phase 3 (M7-12)** : Plans, Offline avancé, Analytics → 
-- **Run annuel** : Cloud + Licences + Maintenance → /an
+- **Phase 1 (M1-3)** : App mobile MVP + Photos + Rapports
+- **Phase 2 (M4-6)** : Workflow incidents + Commandes + Web dashboard
+- **Phase 3 (M7-12)** : Plans, Offline avancé, Analytics
+- **Run annuel** : Cloud + Licences + Maintenance (chiffrage requis)
 
-**Investissement total 12 mois** : 
-**Coûts run annuels** : /an
-**Gains annuels récurrents** : /an
-**ROI net** : /an après costs
-**Payback** : ~18 mois
+**Approche investissement** :
+- Chiffrage détaillé nécessite étude de faisabilité
+- Déploiement progressif sur 12 mois (3 phases)
+- Validation gains par pilote avant généralisation
+- ROI à démontrer avec mesures terrain réelles
 
 ---
 
@@ -216,24 +216,24 @@ Chantiers/
 1. ✅ **App mobile photos géolocalisées**
    - Upload automatique cloud
    - Organisation par chantier
-   - Gain  centralisation vs ~40%
+   - Gain : Centralisation complète vs dispersée actuellement
 
 2. ✅ **Templates rapports**
    - Préremplissage automatique
    - Génération PDF 1 clic
-   - Gain : -70% temps génération
+   - Gain : Réduction temps génération drastique
 
 3. ✅ **Messagerie chantier**
    - Remplace WhatsApp
    - Traçabilité complète
-   - Gain  remontées tracées vs ~20%
+   - Gain : Traçabilité vs aucune actuellement
 
 4. ✅ **Formulaires incidents**
    - Structuration remontées
    - Routing automatique
-   - Gain : -50% temps traitement
+   - Gain : Réduction temps traitement significative
 
-**ROI Quick Wins (3 mois)** : 600h économisées, traçabilité +80%
+**Gains Quick Wins (3 mois)** : Temps économisé important, traçabilité améliorée
 
 ---
 
@@ -280,22 +280,21 @@ Chantiers/
 ## 📈 KPIs de Succès
 
 ### Adoption
-- Taux utilisation app mobile : > 90%
-- Photos uploadées/jour : 500+ (vs ~100 actuellement)
-- Rapports digitaux/mois : > 200 (vs 0 actuellement)
-- Incidents tracés : > 95% (vs ~20% actuellement)
+- Taux utilisation app mobile : Niveau élevé visé
+- Photos uploadées/jour : Amélioration majeure vs situation actuelle
+- Rapports digitaux/mois : Tous rapports digitalisés
+- Incidents tracés : Traçabilité complète vs partielle actuellement
 
 ### Performance
-- Temps moyen génération rapport : < 10min (vs 2h)
-- Temps réponse incidents : < 2h (vs 1-2j)
-- Satisfaction chefs chantier : > 4/5 (vs 2.5/5)
-- Appels bureau/jour : -50% (vs 30 actuellement)
+- Temps moyen génération rapport : Réduction drastique (2h → très réduit)
+- Temps réponse incidents : Amélioration significative
+- Satisfaction chefs chantier : Niveau élevé ciblé
+- Appels bureau/jour : Réduction substantielle vs actuellement
 
-### Financier
-- ROI net annuel : 
-- Temps économisé : 1 800h/an
-- Réduction litiges : -40%
-- Amélioration satisfaction client : +30%
+### Impact
+- Temps économisé : Substantiel (quantification après pilote)
+- Réduction litiges : Amélioration grâce traçabilité
+- Amélioration satisfaction client : Attendue
 
 ---
 
@@ -318,8 +317,8 @@ Ce dossier documente:
 
 - État ACTUEL (pain points, WhatsApp/Oral)
 - Architecture CIBLE (App mobile + cloud + offline)
-- Plan d'implémentation détaillé (12 mois, )
-- ROI business case (/an net, payback 18 mois)
+- Plan d'implémentation détaillé (12 mois, phasing progressif)
+- Business case (gains substantiels attendus, ROI à démontrer par pilote)
 
 ---
 
@@ -343,4 +342,5 @@ Ce dossier documente:
 
 **🏢 Entreprise:** Duret Électricité
 **🎯 Objectif:** Digitaliser gestion chantiers & remontée terrain
-**💰 Enjeu:** /an de pertes → /an de gains nets (ROI positif)
+**💰 Enjeu:** Impact significatif attendu (gains à mesurer par pilote)
+**⚠️ Note:** Chiffrage financier précis nécessite étude de faisabilité détaillée

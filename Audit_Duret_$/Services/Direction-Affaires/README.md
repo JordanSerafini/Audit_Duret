@@ -19,7 +19,7 @@ Direction-Affaires/
 │           • Pain points détaillés
 │           • Besoins exprimés
 │           • Solutions proposées
-│           • ROI détaillé
+│           • Approche recommandée
 │
 ├── 📁 docs/                        ← Documents de synthèse
 │   ├── 01_PERSONAS_Pain_Points.md
@@ -82,7 +82,7 @@ Direction-Affaires/
 └── SYNTHESE_EXECUTIVE.md
     └── Synthèse exécutive pour direction
         • Business case
-        • ROI : Gains 230K€/an
+        • Gains attendus (à mesurer précisément)
         • Roadmap 6 mois
         • Risques et mitigation
 ```
@@ -119,11 +119,11 @@ Direction-Affaires/
 | **Affaires actives/mois** | 15-20 simultanées |
 | **Taille affaires** | 50K€ à 2.5M€ |
 | **Devis créés/mois** | 40-80 devis |
-| **Temps moyen devis** | 2h (vs 30min possible) |
+| **Temps moyen devis** | 2h (vs amélioration substantielle visée) |
 | **PPSPS manuels/mois** | ~15 (3h chacun) |
 | **Reliquats non tracés** | ~60% des affaires |
 | **Maj prix fournisseurs** | Manuelles (1 semaine/an) |
-| **Coût annuel pertes** | Estimé ~350K€ |
+| **Impact inefficacité** | Significatif (quantification requise) |
 
 ---
 
@@ -135,21 +135,21 @@ Direction-Affaires/
 - 🔴 Aucun template devis → ressaisie manuelle systématique
 - 🔴 PPSPS manuels → 3h de création par affaire
 - 🔴 Maj prix fournisseurs → manuelles, chronophages
-- 💰 **Perte temps : ~12h/semaine** (admin vs commercial)
+- 💰 **Perte temps : Significative** (admin vs commercial, quantification requise)
 
 ### Marie - Direction Générale (52 ans)
 - 🔴 Pas de visibilité temps réel affaires en cours
 - 🔴 Reporting manuel et tardif → décisions retardées
 - 🔴 Impossibilité accès KPIs depuis extérieur
 - 🔴 Pas d'historique structuré décisions affaires
-- 💰 **Manque visibilité → risques stratégiques**
+- 💰 **Impact : Manque visibilité → risques stratégiques**
 
 ### Thomas - Bureau d'Études (35 ans)
 - 🔴 Documents sécurité non centralisés → recherches longues
 - 🔴 PPSPS génériques réutilisés → risques conformité
 - 🔴 Pas de génération automatique → surcharge
 - 🔴 Difficultés accès historique chantiers similaires
-- 💰 **Temps perdu : ~40% capacité** (tâches à faible valeur)
+- 💰 **Temps perdu : Substantiel** (tâches à faible valeur, quantification requise)
 
 ---
 
@@ -160,35 +160,35 @@ Direction-Affaires/
    - Interface non ergonomique (années 2000)
    - Pas de mobilité (desktop only)
    - Accès distant catastrophique (VPN + Citrix instable)
-   - 💰 Coût : ~120K€/an (temps perdu × 4 responsables)
+   - 💰 Impact : Perte temps substantielle (quantification après chronométrage)
 
 2. **Aucun template ni bibliothèque devis (CRITIQUE)**
    - Ressaisie manuelle complète à chaque devis
    - Pas de réutilisation postes standards
    - Hétérogénéité entre responsables
    - Risques erreurs et oublis
-   - 💰 Coût : ~80K€/an (60 devis × 1.5h perdue × 50€/h × 12 mois)
+   - 💰 Impact : Temps perdu significatif sur processus critique
 
 3. **PPSPS manuels non automatisés (CRITIQUE)**
    - 3h de création par affaire (15-20/mois)
    - Copier-coller depuis anciens documents
    - Risques oublis clauses obligatoires
    - Pas de vérification automatique conformité
-   - 💰 Coût : ~45K€/an (18 PPSPS × 3h × 50€/h × 12 mois)
+   - 💰 Impact : Temps création important (quantification en cours)
 
 4. **Maj prix fournisseurs manuelles (IMPORTANT)**
    - Import CSV manuels depuis Rexel, Sonepar, etc.
    - 1 semaine/an pour 1 responsable
    - Risques erreurs saisie
    - Obsolescence rapide tarifs
-   - 💰 Coût : ~35K€/an (temps + erreurs pricing)
+   - 💰 Impact : Temps + risques erreurs pricing
 
 5. **Reliquats non tracés (IMPORTANT)**
    - 60% affaires avec reliquats non suivis
    - Perte de marge par oublis refacturation
    - Difficultés clôture affaires
    - Pas d'alertes automatiques
-   - 💰 Coût : ~70K€/an (oublis refacturation estimés)
+   - 💰 Impact : Oublis refacturation (quantification requise)
 
 ---
 
@@ -203,19 +203,18 @@ Direction-Affaires/
 - ✅ Génération automatique documents (PPSPS)
 - ✅ APIs fournisseurs (Rexel, Sonepar)
 - ✅ Workflow validation structurés
-- ✅ ROI ultra rapide (4 mois)
+- ✅ Gains mesurables attendus
 
 **Composantes** :
-- **Phase 1 (M1-2)** : Setup Odoo + Migration données + Templates → 25K€
-- **Phase 2 (M3-4)** : Automatisation PPSPS + APIs fournisseurs → 20K€
-- **Phase 3 (M5-6)** : Dashboards + Mobile + Formation complète → 15K€
-- **Run annuel** : Licences Odoo + Cloud + Support → 13.7K€/an
+- **Phase 1 (M1-2)** : Setup Odoo + Migration données + Templates
+- **Phase 2 (M3-4)** : Automatisation PPSPS + APIs fournisseurs
+- **Phase 3 (M5-6)** : Dashboards + Mobile + Formation complète
 
-**Investissement total 6 mois** : 60K€
-**Coûts run annuels** : 13.7K€/an
-**Gains annuels récurrents** : 230K€/an
-**ROI net** : 216K€/an après costs
-**Payback** : ~4 mois
+⚠️ **Chiffrage détaillé nécessite étude de faisabilité précise**
+- Budget à définir selon solution technique retenue et périmètre exact
+- Coûts run annuels à évaluer (licences + cloud + support)
+- Gains à mesurer après chronométrage terrain
+- ROI à calculer avec données réelles
 
 ---
 
@@ -224,24 +223,24 @@ Direction-Affaires/
 1. ✅ **Templates devis avec bibliothèque**
    - Postes standards réutilisables
    - Calculs automatiques
-   - Gain : -70% temps création devis
+   - Gain : Réduction temps création substantielle
 
 2. ✅ **Accès cloud rapide**
-   - Odoo cloud < 2s chargement
+   - Cloud < 2s chargement
    - Accès mobile iOS/Android
-   - Gain : -90% temps chargement vs ERP actuel
+   - Gain : Amélioration drastique vs ERP actuel
 
 3. ✅ **Workflow validation structuré**
    - Validation multi-niveaux automatique
    - Notifications temps réel
-   - Gain : -50% temps approbation
+   - Gain : Réduction temps approbation significative
 
 4. ✅ **Dashboards temps réel Direction**
    - KPIs affaires en cours
    - Rentabilité prévisionnelle
    - Gain : Visibilité instantanée vs rapports manuels
 
-**ROI Quick Wins (2 mois)** : 800h économisées, productivité +60%
+**Gains Quick Wins attendus (2 mois)** : Temps économisé significatif, amélioration productivité mesurable
 
 ---
 
@@ -294,22 +293,21 @@ Direction-Affaires/
 ## 📈 KPIs de Succès
 
 ### Adoption
-- Taux utilisation Odoo : > 95%
-- Devis avec templates : > 90% (vs 0% actuellement)
-- PPSPS auto générés : > 80% (vs 0% actuellement)
-- Accès mobile : > 70% responsables
+- Taux utilisation : Niveau élevé visé
+- Devis avec templates : Objectif quasi-totalité (vs 0% actuellement)
+- PPSPS auto générés : Objectif majorité (vs 0% actuellement)
+- Accès mobile : Déploiement tous responsables
 
 ### Performance
-- Temps moyen création devis : < 30min (vs 2h)
-- Temps chargement écran : < 2s (vs 30-40s)
-- Temps génération PPSPS : < 30min (vs 3h)
-- Satisfaction utilisateurs : > 4.5/5 (vs 2/5)
+- Temps moyen création devis : Réduction drastique visée (mesure baseline en cours)
+- Temps chargement écran : Amélioration majeure visée (mesure baseline en cours)
+- Temps génération PPSPS : Réduction significative visée (mesure baseline en cours)
+- Satisfaction utilisateurs : Niveau élevé ciblé (mesure baseline en cours)
 
-### Financier
-- ROI net annuel : 216K€
-- Temps économisé : 4 600h/an
-- Réduction erreurs devis : -60%
-- Amélioration taux transformation : +15%
+### Impact
+- Temps économisé : Substantiel attendu (quantification après mesures terrain)
+- Réduction erreurs devis : Amélioration attendue
+- Amélioration taux transformation : Objectif amélioration mesurable
 
 ---
 
@@ -332,8 +330,8 @@ Ce dossier documente:
 
 - État ACTUEL (ERP obsolète, processus manuels)
 - Architecture CIBLE (Odoo Enterprise Cloud + Templates + APIs)
-- Plan d'implémentation détaillé (6 mois, 60K€)
-- ROI business case (216K€/an net, payback 4 mois)
+- Plan d'implémentation détaillé (6 mois, phasing progressif)
+- Gains attendus substantiels (quantification après mesures terrain)
 
 ---
 
@@ -365,4 +363,4 @@ Ce dossier documente:
 
 **🏢 Entreprise:** Duret Électricité
 **🎯 Objectif:** Moderniser ERP & automatiser gestion affaires
-**💰 Enjeu:** 350K€/an de pertes → 216K€/an de gains nets (ROI 360%)
+**💰 Enjeu:** Impact significatif attendu (gains temps substantiels sur processus critiques)

@@ -46,7 +46,7 @@
 - Maj prix auto : 100% tarifs automatiques
 - Reliquats tracés : 100% vs aucun suivi actuel
 
-### Phase 3 : Dashboards & Mobile (Mois 5-6) - 15K€
+### Phase 3 : Dashboards & Mobile (Mois 5-6)
 
 **Objectif :** Dashboards + mobile + formation complète
 
@@ -191,8 +191,10 @@ L'intégration d'Odoo ouvre la porte à des fonctionnalités avancées décrites
 - 🟢 **Quick wins** : Gains visibles dès M2 (ERP rapide + templates)
 
 **Investissement :**
-- **Setup** : 60K€ sur 6 mois (phasing : 25K + 20K + 15K)
-- **Run** : 13.8K€/an
+⚠️ **Chiffrage détaillé nécessite étude de faisabilité précise**
+- Approche progressive par phases sur 6 mois
+- Budget à définir selon solution technique retenue
+- Coûts run annuels à évaluer (licences + cloud + support)
 
 **Retours Attendus :**
 - **Gains temps** : Réduction significative temps devis/PPSPS, amélioration vitesse ERP (chiffrage précis après mesures terrain)
@@ -201,8 +203,8 @@ L'intégration d'Odoo ouvre la porte à des fonctionnalités avancées décrites
 - **Satisfaction** : Objectif > 4.5/5 vs frustration élevée actuelle
 
 **Décision recommandée :**
-👉 **Lancer Phase 1 immédiatement (25K€, 2 mois)**
-- Risque limité (phasing, budget modéré, Go/No-Go M2)
+👉 **Lancer Phase 1 immédiatement (budget à définir, 2 mois)**
+- Risque limité (phasing progressif, Go/No-Go M2)
 - Quick wins rapides (ERP rapide, templates opérationnels)
 - Validation terrain par pilotes avant généralisation
 - Gains temps mesurables dès M2
