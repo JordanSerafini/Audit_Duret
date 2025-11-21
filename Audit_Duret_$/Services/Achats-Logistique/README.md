@@ -1,272 +1,314 @@
-# 📦 Achats & Logistique - Documentation
+# 🎯 TRANSFORMATION DIGITALE ACHATS-LOGISTIQUE
+## Synthèse Executive - État des Lieux et Opportunités
 
-> **🚨 NOUVEL AUDIT & PLAN D'ACTION (Nov 2025)**
-> 👉 **[LIRE LE RAPPORT D'AUDIT DÉTAILLÉ](../../AUDIT_SERVICE_ACHATS_LOGISTIQUE.md)**
-> *Diagnostic critique, Solution Odoo + RFID, Plan "Zéro Ressaisie"*
-
-> Analyse complète du service Achats-Logistique
-> Focus: État ACTUEL, pain points, personas, besoins
+> **Focus :** Analyse de l'état actuel | **Approche :** Pragmatique et progressive
 
 ---
 
-## 📂 Structure du Dossier
+## ⚠️ NOTE MÉTHODOLOGIQUE
 
+**Constats confirmés audit terrain** :
+- ✅ 9-11K références commandées/an (confirmé)
+- ✅ Processus 100% manuel (téléphone, papier, Excel) (confirmé)
+- ✅ Sage MDE "calamiteux" (verbatim utilisateurs)
+- ✅ Ressaisies multiples constatées (confirmé qualitativement)
+- ✅ Taux élevé commandes incomplètes constaté (confirmé qualitativement)
+- ✅ Chantiers bloqués fréquemment par manque matériel (confirmé)
+
+**Mesures en cours** (via [questionnaires terrain](../../Synthese/QUESTIONNAIRE_COLLECTE_DONNEES_ACHATS_LOGISTIQUE.md)) :
+- ⏱️ Taux réel succès commandes (analyse 50 dernières commandes en cours)
+- ⏱️ Délai moyen commande (chronométrage 20 dernières en cours)
+- ⏱️ Nombre exact ressaisies (traçage processus complet en cours)
+
+**Prochaine étape** : Intégration mesures réelles (semaines 2-3)
+
+---
+
+## 📋 PARTIE 1 : ÉTAT DES LIEUX (AUDIT)
+
+### 🔴 Constats Terrain
+
+**Problèmes Majeurs Identifiés :**
+- ❌ **Taux élevé de commandes incomplètes** (fait constaté)
+- ❌ **Processus 100% manuel** (téléphone, papier, Excel)
+- ❌ **Base de données chaotique** (Sage MDE "calamiteux", **même produit à 2 prix différents**)
+- ❌ **Aucune traçabilité** digitale
+- ❌ **Chantiers souvent bloqués** par manque de matériel
+
+**Volume d'Activité :**
+- 9-11K références commandées/an
+- Livraisons rapides (quand commande complète)
+- Multiples acteurs : Chefs chantier, Gestionnaires, Magasiniers, Resp. Affaires
+
+### 🔍 Causes Racines
+
+**1. Données éparpillées**
+- Sage MDE (serveur local vieillissant)
+- Excel x4 versions (OneDrive désynchronisé)
+- Email + Téléphone (pas de trace)
+- Bons papier manuscrits
+
+**2. Processus inefficace**
 ```
-Achats-Logistique/
-│
-├── 📄 README.md                    ← Vous êtes ici
-│
-├── 📁 plan/                        ← Plan d'action et audit
-│   └── Plan_Action_Achats_Logistique.md
-│       └── Document source complet
-│           • Résumé audit
-│           • Pain points détaillés
-│           • Besoins exprimés par persona
-│
-├── 📁 docs/                        ← Documents de synthèse
-│   ├── 01_PERSONAS_Pain_Points.md
-│   │   └── 5 personas détaillés (Marc, Sylvie, Julien, Éric, Christine)
-│   │       • Profils utilisateurs
-│   │       • Pain points par sévérité
-│   │       • Citations verbatim
-│   │
-│   ├── 02_ARCHITECTURE_Actuelle_Chaos.md
-│   │   └── État actuel du système (chaos)
-│   │       • Diagrammes ASCII
-│   │       • Processus détaillés
-│   │       • Les 10 impossibilités
-│   │
-│   ├── 03_JOURNEY_MAPS_Parcours_Utilisateurs.md
-│   │   └── Journey maps détaillées
-│   │       • Parcours Marc (commande)
-│   │       • Parcours Sylvie (traitement)
-│   │       • Parcours Éric (réception)
-│   │       • Parcours Julien (suivi coûts)
-│   │       • Timeline comparée
-│   │
-│   ├── 03_UML_DIAGRAMMES_VISUELS.md (Mermaid)
-│   │   └── Diagrammes en format Mermaid
-│   │       ⚠️ Remplacés par les .puml dans /uml/
-│   │
-│   └── 04_MATRICES_VISUELLES.md
-│       └── Matrices et tableaux visuels
-│           • Matrice sévérité × fréquence
-│           • Heat maps personas × pain points
-│           • Comparaisons avant/après
-│
-└── 📁 uml/                         ← Diagrammes UML (RECOMMANDÉ)
-    ├── README.md                   ← Guide d'utilisation
-    ├── index.html                  ← Visualisation web
-    │
-    ├── 📐 Fichiers PlantUML (.puml)
-    │   ├── 01_sequence_commande_actuelle.puml
-    │   ├── 02_activity_processus_commande.puml
-    │   ├── 03_usecase_acteurs.puml
-    │   ├── 04_state_cycle_commande.puml
-    │   ├── 05_component_architecture.puml
-    │   ├── 06_class_modele_objet.puml
-    │   ├── 07_deployment_infrastructure.puml
-    │   ├── 08_timing_timeline_commande.puml
-    │   ├── 09_mindmap_pain_points.puml
-    │   ├── 10_wbs_breakdown.puml
-    │   ├── 11_gantt_commande_comparaison.puml
-    │   └── 12_network_flux_donnees.puml
-    │
-    ├── 🖼️ Images PNG (pour impression)
-    │   └── 12 diagrammes en PNG haute résolution
-    │
-    ├── 🎨 Images SVG (pour slides - RECOMMANDÉ)
-    │   └── 12 diagrammes en SVG vectoriel
-    │
-    └── ⚙️ Outils
-        └── plantuml.jar (générateur)
+Marc (Chantier) → Téléphone → Sylvie (Bureau) → Téléphone → Fournisseur
+                                    ↓
+                        RE-SAISIES MULTIPLES (nombre à mesurer)
+                                    ↓
+                    Délais importants + Taux échec élevé (à mesurer)
 ```
 
----
+**3. Goulots d'étranglement**
+- Sylvie = hub central (dépendance totale)
+- 1 seul PC au dépôt
+- Pas d'intégration fournisseurs (APIs)
+- Pas de validation automatique
 
-## 🎯 Par Où Commencer ?
+### 👥 Impact Utilisateurs
 
-### Pour une Présentation Slides
-👉 **Allez dans `/uml/`**
-- Ouvrez `index.html` dans votre navigateur
-- Téléchargez les **SVG** pour vos slides
-- 12 diagrammes prêts à l'emploi
-
-### Pour Comprendre le Contexte
-👉 **Lisez dans l'ordre:**
-1. [`plan/Plan_Action_Achats_Logistique.md`](plan/Plan_Action_Achats_Logistique.md) - Source complète
-2. [`docs/01_PERSONAS_Pain_Points.md`](docs/01_PERSONAS_Pain_Points.md) - Qui souffre ?
-3. [`docs/02_ARCHITECTURE_Actuelle_Chaos.md`](docs/02_ARCHITECTURE_Actuelle_Chaos.md) - Pourquoi le chaos ?
-4. [`docs/04_MATRICES_VISUELLES.md`](docs/04_MATRICES_VISUELLES.md) - Métriques visuelles
-
-### Pour une Vue Visuelle Rapide
-👉 **Diagrammes recommandés:**
-1. **Mind Map** (`uml/09_mindmap_pain_points.puml`) - Vue d'ensemble
-2. **Sequence** (`uml/01_sequence_commande_actuelle.puml`) - Processus détaillé
-3. **Use Case** (`uml/03_usecase_acteurs.puml`) - Les acteurs
-4. **Gantt** (`uml/11_gantt_commande_comparaison.puml`) - Avant/Après
+| Persona | Pain Points |
+|---------|------------|
+| **Marc** (Chef Chantier) | Perd du temps en appels, chantier bloqué fréquemment |
+| **Sylvie** (Achats) | Débordée, ressaisies multiples (à compter), validation manuelle, pompier |
+| **Éric** (Dépôt) | Nomenclatures incohérentes, 1 seul PC, pas de scan |
+| **Julien** (Resp. Affaires) | Aucune visibilité temps réel sur ses chantiers |
+| **Christine** (Direction) | Pas de KPIs, pas de pilotage, pas de prévisions |
 
 ---
 
-## � Solution Cible (Odoo + RFID)
+## 🚀 PARTIE 2 : OPPORTUNITÉS IDENTIFIÉES
 
-**Diagrammes Clés :**
-1. **[Timeline Cible](uml/svg/13_sequence_commande_CIBLE.svg)** : Processus en 2 jours (vs 3)
-2. **[Workflow Cible](uml/svg/14_activity_processus_CIBLE.svg)** : Qui fait quoi (Swimlanes)
-3. **[Architecture Cible](uml/svg/15_component_architecture_CIBLE.svg)** : Odoo + App Mobile + RFID
-4. **[Mindmap Solutions](uml/svg/16_mindmap_SOLUTIONS.svg)** : Réponses aux Pain Points
+### 🎯 Vision Cible
 
----
+**Transformation en plateforme e-procurement intelligente**
+- 📱 **Digital-first** : Mobile app pour chantiers
+- ⚡ **Temps réel** : Notifications, tracking, dashboards
+- 🤖 **Intelligent** : Automatisation et optimisations
+- 🔗 **Intégré** : APIs fournisseurs (Rexel, Sonepar)
+- 📊 **Pilotable** : BI dashboards et KPIs temps réel
 
-## �📊 Situation Actuelle
+### 🏗️ Architecture Proposée
 
-### Faits Constatés
+#### **VOLET 1 : IT / LOGICIEL**
 
-| Aspect | État |
-|--------|------|
-| **Volume d'activité** | 9-11 000 références/an |
-| **Taux livraisons 24h** | 80% |
-| **Taux commandes complètes** | 50% seulement |
-| **Processus** | 100% manuel |
-| **ERP Sage MDE** | Jugé "calamiteux" |
-| **Base de données** | Chaotique (multiples références pour 1 produit) |
-| **Traçabilité** | Aucune |
-| **Intégration fournisseurs** | Pas d'EDI/API |
-| **Re-saisies par commande** | Multiples (papier → téléphone → email → Sage → Excel) |
-| **Visibilité stock** | Aucune en temps réel |
+**Applications Utilisateurs :**
+- 📱 **Mobile App** (Chefs Chantier)
+  - Commande simplifiée
+  - Scan codes-barres
+  - Tracking temps réel
+  - Mode offline
 
----
+- 💻 **Web App** (Gestionnaires/Responsables)
+  - Validation workflow digital
+  - Gestion catalogues unifiés
+  - Suivi fournisseurs
+  - Dashboards personnalisés
 
-## 👥 Personas Principaux
+- 🖥️ **Terminal Dépôt** (Magasiniers)
+  - Réception par scan
+  - Inventaires digitaux
+  - Mouvements stock temps réel
 
-1. **Marc** (Chef Chantier) - 45 ans
-   - 🔴 Pas de visibilité stock
-   - 🔴 Chantier bloqué fréquemment (50% commandes incomplètes)
-   - 🔴 Perd du temps en appels multiples
+**Backend Services (Microservices) :**
+- E-Procurement (commandes, panier, historique)
+- Workflow digital (Émetteur → Validateur → Gestionnaire)
+- Catalogue unifié (recherche, fiches complètes)
+- Stock & Mouvements (multi-dépôts)
+- 3-way Matching automatique (Cmd/BL/Facture)
+- Notifications intelligentes (SMS/Email/Push)
 
-2. **Sylvie** (Gestionnaire Achats) - 38 ans
-   - 🔴 6 re-saisies par commande
-   - 🔴 Hub central (goulot d'étranglement)
-   - 🔴 Débordée d'appels
+**Intégrations :**
+- 🔌 Sage MDE (transition douce, coexistence)
+- 🔌 **Sonepar/Rexel API** (Catalogues, commandes EDI, factures, tracking)
+- 🔌 Comptabilité (export écritures, analytique)
 
-3. **Julien** (Responsable Affaires) - 42 ans
-   - 🔴 Impossible de piloter coûts en temps réel
-   - 🔴 Extraction données très chronophage
-   - 🔴 Fiabilité données incertaine
+#### **VOLET 2 : BI / DATA**
 
-4. **Éric** (Magasinier) - 52 ans
-   - 🔴 80% temps admin vs logistique
-   - 🔴 Stock chaotique
-   - 🔴 Nomenclatures incohérentes
+**Pipeline Data :**
+```
+Sources → Data Lake → Data Warehouse → Analytics → Dashboards
+```
 
-5. **Christine** (Directrice Générale) - 48 ans
-   - 🔴 Pas de visibilité globale
-   - 🔴 Équipes épuisées
-   - 🔴 Pas de KPIs fiables
+**Opportunités d'optimisation :**
 
----
+1. **Prévision Besoins**
+   - Anticipe besoins par chantier
+   - Optimise achats groupés
 
-## 🔴 Top Pain Points Critiques
+2. **Détection Anomalies Prix**
+   - Alertes écarts tarifaires
+   - Évite surfacturation
 
-1. **Base de données chaotique**
-   - 12 références différentes pour 1 même produit
-   - Double tarification constatée
-   - Références obsolètes non gérées
+3. **Scoring Fournisseurs**
+   - Score multi-critères
+   - Choix optimal
 
-2. **Re-saisies multiples (6x minimum)**
-   - Papier → Téléphone → Email → Sage → Excel × 2
-   - Chronophage et source d'erreurs
+4. **Prédiction Ruptures Stock**
+   - Anticipation besoins
+   - Prévention proactive
 
-3. **Pas de visibilité temps réel**
-   - Stock, commandes, coûts
-   - Impossible de piloter efficacement
+5. **Classification Articles**
+   - Catégorisation automatique
+   - Nettoyage base + recherche sémantique
 
-4. **Taux d'erreur élevé (50%)**
-   - 1 commande sur 2 incomplète
-   - Chantiers bloqués régulièrement
-
-5. **Communication archaïque**
-   - 100% téléphone, pas d'EDI/API
-   - 15-20 appels/jour
-
-6. **Pas d'intégration fournisseurs**
-   - Rexel, Sonepar : pas d'API
-   - Tarifs pas à jour automatiquement
-   - Pas de suivi livraisons
-
-7. **Processus 100% manuel**
-   - Aucune automatisation
-   - Dépendance personnes
-   - Pas de workflow digital
-
-8. **Inventaires chronophages**
-   - Pas d'optimisation
-   - Stock immobilisé non géré
-
-9. **Retours non liés aux commandes**
-   - Reliquats non suivis
-   - Perte de traçabilité
-
-10. **Pas de gouvernance**
-    - Commandes directes chantiers non contrôlées
-    - Qui peut créer/modifier références pas défini
+**Dashboards BI (Temps Réel) :**
+- Dashboard Direction (vue globale, tendances)
+- Dashboard Achats (performance, fournisseurs)
+- Dashboard par Chantier (consommation, budget)
+- Reporting automatique quotidien/hebdo
 
 ---
 
-## 🎨 Utilisation des Diagrammes
+## 🧠 PARTIE 2 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
 
-### Pour PowerPoint / Google Slides
-1. Ouvrez `uml/index.html`
-2. Téléchargez les **SVG** (qualité vectorielle)
-3. Importez dans vos slides
-4. Redimensionnez sans perte de qualité
+En lien avec l'étude globale [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md), voici les applications spécifiques pour les Achats :
 
-### Pour Impression / PDF
-1. Utilisez les **PNG** haute résolution
-2. Disponibles dans `/uml/`
+### 1. Saisie Automatique des Factures (OCR)
+*   **Concept** : L'IA lit les PDFs (Rexel, Sonepar) et saisit les lignes automatiquement.
+*   **Gain** : Fin des erreurs de saisie, gain de temps massif pour Sylvie.
 
-### Pour Modifier les Diagrammes
-1. Éditez les fichiers `.puml` dans `/uml/`
-2. Régénérez avec PlantUML:
-   ```bash
-   cd uml
-   java -jar plantuml.jar -tsvg *.puml
-   ```
+### 2. Prédiction des Besoins (Procurement Prédictif)
+*   **Concept** : Analyse des chantiers à venir pour suggérer les commandes de câbles/matériel 2 semaines à l'avance.
+*   **Gain** : Réduction du stock dormant, fin des ruptures urgentes, optimisation des prix (commandes groupées).
 
 ---
 
-## 📅 Historique
+## 📅 PARTIE 3 : APPROCHE PROGRESSIVE
 
-- **2025-11-17** - Création initiale
-  - Audit complet service Achats-Logistique
-  - 5 personas détaillés
-  - 12 diagrammes UML
-  - Pain points identifiés
-  - Focus: État ACTUEL uniquement
+### 🔷 PHASE 1 : FONDATIONS
 
----
+**Objectif :** Système fonctionnel de base + données propres
 
-## ⚠️ Important
+**IT :**
+- Setup infra + Nettoyage Sage MDE (déduplication, archivage)
+- Catalogue unifié + Workflow digital v1 + Web app MVP
+- Mobile app v1 + **PILOTE 1-2 chantiers**
 
-**Ce dossier documente l'ÉTAT ACTUEL uniquement**
-- Pain points existants
-- Problèmes constatés
-- Besoins exprimés
-- Pas de recommandations/solutions chiffrées
-  (en attente de la synthèse globale IT)
+**Data :**
+- Data Lake + ETL quotidiens (Sage → Lake)
+- Data Warehouse v1 + Dashboards essentiels
 
----
-
-## 🔗 Liens Utiles
-
-- [Plan d'Action Source](plan/Plan_Action_Achats_Logistique.md)
-- [Personas & Pain Points](docs/01_PERSONAS_Pain_Points.md)
-- [Architecture Chaos](docs/02_ARCHITECTURE_Actuelle_Chaos.md)
-- [Diagrammes UML](uml/)
-- [Visualisation Web](uml/index.html)
+**Jalons :**
+- ✅ Pilote validé avec adoption utilisateurs
+- ✅ Temps saisie commande réduit
+- ✅ Dashboards utilisés quotidiennement
 
 ---
 
-**📧 Contact:** Direction Générale - Duret Électricité
-**🎯 Objectif:** Préparer la transformation digitale
-**⚠️ Enjeu:** Processus actuels inefficaces, besoin urgent de digitalisation
+### 🔶 PHASE 2 : AUTOMATISATION
+
+**Objectif :** Automatiser et optimiser
+
+**IT :**
+- APIs Rexel + Sonepar (catalogues, commandes EDI)
+- 3-way matching auto + Multi-dépôts + Notifications intelligentes
+- **GÉNÉRALISATION tous chantiers** + Features avancées
+
+**Data :**
+- Prévision besoins + Anomalies prix
+- Scoring fournisseurs + Ruptures stock
+- Analytics avancés + Recommandations actives
+
+**Jalons :**
+- ✅ Amélioration du taux de commandes complètes
+- ✅ Réduction des délais
+- ✅ Automatisations déployées
+
+---
+
+### 🔵 PHASE 3 : EXCELLENCE
+
+**Objectif :** Auto-pilotage et optimisation continue
+
+**IT :**
+- Auto-réapprovisionnement + Workflows configurables + Intégration compta
+- Features innovantes + Optimisation performance
+
+**Data :**
+- Classification automatique avancée
+- Optimisation multi-objectifs
+- Auto-actions + Amélioration continue
+
+**Jalons :**
+- ✅ Amélioration continue du taux de succès
+- ✅ Optimisation continue des délais
+- ✅ Automatisation avancée des processus
+
+---
+
+## 🎁 PARTIE 4 : BÉNÉFICES ATTENDUS
+
+### 📊 Objectifs d'Amélioration Visés
+
+| Indicateur | ÉTAT ACTUEL | OBJECTIF CIBLE |
+|------------|-------------|----------------|
+| **Taux succès commandes** | À mesurer précisément | Amélioration significative |
+| **Délai moyen** | À mesurer précisément | Réduction drastique |
+| **Re-saisies** | Multiples (nombre à compter) | Workflow automatisé |
+| **Traçabilité** | ❌ Aucune | ✅ Complète |
+| **Visibilité temps réel** | ❌ Aucune | ✅ Dashboards opérationnels |
+| **Chantiers bloqués** | Fréquemment | Occasionnellement |
+
+⚠️ **Note** : Les métriques précises nécessitent une collecte de données sur 2-3 mois
+
+### 💡 Bénéfices Utilisateurs
+
+**Marc (Chef Chantier) :**
+- Commande mobile simplifiée (vs multiples appels)
+- Chantier rarement bloqué
+- Tracking livraison temps réel
+
+**Sylvie (Achats) :**
+- Fini les appels incessants
+- Workflow digital automatisé
+- Fournisseurs suggérés automatiquement
+- Factures auto-validées (3-way matching)
+
+**Éric (Dépôt) :**
+- Réception par scan (vs papier)
+- Stock temps réel multi-dépôts
+- Nomenclature cohérente
+
+**Julien (Resp. Affaires) :**
+- Dashboards par chantier temps réel
+- Budget vs Réalisé automatique
+- Alertes proactives
+
+**Christine (Direction) :**
+- KPIs pilotage temps réel
+- Prévisions fiables
+- Optimisation achats groupés
+
+### 🛡️ Risques à Maîtriser
+
+| Risque | Mitigation |
+|--------|------------|
+| Adoption utilisateurs | Pilote intensif, formation, champions |
+| Migration données | Nettoyage préalable, coexistence Sage |
+| APIs fournisseurs | Fallback Excel, cache, retry |
+
+---
+
+## ✅ PROCHAINES ÉTAPES
+
+### 1️⃣ **VALIDATION DIRECTION**
+- Présenter ce plan
+- Valider approche progressive
+- Définir priorités
+
+### 2️⃣ **ÉTUDE DE FAISABILITÉ DÉTAILLÉE**
+- Chiffrage précis par phase
+- Sélection solutions techniques
+- Planning détaillé
+
+### 3️⃣ **PRÉPARATION PILOTE**
+- Identifier 1-2 chantiers pilotes
+- Former utilisateurs clés
+- Préparer support terrain
+
+---
+
+**📅 Document créé :** 2025-11-17
+**🎯 Projet :** Transformation Digitale Achats-Logistique
+**⏱️ Approche :** Progressive et pragmatique
+**📊 Objectif :** Améliorer drastiquement le taux de succès et réduire les délais
+**⚠️ Note :** Chiffrage financier à réaliser lors de l'étude de faisabilité détaillée
