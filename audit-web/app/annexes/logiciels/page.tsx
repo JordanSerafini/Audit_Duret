@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FileText, Database, Users, TrendingUp, Package, ShoppingCart, CheckCircle, BarChart3 } from 'lucide-react';
+import { FileText, Database, Users, TrendingUp, Package, ShoppingCart, CheckCircle, BarChart3, Smartphone, Euro, Zap, Shield } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 
 export default function LogicielsPage() {
@@ -16,45 +16,9 @@ export default function LogicielsPage() {
       status: 'Recommandé',
       statusColor: 'bg-green-500',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-    },
-    {
-      title: 'Lucca SIRH',
-      category: 'RH',
-      description: 'Gestion des ressources humaines et paie',
-      icon: Users,
-      color: 'from-pink-600 to-rose-600',
-      bgColor: 'bg-pink-50',
-      borderColor: 'border-pink-200',
-      href: '/annexes/logiciels/lucca-sirh',
-      status: 'Complémentaire',
-      statusColor: 'bg-blue-500',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
-    },
-    {
-      title: 'Monday CRM',
-      category: 'CRM',
-      description: 'Gestion de la relation client et pipeline commercial',
-      icon: TrendingUp,
-      color: 'from-purple-600 to-pink-600',
-      bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200',
-      href: '/annexes/logiciels/monday-crm',
-      status: 'Alternative',
-      statusColor: 'bg-orange-500',
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80',
-    },
-    {
-      title: 'Power BI',
-      category: 'BI & Analytics',
-      description: 'Business Intelligence et tableaux de bord décisionnels',
-      icon: BarChart3,
-      color: 'from-yellow-600 to-orange-600',
-      bgColor: 'bg-yellow-50',
-      borderColor: 'border-yellow-200',
-      href: '/annexes/logiciels/power-bi',
-      status: 'Recommandé',
-      statusColor: 'bg-green-500',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      price: '24,90€/user/mois',
+      coverage: '100%',
+      highlights: ['Field Service natif', 'Open Source', 'Modulaire']
     },
     {
       title: 'EBP Bâtiment',
@@ -68,11 +32,14 @@ export default function LogicielsPage() {
       status: 'Alternative',
       statusColor: 'bg-orange-500',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+      price: '~100€/user/mois',
+      coverage: '88%',
+      highlights: ['Spécialisé BTP', 'Interface Tarifeo', 'Support français']
     },
     {
       title: 'HubSpot CRM',
       category: 'CRM',
-      description: 'CRM et marketing automation tout-en-un',
+      description: 'CRM et service client avec UX exceptionnelle',
       icon: ShoppingCart,
       color: 'from-orange-600 to-red-600',
       bgColor: 'bg-orange-50',
@@ -81,6 +48,57 @@ export default function LogicielsPage() {
       status: 'Alternative',
       statusColor: 'bg-orange-500',
       image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80',
+      price: '0€ (Free) → 90€/user',
+      coverage: '30%',
+      highlights: ['UX excellente', 'Support 24/7', 'Version gratuite']
+    },
+    {
+      title: 'Lucca SIRH',
+      category: 'RH',
+      description: 'Gestion des ressources humaines et congés',
+      icon: Users,
+      color: 'from-pink-600 to-rose-600',
+      bgColor: 'bg-pink-50',
+      borderColor: 'border-pink-200',
+      href: '/annexes/logiciels/lucca-sirh',
+      status: 'Complémentaire',
+      statusColor: 'bg-blue-500',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+      price: '12,10€/user/mois',
+      coverage: 'SIRH uniquement',
+      highlights: ['Meilleur SIRH français', 'Support 97%', 'Interface moderne']
+    },
+    {
+      title: 'PayFit',
+      category: 'Paie & SIRH',
+      description: 'Solution de paie automatisée et gestion RH',
+      icon: Euro,
+      color: 'from-green-600 to-emerald-600',
+      bgColor: 'bg-green-50',
+      borderColor: 'border-green-200',
+      href: '/annexes/logiciels/payfit',
+      status: 'Complémentaire',
+      statusColor: 'bg-blue-500',
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80',
+      price: '17€/salarié/mois',
+      coverage: 'Paie + SIRH basique',
+      highlights: ['Paie automatisée', 'DSN', 'Interface simple']
+    },
+    {
+      title: 'Power BI',
+      category: 'BI & Analytics',
+      description: 'Business Intelligence et tableaux de bord décisionnels',
+      icon: BarChart3,
+      color: 'from-yellow-600 to-orange-600',
+      bgColor: 'bg-yellow-50',
+      borderColor: 'border-yellow-200',
+      href: '/annexes/logiciels/power-bi',
+      status: 'Recommandé',
+      statusColor: 'bg-green-500',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      price: '9,99€/user/mois',
+      coverage: 'BI uniquement',
+      highlights: ['Visualisations avancées', 'Intégration Microsoft', 'IA prédictive']
     },
   ];
 

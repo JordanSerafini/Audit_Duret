@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, LayoutDashboard, Smartphone, Package, ShoppingCart, Truck } from 'lucide-react';
+import { AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, LayoutDashboard, Smartphone, Package, ShoppingCart, Truck } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 
 export const metadata = {
@@ -310,30 +310,89 @@ export default function AchatsLogistiquePage() {
       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 mb-12">
         <div className="flex items-center gap-3 mb-6">
           <Zap className="w-8 h-8 text-blue-600" />
-          <h2 className="text-3xl font-bold text-blue-900">Opportunités Data & IA</h2>
+          <h2 className="text-3xl font-bold text-blue-900">5 Opportunités Data & Machine Learning</h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
             <h3 className="font-bold text-lg text-blue-900 mb-3 flex items-center gap-2">
               <FileText className="w-5 h-5 text-blue-500" />
-              Saisie Automatique (OCR)
+              1. Saisie Auto (OCR)
             </h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              L&apos;IA lit les PDFs (Rexel, Sonepar) et saisit les lignes automatiquement, éliminant les erreurs manuelles.
-              <br/><br/>
-              <strong>Gain :</strong> Fin des erreurs de saisie et gain de temps massif.
+            <p className="text-slate-600 text-sm leading-relaxed mb-2">
+              IA lit les PDFs Rexel/Sonepar et saisit automatiquement. Élimine les 6 ressaisies manuelles.
             </p>
+            <div className="text-xs bg-green-50 text-green-700 p-2 rounded">
+              <strong>Gain :</strong> Fin erreurs saisie, gain temps massif
+            </div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
             <h3 className="font-bold text-lg text-blue-900 mb-3 flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-blue-500" />
-              Prédiction des Besoins
+              2. Prévision Besoins
             </h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Analyse des chantiers à venir pour suggérer les commandes de câbles/matériel 2 semaines à l&apos;avance.
-              <br/><br/>
-              <strong>Gain :</strong> Fin des ruptures urgentes et optimisation des prix.
+            <p className="text-slate-600 text-sm leading-relaxed mb-2">
+              Modèle LSTM analyse chantiers à venir pour suggérer commandes câbles/matériel 2 semaines à l&apos;avance.
             </p>
+            <div className="text-xs bg-green-50 text-green-700 p-2 rounded">
+              <strong>Gain :</strong> Fin ruptures, achats groupés optimisés
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
+            <h3 className="font-bold text-lg text-blue-900 mb-3 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-blue-500" />
+              3. Détection Anomalies Prix
+            </h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-2">
+              Isolation Forest détecte écarts tarifaires anormaux (&gt;15%). Alertes temps réel.
+            </p>
+            <div className="text-xs bg-green-50 text-green-700 p-2 rounded">
+              <strong>Gain :</strong> Évite surfacturation, négo basée data
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
+            <h3 className="font-bold text-lg text-blue-900 mb-3 flex items-center gap-2">
+              <PieChart className="w-5 h-5 text-blue-500" />
+              4. Scoring Fournisseurs
+            </h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-2">
+              Random Forest score multi-critères (délai, qualité, prix). Recommandation auto du fournisseur optimal.
+            </p>
+            <div className="text-xs bg-green-50 text-green-700 p-2 rounded">
+              <strong>Gain :</strong> Décisions data-driven, -30% erreurs
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
+            <h3 className="font-bold text-lg text-blue-900 mb-3 flex items-center gap-2">
+              <Database className="w-5 h-5 text-blue-500" />
+              5. Prédiction Ruptures Stock
+            </h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-2">
+              Régression prédit probabilité rupture, date estimée, quantité à commander.
+            </p>
+            <div className="text-xs bg-green-50 text-green-700 p-2 rounded">
+              <strong>Gain :</strong> Prévention ruptures, stock optimisé
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100 bg-gradient-to-br from-purple-50 to-blue-50">
+            <h3 className="font-bold text-lg text-purple-900 mb-3">Bonus : NLP Classification</h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-2">
+              BERT catégorise automatiquement articles, détecte doublons, recherche sémantique.
+            </p>
+            <div className="text-xs bg-purple-50 text-purple-700 p-2 rounded">
+              <strong>Gain :</strong> Nettoyage base, recherche intelligente
+            </div>
+          </div>
+        </div>
+        <div className="mt-6 bg-blue-900 text-white p-5 rounded-xl">
+          <div className="flex items-start gap-3">
+            <Database className="w-6 h-6 flex-shrink-0 mt-1" />
+            <div>
+              <h4 className="font-bold mb-2">Architecture Data Complète</h4>
+              <p className="text-sm text-blue-100">
+                Data Lake (S3/MinIO) → Data Warehouse (PostgreSQL) → BI Dashboards (Metabase) + ML Models (TensorFlow/PyTorch).
+                Pipeline ETL quotidiens avec Airflow. Monitoring 24/7 avec Prometheus/Grafana.
+              </p>
+            </div>
           </div>
         </div>
       </div>
