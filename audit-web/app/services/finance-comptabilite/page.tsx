@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, Calculator, Landmark, Target, Shield, Sparkles, DollarSign, BarChart3, LayoutDashboard } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, Calculator, Landmark, Target, Shield, Sparkles, DollarSign, BarChart3 } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
