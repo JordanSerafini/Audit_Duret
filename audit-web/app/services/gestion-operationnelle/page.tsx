@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { BarChart3, AlertTriangle, CheckCircle, User, FileText, TrendingUp, Clock, Database, Zap, ArrowRight, LayoutDashboard, Users, Calendar, Package, ClipboardList } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
-import UMLGallery from '@/components/UMLGallery';
+import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
 
 export default function GestionOperationnellePage() {
   const personas = [
@@ -291,17 +291,7 @@ export default function GestionOperationnellePage() {
       </div>
 
       {/* Diagrammes UML */}
-      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
-        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-          <LayoutDashboard className="w-8 h-8 text-cyan-600" />
-          Diagrammes UML - Visualisation & Téléchargement
-        </h2>
-        <p className="text-slate-600 mb-6">
-          Explorez tous les diagrammes UML de ce service : architecture, processus, cas d'usage, et plus encore.
-          Visualisez-les directement ou téléchargez-les individuellement.
-        </p>
-        <UMLGallery serviceKey="gestion-operationnelle" />
-      </div>
+      <CollapsibleUMLSection serviceKey="gestion-operationnelle" serviceLabel="Gestion Opérationnelle" />
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">
