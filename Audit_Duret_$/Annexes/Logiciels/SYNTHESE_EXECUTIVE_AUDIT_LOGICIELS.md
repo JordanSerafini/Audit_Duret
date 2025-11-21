@@ -49,7 +49,7 @@ L'étude de faisabilité devra intégrer l'ensemble des postes de coûts :
 
 ### Risque 1 : Dépendance Hébergement (Vendor Lock-in)
 L'hébergement sur Odoo.sh crée une dépendance.
-**Mesure d'atténuation** : Privilégier un hébergement "On-premise" ou sur serveur dédié (type OVH) pour garder la maîtrise des données et réduire les coûts récurrents (-12,6 k€ sur 3 ans).
+**Mesure d'atténuation** : Privilégier un hébergement "On-premise" ou sur serveur dédié (type OVH) pour garder la maîtrise des données et optimiser les coûts récurrents.
 
 ### Risque 2 : Complexité de la Paie
 L'intégration entre Odoo et PayFit peut être complexe (imports/exports manuels).
