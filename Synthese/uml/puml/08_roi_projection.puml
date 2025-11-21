@@ -205,7 +205,7 @@ note left
 end note
 
 ' === ANALYSE SENSIBILITE ===
-note bottom
+note
   **ANALYSE SENSIBILITE ROI:**
 
   ✅ **Scenario OPTIMISTE (+20% gains):**
@@ -235,7 +235,7 @@ note bottom
 end note
 
 ' === METRIQUES CLES ===
-note top
+note
   **METRIQUES FINANCIERES CLES:**
 
   💰 **Investissement Total:** 223K€ (median)

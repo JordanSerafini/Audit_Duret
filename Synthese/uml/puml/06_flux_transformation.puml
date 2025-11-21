@@ -1,5 +1,18 @@
 @startuml Flux_Transformation_Digitale
 
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.1
+' Type Diagramme: Flux Activité
+' Description: Flux de décision et d'exécution de la transformation digitale
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
 title Flux de Transformation Digitale - De l'Audit à l'Exécution
 
 |Direction|
@@ -92,7 +105,7 @@ if (Go/No-Go Transformation ?) then (✅ GO)
 else (❌ NO-GO)
   :❌ **Projet Abandonné**\nMaintien status quo;
 
-  note right #FFCCCC
+  note right COLOR_ETAT_ERROR
     **Conséquences No-Go**:
     • Pertes actuelles continuent
     • Aggravation avec croissance
@@ -104,5 +117,7 @@ else (❌ NO-GO)
 
   stop
 endif
+
+LEGEND_STANDARD()
 
 @enduml

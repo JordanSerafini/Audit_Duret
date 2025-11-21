@@ -41,7 +41,7 @@ BUDGET is "10-15K€"
 RISQUES is "FAIBLE"
 
 @2
-JALONS is "🔴 GO/NO-GO #1"
+JALONS is "GO/NO-GO #1"
 BUDGET is "30-45K€"
 RISQUES is "MOYEN"
 
@@ -79,7 +79,7 @@ BUDGET is "75-110K€"
 RISQUES is "MOYEN"
 
 @6
-JALONS is "🔴 GO/NO-GO #2"
+JALONS is "GO/NO-GO #2"
 BUDGET is "78-122K€"
 RISQUES is "ELEVE"
 
@@ -113,7 +113,7 @@ BUDGET is "110-155K€"
 RISQUES is "MOYEN"
 
 @9
-JALONS is "🔴 GO/NO-GO #3"
+JALONS is "GO/NO-GO #3"
 BUDGET is "125-175K€"
 RISQUES is "ELEVE"
 
@@ -147,7 +147,7 @@ BUDGET is "155-225K€"
 RISQUES is "MOYEN"
 
 @12
-JALONS is "🔴 GO/NO-GO #4"
+JALONS is "GO/NO-GO #4"
 BUDGET is "166-251K€"
 RISQUES is "ELEVE"
 
@@ -182,7 +182,7 @@ BUDGET is "185-275K€"
 RISQUES is "FAIBLE"
 
 @15
-JALONS is "🔴 GO/NO-GO #5"
+JALONS is "GO/NO-GO #5"
 BUDGET is "195-280K€"
 RISQUES is "MOYEN"
 
@@ -246,7 +246,7 @@ highlight 6 to 12 COLOR_IMPORTANT : Vague 2 (6 mois)
 highlight 12 to 18 COLOR_SUCCESS : Vague 3 (6 mois)
 
 ' === METRIQUES JALONS ===
-note bottom
+note bottom of JALONS
   **STATISTIQUES JALONS GO/NO-GO:**
 
   🔴 **5 Jalons decisionnels critiques**

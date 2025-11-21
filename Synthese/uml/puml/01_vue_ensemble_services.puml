@@ -1,21 +1,34 @@
 @startuml Vue_Ensemble_Services
 
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.1
+' Type Diagramme: Vue d'ensemble
+' Description: Vue d'ensemble de l'état des 8 services audités avec problèmes majeurs
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
 title Vue d'Ensemble - État des 8 Services Audités
 
 skinparam componentStyle rectangle
 
-package "SERVICES CRITIQUES" #FFCCCC {
-  rectangle "Achats-Logistique\n\nTaux echec commandes\nProcessus 100% manuel" as Achats #FF6B6B
-  rectangle "Direction-Affaires\n\nERP obsolete\nTemps perdu important" as DirAff #FF6B6B
-  rectangle "Ressources-Humaines\n\nSystemes isoles\nRessaisies multiples" as RH #FF6B6B
-  rectangle "Service-Client\n\nPost-it (tracabilite 0%)\nClients perdus" as ServiceClient #FF6B6B
-  rectangle "Gestion-Opérationnelle\n\nExcel non connectes\nRemontee info tardive" as GestOp #FF6B6B
-  rectangle "Albertville\n\nSituations tres longues\nBudgets invisibles" as Albert #FF6B6B
+package "SERVICES CRITIQUES" COLOR_ETAT_ERROR {
+  rectangle "Achats-Logistique\n\nTaux echec commandes\nProcessus 100% manuel" as Achats COLOR_PROBLEME
+  rectangle "Direction-Affaires\n\nERP obsolete\nTemps perdu important" as DirAff COLOR_PROBLEME
+  rectangle "Ressources-Humaines\n\nSystemes isoles\nRessaisies multiples" as RH COLOR_PROBLEME
+  rectangle "Service-Client\n\nPost-it (tracabilite 0%)\nClients perdus" as ServiceClient COLOR_PROBLEME
+  rectangle "Gestion-Opérationnelle\n\nExcel non connectes\nRemontee info tardive" as GestOp COLOR_PROBLEME
+  rectangle "Albertville\n\nSituations tres longues\nBudgets invisibles" as Albert COLOR_PROBLEME
 }
 
-package "SERVICES IMPORTANTS" #FFE4CC {
-  rectangle "Maintenance-Technique\n\nCERFA papier\nPas d'app mobile" as Maint #FFA500
-  rectangle "Chantiers\n\nAucun outil métier\nRapports 2h" as Chantiers #FFA500
+package "SERVICES IMPORTANTS" COLOR_ETAT_WARNING {
+  rectangle "Maintenance-Technique\n\nCERFA papier\nPas d'app mobile" as Maint COLOR_ATTENTION
+  rectangle "Chantiers\n\nAucun outil métier\nRapports 2h" as Chantiers COLOR_ATTENTION
 }
 
 note right of Achats
@@ -43,5 +56,7 @@ note bottom of RH
   Croissance impossible (systemes ne scalent pas)
   Securite donnees (RGPD non garanti)
 end note
+
+LEGEND_STANDARD()
 
 @enduml

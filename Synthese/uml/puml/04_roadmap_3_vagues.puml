@@ -1,5 +1,18 @@
 @startuml Roadmap_Transformation_3_Vagues
 
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.1
+' Type Diagramme: Roadmap WBS
+' Description: Roadmap de transformation digitale sur 18 mois en 3 vagues
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
 title Roadmap Transformation Digitale - 18 Mois (3 Phases)
 
 @startwbs
@@ -8,41 +21,41 @@ title Roadmap Transformation Digitale - 18 Mois (3 Phases)
 
 ** 🌊 PHASE 1\nSOCLE & QUICK WINS\n**M1-M4**
 
-*** 🟢 #1 CRM Simple\n(Odoo CRM)\nM1-M2
+*** 🟢 #1 CRM Simple\n(Odoo CRM)\nM1-M2 COLOR_SUCCESS
 **** Fin des Post-it
 **** Traçabilité Clients
 **** Adoption immédiate
 
-*** 🟢 #2 Chat Pro\n(Odoo Discuss)\nM1-M2
+*** 🟢 #2 Chat Pro\n(Odoo Discuss)\nM1-M2 COLOR_SUCCESS
 **** Fin WhatsApp perso
 **** Historique centralisé
 **** Photos sécurisées
 
-*** 🟢 #3 Devis Rapides\n(Odoo Ventes)\nM2-M4
+*** 🟢 #3 Devis Rapides\n(Odoo Ventes)\nM2-M4 COLOR_SUCCESS
 **** Fin SAGE Devis
 **** Bibliothèque Templates
 **** Devis en 30min
 
 ** 🌊 PHASE 2\nCŒUR DU RÉACTEUR\n**M5-M10**
 
-*** 🔴 #4 App Mobile\n(Odoo Field Service)\nM5-M8
+*** 🔴 #4 App Mobile\n(Odoo Field Service)\nM5-M8 COLOR_CRITIQUE
 **** Rapports digitaux
 **** Signature client
 **** Mode Offline
 
-*** 🔴 #5 Stocks & Achats\n(Odoo Stock)\nM8-M10
+*** 🔴 #5 Stocks & Achats\n(Odoo Stock)\nM8-M10 COLOR_CRITIQUE
 **** Scan RFID
 **** Réception mobile
 **** Fin ruptures
 
 ** 🌊 PHASE 3\nADMIN & RH\n**M11-M15**
 
-*** 🟠 #6 SIRH & Paie\n(PayFit + Odoo)\nM11-M13
+*** 🟠 #6 SIRH & Paie\n(PayFit + Odoo)\nM11-M13 COLOR_IMPORTANT
 **** Paie automatisée
 **** Portail salariés
 **** Fin Excel RH
 
-*** 🟠 #7 Dashboards\n(Odoo BI)\nM13-M15
+*** 🟠 #7 Dashboards\n(Odoo BI)\nM13-M15 COLOR_IMPORTANT
 **** Pilotage Direction
 **** KPIs temps réel
 **** Rentabilité chantiers
@@ -51,14 +64,6 @@ title Roadmap Transformation Digitale - 18 Mois (3 Phases)
 
 @endwbs
 
-legend bottom
-  **NOUVELLE APPROCHE SÉQUENCÉE**
-
-  🌊 **Phase 1 (M1-M4)** : SOCLE → On remplace le papier sans bloquer le métier.
-  🌊 **Phase 2 (M5-M10)** : PRODUCTION → Le gros morceau (Terrain + Stocks).
-  🌊 **Phase 3 (M11-M15)** : ADMIN → On optimise le back-office une fois que le terrain tourne.
-
-  🎯 **Objectif** : Éviter l'indigestion digitale et garantir l'adoption.
-end legend
+LEGEND_STANDARD()
 
 @enduml
