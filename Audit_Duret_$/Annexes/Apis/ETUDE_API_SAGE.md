@@ -410,16 +410,15 @@ class AccountMove(models.Model):
 
 ## Coût d'Intégration
 
-| Poste | Estimation |
-|-------|-----------|
-| **Développement module Odoo** | 15-20 jours (15K€) |
-| **Tests & validation** | 5 jours (5K€) |
-| **Formation & support** | 2 jours (2K€) |
-| **Migration SAGE Cloud** (si nécessaire) | Variable (0-10K€) |
+| Poste | Description |
+|-------|-------------|
+| **Développement module Odoo** | Intégration API + mapping données |
+| **Tests & validation** | Phase de recette |
+| **Formation & support** | Formation équipe comptable |
+| **Migration SAGE Cloud** (si nécessaire) | Variable selon version actuelle |
 | **Licence SAGE avec API** | À vérifier (possiblement inclus) |
-| **TOTAL** | **22-32K€** (one-time) |
 
-**Coût récurrent**: 0€ (si licence SAGE actuelle suffit)
+**Coût** : À chiffrer selon périmètre exact et devis intégrateur
 
 ## Impact Opérationnel
 
