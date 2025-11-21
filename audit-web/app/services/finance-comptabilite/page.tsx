@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, Calculator, Landmark, Target, Shield, Sparkles, DollarSign, BarChart3 } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 
 export const metadata = {
   title: 'Finance & Comptabilité - Audit IT Duret',
@@ -194,10 +195,13 @@ export default function FinanceComptabilitePage() {
             </div>
           </div>
 
-          <PDFDownloadButton
-            pdfPath="/pdfs/service-finance-comptabilite.pdf"
-            fileName="Service_Finance_Comptabilite.pdf"
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-finance-comptabilite.pdf"
+              fileName="Service_Finance_Comptabilite.pdf"
+            />
+            <UMLDownloadButton serviceKey="finance-comptabilite" />
+          </div>
         </div>
       </div>
 

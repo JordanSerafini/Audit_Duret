@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { AlertTriangle, CheckCircle, User, FileText, MapPin, Clock, Smartphone, Database, Zap, ArrowRight, LayoutDashboard, Users, Calendar } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 
 export default function MaintenanceTechniquePage() {
   const personas = [
@@ -75,10 +76,13 @@ export default function MaintenanceTechniquePage() {
             </div>
           </div>
 
-          <PDFDownloadButton 
-            pdfPath="/pdfs/service-maintenance-technique.pdf" 
-            fileName="Service_Maintenance_Technique.pdf" 
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-maintenance-technique.pdf"
+              fileName="Service_Maintenance_Technique.pdf"
+            />
+            <UMLDownloadButton serviceKey="maintenance-technique" />
+          </div>
         </div>
       </div>
 

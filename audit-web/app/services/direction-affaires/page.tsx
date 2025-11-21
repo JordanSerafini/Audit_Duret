@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Briefcase, AlertTriangle, CheckCircle, User, FileText, TrendingUp, Clock, Database, Zap, ArrowRight, LayoutDashboard, Users, Calendar, Smartphone, Globe } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 
 export default function DirectionAffairesPage() {
   const personas = [
@@ -88,10 +89,13 @@ export default function DirectionAffairesPage() {
             </div>
           </div>
 
-          <PDFDownloadButton 
-            pdfPath="/pdfs/service-direction-affaires.pdf" 
-            fileName="Service_Direction_Affaires.pdf" 
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-direction-affaires.pdf"
+              fileName="Service_Direction_Affaires.pdf"
+            />
+            <UMLDownloadButton serviceKey="direction-affaires" />
+          </div>
         </div>
       </div>
 

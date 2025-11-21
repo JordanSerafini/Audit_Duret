@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, LayoutDashboard, Smartphone, RefreshCw } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 
 export const metadata = {
   title: 'Ressources Humaines - Audit IT Duret',
@@ -90,10 +91,13 @@ export default function RessourcesHumainesPage() {
             </div>
           </div>
 
-          <PDFDownloadButton 
-            pdfPath="/pdfs/service-ressources-humaines.pdf" 
-            fileName="Service_Ressources_Humaines.pdf" 
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-ressources-humaines.pdf"
+              fileName="Service_Ressources_Humaines.pdf"
+            />
+            <UMLDownloadButton serviceKey="ressources-humaines" />
+          </div>
         </div>
       </div>
 
