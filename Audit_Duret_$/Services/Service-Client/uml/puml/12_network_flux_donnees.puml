@@ -2,70 +2,65 @@
 
 title Flux de Données - Architecture Cible Service Client
 
-nwdiag {
-  network "Internet" {
-    address = "Public"
+!define AZURE_CLOUD #E8F5E8
+!define SAAS_CLOUD #E3F2FD
+!define ONPREM #FFF3E0
+!define EXTERNAL #F3E5F5
 
-    client [description = "Client Web\n(Portail)"];
-    mobile [description = "App Mobile\nTechnicien"];
-  }
-
-  network "HubSpot Cloud (EU)" {
-    address = "SaaS - RGPD Compliant"
-
-    hubspot [description = "HubSpot CRM\n+ Ticketing\n+ Workflows"];
-    analytics [description = "HubSpot\nAnalytics"];
-    chatbot [description = "Chatbot IA"];
-  }
-
-  network "Azure Cloud" {
-    address = "Cloud Services"
-
-    api [description = "Backend API\nNode.js"];
-    ml [description = "ML Models\n(Python)"];
-    dwh [description = "Data Warehouse\nAzure SQL"];
-    powerbi [description = "Power BI\nService"];
-  }
-
-  network "On-Premise Duret" {
-    address = "192.168.1.0/24"
-
-    sage [description = "SAGE\nBase clients"];
-    erp [description = "MDE ERP\nChantiers"];
-    tel [description = "Standard\nTéléphonique"];
-  }
-
-  network "Tier Services" {
-    address = "External APIs"
-
-    cti [description = "CTI\nRingCentral"];
-    sms [description = "SMS Gateway\nTwilio"];
-    email [description = "SMTP\nSendGrid"];
-  }
-
-  client -- hubspot [label = "HTTPS\nREST API"];
-  mobile -- api [label = "HTTPS\nGraphQL"];
-  api -- hubspot [label = "REST API"];
-
-  hubspot -- analytics [label = "Data flow"];
-  hubspot -- chatbot [label = "AI requests"];
-
-  hubspot -- dwh [label = "ETL\nQuotidien"];
-  dwh -- ml [label = "Training\ndata"];
-  ml -- hubspot [label = "Prédictions"];
-  dwh -- powerbi [label = "DirectQuery"];
-
-  cti -- tel [label = "SIP Trunk"];
-  cti -- hubspot [label = "Webhooks\nremontée fiche"];
-
-  hubspot -- sage [label = "ETL Sync\nBidirectionnelle"];
-  hubspot -- erp [label = "Sync\nchantiers"];
-
-  hubspot -- sms [label = "Notifications\nclients"];
-  hubspot -- email [label = "Confirmations\nautomatiques"];
+' Architecture Layers
+package "Internet" <<Cloud>> #FFFFFF {
+  component [Client Web\n(Portail)] as client
+  component [App Mobile\nTechnicien] as mobile
 }
 
-note as N1
+package "SaaS Services" <<Cloud>> SAAS_CLOUD {
+  component [HubSpot CRM\n+ Ticketing\n+ Workflows] as hubspot
+  component [HubSpot\nAnalytics] as analytics
+  component [Chatbot IA] as chatbot
+}
+
+package "Azure Cloud" <<Cloud>> AZURE_CLOUD {
+  component [Backend API\nNode.js] as api
+  component [ML Models\n(Python)] as ml
+  component [Data Warehouse\nAzure SQL] as dwh
+  component [Power BI\nService] as powerbi
+}
+
+package "On-Premise Duret" <<Infrastructure>> ONPREM {
+  database "SAGE\nBase clients" as sage
+  component [MDE ERP\nChantiers] as erp
+  component [Standard\nTéléphonique] as tel
+}
+
+package "External APIs" <<External>> EXTERNAL {
+  component [CTI\nRingCentral] as cti
+  component [SMS Gateway\nTwilio] as sms
+  component [SMTP\nSendGrid] as email
+}
+
+' Connections
+client -down-> hubspot : HTTPS\nREST API
+mobile -down-> api : HTTPS\nGraphQL
+api -left-> hubspot : REST API
+
+hubspot -down-> analytics : Data flow
+hubspot -down-> chatbot : AI requests
+
+hubspot -down-> dwh : ETL\nQuotidien
+dwh -right-> ml : Training\ndata
+ml -up-> hubspot : Prédictions
+dwh -right-> powerbi : DirectQuery
+
+cti -down-> tel : SIP Trunk
+cti -up-> hubspot : Webhooks\nremontée fiche
+
+hubspot -down-> sage : ETL Sync\nBidirectionnelle
+hubspot -down-> erp : Sync\nchantiers
+
+hubspot -right-> sms : Notifications\nclients
+hubspot -right-> email : Confirmations\nautomatiques
+
+note right of hubspot
   **Flux Principaux:**
   1. Client portail → HubSpot (RDV en ligne)
   2. Appel entrant → CTI → HubSpot (remontée fiche)
@@ -74,7 +69,7 @@ note as N1
   5. HubSpot ↔ SAGE (sync clients bidirectionnelle)
 end note
 
-note as N2
+note bottom of sage
   **Sécurité:**
   - TLS 1.3 (transit)
   - AES-256 (repos)

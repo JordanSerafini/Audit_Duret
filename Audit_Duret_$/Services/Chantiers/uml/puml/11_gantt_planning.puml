@@ -1,91 +1,94 @@
-@startgantt Gantt_Planning_Implementation
+@startuml Gantt_Planning_Implementation
+
+@startgantt
 
 title Planning Implementation 12 Mois Digitalisation Chantiers
 
 printscale monthly
 
-project starts 2025-11-17
+Project starts 2025-11-17
 
 -- Phase 1 : Quick Wins (M1-M3) --
 
-[App Mobile V1] as [AppV1] lasts 60 days and is colored in LightBlue
+[App Mobile V1] lasts 60 days and is colored in LightBlue
 [AppV1] starts 2025-11-17
 
-[Design UI/UX] as [Design] lasts 30 days and is colored in Yellow and starts at [AppV1]'s start
-[Dev Mobile iOS+Android] as [DevMobile] lasts 45 days and is colored in LightGreen and starts at [Design]'s end
+[Design UI/UX] lasts 30 days and is colored in Yellow and 
+[Dev Mobile iOS+Android] lasts 45 days and is colored in LightGreen and 
 
-[Module Photos] as [Photos] lasts 60 days and is colored in Orange
+[Module Photos] lasts 60 days and is colored in Orange
 [Photos] starts 2025-11-17
 
-[Upload Auto] as [PhotoUpload] lasts 30 days and is colored in Yellow and starts at [Photos]'s start
-[Galerie + Compression] as [PhotoGal] lasts 30 days and is colored in Yellow and starts at [PhotoUpload]'s end
+[Upload Auto] lasts 30 days and is colored in Yellow and 
+[Galerie + Compression] lasts 30 days and is colored in Yellow and 
 
-[Module Rapports] as [Rapports] lasts 90 days and is colored in Pink
+[Module Rapports] lasts 90 days and is colored in Pink
 [Rapports] starts 2025-12-17
 
-[Templates PDF] as [RapportTempl] lasts 30 days and is colored in LightPink and starts at [Rapports]'s start
-[Generation Auto] as [RapportGen] lasts 30 days and is colored in LightPink and starts at [RapportTempl]'s end
-[Signature Elec] as [RapportSign] lasts 30 days and is colored in LightGreen and starts at [RapportGen]'s end
+[Templates PDF] lasts 30 days and is colored in LightPink and 
+[Generation Auto] lasts 30 days and is colored in LightPink and 
+[Signature Elec] lasts 30 days and is colored in LightGreen and 
 
 -- Phase 2 : Structurant (M4-M8) --
 
-[Backend Cloud] as [Backend] lasts 90 days and is colored in LightBlue
+[Backend Cloud] lasts 90 days and is colored in LightBlue
 [Backend] starts at [AppV1]'s end
 
-[API REST + Auth] as [BackendAPI] lasts 30 days and is colored in Cyan and starts at [Backend]'s start
-[Base Donnees] as [BackendDB] lasts 30 days and is colored in Cyan and starts at [BackendAPI]'s end
-[Azure Functions] as [BackendFunc] lasts 30 days and is colored in LightGreen and starts at [BackendDB]'s end
+[API REST + Auth] lasts 30 days and is colored in Cyan and 
+[Base Donnees] lasts 30 days and is colored in Cyan and 
+[Azure Functions] lasts 30 days and is colored in LightGreen and 
 
-[Module Incidents] as [Incidents] lasts 60 days and is colored in Purple
+[Module Incidents] lasts 60 days and is colored in Purple
 [Incidents] starts at [Backend]'s start
 
-[Formulaires + Workflow] as [IncForm] lasts 45 days and is colored in Violet and starts at [Incidents]'s start
-[Notifications] as [IncNotif] lasts 30 days and is colored in LightGreen and starts at [IncForm]'s end
+[Formulaires + Workflow] lasts 45 days and is colored in Violet and 
+[Notifications] lasts 30 days and is colored in LightGreen and 
 
-[Module Plans] as [Plans] lasts 60 days and is colored in Green
+[Module Plans] lasts 60 days and is colored in Green
 [Plans] starts at [Incidents]'s end
 
-[Visualisation] as [PlansVisu] lasts 30 days and is colored in LightGreen and starts at [Plans]'s start
-[Annotations + Sync] as [PlansAnnot] lasts 30 days and is colored in DarkGreen and starts at [PlansVisu]'s end
+[Visualisation] lasts 30 days and is colored in LightGreen and 
+[Annotations + Sync] lasts 30 days and is colored in DarkGreen and 
 
-[Module Commandes] as [Commandes] lasts 60 days and is colored in Brown
+[Module Commandes] lasts 60 days and is colored in Brown
 [Commandes] starts at [Plans]'s start
 
-[Catalogue] as [CmdCat] lasts 30 days and is colored in BurlyWood and starts at [Commandes]'s start
-[Workflow + Suivi] as [CmdWork] lasts 30 days and is colored in BurlyWood and starts at [CmdCat]'s end
+[Catalogue] lasts 30 days and is colored in BurlyWood and 
+[Workflow + Suivi] lasts 30 days and is colored in BurlyWood and 
 
 -- Phase 3 : Optimisation (M9-M12) --
 
-[Mode Hors Ligne] as [Offline] lasts 60 days and is colored in Gold
+[Mode Hors Ligne] lasts 60 days and is colored in Gold
 [Offline] starts at [BackendFunc]'s end
 
-[SQLite Local] as [OffSQL] lasts 30 days and is colored in Yellow and starts at [Offline]'s start
-[Sync Engine] as [OffSync] lasts 30 days and is colored in Yellow and starts at [OffSQL]'s end
+[SQLite Local] lasts 30 days and is colored in Yellow and 
+[Sync Engine] lasts 30 days and is colored in Yellow and 
 
-[Dashboard Chantier] as [Dashboard] lasts 60 days and is colored in Orange
+[Dashboard Chantier] lasts 60 days and is colored in Orange
 [Dashboard] starts at [Offline]'s start
 
-[Budget Temps Reel] as [DashBudget] lasts 30 days and is colored in Yellow and starts at [Dashboard]'s start
-[Planning + KPIs] as [DashKPI] lasts 30 days and is colored in Yellow and starts at [DashBudget]'s end
+[Budget Temps Reel] lasts 30 days and is colored in Yellow and 
+[Planning + KPIs] lasts 30 days and is colored in Yellow and 
 
-[Formation Deploiement] as [Formation] lasts 60 days and is colored in LightGreen
+[Formation Deploiement] lasts 60 days and is colored in LightGreen
 [Formation] starts at [Dashboard]'s start
 
-[Formation Chefs] as [FormChef] lasts 30 days and is colored in Green and starts at [Formation]'s start
-[Support + GO-LIVE] as [FormGO] lasts 30 days and is colored in DarkGreen and starts at [FormChef]'s end
+[Formation Chefs] lasts 30 days and is colored in Green and 
+[Support + GO-LIVE] lasts 30 days and is colored in DarkGreen and 
 
 -- Jalons GO/NO-GO --
 
-[GO/NO-GO Phase 1] as [Jalon1] happens at 2025-11-24
+[GO/NO-GO Phase 1] happens at 2025-11-24
 [Jalon1] is colored in Red
 
-[Bilan Phase 1] as [Jalon2] happens at [RapportSign]'s end
+[Bilan Phase 1] happens at 
 [Jalon2] is colored in Red
 
-[Bilan Phase 2] as [Jalon3] happens at [CmdWork]'s end
+[Bilan Phase 2] happens at 
 [Jalon3] is colored in Red
 
-[GO-LIVE Final] as [Jalon4] happens at [FormGO]'s end
+[GO-LIVE Final] happens at 
 [Jalon4] is colored in Red
 
 @endgantt
+@enduml

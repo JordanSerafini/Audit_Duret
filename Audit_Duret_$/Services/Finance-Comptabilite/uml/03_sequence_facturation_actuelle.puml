@@ -1,0 +1,143 @@
+@startuml Sequence_Facturation_Actuelle
+
+title Processus Facturation ACTUEL (Sage)
+
+actor "👷 Chef\nChantier" as Chef
+participant "📧 Email/\nTéléphone" as Email
+participant "👩‍💼 Gestionnaire\nAdministrative" as Gestionnaire
+participant "📊 Excel\nDevis" as Excel
+participant "👩‍💼 Comptable" as Comptable
+participant "📒 Sage\nComptabilité" as Sage
+participant "📧 Email\nClient" as EmailClient
+actor "👤 Client" as Client
+
+== 🔴 PHASE 1 : Collecte Informations (1-2 jours) ==
+
+Chef -> Email : ☎️ "Chantier terminé\npour M. Dupont"
+activate Email #FFE4E1
+
+Email -> Gestionnaire : 📞 Transmission\ninformation
+deactivate Email
+activate Gestionnaire #FFE4B5
+
+note right of Gestionnaire
+  😕 Ennuyé
+  Doit retrouver :
+  - Devis initial
+  - Temps passés
+  - Matériaux utilisés
+end note
+
+Gestionnaire -> Chef : ☎️ "Combien d'heures ?\nQuels matériaux ?"
+activate Chef #FFE4E1
+Chef --> Gestionnaire : 📝 "Environ 40h...\nJe dois vérifier"
+deactivate Chef
+
+note over Gestionnaire
+  ⏰ ATTENTE 1-2 JOURS
+  (Chef chantier débordé)
+end note
+
+Chef -> Gestionnaire : ☎️ "45h finalement +\nmatériel selon devis\n+ 2 disjoncteurs extra"
+activate Chef #FFE4E1
+deactivate Chef
+
+== 🔴 PHASE 2 : Vérification & Calcul (30-45 min) ==
+
+Gestionnaire -> Excel : 🔍 Recherche\ndevis initial
+activate Excel #E6F3FF
+Excel --> Gestionnaire : 📄 Devis trouvé
+deactivate Excel
+
+note right of Gestionnaire
+  🤔 Concentrée
+  Calcul mental :
+  - 45h × 65€/h
+  - Matériaux devis
+  - + 2 disjoncteurs
+  - + Marge
+  - + TVA 20%
+end note
+
+Gestionnaire -> Gestionnaire : 🧮 Calcul manuel\nExcel/Calculatrice
+
+== 🔴 PHASE 3 : Demande Facturation (Email) ==
+
+Gestionnaire -> Comptable : 📧 Email :\n"Facture à établir\nChantier Dupont\nMontant estimé : 3 580€ TTC\nVoir détails ci-joint"
+deactivate Gestionnaire
+activate Comptable #FFE4B5
+
+note right of Comptable
+  😐 Neutre
+  Encore une facture
+  à ressaisir...
+end note
+
+== 🔴 PHASE 4 : RE-SAISIE Sage (15-20 min) ==
+
+Comptable -> Sage : 🔍 Recherche\nclient "Dupont"
+activate Sage #FFE4E1
+Sage --> Comptable : ✅ Client trouvé
+
+Comptable -> Sage : ⌨️ RE-SAISIE COMPLÈTE :\n- Ligne 1 : MO 45h × 65€\n- Ligne 2 : Matériaux (liste)\n- Ligne 3 : Disjoncteurs × 2\n- Calcul TVA 20%
+
+note right of Comptable
+  😓 Fatigué
+  Risques :
+  - Erreur calcul
+  - Erreur saisie prix
+  - Oubli ligne
+end note
+
+Comptable -> Sage : 💾 Enregistrement\nécriture comptable
+
+Sage --> Comptable : ✅ Facture n°F2025-0847
+
+== 🔴 PHASE 5 : Édition & Envoi (5-10 min) ==
+
+Comptable -> Sage : 🖨️ Génération PDF\nfacture
+Sage --> Comptable : 📄 Facture.pdf
+
+Comptable -> EmailClient : 📧 Envoi email client\n+ Facture.pdf jointe
+deactivate Sage
+deactivate Comptable
+activate EmailClient #B8E6B8
+
+EmailClient -> Client : 📩 "Voici votre facture"
+deactivate EmailClient
+
+note right of Client
+  😐 Neutre
+  Reçoit facture
+  5-10 jours après
+  fin travaux
+end note
+
+== ⏱️ BILAN TEMPS TOTAL ==
+
+note over Chef, Client
+  **TEMPS TOTAL : 5-10 JOURS**
+
+  ⏰ Collecte infos : 1-2 jours (attente chef chantier)
+  ⏰ Vérification : 30-45 min
+  ⏰ Re-saisie Sage : 15-20 min
+  ⏰ Édition/envoi : 5-10 min
+
+  **TOTAL ACTIF : ~87 minutes**
+  **TOTAL DÉLAI : 5-10 JOURS**
+
+  ❌ **PAIN POINTS :**
+  - Délai client inacceptable (5-10j)
+  - Ressaisie complète (risque erreurs)
+  - Dépendance disponibilité chef chantier
+  - Multiples outils (téléphone, email, Excel, Sage)
+  - Comptable mobilisé sur saisie vs analyse
+
+  😓 **SATISFACTION :**
+  - Chef chantier : 3/10 (appels multiples)
+  - Gestionnaire : 4/10 (collecte pénible)
+  - Comptable : 3/10 (ressaisie répétitive)
+  - Client : 5/10 (délai long)
+end note
+
+@enduml

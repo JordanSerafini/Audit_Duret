@@ -1,3 +1,4 @@
+@startuml
 @startgantt Gantt_Comparaison_Actuel_Cible
 
 title Gantt - Comparaison Processus DEVIS ACTUEL vs CIBLE
@@ -47,3 +48,4 @@ note bottom
 end note
 
 @endgantt
+@enduml

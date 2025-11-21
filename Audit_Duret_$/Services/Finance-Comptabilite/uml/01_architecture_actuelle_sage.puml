@@ -1,0 +1,153 @@
+@startuml Architecture_Actuelle_Sage
+
+title Architecture Actuelle - Finance et Comptabilité (Sage)
+
+!define LEGACY_COLOR #FFE4E1
+!define MANUAL_COLOR #FFE4B5
+!define EXCEL_COLOR #E6F3FF
+!define PROBLEM_COLOR #FF6B6B
+
+skinparam component {
+  BackgroundColor<<legacy>> LEGACY_COLOR
+  BackgroundColor<<manual>> MANUAL_COLOR
+  BackgroundColor<<excel>> EXCEL_COLOR
+  BackgroundColor<<problem>> PROBLEM_COLOR
+}
+
+skinparam note {
+  BackgroundColor #FFF9E6
+  BorderColor #FFB84D
+}
+
+package "Utilisateurs" {
+  actor "👷 Chef\nChantier" as Chef
+  actor "👨‍💼 Resp.\nAffaires" as Resp
+  actor "👨‍💼 Commercial" as Commercial
+  actor "👩‍💼 Comptable" as Comptable
+  actor "👩‍💼 Direction" as Direction
+}
+
+package "Opérations Terrain" <<problem>> {
+  [📝 Papier/Oral\nValidation Travaux] as Papier
+  [📋 Excel\nChantiers] as ExcelChantiers
+}
+
+package "CRM / Commercial" <<manual>> {
+  [💼 CRM\nCommercial] as CRM
+  [📊 Excel\nDevis] as ExcelDevis
+}
+
+package "SAGE COMPTABILITÉ" <<legacy>> {
+  [📒 Sage\nComptabilité] as Sage
+  database "Base\nSage Locale" as DBSage
+}
+
+package "Gestion Manuelle" <<excel>> {
+  [📊 Excel\nTrésorerie] as ExcelTreso
+  [📊 Excel\nAnalytique] as ExcelAnalytique
+  [📧 Email/Téléphone\nCommunication] as Email
+}
+
+package "Banque" {
+  [🏦 Relevés\nBancaires] as Banque
+}
+
+' Relations Utilisateurs → Systèmes
+Chef --> Papier : "Validation\norale/papier"
+Chef --> Email : "Appels\nincessants"
+
+Resp --> ExcelChantiers : "Suivi\nmanuel"
+Resp --> Email : "Demandes\ncompta"
+
+Commercial --> CRM : "Création\nclients"
+Commercial --> ExcelDevis : "Devis\nmanuel"
+
+Comptable --> Sage : "Saisie\nmanuelle"
+Comptable --> ExcelTreso : "Trésorerie\nmanuelle"
+Comptable --> Banque : "Export\nmanuel"
+Comptable --> Email : "Communication\nconstante"
+
+Direction --> ExcelTreso : "Consultation\nmanuelle"
+Direction --> ExcelAnalytique : "Analyse\nmanuelle"
+
+' Relations Systèmes (manuelles)
+Papier ..> Email : "❌ Collecte\nmanuelle"
+Email ..> Comptable : "❌ Transmission\norale"
+Comptable ..> Sage : "❌ RESSAISIE\ncomplète"
+
+CRM ..> Email : "❌ Email\nnouveau client"
+Email ..> Comptable : "❌ Info client"
+Comptable ..> Sage : "❌ RE-SAISIE\nclient"
+
+ExcelDevis ..> Sage : "❌ Ressaisie\nfacture"
+
+Sage --> DBSage : "Stockage\nlocal"
+
+Banque ..> Comptable : "❌ Téléchargement\nmanuel"
+Comptable ..> Sage : "❌ Pointage\nmanuel 8h/mois"
+
+Sage ..> ExcelTreso : "❌ Export\nmanuel"
+Sage ..> ExcelAnalytique : "❌ Extraction\nmanuelle"
+
+' Notes explicatives
+note right of Papier
+  🔴 **Problème #1**
+  - Aucune traçabilité digitale
+  - Collecte infos lente (1-2 jours)
+  - Risque d'oublis/erreurs
+end note
+
+note right of CRM
+  🔴 **Problème #2**
+  - Double saisie clients
+  - Délai création Sage (1-2j)
+  - Risque erreurs (adresses)
+end note
+
+note right of Sage
+  🔴 **Problème #3**
+  - Silo isolé (aucune intégration)
+  - Comptabilité analytique manuelle
+  - Pas de Bank Sync
+  - Pas d'OCR factures
+end note
+
+note right of ExcelTreso
+  🔴 **Problème #4**
+  - Prévisions manuelles
+  - Données périmées
+  - Risque erreurs formules
+  - Versions multiples
+end note
+
+note bottom of Comptable
+  **Impact Comptable**
+  - 70% temps sur saisie/pointage
+  - 30% seulement sur analyse
+  - Sentiment "pompier" permanent
+  - Charge mentale élevée
+end note
+
+note bottom of Direction
+  **Impact Direction**
+  - Aucune visibilité temps réel
+  - Décisions basées sur données
+    périmées (1-2 mois)
+  - Pilotage "à l'aveugle"
+end note
+
+note as N1
+  **ARCHITECTURE ACTUELLE : CONSTATS**
+
+  ❌ **5 silos isolés** (aucune intégration native)
+  ❌ **Ressaisies multiples** (clients, factures, écritures)
+  ❌ **Délais importants** (5-10 jours facturation)
+  ❌ **Risques d'erreurs élevés** (saisies manuelles)
+  ❌ **Coût inefficacité** : ~61h/mois = 29k€/an
+
+  ⏱️ **Délai rentabilité chantier** : 1-2 mois
+  ⏱️ **Temps rapprochement bancaire** : 8h/mois
+  ⏱️ **Délai facturation** : 5-10 jours
+end note
+
+@enduml

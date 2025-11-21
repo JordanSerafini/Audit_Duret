@@ -1,80 +1,61 @@
-@startgantt Gantt_Comparaison_Avant_Apres
+@startuml Gantt_Comparaison_Avant_Apres
 
 title Comparaison Temps - Avant/Après (Prise de RDV)
 
-printscale daily
+@startgantt
+printscale daily zoom 2
 
 caption Système ACTUEL vs CIBLE - Prise de RDV Client
 
-project starts 2025-11-17
+Project starts 2025-11-17
 
-[SYSTÈME ACTUEL - 48 HEURES] as [Actuel] lasts 48 hours
-[Actuel] is colored in Red
+-- Système ACTUEL (48 heures) --
+[Client appelle] lasts 5 minutes
+[Client appelle] is colored in Coral
 
-[Client appelle] as [A1] lasts 5 minutes
-[A1] is colored in LightCoral
-[A1] starts at [Actuel]'s start
+[Claire cherche infos] lasts 10 minutes
+[Claire cherche infos] is colored in Coral
 
-[Claire cherche infos] as [A2] lasts 10 minutes
-[A2] is colored in LightCoral
-[A2] starts at [A1]'s end
+[Propose créneau incertain] lasts 5 minutes
+[Propose créneau incertain] is colored in Orange
 
-[Propose créneau incertain] as [A3] lasts 5 minutes
-[A3] is colored in Orange
-[A3] starts at [A2]'s end
+[Mail Gaëtan] lasts 5 minutes
+[Mail Gaëtan] is colored in Coral
 
-[Mail Gaëtan] as [A4] lasts 5 minutes
-[A4] is colored in LightCoral
-[A4] starts at [A3]'s end
+[ATTENTE Gaëtan] lasts 7 hours
+[ATTENTE Gaëtan] is colored in Red
 
-[ATTENTE Gaëtan] as [A5] lasts 7 hours
-[A5] is colored in Red
-[A5] starts at [A4]'s end
+[Gaëtan répond] lasts 2 minutes
+[Gaëtan répond] is colored in Coral
 
-[Gaëtan répond] as [A6] lasts 2 minutes
-[A6] is colored in LightCoral
-[A6] starts at [A5]'s end
+[Appel client (répondeur)] lasts 5 minutes
+[Appel client (répondeur)] is colored in Orange
 
-[Appel client (répondeur)] as [A7] lasts 5 minutes
-[A7] is colored in Orange
-[A7] starts at [A6]'s end
+[Mail client] lasts 10 minutes
+[Mail client] is colored in Coral
 
-[Mail client] as [A8] lasts 10 minutes
-[A8] is colored in LightCoral
-[A8] starts at [A7]'s end
+[ATTENTE client] lasts 15 hours
+[ATTENTE client] is colored in Red
 
-[ATTENTE client] as [A9] lasts 15 hours
-[A9] is colored in Red
-[A9] starts at [A8]'s end
+[Client répond OK] lasts 2 minutes
+[Client répond OK] is colored in Coral
 
-[Client répond OK] as [A10] lasts 2 minutes
-[A10] is colored in LightCoral
-[A10] starts at [A9]'s end
+[Saisie Excel + Outlook] lasts 5 minutes
+[Saisie Excel + Outlook] is colored in Coral
 
-[Saisie Excel + Outlook] as [A11] lasts 5 minutes
-[A11] is colored in LightCoral
-[A11] starts at [A10]'s end
+[Mails confirmation] lasts 10 minutes
+[Mails confirmation] is colored in Coral
 
-[Mails confirmation] as [A12] lasts 10 minutes
-[A12] is colored in LightCoral
-[A12] starts at [A11]'s end
+-- Système CIBLE (2 minutes) --
+[Client sur portail] lasts 1 minute
+[Client sur portail] is colored in GreenYellow
+[Client sur portail] starts 2025-11-17
 
--- VERSUS --
+[Choisit créneau dispo] lasts 30 seconds
+[Choisit créneau dispo] is colored in GreenYellow
 
-[SYSTÈME CIBLE - 2 MINUTES] as [Cible] lasts 2 minutes
-[Cible] is colored in LightGreen
-[Cible] starts at [Actuel]'s start
-
-[Client sur portail] as [C1] lasts 1 minute
-[C1] is colored in LightGreen
-[C1] starts at [Cible]'s start
-
-[Choisit créneau dispo] as [C2] lasts 30 seconds
-[C2] is colored in LightGreen
-[C2] starts at [C1]'s end
-
-[Confirmation automatique] as [C3] lasts 30 seconds
-[C3] is colored in LightGreen
-[C3] starts at [C2]'s end
+[Confirmation automatique] lasts 30 seconds
+[Confirmation automatique] is colored in GreenYellow
 
 @endgantt
+@enduml

@@ -1,0 +1,220 @@
+@startuml Architecture_Cible_Odoo
+
+title Architecture Cible - Finance et Comptabilité (Odoo)
+
+!define APP_COLOR #B8E6B8
+!define DATA_COLOR #FFE4B5
+!define INTEGRATION_COLOR #E6D4FF
+!define BI_COLOR #E8F4F8
+
+skinparam component {
+  BackgroundColor<<app>> APP_COLOR
+  BackgroundColor<<data>> DATA_COLOR
+  BackgroundColor<<integration>> INTEGRATION_COLOR
+  BackgroundColor<<bi>> BI_COLOR
+}
+
+package "Utilisateurs" {
+  actor "👷 Chef\nChantier" as Chef
+  actor "👨‍💼 Resp.\nAffaires" as Resp
+  actor "👨‍💼 Commercial" as Commercial
+  actor "👩‍💼 Comptable" as Comptable
+  actor "👩‍💼 Direction" as Direction
+}
+
+package "Odoo ERP Unifié" <<app>> {
+
+  package "Modules Opérationnels" {
+    [📱 CRM\nCommercial] as CRM
+    [🔨 Chantiers\n& Projets] as Chantiers
+    [🛒 Achats\nFournisseurs] as Achats
+    [👥 RH\nPaie] as RH
+  }
+
+  package "Module Finance & Comptabilité" {
+    [📒 Comptabilité\nGénérale] as ComptaGen
+    [💰 Comptabilité\nAnalytique] as ComptaAna
+    [📄 Facturation\nAutomatisée] as Facturation
+    [🏦 Bank Sync\nDSP2] as BankSync
+    [🔍 3-way\nMatching] as Matching
+    [📊 Trésorerie\nPrévisionnelle] as Treso
+    [🔔 Relances\nAutomatiques] as Relances
+    [🤖 OCR\nFactures] as OCR
+  }
+
+}
+
+package "Données Unifiées" <<data>> {
+  database "PostgreSQL\nBase Unique" as DB
+  database "Redis\nCache" as Cache
+}
+
+package "Intégrations" <<integration>> {
+  [🏦 Banque\nAPI DSP2] as BanqueAPI
+  [📧 Email\nGateway] as EmailGW
+  [🧾 Chorus Pro\nAPI] as Chorus
+  [👨‍💼 Portail\nExpert-Compta] as PortailEC
+}
+
+package "BI & Analytics" <<bi>> {
+  [📊 Dashboard\nDirection] as DashDir
+  [📊 Dashboard\nComptabilité] as DashCompta
+  [📊 Dashboard\nChantiers] as DashChantiers
+  [🤖 IA Scoring\nClients] as IAScoring
+  [🤖 IA Détection\nAnomalies] as IAAnomalie
+}
+
+package "Systèmes Externes" {
+  [🏦 Banque] as Banque
+  [👨‍💼 Expert\nComptable] as EC
+}
+
+' Relations Utilisateurs → Modules
+Chef --> Chantiers : "Validation\ndigitale"
+Chef --> Achats : "Commandes\nmobiles"
+
+Resp --> Chantiers : "Suivi\ntemps réel"
+Resp --> DashChantiers : "Rentabilité\ninstantanée"
+
+Commercial --> CRM : "Création\nclient 1 fois"
+
+Comptable --> ComptaGen : "Validation\nvs saisie"
+Comptable --> BankSync : "Lettrage\n1 clic"
+Comptable --> DashCompta : "Monitoring\ntemps réel"
+
+Direction --> DashDir : "KPIs\ntemps réel"
+Direction --> Treso : "Prévisions\nauto"
+
+' Relations Modules → Comptabilité (Intégration native)
+CRM ==> ComptaGen : "✅ Client auto\ncréé"
+CRM ==> ComptaAna : "✅ Axes\nanalytiques"
+
+Chantiers ==> Facturation : "✅ Facture\nauto générée"
+Chantiers ==> ComptaAna : "✅ Imputation\nauto chantier"
+
+Achats ==> Matching : "✅ Facture\nfournisseur"
+Matching ==> ComptaGen : "✅ Écriture\nauto"
+
+RH ==> ComptaGen : "✅ Paie →\nécritures auto"
+
+Facturation ==> ComptaGen : "✅ Écriture\ncomptable auto"
+Facturation ==> Relances : "✅ Relances\nauto impayés"
+
+' Relations Comptabilité → Données
+ComptaGen --> DB : "Stockage\nunique"
+ComptaAna --> DB
+Facturation --> DB
+BankSync --> DB
+Matching --> DB
+Treso --> DB
+
+ComptaGen --> Cache : "Performance"
+Facturation --> Cache
+
+' Relations Intégrations
+BankSync <--> BanqueAPI : "Sync\nautomatique"
+BanqueAPI <--> Banque : "DSP2\nsécurisé"
+
+Facturation --> EmailGW : "Envoi\nauto"
+Facturation --> Chorus : "Marchés\npublics"
+Relances --> EmailGW : "Emails\nauto"
+
+ComptaGen --> PortailEC : "Accès\nexpert-compta"
+PortailEC <--> EC : "Révision\ntemps réel"
+
+OCR --> Achats : "Pré-remplissage\nfactures"
+
+' Relations BI
+DB --> DashDir : "KPIs\ntemps réel"
+DB --> DashCompta : "Monitoring\ntemps réel"
+DB --> DashChantiers : "Rentabilité\ntemps réel"
+DB --> IAScoring : "ML scoring\nclients"
+DB --> IAAnomalie : "Détection\nanomalies"
+
+' Notes explicatives
+note right of CRM
+  ✅ **Bénéfice #1**
+  - Client créé 1 seule fois
+  - Disponible instantanément
+    en comptabilité
+  - Fin double saisie
+end note
+
+note right of Chantiers
+  ✅ **Bénéfice #2**
+  - Validation travaux
+    → Facture auto générée
+  - Comptabilité analytique
+    temps réel par chantier
+  - Traçabilité complète
+end note
+
+note right of ComptaGen
+  ✅ **Bénéfice #3**
+  - Écritures comptables
+    automatiques depuis
+    opérations métier
+  - Export FEC certifié
+  - Conformité fiscale
+end note
+
+note right of BankSync
+  ✅ **Bénéfice #4**
+  - Sync bancaire auto (DSP2)
+  - Lettrage intelligent IA
+  - Gain 70% temps
+    (8h → 2.4h/mois)
+end note
+
+note right of ComptaAna
+  ✅ **Bénéfice #5**
+  - Marge par chantier
+    temps réel
+  - Axes analytiques multiples
+  - Fin des Excel manuels
+end note
+
+note right of Treso
+  ✅ **Bénéfice #6**
+  - Prévisions automatiques
+    basées sur :
+    · Devis validés
+    · Commandes fournisseurs
+    · Échéancier factures
+  - Scénarios multiples
+  - Alertes trésorerie négative
+end note
+
+note bottom of Comptable
+  **Nouveau Rôle Comptable**
+  - 30% temps sur validation/contrôle
+  - 70% sur analyse et conseil
+  - Satisfaction : 3/10 → 9/10
+  - Valorisation du métier
+end note
+
+note bottom of Direction
+  **Nouveau Pilotage Direction**
+  - Visibilité temps réel (vs 1-2 mois)
+  - Décisions basées données fraîches
+  - Pilotage éclairé
+  - Satisfaction : 2/10 → 10/10
+end note
+
+note as N1
+  **ARCHITECTURE CIBLE : BÉNÉFICES**
+
+  ✅ **1 ERP unifié** (vs 5 silos isolés)
+  ✅ **Intégration native** (vs ressaisies multiples)
+  ✅ **Automatisations** (facturation, lettrage, relances)
+  ✅ **Temps réel** (vs délais 1-2 mois)
+  ✅ **Gain ~30h/mois** = économie 18k€/an
+
+  ⏱️ **Délai rentabilité chantier** : Temps réel (vs 1-2 mois)
+  ⏱️ **Temps rapprochement bancaire** : 2.4h/mois (vs 8h)
+  ⏱️ **Délai facturation** : < 48h (vs 5-10 jours)
+
+  💰 **ROI** : 118% la 1ère année
+end note
+
+@enduml

@@ -1,0 +1,151 @@
+@startuml Sequence_Facturation_Cible
+
+title Processus Facturation CIBLE (Odoo)
+
+actor "👷 Chef\nChantier" as Chef
+participant "📱 Odoo Mobile\nApp" as MobileApp
+participant "🔨 Module\nChantiers" as ModuleChantier
+participant "📄 Module\nFacturation" as ModuleFacture
+participant "📒 Module\nComptabilité" as ModuleCompta
+participant "📧 Email\nGateway" as EmailGW
+actor "👤 Client" as Client
+participant "👩‍💼 Comptable\n(optionnel)" as Comptable
+
+== ✅ PHASE 1 : Validation Digitale Chantier (30 secondes) ==
+
+Chef -> MobileApp : 📱 Ouvre app\nsur smartphone
+activate MobileApp #B8E6B8
+
+MobileApp --> Chef : 📋 Liste chantiers\nen cours
+
+Chef -> MobileApp : ✅ Sélectionne\n"Chantier Dupont"
+
+MobileApp --> Chef : 📊 Détails chantier :\n- Temps saisi : 45h\n- Matériaux scannés : ✓\n- Devis lié : ✓
+
+note right of Chef
+  😊 Satisfait
+  Toutes les infos
+  déjà là !
+end note
+
+Chef -> MobileApp : ✅ Bouton\n"VALIDER CHANTIER"
+
+MobileApp -> ModuleChantier : 🔄 Validation\nchantier Dupont
+deactivate MobileApp
+
+== ✅ PHASE 2 : Génération Automatique Facture (Instantané) ==
+
+activate ModuleChantier #B8E6B8
+
+ModuleChantier -> ModuleChantier : 🤖 Récupération auto :\n- Temps : 45h × 65€/h\n- Matériaux : Liste scannée\n- Devis : Lignes liées\n- Client : Dupont (CRM)
+
+ModuleChantier -> ModuleFacture : 🔄 Génération\nfacture brouillon
+deactivate ModuleChantier
+activate ModuleFacture #B8E6B8
+
+ModuleFacture -> ModuleFacture : 🤖 Calcul automatique :\n- MO : 45h × 65€ = 2925€\n- Matériaux : 645€\n- Total HT : 3570€\n- TVA 20% : 714€\n- Total TTC : 4284€
+
+ModuleFacture -> ModuleCompta : ✅ Écriture comptable\nAUTO-GÉNÉRÉE
+activate ModuleCompta #E6F3FF
+ModuleCompta --> ModuleFacture : ✅ Écriture OK
+deactivate ModuleCompta
+
+note right of ModuleFacture
+  🤖 Automatique
+  - Client lié (CRM)
+  - Analytique chantier
+  - TVA calculée
+  - N° facture auto
+end note
+
+== ✅ PHASE 3 : Validation Comptable (Optionnelle - 2 min) ==
+
+ModuleFacture -> Comptable : 🔔 Notification :\n"Facture brouillon\nChantier Dupont\nprête à valider"
+activate Comptable #B8E6B8
+
+note right of Comptable
+  😊 Satisfait
+  Juste à vérifier,
+  pas de ressaisie !
+end note
+
+Comptable -> ModuleFacture : 🔍 Consultation\nfacture brouillon
+
+ModuleFacture --> Comptable : 📄 Facture pré-remplie :\n- Client : Dupont ✓\n- Montant : 4284€ TTC ✓\n- Détails : OK ✓
+
+alt Facture OK (95% des cas)
+  Comptable -> ModuleFacture : ✅ VALIDATION\n(1 clic)
+else Ajustement nécessaire (5% des cas)
+  Comptable -> ModuleFacture : ✏️ Ajustement mineur\n(ex: remise)
+  Comptable -> ModuleFacture : ✅ VALIDATION
+end
+
+deactivate Comptable
+
+== ✅ PHASE 4 : Envoi Automatique (Instantané) ==
+
+ModuleFacture -> ModuleFacture : 📄 Génération PDF\nautomatique
+
+ModuleFacture -> EmailGW : 📧 Envoi email\nautomatique
+activate EmailGW #B8E6B8
+
+EmailGW -> Client : 📩 Email personnalisé :\n"Bonjour M. Dupont,\nVoici votre facture\npour les travaux terminés\nle [date].\nCordialement"
+deactivate EmailGW
+deactivate ModuleFacture
+
+note right of Client
+  😄 Très satisfait
+  Facture reçue
+  < 48h après travaux
+  (vs 5-10 jours avant)
+end note
+
+== ✅ BONUS : Traçabilité Complète ==
+
+note over ModuleChantier, ModuleCompta
+  🔍 **TRAÇABILITÉ TOTALE** :
+
+  ✅ Chantier → Temps saisis (45h)
+  ✅ Chantier → Matériaux scannés
+  ✅ Chantier → Facture (F2025-0847)
+  ✅ Facture → Écriture comptable
+  ✅ Facture → Imputation analytique
+  ✅ Facture → Prévision trésorerie
+  ✅ Email → Client (horodaté)
+
+  🔍 Historique complet consultable
+  🔍 Audit trail permanent
+end note
+
+== ⏱️ BILAN TEMPS TOTAL ==
+
+note over Chef, Client
+  **TEMPS TOTAL : < 48 HEURES**
+
+  ⏰ Validation chef chantier : 30 secondes
+  ⏰ Génération auto facture : Instantané
+  ⏰ Validation comptable : 2 min (optionnel)
+  ⏰ Envoi auto client : Instantané
+
+  **TOTAL ACTIF : ~4 MINUTES**
+  **TOTAL DÉLAI : < 48 HEURES**
+
+  ✅ **BÉNÉFICES :**
+  - Gain temps : 87 min → 4 min (-95%)
+  - Gain délai : 5-10j → < 48h (-90%)
+  - Zéro ressaisie (vs 3 ressaisies avant)
+  - Traçabilité complète
+  - Comptable focus validation vs saisie
+
+  😄 **SATISFACTION :**
+  - Chef chantier : 10/10 (validation 1 clic)
+  - Gestionnaire : 10/10 (plus de collecte)
+  - Comptable : 9/10 (valorisation métier)
+  - Client : 10/10 (rapidité)
+
+  💰 **IMPACT TRÉSORERIE :**
+  - Encaissement +5 jours plus tôt
+  - Sur 100 factures/mois = Gain trésorerie significatif
+end note
+
+@enduml
