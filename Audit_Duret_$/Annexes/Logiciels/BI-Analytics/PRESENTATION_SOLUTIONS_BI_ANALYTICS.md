@@ -241,7 +241,7 @@ Une solution BI (Business Intelligence) permet de centraliser, analyser et visua
 - Connexion API Odoo ou sources multiples
 - Design sur-mesure Duret
 
-**Budget** : 47 000€ dev + 9 200€/an maintenance
+**Budget** : À chiffrer selon cahier des charges
 
 #### **PHASE 3 (An 2+) : Évolutions**
 
@@ -269,11 +269,11 @@ Une solution BI (Business Intelligence) permet de centraliser, analyser et visua
 ### Dashboard Direction (Vue Globale)
 
 **Indicateurs Clés** :
-- CA Mensuel : 450 K€ (Budget : 420 K€) → +7%
-- Marge Brute : 18,5% (Cible : 20%)
-- Trésorerie : 320 K€
-- Chantiers actifs : 45
-- Devis en attente : 280 K€
+- CA Mensuel vs Budget
+- Marge Brute vs Cible
+- Trésorerie actuelle
+- Chantiers actifs
+- Devis en attente
 
 **Graphiques** :
 - Évolution CA 12 derniers mois
@@ -284,13 +284,13 @@ Une solution BI (Business Intelligence) permet de centraliser, analyser et visua
 ### Dashboard Chef Chantier
 
 **Mes Chantiers** :
-- Chantier A : Budget 45 K€, Réalisé 38 K€, Avancement 80%
-- Chantier B : Budget 120 K€, Réalisé 95 K€, Avancement 70%
-- Alertes : Dépassement matière Chantier B (+5%)
+- Chantier A : Budget vs Réalisé, Avancement %
+- Chantier B : Budget vs Réalisé, Avancement %
+- Alertes : Dépassements matière
 
 **Heures Équipe** :
-- Technicien 1 : 38h semaine
-- Technicien 2 : 42h semaine (dont 3h supplémentaires)
+- Heures par technicien
+- Heures supplémentaires
 
 ---
 
