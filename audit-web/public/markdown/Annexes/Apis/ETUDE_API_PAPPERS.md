@@ -1,0 +1,69 @@
+# 🔍 ÉTUDE DÉTAILLÉE : API PAPPERS / INSEE
+
+## 1. 📋 Fiche d'Identité
+- **Nom** : Pappers (ou API Sirene INSEE)
+- **Catégorie** : Data / Conformité / KYC
+- **Priorité** : 🟡 **MOYENNE** (Post-Migration Odoo)
+- **Complexité** : Faible (API REST simple)
+- **Coût API** : Gratuit (Open Data) ou Freemium (Pappers)
+
+## 2. 🎯 Contexte & Enjeux pour Duret
+Duret fait appel à des sous-traitants pour certains chantiers spécifiques ou en cas de surcharge.
+- **Problème Actuel** : Vérification manuelle (ou inexistante) de la santé financière et des certifications (RGE, Qualibat) des sous-traitants.
+- **Risque** : "Devoir de vigilance" non respecté. Risque de faillite d'un sous-traitant en plein chantier. Fraude au RIB.
+- **Opportunité** : Automatiser la création des fiches fournisseurs et la vérification de leur solvabilité.
+
+## 3. 🛠️ Fonctionnalités Clés (API)
+1.  **Autocomplétion** : Saisir un SIRET/Nom → Récupérer Adresse, TVA Intra, Dirigeants.
+2.  **Santé Financière** : Récupérer les derniers bilans, procédures collectives (Redressement, Liquidation).
+3.  **Documents Légaux** : Téléchargement Kbis, Statuts (via Pappers).
+4.  **Certifications** : Vérification RGE/Qualibat (via API ADEME croisée).
+
+## 4. 💻 Intégration Odoo (Technique)
+
+### Module `partner_autocomplete`
+Odoo intègre nativement un service d'autocomplétion (IAP) payant par crédit.
+Alternative : Développer un connecteur simple vers Pappers (gratuit pour les données de base).
+
+### Workflow Cible
+1.  **Création Fournisseur** : L'utilisateur tape le SIRET.
+2.  **Appel API** : Odoo remplit nom, adresse, TVA, capital.
+3.  **Check Solvabilité** : Un indicateur (Vert/Orange/Rouge) s'affiche sur la fiche partenaire basé sur les procédures collectives en cours.
+4.  **Mise à jour** : Cron mensuel pour vérifier qu'aucun sous-traitant actif n'est passé en liquidation.
+
+### Exemple Code (Python)
+```python
+def check_solvency(siret):
+    url = f"https://api.pappers.fr/v2/entreprise?siret={siret}&api_token=XXX"
+    res = requests.get(url).json()
+    if res['procedures_collectives']:
+        return 'DANGER'
+    return 'OK'
+```
+
+## Usage pour l'IA Prédictive
+
+### 📊 Données d'enrichissement pour l'analyse de risque client
+
+L'API Pappers alimentera les futurs modèles prédictifs de **scoring client** :
+- **Score de solvabilité automatique** : Intégrer les bilans financiers dans l'algorithme d'évaluation crédit
+- **Alertes prédictives** : Détecter les signaux faibles avant défaillance (baisse CA, retards paiements, procédures)
+- **Optimisation portefeuille client** : L'IA recommandera les clients les plus sûrs pour les gros chantiers
+
+Cette API sera intégrée en **Phase 2** après stabilisation du socle Odoo.
+
+---
+
+## 5. Analyse Coûts & Bénéfices
+
+### Coûts
+- **Dev** : 1 jour (Connecteur simple Pappers).
+- **API** : Gratuit (Pappers plan gratuit suffisant pour <100 requêtes/mois) ou Odoo IAP (quelques centimes/fiche).
+
+### Bénéfices
+- **Gain Temps** : Suppression de la saisie manuelle lors de la création des fiches fournisseurs.
+- **Sécurisation** : Réduction du risque de défaillance des sous-traitants grâce au suivi automatisé de leur santé financière.
+
+## 6. ✅ Verdict
+**TRÈS RECOMMANDÉ**.
+C'est un "Quick Win" facile à mettre en place qui sécurise les achats et la sous-traitance.

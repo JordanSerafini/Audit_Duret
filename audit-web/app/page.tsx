@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Folder, FileText, CheckCircle, Zap, Building2, TrendingUp, Users, AlertTriangle, Clock, Target, Sparkles, ArrowRight, Shield, Rocket } from "lucide-react";
+import { Folder, FileText, CheckCircle, Zap, Building2, TrendingUp, Users, AlertTriangle, Clock, Target, Sparkles, ArrowRight, Shield, Rocket, BookOpen } from "lucide-react";
 
 export default function Home() {
   const stats = [
@@ -351,7 +351,7 @@ export default function Home() {
 
           <Link
             href="/synthese"
-            className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 rounded-2xl p-8 hover:shadow-2xl hover:scale-[1.02] transition-all group relative overflow-hidden md:col-span-2"
+            className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 rounded-2xl p-8 hover:shadow-2xl hover:scale-[1.02] transition-all group relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl group-hover:w-48 group-hover:h-48 transition-all"></div>
             <div className="relative z-10">
@@ -370,6 +370,31 @@ export default function Home() {
               </p>
               <div className="flex items-center gap-2 text-purple-600 font-semibold text-sm">
                 <span>Lire la synthèse complète</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            href="/annexes/markdown"
+            className="bg-gradient-to-br from-amber-50 to-orange-100 border-2 border-amber-200 rounded-2xl p-8 hover:shadow-2xl hover:scale-[1.02] transition-all group relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/30 rounded-full blur-2xl group-hover:w-48 group-hover:h-48 transition-all"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-amber-600 p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-2xl text-slate-900">Documents Markdown</h3>
+                  <p className="text-amber-700 text-sm font-medium">111 fichiers source disponibles</p>
+                </div>
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed mb-4">
+                Accédez à tous les documents Markdown d&apos;origine de l&apos;audit : analyses, synthèses, architectures, plans d&apos;action. Consultez en ligne ou téléchargez.
+              </p>
+              <div className="flex items-center gap-2 text-amber-600 font-semibold text-sm">
+                <span>Parcourir les documents</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
               </div>
             </div>

@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { AlertTriangle, TrendingUp, Database, Zap, Users, Clock, LayoutDashboard } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
-import UMLGallery from '@/components/UMLGallery';
+import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import PersonaCard from '@/components/ui/PersonaCard';
 import ProblemCard from '@/components/ui/ProblemCard';
@@ -11,6 +12,7 @@ import ComparisonTable from '@/components/ui/ComparisonTable';
 import KpiCard from '@/components/ui/KpiCard';
 import ArchitectureSection from '@/components/sections/ArchitectureSection';
 import { personas, comparison, problems, opportunities, kpis, heroStats, criticalStats } from '@/data/achats-logistique';
+import { getServiceMarkdownFiles } from '@/config/markdownFiles';
 
 export const metadata = {
   title: 'Achats & Logistique - Audit IT Duret',
@@ -18,6 +20,8 @@ export const metadata = {
 };
 
 export default function AchatsLogistiquePage() {
+  const markdownFiles = getServiceMarkdownFiles('achats-logistique');
+
   return (
     <div className="max-w-7xl mx-auto">
       {/* Breadcrumbs */}
@@ -233,38 +237,15 @@ export default function AchatsLogistiquePage() {
       </div>
 
       {/* Diagrammes UML */}
-      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
-        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-          <LayoutDashboard className="w-8 h-8 text-blue-600" />
-          Diagrammes UML - Visualisation & Téléchargement
-        </h2>
-        <p className="text-slate-600 mb-6">
-          Explorez tous les diagrammes UML de ce service : architecture, processus, cas d'usage, et plus encore.
-          Visualisez-les directement ou téléchargez-les individuellement.
-        </p>
-        <UMLGallery serviceKey="achats-logistique" />
-      </div>
+      <CollapsibleUMLSection serviceKey="achats-logistique" serviceLabel="Achats & Logistique" />
 
-      {/* CTA Final */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center mb-12 shadow-xl">
-        <h3 className="text-2xl font-bold mb-3">Prêt pour la Transformation Digitale ?</h3>
-        <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-          Passez de 50% à &gt;95% de commandes complètes. Réduisez vos délais de 3 jours à &lt;2 heures.
-          Automatisez 80% de vos processus achats.
-        </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <PDFDownloadButton
-            pdfPath="/pdfs/service-achats-logistique.pdf"
-            fileName="Service_Achats_Logistique.pdf"
-          />
-          <UMLDownloadButton serviceKey="achats-logistique" />
-          <Link
-            href="/services"
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
-          >
-            Voir tous les services
-          </Link>
-        </div>
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Achats & Logistique"
+          defaultExpanded={false}
+        />
       </div>
 
       {/* Footer navigation */}

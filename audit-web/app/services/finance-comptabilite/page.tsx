@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, Calculator, Landmark, Target, Shield, Sparkles, DollarSign, BarChart3, LayoutDashboard } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users, FileText, Clock, PieChart, ArrowRight, Calculator, Landmark, Target, Shield, Sparkles, DollarSign, BarChart3 } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
-import UMLGallery from '@/components/UMLGallery';
+import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
+import { getServiceMarkdownFiles } from '@/config/markdownFiles';
 
 export const metadata = {
   title: 'Finance & Comptabilité - Audit IT Duret',
@@ -10,6 +12,8 @@ export const metadata = {
 };
 
 export default function FinanceComptabilitePage() {
+  const markdownFiles = getServiceMarkdownFiles('finance-comptabilite');
+
   const stats = [
     { label: "Délai Rentabilité", value: "1-2 mois", subtext: "Trop tard pour réagir", icon: Clock, color: "bg-red-500" },
     { label: "Temps Rapprochement", value: "8h/mois", subtext: "100% manuel", icon: FileText, color: "bg-orange-500" },
@@ -584,17 +588,17 @@ export default function FinanceComptabilitePage() {
       </div>
 
       {/* Diagrammes UML */}
-      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
-        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-          <LayoutDashboard className="w-8 h-8 text-emerald-600" />
-          Diagrammes UML - Visualisation & Téléchargement
-        </h2>
-        <p className="text-slate-600 mb-6">
-          Explorez tous les diagrammes UML de ce service : architecture, processus, cas d'usage, et plus encore.
-          Visualisez-les directement ou téléchargez-les individuellement.
-        </p>
-        <UMLGallery serviceKey="finance-comptabilite" />
+      <CollapsibleUMLSection serviceKey="finance-comptabilite" serviceLabel="Finance & Comptabilité" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Finance Comptabilite"
+          defaultExpanded={false}
+        />
       </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">
