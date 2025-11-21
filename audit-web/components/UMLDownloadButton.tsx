@@ -10,14 +10,21 @@ interface UMLDownloadButtonProps {
   serviceKey: string; // kebab-case service key (e.g., 'service-client')
 }
 
-export default function UMLDownloadButton({ serviceName, serviceLabel }: UMLDownloadButtonProps) {
+export default function UMLDownloadButton({ serviceKey }: UMLDownloadButtonProps) {
   const [isDownloading, setIsDownloading] = useState(false);
+
+  const umlFolderName = serviceToUMLMapping[serviceKey];
+  const serviceLabel = serviceLabelMapping[serviceKey];
+
+  if (!umlFolderName) {
+    return null; // Service not found in mapping
+  }
 
   const downloadAllUML = async () => {
     setIsDownloading(true);
     try {
       // Fetch the list of available UML files from the API
-      const response = await fetch(`/api/uml/${serviceName}`);
+      const response = await fetch(`/api/uml/${umlFolderName}`);
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération des fichiers');
       }
@@ -36,7 +43,7 @@ export default function UMLDownloadButton({ serviceName, serviceLabel }: UMLDown
 
       for (const file of files) {
         try {
-          const fileUrl = `/uml/${serviceName}/${file}`;
+          const fileUrl = `/uml/${umlFolderName}/${file}`;
           const fileResponse = await fetch(fileUrl);
           if (fileResponse.ok) {
             const blob = await fileResponse.blob();

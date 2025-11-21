@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { AlertTriangle, TrendingUp, Database, Zap, Users, Clock } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import PersonaCard from '@/components/ui/PersonaCard';
 import ProblemCard from '@/components/ui/ProblemCard';
@@ -56,10 +57,13 @@ export default function AchatsLogistiquePage() {
             ))}
           </div>
 
-          <PDFDownloadButton
-            pdfPath="/pdfs/service-achats-logistique.pdf"
-            fileName="Service_Achats_Logistique.pdf"
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-achats-logistique.pdf"
+              fileName="Service_Achats_Logistique.pdf"
+            />
+            <UMLDownloadButton serviceKey="achats-logistique" />
+          </div>
         </div>
       </div>
 

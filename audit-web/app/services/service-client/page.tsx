@@ -96,10 +96,7 @@ export default function ServiceClientPage() {
               pdfPath="/pdfs/service-service-client.pdf"
               fileName="Service_Client.pdf"
             />
-            <UMLDownloadButton
-              serviceName="Service-Client"
-              serviceLabel="Service Client"
-            />
+            <UMLDownloadButton serviceKey="service-client" />
           </div>
         </div>
       </div>
