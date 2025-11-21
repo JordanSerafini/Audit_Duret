@@ -143,7 +143,7 @@ export default function LogicielsPage() {
           <div className="space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <span className="text-slate-700 font-semibold">Couverture fonctionnelle</span>
-              <span className="text-green-600 font-bold">Odoo 100% > EBP 90%</span>
+              <span className="text-green-600 font-bold">Odoo 100% {'>'} EBP 90%</span>
             </div>
             <div className="flex items-center justify-between pb-3 border-b border-slate-200">
               <span className="text-slate-700 font-semibold">Évolutivité</span>
