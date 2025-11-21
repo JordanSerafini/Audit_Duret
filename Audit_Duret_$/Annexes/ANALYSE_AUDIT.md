@@ -469,57 +469,103 @@ Les annexes montrent une ambition qui dépasse la simple gestion : **préparer D
 
 ### 6.5. Feuille de Route Validée (18 mois)
 
-#### Phase 1 (Mois 1-6) : "Arrêter l'hémorragie"
+| 🚦 PHASE | Durée | Objectif | Actions Clés |
+|:---:|:---:|:---|:---|
+| **PHASE 1** <br>🔴 "Arrêter l'hémorragie" | **M1-M6** | Résoudre crises immédiates | • CRM Service Client (ne plus perdre appels) <br>• App Mobile Chantier (sécuriser facturation) <br>• Socle Odoo Achats/Ventes (remplacer ERP lent) |
+| **PHASE 2** <br>🟠 "Structurer" | **M7-M12** | Automatiser workflows | • Stocks Code-barres <br>• Migration RH (SIRH) <br>• Comptabilité Analytique |
+| **PHASE 3** <br>🟢 "Optimiser" | **M13-M18** | Excellence opérationnelle | • Portail Client 24/7 <br>• Data & IA Prédictive <br>• Optimisation continue |
 
-- Mise en place CRM (Service Client) : Ne plus perdre appels
-- Déploiement App Mobile Chantier (Photos/Rapports) : Sécuriser facturation
-- Socle Odoo Achats/Ventes : Remplacer ERP lent
+---
 
-#### Phase 2 (Mois 7-12) : "Structurer"
+### 6.6. ROI Attendu : Où se fera le Retour sur Investissement ?
 
-- Mise en place Stocks (Code-barres)
-- Migration RH (SIRH)
-- Comptabilité Analytique
+> ⚠️ **Le ROI ne se fera PAS sur l'économie de licences logicielles** (nouveau système coûtera probablement un peu plus cher OPEX que vieux Excel gratuits).
 
-#### Phase 3 (Mois 13-18) : "Optimiser"
-
-- Portail Client
-- Data & IA (Prédictif)
-
-### 6.6. ROI Attendu
-
-**Le ROI ne se fera pas sur économie licences logicielles (nouveau système coûtera probablement un peu plus cher OPEX que vieux Excel gratuits).**
-
-✅ **ROI se fera sur** :
-1. **Chiffre Affaires additionnel** : Devis plus rapides, petits travaux facturés
-2. **Marge brute** : Meilleurs achats, moins gaspillages chantier
-3. **Productivité** : Fin des **4 000h/an de ressaisie cumulée**
+| 💰 Sources de ROI | Description | Impact |
+|:---|:---|:---:|
+| **1. CA Additionnel** | • Devis plus rapides (2h → 30min) <br>• Petits travaux facturés (vs oubliés) <br>• Opportunités terrain captées | 🟢 Élevé |
+| **2. Marge Brute** | • Meilleurs achats (prix Rexel/Sonepar temps réel) <br>• Moins gaspillages chantier <br>• Sécurisation marges devis | 🟢 Élevé |
+| **3. Productivité** | • Fin des **4 000h/an ressaisie cumulée** <br>• Automatisation workflows <br>• Réduction temps admin chefs chantier -60% | 🟢 TRÈS Élevé |
 
 ---
 
 ## 📊 SYNTHÈSE POUR LA DIRECTION
 
-### Cohérence
+<table>
+<tr>
+<td width="50%">
 
-**Nous remplaçons multitude outils disparates par une seule plateforme (Odoo).**
+### 🎯 **Cohérence**
 
-Cela garantit que information circule (ex: temps saisi technicien alimente direct paie et facturation).
+**Multitude outils disparates → Plateforme unique (Odoo)**
 
-### Budget
-
-**Scénario Odoo le plus économique (~155k€ sur 3 ans) comparé empilement logiciels spécialisés (~213k€).**
-
-### Sécurité
-
-**Nous sécurisons avenir structurant données aujourd'hui (Data Lake) pour utiliser IA demain (Prédictions météo, optimisation tournées).**
-
-### Urgence
-
-**Ne retardez pas lancement. La dette technique et organisationnelle est déjà critique.**
+✅ Information circule fluidement
+<br>Exemple : Temps saisi technicien → Paie + Facturation automatiques
 
 ---
 
-**📅 Date analyse** : Janvier 2025
-**🤖 Analysé par** : Gemini (Google AI)
-**✅ Verdict** : **GO - Projet validé avec confiance haute**
-**⚠️ Condition succès** : **Conduite du changement = priorité #1**
+### 💶 **Budget**
+
+**Scénario Odoo = le plus économique**
+
+| Scénario | Coût 3 ans | Différence |
+|:---|---:|:---:|
+| Odoo | ~155k€ | ✅ Optimal |
+| EBP + satellites | ~213k€ | ❌ +37% |
+
+</td>
+<td width="50%">
+
+### 🔒 **Sécurité Avenir**
+
+**Structurer données aujourd'hui = IA demain**
+
+✅ Data Lake centralisé (PostgreSQL)
+<br>✅ Préparation IA : Prédictions météo, optimisation tournées
+<br>✅ Vision 360° activité
+
+---
+
+### ⏰ **Urgence**
+
+**🔴 Ne pas retarder le lancement**
+
+Dette technique et organisationnelle **déjà critique** :
+- 30+ Excel silos incohérents
+- ERP obsolète 15 ans (30 sec/clic)
+- 4 000h/an ressaisie perdue
+
+</td>
+</tr>
+</table>
+
+---
+
+<table>
+<tr>
+<td width="25%" align="center">
+
+**📅 Date analyse**
+<br>Janvier 2025
+
+</td>
+<td width="25%" align="center">
+
+**🤖 Analysé par**
+<br>Gemini (Google AI)
+
+</td>
+<td width="25%" align="center">
+
+**✅ Verdict**
+<br>**GO - Confiance haute**
+
+</td>
+<td width="25%" align="center">
+
+**⚠️ Condition succès**
+<br>**Conduite changement = priorité #1**
+
+</td>
+</tr>
+</table>
