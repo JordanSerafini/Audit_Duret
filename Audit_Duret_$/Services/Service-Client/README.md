@@ -47,7 +47,7 @@ Service-Client/
 │   │   └── État actuel du système ("post-it")
 │   │       • Diagrammes ASCII
 │   │       • Processus détaillés (RDV, appels)
-│   │       • Coûts de l'inefficacité (748K€/an)
+│   │       • Coûts de l'inefficacité (quantification requise)
 │   │       • Les 10 impossibilités
 │   │
 │   ├── 03_JOURNEY_MAPS_Parcours_Utilisateurs.md
@@ -55,12 +55,12 @@ Service-Client/
 │   │       • Parcours Claire (appel client)
 │   │       • Parcours Gaëtan (planification RDV)
 │   │       • Parcours Client (prise RDV)
-│   │       • Timeline comparée (48h → 2min)
+│   │       • Timeline comparée (amélioration drastique visée)
 │   │
 │   └── SYNTHESE_EXECUTIVE.md
 │       └── Synthèse exécutive pour direction
 │           • Business case
-│           • ROI 2 ans : 720K€
+│           • ROI : À calculer avec données réelles
 │           • Roadmap 18 mois
 │           • Risques et mitigation
 │
@@ -126,8 +126,8 @@ Service-Client/
 
 ### Pour une Vue Visuelle Rapide
 👉 **Diagrammes recommandés:**
-1. **Mind Map** (`uml/09_mindmap_pain_points.puml`) - Vue d'ensemble 748K€
-2. **Gantt** (`uml/11_gantt_comparaison.puml`) - 48h → 2min (RDV)
+1. **Mind Map** (`uml/09_mindmap_pain_points.puml`) - Vue d'ensemble pain points
+2. **Gantt** (`uml/11_gantt_comparaison.puml`) - Amélioration temps RDV
 3. **Sequence** (`uml/01_sequence_appel_client_actuel.puml`) - Processus actuel
 4. **Network** (`uml/12_network_flux_donnees.puml`) - Architecture cible
 
@@ -137,53 +137,53 @@ Service-Client/
 
 | Métrique | Valeur |
 |----------|--------|
-| **Coût annuel des pertes** | 748,000€ |
-| **Temps perdu/an (Claire)** | 1,950h |
+| **Coût annuel des pertes** | Important (quantification requise) |
+| **Temps perdu/an (Claire)** | Significatif (à mesurer précisément) |
 | **Volume appels/jour** | ~50 |
 | **Volume mails/jour** | ~50 |
-| **Temps moyen prise RDV** | 48h (vs 2min possible) |
-| **Demandes techniciens perdues/an** | 104 (sur 520) |
-| **Clients SAV perdus/an** | 20 |
-| **Clients perdus (oublis post-it)** | 10/an |
-| **Niveau stress Claire** | 8/10 |
+| **Temps moyen prise RDV** | Long (amélioration drastique possible) |
+| **Demandes techniciens perdues/an** | Proportion significative (à mesurer) |
+| **Clients SAV perdus/an** | Impact mesurable (à quantifier) |
+| **Clients perdus (oublis post-it)** | Pertes évitables (à quantifier) |
+| **Niveau stress Claire** | Élevé |
 
 ---
 
 ## 👥 Persona Principal
 
 ### Claire - Assistante Relation Client (35 ans)
-- 🔴 Pas de CRM/ticketing → système post-it (80% risque oubli)
-- 🔴 Planning RDV archaïque → 48h vs 2min possible
+- 🔴 Pas de CRM/ticketing → système post-it (risque oubli élevé)
+- 🔴 Planning RDV archaïque → délai excessif (amélioration drastique possible)
 - 🔴 Double/triple saisie (ERP, SAGE, Excel)
 - 🔴 Données éparpillées (7 outils différents)
-- 💰 **748K€/an de pertes** (temps + opportunités + clients perdus)
+- 💰 **Impact significatif** (temps + opportunités + clients perdus, quantification requise)
 
 ---
 
 ## 🔴 Top 5 Pain Points Critiques
 
 1. **Système post-it (Critique)**
-   - Aucune traçabilité (80% risque oubli)
-   - Post-it perdu/jeté = 10 clients/an perdus
-   - 💰 25K€/an
+   - Aucune traçabilité (risque oubli élevé)
+   - Post-it perdu/jeté = clients perdus (quantification requise)
+   - 💰 Impact mesurable (à chiffrer)
 
 2. **Planning RDV archaïque (Critique)**
-   - 48h pour RDV vs 2min possible
+   - Délai excessif pour RDV (amélioration drastique possible)
    - Excel non synchronisé, Gaëtan pas consulté
-   - 💰 110K€/an (temps perdu)
+   - 💰 Temps perdu important (quantification requise)
 
 3. **Données éparpillées (Critique)**
    - 7 outils (ERP, SAGE, Excel...) sans intégration
    - Double/triple saisie → incohérences
-   - 💰 154K€/an (temps perdu total)
+   - 💰 Temps perdu substantiel (quantification requise)
 
-4. **Clients perdus (rétention -10%)**
+4. **Clients perdus (rétention à améliorer)**
    - Insatisfaction + délais inacceptables + oublis
-   - 💰 300K€/an
+   - 💰 Impact CA significatif (quantification requise)
 
 5. **Opportunités perdues**
-   - Demandes techniciens (93.6K€) + Clients SAV (100K€) + Devis terrain (45K€)
-   - 💰 294K€/an
+   - Demandes techniciens + Clients SAV + Devis terrain non exploités
+   - 💰 Potentiel commercial important (quantification requise)
 
 ---
 
@@ -200,15 +200,16 @@ Service-Client/
 - ✅ RGPD compliant (EU Cloud)
 
 **Composantes** :
-- **Phase 1 (M1-3)** : HubSpot + Templates + Planning → 68K€
-- **Phase 2 (M4-6)** : CTI Téléphonie + Sync SAGE + Portail → 77K€
-- **Phase 3 (M7-18)** : App Mobile + Chatbot IA + ML → 50K€
-- **Run 18 mois** : Licences + maintenance → 11K€
+- **Phase 1 (M1-3)** : HubSpot + Templates + Planning
+- **Phase 2 (M4-6)** : CTI Téléphonie + Sync SAGE + Portail
+- **Phase 3 (M7-18)** : App Mobile + Chatbot IA + ML
+- **Run 18 mois** : Licences + maintenance
 
-**Investissement total 18 mois** : 206K€
-**Gains annuels récurrents** : 468.9K€/an
-**ROI 2 ans** : +720K€ (331%)
-**Payback** : 5-6 mois
+⚠️ **Chiffrage détaillé nécessite étude de faisabilité précise**
+**Investissement total 18 mois** : À chiffrer selon solution retenue
+**Gains attendus** : Opérationnels et commerciaux significatifs (mesure baseline requise)
+**ROI** : À calculer avec données réelles après baseline
+**Payback** : Rapide attendu (validation après pilote)
 
 ---
 
@@ -220,18 +221,18 @@ Service-Client/
 
 2. ✅ **Templates mails**
    - 20-30 templates types
-   - Gain : 165h/an
+   - Gain : Temps rédaction réduit significativement (à mesurer)
 
 3. ✅ **Planning partagé en ligne**
    - Calendly ou HubSpot
-   - Gain : 825h/an
+   - Gain : Temps prise RDV réduit drastiquement (à mesurer)
 
 4. ✅ **Questionnaire satisfaction automatisé**
    - TypeForm ou HubSpot
    - Envoi auto J+2
    - Relances J+7
 
-**ROI Quick Wins (3 mois)** : 150h économisées, satisfaction +15%
+**Gains Quick Wins (3 mois)** : Temps économisé substantiel, satisfaction améliorée (mesures baseline requises)
 
 ---
 
@@ -267,15 +268,15 @@ Service-Client/
 ### Diagrammes Disponibles (12)
 
 - **Sequence** : Appel client actuel (système post-it)
-- **Activity** : Processus prise RDV (48h)
+- **Activity** : Processus prise RDV (amélioration visée)
 - **Use Case** : Acteurs et interactions
 - **State** : Cycle de vie ticket (cible)
 - **Component** : Architecture cible (HubSpot + CTI)
 - **Class** : Modèle objet (Client, Ticket, RDV...)
 - **Deployment** : Infrastructure cloud (HubSpot EU, Azure)
-- **Timing** : Timeline comparée (48h → 2min)
-- **Mind Map** : Pain points (748K€)
-- **WBS** : Work Breakdown Structure (206K€)
+- **Timing** : Timeline comparée (amélioration drastique)
+- **Mind Map** : Pain points (impact quantitatif)
+- **WBS** : Work Breakdown Structure (chiffrage à définir)
 - **Gantt** : Comparaison avant/après
 - **Network** : Flux de données (sécurité RGPD)
 
@@ -287,8 +288,8 @@ Service-Client/
   - Audit complet Service Client (plan d'action 700+ lignes)
   - Persona détaillé Claire + journey maps
   - Architecture actuelle vs cible
-  - Pain points quantifiés (748K€/an)
-  - 3 options avec ROI détaillé
+  - Pain points identifiés (quantification requise)
+  - 3 options avec analyse comparative
   - 12 diagrammes UML PlantUML
   - Synthèse exécutive pour direction
   - Architecture technique complète (IT + Data/ML)
@@ -302,8 +303,8 @@ Ce dossier documente:
 
 - État ACTUEL (pain points, système post-it)
 - Architecture CIBLE (HubSpot CRM + intégrations)
-- Plan d'implémentation détaillé (18 mois, 206K€)
-- ROI business case (720K€ sur 2 ans, payback 5-6 mois)
+- Plan d'implémentation détaillé (18 mois, chiffrage à définir)
+- Business case (gains attendus significatifs, ROI à calculer après baseline)
 
 ---
 
@@ -315,7 +316,7 @@ Ce dossier documente:
 - [Synthèse Executive](docs/SYNTHESE_EXECUTIVE.md) - Business case
 - [Persona & Pain Points](docs/01_PERSONAS_Pain_Points.md) - Claire
 - [Architecture Actuelle](docs/02_ARCHITECTURE_Actuelle_Chaos.md) - Système post-it
-- [Journey Maps](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) - 48h → 2min
+- [Journey Maps](docs/03_JOURNEY_MAPS_Parcours_Utilisateurs.md) - Amélioration drastique visée
 
 ### Architecture & Implémentation
 
@@ -331,4 +332,5 @@ Ce dossier documente:
 
 **📧 Contact:** Service Client - Duret Électricité
 **🎯 Objectif:** Transformer service réactif → proactif & digital
-**💰 Enjeu:** 748K€/an de pertes → 720K€ de gains sur 2 ans (ROI 331%)
+**💰 Enjeu:** Gains opérationnels et commerciaux significatifs (quantification après baseline terrain)
+**⚠️ Note:** Chiffrage précis requis via étude de faisabilité détaillée

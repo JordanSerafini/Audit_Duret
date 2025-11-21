@@ -14,9 +14,10 @@
 >
 > **Solution recommandée** : ERP/CRM Terrain (solutions du marché) + App mobile techniciens + Portail client.
 >
-> **Investissement** : À chiffrer lors de l'étude de faisabilité détaillée
+> ⚠️ **Note méthodologique** : Chiffrage détaillé nécessite étude de faisabilité précise
+> **Investissement** : À définir selon solution retenue et périmètre exact
 > **Gains attendus** : Opérationnels et commerciaux significatifs
-> **ROI** : À calculer avec données réelles
+> **ROI** : À calculer après baseline measurements terrain
 
 ---
 
@@ -67,7 +68,7 @@
 - ❌ **Déplacements non optimisés** (pas de zoning intelligent)
 - ❌ **App mobile limitée** (pas de mode offline, pas de signature électronique)
 
-**Temps perdu** : Important par technicien (CERFA + admin)
+**Temps perdu** : Important par technicien (CERFA + admin) - À mesurer précisément via chronométrage terrain
 
 ---
 
@@ -79,7 +80,7 @@
 - ❌ **Ressaisies multiples** (Excel → GAO → Outlook)
 - ❌ **Pas d'alertes automatiques** (fin contrat, interventions dues)
 
-**Temps perdu** : Important (RDV + double saisies)
+**Temps perdu** : Important (RDV + double saisies) - À mesurer précisément via chronométrage terrain
 
 ---
 
@@ -150,14 +151,14 @@
 ### Coût du Statu Quo
 
 **Impact continu** :
-- Perte de temps et productivité
-- Opportunités commerciales manquées
-- Insatisfaction clients
+- Perte de temps et productivité (quantification via baseline terrain requise)
+- Opportunités commerciales manquées (devis terrain impossibles actuellement)
+- Insatisfaction clients (satisfaction à mesurer avant transformation)
 - Perte compétitivité vs concurrents digitaux
-- Stress équipes (turnover techniciens)
+- Stress équipes (turnover techniciens, impact RH à évaluer)
 - Image "pas moderne"
 
-**Note :** Chiffrage précis à établir lors de l'étude de faisabilité
+**Approche recommandée** : Mesures baseline terrain avant chiffrage précis des coûts d'inaction
 
 ---
 
@@ -166,42 +167,44 @@
 #### Option A : Solution Complète ERP Terrain (Recommandé)
 
 **Investissement** :
-- ERP/CRM Terrain (solutions du marché) : À chiffrer
-- App mobile technicien (native ou custom) : À chiffrer
-- Portail client (intégré ou custom) : À chiffrer
-- Intégration GAO actuel : À chiffrer
-- Formation : À chiffrer
-- Licences et maintenance : À chiffrer
+⚠️ **Chiffrage détaillé nécessite étude de faisabilité précise**
+- ERP/CRM Terrain (solutions du marché) : À chiffrer selon solution retenue
+- App mobile technicien : À chiffrer selon périmètre fonctionnel
+- Portail client : À chiffrer selon niveau personnalisation
+- Intégration GAO actuel : À chiffrer après audit API technique
+- Formation : À chiffrer selon nombre utilisateurs et durée
+- Licences et maintenance : À chiffrer selon éditeur
 
-**Total** : **À chiffrer lors de l'étude de faisabilité**
+**Total** : **À définir lors de l'étude de faisabilité détaillée**
 
-**Gains attendus** :
-- CERFA digitalisé → Gain de temps important
-- Devis terrain → Opportunités captées
-- Pointage digital → Refacturation améliorée
-- Optimisation tournées → Réduction déplacements
-- Planning RDV automatisé → Gain de temps
-- Enquête satisfaction auto → Rétention clients
-- Alertes renouvellement → Amélioration CA
+**Gains attendus** (à mesurer après baseline terrain) :
+- CERFA digitalisé → Gain de temps substantiel (mesure baseline requise)
+- Devis terrain → Opportunités captées (taux conversion à mesurer)
+- Pointage digital → Refacturation améliorée (impact CA à quantifier)
+- Optimisation tournées → Réduction déplacements (km économisés à mesurer)
+- Planning RDV automatisé → Gain de temps significatif (mesure baseline requise)
+- Enquête satisfaction auto → Rétention clients (NPS à mesurer avant/après)
+- Alertes renouvellement → Amélioration CA (taux renouvellement à mesurer)
 
-**ROI** : À calculer avec données réelles mesurées
+**ROI** : À calculer après baseline measurements + validation pilote
 
 ---
 
 #### Option B : App Mobile Custom + Portail
 
 **Investissement** :
-- App mobile React Native : À chiffrer
-- Portail client : À chiffrer
-- Backend API : À chiffrer
-- Formation : À chiffrer
-- Maintenance : À chiffrer
+⚠️ **Chiffrage détaillé nécessite étude de faisabilité précise**
+- App mobile développement custom : À chiffrer selon périmètre fonctionnel
+- Portail client : À chiffrer selon niveau fonctionnalités
+- Backend API : À chiffrer selon complexité intégrations
+- Formation : À chiffrer selon durée et utilisateurs
+- Maintenance annuelle : À chiffrer (coûts récurrents développement custom)
 
-**Total** : **À chiffrer**
+**Total** : **À définir lors de l'étude de faisabilité**
 
-**Gains annuels** : Gains partiels (pas de CRM complet)
+**Gains attendus** : Gains partiels (pas de CRM complet, fonctionnalités limitées)
 
-**ROI** : À calculer, probablement moins avantageux que l'Option A
+**ROI** : À calculer, probablement moins avantageux que l'Option A (coûts maintenance élevés)
 
 ---
 
@@ -209,14 +212,14 @@
 
 | Critère | Option A (ERP Terrain) | Option B (Custom) |
 |---------|------------------------|-------------------|
-| Investissement | À chiffrer | À chiffrer |
-| Gains/an | Significatifs | Partiels |
-| ROI | À calculer | À calculer |
-| Payback | Rapide attendu | Plus long |
+| Investissement | À chiffrer (étude faisabilité) | À chiffrer (étude faisabilité) |
+| Gains/an | Significatifs (baseline requise) | Partiels (baseline requise) |
+| ROI | À calculer après pilote | À calculer après pilote |
+| Payback | Rapide attendu | Plus long attendu |
 | Risque | Faible (solution éprouvée) | Moyen (développement) |
-| Maintenance | Incluse éditeur | À prévoir en plus |
+| Maintenance | Incluse éditeur | Coûts récurrents élevés |
 | Évolutivité | Forte (écosystème) | Moyenne |
-| Intégrations | Natives (nombreuses) | À développer |
+| Intégrations | Natives (nombreuses) | À développer (coûts) |
 | **Recommandation** | ⭐⭐⭐ **OUI** | ⭐⭐ Possible |
 
 ---
@@ -227,11 +230,11 @@ L'optimisation des tournées et la maintenance prédictive sont des leviers maje
 
 ### 1. Optimisation de Tournées (Routing AI)
 *   **Concept** : Algorithme qui recalcule en temps réel le planning des techniciens selon les urgences et la géolocalisation.
-*   **Gain** : 20% de trajets en moins, 1 intervention de plus par jour et par technicien.
+*   **Gain attendu** : Réduction substantielle des trajets, amélioration du nombre d'interventions par jour (à mesurer via pilote)
 
 ### 2. Maintenance Prédictive
 *   **Concept** : Analyse de l'historique des pannes pour suggérer le remplacement préventif de pièces avant la panne critique.
-*   **Gain** : Satisfaction client maximale, intervention planifiée (moins chère) vs urgence (coûteuse).
+*   **Gain attendu** : Amélioration satisfaction client, réduction interventions urgentes (impact à mesurer)
 
 ---
 
@@ -284,7 +287,7 @@ L'optimisation des tournées et la maintenance prédictive sont des leviers maje
 - ✅ Signature électronique
 - ✅ Pointage arrivée/départ GPS
 
-**Coût Phase 1 : À chiffrer**
+**Coût Phase 1 : À chiffrer selon solution retenue et périmètre**
 
 ---
 
@@ -301,7 +304,7 @@ L'optimisation des tournées et la maintenance prédictive sont des leviers maje
   - Interventions automatiques (contrats)
   - Relances satisfaction
 
-**Coût Phase 2 : À chiffrer**
+**Coût Phase 2 : À chiffrer selon complexité intégrations**
 
 ---
 
@@ -312,14 +315,14 @@ L'optimisation des tournées et la maintenance prédictive sont des leviers maje
 - ✅ Intégration comptabilité SAGE (facturation auto)
 - ✅ Certificats mise en service digitalisés
 
-**Coût Phase 3 : À chiffrer**
+**Coût Phase 3 : À chiffrer selon périmètre fonctionnel**
 
 ---
 
-**Run 18 mois : À chiffrer**
-- Licences ERP : À chiffrer
-- Formation continue : À chiffrer
-- Support éditeur : Généralement inclus
+**Run 18 mois : À chiffrer lors étude faisabilité**
+- Licences ERP : À chiffrer selon éditeur et nombre utilisateurs
+- Formation continue : À chiffrer selon besoins évolutifs
+- Support éditeur : Généralement inclus dans licences
 
 ---
 
@@ -376,7 +379,8 @@ L'optimisation des tournées et la maintenance prédictive sont des leviers maje
 PHASE 1         PHASE 2         PHASE 3         RUN
 Quick Wins      Intégrations    Excellence
 M1-3            M4-6            M7-18
-À chiffrer      À chiffrer      À chiffrer      À chiffrer
+Chiffrage       Chiffrage       Chiffrage       Chiffrage
+à définir       à définir       à définir       à définir
 ════════════════════════════════════════════════════════════════
 
 │     🚀      │    🔗      │    ⭐     │    ▶️     │
@@ -391,7 +395,7 @@ M1-3            M4-6            M7-18
 
 ### Planning Détaillé
 
-#### 🚀 PHASE 1 : Quick Wins (M1-3) - 30K€
+#### 🚀 PHASE 1 : Quick Wins (M1-3)
 
 **Objectif** : Digitaliser rapports interventions, supprimer CERFA papier
 
@@ -431,7 +435,7 @@ M1-3            M4-6            M7-18
 
 ---
 
-#### 🔗 PHASE 2 : Intégrations (M4-6) - 35K€
+#### 🔗 PHASE 2 : Intégrations (M4-6)
 
 **Objectif** : Portail client, devis terrain, workflows automatisés
 
@@ -470,7 +474,7 @@ M1-3            M4-6            M7-18
 
 ---
 
-#### ⭐ PHASE 3 : Excellence (M7-18) - 25K€
+#### ⭐ PHASE 3 : Excellence (M7-18)
 
 **Objectif** : Zoning IA, enquête satisfaction, analytics
 
@@ -533,9 +537,9 @@ M1-3            M4-6            M7-18
 
 **Mitigation** :
 ✅ **Pilote** : 2 techniciens volontaires d'abord (Gaëtan + 1 junior)
-✅ **Quick Win visible** : 1er rapport digital en 3 min (vs 12 min CERFA)
-✅ **Formation** : 2 sessions × 3h (pratique terrain)
-✅ **Support** : Hotline 8h-18h M1-3
+✅ **Quick Win visible** : Rapport digital rapide (gain temps substantiel vs CERFA papier, mesure baseline requise)
+✅ **Formation** : 2 sessions pratique terrain
+✅ **Support** : Hotline pendant phase déploiement
 ✅ **Incentive** : Système de motivation à définir
 
 **Probabilité après mitigation** : 10%
@@ -622,13 +626,13 @@ M1-3            M4-6            M7-18
 
 | Critère | Valeur |
 |---------|--------|
-| **Investissement** | À chiffrer (étude de faisabilité) |
-| **Gains annuels** | Significatifs (à mesurer) |
-| **ROI** | À calculer avec données réelles |
-| **Payback** | Rapide attendu |
-| **Risque** | Faible (solution éprouvée) |
-| **Impact équipes** | Réduction stress, amélioration satisfaction |
-| **Impact clients** | Amélioration satisfaction et rétention |
+| **Investissement** | À chiffrer lors de l'étude de faisabilité détaillée |
+| **Gains attendus** | Significatifs (mesure baseline terrain requise) |
+| **ROI** | À calculer après baseline + validation pilote |
+| **Payback** | Rapide attendu (validation après pilote) |
+| **Risque** | Faible (solution éprouvée marché) |
+| **Impact équipes** | Réduction stress, amélioration satisfaction (à mesurer) |
+| **Impact clients** | Amélioration satisfaction et rétention (NPS à mesurer) |
 
 ---
 
