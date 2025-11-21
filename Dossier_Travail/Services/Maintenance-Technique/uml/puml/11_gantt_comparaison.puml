@@ -1,0 +1,39 @@
+@startgantt Gantt_Comparaison_Intervention
+
+title Comparaison Temps Avant Apres Intervention SAV
+
+printscale daily
+
+project starts 2025-11-17
+
+[SYSTEME ACTUEL - 2h44] as [Actuel] lasts 1 day and is colored in Red
+
+[Preparation tournee] as [A1] lasts 1 day and is colored in LightCoral and starts at [Actuel]'s start
+
+[Deplacement client] as [A2] lasts 1 day and is colored in LightCoral and starts at [A1]'s end
+
+[Appel Clothilde infos] as [A3] lasts 1 day and is colored in Orange and starts at [A2]'s end
+
+[Intervention technique] as [A4] lasts 1 day and is colored in LightGreen and starts at [A3]'s end
+
+[CERFA papier remplir] as [A5] lasts 1 day and is colored in Red and starts at [A4]'s end
+
+[Photos tel perso] as [A6] lasts 1 day and is colored in Orange and starts at [A5]'s end
+
+[Signature papier] as [A7] lasts 1 day and is colored in LightCoral and starts at [A6]'s end
+
+[Retour scan CERFA] as [A8] lasts 1 day and is colored in Red and starts at [A7]'s end
+
+-- VERSUS --
+
+[SYSTEME CIBLE - 1h58] as [Cible] lasts 1 day and is colored in LightGreen and starts at [Actuel]'s start
+
+[Preparation tournee C] as [C1] lasts 1 day and is colored in LightGreen and starts at [Cible]'s start
+
+[Deplacement optimise] as [C2] lasts 1 day and is colored in LightGreen and starts at [C1]'s end
+
+[Intervention technique C] as [C3] lasts 1 day and is colored in LightGreen and starts at [C2]'s end
+
+[Rapport digital app] as [C4] lasts 1 day and is colored in LightGreen and starts at [C3]'s end
+
+@endgantt

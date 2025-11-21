@@ -1,0 +1,169 @@
+@startuml Class_Modele_Objet
+
+title Modèle Objet - Service Client
+
+class Client {
+  +id: String
+  +nom: String
+  +prenom: String
+  +telephone: String
+  +email: String
+  +adresse: String
+  +dateCreation: Date
+  +statut: Enum
+  +nps: Integer
+  --
+  +appeler()
+  +envoyerMail()
+  +calculerChurnRisk()
+}
+
+class Ticket {
+  +id: String
+  +sujet: String
+  +description: String
+  +priorite: Enum
+  +statut: Enum
+  +dateCreation: Date
+  +dateResolution: Date
+  +sla: Integer
+  --
+  +assigner(Utilisateur)
+  +changerStatut(Enum)
+  +fermer()
+}
+
+class Appel {
+  +id: String
+  +dateHeure: DateTime
+  +duree: Integer
+  +type: Enum
+  +enregistrement: String
+  --
+  +enregistrer()
+  +transcrire()
+}
+
+class RDV {
+  +id: String
+  +dateHeure: DateTime
+  +duree: Integer
+  +statut: Enum
+  +technicien: Technicien
+  +client: Client
+  --
+  +planifier()
+  +confirmer()
+  +annuler()
+  +reprogrammer()
+}
+
+class Intervention {
+  +id: String
+  +dateHeure: DateTime
+  +duree: Integer
+  +typeIntervention: Enum
+  +bonIntervention: String
+  +photos: List<Photo>
+  +signature: Binary
+  --
+  +commencer()
+  +terminer()
+  +genererPDF()
+}
+
+class Devis {
+  +id: String
+  +numero: String
+  +montant: Decimal
+  +statut: Enum
+  +dateCreation: Date
+  +dateValidite: Date
+  +lignes: List<LigneDevis>
+  --
+  +generer()
+  +envoyer()
+  +valider()
+  +refuser()
+}
+
+class Photo {
+  +id: String
+  +url: String
+  +latitude: Decimal
+  +longitude: Decimal
+  +dateHeure: DateTime
+  +type: Enum
+}
+
+class QuestionnaireResponse {
+  +id: String
+  +note: Integer
+  +commentaire: String
+  +date: Date
+  +nps: Integer
+}
+
+class Technicien {
+  +id: String
+  +nom: String
+  +prenom: String
+  +telephone: String
+  +email: String
+  +specialites: List<String>
+  --
+  +getPlanning()
+  +getDispo()
+}
+
+class Utilisateur {
+  +id: String
+  +nom: String
+  +prenom: String
+  +email: String
+  +role: Enum
+  --
+  +authentifier()
+  +assignerTicket(Ticket)
+}
+
+Client "1" -- "0..*" Ticket : a >
+Client "1" -- "0..*" Appel : passe >
+Client "1" -- "0..*" RDV : prend >
+Client "1" -- "0..*" Devis : demande >
+
+Ticket "1" -- "1" Utilisateur : assigné à <
+Ticket "1" -- "0..*" Appel : lié à >
+
+RDV "1" -- "1" Technicien : assigné à >
+RDV "1" -- "0..1" Intervention : donne lieu à >
+
+Intervention "1" -- "0..*" Photo : contient >
+Intervention "1" -- "0..1" Devis : génère >
+
+Client "1" -- "0..*" QuestionnaireResponse : répond à >
+Intervention "1" -- "0..1" QuestionnaireResponse : évalue >
+
+note right of Client
+  **Source de données:**
+  - HubSpot CRM (principal)
+  - SAGE (sync)
+  - MDE ERP (sync)
+end note
+
+note right of Ticket
+  **Création automatique:**
+  - Appel (CTI)
+  - Mail (parsing)
+  - Portail (formulaire)
+  - App mobile (technicien)
+end note
+
+note right of Intervention
+  **App Mobile Technicien**
+  Bon intervention digital +
+  Photos géolocalisées +
+  Signature électronique
+end note
+
+@enduml

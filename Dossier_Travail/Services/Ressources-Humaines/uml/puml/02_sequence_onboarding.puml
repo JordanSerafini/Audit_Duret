@@ -1,0 +1,297 @@
+@startuml Onboarding_Nouveau_Salarie_Actuel
+
+title Onboarding Nouveau Salarié - 39 TÂCHES MANUELLES
+
+actor "Nouveau\nSalarié" as New #98FB98
+actor "Sophie\n(RH)" as Sophie #FFB6C1
+actor "IT" as IT #ADD8E6
+actor "Logistique" as Log #FFD700
+actor "Manager" as Mgr #FFDAB9
+actor "CSE" as CSE #DDA0DD
+participant "Excel\nChecklist" as Excel #90EE90
+participant "POPAYE" as Popaye #FFD700
+participant "SAGE" as Sage #FF6B6B
+database "Papier\nDossiers" as Paper #FFCCCC
+
+== JOUR -7 : Signature contrat ==
+
+Sophie -> Excel: Ouvre checklist onboarding
+note right #FF6B6B
+  🔴 39 tâches manuelles !
+  "Checklist_Onboarding_2025.xlsx"
+end note
+
+Sophie -> IT: Email demande PC/téléphone
+Sophie -> Log: Email demande véhicule/EPI
+Sophie -> Mgr: Email planning intégration
+Sophie -> CSE: Email info nouveauté
+note right #FF6B6B
+  🔴 **4-5 EMAILS MANUELS**
+  Risque oubli destinataire
+  ⏰ 30 min
+end note
+
+Sophie -> Sophie: DPAE (net-entreprises)
+note right
+  ⏰ 15 min
+end note
+
+Sophie -> Paper: Crée dossier administratif
+note right #FF6B6B
+  🔴 Dossier papier en 2025:
+  • Imprime contrat
+  • Classe documents
+  ⏰ 20 min
+end note
+
+Sophie -> Paper: Registre du personnel
+note right #FF6B6B
+  🔴 Registre papier obligatoire
+  ⏰ 10 min
+end note
+
+Sophie -> Popaye: Crée utilisateur
+note right #FFD700
+  ⚠️ Interface peu intuitive
+  ⏰ 15 min
+end note
+
+Sophie -> Sage: Crée fiche salarié
+note right #FF6B6B
+  🔴 **RE-SAISIE #3**
+  Mêmes données que POPAYE
+  ⏰ 20 min
+end note
+
+Sophie -> Excel: Mise à jour effectifs
+note right #FF6B6B
+  🔴 **RE-SAISIE #4**
+  "Effectifs_2025.xlsx"
+  ⏰ 5 min
+end note
+
+Sophie -> Excel: Mise à jour planning CP
+note right #FF6B6B
+  🔴 **RE-SAISIE #5**
+  "Planning_CP_2025.xlsx"
+  ⏰ 5 min
+end note
+
+Sophie -> Excel: Mise à jour tableau mutuelle
+note right #FF6B6B
+  🔴 **RE-SAISIE #6**
+  ⏰ 5 min
+end note
+
+note over Sophie #FFFFCC
+  **MATIN: 2h30 déjà**
+  Et seulement l'administratif...
+  😭
+end note
+
+Sophie -> Sophie: RDV médecine travail
+note right
+  ⏰ 15 min (appel)
+end note
+
+Sophie -> Sophie: Empowill + Radiance
+note right
+  ⏰ 20 min
+end note
+
+Sophie -> Sophie: Carte BTP en ligne
+note right
+  ⏰ 20 min
+end note
+
+Sophie -> Sophie: Passeport sécurité
+note right
+  ⏰ 15 min
+end note
+
+Sophie -> Sophie: HelloCSE
+note right
+  ⏰ 10 min
+end note
+
+Sophie -> IT: Relance "Où en êtes-vous ?"
+Sophie -> Log: Relance "Où en êtes-vous ?"
+note right #FF6B6B
+  🔴 Pas de suivi automatique
+  ⏰ 20 min (emails + appels)
+end note
+
+Sophie -> Mgr: Planifie parcours intégration
+note right
+  ⏰ 30 min
+end note
+
+Sophie -> Excel: Coche tâches faites
+note right #FF6B6B
+  🔴 Suivi manuel primitif
+  "Encore 20 tâches à faire..."
+end note
+
+note over Sophie #FFFFCC
+  **JOUR -7 TOTAL: 5h**
+  ⏰⏰⏰⏰⏰
+end note
+
+== JOURS -6 à -1 : Préparation ==
+
+loop Chaque jour
+    Sophie -> IT: Relance quotidienne
+    Sophie -> Log: Relance quotidienne
+    note right #FF6B6B
+      🔴 Pas de workflow
+      ⏰ 30 min/jour
+    end note
+
+    IT -> IT: Préparation PC/téléphone
+    Log -> Log: Préparation véhicule/EPI
+
+    Excel <-- Sophie: Mise à jour checklist
+end
+
+note over Sophie #FFFFCC
+  **JOURS -6 à -1: 2h30 total**
+  (relances + préparation)
+end note
+
+Sophie -> Sophie: Prépare livret accueil
+note right #FF6B6B
+  🔴 Imprime, relie
+  ⏰ 30 min
+end note
+
+Sophie -> New: Message bienvenue S-1
+note right #FFFFCC
+  😊 Petit plaisir RH
+  ⏰ 15 min
+end note
+
+Sophie -> Sophie: Demande photo trombinoscope
+Sophie -> Sophie: MAJ trombinoscope PDF
+note right #FF6B6B
+  🔴 Trombinoscope PDF statique
+  ⏰ 20 min
+end note
+
+== JOUR 1 : Premier jour ==
+
+New -> Sophie: Arrivée 8h
+note right #FFFFCC
+  😊 Accueil positif
+end note
+
+Sophie -> New: Tour bureaux
+note right
+  ⏰ 30 min
+end note
+
+Sophie -> IT: "Où est le PC ?"
+IT -> Sophie: "Désolé, pas encore prêt..."
+note right #FF6B6B
+  🔴 Manque suivi temps réel
+  Coordination difficile
+end note
+
+Sophie -> IT: Attente + récupération PC
+note right #FF6B6B
+  ⏰ 1h perdu
+end note
+
+Sophie -> New: Remise PC, téléphone, badge
+
+Sophie -> New: Signature documents
+note right
+  • Contrat
+  • RI
+  • Mutuelle
+  • Charte informatique
+  ⏰ 30 min
+end note
+
+Sophie -> Mgr: Présente nouveau salarié
+Mgr -> New: Présentation équipe
+note right #FFFFCC
+  😊 Moment agréable
+  ⏰ 30 min
+end note
+
+Log -> New: Remise véhicule, EPI, outillage
+
+note over Sophie #FFFFCC
+  **JOUR 1: 2h30**
+  (Sophie)
+end note
+
+== JOUR +10 : Rapport étonnement 1 ==
+
+Sophie -> Sophie: Rappel manuel Outlook
+note right #FF6B6B
+  🔴 Pas de rappel auto
+end note
+
+Sophie -> New: Email demande retour
+note right
+  ⏰ 10 min
+end note
+
+New -> Sophie: Email retour expérience
+
+Sophie -> Sophie: Lit, classe
+note right #FF6B6B
+  🔴 Pas d'exploitation data
+  Pas d'analyse structurée
+  ⏰ 15 min
+end note
+
+== JOUR +30 : Rapport étonnement 2 ==
+
+Sophie -> Sophie: Rappel manuel Outlook
+Sophie -> New: Email demande retour J+1 mois
+New -> Sophie: Retour
+
+Sophie -> Sophie: Lit, classe
+note right #FF6B6B
+  🔴 Même processus répétitif
+  ⏰ 15 min
+end note
+
+note over Sophie #FFFFCC
+  Fin onboarding
+  😮‍💨 Soulagement
+end note
+
+== BILAN ONBOARDING ==
+
+note over Sophie, New #FFCCCC
+  **MÉTRIQUES ONBOARDING**
+
+  ⏰ Durée totale: 2 semaines
+  👤 Temps Sophie: **8-10h**
+     • Jour -7: 5h
+     • Jours -6 à -1: 2h30
+     • Jour 1: 2h30
+     • Suivis J+10, J+30: 30 min
+
+  ✅ Nombre de tâches: **39**
+  🔧 Nombre d'outils: **12**
+  👥 Personnes contactées: **4-5**
+  📧 Nombre de relances: **15-20**
+  ❌ Risque oubli: **Important**
+
+  😰 Stress: Élevé
+  🔴 Points de friction: **18**
+
+  ⏰ Temps unitaire: **8-10h par embauche**
+  📊 Volume: ~30 embauches/an
+
+  💬 Citation Sophie:
+  "39 tâches pour une embauche. Tout est manuel.
+   Si on avait un workflow automatisé, je
+   gagnerais beaucoup de temps..."
+end note
+
+@enduml

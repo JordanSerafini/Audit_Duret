@@ -1,0 +1,55 @@
+@startuml Sequence_Remontee_Incident
+
+title Remontee Incident Chantier (Avant vs Apres)
+
+actor "Marc\n(Chef Chantier)" as Marc
+participant "WhatsApp\n(Actuel)" as WA
+participant "App Mobile\n(Cible)" as App
+participant "Backend\nCloud" as Backend
+participant "Responsable\nAffaire" as RA
+participant "Bureau\nEtudes" as BE
+
+== AVANT : WhatsApp (Aucune Tracabilite) ==
+
+Marc -> WA : Message texte\n"Probleme alimentation tableau B2"
+note right: Aucune structure,\npas de categorie
+
+WA -> RA : Notification WhatsApp
+note right: Melange avec messages perso,\nse perd dans fil conversation
+
+RA -> RA : Lit message (si vu...)
+note right: Peut etre oublie,\naucun suivi statut
+
+RA -> Marc : Reponse WhatsApp\n(quand disponible)
+note right: Pas de traitement systematique,\npas d'historique structure
+
+== APRES : Application Mobile (Tracable) ==
+
+Marc -> App : Formulaire Incident\n- Type: Probleme technique\n- Categorie: Electrique\n- Urgence: Haute\n- Photo + Description
+note right: Structure,\ncategorie,\nphoto automatique
+
+App -> Backend : API POST /incidents\nJSON structure
+Backend -> Backend : Creation incident\nID #1234\nStatut: Nouveau
+Backend -> RA : Notification Push\n+ Email si urgent
+Backend -> BE : Notification (copie)\nsi probleme technique
+
+RA -> Backend : Prise en charge\nStatut: En cours
+Backend -> Marc : Notification\n"Incident #1234 pris en charge par RA"
+
+RA -> BE : Consultation\n(si necessaire)
+BE -> Backend : Ajout commentaire\nsolution technique
+Backend -> Marc : Notification\n"Commentaire ajoute"
+
+RA -> Backend : Resolution\nStatut: Resolu
+Backend -> Marc : Notification\n"Incident #1234 resolu"
+
+note over Marc, BE
+  **GAINS** :
+  - 100% tracabilite (vs ~20%)
+  - Suivi statut temps reel
+  - Historique complet
+  - Photos attachees
+  - Pas de perte information
+end note
+
+@enduml

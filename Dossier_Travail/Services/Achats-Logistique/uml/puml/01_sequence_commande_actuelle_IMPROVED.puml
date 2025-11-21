@@ -1,0 +1,87 @@
+@startuml
+!theme plain
+autonumber
+
+header Etat des lieux - PROCESSUS ACTUEL
+title Sequence : Commande de Materiel (Le parcours du combattant)
+
+box "Chantier" #White
+    actor "Marc\n(Chef Chantier)" as Marc
+end box
+
+box "Bureau / Siege" #AliceBlue
+    actor "Sylvie\n(Achats)" as Sylvie
+    database "Sage MDE" as Sage
+    collections "Excel\n(Suivi/Fourn.)" as Excel
+    participant "Email" as Email
+end box
+
+box "Logistique / Externe" #White
+    actor "Eric\n(Depot)" as Eric
+    participant "Fournisseur" as Fourn
+end box
+
+== Jour 1 - Identification du besoin ==
+
+Marc -> Marc : Besoin câble 3G2.5
+Marc -> Marc : Remplit bon papier (5 min)\n<color:red>Note: Référence imprécise</color>
+
+Marc -x Sylvie : Appel (Pas de réponse)
+note right of Marc #FFCCCC : 🔴 25 min perdues à attendre
+
+Marc -> Sylvie : Appel réussi (10h45)
+activate Sylvie
+
+Sylvie -> Sage : Recherche "câble 3G2.5"
+activate Sage
+Sage --> Sylvie : 12 résultats trouvés
+deactivate Sage
+note right of Sage #FFCCCC : 🔴 12 références pour 1 produit !\nRisque d'erreur élevé
+
+Sylvie -> Sage : Sélectionne une référence (au hasard?)
+Sylvie -> Excel : Recherche contact fournisseur
+Sylvie -> Fourn : Appel téléphonique
+note right of Sylvie #FFCCCC : 🔴 Pas de commande en ligne
+
+Sylvie -> Email : Rédaction email confirmation
+note left of Email #FFCCCC : 🔴 Ressaisie #4
+Sylvie -> Sage : Saisie commande
+note left of Sage #FFCCCC : 🔴 Ressaisie #5
+Sylvie -> Excel : Saisie suivi
+note left of Excel #FFCCCC : 🔴 Ressaisie #6
+
+Sylvie -> Marc : SMS "Livraison prévue J+2"
+deactivate Sylvie
+
+== Jour 3 - Réception ==
+
+Fourn -> Eric : Livraison matériel
+activate Eric
+Eric -> Eric : Comptage manuel
+note right of Eric #FFCCCC : 🔴 Pas de scanette
+
+Eric -> Sylvie : Appel vérification réf.
+note right of Eric : Nomenclatures incompatibles
+
+Eric -> Sage : Saisie réception (20 min)
+note right of Sage #FFCCCC : 🔴 Ressaisie #7
+
+Eric -> Marc : Notification "Matériel dispo"
+deactivate Eric
+
+Marc -> Eric : Récupération au dépôt
+destroy Marc
+note over Marc #FF0000 : ❌ MAUVAIS CÂBLE !\n🔴 Chantier bloqué 3j\n💰 Perte estimée: 2,400€
+
+== 📊 BILAN PROCESSUS ==
+note over Marc, Fourn #FFCCCC
+  **MÉTRIQUES ACTUELLES**
+  ⏰ Durée: 3 jours vs 2h cible
+  📞 15 appels/commande
+  ♻️ 7 ressaisies manuelles
+  ❌ Taux erreur: 50%
+  💰 Coût erreurs: 60K€/an
+  😭 Stress élevé équipes
+end note
+
+@enduml

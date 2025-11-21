@@ -1,0 +1,123 @@
+@startuml Flux_Transformation_Digitale
+
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.1
+' Type Diagramme: Flux Activité
+' Description: Flux de décision et d'exécution de la transformation digitale
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
+title Flux de Transformation Digitale - De l'Audit à l'Exécution
+
+|Direction|
+start
+
+:🎯 **AUDIT RÉALISÉ**\nNovembre 2025\n8 services, ~100 collaborateurs;
+
+:📊 **Constats**\n• 60+ Excel non connectés\n• Processus 100% manuels\n• Systèmes obsolètes\n• Traçabilité 20-50%\n• Pertes importantes;
+note right: Synthèse globale créée
+
+|CODIR|
+:📋 **Présentation CODIR**\nSynthèse exécutive 5 min;
+
+if (Go/No-Go Transformation ?) then (✅ GO)
+  :💰 **Validation Budget**\nÉtude de faisabilité;
+
+  |Comité Pilotage|
+  :👥 **Constitution Équipe**\n• Sponsor exécutif\n• Chef projet\n• Champions métier;
+
+  :🔍 **Étude Faisabilité**\n(Semaine 3-4)\n• Chiffrage précis\n• Mesure baseline\n• ROI calculé\n• Cahiers charges;
+
+  :🧪 **POCs 3 Projets**\n(Mois 2)\n• SIRH (Lucca, PayFit)\n• CRM (HubSpot gratuit)\n• App Mobile (maquettes);
+
+  |CODIR|
+  if (Go/No-Go Vague 1 ?) then (✅ GO)
+
+    |Équipe Projet|
+    partition "🌊 VAGUE 1 - Quick Wins (M3-M6)" {
+      :🚀 **6 Projets Prioritaires**\n• SIRH Cloud\n• CRM/Ticketing\n• Dashboards BI\n• Templates Devis/PPSPS\n• App Mobile Chantiers\n• RFID Stocks;
+
+      :📚 **Formations Équipes**\n2-3 jours par personne;
+
+      :✅ **Go-Live Progressif**\nService par service;
+
+      :📊 **Mesure Gains Réels**\nBefore/After KPIs;
+    }
+
+    |CODIR|
+    :🎯 **Bilan Vague 1** (M6)\n• Gains mesurés\n• Satisfaction utilisateurs\n• Retour sur investissement;
+
+    if (Go/No-Go Vague 2 ?) then (✅ GO)
+
+      |Équipe Projet|
+      partition "🌊 VAGUE 2 - Structurants (M7-M18)" {
+        :🚀 **6 Projets Majeurs**\n• Migration ERP Odoo\n• Automatisation Paie\n• Plateforme E-Procurement\n• Système Tickets BE\n• Portails Clients\n• APIs Fournisseurs;
+
+        :📚 **Formations Avancées**;
+
+        :✅ **Déploiement Général**;
+
+        :📊 **Mesure Gains Cumulés**;
+      }
+
+      |CODIR|
+      :🎯 **Bilan Vague 2** (M18)\n• Gains cumulés\n• Transformation structurelle\n• Adoption généralisée;
+
+      if (Go/No-Go Vague 3 ?) then (✅ GO)
+
+        |Équipe Projet|
+        partition "🌊 VAGUE 3 - Excellence (M19-M24)" {
+          :🚀 **6 Projets Avancés**\n• ML Prédictions Budgets\n• ML Optimisation Chiffrages\n• ML Prévision Besoins\n• Analytics Avancés\n• Gouvernance Données\n• Culture Data-Driven;
+
+          :📊 **IA/ML Opérationnel**;
+
+          :✅ **Amélioration Continue**;
+        }
+
+        |CODIR|
+        :🎯 **Bilan Final** (M24)\n• Transformation complète\n• ROI global mesuré\n• Excellence opérationnelle;
+
+        :🏆 **TRANSFORMATION\nRÉUSSIE**;
+
+        stop
+
+      else (❌ STOP)
+        :❌ Arrêt Vague 3\nConsolidation acquis;
+        stop
+      endif
+
+    else (❌ STOP)
+      :❌ Arrêt Vague 2\nConsolidation Vague 1;
+      stop
+    endif
+
+  else (❌ STOP)
+    :❌ Arrêt Projet\nPOCs non concluants;
+    stop
+  endif
+
+else (❌ NO-GO)
+  :❌ **Projet Abandonné**\nMaintien status quo;
+
+  note right COLOR_ETAT_ERROR
+    **Conséquences No-Go**:
+    • Pertes actuelles continuent
+    • Aggravation avec croissance
+    • Départs équipes (burn-out)
+    • Turnover techniciens
+    • Retard concurrentiel
+    • Croissance bloquée
+  end note
+
+  stop
+endif
+
+LEGEND_STANDARD()
+
+@enduml

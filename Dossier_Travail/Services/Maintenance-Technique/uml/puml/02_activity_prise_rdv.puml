@@ -1,0 +1,104 @@
+@startuml Activity_Prise_RDV
+
+title Processus Prise RDV Maintenance - ACTUEL vs CIBLE
+
+|#LightCoral|ACTUEL - Processus Manuel|
+start
+:Client souhaite RDV entretien;
+:Appelle Clothilde\n(8h-18h uniquement);
+note right #FF6B6B
+  Dispo 8h-18h uniquement
+  Pas de self-service
+end note
+
+:Clothilde decroche telephone;
+:Recherche client Excel (2 min);
+note right #FF6B6B
+  Donnees eparpillees
+  Pas de CRM
+end note
+
+:Verifie contrat Word (2 min);
+:Consulte planning Outlook (3 min);
+
+if (Creneau dispo ?) then (oui)
+  :Propose creneau;
+else (non)
+  :Recherche autre creneau (5 min);
+  :Propose;
+endif
+
+:Client accepte ou negocie;
+:Saisie Outlook (2 min);
+note right #FF6B6B
+  RE-SAISIE 1
+end note
+
+:Saisie Excel (1 min);
+note right #FF6B6B
+  RE-SAISIE 2
+end note
+
+:Saisie GAO (2 min);
+note right #FF6B6B
+  RE-SAISIE 3
+  Triple saisie manuelle
+end note
+
+:Redaction email confirmation (5 min);
+:Client recoit email;
+#FF6B6B:RDV confirme;
+note right
+  **TEMPS TOTAL: 19 min**
+  Client attend: 8 min
+  Clothilde: 19 min
+  Triple saisie manuelle
+  Dispo 8h-18h uniquement
+end note
+stop
+
+|#LightGreen|CIBLE - Portail Client 24/7|
+start
+:Client souhaite RDV entretien;
+:Se connecte portail web\n(20h30 - soir);
+note right #90EE90
+  Dispo 24/7
+  Self-service
+end note
+
+:Selectionne Prendre RDV;
+:Calendrier affiche creneaux\ndispos zone geographique;
+note right #90EE90
+  Planning temps reel
+  Zone geo automatique
+end note
+
+:Choisit creneau (2 clics);
+:Confirmation automatique;
+note right #90EE90
+  Saisie unique
+  Sync auto ERP
+end note
+
+:Recoit email + SMS rappel J-2;
+note right #90EE90
+  Notifications auto
+  Rappel J-2
+end note
+
+:Clothilde recoit alerte Nouveau RDV;
+:Valide RDV (2 min);
+#90EE90:RDV confirme;
+note right
+  **TEMPS TOTAL: 3 min**
+  Client: 1 min autonome
+  Clothilde: 2 min validation
+  Zero ressaisie
+  Dispo 24/7
+
+  **GAIN: 17 min x 600 RDV**
+  **= 170h/an = 8,500 EUR**
+end note
+stop
+
+@enduml

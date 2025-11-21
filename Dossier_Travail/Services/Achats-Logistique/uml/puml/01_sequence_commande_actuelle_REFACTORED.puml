@@ -1,0 +1,210 @@
+@startuml 01_sequence_commande_actuelle
+
+' === METADATA ===
+' Service: Achats-Logistique
+' Date Creation: 2025-11-20 (Refactored)
+' Auteur: Agent PlantUML Duret
+' Version: 2.0 (refactored avec styles partages)
+' Type Diagramme: Sequence
+' Description: Processus commande materiel etat actuel (chaos) - Version standardisee
+' === FIN METADATA ===
+
+!include ../../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../../Services/_shared/uml/styles/duret_legends.puml
+
+title Processus Commande Materiel - ETAT ACTUEL (CHAOS)
+
+actor "Marc\n(Chef Chantier)" as Marc COLOR_ACTOR_CHANTIER
+actor "Sylvie\n(Achats)" as Sylvie COLOR_ACTOR_BUREAU
+actor "Eric\n(Depot)" as Eric COLOR_ACTOR_DEPOT
+participant "Sage MDE" as Sage COLOR_SYSTEME_LEGACY
+participant "Excel" as Excel COLOR_SYSTEME_EXCEL
+participant "Email" as Email
+participant "Fournisseur" as Fourn COLOR_ACTOR_FOURNISSEUR
+
+== JOUR 1 - Lundi 9h00 ==
+
+note over Marc COLOR_ETAT_WARNING
+  **Besoin identifie**
+  Cable 3G2.5 - 50m
+end note
+
+Marc -> Marc: Cherche bon papier
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Support papier uniquement
+  EMO_TIME 5 min perdu
+end note
+
+Marc -> Marc: Remplit bon a la main
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Reference imprecise
+  "cable 3G2.5" sans details
+end note
+
+Marc -x Sylvie: Appel telephonique
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Pas de reponse
+  En reunion
+end note
+
+Marc -> Marc: Rappelle... 3 fois
+note right COLOR_ETAT_ERROR
+  EMO_TIME 25 minutes perdues
+end note
+
+Marc -> Sylvie: Appel reussi (10h45)
+note over Marc, Sylvie
+  Echange verbal
+  "J'ai besoin de cable..."
+end note
+
+Sylvie -> Sage: Recherche "cable 3G2.5"
+Sage --> Sylvie: 12 resultats !
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL **BASE DONNEES CHAOS**
+  12 references differentes
+  pour le MEME produit:
+  - CABLE-3G2.5-ROUGE-50M
+  - CBL_3G25_R_50
+  - 3G2.5-CABLE-ROUGE
+  - CABLE_3G_2.5_ROUGE
+  - ...
+end note
+
+Sylvie -> Sylvie: Choisit une ref "au hasard"
+note right COLOR_ETAT_WARNING
+  EMO_WARNING Faible chance
+  que ce soit la bonne
+end note
+
+Sylvie -> Excel: Cherche fournisseur
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Donnees eparpillees
+  EMO_TIME 8 min
+end note
+
+Sylvie -> Fourn: Appel telephonique
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Pas de commande en ligne
+  EMO_TIME 15 min au telephone
+end note
+
+Fourn --> Sylvie: "Dispo sous 48h"
+
+Sylvie -> Email: Ecrit email confirmation
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL **RE-SAISIE #4**
+  EMO_RESAISIE Recopie manuellement:
+  - Reference
+  - Quantite
+  - Prix
+  - Adresse
+end note
+
+Sylvie -> Sage: Saisit commande
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL **RE-SAISIE #5**
+end note
+
+Sylvie -> Excel: Saisit dans suivi
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL **RE-SAISIE #6**
+end note
+
+Sylvie -> Marc: SMS "Livraison mercredi"
+
+== JOUR 2 - Mardi ==
+
+note over Marc, Fourn COLOR_ETAT_BLOCKED
+  EMO_BLOCKED **CHANTIER BLOQUE**
+  Attente livraison
+end note
+
+Marc -> Sylvie: Rappelle pour suivi
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Aucune visibilite
+  temps reel
+end note
+
+== JOUR 3 - Mercredi 9h00 ==
+
+Fourn -> Eric: Livraison camion
+
+Eric -> Eric: Cherche bon de commande
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Pas de reference croisee
+  EMO_TIME 15 min a chercher
+end note
+
+Eric -> Eric: Compare references
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL **NOMENCLATURES ≠**
+  Bon: "CBL-3x2.5-R-50"
+  Cmd: "CABLE_3G_2.5_ROUGE"
+  C'est le meme ???
+end note
+
+Eric -> Sylvie: Appel verification
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Pas de tracabilite
+  EMO_TIME 10 min
+end note
+
+Eric -> Eric: Compte manuellement
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL Pas de scan
+  EMO_TIME 10 min
+end note
+
+Eric -> Sage: Saisit reception
+note right COLOR_ETAT_ERROR
+  EMO_CRITICAL **RE-SAISIE #7**
+  Interface complexe
+  EMO_TIME 20 min
+end note
+
+Eric -> Marc: "Materiel dispo"
+
+== JOUR 3 - 16h00 ==
+
+Marc -> Marc: Recupere au depot
+
+Marc -> Marc: Deballage sur chantier
+
+note over Marc COLOR_PROBLEME
+  EMO_ERROR **CATASTROPHE**
+  C'EST LE MAUVAIS CABLE !
+
+  EMO_CRITICAL Chantier bloque
+  Il faut tout recommencer
+end note
+
+Marc -> Sylvie: Appel furieux
+
+note over Marc, Sylvie COLOR_PROBLEME
+  **IL FAUT RECOMMENCER**
+  Tout le processus a refaire...
+end note
+
+== BILAN ==
+
+note over Marc, Fourn COLOR_ETAT_ERROR
+  **METRIQUES PROCESSUS**
+  EMO_TIME Duree totale: **~3 jours**
+  EMO_PHONE Nombreux appels
+  EMO_RESAISIE Multiples re-saisies (7×)
+  EMO_ERROR Taux erreur: **Eleve (30%)**
+  Stress eleve
+  EMO_BLOCKED Chantier bloque
+
+  **COUTS CACHES:**
+  - Temps perdu total: ~6h
+  - Chantier arrete: 2j
+  - Retour materiel: 1j
+  - **COUT TOTAL: ~800€**
+end note
+
+LEGEND_STANDARD()
+
+@enduml

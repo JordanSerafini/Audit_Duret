@@ -1,0 +1,48 @@
+@startuml Processus_Commande_CIBLE
+
+title Processus Commande - CIBLE (Optimisé)
+
+|Chantier (Marc)|
+start
+:Identifie besoin matériel;
+:Ouvre App Mobile Odoo;
+if (Urgence ?) then (Oui)
+  :Scan code-barres produit;
+else (Non)
+  :Recherche catalogue;
+endif
+:Ajoute au panier;
+:Valide demande;
+
+|Bureau (Sylvie)|
+:Reçoit notification;
+:Vérifie demande (Prix/Budget);
+if (Validé ?) then (Oui)
+  :Valide en 1 clic;
+  :Commande envoyée auto;
+else (Non)
+  :Modifie / Rejette;
+  stop
+endif
+
+|Fournisseur|
+:Reçoit commande (Email/EDI);
+:Prépare & Expédie;
+
+|Dépôt (Éric)|
+:Reçoit marchandise;
+:Scan RFID colis/palette;
+:Contrôle quantité auto;
+if (Conforme ?) then (Oui)
+  :Valide réception;
+  :Stock mis à jour auto;
+else (Non)
+  :Signale litige (Photo);
+endif
+
+|Chantier (Marc)|
+:Reçoit notif "Dispo";
+:Récupère matériel;
+stop
+
+@enduml

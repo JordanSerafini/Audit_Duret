@@ -1,0 +1,130 @@
+@startuml Deployment_Infrastructure
+
+title Déploiement Infrastructure - Service Client Cloud
+
+node "Client Web" {
+  component [Navigateur] as Browser
+  component [Portail Client] as PortailClient
+}
+
+node "Mobile iOS/Android" {
+  component [App Mobile\nTechnicien] as AppTech
+}
+
+node "Poste Claire" {
+  component [HubSpot\nInterface Web] as HubSpotUI
+  component [Power BI\nDashboards] as PowerBIUI
+}
+
+cloud "HubSpot Cloud (UE)" {
+  node "Application Tier" {
+    component [HubSpot CRM] as HubSpot
+    component [Ticketing] as Ticketing
+    component [Workflows] as Workflows
+    component [Analytics] as Analytics
+  }
+
+  database "PostgreSQL\nManaged" as DB {
+  }
+
+  node "Cache Layer" {
+    component [Redis] as Redis
+  }
+}
+
+cloud "Azure Cloud" {
+  node "Backend API" {
+    component [Node.js API] as NodeAPI
+    component [FastAPI ML] as MLApi
+  }
+
+  database "MongoDB" as MongoDB {
+  }
+
+  database "Azure SQL\nData Warehouse" as DWH {
+  }
+
+  node "BI Tier" {
+    component [Power BI\nService] as PowerBI
+  }
+
+  node "ML Models" {
+    component [Prévision Appels] as ML1
+    component [Risque Churn] as ML2
+    component [Optimisation Planning] as ML3
+  }
+}
+
+node "On-Premise Duret" {
+  component [SAGE] as SAGE
+  component [MDE ERP] as ERP
+  component [Standard\nTéléphonique] as Tel
+}
+
+cloud "Tier Services" {
+  component [CTI RingCentral] as CTI
+  component [SMS Gateway] as SMS
+  component [Email SMTP] as Email
+}
+
+Browser --> PortailClient
+PortailClient --> HubSpot : HTTPS\nREST API
+
+AppTech --> NodeAPI : HTTPS\nGraphQL
+NodeAPI --> HubSpot : REST API
+NodeAPI --> MongoDB : Offline sync
+
+HubSpotUI --> HubSpot : HTTPS
+PowerBIUI --> PowerBI : HTTPS
+
+HubSpot --> DB
+HubSpot --> Redis
+HubSpot --> Workflows
+
+HubSpot --> DWH : ETL quotidien
+DWH --> PowerBI : DirectQuery
+DWH --> ML1
+DWH --> ML2
+DWH --> ML3
+
+ML1 --> HubSpot : Prédictions API
+ML2 --> HubSpot : Scores API
+ML3 --> HubSpot : Planning optimisé
+
+CTI --> Tel : SIP Trunk
+CTI --> HubSpot : Webhooks
+
+HubSpot <--> SAGE : ETL Sync\nBidirectionnelle
+
+note right of HubSpot
+  **Hébergement:**
+  - Data centers EU (RGPD)
+  - Backup quotidien
+  - Rétention 90j
+  - TLS 1.3
+  - ISO 27001, SOC 2
+end note
+
+note right of NodeAPI
+  **CI/CD:**
+  - GitHub Actions
+  - Docker containers
+  - Auto-scaling
+  - Monitoring Sentry
+end note
+
+note right of DWH
+  **Data Warehouse:**
+  - Star schema
+  - Historique 3 ans
+  - Refresh quotidien 2h
+end note
+
+note right of ML1
+  **ML Production:**
+  - Docker Kubernetes
+  - Monitoring MLflow
+  - Retraining mensuel
+end note
+
+@enduml

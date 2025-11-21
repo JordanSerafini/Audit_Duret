@@ -1,0 +1,57 @@
+@startmindmap Pain_Points_Maintenance
+
+title Pain Points Maintenance Technique SAV
+
+* 🔴 MAINTENANCE SAV
+** Temps perdu
+*** CERFA papier chronophage
+*** Planning RDV manuel (téléphone)
+*** Base Excel (ressaisies)
+*** Certificats papier
+*** Déplacements non optimisés
+
+** Opportunités perdues
+*** Devis terrain impossibles
+*** Refacturation heures difficile
+*** Renouvellement contrats non alerté
+
+** Risque clients perdus
+*** Satisfaction non mesurée
+*** Contrats Word (oublis possibles)
+*** RDV manuel (insatisfaction)
+*** Erreurs base Excel
+
+left side
+
+** CERFA papier\n**🔴 Critique**
+*** 12 min/intervention\nvs 3 min possible digital
+*** Illisible (écriture main)
+*** Pas de photos intégrées
+*** Chronophage pour techniciens
+
+** Devis terrain impossible\n**🔴 Critique**
+*** Opportunités perdues
+*** Post-it → oublis
+*** Pas d'outil mobile
+
+** Pointage GPS absent\n**🔴 Critique**
+*** Refacturation difficile
+*** Pas de preuve dépassement
+*** Temps approximatifs
+
+** Base Excel\n**🔴 Critique**
+*** ~300 clients non synchro app
+*** Ressaisies multiples
+*** Risque erreur élevé
+
+** Portail client inexistant\n**🟠 Important**
+*** Appels entrants élevés
+*** Disponibilité 8h-18h uniquement
+*** Pas de RDV 24/7
+
+** Enquête satisfaction absente\n**🔴 Critique**
+*** Pas de mesure NPS
+*** Risque churn non détecté
+*** Perte clients non anticipée
+
+@endmindmap

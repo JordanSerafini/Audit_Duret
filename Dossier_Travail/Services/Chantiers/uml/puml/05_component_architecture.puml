@@ -1,0 +1,77 @@
+@startuml Component_Architecture
+
+title Architecture Composants Application Mobile Chantier
+
+package "Frontend Mobile" {
+  [App iOS\niPhone/iPad] as iOS
+  [App Android\nSmartphone/Tablette] as Android
+}
+
+package "Backend Cloud Azure" {
+
+  package "API Gateway" {
+    [API REST\nNode.js Express] as API
+    [Auth Service\nJWT] as Auth
+  }
+
+  package "Services Metier" {
+    [Chantiers Service] as ChantierSvc
+    [Incidents Service] as IncidentSvc
+    [Photos Service] as PhotoSvc
+    [Rapports Service] as RapportSvc
+    [Commandes Service] as CmdSvc
+  }
+
+  package "Storage" {
+    [Azure Blob Storage\nPhotos + PDF] as Blob
+    [Azure Files\nPlans] as Files
+  }
+}
+
+database "Donnees" {
+  database "PostgreSQL\nDonnees metier" as Postgres
+  database "Redis\nCache + Sessions" as Redis
+}
+
+package "Integrations" {
+  [ERP Odoo\nChantiers Affaires] as ERP
+  [Email Service\nSendGrid] as Email
+  [Push Notifications\nFCM + APNS] as Push
+}
+
+iOS --> API
+Android --> API
+API --> Auth
+
+Auth --> Redis
+
+API --> ChantierSvc
+API --> IncidentSvc
+API --> PhotoSvc
+API --> RapportSvc
+API --> CmdSvc
+
+ChantierSvc --> Postgres
+IncidentSvc --> Postgres
+PhotoSvc --> Blob
+RapportSvc --> Blob
+CmdSvc --> Postgres
+
+ChantierSvc --> ERP : Sync
+RapportSvc --> Email : Envoi PDF
+IncidentSvc --> Push : Notifications
+
+note right of iOS
+  Mode hors ligne:
+  SQLite local
+  Sync auto
+end note
+
+note right of Blob
+  Photos:
+  - Organisation par chantier
+  - Metadata GPS + timestamp
+  - Compression auto
+end note
+
+@enduml

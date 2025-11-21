@@ -1,0 +1,72 @@
+@startuml Network_Flux_Donnees
+
+title Flux de Donnees Architecture Cible SAV Maintenance
+
+package "Internet" #E0F7FA {
+  [Portail Client\n(Web)] as client
+  [App Mobile\nTechniciens] as mobile
+}
+
+package "Azure Cloud EU France" #E3F2FD {
+  [ERP CRM Terrain\nPraxedo Synchroteam] as erp
+  [Azure Blob\nStorage] as blob
+  database "PostgreSQL\nBase ERP" as db
+}
+
+package "Services Complementaires" #F3E5F5 {
+  [Twilio\nSMS Gateway] as sms
+  [SendGrid\nEmail] as email
+  [Power BI\nAnalytics] as powerbi
+}
+
+package "On Premise Duret Annecy" #FFF8E1 {
+  [GAO\nLegacy] as gao
+  [SAGE\nComptabilite] as sage
+}
+
+client --> erp : HTTPS\nREST API
+mobile --> erp : HTTPS\nREST API
+mobile --> blob : Upload\nphotos/PDF
+
+erp --> db : SQL\nCRUD
+erp --> blob : Store/Retrieve\nfichiers
+
+erp --> sms : API\nnotifications\nclients
+erp --> email : API\nconfirmations\nrapports
+
+db --> powerbi : DirectQuery\nanalytics
+
+erp ..> gao : API CSV\nconsultation\noptionnel
+erp --> sage : API\nfacturation\nautomatique
+
+note as N1
+  **Flux Principaux:**
+  1. Client portail → ERP (RDV en ligne 24/7)
+  2. Technicien app → ERP (rapport digital)
+  3. Technicien app → Blob (photos geoloc.)
+  4. ERP → SMS (rappel RDV J-2)
+  5. ERP → Email (PDF rapport client)
+  6. ERP → SAGE (facture auto)
+  7. Power BI ← DB (analytics temps reel)
+end note
+
+note as N2
+  **Securite:**
+  - TLS 1.3 (transit)
+  - AES-256 (repos)
+  - OAuth 2.0 + JWT
+  - MFA disponible
+  - RGPD compliant (EU)
+  - Backup quotidien
+  - Audit trail (1 an)
+end note
+
+note as N3
+  **Mode Offline** :
+  - App mobile : SQLite local
+  - Sync auto (WiFi/4G)
+  - Queue upload (photos, rapports)
+  - Max 7 jours offline
+end note
+
+@enduml

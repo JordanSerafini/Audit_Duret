@@ -1,0 +1,48 @@
+@startuml Appel_Client_CIBLE
+
+title Appel Client - CIBLE (Odoo CRM + CTI)
+
+actor "Client" as Client
+participant "Téléphonie\n(CTI)" as Phone #FFA500
+participant "Odoo CRM\n(Remontée Auto)" as Odoo #87CEEB
+actor "Claire\n(Service Client)" as Claire #FFB6C1
+
+== Client Appelle ==
+
+Client -> Phone: Appelle
+activate Phone
+Phone -> Odoo: Recherche Numéro (API)
+activate Odoo
+Odoo --> Phone: Fiche Client Trouvée
+Odoo -> Claire: Pop-up Fiche Client
+deactivate Odoo
+
+Phone -> Claire: Sonnerie + Nom Client
+Claire -> Phone: Décroche
+deactivate Phone
+
+== Traitement Demande ==
+
+Claire -> Odoo: Consulte Historique
+activate Odoo
+Odoo --> Claire: Derniers Tickets, RDV, Factures
+deactivate Odoo
+
+Claire -> Odoo: Créé Ticket (3 clics)
+activate Odoo
+note right #E8F5E9
+  **Plus de post-it**
+  Tout est tracé
+end note
+
+Odoo -> Odoo: Notif Email Manager
+deactivate Odoo
+
+Claire -> Client: "On vous rappelle sous 24h"
+
+== Automatisation ==
+
+Odoo -> Odoo: Relance Auto J+1 (si non traité)
+Odoo -> Client: Email Confirmation Ticket
+
+@enduml

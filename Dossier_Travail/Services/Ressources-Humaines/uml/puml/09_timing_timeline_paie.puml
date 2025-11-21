@@ -1,0 +1,290 @@
+@startuml Timeline_Processus_Paie_Mensuel
+
+title Timeline Processus Paie Mensuel - Vue Temporelle
+
+concise "Sophie (RH)" as Sophie
+concise "Managers" as Mgr
+concise "Salariés" as Sal
+concise "POPAYE" as Popaye
+concise "Virginie (Paie)" as Virg
+
+@0
+Sophie is "Repos"
+Mgr is "Repos"
+Sal is "Repos"
+Popaye is "Inactif"
+Virg is "Repos"
+
+' SEMAINE 1
+@7
+Sophie is "Contrôle\nFH S1" #FFD700
+Mgr is "Travail"
+Sal is "Saisie FH"
+Popaye is "Saisie"
+note top of Sophie
+  🔴 Contrôle manuel
+  15 FH manquantes
+  ⏰ 2h
+end note
+
+@9
+Sophie is "Relances\nmanuelles" #FF6B6B
+Mgr is "Relances\néquipe"
+note top of Sophie
+  🔴 Emails + appels
+  ⏰ 1h
+end note
+
+@10
+Sophie is "Repos"
+Mgr is "Travail"
+Sal is "Travail"
+
+' SEMAINE 2
+@14
+Sophie is "Contrôle\nFH S2" #FFD700
+Sal is "Saisie FH"
+note top of Sophie
+  🔴 Même processus
+  ⏰ 2h
+end note
+
+@16
+Sophie is "Relances\nmanuelles" #FF6B6B
+
+@17
+Sophie is "Repos"
+
+' SEMAINE 3
+@21
+Sophie is "Contrôle\nFH S3" #FFD700
+Sal is "Saisie FH"
+note top of Sophie
+  🔴 Contrôle #3
+  ⏰ 2h
+end note
+
+@23
+Sophie is "Relances" #FF6B6B
+
+@24
+Sophie is "Repos"
+
+' SEMAINE 4 - JOUR 1 (avant le 9)
+@28
+Sophie is "Contrôle\nfinal FH" #FF6B6B
+Sal is "FH urgentes"
+note top of Sophie
+  🔴 Encore 3 manquantes
+  Appels urgents
+  ⏰ 1h
+end note
+
+@29
+Sophie is "Traitement\npaie" #FFD700
+Popaye is "Traitement"
+note top of Sophie
+  Résolution anomalies
+  ⏰ 1h30
+end note
+
+@31
+Sophie is "Valorisation\nHEURES RÉCUP" #FF0000
+note top of Sophie
+  🔴🔴🔴 **LE PIRE**
+  Calcul manuel 100 pers
+  ⏰ **3h00** ⏰⏰⏰
+end note
+
+@34
+Sophie is "Pochette +\nClasseur rose" #FF6B6B
+note top of Sophie
+  🔴 Re-saisie manuelle
+  + papier
+  ⏰ 1h15
+end note
+
+@36
+Sophie is "Vérifications\nmanuelles" #FF0000
+note top of Sophie
+  🔴 Vérif UN PAR UN
+  100 personnes
+  ⏰ **2h30** ⏰⏰
+end note
+
+@39
+Sophie is "Blocage\npériode" #FFFFCC
+Popaye is "Bloqué"
+note top of Sophie
+  😌 Soulagement
+  Fin journée 1
+  **TOTAL: 8h30**
+end note
+
+@40
+Sophie is "Repos"
+Popaye is "Bloqué"
+
+' JOUR 2 (le 16)
+@44
+Sophie is "Calcul\nTICKETS RESTO" #FF0000
+note top of Sophie
+  🔴🔴🔴 **CAUCHEMAR**
+  Calcul manuel:
+  • 100 personnes
+  • Jours - absences - NDF
+  ⏰ **3h30** ⏰⏰⏰⏰
+end note
+
+@48
+Sophie is "Commande\nSWILE" #FF6B6B
+note top of Sophie
+  🔴 Re-saisie #6
+  ⏰ 30 min
+end note
+
+@49
+Sophie is "Exports\nmanuels" #FFD700
+Popaye is "Export"
+note top of Sophie
+  3 exports différents
+  ⏰ 45 min
+end note
+
+@50
+Sophie is "Tableau\ncompléments" #FF6B6B
+note top of Sophie
+  🔴 Saisie manuelle
+  primes, acomptes...
+  ⏰ 45 min
+end note
+
+@51
+Sophie is "Collecte\njustificatifs" #FFD700
+note top of Sophie
+  Fouille papier + emails
+  ⏰ 30 min
+end note
+
+@52
+Sophie is "Email\nVirginie" #FFFFCC
+Virg is "Réception" #ADD8E6
+note top of Sophie
+  Envoi pièces jointes
+  ⏰ 30 min
+  **TOTAL J2: 7h**
+end note
+
+@53
+Sophie is "Repos"
+Virg is "Mise en\nforme" #FFD700
+note top of Virg
+  ⚠️ Format non standard
+  Reformatage nécessaire
+  ⏰ 2h
+end note
+
+' JOURS 3-4
+@55
+Virg is "Questions" #FFA07A
+note top of Virg
+  Email incohérences
+end note
+
+@56
+Sophie is "Vérifications\ncomplémentaires" #FF6B6B
+note top of Sophie
+  🔴 Aller-retours
+  POPAYE + Excel
+  ⏰ 2h
+end note
+
+@58
+Sophie is "Corrections\nrenvoi" #FFD700
+Virg is "Attente"
+note top of Sophie
+  ⏰ 1h
+  **TOTAL J3-4: 3h**
+end note
+
+@59
+Sophie is "Repos"
+Virg is "Traitement\npaie SILAE" #DDA0DD
+
+' FIN MOIS
+@63
+Virg is "Envoi\nbulletins" #FFFFCC
+note top of Virg
+  Bulletins PDF
+end note
+
+@64
+Sophie is "Réception\nbulletins" #ADD8E6
+Virg is "Repos"
+
+@65
+Sophie is "Contrôle\nbinôme" #FF6B6B
+note top of Sophie
+  🔴 Vérification manuelle
+  • TR
+  • Compléments
+  • Absences
+  ⏰ 2h
+end note
+
+@67
+Sophie is "Échanges\ncorrections" #FFD700
+Virg is "Corrections" #FFA07A
+note top of Sophie
+  ⚠️ Selon erreurs
+  ⏰ 1-3h
+  **TOTAL FIN: 3-5h**
+end note
+
+@70
+Sophie is "Distribution\nbulletins" #FFFFCC
+Virg is "Repos"
+note top of Sophie
+  😌 Terminé !
+  ... jusqu'au mois prochain
+end note
+
+@71
+Sophie is "Repos"
+
+note bottom of Sophie
+  **BILAN TEMPOREL MENSUEL**
+
+  ⏰ **DURÉE**: Tout le mois (réparti)
+
+  👤 **TEMPS SOPHIE TOTAL: 25-30h**
+     • Semaines 1-3 (contrôles): 6h
+     • Jour 1 (préparation): 8h30
+     • Jour 2 (TR + exports): 7h
+     • Jours 3-4 (corrections): 3h
+     • Fin mois (contrôle): 3-5h
+
+  👤 **TEMPS VIRGINIE: 4-6h**
+
+  🔴 **PICS DE CHARGE**
+     • Jour 1: 8h30 (valorisation récup)
+     • Jour 2: 7h (calcul TR)
+     = **15h30 en 2 jours !**
+
+  😰 **STRESS MAXIMUM**
+     • Avant le 9: Course contre la montre
+     • Le 16: Calcul TR cauchemar
+
+  💰 **TEMPS MENSUEL**
+     • Sophie: 25-30h
+     • Virginie: 4-6h
+     = **temps mensuel important**
+
+  💰 **TEMPS ANNUEL: temps annuel important**
+
+  💬 "Je passe 3 JOURS par mois sur la paie.
+      C'est du travail de robot, pas de RH..."
+      - Sophie
+end note
+
+@enduml

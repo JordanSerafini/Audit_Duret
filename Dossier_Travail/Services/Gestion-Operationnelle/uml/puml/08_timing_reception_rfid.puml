@@ -1,0 +1,39 @@
+@startuml Timing_Reception_RFID
+
+title Timeline Reception Stocks (Avant vs Apres RFID)
+
+robust "Systeme ACTUEL (Long)" as Actuel
+concise "Systeme CIBLE RFID (Rapide)" as Cible
+
+@0
+Actuel is "BL Recu"
+Cible is "BL Recu"
+
+@2
+Actuel is "Comptage manuel\ncolis par colis"
+
+@18
+Actuel is "Saisie manuelle\nLireco"
+
+@25
+Actuel is "Reception validee"
+Cible is "Scan RFID\nportique"
+
+@21
+Cible is "Reconciliation\nautomatique"
+
+@22
+Cible is "Reception auto\ncreee + validee"
+
+highlight 0 to 25 #FFAAAA : AVANT (25min - Comptage + Saisie manuels)
+highlight 0 to 22 #AAFFAA : APRES (22sec - Scan RFID automatique)
+
+note bottom
+  🔧 CORRECTION TIMING
+  AVANT : 25min/BL (vs 20min erroné)
+  APRES : 22sec/BL  
+  GAIN : 24min38sec/BL
+  = 98,5% temps gagné
+end note
+
+@enduml

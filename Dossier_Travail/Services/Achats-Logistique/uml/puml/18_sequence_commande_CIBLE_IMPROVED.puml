@@ -1,0 +1,100 @@
+@startuml
+!theme plain
+autonumber
+skinparam backgroundColor #F8F8FF
+
+header Architecture CIBLE - PROCESSUS OPTIMISE
+title Sequence : Commande Materiel (Version DIGITALISEE)
+
+box "Terrain Mobile" #E6FFE6
+    actor "Marc (Chef Chantier)" as Marc
+    participant "App Mobile Odoo" as AppMobile
+end box
+
+box "Système Central" #E6F3FF
+    database "ERP Odoo Moderne" as Odoo
+    participant "API Gateway" as API
+    participant "ML Engine Suggestions" as ML
+end box
+
+box "Achats & Logistique" #FFF0E6
+    actor "Sylvie (Achats)" as Sylvie
+    participant "E-Procurement Portal" as Portal
+    actor "Eric (Depot)" as Eric
+    participant "RFID Scanner" as RFID
+end box
+
+box "Fournisseurs Connectés" #F0F0F0
+    participant "Rexel API" as RexelAPI
+    participant "Sonepar API" as SoneAPI
+end box
+
+== ⚡ Commande Instantanée (2h vs 3 jours) ==
+
+Marc -> AppMobile : 📱 Scan QR produit nécessaire
+note right #E6FFE6 : 🟢 10 secondes vs 5 min papier
+activate AppMobile
+
+AppMobile -> Odoo : 🔍 Recherche produit "3G2.5"
+activate Odoo
+Odoo -> ML : 🤖 Suggestions intelligentes
+ML --> Odoo : Top 3 produits pertinents
+Odoo --> AppMobile : 📋 Liste claire + photos + prix
+deactivate Odoo
+note right of ML #E6FFE6 : 🟢 IA élimine confusion\n1 choix vs 12 références
+
+AppMobile -> Marc : 💡 Affiche suggestions
+Marc -> AppMobile : ✅ Sélectionne (1 clic)
+AppMobile -> Odoo : 🛒 Crée commande auto
+note right #E6FFE6 : 🟢 Validation instantanée
+
+== 🤖 Traitement Automatisé ==
+
+Odoo -> API : 🔄 Déclenche workflow
+activate API
+API -> RexelAPI : 📡 Vérifie stock temps réel
+RexelAPI --> API : ✅ "50 unités dispo"
+API -> SoneAPI : 📡 Compare prix concurrent  
+SoneAPI --> API : 💰 "Prix identique"
+
+API -> RexelAPI : 🚀 Commande automatique
+RexelAPI --> API : 📋 "Commande #R12345 validée"
+note right of API #E6FFE6 : 🟢 0 ressaisie vs 7 actuellement
+
+API -> Odoo : ✅ Commande confirmée
+API -> Sylvie : 📨 Notification "Commande auto créée"
+deactivate API
+
+== 📦 Réception Automatisée ==
+
+RexelAPI -> Eric : 🚚 Livraison avec QR code
+Eric -> RFID : 📱 Scan code livraison
+activate RFID
+RFID -> Odoo : 🔄 Identification automatique  
+Odoo --> RFID : ✅ "Commande R12345 attendue"
+RFID -> Odoo : ✅ Réception validée (2 sec)
+deactivate RFID
+note right of RFID #E6FFE6 : 🟢 2 sec vs 20 min saisie
+
+Odoo -> AppMobile : 📲 "Matériel dispo"
+Odoo -> Marc : 📱 Push notification
+
+== ✅ Récupération Garantie ==
+
+Marc -> Eric : 🎯 Récupère matériel
+Eric -> Marc : 📦 Matériel correct garanti
+note over Marc #90EE90 : ✅ BON MATÉRIEL !\n🟢 Chantier continue\n💰 Économie: 2,400€
+
+== 📊 COMPARAISON AVANT/APRÈS ==
+
+note over Marc, SoneAPI #E6FFE6
+    **GAINS MESURABLES**
+    ⏰ Durée: 2h vs 3 jours (-94%)
+    📞 Appels: 0 vs 15 (-100%)
+    ♻️ Ressaisies: 0 vs 7 (-100%)
+    ❌ Taux erreur: 2% vs 50% (-96%)
+    💰 Économie: 58K€/an
+    😊 Satisfaction: 9/10 vs 4/10
+end note
+
+@enduml

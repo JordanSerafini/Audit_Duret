@@ -1,0 +1,101 @@
+@startuml
+' ============================================================================
+' TEMPLATES LEGENDES DURET ELECTRICITE
+' ============================================================================
+' Version: 1.0
+' Date: 2025-11-20
+' Description: Procedures reusables pour legendes standardisees
+' Usage: !include ../../_shared/uml/styles/duret_legends.puml
+'        puis appeler LEGEND_STANDARD() ou LEGEND_COLORS()
+' ============================================================================
+
+!include duret_colors.puml
+
+' === LEGENDE STANDARD (EMOJIS) ===
+!procedure LEGEND_STANDARD()
+legend bottom right
+  **LEGENDE**
+  EMO_CRITICAL Probleme critique
+  EMO_WARNING Attention requise
+  EMO_TIME Temps perdu
+  EMO_RESAISIE Re-saisie manuelle
+  EMO_BLOCKED Blocage processus
+  EMO_SUCCESS Succes operation
+  EMO_ERROR Erreur systeme
+endlegend
+!endprocedure
+
+' === LEGENDE COULEURS (SYSTEMES) ===
+!procedure LEGEND_COLORS()
+legend bottom right
+  **COULEURS SYSTEMES**
+  <back:COLOR_SYSTEME_LEGACY>   </back> Systeme legacy (obsolete)
+  <back:COLOR_SYSTEME_CIBLE>   </back> Systeme cible (moderne)
+  <back:COLOR_SYSTEME_EXCEL>   </back> Fichiers Excel manuels
+  <back:COLOR_SYSTEME_CLOUD>   </back> Services Cloud
+endlegend
+!endprocedure
+
+' === LEGENDE ETATS ===
+!procedure LEGEND_ETATS()
+legend bottom right
+  **ETATS PROCESSUS**
+  <back:COLOR_ETAT_OK>   </back> Etat nominal
+  <back:COLOR_ETAT_WARNING>   </back> Alerte attention
+  <back:COLOR_ETAT_ERROR>   </back> Erreur bloquante
+  <back:COLOR_ETAT_BLOCKED>   </back> Processus bloque
+  <back:COLOR_ETAT_INPROGRESS>   </back> En cours traitement
+endlegend
+!endprocedure
+
+' === LEGENDE ACTEURS ===
+!procedure LEGEND_ACTEURS()
+legend bottom right
+  **ACTEURS**
+  <back:COLOR_ACTOR_CHANTIER>   </back> Equipe chantier
+  <back:COLOR_ACTOR_BUREAU>   </back> Personnel bureau
+  <back:COLOR_ACTOR_DEPOT>   </back> Equipe depot
+  <back:COLOR_ACTOR_DIRECTION>   </back> Direction
+  <back:COLOR_ACTOR_CLIENT>   </back> Clients
+endlegend
+!endprocedure
+
+' === LEGENDE COMPLETE (TOUT) ===
+!procedure LEGEND_COMPLETE()
+legend bottom right
+  **LEGENDE COMPLETE**
+  --
+  **Emojis:**
+  EMO_CRITICAL Critique | EMO_WARNING Attention | EMO_SUCCESS Succes
+  EMO_TIME Temps | EMO_RESAISIE Re-saisie | EMO_ERROR Erreur
+  --
+  **Couleurs:**
+  <back:COLOR_SYSTEME_LEGACY>   </back> Legacy | <back:COLOR_SYSTEME_CIBLE>   </back> Cible
+  <back:COLOR_ETAT_ERROR>   </back> Erreur | <back:COLOR_ETAT_OK>   </back> OK
+endlegend
+!endprocedure
+
+' === LEGENDE ARCHITECTURE ===
+!procedure LEGEND_ARCHITECTURE()
+legend bottom right
+  **ARCHITECTURE**
+  <back:COLOR_SYSTEME_ERP>   </back> ERP Odoo
+  <back:COLOR_SYSTEME_MOBILE>   </back> Applications mobiles
+  <back:COLOR_SYSTEME_CLOUD>   </back> Services cloud
+  <back:COLOR_DATA>   </back> Couche donnees
+  <back:COLOR_INTEGRATION>   </back> APIs/Integration
+endlegend
+!endprocedure
+
+' === LEGENDE PRIORITES ===
+!procedure LEGEND_PRIORITES()
+legend bottom right
+  **PRIORITES PROJET**
+  <back:COLOR_CRITIQUE>   </back> CRITIQUE - Action immediate
+  <back:COLOR_IMPORTANT>   </back> IMPORTANT - Court terme
+  <back:COLOR_SOUHAITABLE>   </back> SOUHAITABLE - Moyen terme
+  <back:COLOR_BONUS>   </back> BONUS - Long terme
+endlegend
+!endprocedure
+
+@enduml

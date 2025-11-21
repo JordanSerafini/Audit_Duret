@@ -1,0 +1,13 @@
+Metrique,Avant_Actuel,Apres_Cible,Amelioration,Gain_Annuel_EUR
+Duree intervention moyenne,2h44,1h58,28%,99000
+Temps administratif par intervention,74min,42min,43%,99000
+Taux erreur rapports,25%,2%,92%,35000
+Delai facturation,15j,2j,87%,25000
+Taux renouvellement contrats,65%,85%,31%,50000
+Satisfaction client,6.5/10,8.5/10,31%,15000
+Devis terrain generes,0/an,150/an,Infini,45000
+Temps archivage papier,2h/jour,0h/jour,100%,15000
+Interventions par technicien par jour,4,5,25%,30000
+Temps prise RDV,15min,2min,87%,20000
+Visibilite temps reel,Non,Oui,100%,30000
+Traçabilite GPS,Non,Oui,100%,30000

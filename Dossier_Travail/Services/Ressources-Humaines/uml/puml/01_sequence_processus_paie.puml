@@ -1,0 +1,283 @@
+@startuml Processus_Paie_Mensuel_Actuel
+
+title Processus Paie Mensuel - ÉTAT ACTUEL (CHAOS)
+
+actor "Sophie\n(RH)" as Sophie #FFB6C1
+actor "Managers\n(Terrain)" as Managers #FFDAB9
+actor "Salariés\n(100 pers)" as Salaries #ADD8E6
+actor "Virginie\n(Only RH/SILAE)" as Virginie #DDA0DD
+participant "POPAYE\n(Temps)" as Popaye #FFD700
+participant "SAGE Paie" as Sage #FF6B6B
+participant "Excel\n(multiples)" as Excel #90EE90
+participant "SILAE\n(Paie)" as Silae #FFA07A
+
+== SEMAINE 1-3 : Contrôles hebdomadaires ==
+
+loop Chaque semaine (×3)
+    Sophie -> Popaye: Vérifie FH saisies
+    note right #FF6B6B
+      🔴 15 FH manquantes
+      ⏰ 30 min recherche manuelle
+    end note
+
+    Sophie -> Sophie: Liste manquantes Excel
+    note right #FF6B6B
+      🔴 Pas de vue automatique
+    end note
+
+    Sophie -> Managers: Emails relances (×5)
+    note right #FF6B6B
+      🔴 Relances 100% manuelles
+      ⏰ 30 min
+    end note
+
+    Sophie -> Salaries: Appels retardataires (×10)
+    note right #FF6B6B
+      🔴 Pas de workflow auto
+      ⏰ 45 min perdu
+    end note
+
+    Managers -> Salaries: Relances équipes
+    Salaries -> Popaye: Saisie FH (enfin...)
+
+    note over Sophie #FFFFCC
+      **TEMPS PAR SEMAINE: 2h**
+      × 3 semaines = 6h total
+    end note
+end
+
+== JOUR 1 (avant le 9) : Préparation finale paie ==
+
+Sophie -> Popaye: Contrôle final FH
+note right #FF6B6B
+  🔴 Encore 3 manquantes !
+  ⏰ 30 min
+end note
+
+Sophie -> Salaries: Appels urgents (×3)
+note right #FF6B6B
+  ⏰ 20 min
+end note
+
+Sophie -> Popaye: Traitement paie
+Popaye --> Sophie: ⚠️ 12 anomalies détectées
+note right #FF6B6B
+  🔴 Anomalies fréquentes:
+  • Heures négatives
+  • Km incohérents
+  • Paniers non déclarés
+end note
+
+Sophie -> Sophie: Résolution anomalies
+note right #FF6B6B
+  🔴 Vérification manuelle
+  une par une
+  ⏰ 1h30
+end note
+
+Sophie -> Excel: **VALORISATION HEURES RÉCUP**
+note right #FF0000
+  🔴 🔴 🔴 **LE PIRE MOMENT**
+
+  Pour CHAQUE salarié (100):
+  1. Compte heures/semaine
+  2. Objectif 35h/semaine
+  3. Si >35h → heures récup
+  4. Saisit dans POPAYE
+
+  ⏰ **3 HEURES** ⏰⏰⏰
+  ❌ Risque erreur ÉNORME
+end note
+
+Sophie -> Sophie: Pochette éléments paie
+note right #FF6B6B
+  🔴 Re-saisie manuelle
+  ⏰ 45 min
+end note
+
+Sophie -> Sophie: Classeur rose (papier)
+note right #FF6B6B
+  🔴 Support papier en 2025
+  ⏰ 30 min
+end note
+
+Sophie -> Popaye: Export PDF contrôle
+note right
+  ⏰ 15 min
+end note
+
+Sophie -> Sophie: **VÉRIFICATIONS MANUELLES**
+note right #FF0000
+  🔴 Vérifie UN PAR UN (100 pers):
+  • Heures/semaine
+  • KVE vs KVP
+  • Paniers (5/semaine)
+  • Grands déplacements
+
+  ⏰ **2h30** ⏰⏰
+end note
+
+Sophie -> Popaye: Blocage période paie
+note right #FFFFCC
+  😌 Soulagement temporaire
+
+  **TEMPS JOUR 1: 8h30**
+end note
+
+== JOUR 2 (le 16) : Calcul TR et exports ==
+
+Sophie -> Excel: **CALCUL TICKETS RESTAURANT**
+note right #FF0000
+  🔴 🔴 🔴 **CAUCHEMAR MENSUEL**
+
+  Pour CHAQUE collaborateur (100):
+  1. Compte jours travaillés (POPAYE)
+  2. Soustrait absences
+  3. Soustrait NDF (Excel autre)
+  4. Saisit résultat Excel TR
+
+  ⏰ **3h30** ⏰⏰⏰⏰
+  ❌ Risque d'erreur
+end note
+
+Sophie -> Excel: Commande SWILE
+note right #FF6B6B
+  🔴 Re-saisie #6
+  ⏰ 30 min
+end note
+
+Sophie -> Popaye: Export 1 - Contingent Hsupp
+note right
+  ⏰ 15 min
+end note
+
+Sophie -> Popaye: Export 2 - Format SILAE
+note right #FFD700
+  ⚠️ Format pas toujours compatible
+  ⏰ 20 min
+end note
+
+Sophie -> Popaye: Export 3 - Contrôle paie
+note right
+  ⏰ 10 min
+end note
+
+Sophie -> Excel: Tableau compléments
+note right #FF6B6B
+  🔴 Saisie manuelle:
+  • Primes ponctuelles
+  • Acomptes
+  • Avantages nature
+  • Remboursements
+  ⏰ 45 min
+end note
+
+Sophie -> Sophie: Collecte justificatifs
+note right #FF6B6B
+  🔴 Fouille dossiers papier
+  + emails
+  ⏰ 30 min
+end note
+
+Sophie -> Virginie: Email avec pièces jointes
+note right
+  • Export SILAE
+  • Compteurs
+  • Tableau compléments
+  • Justificatifs scannés
+  • Calcul TR
+end note
+
+note over Sophie #FFFFCC
+  **TEMPS JOUR 2: 7h**
+end note
+
+== JOURS 3-4 : Échanges ==
+
+Virginie -> Virginie: Réception données
+note right #FFD700
+  ⚠️ Format non standardisé
+  Mise en forme nécessaire
+  ⏰ 2h
+end note
+
+Virginie -> Sophie: Email questions
+note right
+  • "Pourquoi 180h M. Dupont ?"
+  • "Justificatif manquant"
+  • "TR incohérents"
+end note
+
+Sophie -> Popaye: Vérifications complémentaires
+Sophie -> Excel: Re-contrôles
+note right #FF6B6B
+  🔴 Aller-retours
+  ⏰ 2h
+end note
+
+Sophie -> Virginie: Corrections + renvoi
+note right
+  ⏰ 1h
+end note
+
+note over Sophie #FFFFCC
+  **TEMPS JOURS 3-4: 3h**
+end note
+
+== FIN MOIS : Réception bulletins ==
+
+Virginie -> Silae: Traitement paie
+Virginie -> Sophie: Envoi bulletins
+
+Sophie -> Sophie: Contrôle binôme
+note right #FF6B6B
+  🔴 Vérification manuelle:
+  • Tickets restaurant
+  • Éléments complémentaires
+  • Absences
+  ⏰ 2h
+end note
+
+Sophie -> Virginie: Échanges corrections
+note right #FFD700
+  ⚠️ Selon erreurs trouvées
+  ⏰ 1-3h
+end note
+
+Sophie -> Salaries: Distribution bulletins
+note right #FFFFCC
+  😌 Enfin terminé !
+  ... jusqu'au mois prochain
+end note
+
+note over Sophie #FFFFCC
+  **TEMPS FIN MOIS: 3-5h**
+end note
+
+== BILAN MENSUEL ==
+
+note over Sophie, Virginie #FFCCCC
+  **MÉTRIQUES PROCESSUS PAIE**
+
+  ⏰ Durée: TOUT LE MOIS (réparti)
+  👤 Temps Sophie: **25-30h/mois**
+     • Contrôles hebdo (×3): 6h
+     • Préparation finale: 8h30
+     • Calcul TR + exports: 7h
+     • Vérifications/corrections: 3-5h
+
+  👤 Temps Virginie: 4-6h/mois
+  ♻️ Nombre outils: 6
+  ♻️ Re-saisies: 6-8 fois
+  ❌ Taux d'erreur: Significatif
+  😰 Stress: Très élevé
+
+  💰 Coût mensuel: temps mensuel: 25-30h
+  💰 Coût annuel: **temps important**
+
+  💬 Citation Sophie:
+  "Je passe 3 JOURS par mois sur la paie.
+   C'est du travail de robot, pas de RH..."
+end note
+
+@enduml

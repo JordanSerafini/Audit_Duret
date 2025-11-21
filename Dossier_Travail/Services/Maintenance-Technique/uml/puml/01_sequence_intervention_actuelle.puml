@@ -1,0 +1,88 @@
+@startuml Sequence_Intervention_Actuelle
+
+title Séquence Intervention SAV - Système ACTUEL (CERFA Papier)
+
+actor "Gaëtan\n(Technicien)" as Tech
+participant "CERFA\nPapier" as CERFA
+participant "Téléphone\nPerso" as Phone
+participant "Clothilde\n(Planning)" as Clo
+database "Excel\nBase Clients" as Excel
+database "GAO\nLogiciel" as GAO
+
+== Matin 8h30 : Préparation ==
+
+Tech -> Tech : Prend 5 CERFA vierges
+Tech -> Tech : Imprime planning jour
+note right : Pas d'app mobile\navec toutes infos
+
+== Intervention #1 : 9h00-10h45 ==
+
+Tech -> Phone : Appelle Clothilde :\n"C'est quelle adresse\nM. Dupont déjà ?"
+Phone -> Clo : Demande info client
+Clo -> Excel : Recherche client\n(2 min)
+Excel --> Clo : Infos client
+Clo --> Phone : "24 rue...\nContrat Argent"
+Phone --> Tech : Reçoit infos
+note right : 5 min perdu\ninfo non dispo app
+
+Tech -> Tech : Intervention (1h30)
+Tech -> CERFA : Remplit CERFA **à la main**\n(12 min)
+note right : Écriture illisible\nPas de photos intégrées
+
+Tech -> Phone : Photos avant/après\nsur téléphone perso
+note right : Pas géolocalisées\nPas datées auto
+
+Tech -> CERFA : Fait signer client\n(papier)
+
+== Intervention #2 : 11h30 - CLIENT DEMANDE DEVIS ==
+
+Tech -> Tech : Intervention (1h15)
+
+Tech <-- "Client" : "Au fait, je voudrais\nchanger mon tableau\nsecondaire, c'est possible ?"
+
+Tech -> Tech : ❌ **IMPOSSIBLE générer\ndevis terrain**
+Tech -> Tech : Note sur post-it :\n"Client B - devis tableau"
+
+note right : **OPPORTUNITÉ COMMERCIALE\nÀ RISQUE**
+
+Tech -> CERFA : Remplit CERFA (12 min)
+
+== Intervention #3 : 14h30 - DÉPASSEMENT HEURE ==
+
+Tech -> Tech : Intervention prévue 1h30\n→ Réel 2h30 (complexe)
+
+note right : ❌ **PAS DE POINTAGE\nGPS DIGITAL**\n→ Difficile prouver\n→ Refacturation impossible
+
+Tech -> CERFA : Remplit CERFA (15 min)
+
+== Retour base : 18h00 ==
+
+Tech -> Clo : Remet 3 CERFA papier
+Clo -> Clo : Scan CERFA (30 min)
+Clo -> GAO : Saisie manuelle\nrapports GAO (20 min)
+
+note right : **50 min admin**\npar jour Clothilde
+
+Tech -> Tech : Post-it devis Client B...\n**PERDU le lendemain** 💰
+
+note right : **CA perdu**
+
+== Bilan Journée ==
+
+note over Tech, GAO
+**TEMPS PERDU** :
+• CERFA papier : 39 min (3 × 13 min)
+• Appels info : 5 min
+• Post-it perdu : 1 devis
+
+**REFACTURATION IMPOSSIBLE** :
+• Dépassement 1h (intervention #3)
+• Pas de preuve de dépassement
+
+**TOTAL INEFFICACITÉ** :
+• 44 min/jour × 220 jours = 161h/an
+• Dépassements non facturés : 50/an
+• Devis perdus significatifs
+end note
+
+@enduml

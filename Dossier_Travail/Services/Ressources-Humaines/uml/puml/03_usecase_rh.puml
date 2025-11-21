@@ -1,0 +1,158 @@
+@startuml UseCase_RH_Actuel
+
+title Use Case Diagram - Ressources Humaines ACTUEL
+
+left to right direction
+
+actor "Sophie\n(RH)" as Sophie #FFB6C1
+actor "Managers" as Mgr #FFDAB9
+actor "Salariés" as Sal #ADD8E6
+actor "Virginie\n(Paie externe)" as Virg #DDA0DD
+actor "Christine\n(DG)" as DG #DDA0DD
+
+rectangle "Système RH ACTUEL" #FFFFCC {
+
+  usecase "Gérer\npaie" as UC1 #FF6B6B
+  note right of UC1
+    🔴 25-30h/mois
+    Erreurs fréquentes
+  end note
+
+  usecase "Saisir\nfeuilles heures" as UC2 #FFD700
+  note right of UC2
+    🔴 100% manuel
+    Retards fréquents
+  end note
+
+  usecase "Valider\nfeuilles heures" as UC3 #FFD700
+  note right of UC3
+    🔴 3h30/semaine
+    Relances manuelles
+  end note
+
+  usecase "Demander\ncongés" as UC4 #FFD700
+  note right of UC4
+    🔴 Papier + email
+    3-5 jours délai
+  end note
+
+  usecase "Onboarder\nnouveau salarié" as UC5 #FF6B6B
+  note left of UC5
+    🔴 39 tâches manuelles
+    8-10h par embauche
+  end note
+
+  usecase "Offboarder\nsalarié sortant" as UC6 #FFD700
+  note left of UC6
+    🔴 22 tâches manuelles
+    5-6h par départ
+  end note
+
+  usecase "Gérer\nintérimaires" as UC7 #FFD700
+  note right of UC7
+    🔴 Excel isolé
+    Pas d'intégration
+  end note
+
+  usecase "Calculer\ntickets resto" as UC8 #FF6B6B
+  note left of UC8
+    🔴 **3h30/mois**
+    100% manuel
+    ±5% erreur
+  end note
+
+  usecase "Gérer\nnotes de frais" as UC9 #FFD700
+  note right of UC9
+    🔴 Papier/Email
+    Tickets perdus
+  end note
+
+  usecase "Consulter\nKPIs RH" as UC10 #FF6B6B
+  note left of UC10
+    🔴 Impossible
+    Données manuelles
+  end note
+
+  usecase "Produire\nreporting" as UC11 #FF6B6B
+  note right of UC11
+    🔴 3h pour 1 rapport
+    Données obsolètes
+  end note
+}
+
+rectangle "Outils (Silos)" #FFE4E1 {
+  usecase "POPAYE\n(Temps)" as Popaye #FFD700
+  usecase "SAGE Paie" as Sage #FF6B6B
+  usecase "SILAE\n(Externe)" as Silae #FFA07A
+  usecase "SWILE\n(TR)" as Swile
+  usecase "Excel\n(×7 fichiers)" as Excel #FFD700
+  usecase "Email" as Email
+  usecase "Papier\n(Dossiers)" as Paper #FF6B6B
+  usecase "Empowill\nRadiance\nCIBTP..." as Others
+}
+
+' Relations Sophie (RH)
+Sophie --> UC1
+Sophie --> UC3
+Sophie --> UC5
+Sophie --> UC6
+Sophie --> UC7
+Sophie --> UC8
+Sophie --> UC10
+Sophie --> UC11
+Sophie ..> Popaye : utilise
+Sophie ..> Sage : utilise
+Sophie ..> Excel : utilise (×7)
+Sophie ..> Email : utilise
+Sophie ..> Paper : utilise
+Sophie ..> Others : utilise
+Sophie ..> Swile : utilise
+
+' Relations Managers
+Mgr --> UC3
+Mgr --> UC4
+Mgr ..> Popaye : utilise
+Mgr ..> Email : utilise
+Mgr ..> Paper : utilise
+
+' Relations Salariés
+Sal --> UC2
+Sal --> UC4
+Sal --> UC9
+Sal ..> Popaye : utilise
+Sal ..> Paper : utilise
+
+' Relations Virginie (Paie)
+Virg --> UC1
+Virg ..> Silae : utilise
+Virg ..> Excel : reçoit exports
+Virg ..> Email : utilise
+
+' Relations DG
+DG --> UC10
+DG --> UC11
+
+' Includes
+UC1 .> UC2 : <<include>>
+UC1 .> UC3 : <<include>>
+UC1 .> UC8 : <<include>>
+UC5 .> Email : <<extend>>\nnotifications manuelles
+UC4 .> Paper : <<extend>>\nformulaire papier
+UC8 .> Excel : <<extend>>\ncalcul manuel
+
+' Extensions problématiques
+UC2 ..> Email : <<extend>>\nrelances manuelles
+UC3 ..> Email : <<extend>>\nrelances manuelles
+
+note bottom
+  **PROBLÈMES MAJEURS**
+  🔴 15+ outils non intégrés
+  🔴 Re-saisie 6-8 fois des mêmes données
+  🔴 Pas de workflows digitaux
+  🔴 Pas de visibilité temps réel
+  🔴 100% manuel, 0% automatisation
+  💰 Coût: temps considérable perdu
+  ⏰ 850h/an de temps gaspillé
+end note
+
+@enduml

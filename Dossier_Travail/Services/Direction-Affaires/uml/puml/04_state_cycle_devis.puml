@@ -1,0 +1,173 @@
+@startuml State_Cycle_Devis
+
+title State Diagram - Cycle de Vie d'un Devis
+
+[*] --> DemandeClient : Client demande devis
+
+state "Demande Client" as DemandeClient #90EE90
+note right of DemandeClient
+  Email du client
+  Specifications projet
+  Delai: 48-72h attendu
+end note
+
+DemandeClient --> RechercheTemplate : Laurent cherche ancien devis
+
+state "Recherche Template" as RechercheTemplate #FF6B6B
+note right of RechercheTemplate
+  [!] **RECHERCHE MANUELLE**
+  - Fouille dossiers partages
+  - 200+ fichiers Word
+  - Nommage incoherent:
+    "PPSPS_final_v2_OK_2023.docx"
+    "PPSPS_Client_A_VRAI_FINAL.docx"
+  - Pas de versioning
+  [TIME] 30 min de fouille !
+end note
+
+RechercheTemplate --> PasDeTemplate : Pas trouve similaire
+RechercheTemplate --> OuvertureMDE : Template trouve
+
+state "Pas de Template" as PasDeTemplate #FF6B6B
+note left of PasDeTemplate
+  [!] Part de zero
+  [TIME] +1h
+end note
+
+PasDeTemplate --> OuvertureMDE
+
+state "Ouverture MDE" as OuvertureMDE #FF6B6B
+note right of OuvertureMDE
+  [!] **TEMPS CHARGEMENT**
+  [TIME] 15 secondes
+  Attente ecran accueil: 30s
+  Module devis: 40s
+  [TIME] Total 5 min juste pour ouvrir !
+end note
+
+OuvertureMDE --> RechercheClient : Cherche client
+
+state "Recherche Client" as RechercheClient #FFD700
+note right of RechercheClient
+  Liste clients (30s)
+  Scroll + recherche (2 min)
+end note
+
+RechercheClient --> SaisieManuelle : Nouveau devis
+
+state "Saisie Manuelle" as SaisieManuelle #FF6B6B {
+  [*] --> SaisieLigne1
+  SaisieLigne1 --> SaisieLigne2 : Popup 35s
+  SaisieLigne2 --> SaisieLigne3 : Popup 35s
+  SaisieLigne3 --> SaisieAutres : ...
+  SaisieAutres --> [*] : 30 lignes
+}
+
+note right of SaisieManuelle
+  [!] **CALVAIRE**
+  30 lignes × 5min = 2h30
+
+  Pour CHAQUE ligne:
+  - Clic "Ajouter ligne"
+  - Popup catalogue (35s)
+  - Recherche article (2 min)
+  - Copie depuis Excel perso
+  - Sauvegarde (25s)
+
+  [TIME] Reduit a 1h30 avec Excel
+  mais TOUJOURS tres long !
+end note
+
+SaisieManuelle --> VerifExcel : Verifications
+
+state "Verification Excel" as VerifExcel #FFD700
+note left of VerifExcel
+  - Marge globale
+  - Prix vs concurrence
+  - Coherence quantites
+  [TIME] 10 min
+end note
+
+VerifExcel --> Ajustements : Corrections necessaires
+VerifExcel --> GenerationPDF : OK
+
+state "Ajustements" as Ajustements #FFD700
+note right of Ajustements
+  [!] Re-chargements (5 min)
+  Modifier 2-3 lignes
+end note
+
+Ajustements --> GenerationPDF
+
+state "Generation PDF" as GenerationPDF #FFD700
+note right of GenerationPDF
+  Clic "Generer PDF"
+  PDF (45s)
+end note
+
+GenerationPDF --> VerifPDF : Verifie mise en page
+
+state "Verification PDF" as VerifPDF #FFD700
+note left of VerifPDF
+  [!] Parfois bugs affichage
+  → Regeneration
+  [TIME] 3 min
+end note
+
+VerifPDF --> BugPDF : Bug affichage
+VerifPDF --> EnvoiClient : PDF OK
+
+state "Bug PDF" as BugPDF #FF6B6B
+BugPDF --> GenerationPDF : Regenere
+
+state "Envoi Client" as EnvoiClient #90EE90
+note right of EnvoiClient
+  - Redaction email
+  - Recherche contact
+  - Piece jointe
+  [TIME] 7 min
+end note
+
+EnvoiClient --> EnAttente : Email envoye
+
+state "En Attente" as EnAttente #FFFFAA
+note right of EnAttente
+  Attente reponse client
+  24-72h
+end note
+
+EnAttente --> Refus : Client refuse
+EnAttente --> Accepte : Client accepte
+EnAttente --> Modification : Client demande ajustement
+
+state "Modification Demandee" as Modification #FFD700
+note left of Modification
+  Retour a la saisie
+  [!] Recommence processus
+end note
+
+Modification --> OuvertureMDE : Rouvre MDE
+
+state "[KO] Refus" as Refus #FF6B6B
+Refus --> [*]
+
+state "[OK] Accepte" as Accepte #90EE90
+Accepte --> [*]
+
+note bottom
+  **METRIQUES GLOBALES**
+  [TIME] Duree totale: **2h05**
+
+  Decomposition:
+  • Recherche ancien devis: 45 min
+  • Ouverture MDE: 5 min
+  • Saisie 30 lignes: 1h30
+  • Verifications: 15 min
+  • PDF & envoi: 10 min
+
+  [FRUSTRE] **FRUSTRATION: Très élevée**
+  [!] Avec templates: 30 min possible !
+  Economie potentielle: 1h35/devis
+end note
+
+@enduml

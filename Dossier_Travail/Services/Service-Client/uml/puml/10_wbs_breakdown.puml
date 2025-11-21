@@ -1,0 +1,57 @@
+@startwbs WBS_Transformation_Service_Client
+
+title WBS - Transformation Service Client Digital (18 mois)
+
+* Transformation\nService Client
+** Phase 1\nQuick Wins\n**M1-3**
+*** Setup HubSpot
+**** Sélection & POC
+**** Configuration CRM
+**** Import données
+**** Formation
+*** Templates & Planning
+**** Création templates (30)
+**** Setup Calendly
+*** Workflows basiques
+*** Questionnaire satisfaction
+*** Contingence
+
+** Phase 2\nIntégrations\n**M4-6**
+*** CTI Téléphonie
+**** Sélection solution
+**** Connecteur
+**** Tests & formation
+*** Sync SAGE
+**** Analyse API
+**** Développement ETL
+**** Tests
+*** Portail Client
+**** Développement custom
+**** Tests utilisateurs
+*** GED intégrée
+*** Workflows avancés
+*** Contingence
+
+** Phase 3\nExcellence\n**M7-18**
+*** App Mobile Technicien
+**** Développement React Native
+**** Backend API
+**** Tests & déploiement
+*** Chatbot IA
+**** Configuration HubSpot
+**** Intégration OpenAI
+**** Entraînement
+*** ML (3 modèles)
+**** Prévision appels
+**** Risque churn
+**** Optimisation planning
+*** Analytics avancés
+*** Contingence
+
+** Coûts récurrents\n**18 mois**
+*** Licences HubSpot
+*** Téléphonie CTI
+*** Maintenance app
+*** Hosting ML
+
+@endwbs

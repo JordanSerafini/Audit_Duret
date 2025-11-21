@@ -1,0 +1,277 @@
+@startuml 03_timeline_jalons_gonogo
+
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.0
+' Type Diagramme: Timing
+' Description: Timeline 18 mois avec 5 jalons GO/NO-GO critiques
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
+title Timeline Transformation - 18 Mois avec Jalons GO/NO-GO
+
+robust "Projet Transformation" as PROJET
+concise "Jalons Critiques" as JALONS
+concise "Budget Engage" as BUDGET
+concise "Risques" as RISQUES
+
+@0
+PROJET is "Phase 0: PREPARATION"
+JALONS is "M0 - KICK-OFF"
+BUDGET is "0K€"
+RISQUES is "FAIBLE"
+
+note top of PROJET
+  **M0 - DEMARRAGE (Nov 2025)**
+  - Validation budget CODIR
+  - Selection integrateur Odoo
+  - Constitution equipe PMO
+  - Lancement appels offres
+end note
+
+@1
+PROJET is "Vague 1: FONDATIONS"
+JALONS is "M1"
+BUDGET is "10-15K€"
+RISQUES is "FAIBLE"
+
+@2
+JALONS is "GO/NO-GO #1"
+BUDGET is "30-45K€"
+RISQUES is "MOYEN"
+
+note top of JALONS
+  **JALON #1 (M2 - Jan 2026)**
+  **CRITERES GO:**
+  - Odoo Phase 1 parametree (Ventes/Achats)
+  - App Mobile MVP deploye (TestFlight)
+  - Formation super-users realisee
+  - Tests recette OK (>85% scenarios)
+
+  **CRITERES NO-GO (STOP PROJET):**
+  - Budget depasse >20%
+  - Retard planning >1 mois
+  - Taux adoption users <60%
+  - Blocages techniques majeurs
+end note
+
+@3
+PROJET is "Vague 1: FONDATIONS"
+JALONS is "M3"
+BUDGET is "50-70K€"
+RISQUES is "MOYEN"
+
+@4
+PROJET is "Vague 1: FONDATIONS"
+JALONS is "M4"
+BUDGET is "65-90K€"
+RISQUES is "MOYEN"
+
+@5
+PROJET is "Vague 1: FONDATIONS"
+JALONS is "M5"
+BUDGET is "75-110K€"
+RISQUES is "MOYEN"
+
+@6
+JALONS is "GO/NO-GO #2"
+BUDGET is "78-122K€"
+RISQUES is "ELEVE"
+
+note top of JALONS
+  **JALON #2 (M6 - Avr 2026)**
+  **CRITERES GO:**
+  - Vague 1 complete (100%)
+  - HubSpot CRM integre
+  - 30 users bureau formes
+  - KPI satisfaisants:
+    * Temps saisie commande: -40%
+    * Erreurs stock: -60%
+    * Satisfaction users: >7/10
+
+  **CRITERES NO-GO:**
+  - ROI previsionnel negatif
+  - Incidents critiques recurrents
+  - Resistance changement massive
+end note
+
+@7
+PROJET is "Vague 2: STRUCTURANTS"
+JALONS is "M7"
+BUDGET is "90-135K€"
+RISQUES is "MOYEN"
+
+@8
+PROJET is "Vague 2: STRUCTURANTS"
+JALONS is "M8"
+BUDGET is "110-155K€"
+RISQUES is "MOYEN"
+
+@9
+JALONS is "GO/NO-GO #3"
+BUDGET is "125-175K€"
+RISQUES is "ELEVE"
+
+note top of JALONS
+  **JALON #3 (M9 - Jul 2026)**
+  **CRITERES GO:**
+  - Odoo Phase 2 deploye (Stock/Projets)
+  - SIRH PayFit/Lucca operationnel
+  - Sync RH <-> ERP automatique
+  - APIs custom fonctionnelles
+  - KPI ameliores:
+    * Temps paie: -50% (vs M0)
+    * Tracabilite affaires: 100%
+
+  **CRITERES NO-GO:**
+  - Instabilite systeme (>3 incidents/semaine)
+  - Donnees corrompues/perdues
+  - Prestataires defaillants
+end note
+
+@10
+PROJET is "Vague 2: STRUCTURANTS"
+JALONS is "M10"
+BUDGET is "140-200K€"
+RISQUES is "MOYEN"
+
+@11
+PROJET is "Vague 2: STRUCTURANTS"
+JALONS is "M11"
+BUDGET is "155-225K€"
+RISQUES is "MOYEN"
+
+@12
+JALONS is "GO/NO-GO #4"
+BUDGET is "166-251K€"
+RISQUES is "ELEVE"
+
+note top of JALONS
+  **JALON #4 (M12 - Oct 2026)**
+  **CRITERES GO:**
+  - Vague 2 complete (100%)
+  - Scan RFID deploye (depot)
+  - 80 users total formes et actifs
+  - Taux adoption >80%
+  - KPI cibles atteints:
+    * Productivite globale: +30%
+    * Erreurs saisie: -80%
+    * Temps reporting: -70%
+
+  **CRITERES NO-GO:**
+  - Budget total >282K€
+  - Planning depasse >3 mois
+  - Objectifs metier non atteints
+end note
+
+@13
+PROJET is "Vague 3: EXCELLENCE"
+JALONS is "M13"
+BUDGET is "175-265K€"
+RISQUES is "FAIBLE"
+
+@14
+PROJET is "Vague 3: EXCELLENCE"
+JALONS is "M14"
+BUDGET is "185-275K€"
+RISQUES is "FAIBLE"
+
+@15
+JALONS is "GO/NO-GO #5"
+BUDGET is "195-280K€"
+RISQUES is "MOYEN"
+
+note top of JALONS
+  **JALON #5 (M15 - Jan 2027)**
+  **CRITERES GO (VAGUE 3):**
+  - Data Warehouse operationnel
+  - Dashboards BI Power BI/Metabase
+  - Modules IA/ML actifs:
+    * Prediction delais affaires
+    * Recommandations stock
+    * Optimisation tournees
+  - Formation BI terminee
+
+  **CRITERES NO-GO:**
+  - Complexite BI trop elevee
+  - Donnees insuffisantes (qualite)
+  - ROI IA non demontre
+end note
+
+@16
+PROJET is "Vague 3: EXCELLENCE"
+JALONS is "M16"
+BUDGET is "202-282K€"
+RISQUES is "FAIBLE"
+
+@17
+PROJET is "Vague 3: EXCELLENCE"
+JALONS is "M17"
+BUDGET is "205-282K€"
+RISQUES is "FAIBLE"
+
+@18
+JALONS is "M18 - BILAN FINAL"
+BUDGET is "165-282K€ FINAL"
+RISQUES is "TRES FAIBLE"
+
+note top of JALONS
+  **M18 - BILAN FINAL (Avr 2027)**
+  **EVALUATION GLOBALE:**
+  - Taux adoption finale: >90%
+  - Budget respecte: <282K€
+  - Planning respecte: <19 mois
+  - ROI atteint: >100K€/an gains
+  - Satisfaction users: >8/10
+
+  **LIVRABLES FINAUX:**
+  - Documentation complete
+  - Support interne autonome
+  - Prestataires desengages
+  - Amelioration continue lancee
+  - Roadmap Annee 2 validee
+end note
+
+@18
+PROJET is "FINALISATION"
+
+' === PHASES VISUELLES ===
+highlight 0 to 6 COLOR_ATTENTION : Vague 1 (6 mois)
+highlight 6 to 12 COLOR_IMPORTANT : Vague 2 (6 mois)
+highlight 12 to 18 COLOR_SUCCESS : Vague 3 (6 mois)
+
+' === METRIQUES JALONS ===
+note bottom of JALONS
+  **STATISTIQUES JALONS GO/NO-GO:**
+
+  🔴 **5 Jalons decisionnels critiques**
+  - M2, M6, M9, M12, M15
+  - Chaque jalon = revue CODIR obligatoire
+  - Decision GO/NO-GO formalisee (PV)
+
+  🟠 **Taux echec acceptable:**
+  - Jalons #1-#2: Tolerance 20% ecarts
+  - Jalons #3-#4: Tolerance 10% ecarts
+  - Jalon #5: Tolerance 5% ecarts
+
+  ⏰ **Durees phases:**
+  - Phase 0: 1 mois (preparation)
+  - Vague 1: 6 mois (fondations)
+  - Vague 2: 6 mois (structurants)
+  - Vague 3: 6 mois (excellence)
+  - TOTAL: 19 mois (buffer +1 mois)
+
+  💰 **Budget engage progressif:**
+  - M6: 47% budget engage (78-122K€)
+  - M12: 78% budget engage (166-251K€)
+  - M18: 100% budget engage (165-282K€)
+end note
+
+LEGEND_PRIORITES()
+
+@enduml

@@ -1,0 +1,79 @@
+@startuml State_Affaire
+
+title Machine Etats Affaire (Cycle de Vie)
+
+[*] --> Devis_Brouillon
+
+Devis_Brouillon : entry / Cree par RA
+Devis_Brouillon : do / Chiffrage, saisie produits
+Devis_Brouillon --> Devis_Envoye : RA valide + envoie client
+
+Devis_Envoye : entry / Mail auto client
+Devis_Envoye : do / Attente reponse client
+Devis_Envoye --> Devis_Accepte : Client accepte
+Devis_Envoye --> Devis_Refuse : Client refuse
+Devis_Envoye --> Devis_Perdu : Delai expiration (30j)
+
+Devis_Refuse --> [*]
+Devis_Perdu --> [*]
+
+Devis_Accepte : entry / Creation affaire auto
+Devis_Accepte : entry / Budget comptable auto cree
+Devis_Accepte --> Affaire_Planifiee : RA assigne chef chantier
+
+Affaire_Planifiee : entry / Chef chantier assigne
+Affaire_Planifiee : do / Planification dates, ressources
+Affaire_Planifiee --> Affaire_EnCours : Date debut atteinte
+
+Affaire_EnCours : entry / Travaux demarrent
+Affaire_EnCours : do / Suivi heures, achats
+Affaire_EnCours : do / Consommation budget
+Affaire_EnCours --> Affaire_EnCours : Achats materiels
+Affaire_EnCours --> Affaire_EnCours : Saisie heures
+Affaire_EnCours --> Affaire_Suspendue : Probleme bloquant
+Affaire_EnCours --> Affaire_Terminee : Travaux finis
+
+Affaire_Suspendue : entry / Alerte direction
+Affaire_Suspendue : do / Attente resolution
+Affaire_Suspendue --> Affaire_EnCours : Probleme resolu
+Affaire_Suspendue --> Affaire_Annulee : Annulation client
+
+Affaire_Terminee : entry / Travaux termines
+Affaire_Terminee : do / Levee reserves
+Affaire_Terminee : do / Calcul marge finale
+Affaire_Terminee --> Affaire_Facturee : Facture emise
+
+Affaire_Facturee : entry / Facture envoyee client
+Affaire_Facturee : do / Attente paiement
+Affaire_Facturee --> Affaire_Payee : Paiement recu
+Affaire_Facturee --> Affaire_Impayee : Delai >60j
+
+Affaire_Payee : entry / CA comptabilise
+Affaire_Payee : entry / Calcul marge definitive
+Affaire_Payee : entry / REX (retour experience)
+Affaire_Payee --> [*]
+
+Affaire_Impayee : entry / Alerte contentieux
+Affaire_Impayee --> Affaire_Payee : Paiement tardif recu
+Affaire_Impayee --> Affaire_Contentieux : Procedure judiciaire
+
+Affaire_Contentieux --> [*]
+Affaire_Annulee --> [*]
+
+note right of Affaire_EnCours
+  Anomalies detectees ML :
+  - Budget consomme >80% (orange)
+  - Budget consomme >100% (rouge)
+  - Vitesse consommation anormale
+  → Alertes auto RA + Direction
+end note
+
+note right of Affaire_Payee
+  KPI calcules auto :
+  - CA realise
+  - Marge brute
+  - Taux marge %
+  - ROI affaire
+end note
+
+@enduml

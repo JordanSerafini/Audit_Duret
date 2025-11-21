@@ -1,0 +1,132 @@
+@startuml Activity_Prise_RDV
+
+title Processus Prise de RDV - ÉTAT ACTUEL (Archaïque)
+
+start
+
+:Client appelle pour RDV;
+note right
+  📞 Téléphone sonne
+end note
+
+:Claire décroche;
+
+:Cherche post-it;
+note right
+  🔴 ⏰ 30 secondes
+end note
+
+:Note sur post-it;
+note right
+  🔴 Informations incomplètes
+end note
+
+:Ouvre Excel "Planning Gaëtan";
+note right
+  🔴 ⏰ 1 minute
+  Fichier réseau X:\Planning\...
+end note
+
+:Regarde disponibilités;
+note right
+  🔴 "Dispo ?" = INCERTAIN
+  ⏰ 2 minutes
+end note
+
+if (Sûr à 100% ?) then (❌ NON)
+  :Propose créneau\n(PAS SÛR);
+  note right
+    😬 "Je dois confirmer
+    avec le technicien..."
+    ⏰ 5 minutes
+    (client frustré)
+  end note
+
+  :Note sur post-it\n"Mail Gaëtan...";
+  note right
+    🔴 ⏰ 1 minute
+  end note
+
+  :Envoie MAIL Gaëtan;
+  note right
+    🔴 ⏰ 3 minutes
+  end note
+
+  :ATTENTE 7 HEURES\n(Gaëtan sur interventions);
+  note right
+    🔴 Communication asynchrone LENTE
+  end note
+
+  if (Gaëtan dispo ?) then (❌ NON)
+    :Gaëtan répond\n"Désolé pris, je peux...";
+
+    :Appelle client\npour nouveau créneau;
+    note right
+      🔴 ⏰ 2 minutes
+      Souvent répondeur
+    end note
+
+    if (Client décroche ?) then (❌ NON)
+      :Mail client;
+      note right
+        🔴 ⏰ 5 minutes
+        Pas de template
+      end note
+
+      :ATTENTE 15 HEURES\n(nuit + matin);
+
+      :Client répond "OK";
+    endif
+  else (✅ OUI)
+    :Gaëtan confirme;
+  endif
+
+  :Appelle client\nconfirmation finale;
+
+  if (Client décroche ?) then (❌ NON)
+    :Mail client;
+    note right
+      🔴 ⏰ 5 minutes
+    end note
+    :ATTENTE client répond;
+  endif
+
+else (✅ OUI - Rare)
+  :Confirme RDV immédiatement;
+  note right
+    ✅ RARE (< 10%)
+  end note
+endif
+
+:Saisie Excel planning;
+note right
+  🔴 ⏰ 2 minutes
+end note
+
+:Saisie Outlook\n(DOUBLE SAISIE !!);
+note right
+  🔴 ⏰ 2 minutes
+end note
+
+:Mail confirmation client;
+note right
+  🔴 ⏰ 5 minutes
+  Pas de template
+end note
+
+:Mail notification Gaëtan;
+note right
+  🔴 ⏰ 3 minutes
+end note
+
+stop
+
+note right
+  **TOTAL: 48 HEURES**
+  **14 ÉTAPES** (dont 10 manuelles)
+  **40 min temps actif Claire**
+  **3 outils** (Excel, Outlook, mail)
+  **3 saisies** (post-it, Excel, Outlook)
+end note
+
+@enduml

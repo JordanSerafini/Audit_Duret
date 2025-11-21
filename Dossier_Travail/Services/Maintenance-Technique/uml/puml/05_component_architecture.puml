@@ -1,0 +1,106 @@
+@startuml Component_Architecture
+
+title Architecture Composants - Solution CIBLE SAV
+
+package "Presentation (Front-End)" {
+  [App Mobile\nTechniciens\n(iOS/Android)] as AppMobile
+  [Portail Client\nWeb Responsive] as PortailWeb
+}
+
+package "ERP/CRM Terrain (SaaS Cloud)" {
+  [CRM Clients\n(300 contrats)] as CRM
+  [Planning\nIntelligent] as Planning
+  [Module Devis] as Devis
+  [Workflows\nAlertes Auto] as Workflows
+  [Analytics\nDashboards] as Analytics
+
+  CRM ..> Planning : clients
+  Planning ..> Workflows : triggers
+  Workflows ..> Analytics : logs
+}
+
+package "Donnees Data" {
+  database "Base ERP\n(PostgreSQL)" as DB {
+    [Tables]
+    [Clients]
+    [Contrats]
+    [Interventions]
+    [Planning]
+    [Factures]
+  }
+
+  cloud "Stockage Cloud\n(Azure Blob)" as Cloud
+
+  note right of DB
+    **Tables:**
+    - clients
+    - contrats
+    - interventions
+    - planning
+    - factures
+  end note
+
+  note right of Cloud
+    **Fichiers:**
+    - Photos interventions
+    - PDF rapports
+    - PDF devis
+    - Certificats
+  end note
+}
+
+package "Integrations Externe" {
+  [GAO\nActuel] as GAO
+  [SAGE\nComptabilite] as SAGE
+  [Twilio\nSMS] as SMS
+  [SendGrid\nEmail] as Email
+}
+
+AppMobile --> CRM : API REST\nHTTPS/TLS 1.3
+AppMobile --> Devis : generer\ndevis terrain
+AppMobile --> DB : sync offline\nSQLite local
+
+PortailWeb --> CRM : API REST
+PortailWeb --> Planning : prise RDV\nen ligne
+
+CRM --> DB : CRUD
+Planning --> DB : read/write
+Devis --> DB : store
+Workflows --> DB : queries
+Analytics --> DB : read-only
+
+AppMobile --> Cloud : upload\nphotos/PDF
+PortailWeb --> Cloud : download\nrapports
+
+CRM <--> GAO : API CSV\nconsultation
+CRM --> SAGE : facturation\nautomatique
+Workflows --> SMS : notifications\nclients
+Workflows --> Email : confirmations\nalertes
+
+note right of AppMobile
+  **FONCTIONS CLE** :
+  • Rapport intervention digital
+  • Devis terrain
+  • Pointage GPS
+  • Photos integrees
+  • Signature electronique
+  • Mode offline
+end note
+
+note left of PortailWeb
+  **SELF-SERVICE 24/7** :
+  • Prise RDV en ligne
+  • Historique interventions
+  • Documents (rapports, factures)
+  • Renouvellement contrat
+end note
+
+note bottom of Workflows
+  **AUTOMATISATIONS** :
+  • Alerte fin contrat (J-60/30/7)
+  • Interventions auto (contrats)
+  • Enquete satisfaction J+2
+  • Relances
+end note
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml Timing_Timeline_Intervention
+
+title Timeline Comparee Intervention SAV CERFA Papier vs Digital
+
+concise "ACTUEL (CERFA Papier)" as Actuel
+concise "CIBLE (App Mobile)" as Cible
+
+@0
+Actuel is Preparation
+Cible is Preparation
+
+@1
+Actuel is Deplacement
+Cible is Deplacement
+
+@21
+Actuel is AppelClothilde
+Cible is InterventionInfoApp
+
+@26
+Actuel is Intervention
+
+@116
+Actuel is CERFAPapier
+Cible is InterventionTerminee
+
+@128
+Actuel is PhotosTel
+Cible is RapportDigital
+
+@133
+Actuel is SignaturePapier
+
+@135
+Actuel is FinIntervention
+Cible is EmailClient
+
+@138
+Cible is FinIntervention
+
+Actuel@0 <-> @1 : 30min
+Actuel@1 <-> @21 : 20min
+Actuel@21 <-> @26 : 5min
+Actuel@26 <-> @116 : 1h30
+Actuel@116 <-> @128 : 12min
+Actuel@128 <-> @133 : 5min
+Actuel@133 <-> @135 : 2min
+
+Cible@0 <-> @1 : 30min
+Cible@1 <-> @21 : 20min
+Cible@21 <-> @116 : 1h35
+Cible@116 <-> @138 : 3min
+
+highlight 21 to 26 #LightCoral : Temps perdu
+highlight 116 to 135 #LightCoral : CERFA + photos
+
+highlight 116 to 138 #LightGreen : Rapport digital
+
+note bottom of Actuel
+  ACTUEL : 2h44 (164 min)
+  Admin : 1h14 (74 min) perdu
+end note
+
+note bottom of Cible
+  CIBLE : 2h17 (137 min)
+  Admin : 0h42 (42 min)
+  GAIN : 27 min/intervention
+  = 270h/an (600 interv/an) = 13,500 euros/an
+  🔧 CORRECTION CALCUL (vs 99K€ erroné)
+end note
+
+@enduml

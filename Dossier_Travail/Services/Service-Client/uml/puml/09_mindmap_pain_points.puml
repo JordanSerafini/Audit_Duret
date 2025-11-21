@@ -1,0 +1,46 @@
+@startmindmap Pain_Points_Service_Client
+
+title Pain Points Service Client
+
+* 🔴 SERVICE CLIENT
+** Temps perdu
+*** Prise RDV (10h/j)
+*** Recherche info
+*** Double saisie
+*** Relances manuelles
+
+** Opportunités perdues
+*** Demandes techniciens
+*** Clients SAV
+*** Devis terrain
+*** Refacturation heures
+*** Clients oubliés (post-it)
+
+** Clients perdus
+*** Insatisfaction (rétention faible)
+*** Délais inacceptables
+*** Oublis
+
+left side
+
+** Système post-it\n**🔴 Critique**
+*** Aucune traçabilité\n(risque élevé d'oubli)
+*** Post-it perdu/jeté\nClients perdus
+
+** Données éparpillées\n**🔴 Critique**
+*** 7 outils (ERP, SAGE, Excel...)\nAucune intégration
+*** Double/triple saisie\nIncohérences
+
+** Planning RDV archaïque\n**🔴 Critique**
+*** Délais excessifs pour RDV\nvs instantané possible
+*** Excel non sync\nGaëtan pas consulté
+
+** CERFA papier\n**🟠 Important**
+*** Chronophage\nTemps important
+*** Illisible\nPas pro
+
+** Portail client inexistant\n**🟠 Important**
+*** Appels entrants élevés\nRéduction possible
+*** Disponibilité 8h-18h\nvs 24/7
+
+@endmindmap

@@ -1,0 +1,74 @@
+@startwbs WBS_Projet
+
+title Work Breakdown Structure Digitalisation Chantiers
+
+* Projet\nDigitalisation\nChantiers\n12 mois
+
+** Phase 1\nQuick Wins\n(M1-M3)
+
+*** App Mobile V1
+**** Design UI/UX\nM1
+**** Dev iOS\nM1-M2
+**** Dev Android\nM1-M2
+**** Tests\nM2
+
+*** Module Photos
+**** Upload auto\nM1
+**** Compression\nM1
+**** Galerie\nM2
+**** Tests\nM2
+
+*** Module Rapports
+**** Templates PDF\nM2
+**** Generation auto\nM2
+**** Signature elec\nM3
+**** Tests\nM3
+
+** Phase 2\nStructurant\n(M4-M8)
+
+*** Module Incidents
+**** Formulaires\nM4
+**** Workflow\nM4-M5
+**** Notifications\nM5
+**** Tests\nM5
+
+*** Module Plans
+**** Visualisation\nM5
+**** Annotations\nM6
+**** Sync\nM6
+**** Tests\nM6
+
+*** Module Commandes
+**** Catalogue\nM7
+**** Workflow validation\nM7
+**** Suivi livraisons\nM8
+**** Tests\nM8
+
+*** Backend Cloud
+**** API REST\nM4
+**** Auth JWT\nM4
+**** Base donnees\nM5
+**** Azure Functions\nM5-M6
+**** Tests integration\nM6
+
+** Phase 3\nOptimisation\n(M9-M12)
+
+*** Mode Hors Ligne
+**** SQLite local\nM9
+**** Sync engine\nM9-M10
+**** Conflict resolution\nM10
+**** Tests\nM10
+
+*** Dashboard Chantier
+**** Budget temps reel\nM10
+**** Planning equipe\nM11
+**** KPIs chantier\nM11
+**** Tests\nM11
+
+*** Formation Deploiement
+**** Formation chefs\nM11
+**** Documentation\nM11
+**** Support\nM12
+**** GO-LIVE\nM12
+
+@endwbs

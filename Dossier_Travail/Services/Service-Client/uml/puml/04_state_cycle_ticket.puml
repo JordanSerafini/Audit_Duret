@@ -1,0 +1,64 @@
+@startuml State_Cycle_Ticket
+
+title Cycle de Vie d'un Ticket Client - CIBLE (HubSpot)
+
+[*] --> Nouveau : Création\n(appel, mail, portail)
+
+Nouveau : Entry: Notification Claire
+Nouveau : Do: Assign automatique
+Nouveau --> Ouvert : Prise en charge
+
+Ouvert : Entry: Statut "En cours"
+Ouvert : Do: Claire traite
+Ouvert --> EnAttenteInfo : Besoin info client
+Ouvert --> EnAttenteTechnicien : Besoin technicien
+Ouvert --> Résolu : Problème résolu
+
+EnAttenteInfo : Entry: Mail auto client
+EnAttenteInfo : Do: Attente réponse (SLA 48h)
+EnAttenteInfo --> Ouvert : Client répond
+EnAttenteInfo --> Fermé : Timeout 7j sans réponse
+
+EnAttenteTechnicien : Entry: Notification Gaëtan
+EnAttenteTechnicien : Do: Planning RDV
+EnAttenteTechnicien --> EnCours : RDV planifié
+
+EnCours : Entry: Technicien en route
+EnCours : Do: Intervention terrain
+EnCours --> Résolu : Intervention OK
+EnCours --> Ouvert : Problème non résolu
+
+Résolu : Entry: Questionnaire satisfaction auto
+Résolu : Do: Attente validation client
+Résolu --> Fermé : Client valide (ou auto J+2)
+Résolu --> Ouvert : Client pas satisfait
+
+Fermé : Entry: Archive
+Fermé : Do: Statistiques
+Fermé --> [*]
+
+note right of Nouveau
+  🎫 **Création Automatique**
+  - Appel → CTI → Ticket
+  - Mail → Parsing → Ticket
+  - Portail → Formulaire → Ticket
+end note
+
+note right of Ouvert
+  ⏰ **SLA: <4h première réponse**
+  Alerte si > 4h
+end note
+
+note right of EnAttenteTechnicien
+  📅 **Planning Auto**
+  Proposition créneaux disponibles
+  Confirmation client automatique
+end note
+
+note right of Résolu
+  📝 **Satisfaction Auto**
+  Questionnaire envoyé J+2
+  Relance J+7 si pas réponse
+end note
+
+@enduml

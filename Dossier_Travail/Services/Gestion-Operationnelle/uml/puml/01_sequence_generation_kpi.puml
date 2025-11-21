@@ -1,0 +1,55 @@
+@startuml Sequence_Generation_KPI
+
+title Generation KPI Mensuels (Avant vs Apres)
+
+actor Sylvie
+participant "Power BI\nDashboard" as PBI
+database "Azure SQL\nDWH" as DWH
+participant "ETL Azure\nData Factory" as ETL
+database "Odoo\nPostgreSQL" as Odoo
+participant "ML Models\nAzure Functions" as ML
+
+== AVANT (Systeme Actuel - 24h) ==
+
+Sylvie -> Odoo : 1. Export manuel CSV\n(SAGE + MDE)
+note right: 1h export +\nattentes plantages
+Sylvie -> Sylvie : 2. Import Excel\n(30+ fichiers)
+note right: 2h import +\ncorrections formats
+Sylvie -> Sylvie : 3. Consolidation manuelle\n(copier-coller)
+note right: 4h consolidation +\nvérifications
+Sylvie -> Sylvie : 4. Calculs marges\n(formules Excel)
+note right: 3h calculs +\ncorrections erreurs
+Sylvie -> Sylvie : 5. Generation graphiques\n(manuels)
+note right: 2h creation graphs
+Sylvie -> Sylvie : 6. Redaction rapport Word
+note right: 3h redaction
+Sylvie -> Sylvie : 7. Verifications finales
+note right: 2h verif +\nstress
+note over Sylvie : TOTAL AVANT :\n24h sur 2 jours\nEpuisement
+
+== APRES (Systeme Cible - 2h) ==
+
+ETL -> Odoo : 1. Extract donnees\n(automatique quotidien 6h)
+note right: 10 min\nautomatique
+ETL -> DWH : 2. Transform + Load\n(Star Schema)
+note right: 10 min\nautomatique
+ML -> DWH : 3. Predictions ML\n(CA projete, anomalies)
+note right: 5 min\nautomatique
+
+Sylvie -> PBI : 4. Ouverture dashboard\n(SSO Azure AD)
+note right: 30 sec\n(cloud, rapide)
+PBI -> DWH : 5. DirectQuery\n(temps reel)
+note right: 2 sec\ntemps reel
+PBI --> Sylvie : 6. Affichage KPI\n(graphiques auto)
+note right: Temps reel,\naucune saisie
+
+Sylvie -> PBI : 7. Ajout commentaires\n(zone texte)
+note right: 20 min\nanalyse
+Sylvie -> PBI : 8. Generation rapport PDF\n(1 clic)
+note right: 2 min\nautomatique
+PBI --> Sylvie : 9. PDF pret + envoi auto\n(mail direction)
+note right: Instantane
+
+note over Sylvie : TOTAL APRES :\n2h sur 1 journee\nSatisfaction
+
+@enduml

@@ -1,0 +1,130 @@
+@startuml Component_Architecture_Actuelle
+
+title Component Diagram - Architecture Systeme ACTUEL Direction-Affaires
+
+skinparam componentStyle rectangle
+
+package "Responsables Affaires (4)" #FFE4E1 {
+  [Laurent\nRA 1] as Laurent #FFB6C1
+  [RA 2] as RA2 #FFB6C1
+  [RA 3] as RA3 #FFB6C1
+  [RA 4] as RA4 #FFB6C1
+
+  note right of Laurent
+    [!] Travail isole
+    [!] Templates personnels
+    [!] Excel perso
+  end note
+}
+
+package "Direction & BE" #E6F3FF {
+  [Marie\nDirectrice] as Marie #DDA0DD
+  [Thomas\nBE] as Thomas #98FB98
+
+  note right of Marie
+    [!] Aucune visibilite TR
+    [TIME] 3h pour un chiffre
+  end note
+}
+
+package "Systeme Legacy" #FFCCCC {
+  database "Sage MDE/ERP\n(Obsolete)" as SageMDE #FF0000 {
+    [Module Devis]
+    [Module Affaires]
+    [Module Facturation]
+  }
+
+  note right of SageMDE
+    ⚠️ **CALAMITEUX**
+    - 30-40s par ecran
+    - VPN + Citrix lent
+    - Interface complexe
+    - Teletravail impossible
+    - Timeouts frequents
+  end note
+}
+
+package "Documents (Chaos)" #FFF9E6 {
+  [Word\nTemplates PPSPS] as WordPPSPS #FFD700
+  [Word\nDevis] as WordDevis #FFD700
+  [Excel\nPerso Laurent] as ExcelL #FFD700
+  [Excel\nPerso RA2] as ExcelRA2 #FFD700
+  [Dossiers\nPartages\n200+ fichiers] as Dossiers #FF6B6B
+
+  note bottom of Dossiers
+    [!] **CHAOS FICHIERS**
+    - 200+ fichiers Word
+    - Nommage incoherent:
+      "PPSPS_final_v2_OK_2023.docx"
+      "PPSPS_Client_A_VRAI_FINAL.docx"
+    - Pas de versioning
+    - [TIME] 30 min de recherche
+  end note
+}
+
+package "Communication" #F0F0F0 {
+  [Outlook\nEmail] as Email
+  [VPN/Citrix] as VPN #FF0000
+
+  note bottom of VPN
+    [!] 30-40s par ecran
+    [!] Timeouts frequents
+    [FRUSTRE] Frustration maximale
+  end note
+}
+
+cloud "Clients" #E0E0E0 {
+  [Client A] as Client1
+  [Client B] as Client2
+  [Client C] as Client3
+
+  note right of Client1
+     Demande devis email
+    [TIME] Attend 48-72h
+  end note
+}
+
+' Relations Laurent (RA principal)
+Laurent --> SageMDE : via VPN\n30-40s/ecran
+Laurent --> WordPPSPS : copie-colle\n3h par PPSPS
+Laurent --> WordDevis : templates
+Laurent --> ExcelL : calculs perso
+Laurent --> Dossiers : recherche\n30 min
+Laurent ..> VPN : souffre
+
+' Relations autres RA
+RA2 --> SageMDE : via VPN
+RA2 --> ExcelRA2 : calculs perso
+RA3 --> SageMDE : via VPN
+RA4 --> SageMDE : via VPN
+
+' Relations Marie
+Marie ..> SageMDE : consultation\n(si dispo)
+Marie ..> Laurent : demande chiffres\n[TIME] 3h
+Marie ..> RA2 : demande chiffres
+
+' Relations Thomas
+Thomas --> WordPPSPS : relecture\ncommentaires Word
+Thomas ..> Email : echange PPSPS
+
+' Relations Clients
+Email ..> Client1 : envoi devis
+Email ..> Client2 : envoi devis
+Email ..> Client3 : envoi devis
+Client1 ..> Email : demande devis
+Client2 ..> Email : demande devis
+
+note bottom
+  **PROBLEMES ARCHITECTURE**
+  [!] ERP Legacy ultra-lent (30-40s/ecran)
+  [!] Teletravail impossible (VPN + Citrix)
+  [!] Documents eparpilles (200+ fichiers)
+  [!] Pas de templates automatiques
+  [!] Chaque RA a ses propres Excel
+  [!] Pas d'integration systeme
+  [!] Pas de visibilite direction
+  [!] PPSPS 100% manuel (3h)
+  [!] Recherche template 30 min
+end note
+
+@enduml
