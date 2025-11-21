@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Wrench, AlertTriangle, CheckCircle, Smartphone, WifiOff, Cloud, FileText, MessageSquare, Clock, TrendingUp, Target, ArrowRight, LayoutDashboard, Users, Camera, Database, Zap } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Smartphone, WifiOff, Cloud, FileText, MessageSquare, TrendingUp, Target, ArrowRight, LayoutDashboard, Users, Camera } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 
 export default function ChantiersPage() {
