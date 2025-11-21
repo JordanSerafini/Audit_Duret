@@ -116,8 +116,33 @@ export default function MarkdownViewer({ files, title = "Documents Markdown", de
                   <p className="mt-4 text-gray-600 font-medium">Chargement...</p>
                 </div>
               ) : selectedFile ? (
-                <div className="prose prose-base max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-strong:text-gray-900 prose-strong:font-bold prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:my-1">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <div className="markdown-content">
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      h1: ({node, ...props}) => <h1 className="text-3xl font-bold text-gray-900 mb-4 mt-6" {...props} />,
+                      h2: ({node, ...props}) => <h2 className="text-2xl font-bold text-gray-900 mb-3 mt-5" {...props} />,
+                      h3: ({node, ...props}) => <h3 className="text-xl font-bold text-gray-900 mb-2 mt-4" {...props} />,
+                      h4: ({node, ...props}) => <h4 className="text-lg font-bold text-gray-900 mb-2 mt-3" {...props} />,
+                      p: ({node, ...props}) => <p className="text-gray-800 text-base leading-relaxed mb-4" {...props} />,
+                      strong: ({node, ...props}) => <strong className="font-bold text-gray-900" {...props} />,
+                      em: ({node, ...props}) => <em className="italic text-gray-800" {...props} />,
+                      ul: ({node, ...props}) => <ul className="list-disc list-inside text-gray-800 space-y-2 mb-4 ml-4" {...props} />,
+                      ol: ({node, ...props}) => <ol className="list-decimal list-inside text-gray-800 space-y-2 mb-4 ml-4" {...props} />,
+                      li: ({node, ...props}) => <li className="text-gray-800 text-base" {...props} />,
+                      a: ({node, ...props}) => <a className="text-blue-600 hover:text-blue-800 underline font-medium" {...props} />,
+                      blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 my-4" {...props} />,
+                      code: ({node, inline, ...props}: any) =>
+                        inline ?
+                          <code className="bg-gray-100 text-red-600 px-2 py-1 rounded text-sm font-mono" {...props} /> :
+                          <code className="block bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm font-mono mb-4" {...props} />,
+                      pre: ({node, ...props}) => <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4" {...props} />,
+                      table: ({node, ...props}) => <table className="min-w-full border-collapse border border-gray-300 my-4" {...props} />,
+                      th: ({node, ...props}) => <th className="border border-gray-300 bg-gray-100 px-4 py-2 text-left font-bold text-gray-900" {...props} />,
+                      td: ({node, ...props}) => <td className="border border-gray-300 px-4 py-2 text-gray-800" {...props} />,
+                      hr: ({node, ...props}) => <hr className="my-6 border-t-2 border-gray-300" {...props} />,
+                    }}
+                  >
                     {content}
                   </ReactMarkdown>
                 </div>
