@@ -205,31 +205,14 @@ Frontend Odoo → Backend Odoo (Python) → Google Maps API
 
 **Crédit mensuel gratuit**: **200$** offerts par Google
 
-### Estimation Coûts Duret
+### Estimation Coûts
 
-**Hypothèses**:
-- 50 chantiers actifs simultanément
-- 100 nouveaux clients/mois (géocodage)
-- 15 techniciens × 10 tournées optimisées/mois (Directions)
+Le coût réel dépendra du volume d'utilisation effectif. Il est recommandé de:
+- Démarrer avec le crédit mensuel gratuit de 200$ offert par Google
+- Monitorer la consommation réelle pendant les premiers mois
+- Ajuster le budget en fonction de l'usage observé
 
-**Calcul**:
-```
-Geocoding: 100 clients × 1 req = 100 req/mois
-  → 0.50$ (gratuit)
-
-Directions: 15 × 10 tournées × 1 req = 150 req/mois
-  → 0.75$ (gratuit)
-
-Maps JavaScript: 200 loads/jour × 22 jours = 4400 loads/mois
-  → 30$ (après crédit gratuit)
-
-Distance Matrix (optionnel): 500 req/mois
-  → 2.50$ (gratuit)
-
-TOTAL = ~35$/mois = **40€/mois**
-```
-
-✅ **Budget réaliste**: **50€/mois** (sécurité)
+**Note** : Avec le crédit gratuit, les besoins d'une PME restent généralement couverts
 
 ## Cas d'usage Détaillés
 
@@ -406,8 +389,8 @@ if response.status_code == 200:
 - **Amélioration de la Ponctualité** : Meilleure planification et respect des horaires d'intervention.
 
 ### Coûts
-**Budget réaliste**: 50€/mois (API Google Maps).  
-**Investissement dev**: ~8K€ (one-time pour intégration complète).
+**Budget API** : À définir selon usage réel (crédit gratuit mensuel de 200$ souvent suffisant pour PME).
+**Investissement développement** : À chiffrer selon périmètre d'intégration retenu.
 
 ## Recommandations
 
