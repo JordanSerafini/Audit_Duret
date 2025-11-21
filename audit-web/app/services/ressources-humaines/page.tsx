@@ -3,6 +3,7 @@ import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 
 export const metadata = {
   title: 'Ressources Humaines - Audit IT Duret',
@@ -10,6 +11,8 @@ export const metadata = {
 };
 
 export default function RessourcesHumainesPage() {
+  const markdownFiles = getServiceMarkdownFiles(\'ressources-humaines');
+
   const personas = [
     {
       name: 'Sophie',
@@ -307,6 +310,16 @@ export default function RessourcesHumainesPage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="ressources-humaines" serviceLabel="Ressources Humaines" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Ressources Humaines"
+          defaultExpanded={false}
+        />
+      </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">

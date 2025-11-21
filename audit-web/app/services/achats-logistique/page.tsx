@@ -3,6 +3,7 @@ import { AlertTriangle, TrendingUp, Database, Zap, Users, Clock, LayoutDashboard
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import PersonaCard from '@/components/ui/PersonaCard';
 import ProblemCard from '@/components/ui/ProblemCard';
@@ -11,6 +12,7 @@ import ComparisonTable from '@/components/ui/ComparisonTable';
 import KpiCard from '@/components/ui/KpiCard';
 import ArchitectureSection from '@/components/sections/ArchitectureSection';
 import { personas, comparison, problems, opportunities, kpis, heroStats, criticalStats } from '@/data/achats-logistique';
+import { getServiceMarkdownFiles } from '@/config/markdownFiles';
 
 export const metadata = {
   title: 'Achats & Logistique - Audit IT Duret',
@@ -18,6 +20,8 @@ export const metadata = {
 };
 
 export default function AchatsLogistiquePage() {
+  const markdownFiles = getServiceMarkdownFiles('achats-logistique');
+
   return (
     <div className="max-w-7xl mx-auto">
       {/* Breadcrumbs */}
@@ -234,6 +238,15 @@ export default function AchatsLogistiquePage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="achats-logistique" serviceLabel="Achats & Logistique" />
+
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Achats & Logistique"
+          defaultExpanded={false}
+        />
+      </div>
 
       {/* Footer navigation */}
       <div className="flex justify-between items-center border-t border-slate-300 pt-6">

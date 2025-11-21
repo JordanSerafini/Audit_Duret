@@ -3,8 +3,11 @@ import { BarChart3, AlertTriangle, CheckCircle, User, FileText, TrendingUp, Cloc
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 
 export default function GestionOperationnellePage() {
+  const markdownFiles = getServiceMarkdownFiles(\'gestion-operationnelle');
+
   const personas = [
     {
       name: 'Sylvie',
@@ -292,6 +295,16 @@ export default function GestionOperationnellePage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="gestion-operationnelle" serviceLabel="Gestion Opérationnelle" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Gestion Operationnelle"
+          defaultExpanded={false}
+        />
+      </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">

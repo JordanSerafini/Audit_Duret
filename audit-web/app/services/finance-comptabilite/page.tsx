@@ -3,6 +3,7 @@ import { ArrowLeft, AlertTriangle, CheckCircle, TrendingUp, Database, Zap, Users
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 
 export const metadata = {
   title: 'Finance & Comptabilité - Audit IT Duret',
@@ -10,6 +11,8 @@ export const metadata = {
 };
 
 export default function FinanceComptabilitePage() {
+  const markdownFiles = getServiceMarkdownFiles(\'finance-comptabilite');
+
   const stats = [
     { label: "Délai Rentabilité", value: "1-2 mois", subtext: "Trop tard pour réagir", icon: Clock, color: "bg-red-500" },
     { label: "Temps Rapprochement", value: "8h/mois", subtext: "100% manuel", icon: FileText, color: "bg-orange-500" },
@@ -585,6 +588,16 @@ export default function FinanceComptabilitePage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="finance-comptabilite" serviceLabel="Finance & Comptabilité" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Finance Comptabilite"
+          defaultExpanded={false}
+        />
+      </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">

@@ -3,8 +3,11 @@ import { AlertTriangle, CheckCircle, User, FileText, MapPin, Clock, Smartphone, 
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 
 export default function MaintenanceTechniquePage() {
+  const markdownFiles = getServiceMarkdownFiles(\'maintenance-technique');
+
   const personas = [
     {
       name: 'Gaëtan',
@@ -279,6 +282,16 @@ export default function MaintenanceTechniquePage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="maintenance-technique" serviceLabel="Maintenance Technique" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Maintenance Technique"
+          defaultExpanded={false}
+        />
+      </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">

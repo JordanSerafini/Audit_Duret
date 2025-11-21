@@ -3,8 +3,11 @@ import { AlertTriangle, CheckCircle, Smartphone, WifiOff, Cloud, FileText, Messa
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 
 export default function ChantiersPage() {
+  const markdownFiles = getServiceMarkdownFiles(\'chantiers');
+
   const personas = [
     {
       name: "Marc",
@@ -459,6 +462,16 @@ export default function ChantiersPage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="chantiers" serviceLabel="Chantiers" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Chantiers"
+          defaultExpanded={false}
+        />
+      </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">

@@ -3,8 +3,11 @@ import { Briefcase, AlertTriangle, CheckCircle, User, FileText, TrendingUp, Cloc
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 
 export default function DirectionAffairesPage() {
+  const markdownFiles = getServiceMarkdownFiles(\'direction-affaires');
+
   const personas = [
     {
       name: 'Laurent',
@@ -292,6 +295,16 @@ export default function DirectionAffairesPage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="direction-affaires" serviceLabel="Direction Affaires" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Direction Affaires"
+          defaultExpanded={false}
+        />
+      </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">

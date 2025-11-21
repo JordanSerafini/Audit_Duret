@@ -376,7 +376,7 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/documents"
+            href="/annexes/markdown"
             className="bg-gradient-to-br from-amber-50 to-orange-100 border-2 border-amber-200 rounded-2xl p-8 hover:shadow-2xl hover:scale-[1.02] transition-all group relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/30 rounded-full blur-2xl group-hover:w-48 group-hover:h-48 transition-all"></div>

@@ -3,6 +3,7 @@ import { AlertTriangle, CheckCircle, Users, MessageSquare, PhoneCall, Clock, Ref
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
+import MarkdownViewer from '@/components/MarkdownViewer';
 
 export const metadata = {
   title: 'Service Client - Audit IT Duret',
@@ -10,6 +11,8 @@ export const metadata = {
 };
 
 export default function ServiceClientPage() {
+  const markdownFiles = getServiceMarkdownFiles(\'service-client');
+
   const personas = [
     {
       name: 'Claire',
@@ -483,6 +486,16 @@ export default function ServiceClientPage() {
 
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="service-client" serviceLabel="Service Client" />
+      {/* Documents Markdown */}
+      <div className="mt-8">
+        <MarkdownViewer
+          files={markdownFiles}
+          title="Documents Sources - Service Client"
+          defaultExpanded={false}
+        />
+      </div>
+
+
 
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">
