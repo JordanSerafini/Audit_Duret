@@ -1,58 +1,88 @@
-# TABLEAU DES COÛTS CORRIGÉS - DURET ÉLECTRICITÉ
+# TABLEAU DES COÛTS - DURET ÉLECTRICITÉ
 
-**Hypothèses** :
-*   Effectif : 100 collaborateurs.
-*   Durée : Engagement sur 3 ans.
-*   Tarifs : Hors Taxes (HT), base 2025.
+⚠️ **Note Méthodologique Importante**
+
+Ce document présentait des estimations budgétaires pour différents scénarios techniques. Ces chiffres étaient des **ordres de grandeur indicatifs** basés sur des tarifs publics éditeurs et des hypothèses non validées.
+
+**Pour un chiffrage précis, il est impératif de :**
+1. Définir le périmètre fonctionnel exact
+2. Obtenir des devis personnalisés auprès des éditeurs/intégrateurs
+3. Réaliser une étude de faisabilité détaillée
+4. Valider les hypothèses d'effectifs et d'utilisation
 
 ---
 
-## 1. SCÉNARIO A : ODOO ENTERPRISE (RECOMMANDÉ)
+## 1. SCÉNARIO A : SOLUTION ERP CENTRALISÉE (RECOMMANDÉ)
 
 Ce scénario privilégie une centralisation des données (Data Lake unique) pour préparer l'avenir (IA/Data).
 
-### Phase 1 : Socle Odoo (An 1)
+### Phase 1 : Socle ERP
 Déploiement ERP, CRM, Stocks, et modules RH natifs.
 
-| Poste de Coût | An 1 | An 2 | An 3 | Total 3 ans |
-| :--- | :--- | :--- | :--- | :--- |
-| **Licences Odoo Enterprise** (100 users) | 29 880 € | 29 880 € | 29 880 € | **89 640 €** |
-| **Intégration & Paramétrage** | 21 000 € | - | - | **21 000 €** |
-| **Formation Utilisateurs** | 7 200 € | - | - | **7 200 €** |
-| **R&D Data / IA** (Prévisionnel) | 15 000 € | 5 000 € | 5 000 € | **25 000 €** |
-| **TOTAL Phase 1** | **73 080 €** | **34 880 €** | **34 880 €** | **142 840 €** |
+**Postes de coûts à chiffrer :**
+- Licences logicielles (selon nombre d'utilisateurs réel)
+- Intégration & Paramétrage (selon périmètre validé)
+- Formation utilisateurs (selon nombre et durée)
+- R&D Data / IA (selon projets spécifiques)
 
-### Phase 2 : Option Paie Externe (An 2+)
+**Durée estimée :** 3 ans
+
+### Phase 2 : Option Paie Externe (selon besoins)
 Ajout d'une solution spécialisée si le moteur de paie natif ne suffit pas.
 
-| Poste de Coût | An 1 | An 2 | An 3 | Total 3 ans |
-| :--- | :--- | :--- | :--- | :--- |
-| **PayFit** (Est. 100 bulletins) | - | 21 192 € | 21 192 € | **42 384 €** |
-| **TOTAL CUMULÉ (Odoo + PayFit)** | **73 080 €** | **56 072 €** | **56 072 €** | **185 224 €** |
+**Postes de coûts additionnels à évaluer :**
+- Solution paie externe (selon nombre de bulletins)
+- Intégration avec ERP central
 
 ---
 
-## 2. SCÉNARIO B : MULTI-SOLUTIONS (EBP + HUBSPOT + LUCCA)
+## 2. SCÉNARIO B : MULTI-SOLUTIONS SPÉCIALISÉES
 
 Comparatif avec une architecture fragmentée ("Best-of-Breed").
 
-| Poste de Coût | An 1 | An 2 | An 3 | Total 3 ans |
-| :--- | :--- | :--- | :--- | :--- |
-| **EBP Bâtiment PRO** (20 users) | 24 000 € | 24 000 € | 24 000 € | **72 000 €** |
-| **HubSpot Service Pro** (10 users) | 10 800 € | 10 800 € | 10 800 € | **32 400 €** |
-| **Lucca SIRH** (100 users) | 14 520 € | 14 520 € | 14 520 € | **43 560 €** |
-| **Silae Paie** (Estimé) | 12 000 € | 12 000 € | 12 000 € | **36 000 €** |
-| **App Mobile Tierce** | 10 000 € | 10 000 € | 10 000 € | **30 000 €** |
-| **TOTAL** | **71 320 €** | **71 320 €** | **71 320 €** | **213 960 €** |
+**Postes de coûts à chiffrer :**
+- ERP Bâtiment spécialisé (selon nombre d'utilisateurs)
+- Solution CRM dédiée (selon périmètre)
+- SIRH spécialisé (selon effectif)
+- Solution paie externe
+- Applications mobiles tierces
+- Intégrations entre systèmes (coût souvent sous-estimé)
 
 ---
 
-## 3. SYNTHÈSE COMPARATIVE
+## 3. APPROCHE RECOMMANDÉE POUR CHIFFRAGE
 
-| Scénario | Coût Total 3 ans | Écart | Avantage Stratégique |
+### Étapes de Validation Budgétaire
+
+1. **Définir périmètre exact**
+   - Modules nécessaires vs optionnels
+   - Nombre d'utilisateurs par profil
+   - Volumétries de données
+
+2. **Obtenir devis personnalisés**
+   - Minimum 2-3 éditeurs/intégrateurs par scénario
+   - Inclure coûts cachés (formation, maintenance, support)
+   - Négocier conditions commerciales
+
+3. **Comparer sur durée réaliste**
+   - Coûts setup (An 1)
+   - Coûts récurrents (An 2-5)
+   - Coûts d'évolution (ajout modules, users)
+
+4. **Intégrer coûts indirects**
+   - Temps interne (équipe projet)
+   - Migration données (complexité)
+   - Conduite du changement
+   - Maintenance corrective/évolutive
+
+### Critères de Décision Au-delà du Prix
+
+| Critère | Poids | Scénario A (Centralisé) | Scénario B (Multi) |
 | :--- | :--- | :--- | :--- |
-| **A. Odoo (Phase 1)** | **142 840 €** | **-71 120 €** | Centralisation des données (100% PostgreSQL) |
-| **A. Odoo + PayFit** | **185 224 €** | **-28 736 €** | Compromis idéal (ERP unique + Paie experte) |
-| **B. Multi-solutions** | **213 960 €** | Référence | Solutions expertes mais données silotées |
+| **Architecture données** | Élevé | ✅ Centralisée | ⚠️ Silotée |
+| **Évolutivité** | Élevé | ✅ Modulaire | ⚠️ Rigide |
+| **Expertise métier** | Moyen | ⚠️ Généraliste | ✅ Spécialisée |
+| **Coûts intégration** | Élevé | ✅ Natif | ❌ Élevés |
+| **Préparation IA/Data** | Stratégique | ✅ Optimal | ❌ Complexe |
 
-**Analyse Comparative** : Le scénario Odoo présente un coût total inférieur sur 3 ans tout en offrant une architecture de données unifiée, prérequis indispensable pour les projets futurs d'Intelligence Artificielle.
+**Recommandation** : Le scénario centralisé offre généralement une architecture de données unifiée, prérequis indispensable pour les projets futurs d'Intelligence Artificielle et une vision 360° de l'activité.
