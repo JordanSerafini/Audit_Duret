@@ -51,22 +51,24 @@ export default function MarkdownViewer({ files, title = "Documents Markdown", de
   if (files.length === 0) return null;
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-xl shadow-lg border-2 border-blue-100 overflow-hidden">
       {/* Header */}
       <div
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-indigo-50 cursor-pointer hover:from-blue-100 hover:to-indigo-100 transition-colors"
+        className="flex items-center justify-between p-5 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 cursor-pointer hover:from-blue-100 hover:via-indigo-100 hover:to-blue-100 transition-all border-b-2 border-blue-100"
       >
-        <div className="flex items-center gap-3">
-          {isExpanded ? (
-            <ChevronDown className="w-5 h-5 text-blue-600" />
-          ) : (
-            <ChevronRight className="w-5 h-5 text-blue-600" />
-          )}
-          <FileText className="w-6 h-6 text-blue-600" />
+        <div className="flex items-center gap-4">
+          <div className="bg-blue-600 p-2 rounded-lg shadow-sm">
+            {isExpanded ? (
+              <ChevronDown className="w-5 h-5 text-white" />
+            ) : (
+              <ChevronRight className="w-5 h-5 text-white" />
+            )}
+          </div>
+          <FileText className="w-7 h-7 text-blue-600" />
           <div>
-            <h3 className="font-bold text-lg text-gray-900">{title}</h3>
-            <p className="text-sm text-gray-600">{files.length} document(s) disponible(s)</p>
+            <h3 className="font-bold text-xl text-gray-900">{title}</h3>
+            <p className="text-sm text-gray-600 font-medium">{files.length} document(s) disponible(s)</p>
           </div>
         </div>
       </div>
