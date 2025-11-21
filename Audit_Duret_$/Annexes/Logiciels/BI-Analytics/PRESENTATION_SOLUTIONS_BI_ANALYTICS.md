@@ -191,22 +191,20 @@ Une solution BI (Business Intelligence) permet de centraliser, analyser et visua
 
 #### Coût Développement Custom
 
-| Poste | Estimation | Détail |
-|-------|-----------|---------|
-| **Conception UX/UI** | 5 000€ | Maquettes, design system |
-| **Développement Backend** | 15 000€ | API, connexions données, calculs |
-| **Développement Frontend** | 20 000€ | 5 pages dashboards interactifs |
-| **Tests & Déploiement** | 5 000€ | QA, mise en production |
-| **Documentation** | 2 000€ | Guide utilisateur, technique |
-| **TOTAL INITIAL** | **47 000€** | One-time |
+| Poste | Description |
+|-------|-------------|
+| **Conception UX/UI** | Maquettes, design system |
+| **Développement Backend** | API, connexions données, calculs |
+| **Développement Frontend** | 5 pages dashboards interactifs |
+| **Tests & Déploiement** | QA, mise en production |
+| **Documentation** | Guide utilisateur, technique |
 
 **Coûts Récurrents** :
-- Hébergement : 100€/mois = 1 200€/an
-- Maintenance corrective : 3 000€/an
-- Évolutions mineures : 5 000€/an
-- **TOTAL/AN** : **9 200€**
+- Hébergement
+- Maintenance corrective
+- Évolutions mineures
 
-**Coût 3 ans** : 47 000€ + (9 200€ x 3) = **74 600€**
+**Note** : Chiffrage détaillé nécessite cahier des charges précis et devis développeur
 
 ---
 
@@ -214,10 +212,10 @@ Une solution BI (Business Intelligence) permet de centraliser, analyser et visua
 
 | Solution | Coût 3 ans | Flexibilité | Adapté Duret |
 |----------|------------|-------------|--------------|
-| **Dashboard Custom** | **74 600€** | **10/10** | ✅ **Recommandé** |
-| Power BI (10 users Pro) | 3 024€ | 7/10 | ⚠️ Limité |
-| Tableau (3 créateurs + 7 viewers) | 10 080€ | 8/10 | ❌ Cher |
-| Metabase Cloud | 3 060€ | 6/10 | ✅ Budget serré |
+| **Dashboard Custom** | **À chiffrer** | **10/10** | ✅ **Recommandé** |
+| Power BI (10 users Pro) | Environ 3 k€ (tarif éditeur) | 7/10 | ⚠️ Limité |
+| Tableau (3 créateurs + 7 viewers) | Environ 10 k€ (tarif éditeur) | 8/10 | ❌ Cher |
+| Metabase Cloud | Environ 3 k€ (tarif éditeur) | 6/10 | ✅ Budget serré |
 | Odoo BI natif | 0€ (inclus) | 5/10 | ✅ Si Odoo ERP |
 
 ---
