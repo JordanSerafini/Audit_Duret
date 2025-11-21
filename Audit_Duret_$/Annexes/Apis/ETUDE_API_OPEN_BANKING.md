@@ -68,7 +68,7 @@ Odoo Enterprise inclut nativement les connecteurs (via le service "Odoo Online S
 
 ### Coûts
 - **Odoo Enterprise** : Inclus dans la licence (service IAP).
-- **Si Odoo Community** : Abonnement Ponto (~15€/mois/compte).
+- **Si Odoo Community** : Abonnement Ponto nécessaire (tarif par compte bancaire).
 
 ## Recommandation
 

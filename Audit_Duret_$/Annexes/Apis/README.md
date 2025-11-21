@@ -19,8 +19,8 @@
 #### [ETUDE_API_OPEN_BANKING.md](ETUDE_API_OPEN_BANKING.md) - **Rapprochement Bancaire**
 **💰 Business Critical** : Automatisation comptabilité
 - **Bridge/Powens** : Import automatique relevés bancaires
-- **Lettrage automatique** : Gain 40h/mois comptabilité
-- **ROI** : Immédiat (6-12 mois payback)
+- **Lettrage automatique** : Gain de temps significatif pour la comptabilité
+- **ROI** : Court terme
 
 #### [ETUDE_API_CHORUS.md](ETUDE_API_CHORUS.md) - **Facturation Électronique B2G**
 **⚖️ Obligatoire** : Marchés publics (part significative CA)
@@ -74,7 +74,7 @@
 ⚠️ **CHANGEMENT STRATÉGIQUE** : Usage limité à l'ETL initial
 - **Connecteur permanent abandonné** : Évite dette technique post-Odoo
 - **Alternative** : Export/Import ponctuel pour migration historique
-- **Économie** : -20K€ développement inutile
+- **Économie** : Évite développement d'un connecteur permanent inutile
 
 ---
 
@@ -108,12 +108,13 @@ Machine Learning → Assistants IA → Prédictions
 
 ## 💰 Budget Global Intégration APIs
 
-| Vague | APIs | Budget Dev | Budget API | ROI Estimé |
-|-------|------|------------|------------|------------|
-| **1** | Rexel+Banking+Chorus | 25K€ | 2K€/an | **12-18 mois** |
-| **2** | Météo+Maps | 8K€ | 1K€/an | **18-24 mois** |
-| **3** | Pappers+Consuel+Marchés | 10K€ | 1K€/an | **24-36 mois** |
-| **TOTAL** | **9 APIs** | **43K€** | **4K€/an** | **Autofinancement 20 mois** |
+| Vague | APIs | Développement | Coûts API | ROI Estimé |
+|-------|------|---------------|-----------|------------|
+| **1** | Rexel+Banking+Chorus | À chiffrer | Variable | **Court terme** |
+| **2** | Météo+Maps | À chiffrer | Variable | **Moyen terme** |
+| **3** | Pappers+Consuel+Marchés | À chiffrer | Variable | **Long terme** |
+
+**Note** : Chiffrage détaillé requis selon périmètre d'intégration retenu par vague
 
 ---
 
