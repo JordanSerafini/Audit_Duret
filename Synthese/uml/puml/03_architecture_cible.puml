@@ -1,11 +1,24 @@
 @startuml Architecture_Cible_Globale
 
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.1
+' Type Diagramme: Architecture Cible
+' Description: Architecture IT cible Option 1 (Full Odoo)
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
 title Architecture IT Cible - Option 1 : Full Odoo (Recommandée)
 
 !define RECTANGLE class
 
 ' Couche Utilisateurs
-package "UTILISATEURS FINAUX" #E6F3FF {
+package "UTILISATEURS FINAUX" COLOR_ACTOR_CLIENT {
   actor "Direction\n(Dashboards)" as Dir
   actor "Managers\n(Web/Mobile)" as Mgr
   actor "Terrain\n(Odoo Mobile)" as Terrain
@@ -13,25 +26,25 @@ package "UTILISATEURS FINAUX" #E6F3FF {
 }
 
 ' Couche Applications
-package "CŒUR DU SYSTÈME : ODOO ENTERPRISE" #E8F5E9 {
-  component "Odoo CRM\n(Ventes & Devis)" as CRM #90EE90
-  component "Odoo Projets\n(Suivi Affaires)" as Projet #90EE90
-  component "Odoo Field Service\n(Interventions)" as FSM #90EE90
-  component "Odoo Achats & Stock\n(Logistique)" as Stock #90EE90
-  component "Odoo Compta\n(Facturation)" as Compta #90EE90
+package "CŒUR DU SYSTÈME : ODOO ENTERPRISE" COLOR_SYSTEME_ERP {
+  component "Odoo CRM\n(Ventes & Devis)" as CRM COLOR_SYSTEME_CIBLE
+  component "Odoo Projets\n(Suivi Affaires)" as Projet COLOR_SYSTEME_CIBLE
+  component "Odoo Field Service\n(Interventions)" as FSM COLOR_SYSTEME_CIBLE
+  component "Odoo Achats & Stock\n(Logistique)" as Stock COLOR_SYSTEME_CIBLE
+  component "Odoo Compta\n(Facturation)" as Compta COLOR_SYSTEME_CIBLE
 }
 
 ' Couche RH Spécialisée
-package "RH & PAIE" #FFF4E4 {
-  component "PayFit\n(Paie & DSN)" as PayFit #FFD700
-  component "Odoo Employés\n(Dossier RH)" as RH #90EE90
+package "RH & PAIE" COLOR_SYSTEME_SIRH {
+  component "PayFit\n(Paie & DSN)" as PayFit COLOR_SYSTEME_CLOUD
+  component "Odoo Employés\n(Dossier RH)" as RH COLOR_SYSTEME_CIBLE
 }
 
 ' Couche Données & Intégration
-package "INFRASTRUCTURE & DATA" #E4E4FF {
-  database "PostgreSQL\n(Odoo DB)" as DB #4169E1
-  component "Odoo Documents\n(GED Centralisée)" as GED #6495ED
-  component "Connecteurs APIs\n(Rexel, Sonepar)" as APIs #FFD700
+package "INFRASTRUCTURE & DATA" COLOR_DATA {
+  database "PostgreSQL\n(Odoo DB)" as DB COLOR_DATABASE
+  component "Odoo Documents\n(GED Centralisée)" as GED COLOR_DATABASE
+  component "Connecteurs APIs\n(Rexel, Sonepar)" as APIs COLOR_INTEGRATION
 }
 
 ' Connexions
@@ -84,13 +97,6 @@ note right of PayFit
   • Bulletins simples
 end note
 
-legend bottom
-  **ARCHITECTURE UNIFIÉE (FULL ODOO)**
-
-  ✅ **Simplicité** : Une seule interface pour 90% des besoins.
-  ✅ **Cohérence** : Donnée unique (Client, Article, Projet).
-  ✅ **Mobilité** : App Odoo native pour le terrain.
-  ✅ **Paie** : Délégée à un expert (PayFit) pour la conformité.
-end legend
+LEGEND_ARCHITECTURE()
 
 @enduml

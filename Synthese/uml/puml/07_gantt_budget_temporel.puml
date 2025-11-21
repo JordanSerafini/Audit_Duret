@@ -25,7 +25,7 @@ saturday are closed
 sunday are closed
 
 ' === PHASE 0: PREPARATION ===
-[Phase 0: PREPARATION] as P0 lasts 1 month
+[Phase 0: PREPARATION] as P0 lasts 30 days
 [P0] is colored in #F5F5F5
 [P0] starts 2025-11-01
 
@@ -41,7 +41,7 @@ end note
 [Vague 1 START] happens at [P0]'s end
 
 ' --- Odoo Phase 1 ---
-[Odoo Phase 1: Analyse] lasts 1 month
+[Odoo Phase 1: Analyse] lasts 30 days
 [Odoo Phase 1: Analyse] starts at [Vague 1 START]
 [Odoo Phase 1: Analyse] is colored in #90EE90
 note bottom
@@ -50,7 +50,7 @@ note bottom
   - Maquettage
 end note
 
-[Odoo Phase 1: Config Ventes/CRM] lasts 1.5 month
+[Odoo Phase 1: Config Ventes/CRM] lasts 45 days
 [Odoo Phase 1: Config Ventes/CRM] starts at [Odoo Phase 1: Analyse]'s end
 [Odoo Phase 1: Config Ventes/CRM] is colored in #90EE90
 note bottom
@@ -59,14 +59,14 @@ note bottom
   - Workflows
 end note
 
-[Odoo Phase 1: Config Achats/Stock] lasts 1 month
+[Odoo Phase 1: Config Achats/Stock] lasts 30 days
 [Odoo Phase 1: Config Achats/Stock] starts at [Odoo Phase 1: Config Ventes/CRM]'s start
 [Odoo Phase 1: Config Achats/Stock] is colored in #90EE90
 note bottom
   Budget M2-M3: 12-18K€
 end note
 
-[Odoo Phase 1: Recette] lasts 1 month
+[Odoo Phase 1: Recette] lasts 30 days
 [Odoo Phase 1: Recette] starts at [Odoo Phase 1: Config Ventes/CRM]'s end
 [Odoo Phase 1: Recette] is colored in #90EE90
 note bottom
@@ -75,45 +75,45 @@ note bottom
   - Corrections
 end note
 
-[Odoo Phase 1: GO-LIVE] lasts 0.5 month
+[Odoo Phase 1: GO-LIVE] lasts 15 days
 [Odoo Phase 1: GO-LIVE] starts at [Odoo Phase 1: Recette]'s end
 [Odoo Phase 1: GO-LIVE] is colored in #4CAF50
 
 ' --- App Mobile MVP ---
-[App Mobile: Specifications] lasts 0.5 month
+[App Mobile: Specifications] lasts 15 days
 [App Mobile: Specifications] starts at [Vague 1 START]
 [App Mobile: Specifications] is colored in #B8E6B8
 note bottom
   Budget M1: 2-3K€
 end note
 
-[App Mobile: Dev iOS] lasts 2 month
+[App Mobile: Dev iOS] lasts 60 days
 [App Mobile: Dev iOS] starts at [App Mobile: Specifications]'s end
 [App Mobile: Dev iOS] is colored in #B8E6B8
 note bottom
   Budget M2-M3: 12-18K€
 end note
 
-[App Mobile: Dev Android] lasts 2 month
+[App Mobile: Dev Android] lasts 60 days
 [App Mobile: Dev Android] starts at [App Mobile: Dev iOS]'s start
 [App Mobile: Dev Android] is colored in #B8E6B8
 note bottom
   Budget M2-M3: 12-18K€
 end note
 
-[App Mobile: Tests Beta] lasts 1 month
+[App Mobile: Tests Beta] lasts 30 days
 [App Mobile: Tests Beta] starts at [App Mobile: Dev iOS]'s end
 [App Mobile: Tests Beta] is colored in #B8E6B8
 note bottom
   Budget M4-M5: 3-5K€
 end note
 
-[App Mobile: Release MVP] lasts 0.5 month
+[App Mobile: Release MVP] lasts 15 days
 [App Mobile: Release MVP] starts at [App Mobile: Tests Beta]'s end
 [App Mobile: Release MVP] is colored in #4CAF50
 
 ' --- Formation Vague 1 ---
-[Formation Super-users (3j)] lasts 0.5 month
+[Formation Super-users (3j)] lasts 15 days
 [Formation Super-users (3j)] starts at [Odoo Phase 1: Recette]'s start
 [Formation Super-users (3j)] is colored in #FFB6C1
 note bottom
@@ -121,7 +121,7 @@ note bottom
   - 24 super-users
 end note
 
-[Formation Users Bureau (2j)] lasts 1 month
+[Formation Users Bureau (2j)] lasts 30 days
 [Formation Users Bureau (2j)] starts at [Formation Super-users (3j)]'s end
 [Formation Users Bureau (2j)] is colored in #FFB6C1
 note bottom
@@ -138,47 +138,47 @@ end note
 [Vague 2 START] happens at [Formation Users Bureau (2j)]'s end
 
 ' --- Odoo Phase 2 ---
-[Odoo Phase 2: Projets/Affaires] lasts 2 month
+[Odoo Phase 2: Projets/Affaires] lasts 60 days
 [Odoo Phase 2: Projets/Affaires] starts at [Vague 2 START]
 [Odoo Phase 2: Projets/Affaires] is colored in #90EE90
 note bottom
   Budget M7-M8: 15-22K€
 end note
 
-[Odoo Phase 2: Manufacturing] lasts 1.5 month
+[Odoo Phase 2: Manufacturing] lasts 45 days
 [Odoo Phase 2: Manufacturing] starts at [Odoo Phase 2: Projets/Affaires]'s start
 [Odoo Phase 2: Manufacturing] is colored in #90EE90
 note bottom
   Budget M7-M8: 10-15K€
 end note
 
-[Odoo Phase 2: Recette] lasts 1 month
+[Odoo Phase 2: Recette] lasts 30 days
 [Odoo Phase 2: Recette] starts at [Odoo Phase 2: Projets/Affaires]'s end
 [Odoo Phase 2: Recette] is colored in #90EE90
 note bottom
   Budget M9: 3-5K€
 end note
 
-[Odoo Phase 2: GO-LIVE] lasts 0.5 month
+[Odoo Phase 2: GO-LIVE] lasts 15 days
 [Odoo Phase 2: GO-LIVE] starts at [Odoo Phase 2: Recette]'s end
 [Odoo Phase 2: GO-LIVE] is colored in #4CAF50
 
 ' --- SIRH ---
-[SIRH: Selection (PayFit/Lucca)] lasts 0.5 month
+[SIRH: Selection (PayFit/Lucca)] lasts 15 days
 [SIRH: Selection (PayFit/Lucca)] starts at [Vague 2 START]
 [SIRH: Selection (PayFit/Lucca)] is colored in #FFF9E6
 note bottom
   Budget M6: 1-2K€
 end note
 
-[SIRH: Parametrage] lasts 1.5 month
+[SIRH: Parametrage] lasts 45 days
 [SIRH: Parametrage] starts at [SIRH: Selection (PayFit/Lucca)]'s end
 [SIRH: Parametrage] is colored in #FFF9E6
 note bottom
   Budget M7-M8: 8-15K€
 end note
 
-[SIRH: Integration Odoo] lasts 1 month
+[SIRH: Integration Odoo] lasts 30 days
 [SIRH: Integration Odoo] starts at [SIRH: Parametrage]'s end
 [SIRH: Integration Odoo] is colored in #E6D4FF
 note bottom
@@ -186,19 +186,19 @@ note bottom
   - API custom
 end note
 
-[SIRH: GO-LIVE] lasts 0.5 month
+[SIRH: GO-LIVE] lasts 15 days
 [SIRH: GO-LIVE] starts at [SIRH: Integration Odoo]'s end
 [SIRH: GO-LIVE] is colored in #4CAF50
 
 ' --- APIs Custom ---
-[APIs: Mobile <-> Odoo] lasts 1.5 month
+[APIs: Mobile <-> Odoo] lasts 45 days
 [APIs: Mobile <-> Odoo] starts at [Vague 2 START]
 [APIs: Mobile <-> Odoo] is colored in #E6D4FF
 note bottom
   Budget M6-M7: 5-8K€
 end note
 
-[APIs: Fournisseurs EDI] lasts 2 month
+[APIs: Fournisseurs EDI] lasts 60 days
 [APIs: Fournisseurs EDI] starts at [APIs: Mobile <-> Odoo]'s start
 [APIs: Fournisseurs EDI] is colored in #E6D4FF
 note bottom
@@ -206,7 +206,7 @@ note bottom
 end note
 
 ' --- RFID ---
-[RFID: Equipements] lasts 0.5 month
+[RFID: Equipements] lasts 15 days
 [RFID: Equipements] starts at [Vague 2 START]
 [RFID: Equipements] is colored in #FFE4B5
 note bottom
@@ -214,20 +214,20 @@ note bottom
   - Lecteurs + Tags
 end note
 
-[RFID: Integration Odoo] lasts 1 month
+[RFID: Integration Odoo] lasts 30 days
 [RFID: Integration Odoo] starts at [RFID: Equipements]'s end
 [RFID: Integration Odoo] is colored in #FFE4B5
 note bottom
   Budget M7: 2-6K€
 end note
 
-[RFID: Deploiement] lasts 0.5 month
+[RFID: Deploiement] lasts 15 days
 [RFID: Deploiement] starts at [RFID: Integration Odoo]'s end
 [RFID: Deploiement] is colored in #4CAF50
 
 ' --- App Mobile Full ---
-[App Mobile Full: Features] lasts 2 month
-[App Mobile Full: Features] starts at [Vague 2 START] and [Vague 2 START]'s start + 1 months
+[App Mobile Full: Features] lasts 60 days
+[App Mobile Full: Features] starts at [Vague 2 START] and [Vague 2 START]'s start + 30 days
 [App Mobile Full: Features] is colored in #B8E6B8
 note bottom
   Budget M7-M9: 15-25K€
@@ -235,7 +235,7 @@ note bottom
 end note
 
 ' --- Formation Vague 2 ---
-[Formation Terrain (2j)] lasts 1 month
+[Formation Terrain (2j)] lasts 30 days
 [Formation Terrain (2j)] starts at [Odoo Phase 2: GO-LIVE]'s start
 [Formation Terrain (2j)] is colored in #FFB6C1
 note bottom
@@ -243,7 +243,7 @@ note bottom
   - 50 users terrain
 end note
 
-[Formation SIRH (1j)] lasts 0.5 month
+[Formation SIRH (1j)] lasts 15 days
 [Formation SIRH (1j)] starts at [SIRH: GO-LIVE]'s start
 [Formation SIRH (1j)] is colored in #FFB6C1
 note bottom
@@ -259,26 +259,26 @@ end note
 [Vague 3 START] happens at [Formation Terrain (2j)]'s end
 
 ' --- Data Warehouse ---
-[DWH: Infrastructure Azure] lasts 0.5 month
+[DWH: Infrastructure Azure] lasts 15 days
 [DWH: Infrastructure Azure] starts at [Vague 3 START]
 [DWH: Infrastructure Azure] is colored in #FFE4B5
 note bottom
   Budget M12: 2-4K€
 end note
 
-[DWH: ETL Setup] lasts 1.5 month
+[DWH: ETL Setup] lasts 45 days
 [DWH: ETL Setup] starts at [DWH: Infrastructure Azure]'s end
 [DWH: ETL Setup] is colored in #FFE4B5
 note bottom
   Budget M13-M14: 4-10K€
 end note
 
-[DWH: GO-LIVE] lasts 0.5 month
+[DWH: GO-LIVE] lasts 15 days
 [DWH: GO-LIVE] starts at [DWH: ETL Setup]'s end
 [DWH: GO-LIVE] is colored in #4CAF50
 
 ' --- Dashboards BI ---
-[BI: Dev Dashboards Direction] lasts 1.5 month
+[BI: Dev Dashboards Direction] lasts 45 days
 [BI: Dev Dashboards Direction] starts at [DWH: ETL Setup]'s end
 [BI: Dev Dashboards Direction] is colored in #FFE4B5
 note bottom
@@ -286,7 +286,7 @@ note bottom
   - Power BI/Metabase
 end note
 
-[BI: Dev Dashboards Operationnels] lasts 1 month
+[BI: Dev Dashboards Operationnels] lasts 30 days
 [BI: Dev Dashboards Operationnels] starts at [BI: Dev Dashboards Direction]'s start
 [BI: Dev Dashboards Operationnels] is colored in #FFE4B5
 note bottom
@@ -294,21 +294,21 @@ note bottom
 end note
 
 ' --- Modules IA/ML ---
-[ML: Prediction Delais Affaires] lasts 2 month
+[ML: Prediction Delais Affaires] lasts 60 days
 [ML: Prediction Delais Affaires] starts at [DWH: GO-LIVE]'s end
 [ML: Prediction Delais Affaires] is colored in #E6D4FF
 note bottom
   Budget M15-M16: 10-20K€
 end note
 
-[ML: Recommandations Stock] lasts 1.5 month
+[ML: Recommandations Stock] lasts 45 days
 [ML: Recommandations Stock] starts at [ML: Prediction Delais Affaires]'s start
 [ML: Recommandations Stock] is colored in #E6D4FF
 note bottom
   Budget M15-M16: 5-11K€
 end note
 
-[ML: Optimisation Tournees] lasts 1.5 month
+[ML: Optimisation Tournees] lasts 45 days
 [ML: Optimisation Tournees] starts at [ML: Recommandations Stock]'s start
 [ML: Optimisation Tournees] is colored in #E6D4FF
 note bottom
@@ -316,7 +316,7 @@ note bottom
 end note
 
 ' --- Formation Vague 3 ---
-[Formation BI/Data] lasts 1 month
+[Formation BI/Data] lasts 30 days
 [Formation BI/Data] starts at [BI: Dev Dashboards Direction]'s end
 [Formation BI/Data] is colored in #FFB6C1
 note bottom
@@ -324,8 +324,8 @@ note bottom
 end note
 
 ' --- Support Post-GO-LIVE ---
-[Support Post-GO-LIVE (3 mois)] lasts 3 month
-[Support Post-GO-LIVE (3 mois)] starts at [Vague 3 START] and [Vague 3 START]'s start + 3 months
+[Support Post-GO-LIVE (3 mois)] lasts 90 days
+[Support Post-GO-LIVE (3 mois)] starts at [Vague 3 START] and [Vague 3 START]'s start + 90 days
 [Support Post-GO-LIVE (3 mois)] is colored in #F5F5F5
 note bottom
   Budget M15-M18: 5-8K€

@@ -1,5 +1,18 @@
 @startuml Matrice_Priorisation_Projets
 
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.1
+' Type Diagramme: Matrice Priorisation
+' Description: Matrice de priorisation des 18 projets par impact et urgence
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
 title Matrice de Priorisation - Impact × Urgence (18 Projets)
 
 scale 1.5
@@ -8,27 +21,27 @@ scale 1.5
 rectangle "URGENCE\n(0-10)" as YAxis #FFFFFF
 
 ' Zone PHASE 1 (Socle)
-rectangle "PHASE 1\nSOCLE & QUICK WINS" as Phase1 #FFE4E4 {
-  card "#1 CRM Simple\nScore: 9.4" as P1 #FF6B6B
-  card "#2 Chat Pro\nScore: 9.0" as P2 #FF6B6B
-  card "#3 Devis Rapides\nScore: 8.7" as P3 #FF6B6B
+rectangle "PHASE 1\nSOCLE & QUICK WINS" as Phase1 COLOR_ETAT_ERROR {
+  card "#1 CRM Simple\nScore: 9.4" as P1 COLOR_CRITIQUE
+  card "#2 Chat Pro\nScore: 9.0" as P2 COLOR_CRITIQUE
+  card "#3 Devis Rapides\nScore: 8.7" as P3 COLOR_CRITIQUE
 }
 
 ' Zone PHASE 2 (Production)
-rectangle "PHASE 2\nCŒUR DU RÉACTEUR" as Phase2 #FFF4E4 {
-  card "#4 App Mobile\nScore: 8.1" as P4 #FFA500
-  card "#5 Stocks & Achats\nScore: 7.8" as P5 #FFA500
-  card "#10 Tickets BE\nScore: 7.3" as P10 #FFBB33
-  card "#11 Portails\nScore: 6.7" as P11 #FFCC66
+rectangle "PHASE 2\nCŒUR DU RÉACTEUR" as Phase2 COLOR_ETAT_WARNING {
+  card "#4 App Mobile\nScore: 8.1" as P4 COLOR_IMPORTANT
+  card "#5 Stocks & Achats\nScore: 7.8" as P5 COLOR_IMPORTANT
+  card "#10 Tickets BE\nScore: 7.3" as P10 COLOR_IMPORTANT
+  card "#11 Portails\nScore: 6.7" as P11 COLOR_IMPORTANT
 }
 
 ' Zone PHASE 3 (Admin & RH)
-rectangle "PHASE 3\nADMIN & RH" as Phase3 #E4F4FF {
-  card "#6 SIRH & Paie\nScore: 8.1" as P6 #4169E1
-  card "#7 Dashboards\nScore: 7.8" as P7 #6495ED
-  card "#13 ML Budgets\nScore: 5.4" as P13 #87CEEB
-  card "#14 ML Chiffrage\nScore: 5.4" as P14 #87CEEB
-  card "#17 Gouvernance\nScore: 5.4" as P17 #87CEEB
+rectangle "PHASE 3\nADMIN & RH" as Phase3 COLOR_ETAT_OK {
+  card "#6 SIRH & Paie\nScore: 8.1" as P6 COLOR_SOUHAITABLE
+  card "#7 Dashboards\nScore: 7.8" as P7 COLOR_SOUHAITABLE
+  card "#13 ML Budgets\nScore: 5.4" as P13 COLOR_BONUS
+  card "#14 ML Chiffrage\nScore: 5.4" as P14 COLOR_BONUS
+  card "#17 Gouvernance\nScore: 5.4" as P17 COLOR_BONUS
 }
 
 P1 -[hidden]right-> P2
@@ -82,12 +95,6 @@ note right of Phase3
   • Urgence 4-6
 end note
 
-legend bottom
-  **NOUVELLE MATRICE SÉQUENCÉE**
-  
-  🔴 PHASE 1 : On sauve les meubles (CRM, Devis, Coms).
-  🟠 PHASE 2 : On attaque le dur (Terrain, Stocks).
-  🔵 PHASE 3 : On optimise le reste (RH, BI, ML).
-end legend
+LEGEND_PRIORITES()
 
 @enduml

@@ -1,12 +1,25 @@
 @startuml Patterns_Transverses
 
+' === METADATA ===
+' Service: Synthese Transverse
+' Date Creation: 2025-11-20
+' Auteur: Agent PlantUML Duret
+' Version: 1.1
+' Type Diagramme: Mindmap Patterns
+' Description: Mindmap des 6 patterns transverses identifiés (problèmes récurrents)
+' === FIN METADATA ===
+
+!include ../../../Services/_shared/uml/styles/duret_colors.puml
+!include ../../../Services/_shared/uml/styles/duret_layout.puml
+!include ../../../Services/_shared/uml/styles/duret_legends.puml
+
 title Patterns Transverses - 6 Problèmes Récurrents (8/8 Services)
 
 @startmindmap
 
 * **AUDIT DURET**\n**6 PATTERNS TRANSVERSES**
 
-** 🔴 PATTERN #1\nDÉPENDANCE\nEXCEL MASSIVE
+** 🔴 PATTERN #1\nDÉPENDANCE\nEXCEL MASSIVE COLOR_PROBLEME
 *** **Services: 8/8**
 *** 60+ fichiers non connectés
 *** Gestion-Op: 30+ Excel
@@ -20,7 +33,7 @@ title Patterns Transverses - 6 Problèmes Récurrents (8/8 Services)
 **** Pas de collaboration
 **** Dépendance personnes
 
-** 🔴 PATTERN #2\nPROCESSUS 100%\nMANUELS
+** 🔴 PATTERN #2\nPROCESSUS 100%\nMANUELS COLOR_PROBLEME
 *** **Services: 8/8**
 *** **Exemples terrain**
 **** Devis: 2h vs 30min possible
@@ -34,7 +47,7 @@ title Patterns Transverses - 6 Problèmes Récurrents (8/8 Services)
 **** Temps perdu important
 **** Frustration maximale
 
-** 🔴 PATTERN #3\nABSENCE\nTRAÇABILITÉ
+** 🔴 PATTERN #3\nABSENCE\nTRAÇABILITÉ COLOR_PROBLEME
 *** **Services: 7/8**
 *** Post-it (Service-Client)
 *** CERFA papier (Maintenance)
@@ -49,7 +62,7 @@ title Patterns Transverses - 6 Problèmes Récurrents (8/8 Services)
 
 left side
 
-** 🔴 PATTERN #4\nOUTILS IT\nOBSOLÈTES
+** 🔴 PATTERN #4\nOUTILS IT\nOBSOLÈTES COLOR_PROBLEME
 *** **Services: 8/8**
 *** **Systèmes problématiques**
 **** SAGE MDE: 30-40s/écran
@@ -63,7 +76,7 @@ left side
 **** Pas de mobilité
 **** Turnover technique
 
-** 🔴 PATTERN #5\nVISIBILITÉ\nTEMPS RÉEL 0%
+** 🔴 PATTERN #5\nVISIBILITÉ\nTEMPS RÉEL 0% COLOR_PROBLEME
 *** **Services: 6/8**
 *** Direction: Pilotage aveugle
 *** Chefs: Pas de budget visible
@@ -76,7 +89,7 @@ left side
 **** Pilotage réactif vs proactif
 **** Manque transparence
 
-** 🟠 PATTERN #6\nOPPORTUNITÉS\nPERDUES
+** 🟠 PATTERN #6\nOPPORTUNITÉS\nPERDUES COLOR_ATTENTION
 *** **Services: 6/8**
 *** **Exemples**
 **** Devis terrain impossibles
@@ -90,5 +103,7 @@ left side
 **** Image "pas moderne"
 
 @endmindmap
+
+LEGEND_STANDARD()
 
 @enduml
