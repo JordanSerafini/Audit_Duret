@@ -62,7 +62,7 @@ export default function AchatsLogistiquePage() {
                 </ul>
               </div>
               <div className="bg-white rounded-lg p-4 border border-red-200">
-                <h3 className="font-bold text-red-900 mb-3">📊 Volume d'Activité</h3>
+                <h3 className="font-bold text-red-900 mb-3">📊 Volume d&apos;Activité</h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-red-800 text-sm">Références/an</span>
@@ -111,7 +111,7 @@ export default function AchatsLogistiquePage() {
             </div>
           </div>
           <div className="bg-purple-50 border-2 border-purple-300 rounded-xl p-6">
-            <h3 className="text-xl font-bold text-purple-900 mb-4">3. Goulots d'Étranglement</h3>
+            <h3 className="text-xl font-bold text-purple-900 mb-4">3. Goulots d&apos;Étranglement</h3>
             <ul className="space-y-2 text-purple-800 text-sm">
               <li>• Sylvie = hub central (dépendance totale)</li>
               <li>• 1 seul PC au dépôt</li>
@@ -251,7 +251,7 @@ export default function AchatsLogistiquePage() {
           <div className="bg-white rounded-lg p-6 border border-indigo-100">
             <h3 className="font-bold text-indigo-900 mb-2">1. Saisie Automatique (OCR)</h3>
             <p className="text-indigo-800 text-sm mb-3">
-              L'IA lit les PDFs (Rexel, Sonepar) et saisit les lignes automatiquement.
+              L&apos;IA lit les PDFs (Rexel, Sonepar) et saisit les lignes automatiquement.
             </p>
             <div className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-xs inline-block font-semibold">
               Gain : Fin des erreurs de saisie
