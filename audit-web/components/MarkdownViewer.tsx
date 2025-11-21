@@ -75,32 +75,33 @@ export default function MarkdownViewer({ files, title = "Documents Markdown", de
 
       {/* Content */}
       {isExpanded && (
-        <div className="border-t border-gray-200">
-          <div className="grid md:grid-cols-3 divide-x divide-gray-200">
+        <div className="bg-gray-50">
+          <div className="grid md:grid-cols-3 divide-x-2 divide-gray-200">
             {/* File List */}
-            <div className="bg-gray-50 p-4 max-h-96 overflow-y-auto">
+            <div className="bg-gradient-to-b from-white to-gray-50 p-6 max-h-[600px] overflow-y-auto">
+              <h4 className="text-sm font-bold text-gray-700 uppercase tracking-wide mb-4 px-2">Documents</h4>
               <div className="space-y-2">
                 {files.map((file) => (
                   <div key={file.path} className="flex gap-2">
                     <button
                       onClick={() => loadFile(file.path)}
-                      className={`flex-1 text-left px-3 py-2 rounded-lg transition-all ${
+                      className={`flex-1 text-left px-4 py-3 rounded-xl transition-all shadow-sm ${
                         selectedFile === file.path
-                          ? 'bg-blue-600 text-white shadow-sm'
-                          : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md scale-105'
+                          : 'bg-white text-gray-800 hover:bg-blue-50 hover:shadow-md border-2 border-gray-200 hover:border-blue-300'
                       }`}
                     >
-                      <div className="flex items-center gap-2">
-                        <Eye className="w-4 h-4 flex-shrink-0" />
-                        <span className="text-sm font-medium truncate">{file.title}</span>
+                      <div className="flex items-center gap-3">
+                        <Eye className={`w-5 h-5 flex-shrink-0 ${selectedFile === file.path ? 'text-white' : 'text-blue-600'}`} />
+                        <span className="text-sm font-semibold truncate">{file.title}</span>
                       </div>
                     </button>
                     <button
                       onClick={() => handleDownload(file.path, file.name)}
-                      className="px-3 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                      className="px-4 py-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-all shadow-sm hover:shadow-md hover:scale-105"
                       title="Télécharger"
                     >
-                      <Download className="w-4 h-4" />
+                      <Download className="w-5 h-5" />
                     </button>
                   </div>
                 ))}
