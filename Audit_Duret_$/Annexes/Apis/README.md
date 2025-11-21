@@ -140,19 +140,19 @@ Machine Learning → Assistants IA → Prédictions
 ## 📈 KPIs de Succès par API
 
 ### APIs E-procurement (Rexel/Sonepar)
-- **% Commandes automatisées** : Cible 80%
-- **Temps création devis** : Réduction 50%
-- **Erreurs prix** : Réduction 90%
+- **% Commandes automatisées** : Taux élevé visé
+- **Temps création devis** : Réduction significative
+- **Erreurs prix** : Réduction drastique
 
 ### Open Banking
-- **Temps rapprochement** : 40h/mois → 2h/mois
-- **Lettrage automatique** : Cible 85%
-- **Délai découverte impayés** : J+1 vs J+15
+- **Temps rapprochement** : Réduction substantielle
+- **Lettrage automatique** : Taux élevé visé
+- **Délai découverte impayés** : Amélioration significative
 
 ### APIs IA (Météo/Maps)
-- **Prédictions météo exactes** : >75%
-- **Optimisation planning** : +15% productivité
-- **Réduction jours perdus** : -50% intempéries
+- **Prédictions météo** : Amélioration de la planification
+- **Optimisation planning** : Gains de productivité
+- **Réduction jours perdus** : Impact intempéries diminué
 
 ---
 
