@@ -243,6 +243,7 @@ export default function AchatsLogistiquePage() {
             pdfPath="/pdfs/service-achats-logistique.pdf"
             fileName="Service_Achats_Logistique.pdf"
           />
+          <UMLDownloadButton serviceKey="achats-logistique" />
           <Link
             href="/services"
             className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
