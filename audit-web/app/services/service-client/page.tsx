@@ -259,11 +259,72 @@ export default function ServiceClientPage() {
         </div>
       </div>
 
+      {/* Gains Attendus & ROI */}
+      <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-200 mb-12">
+        <h2 className="text-3xl font-bold text-green-900 mb-6">Gains Attendus & ROI</h2>
+        <div className="grid md:grid-cols-2 gap-8 mb-6">
+          <div>
+            <h3 className="text-xl font-bold text-green-900 mb-4">💰 Gains Temps (Quantifiés)</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-lg border border-green-200">
+                <p className="font-semibold text-slate-900 mb-1">Prise RDV</p>
+                <p className="text-sm text-slate-600 mb-1">Actuel : 15min/RDV → Cible : 2min/RDV</p>
+                <p className="text-lg font-bold text-green-700">Gain : 825h/an = 41k€</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-green-200">
+                <p className="font-semibold text-slate-900 mb-1">Double saisie SAGE/ERP</p>
+                <p className="text-sm text-slate-600 mb-1">30min/jour → Élimination</p>
+                <p className="text-lg font-bold text-green-700">Gain : 110h/an = 5,5k€</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-green-200">
+                <p className="font-semibold text-slate-900 mb-1">Recherche info client</p>
+                <p className="text-sm text-slate-600 mb-1">30min/jour → Accès instantané</p>
+                <p className="text-lg font-bold text-green-700">Gain : 110h/an = 5,5k€</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold text-green-900 mb-4">📈 Gains Qualité & CA</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-lg border border-green-200">
+                <p className="font-semibold text-slate-900 mb-1">Clients perdus (oublis)</p>
+                <p className="text-sm text-slate-600 mb-1">10 clients/an × 10k€ CA moyen</p>
+                <p className="text-lg font-bold text-green-700">Gain : 100k€/an</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-green-200">
+                <p className="font-semibold text-slate-900 mb-1">Opportunités techniciens</p>
+                <p className="text-sm text-slate-600 mb-1">Demandes terrain tracées et exploitées</p>
+                <p className="text-lg font-bold text-green-700">Gain estimé : 20-30k€/an</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-green-200">
+                <p className="font-semibold text-slate-900 mb-1">Image & Satisfaction</p>
+                <p className="text-sm text-slate-600 mb-1">Professionnalisme, différenciation BTP</p>
+                <p className="text-lg font-bold text-green-700">Fidélisation clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-green-700 text-white rounded-xl p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-green-100 text-sm mb-1">Total Gains Estimés/An</p>
+              <p className="text-4xl font-bold">172k€+</p>
+              <p className="text-xs text-green-200 mt-1">Hypothèses conservatrices à valider</p>
+            </div>
+            <div className="text-right">
+              <p className="text-green-100 text-sm mb-1">Investissement 18 Mois</p>
+              <p className="text-3xl font-bold">À chiffrer</p>
+              <p className="text-xs text-green-200 mt-1">Phase pilote recommandée</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Opportunités Data & IA */}
       <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 border border-teal-100 mb-12">
         <div className="flex items-center gap-3 mb-6">
           <LayoutDashboard className="w-8 h-8 text-teal-600" />
-          <h2 className="text-3xl font-bold text-teal-900">Opportunités Data & Automatisation</h2>
+          <h2 className="text-3xl font-bold text-teal-900">Opportunités Data & IA (Phase 3)</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-xl shadow-sm border border-teal-100">
@@ -271,10 +332,11 @@ export default function ServiceClientPage() {
               <PhoneCall className="w-5 h-5 text-teal-500" />
               CTI - Remontée Fiche Automatique
             </h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed mb-3">
               Intégration téléphonie-CRM : remontée automatique de la fiche client au moment de l&apos;appel entrant.
-              <br/><br/>
-              <strong>Gain :</strong> Contexte immédiat, traçabilité complète des appels.
+            </p>
+            <p className="text-sm font-semibold text-teal-700">
+              Gain : Contexte immédiat, économie 2-3min/appel (×50 appels = 110h/an)
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-sm border border-teal-100">
@@ -282,10 +344,35 @@ export default function ServiceClientPage() {
               <MessageSquare className="w-5 h-5 text-teal-500" />
               Analyse Sentiment (NLP)
             </h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed mb-3">
               Analyse automatique des emails et transcriptions d&apos;appels pour détecter les clients mécontents avant qu&apos;ils ne partent.
-              <br/><br/>
-              <strong>Gain :</strong> Intervention proactive, réduction du churn client.
+            </p>
+            <p className="text-sm font-semibold text-teal-700">
+              Gain : Intervention proactive, réduction churn client -20%
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-teal-100">
+            <h3 className="font-bold text-lg text-teal-900 mb-3 flex items-center gap-2">
+              <Users className="w-5 h-5 text-teal-500" />
+              Segmentation Intelligente
+            </h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-3">
+              Clustering automatique des clients (Bailleurs pressés, Particuliers exigeants, Syndics récurrents) pour adapter la communication.
+            </p>
+            <p className="text-sm font-semibold text-teal-700">
+              Gain : Campagnes ciblées, augmentation panier moyen +15%
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-teal-100">
+            <h3 className="font-bold text-lg text-teal-900 mb-3 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-teal-500" />
+              Prédiction Maintenance
+            </h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-3">
+              Algorithme prédictif sur historique interventions pour anticiper les besoins de maintenance avant panne.
+            </p>
+            <p className="text-sm font-semibold text-teal-700">
+              Gain : Interventions proactives, satisfaction client, ventes additionnelles
             </p>
           </div>
         </div>
