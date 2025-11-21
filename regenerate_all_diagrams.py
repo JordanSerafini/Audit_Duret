@@ -66,9 +66,9 @@ def regenerate_service_diagrams(service_path):
                         print(f"      {line}")
 
     except subprocess.TimeoutExpired:
-        print(f"    ✗ SVG generation timed out")
+        print(f"    [ERROR] SVG generation timed out")
     except Exception as e:
-        print(f"    ✗ SVG generation failed: {e}")
+        print(f"    [ERROR] SVG generation failed: {e}")
 
     # Generate PNG
     print(f"  Generating PNG diagrams...")
@@ -91,14 +91,14 @@ def regenerate_service_diagrams(service_path):
         )
 
         if result.returncode == 0:
-            print(f"    ✓ PNG generation successful")
+            print(f"    [OK] PNG generation successful")
         else:
-            print(f"    ⚠ PNG generation completed with warnings")
+            print(f"    [WARN] PNG generation completed with warnings")
 
     except subprocess.TimeoutExpired:
-        print(f"    ✗ PNG generation timed out")
+        print(f"    [ERROR] PNG generation timed out")
     except Exception as e:
-        print(f"    ✗ PNG generation failed: {e}")
+        print(f"    [ERROR] PNG generation failed: {e}")
 
     # Copy to public folder
     print(f"  Copying to public folder...")
@@ -128,7 +128,7 @@ def regenerate_service_diagrams(service_path):
         except Exception as e:
             print(f"    Error copying {png_file.name}: {e}")
 
-    print(f"    ✓ Copied {svg_count} SVG and {png_count} PNG files to public folder")
+    print(f"    [OK] Copied {svg_count} SVG and {png_count} PNG files to public folder")
 
 # Main execution
 services_dir = Path("Audit_Duret_$/Services")
