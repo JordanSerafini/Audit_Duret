@@ -22,6 +22,10 @@ export const navigation: NavItem[] = [
         href: "/services/achats-logistique"
       },
       {
+        title: "Albertville",
+        href: "/services/albertville"
+      },
+      {
         title: "Chantiers",
         href: "/services/chantiers"
       },
