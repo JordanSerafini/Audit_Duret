@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Smartphone, WifiOff, Cloud, FileText, MessageSquare, TrendingUp, Target, ArrowRight, LayoutDashboard, Users, Camera } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
+import UMLGallery from '@/components/UMLGallery';
 
 export default function ChantiersPage() {
   const personas = [
@@ -454,6 +455,19 @@ export default function ChantiersPage() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Diagrammes UML */}
+      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+          <LayoutDashboard className="w-8 h-8 text-orange-600" />
+          Diagrammes UML - Visualisation & Téléchargement
+        </h2>
+        <p className="text-slate-600 mb-6">
+          Explorez tous les diagrammes UML de ce service : architecture, processus, cas d'usage, et plus encore.
+          Visualisez-les directement ou téléchargez-les individuellement.
+        </p>
+        <UMLGallery serviceKey="chantiers" />
       </div>
 
       {/* Footer navigation */}

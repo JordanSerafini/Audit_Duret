@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Users, FileText, Clock, Database, Zap, ArrowRight, LayoutDashboard, Smartphone, TrendingUp, Package, MapPin, Calendar, DollarSign, Target, ShoppingCart } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
+import UMLGallery from '@/components/UMLGallery';
 
 export const metadata = {
   title: 'Albertville - Audit IT Duret',
@@ -498,6 +499,19 @@ export default function AlbertvillePage() {
             <li>✅ Décision migration peut être prise M18-24 avec recul terrain</li>
           </ul>
         </div>
+      </div>
+
+      {/* Diagrammes UML */}
+      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+          <LayoutDashboard className="w-8 h-8 text-blue-600" />
+          Diagrammes UML - Visualisation & Téléchargement
+        </h2>
+        <p className="text-slate-600 mb-6">
+          Explorez tous les diagrammes UML de ce service : architecture, processus, cas d'usage, et plus encore.
+          Visualisez-les directement ou téléchargez-les individuellement.
+        </p>
+        <UMLGallery serviceKey="albertville" />
       </div>
 
       {/* Footer navigation */}
