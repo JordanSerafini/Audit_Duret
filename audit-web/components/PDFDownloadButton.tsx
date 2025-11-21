@@ -8,6 +8,10 @@ interface PDFDownloadButtonProps {
 }
 
 export default function PDFDownloadButton({ pdfPath, fileName }: PDFDownloadButtonProps) {
+  // Temporarily hidden until PDFs are generated
+  return null;
+
+  /* Uncomment when PDFs are ready:
   return (
     <a
       href={pdfPath}
@@ -18,4 +22,5 @@ export default function PDFDownloadButton({ pdfPath, fileName }: PDFDownloadButt
       <span className="font-semibold">Télécharger PDF</span>
     </a>
   );
+  */
 }
