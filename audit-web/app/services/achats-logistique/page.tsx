@@ -48,11 +48,12 @@ export default function AchatsLogistiquePage() {
   ];
 
   const comparison = [
-    { process: 'Commande Chantier', before: 'Appel / Papier', after: 'App Mobile (Scan)', gain: '-80% Temps' },
-    { process: 'Fiabilité', before: 'Commandes Incomplètes', after: '100% Fiable', gain: 'Fin Arrêts Chantier' },
-    { process: 'Saisie', before: 'Ressaisies Multiples', after: '0 (EDI / OCR)', gain: 'Productivité Max' },
-    { process: 'Stock', before: 'Aveugle / Faux', after: 'Temps Réel', gain: 'Optimisation Trésorerie' },
-    { process: 'Validation', before: 'Manuelle / Lente', after: 'Workflow Auto', gain: 'Fluidité' }
+    { process: 'Taux Commandes Complètes', before: '50%', after: '> 95%', gain: '+90% Fiabilité' },
+    { process: 'Délai Moyen Commande', before: '3 jours', after: '< 2 heures', gain: '-94% Temps' },
+    { process: 'Ressaisies', before: '6x par commande', after: '0 (EDI/OCR)', gain: '100% Automatisé' },
+    { process: 'Fiabilité Stock', before: '40%', after: '> 98%', gain: '+145% Précision' },
+    { process: 'Traçabilité', before: 'Aucune', after: 'Complète', gain: 'Gouvernance Totale' },
+    { process: 'Volume', before: '9-11K réf/an', after: 'Même charge', gain: 'Efficacité Max' }
   ];
 
   return (
@@ -77,16 +78,20 @@ export default function AchatsLogistiquePage() {
           
           <div className="flex flex-wrap gap-4 mb-6">
             <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-              <span className="block text-2xl font-bold text-red-400">100%</span>
-              <span className="text-xs text-blue-200">Manuel Actuellement</span>
+              <span className="block text-2xl font-bold text-red-400">50%</span>
+              <span className="text-xs text-blue-200">Commandes Incomplètes</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-              <span className="block text-2xl font-bold text-green-400">0</span>
-              <span className="text-xs text-blue-200">Ressaisie Cible</span>
+              <span className="block text-2xl font-bold text-red-400">6x</span>
+              <span className="text-xs text-blue-200">Ressaisies / Commande</span>
             </div>
             <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-              <span className="block text-2xl font-bold text-green-400">-90%</span>
-              <span className="text-xs text-blue-200">Erreurs Commande</span>
+              <span className="block text-2xl font-bold text-red-400">3j</span>
+              <span className="text-xs text-blue-200">Délai Moyen</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
+              <span className="block text-2xl font-bold text-green-400">9-11K</span>
+              <span className="text-xs text-blue-200">Réf Commandées/An</span>
             </div>
           </div>
 
