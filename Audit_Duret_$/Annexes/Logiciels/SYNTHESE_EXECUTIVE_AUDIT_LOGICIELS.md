@@ -13,8 +13,7 @@ L'audit confirme la pertinence du choix de la solution **Odoo Enterprise** pour 
 
 **Recommandation Principale** : Engagement sur la solution Odoo Enterprise.
 
-**Budget Réel Estimé** : **473 000 €** sur 3 ans.
-*Note : Ce montant intègre des correctifs budgétaires par rapport à l'estimation initiale de 316 000 €, incluant les coûts cachés et les ajustements de sécurité.*
+**Budget** : À définir lors de l'étude de faisabilité détaillée (licences, intégration, solutions complémentaires, sécurité, contingence).
 
 **Conditions Suspensives (Go/No-Go)** :
 1.  **Validation Technique (POC)** : Test du module Field Service sur les formulaires CERFA (2 semaines).

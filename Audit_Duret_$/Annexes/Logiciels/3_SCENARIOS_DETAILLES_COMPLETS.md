@@ -66,7 +66,7 @@ Ce scénario privilégie des logiciels spécialisés pour chaque fonction, conne
 
 ### Analyse
 *   **Avantages** : Solutions expertes dans leur domaine (HubSpot pour le CRM, Lucca pour les RH), fonctionnalités BTP natives dans EBP.
-*   **Inconvénients** : Coût élevé (+55% vs Odoo), complexité de gestion (5 contrats, 5 interfaces), silos de données, intégrations fragiles.
+*   **Inconvénients** : Coût plus élevé que solution centralisée, complexité de gestion (5 contrats, 5 interfaces), silos de données, intégrations fragiles.
 
 ---
 
@@ -80,16 +80,13 @@ Ce scénario vise l'excellence fonctionnelle sans compromis, en combinant Odoo (
 *   **Field Service** : Application mobile sur mesure (React Native).
 *   **RH/Paie** : Lucca + Silae.
 
-### Configuration et Coûts
+### Configuration
 
-**Budget Estimé sur 3 ans** :
-*   Investissement initial (An 1) : **183 200 €** (dont 72k€ pour le dév. mobile).
-*   Récurrent (An 2-3) : **106 600 € / an**.
-*   **Total 3 ans : ~396 000 €**.
+**Budget Estimé sur 3 ans** : À définir lors de l'étude de faisabilité (licences Odoo, HubSpot, Lucca, Silae + développement application mobile sur mesure + maintenance évolutive).
 
 ### Analyse
 *   **Avantages** : Expérience utilisateur optimale, application terrain 100% sur mesure.
-*   **Inconvénients** : Budget très élevé (+108% vs Odoo), dépendance forte à une équipe de développement, délais de mise en œuvre longs (12-18 mois).
+*   **Inconvénients** : Budget significativement plus élevé que solution centralisée, dépendance forte à une équipe de développement, délais de mise en œuvre longs (12-18 mois).
 
 ---
 
@@ -97,7 +94,7 @@ Ce scénario vise l'excellence fonctionnelle sans compromis, en combinant Odoo (
 
 | Critère | Scénario 1 (Odoo) | Scénario 2 (EBP+) | Scénario 3 (Hybride) |
 | :--- | :--- | :--- | :--- |
-| **Budget 3 ans** | **190 k€** | 295 k€ | 396 k€ |
+| **Budget 3 ans** | **Le plus économique** | Élevé | Très élevé |
 | **Couverture** | 100% | 88% | 100% |
 | **Complexité** | Faible (1 plateforme) | Élevée (5 outils) | Très Élevée (Dev spécifique) |
 | **Scalabilité** | Excellente | Limitée (EBP) | Excellente |
