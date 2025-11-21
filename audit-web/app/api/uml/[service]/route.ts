@@ -4,10 +4,10 @@ import path from 'path';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { service: string } }
+  { params }: { params: Promise<{ service: string }> }
 ) {
   try {
-    const serviceName = params.service;
+    const { service: serviceName } = await params;
     const umlPath = path.join(process.cwd(), 'public', 'uml', serviceName);
 
     if (!fs.existsSync(umlPath)) {

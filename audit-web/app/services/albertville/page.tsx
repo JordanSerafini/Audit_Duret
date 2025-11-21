@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Users, FileText, Clock, Database, Zap, ArrowRight, LayoutDashboard, Smartphone, TrendingUp, Package, MapPin, Calendar, DollarSign, Target, ShoppingCart } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 
 export const metadata = {
   title: 'Albertville - Audit IT Duret',
@@ -180,10 +181,13 @@ export default function AlbertvillePage() {
             </div>
           </div>
 
-          <PDFDownloadButton 
-            pdfPath="/pdfs/service-albertville.pdf" 
-            fileName="Service_Albertville.pdf" 
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-albertville.pdf"
+              fileName="Service_Albertville.pdf"
+            />
+            <UMLDownloadButton serviceKey="albertville" />
+          </div>
         </div>
       </div>
 

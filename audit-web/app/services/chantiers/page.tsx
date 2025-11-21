@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Smartphone, WifiOff, Cloud, FileText, MessageSquare, TrendingUp, Target, ArrowRight, LayoutDashboard, Users, Camera } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 
 export default function ChantiersPage() {
   const personas = [
@@ -158,10 +159,13 @@ export default function ChantiersPage() {
               <span className="text-sm text-orange-200 uppercase tracking-wider">Temps Cible</span>
             </div>
           </div>
-          <PDFDownloadButton 
-            pdfPath="/pdfs/service-chantiers.pdf" 
-            fileName="Service_Chantiers.pdf" 
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-chantiers.pdf"
+              fileName="Service_Chantiers.pdf"
+            />
+            <UMLDownloadButton serviceKey="chantiers" />
+          </div>
         </div>
       </div>
 
