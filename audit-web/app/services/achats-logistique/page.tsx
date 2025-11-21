@@ -135,6 +135,44 @@ export default function AchatsLogistiquePage() {
         </div>
       </div>
 
+      {/* Problèmes Majeurs Identifiés */}
+      <div className="bg-slate-50 rounded-2xl p-8 mb-12 border border-slate-200">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+          <AlertTriangle className="w-8 h-8 text-red-600" />
+          7 Problèmes Critiques Identifiés
+        </h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-red-500">
+            <h3 className="font-bold text-slate-900 mb-2">1. Base de Données Chaotique</h3>
+            <p className="text-sm text-slate-600">Sage MDE &quot;calamiteux&quot; : doublons, références obsolètes, même produit à 2 prix différents, pas de MAJ automatique prix</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-red-500">
+            <h3 className="font-bold text-slate-900 mb-2">2. Livraisons Incomplètes (50%)</h3>
+            <p className="text-sm text-slate-600">Seulement 50% des commandes arrivent complètes, reliquats non suivis, retours non liés aux commandes</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-orange-500">
+            <h3 className="font-bold text-slate-900 mb-2">3. Processus 100% Manuel</h3>
+            <p className="text-sm text-slate-600">Aucune automatisation, multiples fichiers Excel, vérifications manuelles, 6 ressaisies par commande, inventaires très chronophages</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-orange-500">
+            <h3 className="font-bold text-slate-900 mb-2">4. Aucune Traçabilité</h3>
+            <p className="text-sm text-slate-600">Pas d&apos;historique, impossible de savoir qui a commandé quoi, validation non tracée, emails perdus</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-yellow-500">
+            <h3 className="font-bold text-slate-900 mb-2">5. Pas d&apos;Intégration Fournisseurs</h3>
+            <p className="text-sm text-slate-600">Pas d&apos;EDI, pas d&apos;API Rexel/Sonepar, commandes 100% téléphone/email, catalogues non synchronisés</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-yellow-500">
+            <h3 className="font-bold text-slate-900 mb-2">6. Stock Non Optimisé</h3>
+            <p className="text-sm text-slate-600">40% fiabilité stock, pas de visibilité temps réel, inventaires très longs, pas de seuils min/max</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-red-400 md:col-span-2">
+            <h3 className="font-bold text-slate-900 mb-2">7. Pas de Gouvernance</h3>
+            <p className="text-sm text-slate-600">Commandes directes chantiers non contrôlées, achats hors circuit, pas de validation centralisée, pas de KPIs fournisseurs</p>
+          </div>
+        </div>
+      </div>
+
       {/* État des Lieux - Personas */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-6">
@@ -300,6 +338,48 @@ export default function AchatsLogistiquePage() {
         </div>
       </div>
 
+      {/* KPIs Cibles */}
+      <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200 mb-12">
+        <h2 className="text-3xl font-bold text-green-900 mb-6 flex items-center gap-3">
+          <TrendingUp className="w-8 h-8 text-green-600" />
+          Objectifs de Performance
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-green-100">
+            <div className="text-sm text-slate-600 mb-2">Taux Commandes Complètes</div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-bold text-red-600">50%</span>
+              <span className="text-slate-400">→</span>
+              <span className="text-3xl font-bold text-green-600">&gt;95%</span>
+            </div>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-green-100">
+            <div className="text-sm text-slate-600 mb-2">Délai Moyen</div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-bold text-red-600">3j</span>
+              <span className="text-slate-400">→</span>
+              <span className="text-3xl font-bold text-green-600">&lt;2h</span>
+            </div>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-green-100">
+            <div className="text-sm text-slate-600 mb-2">Fiabilité Stock</div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-bold text-red-600">40%</span>
+              <span className="text-slate-400">→</span>
+              <span className="text-3xl font-bold text-green-600">&gt;98%</span>
+            </div>
+          </div>
+          <div className="bg-white p-5 rounded-xl shadow-sm border border-green-100">
+            <div className="text-sm text-slate-600 mb-2">Automatisation</div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-bold text-red-600">0%</span>
+              <span className="text-slate-400">→</span>
+              <span className="text-3xl font-bold text-green-600">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Roadmap */}
       <div className="border-t border-slate-200 pt-12">
         <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
@@ -308,19 +388,37 @@ export default function AchatsLogistiquePage() {
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="border-l-4 border-blue-500 pl-6 py-2">
-            <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Phase 1 (M1-M4)</span>
+            <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Phase 1 (M1-M6)</span>
             <h3 className="text-xl font-bold text-slate-900 mt-1 mb-2">Fondations</h3>
-            <p className="text-sm text-slate-600">Nettoyage Données, Catalogue Unifié, Pilote 1-2 Chantiers.</p>
+            <p className="text-sm text-slate-600 mb-3">Nettoyage Données, Catalogue Unifié, Pilote 1-2 Chantiers.</p>
+            <div className="text-xs text-slate-500 space-y-1">
+              <div>• Setup infrastructure & nettoyage Sage MDE</div>
+              <div>• Workflow digital v1 & Web app MVP</div>
+              <div>• Mobile app v1 & pilote terrain</div>
+              <div>• Data Lake & Dashboards essentiels</div>
+            </div>
           </div>
           <div className="border-l-4 border-purple-500 pl-6 py-2">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Phase 2 (M5-M12)</span>
+            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Phase 2 (M7-M12)</span>
             <h3 className="text-xl font-bold text-slate-900 mt-1 mb-2">Automatisation</h3>
-            <p className="text-sm text-slate-600">APIs Fournisseurs, 3-way Matching, Généralisation.</p>
+            <p className="text-sm text-slate-600 mb-3">APIs Fournisseurs, 3-way Matching, ML v1, Généralisation.</p>
+            <div className="text-xs text-slate-500 space-y-1">
+              <div>• APIs Rexel/Sonepar (catalogues, EDI)</div>
+              <div>• 3-way matching automatique</div>
+              <div>• ML v1: Prévisions & Détection anomalies</div>
+              <div>• Généralisation tous chantiers</div>
+            </div>
           </div>
           <div className="border-l-4 border-indigo-500 pl-6 py-2">
             <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Phase 3 (M13-M18)</span>
             <h3 className="text-xl font-bold text-slate-900 mt-1 mb-2">Excellence</h3>
-            <p className="text-sm text-slate-600">Auto-réapprovisionnement, Optimisation IA, Pilotage Avancé.</p>
+            <p className="text-sm text-slate-600 mb-3">Auto-réapprovisionnement, ML Avancé, Optimisation Continue.</p>
+            <div className="text-xs text-slate-500 space-y-1">
+              <div>• Auto-réapprovisionnement intelligent</div>
+              <div>• ML avancé: NLP classification articles</div>
+              <div>• Optimisation multi-objectifs</div>
+              <div>• Features innovantes (RA, vocal)</div>
+            </div>
           </div>
         </div>
       </div>
