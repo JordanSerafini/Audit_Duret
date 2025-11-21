@@ -378,8 +378,66 @@ export default function ServiceClientPage() {
         </div>
       </div>
 
+      {/* KPIs de Succès */}
+      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6">KPIs de Succès à Suivre</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div>
+            <h3 className="font-bold text-blue-900 mb-4">Phase 1 (M3)</h3>
+            <div className="space-y-3">
+              <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                <p className="text-xs text-blue-700 font-semibold">Traçabilité appels</p>
+                <p className="text-lg font-bold text-blue-900">0% → 100%</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                <p className="text-xs text-blue-700 font-semibold">Post-it/jour</p>
+                <p className="text-lg font-bold text-blue-900">~50 → 0</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                <p className="text-xs text-blue-700 font-semibold">Temps prise RDV</p>
+                <p className="text-lg font-bold text-blue-900">15min → 5min</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-bold text-purple-900 mb-4">Phase 2 (M6)</h3>
+            <div className="space-y-3">
+              <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+                <p className="text-xs text-purple-700 font-semibold">Satisfaction client (NPS)</p>
+                <p className="text-lg font-bold text-purple-900">Actuel → +20pts</p>
+              </div>
+              <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+                <p className="text-xs text-purple-700 font-semibold">RDV pris en ligne</p>
+                <p className="text-lg font-bold text-purple-900">0% → 30%</p>
+              </div>
+              <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+                <p className="text-xs text-purple-700 font-semibold">Clients perdus/an</p>
+                <p className="text-lg font-bold text-purple-900">10 → 2</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-bold text-green-900 mb-4">Phase 3 (M12-18)</h3>
+            <div className="space-y-3">
+              <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+                <p className="text-xs text-green-700 font-semibold">Temps admin Claire</p>
+                <p className="text-lg font-bold text-green-900">-40%</p>
+              </div>
+              <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+                <p className="text-xs text-green-700 font-semibold">Opportunités captées</p>
+                <p className="text-lg font-bold text-green-900">+50%</p>
+              </div>
+              <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+                <p className="text-xs text-green-700 font-semibold">Appels entrants</p>
+                <p className="text-lg font-bold text-green-900">-25%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Roadmap */}
-      <div className="border-t border-slate-200 pt-12">
+      <div className="border-t border-slate-200 pt-12 mb-12">
         <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
           <Clock className="w-8 h-8 text-slate-700" />
           Roadmap de Déploiement (18 Mois)
@@ -388,17 +446,51 @@ export default function ServiceClientPage() {
           <div className="border-l-4 border-teal-500 pl-6 py-2">
             <span className="text-xs font-bold text-teal-600 uppercase tracking-wider">Phase 1 (M1-M3)</span>
             <h3 className="text-xl font-bold text-slate-900 mt-1 mb-2">Quick Wins</h3>
-            <p className="text-sm text-slate-600">CRM (HubSpot gratuit), Templates Mails, Planning Partagé, Questionnaire Auto.</p>
+            <p className="text-sm text-slate-600 mb-3">CRM (HubSpot gratuit ou Odoo), Templates Mails, Planning Partagé, Questionnaire Auto.</p>
+            <div className="text-xs text-teal-700 font-semibold">
+              ✓ Fin post-it<br/>
+              ✓ Traçabilité 100%<br/>
+              ✓ Gains temps immédiat
+            </div>
           </div>
           <div className="border-l-4 border-purple-500 pl-6 py-2">
             <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Phase 2 (M4-M6)</span>
             <h3 className="text-xl font-bold text-slate-900 mt-1 mb-2">Intégrations</h3>
-            <p className="text-sm text-slate-600">CTI Téléphonie, Sync SAGE ↔ CRM, Portail Client Basique.</p>
+            <p className="text-sm text-slate-600 mb-3">CTI Téléphonie, Sync SAGE ↔ CRM, Portail Client Basique, GED.</p>
+            <div className="text-xs text-purple-700 font-semibold">
+              ✓ Remontée fiche auto<br/>
+              ✓ Fin double saisie<br/>
+              ✓ RDV en ligne 24/7
+            </div>
           </div>
           <div className="border-l-4 border-blue-500 pl-6 py-2">
             <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Phase 3 (M7-M18)</span>
             <h3 className="text-xl font-bold text-slate-900 mt-1 mb-2">Excellence</h3>
-            <p className="text-sm text-slate-600">App Mobile Techniciens, Workflows Avancés, Chatbot, Analytics.</p>
+            <p className="text-sm text-slate-600 mb-3">App Mobile Techniciens, Workflows Avancés, Chatbot, Analytics, IA.</p>
+            <div className="text-xs text-blue-700 font-semibold">
+              ✓ Opportunités captées<br/>
+              ✓ CERFA digitalisé<br/>
+              ✓ Analyse prédictive
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Prochaines Étapes */}
+      <div className="bg-gradient-to-r from-teal-700 to-cyan-700 rounded-2xl p-8 text-white mb-12">
+        <h2 className="text-3xl font-bold mb-4">🚀 Prochaines Étapes Immédiates</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <p className="font-bold mb-2">Semaine 1-2</p>
+            <p className="text-sm text-teal-100">Test HubSpot gratuit (ou Odoo CRM), import 50 contacts pilotes, feedback Claire</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <p className="font-bold mb-2">Semaine 3-4</p>
+            <p className="text-sm text-teal-100">POC validation, mesure gains temps réels, décision GO/NO-GO</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+            <p className="font-bold mb-2">Mois 3</p>
+            <p className="text-sm text-teal-100">Go-live Phase 1, CRM opérationnel, formation complète équipe</p>
           </div>
         </div>
       </div>
