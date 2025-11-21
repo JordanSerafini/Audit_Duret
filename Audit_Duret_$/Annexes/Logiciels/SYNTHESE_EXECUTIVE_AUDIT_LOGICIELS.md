@@ -17,7 +17,7 @@ L'audit confirme la pertinence du choix de la solution **Odoo Enterprise** pour 
 
 **Conditions Suspensives (Go/No-Go)** :
 1.  **Validation Technique (POC)** : Test du module Field Service sur les formulaires CERFA (2 semaines).
-2.  **Validation Budgétaire** : Approbation du budget corrigé (+157 k€) par le CODIR.
+2.  **Validation Budgétaire** : Approbation du budget détaillé après étude de faisabilité par le CODIR.
 3.  **Planification RFID** : Report du déploiement RFID à 18 mois minimum.
 
 ---
@@ -32,16 +32,16 @@ L'analyse comparative maintient Odoo comme la solution préférentielle face à 
 *   **Couverture fonctionnelle** : Odoo offre une couverture plus large (100% vs 90% pour EBP).
 *   **Évolutivité** : Odoo permet une scalabilité supérieure, adaptée à la croissance future.
 *   **Data & BI** : Capacités supérieures en Business Intelligence et préparation à l'IA.
-*   **Coût** : Malgré les corrections budgétaires, Odoo reste compétitif (473 k€ vs 520 k€ pour EBP sur 3 ans).
+*   **Coût** : Odoo reste compétitif par rapport à EBP (chiffrage détaillé nécessaire).
 
 ### Analyse Budgétaire
-Le budget initial de 316 k€ a été réévalué à **473 k€** pour inclure des éléments manquants ou sous-estimés :
-*   **Intégration PayFit** : +7 k€ (coûts d'intégration non comptés).
-*   **Développement Spécifique** : +15 k€ (adaptation des formulaires CERFA).
-*   **APIs Fournisseurs** : +13 k€ (connexions Sonepar/Rexel).
-*   **Cybersécurité** : +30 k€ (mise à niveau nécessaire : EDR, Pentest).
-*   **Contingence** : +32 k€ (marge de sécurité de 10%).
-*   **Ressource Data (An 3)** : +60 k€ (Data Engineer pour la phase d'excellence).
+L'étude de faisabilité devra intégrer l'ensemble des postes de coûts :
+*   **Intégration** : PayFit et autres solutions complémentaires.
+*   **Développement Spécifique** : Adaptation des formulaires CERFA si nécessaire.
+*   **APIs Fournisseurs** : Connexions avec fournisseurs (Sonepar/Rexel).
+*   **Cybersécurité** : Mise à niveau (EDR, audits de sécurité).
+*   **Contingence** : Marge de sécurité recommandée.
+*   **Ressources** : Besoin éventuel en compétences Data/BI selon ambitions.
 
 ---
 
