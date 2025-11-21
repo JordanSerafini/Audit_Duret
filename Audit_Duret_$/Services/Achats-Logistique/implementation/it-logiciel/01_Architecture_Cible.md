@@ -8,8 +8,8 @@
 ## 🎯 Objectifs Architecture
 
 ### Problèmes à résoudre
-- ❌ 50% commandes incomplètes → ✅ > 95% complets
-- ❌ Processus 100% manuel → ✅ 80% automatisé
+- ❌ Taux élevé de commandes incomplètes → ✅ Amélioration substantielle visée
+- ❌ Processus 100% manuel → ✅ Automatisation élevée ciblée
 - ❌ Multiples outils déconnectés → ✅ Plateforme unifiée
 - ❌ Pas de traçabilité → ✅ Traçabilité complète
 - ❌ Pas de mobile → ✅ Mobile-first
@@ -434,10 +434,10 @@
 - Disponibilité mobile offline
 
 ### KPIs Métier
-- Taux adoption > 90%
-- Commandes complètes > 95%
-- Temps processus < 2h
-- Satisfaction utilisateurs > 4/5
+- Taux adoption : niveau élevé visé
+- Commandes complètes : amélioration substantielle
+- Temps processus : réduction drastique
+- Satisfaction utilisateurs : niveau élevé ciblé
 
 ---
 

@@ -426,7 +426,7 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 
 ---
 
-## 💰 INVESTISSEMENT & ROI
+## INVESTISSEMENT
 
 ### Coût Total Odoo 3 Ans (100 collaborateurs)
 
@@ -443,36 +443,20 @@ Odoo est un ERP open source modulaire couvrant tous les besoins d'une entreprise
 | **Formation** (6j x 1200€/j) | 7 200€ | 0€ | 0€ | **7 200€** |
 | **Hébergement Odoo.sh** (optionnel) | 6 000€ | 6 000€ | 6 000€ | **18 000€** |
 | **Modules custom** (si besoin) | 10 000€ | 5 000€ | 5 000€ | **20 000€** |
-| **TOTAL** | **74 080€** | **40 880€** | **40 880€** | **🟢 155 840€** |
+| **TOTAL** | **74 080€** | **40 880€** | **40 880€** | **155 840€** |
 
 ### Comparaison Multi-Solutions
 
 | Scénario | Coût 3 ans | Couverture | Complexité |
 |----------|------------|------------|------------|
-| **Odoo seul** | **155 840€** | ✅ **100%** | 🟢 **Simple** |
-| Odoo + PayFit Paie | 181 416€ | ✅ **100%** | 🟢 **Simple** |
-| EBP + HubSpot + Lucca | 213 960€ | ⚠️ 95% | 🔴 Complexe (3-4 outils) |
-| Sage X3 + Compléments | >400 000€ | ✅ 100% | 🔴 Très complexe |
+| **Odoo seul** | **155 840€** | **100%** | Simple |
+| Odoo + PayFit Paie | 181 416€ | **100%** | Simple |
+| EBP + HubSpot + Lucca | 213 960€ | 95% | Complexe (3-4 outils) |
+| Sage X3 + Compléments | >400 000€ | 100% | Très complexe |
 
 **Note** : Coûts estimatifs sur 3 ans. Odoo seul ne comprend pas de moteur de paie (nécessite PayFit/Silae en complément).
 
----
-
-### ROI Estimé
-
-⚠️ **DISCLAIMER** : Les gains ci-dessous sont des **estimations théoriques** basées sur les problèmes identifiés lors de l'audit. Ils nécessitent une **validation terrain** avec mesures avant/après déploiement.
-
-**Gains annuels potentiels** (estimations à valider) :
-- Temps administratif : -40% → ~30k€/an (estimation)
-- Opportunités commerciales : +15% → ~50k€/an (estimation)
-- Refacturation dépassements : +30% → ~20k€/an (estimation)
-- Erreurs/reprises : -60% → ~15k€/an (estimation)
-- **Total gains/an** : ~115k€ **(estimation théorique)**
-
-**Payback estimé** : ~16-20 mois (selon gains réels)
-**ROI 3 ans estimé** : **Positif (à valider par mesures terrain)**
-
-**Recommandation** : Mettre en place des **KPIs avant déploiement** pour mesurer gains réels post-implémentation.
+**Recommandation** : Mettre en place des KPIs avant déploiement pour mesurer les bénéfices opérationnels post-implémentation.
 
 ---
 

@@ -237,16 +237,18 @@ En lien avec l'étude globale [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md), vo
 
 ## 🎁 PARTIE 4 : BÉNÉFICES ATTENDUS
 
-### 📊 Gains Opérationnels Visés
+### 📊 Objectifs d'Amélioration Visés
 
-| Indicateur | AVANT | OBJECTIF APRÈS |
-|------------|-------|----------------|
-| **Taux succès commandes** | Insuffisant (taux à mesurer) | Amélioration significative |
-| **Délai moyen** | Important (délai à mesurer) | Réduction drastique |
-| **Re-saisies** | Multiples (nombre exact à compter) | Automatisé |
+| Indicateur | ÉTAT ACTUEL | OBJECTIF CIBLE |
+|------------|-------------|----------------|
+| **Taux succès commandes** | À mesurer précisément | Amélioration significative |
+| **Délai moyen** | À mesurer précisément | Réduction drastique |
+| **Re-saisies** | Multiples (nombre à compter) | Workflow automatisé |
 | **Traçabilité** | ❌ Aucune | ✅ Complète |
-| **Visibilité temps réel** | ❌ Aucune | ✅ Dashboards |
-| **Chantiers bloqués** | Fréquent | Exceptionnel |
+| **Visibilité temps réel** | ❌ Aucune | ✅ Dashboards opérationnels |
+| **Chantiers bloqués** | Fréquemment | Occasionnellement |
+
+⚠️ **Note** : Les métriques précises nécessitent une collecte de données sur 2-3 mois
 
 ### 💡 Bénéfices Utilisateurs
 

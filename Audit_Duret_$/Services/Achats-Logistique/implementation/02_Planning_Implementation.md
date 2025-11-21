@@ -89,9 +89,9 @@ Remplacer le chaos actuel par un système fonctionnel de base
 - Retours utilisateurs intégrés
 
 **KPIs Phase 1:**
-- Taux adoption pilote > 80%
-- Temps saisie commande < 5 min
-- Satisfaction > 3.5/5
+- Taux adoption pilote : objectif élevé (à définir après baseline)
+- Temps saisie commande : réduction substantielle visée
+- Satisfaction : amélioration notable attendue
 
 ### Volet Data/ML (Mois 1-6)
 
@@ -133,10 +133,10 @@ Remplacer le chaos actuel par un système fonctionnel de base
 - Rapports automatiques quotidiens
 - KPIs temps réel
 
-**KPIs Phase 1:**
-- Dashboards utilisés quotidiennement
-- Rapports automatiques fiables
-- Données à jour < 24h
+**KPIs Phase 1 (Data):**
+- Dashboards : utilisation régulière par équipes
+- Rapports automatiques : fiabilité élevée
+- Données : fraîcheur quotidienne
 
 ---
 
@@ -209,9 +209,9 @@ Automatiser et prédire pour optimiser
 - Uptime > 99%
 
 **KPIs Phase 2:**
-- Taux commandes complètes > 85%
-- Délai moyen < 24h
-- APIs disponibles > 99%
+- Taux commandes complètes : amélioration significative
+- Délai moyen : réduction importante
+- APIs disponibles : haute disponibilité requise
 
 ### Volet Data/ML (Mois 7-12)
 
@@ -274,10 +274,10 @@ Automatiser et prédire pour optimiser
 - Recommandations actives
 - Dashboards enrichis ML
 
-**KPIs Phase 2:**
-- Précision prédictions > 80%
-- Anomalies détectées > 90%
-- Recommandations suivies > 50%
+**KPIs Phase 2 (ML):**
+- Précision prédictions : niveau élevé visé
+- Anomalies détectées : taux de détection élevé
+- Recommandations : taux d'adoption à définir
 
 ---
 
@@ -329,9 +329,9 @@ Auto-pilotage et optimisation continue
 - Performance optimale
 
 **KPIs Phase 3:**
-- Taux commandes complètes > 95%
-- Délai moyen < 2h
-- 30% processus auto
+- Taux commandes complètes : excellence visée
+- Délai moyen : temps réel proche
+- Automatisation : niveau élevé ciblé
 
 ### Volet Data/ML (Mois 13-18)
 
@@ -376,10 +376,10 @@ Auto-pilotage et optimisation continue
 - Auto-actions déployées
 - Pipeline amélioration continue
 
-**KPIs Phase 3:**
-- Précision ML > 90%
-- Auto-actions fiables
-- ROI ML démontré
+**KPIs Phase 3 (ML):**
+- Précision ML : niveau excellence
+- Auto-actions : fiabilité élevée
+- ROI ML : gains mesurables démontrés
 
 ---
 
@@ -437,26 +437,33 @@ MOIS │ IT                          │ DATA/ML
 
 ---
 
-## 💰 Budget Indicatif (Ordre de grandeur)
+## 💰 Budget Indicatif
 
-### Phase 1 (M1-M6)
+⚠️ **Note importante** : Le budget dépend fortement de la solution technique retenue.
+
+### Postes de coûts à prévoir
+
+**Phase 1 (M1-M6)**
 - Infrastructure & licences
-- Développement
-- Nettoyage données
-- Formation
-- **Estimation**: Budget selon option A/B/C du plan
+- Développement initial
+- Nettoyage et migration données
+- Formation utilisateurs
 
-### Phase 2 (M7-M12)
-- Intégrations APIs
+**Phase 2 (M7-M12)**
+- Intégrations APIs fournisseurs
 - Développement ML
 - Support & maintenance
-- **Estimation**: Budget selon option
+- Formation continue
 
-### Phase 3 (M13-M18)
-- Features avancées
+**Phase 3 (M13-M18)**
+- Fonctionnalités avancées
 - ML avancé
-- Optimisation
-- **Estimation**: Budget selon option
+- Optimisation et scaling
+
+💡 **Chiffrage précis nécessite** :
+- Sélection solution technique définitive
+- Évaluation périmètre exact
+- Benchmark éditeurs/intégrateurs
 
 ---
 
@@ -493,21 +500,21 @@ MOIS │ IT                          │ DATA/ML
 ## 🎯 Jalons & Go/No-Go
 
 ### Jalon M3: Infrastructure OK?
-- ✅ Infra stable
-- ✅ DB propre
-- ✅ Workflow fonctionnel
+- ✅ Infrastructure stable et opérationnelle
+- ✅ Base de données nettoyée
+- ✅ Workflow fonctionnel validé
 - → **GO Phase 1 suite** ou STOP
 
 ### Jalon M6: Pilote réussi?
-- ✅ Adoption > 80%
-- ✅ Satisfaction > 3.5/5
-- ✅ Process < 1h
+- ✅ Adoption utilisateurs : niveau satisfaisant
+- ✅ Satisfaction : retours positifs
+- ✅ Processus : gains mesurables
 - → **GO Phase 2** ou AJUSTEMENTS
 
 ### Jalon M12: Généralisation OK?
-- ✅ Taux service > 85%
-- ✅ ML précision > 75%
-- ✅ ROI visible
+- ✅ Taux service : amélioration confirmée
+- ✅ ML : modèles performants
+- ✅ ROI : gains visibles et mesurables
 - → **GO Phase 3** ou CONSOLIDATION
 
 ---
@@ -515,20 +522,20 @@ MOIS │ IT                          │ DATA/ML
 ## 📈 Indicateurs de Succès Globaux
 
 ### Après 6 mois
-- Pilote validé
-- Dashboards utilisés
-- Base propre
+- Pilote validé avec retours positifs
+- Dashboards utilisés régulièrement
+- Base de données nettoyée
 
 ### Après 12 mois
-- Taux commandes complètes > 85%
-- 4+ modèles ML production
-- Tous chantiers équipés
+- Taux commandes complètes : amélioration significative
+- Plusieurs modèles ML en production
+- Tous chantiers équipés et formés
 
 ### Après 18 mois
-- Taux commandes complètes > 95%
-- 30% processus automatisés
-- ML précision > 90%
-- ROI démontré
+- Taux commandes complètes : niveau d'excellence
+- Processus automatisés : niveau élevé
+- ML : précision élevée
+- ROI : gains mesurables démontrés
 
 ---
 
