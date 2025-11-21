@@ -484,25 +484,6 @@ export default function ServiceClientPage() {
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="service-client" serviceLabel="Service Client" />
 
-      {/* Prochaines Étapes */}
-      <div className="bg-gradient-to-r from-teal-700 to-cyan-700 rounded-2xl p-8 text-white mb-12">
-        <h2 className="text-3xl font-bold mb-4">🚀 Prochaines Étapes Immédiates</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <p className="font-bold mb-2">Semaine 1-2</p>
-            <p className="text-sm text-teal-100">Test HubSpot gratuit (ou Odoo CRM), import 50 contacts pilotes, feedback Claire</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <p className="font-bold mb-2">Semaine 3-4</p>
-            <p className="text-sm text-teal-100">POC validation, mesure gains temps réels, décision GO/NO-GO</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <p className="font-bold mb-2">Mois 3</p>
-            <p className="text-sm text-teal-100">Go-live Phase 1, CRM opérationnel, formation complète équipe</p>
-          </div>
-        </div>
-      </div>
-
       {/* Footer navigation */}
       <div className="mt-12 flex justify-between items-center border-t border-slate-300 pt-6">
         <Link href="/services/ressources-humaines" className="text-slate-600 hover:text-teal-600 font-semibold transition-colors">
