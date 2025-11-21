@@ -57,24 +57,27 @@ L'intégration entre Odoo et PayFit peut être complexe (imports/exports manuels
 
 ### Risque 3 : Spécificités Métier (Field Service)
 Les formulaires CERFA électriques (NF C 15-100) sont complexes à numériser.
-**Mesure d'atténuation** : POC de 2 semaines pour valider l'utilisabilité sur le terrain. Si le résultat est insatisfaisant, un budget pour une application mobile sur mesure (React Native) devra être envisagé (+72 k€, non inclus dans le scénario de base).
+**Mesure d'atténuation** : POC de 2 semaines pour valider l'utilisabilité sur le terrain. Si le résultat est insatisfaisant, un budget pour une application mobile sur mesure (React Native) devra être envisagé (coûts additionnels non inclus dans le scénario de base).
 
 ### Risque 4 : Cybersécurité
-Le budget initial était insuffisant face aux menaces actuelles (Ransomware).
-**Mesure d'atténuation** : Augmentation du budget annuel de sécurité (+20 k€/an) pour inclure des solutions de détection avancée (EDR) et des audits réguliers.
+Un budget cybersécurité adapté est nécessaire face aux menaces actuelles (Ransomware).
+**Mesure d'atténuation** : Prévoir un budget annuel de sécurité pour inclure des solutions de détection avancée (EDR) et des audits réguliers.
 
 ---
 
 ## 4. SYNTHÈSE FINANCIÈRE
 
-### Budget Global Corrigé (Scénario Odoo)
+### Budget Global (Scénario Odoo)
 
-| Poste de Coût | An 1 | An 2 | An 3 | Total 3 ans |
-| :--- | :--- | :--- | :--- | :--- |
-| **Logiciels & Intégration** | 79 k€ | 51 k€ | 51 k€ | **181 k€** |
-| **Solutions Complémentaires** | 65 k€ | 42 k€ | 39 k€ | **146 k€** |
-| **Corrections & Ajustements** | 45 k€ | 25 k€ | 76 k€ | **146 k€** |
-| **TOTAL** | **189 k€** | **118 k€** | **166 k€** | **473 k€** |
+Le budget détaillé devra être établi lors de l'étude de faisabilité en intégrant :
+
+| Poste de Coût | Description |
+| :--- | :--- |
+| **Logiciels & Intégration** | Licences Odoo, paramétrage, intégration |
+| **Solutions Complémentaires** | PayFit, APIs, outils de sécurité |
+| **Développements Spécifiques** | Formulaires CERFA, adaptations métier |
+| **Formation & Conduite du Changement** | Accompagnement utilisateurs |
+| **Contingence** | Marge de sécurité recommandée |
 
 ### Analyse de la Valeur
 Le projet est justifié par la nécessité de modernisation, l'attractivité RH et la pérennité de l'entreprise face à l'obsolescence technique des outils actuels.
@@ -88,7 +91,7 @@ Le projet est justifié par la nécessité de modernisation, l'attractivité RH 
     *   Field Service : Test terrain des formulaires CERFA.
     *   Paie : Simulation complète d'une paie (Paie Blanche).
     *   Performance : Test de charge de la solution.
-*   **Décision CODIR** : Validation du budget révisé de 473 k€.
+*   **Décision CODIR** : Validation du budget détaillé après étude de faisabilité.
 
 ### Phase 1 : Déploiement "Quick Wins" (Mois M1 à M6)
 *   Mise en place du CRM et du Helpdesk.
@@ -108,6 +111,6 @@ Le projet est justifié par la nécessité de modernisation, l'attractivité RH 
 
 ## CONCLUSION
 
-L'audit valide le choix technologique d'Odoo comme étant le plus adapté aux ambitions de Duret Électricité. Cependant, la réussite du projet nécessite une réévaluation réaliste du budget (+50%) et une phase de validation technique rigoureuse avant tout engagement contractuel définitif.
+L'audit valide le choix technologique d'Odoo comme étant le plus adapté aux ambitions de Duret Électricité. La réussite du projet nécessite une étude de faisabilité détaillée pour établir un budget réaliste et une phase de validation technique rigoureuse avant tout engagement contractuel définitif.
 
 **Avis de l'auditeur** : Favorable, sous réserve des validations POC et budgétaires.

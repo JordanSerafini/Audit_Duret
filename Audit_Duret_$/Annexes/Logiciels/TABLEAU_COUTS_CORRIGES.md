@@ -1,14 +1,6 @@
 # TABLEAU DES COÛTS - DURET ÉLECTRICITÉ
 
-⚠️ **Note Méthodologique Importante**
-
-Ce document présentait des estimations budgétaires pour différents scénarios techniques. Ces chiffres étaient des **ordres de grandeur indicatifs** basés sur des tarifs publics éditeurs et des hypothèses non validées.
-
-**Pour un chiffrage précis, il est impératif de :**
-1. Définir le périmètre fonctionnel exact
-2. Obtenir des devis personnalisés auprès des éditeurs/intégrateurs
-3. Réaliser une étude de faisabilité détaillée
-4. Valider les hypothèses d'effectifs et d'utilisation
+**Note** : Un chiffrage détaillé nécessite une étude de faisabilité avec devis personnalisés auprès des éditeurs
 
 ---
 
