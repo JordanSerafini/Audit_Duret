@@ -1,0 +1,676 @@
+# 📊 SYNTHÈSE EXÉCUTIVE - Maintenance Technique & SAV
+
+**Entreprise** : Duret Électricité - Annecy
+**Date audit** : Novembre 2025
+**Auditeur** : Consultant IT & Data BI/ML
+**Service** : Maintenance Technique & SAV
+**Destinataires** : Direction Générale, Direction Technique
+
+---
+
+## 🎯 RÉSUMÉ EN 30 SECONDES
+
+> Duret Électricité gère ~300 contrats maintenance avec un système **hybride papier/digital non intégré** (CERFA papier + Excel + GAO basique + Word). Les techniciens perdent un **temps considérable** en tâches administratives (CERFA, ressaisies, déplacements non optimisés), et des **opportunités commerciales importantes** sont perdues (devis terrain impossibles).
+>
+> **Solution recommandée** : ERP/CRM Terrain (solutions du marché) + App mobile techniciens + Portail client.
+>
+> ⚠️ **Note méthodologique** : Chiffrage détaillé nécessite étude de faisabilité précise
+> **Investissement** : À définir selon solution retenue et périmètre exact
+> **Gains attendus** : Opérationnels et commerciaux significatifs
+> **ROI** : À calculer après baseline measurements terrain
+
+---
+
+## 📋 TABLE DES MATIÈRES
+
+1. [Situation Actuelle](#situation)
+2. [Pain Points Critiques](#pain-points)
+3. [Business Case](#business-case)
+4. [Recommandations](#recommandations)
+5. [Roadmap 18 Mois](#roadmap)
+6. [Risques & Mitigation](#risques)
+
+---
+
+<a name="situation"></a>
+## 1. SITUATION ACTUELLE
+
+### Contexte Opérationnel
+
+**Effectifs** :
+- ~5-7 techniciens SAV/Maintenance
+- Clothilde (Assistante Planning SAV)
+
+**Clients** :
+- ~250-300 contrats maintenance actifs
+- 2-3 interventions/contrat/an
+- ~600 interventions/an totales
+
+**Outils Actuels** (7 non intégrés) :
+1. **GAO** (Gestion Assistée par Ordinateur) - Planning
+2. **App mobile basique** - Consultation plans (lecture seule)
+3. **Excel** - Base clients maintenance (~300 lignes)
+4. **Word** - Contrats entretien (templates)
+5. **CERFA papier** - Bons intervention (100% papier!)
+6. **Téléphone personnel** - Photos avant/après
+7. **Téléphone standard** - Prise RDV
+
+---
+
+### Symptômes Visibles
+
+#### Techniciens (Gaëtan & équipe)
+
+- ❌ **CERFA papier remplis à la main** (temps significatif par intervention, **source d'erreurs**)
+- ❌ **Impossible générer devis terrain** (opportunités perdues, **demande client fréquente**)
+- ❌ **Pas de pointage digital** arrivée/départ (refacturation heures difficile)
+- ❌ **Photos sur téléphone perso** (pas centralisées, traçabilité zéro)
+- ❌ **Déplacements non optimisés** (pas de zoning intelligent)
+- ❌ **App mobile limitée** (pas de mode offline, pas de signature électronique)
+
+**Temps perdu** : Important par technicien (CERFA + admin) - À mesurer précisément via chronométrage terrain
+
+---
+
+#### Back-Office (Clothilde)
+
+- ❌ **Base clients Excel** (~300 lignes, pas synchronisée app mobile)
+- ❌ **Prise RDV 100% téléphone** (temps significatif par RDV)
+- ❌ **Contrats Word manuels** (interventions découlant pas automatiques)
+- ❌ **Ressaisies multiples** (Excel → GAO → Outlook)
+- ❌ **Pas d'alertes automatiques** (fin contrat, interventions dues)
+
+**Temps perdu** : Important (RDV + double saisies) - À mesurer précisément via chronométrage terrain
+
+---
+
+#### Clients
+
+- ❌ **Pas de portail client** (pas de RDV en ligne, pas d'historique)
+- ❌ **Disponibilité 8h-18h uniquement** (vs 24/7)
+- ❌ **Oublis interventions** contractuelles (relances clients fréquentes)
+- ❌ **Pas d'enquête satisfaction** systématique
+- ❌ **Pas de copie rapport** immédiate (promesses non tenues)
+
+**Insatisfaction** : Perte de clients et impact commercial
+
+---
+
+<a name="pain-points"></a>
+## 2. PAIN POINTS CRITIQUES
+
+### Vue Globale des Pain Points
+
+| # | Pain Point | Sévérité | Impact |
+|---|------------|----------|--------|
+| 1 | **CERFA papier chronophage** | 🔥🔥🔥🔥🔥 | Temps important |
+| 2 | **Demande devis terrain impossible** | 🔥🔥🔥🔥 | Opportunités perdues |
+| 3 | **Pointage heures pas digital** | 🔥🔥🔥🔥 | Refacturation difficile |
+| 4 | **Enquête satisfaction non systématisée** | 🔥🔥🔥🔥 | Rétention clients |
+| 5 | **App mobile basique (incomplet)** | 🔥🔥🔥 | Productivité réduite |
+| 6 | **Base données Excel** | 🔥🔥🔥🔥🔥 | Risque erreurs |
+| 7 | **Planning RDV manuel** | 🔥🔥🔥🔥 | Temps perdu |
+| 8 | **Alertes automatiques manquantes** | 🔥🔥🔥🔥 | Oublis contrats |
+| 9 | **Contrat Word manuel** | 🔥🔥🔥 | Temps admin |
+| 10 | **Zoning pas optimisé** | 🔥🔥🔥 | Déplacements inutiles |
+| 11 | **Photos pas intégrées** | 🔥🔥🔥 | Traçabilité faible |
+| 12 | **Certificat papier** | 🔥🔥 | Délai + stock |
+| 13 | **Portail client inexistant** | 🔥🔥🔥 | Disponibilité limitée |
+
+---
+
+### Catégorisation
+
+#### 🔴 Temps Perdu (Inefficacité)
+- CERFA papier chronophage
+- Planning RDV manuel
+- Base Excel non synchronisée
+- Certificat papier
+- App mobile limitée
+
+#### 🟠 Opportunités Perdues (CA)
+- Devis terrain impossibles
+- Refacturation heures difficile
+- Renouvellement contrats non optimisé
+
+#### 🔴 Clients Perdus (Rétention)
+- Enquête satisfaction absente
+- Non-conformité contrats
+- Insatisfaction planning
+- Erreurs base de données
+
+#### 🟡 Optimisation Manquante
+- Zoning tournées non intelligent
+- Photos/traçabilité faible
+
+---
+
+<a name="business-case"></a>
+## 3. BUSINESS CASE
+
+### Coût du Statu Quo
+
+**Impact continu** :
+- Perte de temps et productivité (quantification via baseline terrain requise)
+- Opportunités commerciales manquées (devis terrain impossibles actuellement)
+- Insatisfaction clients (satisfaction à mesurer avant transformation)
+- Perte compétitivité vs concurrents digitaux
+- Stress équipes (turnover techniciens, impact RH à évaluer)
+- Image "pas moderne"
+
+**Approche recommandée** : Mesures baseline terrain avant chiffrage précis des coûts d'inaction
+
+---
+
+### Gain de la Transformation (2 ans)
+
+#### Option A : Solution Complète ERP Terrain (Recommandé)
+
+**Investissement** :
+⚠️ **Chiffrage détaillé nécessite étude de faisabilité précise**
+- ERP/CRM Terrain (solutions du marché) : À chiffrer selon solution retenue
+- App mobile technicien : À chiffrer selon périmètre fonctionnel
+- Portail client : À chiffrer selon niveau personnalisation
+- Intégration GAO actuel : À chiffrer après audit API technique
+- Formation : À chiffrer selon nombre utilisateurs et durée
+- Licences et maintenance : À chiffrer selon éditeur
+
+**Total** : **À définir lors de l'étude de faisabilité détaillée**
+
+**Gains attendus** (à mesurer après baseline terrain) :
+- CERFA digitalisé → Gain de temps substantiel (mesure baseline requise)
+- Devis terrain → Opportunités captées (taux conversion à mesurer)
+- Pointage digital → Refacturation améliorée (impact CA à quantifier)
+- Optimisation tournées → Réduction déplacements (km économisés à mesurer)
+- Planning RDV automatisé → Gain de temps significatif (mesure baseline requise)
+- Enquête satisfaction auto → Rétention clients (NPS à mesurer avant/après)
+- Alertes renouvellement → Amélioration CA (taux renouvellement à mesurer)
+
+**ROI** : À calculer après baseline measurements + validation pilote
+
+---
+
+#### Option B : App Mobile Custom + Portail
+
+**Investissement** :
+⚠️ **Chiffrage détaillé nécessite étude de faisabilité précise**
+- App mobile développement custom : À chiffrer selon périmètre fonctionnel
+- Portail client : À chiffrer selon niveau fonctionnalités
+- Backend API : À chiffrer selon complexité intégrations
+- Formation : À chiffrer selon durée et utilisateurs
+- Maintenance annuelle : À chiffrer (coûts récurrents développement custom)
+
+**Total** : **À définir lors de l'étude de faisabilité**
+
+**Gains attendus** : Gains partiels (pas de CRM complet, fonctionnalités limitées)
+
+**ROI** : À calculer, probablement moins avantageux que l'Option A (coûts maintenance élevés)
+
+---
+
+### Comparaison Options
+
+| Critère | Option A (ERP Terrain) | Option B (Custom) |
+|---------|------------------------|-------------------|
+| Investissement | À chiffrer (étude faisabilité) | À chiffrer (étude faisabilité) |
+| Gains/an | Significatifs (baseline requise) | Partiels (baseline requise) |
+| ROI | À calculer après pilote | À calculer après pilote |
+| Payback | Rapide attendu | Plus long attendu |
+| Risque | Faible (solution éprouvée) | Moyen (développement) |
+| Maintenance | Incluse éditeur | Coûts récurrents élevés |
+| Évolutivité | Forte (écosystème) | Moyenne |
+| Intégrations | Natives (nombreuses) | À développer (coûts) |
+| **Recommandation** | ⭐⭐⭐ **OUI** | ⭐⭐ Possible |
+
+---
+
+## 🧠 PARTIE 3 BIS : OPPORTUNITÉS DATA & IA (NOUVEAU)
+
+L'optimisation des tournées et la maintenance prédictive sont des leviers majeurs identifiés dans [ETUDE_ML_IA.md](../../data-ml/ETUDE_ML_IA.md) :
+
+### 1. Optimisation de Tournées (Routing AI)
+*   **Concept** : Algorithme qui recalcule en temps réel le planning des techniciens selon les urgences et la géolocalisation.
+*   **Gain attendu** : Réduction substantielle des trajets, amélioration du nombre d'interventions par jour (à mesurer via pilote)
+
+### 2. Maintenance Prédictive
+*   **Concept** : Analyse de l'historique des pannes pour suggérer le remplacement préventif de pièces avant la panne critique.
+*   **Gain attendu** : Amélioration satisfaction client, réduction interventions urgentes (impact à mesurer)
+
+---
+
+<a name="recommandations"></a>
+## 4. RECOMMANDATIONS
+
+### 👉 RECOMMANDATION PRINCIPALE : **OPTION A - ERP/CRM Terrain Intégré**
+
+#### Pourquoi une Solution Intégrée ?
+
+✅ **Tout-en-un** : CRM + Planning + App mobile + Portail + Workflows
+✅ **Éprouvé** : Solutions spécialisées SAV/maintenance depuis 10+ ans
+✅ **Risque faible** : Pas de développement custom
+✅ **ROI rapide attendu** : À valider avec chiffres réels
+✅ **Maintenance incluse** : Pas de coût caché
+✅ **Écosystème** : Nombreuses intégrations natives (comptabilité, téléphonie, etc.)
+
+---
+
+#### Solutions du Marché
+
+##### 1. Praxedo (Leader France)
+- **Focus** : SAV/Maintenance multi-secteurs
+- **Points forts** : IA planning, mobile offline, portail client
+- **Tarif** : À demander (dépend nombre licences et options)
+- **Clients** : Enedis, Engie, Bouygues
+
+##### 2. Synchroteam
+- **Focus** : PME SAV électricité/plomberie
+- **Points forts** : Simplicité, rapport qualité/prix
+- **Tarif** : À demander (dépend configuration)
+- **Clients** : 5000+ PME Europe
+
+##### 3. FieldPro / Coresystems
+- **Focus** : Techniciens terrain
+- **Points forts** : Intégration SAGE/ERP
+- **Tarif** : À demander
+
+**Recommandation** : Comparer les 3 solutions lors de l'étude de faisabilité
+
+---
+
+#### Modules Essentiels
+
+**Phase 1 (M1-3) - Quick Wins**
+- ✅ Setup ERP/CRM Terrain
+- ✅ Import base clients Excel → CRM (300 contrats)
+- ✅ App mobile techniciens (iOS/Android)
+- ✅ Rapport intervention digitalisé (vs CERFA papier)
+- ✅ Signature électronique
+- ✅ Pointage arrivée/départ GPS
+
+**Coût Phase 1 : À chiffrer selon solution retenue et périmètre**
+
+---
+
+**Phase 2 (M4-6) - Intégrations**
+- ✅ Module devis terrain (app mobile)
+- ✅ Photos avant/après intégrées (géolocalisées/datées)
+- ✅ Portail client self-service
+  - Prise RDV en ligne 24/7
+  - Historique interventions
+  - Téléchargement documents
+- ✅ Intégration GAO actuel (API)
+- ✅ Workflows automatisés :
+  - Alertes fin contrat
+  - Interventions automatiques (contrats)
+  - Relances satisfaction
+
+**Coût Phase 2 : À chiffrer selon complexité intégrations**
+
+---
+
+**Phase 3 (M7-18) - Excellence**
+- ✅ Zoning intelligent (optimisation tournées)
+- ✅ Enquête satisfaction automatisée (post-intervention)
+- ✅ Analytics avancés (amélioration continue)
+- ✅ Intégration comptabilité SAGE (facturation auto)
+- ✅ Certificats mise en service digitalisés
+
+**Coût Phase 3 : À chiffrer selon périmètre fonctionnel**
+
+---
+
+**Run 18 mois : À chiffrer lors étude faisabilité**
+- Licences ERP : À chiffrer selon éditeur et nombre utilisateurs
+- Formation continue : À chiffrer selon besoins évolutifs
+- Support éditeur : Généralement inclus dans licences
+
+---
+
+#### Architecture Technique Cible
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                  ARCHITECTURE CIBLE (Intégrée)               │
+│                                                              │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │          ERP/CRM TERRAIN (Cloud SaaS)                 │   │
+│  │        (Praxedo / Synchroteam / FieldPro)             │   │
+│  │                                                       │   │
+│  │  • CRM Clients (300 contrats)                        │   │
+│  │  • Planning Intelligent (Zoning IA)                  │   │
+│  │  • Workflows Automatisés (alertes)                   │   │
+│  │  • Portail Client (RDV 24/7)                         │   │
+│  │  • Module Devis                                      │   │
+│  │  • Analytics & KPI                                   │   │
+│  └───────────┬──────────────────────────┬───────────────┘   │
+│              │                          │                    │
+│     ┌────────▼────────┐       ┌────────▼─────────┐          │
+│     │   APP MOBILE    │       │  PORTAIL CLIENT  │          │
+│     │   Techniciens   │       │   Self-Service   │          │
+│     │  (iOS/Android)  │       │   (Web/Mobile)   │          │
+│     │                 │       │                  │          │
+│     │ • Rapport digit │       │ • RDV en ligne   │          │
+│     │ • Devis terrain │       │ • Historique     │          │
+│     │ • Signature élec│       │ • Documents      │          │
+│     │ • Pointage GPS  │       │ • Suivi contrat  │          │
+│     │ • Photos intég. │       └──────────────────┘          │
+│     │ • Mode offline  │                                     │
+│     └─────────────────┘                                     │
+│                                                              │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │              INTÉGRATIONS (API)                       │   │
+│  │                                                       │   │
+│  │  • GAO actuel (consultation)                         │   │
+│  │  • SAGE Comptabilité (facturation auto)              │   │
+│  │  • Téléphonie (CTI - optionnel)                      │   │
+│  │  • SMS (notifications clients)                       │   │
+│  └──────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+<a name="roadmap"></a>
+## 5. ROADMAP 18 MOIS
+
+### Vue d'Ensemble
+
+```
+PHASE 1         PHASE 2         PHASE 3         RUN
+Quick Wins      Intégrations    Excellence
+M1-3            M4-6            M7-18
+Chiffrage       Chiffrage       Chiffrage       Chiffrage
+à définir       à définir       à définir       à définir
+════════════════════════════════════════════════════════════════
+
+│     🚀      │    🔗      │    ⭐     │    ▶️     │
+│ App Mobile  │  Portail   │  Zoning   │  Support  │
+│ Rapport     │  Client    │  Intel.   │  Continu  │
+│ Digital     │  Devis     │  Enquête  │           │
+│ Pointage    │  Workflows │  Analytics│           │
+└─────────────┴────────────┴───────────┴───────────┘
+```
+
+---
+
+### Planning Détaillé
+
+#### 🚀 PHASE 1 : Quick Wins (M1-3)
+
+**Objectif** : Digitaliser rapports interventions, supprimer CERFA papier
+
+**Jalons** :
+
+**M1 (Mois 1) - Setup**
+- J1 : Sélection ERP/CRM Terrain (POC 3 solutions)
+- J7 : Décision Go (Synchroteam ou Praxedo)
+- J10 : Signature contrat + Kick-off
+- J15 : Formation Clothilde (administrateur)
+- J20 : Import base clients Excel → CRM (300 contrats)
+- J30 : Création templates rapports interventions (10 types)
+
+**M2 (Mois 2) - Déploiement App Mobile**
+- J35 : Configuration app mobile (iOS/Android)
+- J40 : Tests app (Gaëtan + 2 techniciens pilotes)
+- J45 : Formation techniciens (groupe 1)
+- J50 : Déploiement pilote (2 techniciens)
+- J55 : Ajustements feedback terrain
+- J60 : Déploiement général (5-7 techniciens)
+
+**M3 (Mois 3) - Consolidation**
+- J65 : CERFA papier **ARRÊTÉ** (100% digital)
+- J70 : Pointage GPS activé (refacturation heures)
+- J75 : Signature électronique clients OK
+- J80 : Photos avant/après intégrées app
+- J85 : Bilan Phase 1 → Mesure gains réels
+- J90 : Go Phase 2
+
+**Livrables Phase 1** :
+- ✅ App mobile techniciens déployée (5-7 licences)
+- ✅ 300 clients migrés Excel → CRM
+- ✅ CERFA papier = 0 (100% rapports digitaux)
+- ✅ Pointage GPS actif
+- ✅ Signature électronique active
+- ✅ Gains immédiats à mesurer
+
+---
+
+#### 🔗 PHASE 2 : Intégrations (M4-6)
+
+**Objectif** : Portail client, devis terrain, workflows automatisés
+
+**M4 (Mois 4) - Module Devis Terrain**
+- J95 : Configuration module devis (tarifs, prestations)
+- J100 : Import catalogue produits/services
+- J105 : Tests génération devis app mobile
+- J110 : Formation techniciens module devis
+- J115 : Activation module devis terrain
+- J120 : 1er devis généré terrain 🎉
+
+**M5 (Mois 5) - Portail Client**
+- J125 : Configuration portail client
+- J130 : Branding (logo, couleurs Duret)
+- J135 : Création comptes clients (100 premiers)
+- J140 : Tests prise RDV en ligne
+- J145 : Email invitation clients (batch 1)
+- J150 : Portail client LIVE → 1er RDV en ligne 🎉
+
+**M6 (Mois 6) - Workflows & Intégrations**
+- J155 : Configuration workflows automatisés :
+  - Alerte fin contrat (J-60, J-30, J-7)
+  - Interventions auto (contrats)
+  - Relance satisfaction J+2
+- J165 : Intégration GAO (API consultation)
+- J170 : Tests e2e workflows
+- J175 : Activation workflows automatisés
+- J180 : Bilan Phase 2 → Mesure gains cumulés
+
+**Livrables Phase 2** :
+- ✅ Module devis terrain actif (50 devis/an)
+- ✅ Portail client LIVE (prise RDV 24/7)
+- ✅ Workflows alertes automatiques
+- ✅ Intégration GAO (consultation)
+- ✅ Gains cumulés à mesurer
+
+---
+
+#### ⭐ PHASE 3 : Excellence (M7-18)
+
+**Objectif** : Zoning IA, enquête satisfaction, analytics
+
+**M7-9 (Mois 7-9) - Zoning Intelligent**
+- M7 : Cartographie clients (géolocalisation 300 adresses)
+- M8 : Configuration algorithme zoning/routing
+- M9 : Tests optimisation tournées (Gaëtan)
+- M9 : Activation zoning intelligent → Optimisation déplacements
+
+**M10-12 (Mois 10-12) - Enquête Satisfaction**
+- M10 : Configuration enquête satisfaction (10 questions)
+- M11 : Tests envoi auto J+2 post-intervention
+- M12 : Activation enquête systématique → Amélioration feedback
+
+**M13-18 (Mois 13-18) - Analytics & Optimisation**
+- M13 : Configuration dashboards Power BI / Analytics ERP
+- M14 : KPI temps réel (5 dashboards)
+- M15 : Alertes churn clients (ML prédictif)
+- M16 : Optimisation planning (IA suggestions)
+- M17 : Intégration SAGE comptabilité (facturation auto)
+- M18 : Certificats mise en service digitalisés
+
+**Livrables Phase 3** :
+- ✅ Zoning intelligent actif (optimisation déplacements)
+- ✅ Enquête satisfaction 100% automatisée
+- ✅ Analytics temps réel (5 dashboards)
+- ✅ Intégration SAGE comptabilité
+- ✅ Gains cumulés finaux à mesurer
+
+---
+
+### Jalons Critiques (10 dates clés)
+
+| Jalon | Date | Description | Criticité |
+|-------|------|-------------|-----------|
+| **J1** | M1 | Sélection ERP/CRM (POC) | 🔴 Critique |
+| **J10** | M1 | Signature contrat + Kick-off | 🔴 Critique |
+| **J30** | M1 | Import 300 clients Excel → CRM | 🔴 Critique |
+| **J60** | M2 | Déploiement app mobile (tous techniciens) | 🔴 Critique |
+| **J65** | M3 | **CERFA papier = 0** (100% digital) | 🔴 Critique |
+| **J120** | M4 | 1er devis généré terrain | 🟠 Important |
+| **J150** | M5 | Portail client LIVE (1er RDV en ligne) | 🔴 Critique |
+| **J175** | M6 | Workflows alertes automatiques actifs | 🟠 Important |
+| **M9** | M9 | Zoning intelligent actif | 🟡 Souhaitable |
+| **M12** | M12 | Enquête satisfaction 100% auto | 🟡 Souhaitable |
+
+---
+
+<a name="risques"></a>
+## 6. RISQUES & MITIGATION
+
+### Risques Identifiés
+
+#### 🔴 RISQUE #1 : Résistance changement techniciens (50% probabilité)
+
+**Symptômes** :
+- "On a toujours fait comme ça avec les CERFA"
+- "L'app va me ralentir"
+- "Trop compliqué"
+
+**Mitigation** :
+✅ **Pilote** : 2 techniciens volontaires d'abord (Gaëtan + 1 junior)
+✅ **Quick Win visible** : Rapport digital rapide (gain temps substantiel vs CERFA papier, mesure baseline requise)
+✅ **Formation** : 2 sessions pratique terrain
+✅ **Support** : Hotline pendant phase déploiement
+✅ **Incentive** : Système de motivation à définir
+
+**Probabilité après mitigation** : 10%
+
+---
+
+#### 🟠 RISQUE #2 : Intégration GAO difficile (30% probabilité)
+
+**Symptômes** :
+- GAO actuel = système propriétaire
+- Pas d'API documentée
+- Données legacy difficiles à extraire
+
+**Mitigation** :
+✅ **Audit technique** : J5 → vérifier API GAO disponible
+✅ **Plan B** : Import ponctuel CSV (pas de sync temps réel)
+✅ **Plan C** : Remplacement GAO par ERP Terrain (coût additionnel)
+
+**Probabilité après mitigation** : 10%
+
+---
+
+#### 🟡 RISQUE #3 : Clients pas adoptent portail (20% probabilité)
+
+**Symptômes** :
+- "Je préfère appeler"
+- Clientèle âgée (50+ ans)
+- Pas à l'aise digital
+
+**Mitigation** :
+✅ **Double canal** : Portail + téléphone (2 ans min)
+✅ **Incitation** : Email "Prenez RDV en 2 clics" + tutoriel vidéo
+✅ **Simplicité** : UX mobile-first, 3 clics max
+✅ **Objectif réaliste** : Adoption progressive sur 2 ans
+
+**Probabilité après mitigation** : 5%
+
+---
+
+#### 🟡 RISQUE #4 : Budget dépassé (15% probabilité)
+
+**Symptômes** :
+- Périmètre creep (demandes additionnelles)
+- Personnalisations complexes
+- Formation supplémentaire
+
+**Mitigation** :
+✅ **Contingence** : Budget sécurité à prévoir
+✅ **Périmètre figé** : Cahier charges validé J1
+✅ **Change control** : Comité validation changements
+
+**Probabilité après mitigation** : 5%
+
+---
+
+#### 🟢 RISQUE #5 : ROI pas atteint (10% probabilité)
+
+**Symptômes** :
+- Gains surestimés
+- Adoption partielle
+
+**Mitigation** :
+✅ **Hypothèses conservatrices** : ROI à calculer avec adoption progressive
+✅ **KPI suivi mensuel** : Dashboard gains réalisés vs prévus
+✅ **Ajustements** : Revue trimestrielle
+
+**Probabilité après mitigation** : 2%
+
+---
+
+### Facteurs de Succès
+
+✅ **Sponsorship Direction** : Soutien visible DG/DT
+✅ **Champion terrain** : Gaëtan ambassadeur interne
+✅ **Quick Wins** : Résultats visibles M3 (CERFA = 0)
+✅ **Formation** : Investissement temps (3 jours/personne)
+✅ **Communication** : Transparence (réunions hebdo M1-3)
+
+---
+
+## 🎯 CONCLUSION & RECOMMANDATIONS
+
+### Synthèse
+
+| Critère | Valeur |
+|---------|--------|
+| **Investissement** | À chiffrer lors de l'étude de faisabilité détaillée |
+| **Gains attendus** | Significatifs (mesure baseline terrain requise) |
+| **ROI** | À calculer après baseline + validation pilote |
+| **Payback** | Rapide attendu (validation après pilote) |
+| **Risque** | Faible (solution éprouvée marché) |
+| **Impact équipes** | Réduction stress, amélioration satisfaction (à mesurer) |
+| **Impact clients** | Amélioration satisfaction et rétention (NPS à mesurer) |
+
+---
+
+### Décision Recommandée
+
+> **Lancer l'étude de faisabilité détaillée**
+>
+> Quick Wins visibles en 3 mois (Phase 1) :
+> - CERFA papier = 0
+> - App mobile techniciens
+> - Pointage GPS actif
+> - Gains immédiats mesurables
+>
+> **Puis Phase 2+3 si Phase 1 succès**
+
+---
+
+### Prochaines Étapes (30 jours)
+
+**Semaine 1** :
+- ✅ Présentation synthèse → DG/DT
+- ✅ Lancement étude de faisabilité détaillée
+- ✅ Constitution comité projet (DT + Gaëtan + Clothilde + IT)
+
+**Semaine 2-3** :
+- ✅ POC 3 solutions (Praxedo, Synchroteam, FieldPro)
+- ✅ Démonstrations (2h chacune)
+- ✅ Gaëtan + Clothilde testent apps mobiles
+
+**Semaine 4** :
+- ✅ Décision finale solution
+- ✅ Signature contrat
+- ✅ Kick-off projet J1
+
+---
+
+**📧 Contact** : Maintenance Technique - Duret Électricité
+**🎯 Objectif** : Digitaliser SAV end-to-end, supprimer CERFA papier
+**💰 Enjeu** : Gains opérationnels et commerciaux significatifs + amélioration satisfaction client
+**⏱️ Urgence** : Lancement étude de faisabilité recommandé sous 30 jours
+**⚠️ Note** : Chiffrage précis requis via étude de faisabilité détaillée
