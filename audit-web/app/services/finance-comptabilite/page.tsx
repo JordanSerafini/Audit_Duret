@@ -4,6 +4,7 @@ import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
 import MarkdownViewer from '@/components/MarkdownViewer';
+import { getServiceMarkdownFiles } from '@/config/markdownFiles';
 
 export const metadata = {
   title: 'Finance & Comptabilité - Audit IT Duret',
@@ -11,7 +12,7 @@ export const metadata = {
 };
 
 export default function FinanceComptabilitePage() {
-  const markdownFiles = getServiceMarkdownFiles(\'finance-comptabilite');
+  const markdownFiles = getServiceMarkdownFiles('finance-comptabilite');
 
   const stats = [
     { label: "Délai Rentabilité", value: "1-2 mois", subtext: "Trop tard pour réagir", icon: Clock, color: "bg-red-500" },

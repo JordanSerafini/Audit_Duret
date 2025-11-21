@@ -4,9 +4,10 @@ import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
 import MarkdownViewer from '@/components/MarkdownViewer';
+import { getServiceMarkdownFiles } from '@/config/markdownFiles';
 
 export default function DirectionAffairesPage() {
-  const markdownFiles = getServiceMarkdownFiles(\'direction-affaires');
+  const markdownFiles = getServiceMarkdownFiles('direction-affaires');
 
   const personas = [
     {

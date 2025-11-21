@@ -4,9 +4,10 @@ import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
 import MarkdownViewer from '@/components/MarkdownViewer';
+import { getServiceMarkdownFiles } from '@/config/markdownFiles';
 
 export default function ChantiersPage() {
-  const markdownFiles = getServiceMarkdownFiles(\'chantiers');
+  const markdownFiles = getServiceMarkdownFiles('chantiers');
 
   const personas = [
     {

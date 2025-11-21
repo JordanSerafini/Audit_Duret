@@ -4,6 +4,7 @@ import PDFDownloadButton from '@/components/PDFDownloadButton';
 import UMLDownloadButton from '@/components/UMLDownloadButton';
 import CollapsibleUMLSection from '@/components/CollapsibleUMLSection';
 import MarkdownViewer from '@/components/MarkdownViewer';
+import { getServiceMarkdownFiles } from '@/config/markdownFiles';
 
 export const metadata = {
   title: 'Service Client - Audit IT Duret',
@@ -11,7 +12,7 @@ export const metadata = {
 };
 
 export default function ServiceClientPage() {
-  const markdownFiles = getServiceMarkdownFiles(\'service-client');
+  const markdownFiles = getServiceMarkdownFiles('service-client');
 
   const personas = [
     {
