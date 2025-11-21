@@ -49,16 +49,16 @@ La Gestion Opérationnelle de Duret Électricité repose sur **Excel et processu
 
 **Sylvie** (Contrôleuse Gestion, 52 ans) :
 - Surcharge fin de mois (burn-out potentiel)
-- Génération KPI mensuels très longue (majoritairement saisies/vérifications manuelles)
+- Génération KPI mensuels très longue (processus majoritairement manuel)
 - Données décalées → Direction pilote sans vision temps réel
 
 **Thomas** (Responsable BE Transverse, 38 ans) :
-- Surcharge chronique : Demandes dépassent capacité d'équipe, heures non traitées
+- Surcharge chronique : Demandes dépassent capacité d'équipe
 - Priorisation subjective : Conflits interpersonnels, manque d'équité
-- Heures supplémentaires quotidiennes : Épuisement
+- Heures supplémentaires fréquentes : Épuisement
 
 **Isabelle** (Responsable Stocks, 45 ans) :
-- Beaucoup de temps sur comptage manuel (vs scan RFID potentiel)
+- Temps important sur comptage manuel
 - Valorisation stocks chaotique : Même produit à 2 prix différents
 - Inventaires mensuels très pénibles et longs
 
@@ -118,7 +118,7 @@ La Gestion Opérationnelle de Duret Électricité repose sur **Excel et processu
 ### Fonctionnalités Clés
 
 **1. Dashboards KPI Temps Réel (vs Excel manuel)**
-- Sylvie : KPI mensuels générés **automatiquement** en quelques heures (vs plusieurs jours)
+- Sylvie : KPI mensuels générés **automatiquement** (réduction drastique du temps)
 - Direction : Accès **temps réel** (vs données décalées)
 - Alertes : Dépassements budgets, retards, marges négatives
 - Analyses consolidées automatiques
@@ -132,7 +132,7 @@ La Gestion Opérationnelle de Duret Électricité repose sur **Excel et processu
 **3. RFID/QR Code Stocks (vs comptage manuel)**
 - Réception : Scan BL rapide vs comptage manuel long et pénible
 - Valorisation : Politique unique cohérente (CUMP) vs incohérences actuelles
-- Inventaires : RFID portique rapide vs manuel très long
+- Inventaires : RFID portique (réduction drastique du temps)
 - Visibilité : RA consulte stock avant commander du neuf
 
 **4. RBAC Transparence (vs silos)**
@@ -142,7 +142,7 @@ La Gestion Opérationnelle de Duret Électricité repose sur **Excel et processu
 - Audit trail : Qui a fait quoi, quand
 
 **5. ERP Moderne Cloud (vs MDE obsolète)**
-- Rapide : Chargement écrans <2 sec (vs 10-30 sec MDE)
+- Rapide : Amélioration majeure des temps de chargement
 - Distance : Cloud accessible partout (vs MDE distant inutilisable)
 - Mobile : App iOS+Android (vs aucune mobilité)
 - Fiable : Haute disponibilité (vs plantages fréquents)
@@ -174,7 +174,7 @@ La centralisation des données ouvre la voie à des analyses avancées décrites
    - POC RFID dépôt Annecy (M1-2)
    - Déploiement Annecy + Albertville (M3-4)
    - Formation magasiniers
-   - **Gain** : Réduction drastique temps réception, valorisation cohérente
+   - **Gain** : Réduction temps réception, valorisation cohérente
 
 2. ✅ **Dashboards BI KPI** (M1-5)
    - Audit données SAGE/MDE (M1)
@@ -183,10 +183,10 @@ La centralisation des données ouvre la voie à des analyses avancées décrites
      - KPI Responsables Affaires (leurs affaires)
      - KPI Chefs chantier (RBAC : leur chantier)
    - Formation utilisateurs (M5)
-   - **Gain** : Réduction drastique temps KPI Sylvie, temps réel vs décalé
+   - **Gain** : Réduction temps KPI Sylvie, accès temps réel
 
 3. ✅ **Système tickets BE** (M2-6)
-   - Benchmark solutions (Jira, Asana, Linear) (M2)
+   - Benchmark solutions (M2)
    - Config + workflows (M3-4)
    - Algorithme priorisation (critères pondérés) (M4)
    - Tests pilote (M5)
@@ -253,23 +253,23 @@ La centralisation des données ouvre la voie à des analyses avancées décrites
 
 | KPI | Avant | Cible Après |
 |-----|-------|-------------|
-| **Temps génération KPI mensuels** | Plusieurs jours | Quelques heures |
+| **Temps génération KPI mensuels** | Long (à mesurer) | Réduction drastique |
 | **Délai remontée info** | Données décalées | Temps réel |
-| **Temps réception stocks** | Comptage manuel long | Scan rapide |
+| **Temps réception stocks** | Comptage manuel long | Réduction majeure |
 | **Productivité BE** | Surcharge chronique | Capacité respectée |
-| **Erreurs saisie manuelle** | Fréquentes | Quasi nulles |
-| **Nombre Excel opérationnels** | 30+ fichiers | 0 (ERP centralisé) |
+| **Erreurs saisie manuelle** | Fréquentes | Minimisation |
+| **Nombre Excel opérationnels** | 30+ fichiers | Centralisation ERP |
 
 ### Indicateurs Business
 
 | KPI | Avant | Cible Après |
 |-----|-------|-------------|
-| **Taux dépassements budgets** | Élevé | Réduit significativement |
+| **Taux dépassements budgets** | Élevé | Réduction ciblée |
 | **Délai détection anomalies** | Très tardif | Temps réel |
-| **Satisfaction interne** | Faible (burn-out) | Élevée |
-| **Turnover chefs chantier** | Problématique | Réduit |
-| **Heures sup Sylvie (fin mois)** | Fréquentes | Quasi nulles |
-| **Surcharge BE (demandes non traitées)** | Importante | Supprimée |
+| **Satisfaction interne** | Faible (burn-out) | Amélioration notable |
+| **Turnover chefs chantier** | Problématique | Réduction visée |
+| **Heures sup Sylvie (fin mois)** | Fréquentes | Minimisation |
+| **Surcharge BE** | Importante | Suppression ciblée |
 
 ---
 

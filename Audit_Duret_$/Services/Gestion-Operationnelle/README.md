@@ -12,9 +12,9 @@ La **Gestion Opérationnelle** chez Duret Électricité est actuellement basée 
 
 ### Personas Impactés
 
-- **Sylvie** (Contrôleuse de Gestion, 52 ans) : 24h/mois génération KPI manuels
-- **Thomas** (Responsable BE Transverse, 38 ans) : Surcharge chronique (220h demandes vs 160h capacité)
-- **Isabelle** (Responsable Stocks, 45 ans) : 6h/j comptage manuel stocks
+- **Sylvie** (Contrôleuse de Gestion, 52 ans) : Temps important génération KPI manuels
+- **Thomas** (Responsable BE Transverse, 38 ans) : Surcharge chronique (demandes dépassent capacité)
+- **Isabelle** (Responsable Stocks, 45 ans) : Temps significatif comptage manuel stocks
 
 ### Opportunités Identifiées
 
@@ -130,11 +130,11 @@ Utilisateurs (Web + Mobile)
 
 ### Fonctionnalités Clés
 
-**1. Dashboards KPI Temps Réel** (vs Excel manuel 24h)
-- Génération automatique : 2h vs 24h (-92%)
-- Temps réel : J+0 vs J+15
+**1. Dashboards KPI Temps Réel** (vs Excel manuel)
+- Génération automatique : Réduction drastique du temps
+- Temps réel : Données actualisées vs décalage actuel
 - 4 dashboards RBAC : Direction, Sylvie, RA, Chefs
-- Analytics prédictifs : Projection CA 3 mois, anomalies budgets
+- Analytics prédictifs : Projection CA, anomalies budgets
 
 **2. Système Tickets BE** (vs priorisation subjective chaos)
 - Priorisation structurée : Critères objectifs (deadline, CA, ancienneté)
@@ -142,11 +142,11 @@ Utilisateurs (Web + Mobile)
 - Productivité améliorée
 - Équité : Réduction conflits
 
-**3. RFID/QR Code Stocks** (vs comptage manuel 6h/j)
-- Réception : 45 sec vs 25 min (-96%)
+**3. RFID/QR Code Stocks** (vs comptage manuel)
+- Réception : Réduction drastique du temps
 - Erreurs réduites
 - Valorisation : CUMP cohérente (1 prix vs 2 prix incohérents)
-- Inventaires : 2h vs 2j (-92%)
+- Inventaires : Réduction significative du temps
 
 **4. RBAC Transparence** (vs silos hiérarchiques)
 - Chef chantier voit SON budget, consommé, reste à faire ✅
@@ -154,9 +154,9 @@ Utilisateurs (Web + Mobile)
 - Direction voit TOUT consolidé ✅
 - Audit trail : Qui a fait quoi, quand
 
-**5. ERP Odoo Moderne** (vs MDE obsolète)
-- Rapide : <2 sec vs 30 sec (-93%)
-- Fiable : 99,9% uptime vs plantages 2-3×/sem
+**5. ERP Moderne** (vs MDE obsolète)
+- Rapide : Amélioration majeure des temps de chargement
+- Fiable : Haute disponibilité vs plantages fréquents
 - Mobile : App iOS+Android vs aucune mobilité
 - Cloud : Accessible partout vs distance inutilisable
 
@@ -201,25 +201,25 @@ Utilisateurs (Web + Mobile)
 
 ### KPIs Opérationnels
 
-| KPI | Avant | Après | Gain |
-|-----|-------|-------|------|
-| **Temps génération KPI mensuels** | 24h | 2h | -92% |
-| **Délai remontée info** | J+15 | Temps réel | Immédiat |
-| **Temps réception stocks** | 6h/j | 45 min/j | -88% |
-| **Productivité BE** | 43% | Objectif 78% | +81% |
-| **Erreurs saisie manuelle** | 15% | Objectif <1% | -93% |
-| **Nombre Excel opérationnels** | 30+ | 0 | -100% |
+| KPI | Avant | Après | Amélioration Visée |
+|-----|-------|-------|-------------------|
+| **Temps génération KPI mensuels** | Long (à mesurer) | Réduit drastiquement | Substantielle |
+| **Délai remontée info** | Décalé | Temps réel | Immédiate |
+| **Temps réception stocks** | Significatif | Réduit drastiquement | Majeure |
+| **Productivité BE** | Surcharge | Amélioration ciblée | Notable |
+| **Erreurs saisie manuelle** | Fréquentes | Minimisées | Drastique |
+| **Nombre Excel opérationnels** | 30+ | Centralisation ERP | Complète |
 
 ### KPIs Business
 
-| KPI | Avant | Après | Impact |
-|-----|-------|-------|--------|
-| **Taux dépassements budgets** | 25% | Objectif 10% | -15 points |
-| **Délai détection anomalies** | J+30 | J+0 | Temps réel |
-| **NPS interne** | -10 | Objectif +40 | +50 points |
-| **Turnover chefs chantier** | 18% | Objectif 10% | -8 points |
-| **Heures sup Sylvie (fin mois)** | 20h | 0h | -100% |
-| **Surcharge BE (h non traitées/sem)** | 60h | 0h | -100% |
+| KPI | Avant | Après | Impact Visé |
+|-----|-------|-------|-------------|
+| **Taux dépassements budgets** | Élevé | Réduction ciblée | Significatif |
+| **Délai détection anomalies** | Tardif | Temps réel | Immédiat |
+| **Satisfaction interne** | Faible | Amélioration ciblée | Notable |
+| **Turnover chefs chantier** | Problématique | Réduction visée | Importante |
+| **Heures sup Sylvie (fin mois)** | Fréquentes | Minimisation | Substantielle |
+| **Surcharge BE** | Importante | Suppression ciblée | Majeure |
 
 ---
 
@@ -227,75 +227,71 @@ Utilisateurs (Web + Mobile)
 
 ### Backend
 
-- **Odoo ERP v17** Community (open-source, 0€ licences)
+- **ERP moderne** (solution à définir après étude de faisabilité)
   - Modules : Sales, Purchase, Inventory, Accounting, Project, HR
   - Custom apps : BE Tickets, RBAC Chantiers, RFID Integration
-- **PostgreSQL 15** Managed (Azure)
-- **Python** backend (Odoo framework + custom modules)
+- **Base de données** relationnelle managed
+- **Backend** moderne avec APIs ouvertes
 
 ### Frontend
 
-- **Odoo Web** (responsive, PWA)
-- **Odoo Mobile App** (iOS + Android natif, offline mode)
-- **Power BI Service** (Azure, dashboards RBAC)
+- **Web responsive** (PWA)
+- **Mobile App** (iOS + Android natif, offline mode)
+- **BI Service** (dashboards RBAC)
 
 ### Data & ML
 
-- **Azure SQL Database** (Data Warehouse, star schema)
-- **Azure Blob Storage** (Data Lake : Bronze/Silver/Gold)
-- **Azure Data Factory** (ETL pipelines quotidiens)
-- **Azure ML Studio** (entraînement modèles)
-- **Azure Functions** (ML inference serverless)
-- **Python** ML stack : PyTorch (LSTM), scikit-learn (Isolation Forest), Prophet (Facebook)
+- **Data Warehouse** (modèle dimensionnel)
+- **Data Lake** (stockage hiérarchisé)
+- **ETL pipelines** (automatisation quotidienne)
+- **ML Studio** (entraînement modèles)
+- **Inference** serverless
+- **Stack ML** moderne : Deep Learning, Machine Learning classique, Time Series
 
 ### RFID
 
-- **Zebra FX9600** portiques RFID (2× dépôts)
-- **Zebra MC3300** douchettes mobiles (4×)
-- **Tags RFID UHF Gen2** (5 000 tags)
-- **Lireco** API REST (intégration Odoo)
+- **Portiques RFID** (dépôts principaux)
+- **Douchettes mobiles** RFID
+- **Tags RFID** UHF
+- **API REST** intégration ERP
 
 ### Ticketing
 
-- **Linear** (système tickets BE, 8$/user/mois)
-- Algorithme priorisation custom (Python webhook)
+- **Système tickets** BE (solution à définir)
+- Algorithme priorisation personnalisé
 
 ### Infrastructure
 
-- **Azure Cloud EU** (France Paris + Marseille)
-- **VM Standard_D4s_v3** (4 vCPU, 16 GB RAM) pour Odoo
-- **TLS 1.3** transit, **AES-256** repos
-- **OAuth 2.0 + JWT**, MFA disponible
-- **RGPD compliant** (hébergement UE, DPA Microsoft)
+- **Cloud EU** (RGPD compliant)
+- **VM dimensionnée** selon besoins
+- **Sécurité** : Chiffrement transit et repos
+- **Authentification** moderne : OAuth 2.0 + MFA
+- **Conformité RGPD** (hébergement UE)
 
 ---
 
-## 📊 MODÈLES ML PROPOSÉS
+## 📊 OPPORTUNITÉS ML PROPOSÉES
 
-### Modèle 1 : Projection CA 3 Mois
+### Opportunité 1 : Projection CA
 
-- **Algorithme** : Prophet (Facebook) + LSTM (PyTorch)
-- **Objectif** : Prédire CA mensuel M+1, M+2, M+3
-- **Précision cible** : >85% (MAPE <15%)
-- **Entraînement** : Mensuel (1er du mois)
-- **Inférence** : Quotidien (refresh prédictions)
+- **Approche** : Time series forecasting + Deep Learning
+- **Objectif** : Prédire CA mensuel à court/moyen terme
+- **Précision** : À valider après POC
+- **Fréquence** : Mise à jour régulière
 
-### Modèle 2 : Détection Anomalies Budgets
+### Opportunité 2 : Détection Anomalies Budgets
 
-- **Algorithme** : Isolation Forest (scikit-learn)
-- **Objectif** : Détecter affaires risque dépassement budget
-- **Features** : Taux consommation %, vitesse consommation, écart heures, achats hors catalogue
-- **Seuil** : Score <0.5 = alerte
-- **Entraînement** : Hebdomadaire (dimanche)
-- **Inférence** : Quotidien (toutes affaires en cours)
+- **Approche** : Algorithmes de détection d'anomalies
+- **Objectif** : Identifier affaires à risque de dépassement
+- **Features** : Taux consommation, vitesse, écarts
+- **Fréquence** : Analyse régulière
 
-### Modèle 3 : Optimisation Planning
+### Opportunité 3 : Optimisation Planning
 
-- **Algorithme** : Glouton (OR-Tools Google)
-- **Objectif** : Suggérer réallocation chefs chantier pour maximiser CA
-- **Contraintes** : 1 chef = max 3 affaires, compétences matching
-- **Exécution** : Hebdomadaire (lundi matin)
-- **Output** : Suggestions réallocation (gain CA estimé)
+- **Approche** : Optimisation combinatoire
+- **Objectif** : Suggérer allocations optimales ressources
+- **Contraintes** : Capacités, compétences, priorités
+- **Fréquence** : Exécution périodique
 
 ---
 
