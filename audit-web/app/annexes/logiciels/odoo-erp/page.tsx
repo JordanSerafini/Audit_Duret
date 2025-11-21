@@ -140,6 +140,97 @@ export default function OdooERPPage() {
         </div>
       </div>
 
+      {/* Galerie d'images */}
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6">Interface Odoo ERP</h2>
+
+        {/* Dashboard principal */}
+        <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-4">
+            <h3 className="text-white font-bold text-xl">📊 Dashboard Principal</h3>
+          </div>
+          <img
+            src="https://www.odoo.com/web/image/3967818/odoo_dashboard.png"
+            alt="Dashboard Odoo"
+            className="w-full h-auto"
+          />
+          <div className="p-4 bg-slate-50">
+            <p className="text-slate-700 text-sm">
+              Tableau de bord personnalisable avec indicateurs clés en temps réel
+            </p>
+          </div>
+        </div>
+
+        {/* Field Service Mobile */}
+        <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+          <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4">
+            <h3 className="text-white font-bold text-xl">📱 Field Service Mobile</h3>
+          </div>
+          <img
+            src="https://www.odoo.com/documentation/18.0/_images/mobile-app-scan.png"
+            alt="Odoo Field Service Mobile"
+            className="w-full h-auto"
+          />
+          <div className="p-4 bg-slate-50">
+            <p className="text-slate-700 text-sm">
+              Application mobile pour les techniciens terrain avec géolocalisation et mode hors-ligne
+            </p>
+          </div>
+        </div>
+
+        {/* CRM & Pipeline */}
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3">
+              <h3 className="text-white font-bold text-lg">💼 CRM & Pipeline</h3>
+            </div>
+            <img
+              src="https://www.odoo.com/web/image/3938622/crm_pipeline.png"
+              alt="CRM Odoo"
+              className="w-full h-auto"
+            />
+            <div className="p-3 bg-slate-50">
+              <p className="text-slate-700 text-xs">
+                Gestion des opportunités en vue kanban
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <div className="bg-gradient-to-r from-orange-600 to-red-600 p-3">
+              <h3 className="text-white font-bold text-lg">📦 Gestion Stocks</h3>
+            </div>
+            <img
+              src="https://www.odoo.com/web/image/3938690/inventory_overview.png"
+              alt="Gestion stocks Odoo"
+              className="w-full h-auto"
+            />
+            <div className="p-3 bg-slate-50">
+              <p className="text-slate-700 text-xs">
+                Suivi des stocks en temps réel avec traçabilité complète
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Planning & Gantt */}
+        <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4">
+            <h3 className="text-white font-bold text-xl">📅 Planning Collaboratif</h3>
+          </div>
+          <img
+            src="https://www.odoo.com/web/image/3967810/planning_gantt.png"
+            alt="Planning Odoo"
+            className="w-full h-auto"
+          />
+          <div className="p-4 bg-slate-50">
+            <p className="text-slate-700 text-sm">
+              Vue Gantt pour planifier interventions et projets avec drag & drop
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Nouveautés 2025 */}
       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-8 mb-8">
         <div className="flex items-center gap-3 mb-6">
