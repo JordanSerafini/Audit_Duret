@@ -71,34 +71,53 @@ export default function ChantiersPage() {
 
   const comparisonData = [
     {
+      feature: "Outils Terrain",
+      before: "AUCUN outil métier (téléphone perso)",
+      after: "App Mobile Professionnelle iOS+Android",
+      gain: "Autonomie complète",
+      icon: Smartphone
+    },
+    {
       feature: "Remontée Info",
-      before: "WhatsApp, Oral, Post-its",
-      after: "App Mobile Structurée",
+      before: "WhatsApp/Oral (50% infos perdues)",
+      after: "Messagerie Structurée + Workflow",
+      gain: "Traçabilité 100%",
       icon: MessageSquare
     },
     {
       feature: "Gestion Photos",
-      before: "Dispersées (Tél perso), Perte",
-      after: "Centralisées, Géolocalisées, Taguées",
+      before: "Dispersées téléphones (risque perte MAJEUR)",
+      after: "Centralisées Cloud, Géolocalisées, Auto-taguées",
+      gain: "Sécurité + Retrouvabilité",
       icon: Camera
     },
     {
-      feature: "Rapports",
-      before: "Manuels, Ressaisie soir (2h)",
-      after: "Automatisés, Dictée vocale (10min)",
+      feature: "Rapports Intervention",
+      before: "Manuels Word/Excel (2h/rapport = 4800h/an)",
+      after: "Templates + Dictée Vocale + PDF Auto (10min)",
+      gain: "Réduction 90% temps",
       icon: FileText
     },
     {
-      feature: "Connexion",
-      before: "Dépendance réseau mobile",
-      after: "Mode Offline (Sous-sol ok)",
-      icon: WifiOff
+      feature: "Vue 360° Chantiers",
+      before: "Infos dispersées (45 min/question basique)",
+      after: "Dashboard Temps Réel Consolidé",
+      gain: "Visibilité immédiate",
+      icon: LayoutDashboard
     },
     {
-      feature: "Traçabilité",
-      before: "Inexistante (Litiges fréquents)",
-      after: "Totale (Horodatage, GPS)",
-      icon: Database
+      feature: "Workflow Incidents",
+      before: "Demandes chaotiques tous canaux",
+      after: "Formulaires Structurés + Routing Auto + SLA",
+      gain: "Priorisation équitable",
+      icon: Target
+    },
+    {
+      feature: "Mode Offline",
+      before: "Dépendance réseau (chantiers sous-sols KO)",
+      after: "Fonctionnement 100% Offline + Sync Auto",
+      gain: "Continuité service",
+      icon: WifiOff
     }
   ];
 
@@ -123,20 +142,20 @@ export default function ChantiersPage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <span className="block text-3xl font-bold">100+</span>
-              <span className="text-sm text-orange-200 uppercase tracking-wider">Chantiers Actifs</span>
+              <span className="block text-3xl font-bold text-red-300">720K€</span>
+              <span className="text-sm text-orange-200 uppercase tracking-wider">Pertes Annuelles</span>
             </div>
             <div className="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <span className="block text-3xl font-bold">15</span>
-              <span className="text-sm text-orange-200 uppercase tracking-wider">Chefs Chantier</span>
+              <span className="block text-3xl font-bold text-red-300">50%</span>
+              <span className="text-sm text-orange-200 uppercase tracking-wider">Infos Perdues</span>
             </div>
             <div className="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <span className="block text-3xl font-bold">500+</span>
-              <span className="text-sm text-orange-200 uppercase tracking-wider">Photos / Jour</span>
+              <span className="block text-3xl font-bold text-red-300">4800h</span>
+              <span className="text-sm text-orange-200 uppercase tracking-wider">Rapports Manuels/an</span>
             </div>
             <div className="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
-              <span className="block text-3xl font-bold">-90%</span>
-              <span className="text-sm text-orange-200 uppercase tracking-wider">Temps Admin</span>
+              <span className="block text-3xl font-bold text-green-300">-90%</span>
+              <span className="text-sm text-orange-200 uppercase tracking-wider">Temps Cible</span>
             </div>
           </div>
           <PDFDownloadButton 
@@ -233,30 +252,34 @@ export default function ChantiersPage() {
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
           <TrendingUp className="w-8 h-8 text-blue-600" />
-          Transformation : Du Chaos au Structuré
+          Transformation : Du Chaos Informel au Digital Structuré (7 Processus Clés)
         </h2>
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
           <div className="grid grid-cols-12 bg-slate-50 border-b border-slate-200 p-4 font-bold text-slate-700 text-sm uppercase tracking-wider">
-            <div className="col-span-4">Enjeu</div>
-            <div className="col-span-4 text-red-600">Avant (Actuel)</div>
-            <div className="col-span-4 text-green-600">Après (Cible)</div>
+            <div className="col-span-3">Processus</div>
+            <div className="col-span-4 text-red-600">Situation Actuelle (Manuel)</div>
+            <div className="col-span-4 text-green-600">Situation Cible (Digital)</div>
+            <div className="col-span-1 text-blue-600">Gain</div>
           </div>
           <div className="divide-y divide-slate-100">
             {comparisonData.map((item, index) => (
-              <div key={index} className="grid grid-cols-12 p-6 hover:bg-slate-50 transition-colors items-center">
-                <div className="col-span-4 flex items-center gap-3">
-                  <div className="p-2 bg-slate-100 rounded-lg text-slate-600">
+              <div key={index} className="grid grid-cols-12 p-4 hover:bg-slate-50 transition-colors items-center">
+                <div className="col-span-3 flex items-center gap-3">
+                  <div className="p-2 bg-slate-100 rounded-lg text-slate-600 flex-shrink-0">
                     <item.icon className="w-5 h-5" />
                   </div>
-                  <span className="font-semibold text-slate-900">{item.feature}</span>
+                  <span className="font-semibold text-slate-900 text-sm">{item.feature}</span>
                 </div>
-                <div className="col-span-4 text-slate-600 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0"></span>
-                  {item.before}
+                <div className="col-span-4 text-slate-600 text-sm flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  <span>{item.before}</span>
                 </div>
-                <div className="col-span-4 text-slate-900 font-medium flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
-                  {item.after}
+                <div className="col-span-4 text-slate-900 font-medium text-sm flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  <span>{item.after}</span>
+                </div>
+                <div className="col-span-1 text-blue-700 font-bold text-xs bg-blue-50 rounded-lg px-2 py-1">
+                  {item.gain}
                 </div>
               </div>
             ))}
