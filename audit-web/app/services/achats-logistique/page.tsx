@@ -235,28 +235,6 @@ export default function AchatsLogistiquePage() {
       {/* Diagrammes UML */}
       <CollapsibleUMLSection serviceKey="achats-logistique" serviceLabel="Achats & Logistique" />
 
-      {/* CTA Final */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center mb-12 shadow-xl">
-        <h3 className="text-2xl font-bold mb-3">Prêt pour la Transformation Digitale ?</h3>
-        <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-          Passez de 50% à &gt;95% de commandes complètes. Réduisez vos délais de 3 jours à &lt;2 heures.
-          Automatisez 80% de vos processus achats.
-        </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <PDFDownloadButton
-            pdfPath="/pdfs/service-achats-logistique.pdf"
-            fileName="Service_Achats_Logistique.pdf"
-          />
-          <UMLDownloadButton serviceKey="achats-logistique" />
-          <Link
-            href="/services"
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
-          >
-            Voir tous les services
-          </Link>
-        </div>
-      </div>
-
       {/* Footer navigation */}
       <div className="flex justify-between items-center border-t border-slate-300 pt-6">
         <Link href="/services/service-client" className="text-slate-600 hover:text-blue-600 font-semibold transition-colors">
