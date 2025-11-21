@@ -91,10 +91,16 @@ export default function ServiceClientPage() {
             </div>
           </div>
 
-          <PDFDownloadButton
-            pdfPath="/pdfs/service-service-client.pdf"
-            fileName="Service_Client.pdf"
-          />
+          <div className="flex gap-4">
+            <PDFDownloadButton
+              pdfPath="/pdfs/service-service-client.pdf"
+              fileName="Service_Client.pdf"
+            />
+            <UMLDownloadButton
+              serviceName="Service-Client"
+              serviceLabel="Service Client"
+            />
+          </div>
         </div>
       </div>
 
