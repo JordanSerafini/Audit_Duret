@@ -8,14 +8,18 @@ export default function ChantiersPage() {
       name: "Marc",
       role: "Chef de Chantier",
       age: "42 ans",
+      experience: "15 ans BTP, 8 ans Duret",
+      chantiers: "5-8 chantiers actifs",
       situation: "Terrain 100%",
       painPoints: [
-        "Perd 1h/jour à chercher des infos sur WhatsApp",
-        "Doit refaire ses rapports le soir (2h)",
-        "Photos mélangées dans son téléphone perso",
-        "Frustré par l'administratif papier"
+        "Aucun outil métier: dépendance 100% téléphone personnel",
+        "Photos dispersées: risque MAJEUR perte (téléphone volé 2024 = pertes)",
+        "Remontée info WhatsApp: 50% infos perdues, aucune traçabilité",
+        "Rapports manuels: 2h/rapport (200 rapports/mois = 4800h/an)",
+        "Commandes non tracées: 20% mal imputées, oublis refacturation"
       ],
-      quote: "Je suis là pour construire, pas pour faire de la paperasse le soir.",
+      impact: "~200 000€/an perdus (temps + litiges + oublis)",
+      quote: "Mon téléphone est bourré de photos. Si je le perds, c'est toute la mémoire du chantier qui part.",
       icon: Users,
       color: "text-orange-600",
       bg: "bg-orange-50",
@@ -23,16 +27,20 @@ export default function ChantiersPage() {
     },
     {
       name: "Julien",
-      role: "Responsable Affaire",
+      role: "Responsable d'Affaire",
       age: "38 ans",
+      experience: "8 ans au poste",
+      chantiers: "15-20 chantiers actifs",
       situation: "Bureau / Déplacements",
       painPoints: [
-        "Pas de visibilité temps réel sur l'avancement",
-        "Découvre les problèmes trop tard",
-        "Doit appeler 10 fois pour une info simple",
-        "Difficulté à justifier les travaux supp."
+        "Pas de vue 360°: 45 min pour répondre question basique sur avancement",
+        "Remontées informelles: WhatsApp/appels = 0% traçabilité",
+        "Doit appeler chefs multiples fois: 4-7h/jour perdues compilation infos",
+        "Historique inaccessible: données dispersées (serveur, emails, ERP, Excel)",
+        "Découvre problèmes trop tard: litiges et reprises travaux"
       ],
-      quote: "Je pilote à l'aveugle entre deux visites de chantier.",
+      impact: "~400 000€/an perdus (temps + litiges + reprises)",
+      quote: "Je gère 20 chantiers. Quand on me demande l'état d'avancement, je dois appeler le chef, regarder dans 3 logiciels différents, compiler tout ça.",
       icon: LayoutDashboard,
       color: "text-blue-600",
       bg: "bg-blue-50",
@@ -42,14 +50,18 @@ export default function ChantiersPage() {
       name: "Sophie",
       role: "Bureau d'Études",
       age: "32 ans",
+      experience: "5 ans Duret",
+      equipe: "3 personnes BE",
       situation: "Bureau",
       painPoints: [
-        "Reçoit des photos inexploitables (floues, sans contexte)",
-        "Manque d'infos pour les plans d'exécution",
-        "Perd du temps à relancer le terrain",
-        "Données techniques non structurées"
+        "Surcharge demandes non structurées: 15-20/jour par tous canaux",
+        "Pas de priorisation: FIFO ou qui crie le plus fort",
+        "Informations incomplètes: allers-retours multiples, 30% temps perdu",
+        "Pas de suivi statut: chefs relancent constamment (interruptions)",
+        "Données terrain non structurées: photos inexploitables, contexte manquant"
       ],
-      quote: "Sans remontées terrain fiables, mes plans sont théoriques.",
+      impact: "~120 000€/an perdus (30% temps en gestion chaos)",
+      quote: "Les demandes arrivent de partout. WhatsApp, appels en plein milieu d'un truc, mails... On sait plus où donner de la tête.",
       icon: FileText,
       color: "text-purple-600",
       bg: "bg-purple-50",
@@ -141,10 +153,30 @@ export default function ChantiersPage() {
             <AlertTriangle className="w-8 h-8 text-red-600" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-red-800 mb-2">Urgence : Perte d'Information Critique</h3>
-            <p className="text-red-700 leading-relaxed">
-              Le système actuel repose sur l'informel (WhatsApp, Oral). Les informations cruciales (modifications, problèmes, preuves) sont perdues ou inaccessibles, générant des litiges et des retards.
+            <h3 className="text-xl font-bold text-red-800 mb-3">Urgence : 720 000€/an de Pertes + Chaos Informationnel Critique</h3>
+            <p className="text-red-700 leading-relaxed mb-4">
+              <strong>Aucun outil métier terrain</strong> pour 10-15 chefs de chantier : dépendance 100% téléphone personnel,
+              <strong>~50% des informations perdues</strong> (WhatsApp/oral = 0% traçabilité),
+              photos dispersées avec <strong>risque MAJEUR de perte</strong> (incident 2024 : téléphone chef volé = 2 mois photos perdues = litiges),
+              rapports manuels chronophages (<strong>2h/rapport × 200/mois = 4 800h/an</strong>).
             </p>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white p-3 rounded-lg">
+                <p className="text-xs text-slate-600 mb-1">Impact Marc (Chefs)</p>
+                <p className="text-lg font-bold text-red-700">200 000€/an</p>
+                <p className="text-xs text-slate-600">Temps + litiges + oublis</p>
+              </div>
+              <div className="bg-white p-3 rounded-lg">
+                <p className="text-xs text-slate-600 mb-1">Impact Julien (RA)</p>
+                <p className="text-lg font-bold text-red-700">400 000€/an</p>
+                <p className="text-xs text-slate-600">Compilation infos + reprises</p>
+              </div>
+              <div className="bg-white p-3 rounded-lg">
+                <p className="text-xs text-slate-600 mb-1">Impact Sophie (BE)</p>
+                <p className="text-lg font-bold text-red-700">120 000€/an</p>
+                <p className="text-xs text-slate-600">Gestion chaos demandes</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -162,27 +194,35 @@ export default function ChantiersPage() {
                 <div className={`p-3 rounded-full ${persona.bg}`}>
                   <persona.icon className={`w-8 h-8 ${persona.color}`} />
                 </div>
-                <div>
+                <div className="flex-1">
                   <h3 className="text-xl font-bold text-slate-900">{persona.name}</h3>
                   <p className={`text-sm font-medium ${persona.color}`}>{persona.role}</p>
                   <p className="text-xs text-slate-500">{persona.age} • {persona.situation}</p>
+                  {persona.experience && <p className="text-xs text-slate-400 mt-1">{persona.experience}</p>}
+                  {persona.chantiers && <p className="text-xs text-slate-400">{persona.chantiers}</p>}
+                  {persona.equipe && <p className="text-xs text-slate-400">{persona.equipe}</p>}
                 </div>
               </div>
-              
+
+              <div className="mb-4 bg-white/60 rounded-lg px-3 py-2 border border-black/10">
+                <p className="text-xs font-bold text-red-600 mb-1">Impact Estimé/an</p>
+                <p className="text-base font-bold">{persona.impact}</p>
+              </div>
+
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-slate-700 mb-3 uppercase tracking-wide">Points de Douleur</h4>
+                <h4 className="text-sm font-semibold text-slate-700 mb-3 uppercase tracking-wide">Points de Douleur Critiques</h4>
                 <ul className="space-y-2">
                   {persona.painPoints.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-                      <span className="text-red-500 mt-1">•</span>
-                      {point}
+                    <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
+                      <AlertTriangle className="w-3 h-3 text-red-500 mt-0.5 flex-shrink-0" />
+                      <span>{point}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div className={`p-4 rounded-xl ${persona.bg} border ${persona.border}`}>
-                <p className={`italic text-sm ${persona.color}`}>"{persona.quote}"</p>
+                <p className={`italic text-xs ${persona.color} font-medium`}>"{persona.quote}"</p>
               </div>
             </div>
           ))}
