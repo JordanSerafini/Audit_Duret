@@ -11,51 +11,51 @@ Project starts 2025-11-17
 
 -- Système ACTUEL (48 heures) --
 [Client appelle] lasts 5 minutes
-[Client appelle] is colored in LightCoral
+[Client appelle] is colored in Coral
 
 [Claire cherche infos] lasts 10 minutes
-[Claire cherche infos] is colored in LightCoral
+[Claire cherche infos] is colored in Coral
 
 [Propose créneau incertain] lasts 5 minutes
 [Propose créneau incertain] is colored in Orange
 
 [Mail Gaëtan] lasts 5 minutes
-[Mail Gaëtan] is colored in LightCoral
+[Mail Gaëtan] is colored in Coral
 
 [ATTENTE Gaëtan] lasts 7 hours
 [ATTENTE Gaëtan] is colored in Red
 
 [Gaëtan répond] lasts 2 minutes
-[Gaëtan répond] is colored in LightCoral
+[Gaëtan répond] is colored in Coral
 
 [Appel client (répondeur)] lasts 5 minutes
 [Appel client (répondeur)] is colored in Orange
 
 [Mail client] lasts 10 minutes
-[Mail client] is colored in LightCoral
+[Mail client] is colored in Coral
 
 [ATTENTE client] lasts 15 hours
 [ATTENTE client] is colored in Red
 
 [Client répond OK] lasts 2 minutes
-[Client répond OK] is colored in LightCoral
+[Client répond OK] is colored in Coral
 
 [Saisie Excel + Outlook] lasts 5 minutes
-[Saisie Excel + Outlook] is colored in LightCoral
+[Saisie Excel + Outlook] is colored in Coral
 
 [Mails confirmation] lasts 10 minutes
-[Mails confirmation] is colored in LightCoral
+[Mails confirmation] is colored in Coral
 
 -- Système CIBLE (2 minutes) --
 [Client sur portail] lasts 1 minute
-[Client sur portail] is colored in LightGreen
+[Client sur portail] is colored in GreenYellow
 [Client sur portail] starts 2025-11-17
 
 [Choisit créneau dispo] lasts 30 seconds
-[Choisit créneau dispo] is colored in LightGreen
+[Choisit créneau dispo] is colored in GreenYellow
 
 [Confirmation automatique] lasts 30 seconds
-[Confirmation automatique] is colored in LightGreen
+[Confirmation automatique] is colored in GreenYellow
 
 @endgantt
 @enduml
