@@ -154,36 +154,160 @@ export default function LogicielsPage() {
         </div>
       </div>
 
+      {/* Scénarios d'implémentation */}
+      <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
+        <h2 className="text-3xl font-bold text-slate-900 mb-6">3 Scénarios d'Implémentation</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Scénario 1 */}
+          <div className="border-2 border-green-300 rounded-xl p-6 bg-green-50">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-green-900">Scénario 1</h3>
+              <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Recommandé</span>
+            </div>
+            <h4 className="font-semibold text-green-800 mb-2">Odoo Tout-en-Un</h4>
+            <p className="text-sm text-green-700 mb-4">Solution unique intégrée avec tous les modules nécessaires</p>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm">
+                <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                <span className="text-green-900">Couverture 100%</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                <span className="text-green-900">Simplicité maximale</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                <span className="text-green-900">Data Lake unique</span>
+              </div>
+            </div>
+            <div className="border-t border-green-300 pt-4">
+              <p className="text-2xl font-bold text-green-900">190k€</p>
+              <p className="text-xs text-green-700">sur 3 ans (100 users)</p>
+            </div>
+          </div>
+
+          {/* Scénario 2 */}
+          <div className="border-2 border-orange-300 rounded-xl p-6 bg-orange-50">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-orange-900">Scénario 2</h3>
+              <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">Alternative</span>
+            </div>
+            <h4 className="font-semibold text-orange-800 mb-2">EBP + Compléments</h4>
+            <p className="text-sm text-orange-700 mb-4">Solutions spécialisées best-of-breed par domaine</p>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm">
+                <Package className="w-4 h-4 text-orange-600 mr-2" />
+                <span className="text-orange-900">Spécialisation BTP</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <Users className="w-4 h-4 text-orange-600 mr-2" />
+                <span className="text-orange-900">Support français</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <Shield className="w-4 h-4 text-orange-600 mr-2" />
+                <span className="text-orange-900">5 solutions à gérer</span>
+              </div>
+            </div>
+            <div className="border-t border-orange-300 pt-4">
+              <p className="text-2xl font-bold text-orange-900">295k€</p>
+              <p className="text-xs text-orange-700">sur 3 ans (+55%)</p>
+            </div>
+          </div>
+
+          {/* Scénario 3 */}
+          <div className="border-2 border-purple-300 rounded-xl p-6 bg-purple-50">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-purple-900">Scénario 3</h3>
+              <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</span>
+            </div>
+            <h4 className="font-semibold text-purple-800 mb-2">Hybride Best-of-Breed</h4>
+            <p className="text-sm text-purple-700 mb-4">Odoo + HubSpot + Apps custom + Lucca</p>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-sm">
+                <Smartphone className="w-4 h-4 text-purple-600 mr-2" />
+                <span className="text-purple-900">Apps sur-mesure</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <Zap className="w-4 h-4 text-purple-600 mr-2" />
+                <span className="text-purple-900">UX excellente</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <TrendingUp className="w-4 h-4 text-purple-600 mr-2" />
+                <span className="text-purple-900">Complexité élevée</span>
+              </div>
+            </div>
+            <div className="border-t border-purple-300 pt-4">
+              <p className="text-2xl font-bold text-purple-900">396k€</p>
+              <p className="text-xs text-purple-700">sur 3 ans (+108%)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Comparatif Odoo vs EBP */}
       <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 mb-12">
-        <h2 className="text-3xl font-bold text-slate-900 mb-6">Comparatif Odoo vs EBP</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
-              <span className="text-slate-700 font-semibold">Couverture fonctionnelle</span>
-              <span className="text-green-600 font-bold">Odoo 100% {'>'} EBP 90%</span>
-            </div>
-            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
-              <span className="text-slate-700 font-semibold">Évolutivité</span>
-              <span className="text-green-600 font-bold">Odoo supérieur</span>
-            </div>
-            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
-              <span className="text-slate-700 font-semibold">Data & BI</span>
-              <span className="text-green-600 font-bold">Odoo supérieur</span>
-            </div>
-            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
-              <span className="text-slate-700 font-semibold">Coût</span>
-              <span className="text-green-600 font-bold">Odoo compétitif</span>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200">
-            <h3 className="text-xl font-bold text-blue-900 mb-4">Verdict</h3>
-            <p className="text-blue-800 leading-relaxed">
-              Odoo maintient sa position de solution préférentielle grâce à sa couverture fonctionnelle complète,
-              son évolutivité supérieure et ses capacités avancées en Business Intelligence. Le choix est justifié
-              par la nécessité de modernisation et la préparation à l'IA.
-            </p>
-          </div>
+        <h2 className="text-3xl font-bold text-slate-900 mb-6">Comparatif Détaillé ERP</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b-2 border-slate-300">
+                <th className="text-left py-3 px-4 font-semibold text-slate-700">Critère</th>
+                <th className="text-center py-3 px-4 font-semibold text-blue-700">Odoo ERP</th>
+                <th className="text-center py-3 px-4 font-semibold text-teal-700">EBP Bâtiment</th>
+                <th className="text-center py-3 px-4 font-semibold text-orange-700">HubSpot CRM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-slate-200">
+                <td className="py-3 px-4 font-medium">Prix/user/mois</td>
+                <td className="py-3 px-4 text-center text-green-600 font-bold">24,90€</td>
+                <td className="py-3 px-4 text-center">~100€</td>
+                <td className="py-3 px-4 text-center">0€ → 90€</td>
+              </tr>
+              <tr className="border-b border-slate-200 bg-slate-50">
+                <td className="py-3 px-4 font-medium">Couverture besoins</td>
+                <td className="py-3 px-4 text-center text-green-600 font-bold">100%</td>
+                <td className="py-3 px-4 text-center">88%</td>
+                <td className="py-3 px-4 text-center">30%</td>
+              </tr>
+              <tr className="border-b border-slate-200">
+                <td className="py-3 px-4 font-medium">Field Service</td>
+                <td className="py-3 px-4 text-center">✅ Natif complet</td>
+                <td className="py-3 px-4 text-center">⚠️ Basique</td>
+                <td className="py-3 px-4 text-center">❌ Absent</td>
+              </tr>
+              <tr className="border-b border-slate-200 bg-slate-50">
+                <td className="py-3 px-4 font-medium">Spécialisation BTP</td>
+                <td className="py-3 px-4 text-center">⚠️ Généraliste</td>
+                <td className="py-3 px-4 text-center text-green-600">✅ Expert</td>
+                <td className="py-3 px-4 text-center">❌ Non</td>
+              </tr>
+              <tr className="border-b border-slate-200">
+                <td className="py-3 px-4 font-medium">RFID Stocks</td>
+                <td className="py-3 px-4 text-center text-green-600">✅ Oui</td>
+                <td className="py-3 px-4 text-center">❌ Non</td>
+                <td className="py-3 px-4 text-center">❌ N/A</td>
+              </tr>
+              <tr className="border-b border-slate-200 bg-slate-50">
+                <td className="py-3 px-4 font-medium">Open Source</td>
+                <td className="py-3 px-4 text-center text-green-600">✅ Oui</td>
+                <td className="py-3 px-4 text-center">❌ Propriétaire</td>
+                <td className="py-3 px-4 text-center">❌ Propriétaire</td>
+              </tr>
+              <tr className="border-b border-slate-200">
+                <td className="py-3 px-4 font-medium">Scalabilité</td>
+                <td className="py-3 px-4 text-center text-green-600">5-5000+ users</td>
+                <td className="py-3 px-4 text-center">Max 20 users</td>
+                <td className="py-3 px-4 text-center">Illimitée</td>
+              </tr>
+              <tr className="bg-green-50 font-bold">
+                <td className="py-3 px-4">Coût 3 ans (100 users)</td>
+                <td className="py-3 px-4 text-center text-green-700">190k€</td>
+                <td className="py-3 px-4 text-center text-orange-600">295k€</td>
+                <td className="py-3 px-4 text-center text-orange-600">167k€ (+ ERP)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
