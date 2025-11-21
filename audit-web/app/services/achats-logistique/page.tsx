@@ -13,10 +13,10 @@ export default function AchatsLogistiquePage() {
       name: 'Marc',
       role: 'Chef de Chantier',
       painPoints: [
-        'Perd du temps en appels pour commander',
-        'Chantier bloqué par manque matériel',
-        'Aucune visibilité sur la livraison',
-        'Frustration des erreurs de commande'
+        '50% commandes incomplètes → chantier bloqué',
+        'Pas de visibilité sur livraisons',
+        'Références introuvables dans Sage',
+        'Processus trop long (3 jours)'
       ],
       color: 'bg-orange-50 border-orange-200 text-orange-900',
       icon: Smartphone
@@ -25,10 +25,10 @@ export default function AchatsLogistiquePage() {
       name: 'Sylvie',
       role: 'Gestionnaire Achats',
       painPoints: [
-        'Débordée par les appels et mails',
-        'Ressaisies multiples (Excel, Sage)',
-        'Validation manuelle chronophage',
-        'Pompier sur les urgences'
+        'Sage MDE "calamiteux" (doublons, erreurs)',
+        'Ressaisies multiples (6x par commande)',
+        'Pas d\'intégration APIs Rexel/Sonepar',
+        'Reliquats non suivis'
       ],
       color: 'bg-red-50 border-red-200 text-red-900',
       icon: ShoppingCart
@@ -37,10 +37,10 @@ export default function AchatsLogistiquePage() {
       name: 'Éric',
       role: 'Responsable Dépôt',
       painPoints: [
-        'Nomenclatures incohérentes',
-        '1 seul PC pour tout gérer',
-        'Pas de scan (saisie manuelle)',
-        'Stocks théoriques faux'
+        'Inventaires très chronophages',
+        'Stock non fiable (40% fiabilité)',
+        'Pas de scan codes-barres',
+        'Même produit à 2 prix différents'
       ],
       color: 'bg-purple-50 border-purple-200 text-purple-900',
       icon: Package
