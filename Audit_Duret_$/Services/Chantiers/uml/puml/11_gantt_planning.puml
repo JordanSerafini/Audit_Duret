@@ -1,3 +1,4 @@
+@startuml
 @startgantt Gantt_Planning_Implementation
 
 title Planning Implementation 12 Mois Digitalisation Chantiers
@@ -89,3 +90,4 @@ project starts 2025-11-17
 [Jalon4] is colored in Red
 
 @endgantt
+@enduml

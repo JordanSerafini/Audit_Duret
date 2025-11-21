@@ -1,3 +1,4 @@
+@startuml
 @startgantt Gantt_Planning_Implementation
 
 title Planning Implementation 24 Mois Gestion Operationnelle
@@ -87,3 +88,4 @@ project starts 2025-11-17
 [Jalon5] is colored in Red
 
 @endgantt
+@enduml

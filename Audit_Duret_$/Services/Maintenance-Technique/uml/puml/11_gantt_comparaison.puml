@@ -1,3 +1,4 @@
+@startuml
 @startgantt Gantt_Comparaison_Intervention
 
 title Comparaison Temps Avant Apres Intervention SAV
@@ -37,3 +38,4 @@ project starts 2025-11-17
 [Rapport digital app] as [C4] lasts 1 day and is colored in LightGreen and starts at [C3]'s end
 
 @endgantt
+@enduml

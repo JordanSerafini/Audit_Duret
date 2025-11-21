@@ -1,3 +1,4 @@
+@startuml
 @startgantt Gantt_Comparaison_Avant_Apres
 
 title Comparaison Temps - Avant/Après (Prise de RDV)
@@ -78,3 +79,4 @@ project starts 2025-11-17
 [C3] starts at [C2]'s end
 
 @endgantt
+@enduml
