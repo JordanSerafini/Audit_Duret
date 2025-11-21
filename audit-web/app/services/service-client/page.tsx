@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Users, MessageSquare, PhoneCall, Clock, RefreshCw, Smartphone, LayoutDashboard } from 'lucide-react';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
+import UMLDownloadButton from '@/components/UMLDownloadButton';
 
 export const metadata = {
   title: 'Service Client - Audit IT Duret',
